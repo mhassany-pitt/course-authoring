@@ -11,6 +11,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
+import { ToggleButtonModule } from 'primeng/togglebutton';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CheckboxModule } from 'primeng/checkbox';
     TableModule, DialogModule,
     InputTextModule, ButtonModule,
     CheckboxModule, DropdownModule,
+    ToggleButtonModule,
   ]
 })
 export class CoursesModule { }

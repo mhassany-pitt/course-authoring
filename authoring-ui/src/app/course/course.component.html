@@ -1,0 +1,341 @@
+<div *ngIf="course" class="flex flex-col">
+    <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
+        <div class="container mx-auto flex items-center gap-2 px-2 md:px-0">
+            <img src="assets/logo.png" class="h-8 w-8" />
+            <span class="text-xl font-bold hidden md:inline-block text-nowrap">Course Authoring</span>
+            <span class="hidden md:inline-block"><i class="pi pi-chevron-right"></i></span>
+
+            <p-dropdown #navEl [options]="navLinks" [ngModel]="'/courses'" class="-my-2 course-nav-dropdown"
+                (onChange)="router.navigate([$event.value]);"></p-dropdown>
+
+            <span class="flex-grow"></span>
+
+            <app-user-auth-ctrl logoutRedirect="/hub"></app-user-auth-ctrl>
+        </div>
+    </div>
+
+    <div class="container mx-auto mt-24 mb-16 border shadow-md z-0 relative">
+        <form #form="ngForm" (submit)="save()">
+            <div class="absolute right-0 top-0 flex items-center justify-end gap-2 z-10">
+                <p-button type="button" [label]="course.deleted_at ? 'Deleted' : 'Delete'" icon="fa fa-trash"
+                    [severity]="course.deleted_at ? 'danger' : 'warning'" (click)="deleteCourse()">
+                </p-button>
+
+                <p-button type="button" [label]="course.published ? 'Published' : 'Publish'"
+                    [icon]="course.published ? 'fa fa-eye-slash' : 'fa fa-eye'"
+                    [severity]="course.published ? 'success' : 'secondary'"
+                    (click)="course.published = !course.published">
+                </p-button>
+
+                <span class="border border-solid border-gray-100 h-8"></span>
+
+                <p-button type="button" label="Cancel" icon="fa fa-chevron-left" severity="secondary"
+                    (click)="router.navigate(['/courses'])">
+                </p-button>
+                <p-button type="submit" label="Save" icon="fa fa-save"></p-button>
+            </div>
+            <p-tabView>
+                <p-tabPanel header="General Information">
+                    <div class="flex flex-col gap-2 p-2">
+                        <div class="flex items-center gap-2">
+                            <div class="flex flex-col gap-1">
+                                <span class="text-sm text-gray-600">Code:</span>
+                                <input type="text" pInputText name="code" [(ngModel)]="course.code"
+                                    placeholder="INFSCI ..." size="10" />
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="text-sm text-gray-600">Name:</span>
+                                <input type="text" pInputText name="name" [(ngModel)]="course.name"
+                                    placeholder="Introduction to ..." size="50" />
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="text-sm text-gray-600">Domain:</span>
+                                <p-dropdown [options]="domains" name="domain" [(ngModel)]="course.domain"
+                                    placeholder="Select" />
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1">
+                            <span class="text-sm text-gray-600">Description:</span>
+                            <textarea rows="5" pInputTextarea name="description" [(ngModel)]="course.description"
+                                placeholder="This course is ..."></textarea>
+                        </div>
+
+                        <div class="flex flex-col gap-1">
+                            <span class="text-sm text-gray-600">Institution:</span>
+                            <input type="text" pInputText name="institution" [(ngModel)]="course.institution"
+                                placeholder="University of ..." />
+                        </div>
+                    </div>
+                </p-tabPanel>
+                <p-tabPanel header="Units and Resources">
+                    <div class="overflow-x-auto">
+                        <p-table [value]="course.units" styleClass="p-datatable-sm units-table">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th [rowSpan]="2" class="add-unit-col">
+                                        <div class="flex flex-col items-center justify-center gap-2 p-1">
+                                            <span>{{ course.units.length }} Units</span>
+                                            <p-button type="button" label="new unit" icon="fa fa-plus"
+                                                severity="secondary" [text]="true" [raised]="true" class="p-button-xs"
+                                                (click)="course.units.push({ id: nextResourceId() })"></p-button>
+                                        </div>
+                                    </th>
+                                    <th [colSpan]="course.resources.length" class="add-resource-col">
+                                        <div class="flex items-center justify-center gap-2 py-1 relative">
+                                            <span>{{ course.resources?.length || 0 }} Resources</span>
+                                            <p-button type="button" label="new resource" icon="fa fa-plus"
+                                                severity="secondary" [text]="true" [raised]="true" class="p-button-xs"
+                                                [ngClass]="{'absolute right-0':course.resources?.length > 1}"
+                                                (click)="course.resources.push({ id: nextResourceId() })"></p-button>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th *ngFor="let $resource of course.resources; let rindex = index;"
+                                        class="resource-col">
+                                        <div class="flex flex-col gap-0.5">
+                                            <input type="text" pInputText [name]="'resource'+$resource.id"
+                                                [(ngModel)]="$resource.name" placeholder="Resource ..." />
+                                            <div class="flex items-center gap-2">
+                                                <p-button type="button" [label]="$resource.providers?.length 
+                                                        ? ($resource.providers?.length || 0) + ' providers, click here to edit.' 
+                                                        : 'click here to enable providers.'" icon="fa fa-edit"
+                                                    severity="secondary" [text]="true" class="p-button-xs"
+                                                    (click)="resource = $resource; providers = $resource.providers || [];">
+                                                </p-button>
+
+                                                <span class="flex-grow"></span>
+
+                                                <p-button type="button" label="remove" icon="fa fa-trash"
+                                                    severity="secondary" [text]="true" class="p-button-xs"
+                                                    (click)="removeResource($resource)">
+                                                </p-button>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-$unit let-uindex="rowIndex">
+                                <tr>
+                                    <td class="align-top unit-description-col">
+                                        <div class="flex flex-col gap-0.5">
+                                            <input type="text" pInputText [name]="'unit-name'+$unit.id"
+                                                [(ngModel)]="$unit.name" placeholder="Name" />
+                                            <textarea rows="3" pInputTextarea [name]="'unit-description'+$unit.id"
+                                                [(ngModel)]="$unit.description" placeholder="Description"></textarea>
+                                            <div class="flex items-center gap-2">
+                                                <span class="flex-grow"></span>
+
+                                                <p-button type="button" label="remove" icon="fa fa-trash"
+                                                    severity="secondary" [text]="true" class="p-button-xs"
+                                                    (click)="removeUnit($unit)">
+                                                </p-button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td *ngFor="let $resource of course.resources; let rindex = index;"
+                                        class="relative align-top resource-col">
+                                        <div *ngIf="$resource.providers?.length"
+                                            class="flex flex-col justify-start gap-0 5">
+                                            <!-- Empty list of activities, 
+                                                    use the above button to add activities. -->
+                                            <p-button type="button" [label]="$unit.activities?.[$resource.id]?.length 
+                                                    ? ($unit.activities?.[$resource.id]?.length || 0) + ' activities, click here to edit.' 
+                                                    : 'click here to add activities.'" icon="fa fa-edit"
+                                                severity="secondary" [text]="true" class="p-button-xs"
+                                                (click)="editUnitActivities($unit, $resource)">
+                                            </p-button>
+                                            <div *ngIf="$unit.activities?.[$resource.id]?.length > 0"
+                                                class="flex flex-col text-xs mt-2 ml-3">
+                                                <a *ngFor="let $activity of $unit.activities[$resource.id]"
+                                                    [href]="$activity.url" target="_blank" class="no-underline">
+                                                    - {{ $activity.name }}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="emptymessage">
+                                <tr>
+                                    <td [colSpan]="course.resources.length + 2">
+                                        empty units
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </p-tabPanel>
+                <p-tabPanel header="Students">
+                    <div class="flex flex-col gap-2">
+                        <span>Add students' email addresses (separated by comma).</span>
+                        <textarea rows="10" pInputTextarea name="student_emails" [(ngModel)]="course.student_emails"
+                            [placeholder]="'std1-email-address,std2-email-address,...'"></textarea>
+                    </div>
+                </p-tabPanel>
+            </p-tabView>
+        </form>
+    </div>
+</div>
+
+<p-dialog *ngIf="providers" header="Enable Providers" [visible]="providers" [modal]="true" [closable]="false"
+    [style]="{ width: '50vw' }">
+    <div class="flex flex-col gap-2">
+        <div>Check the providers you want to enable for this resource.</div>
+
+        <p-table #dt1 [value]="filteredProvidersList" [(selection)]="providers"
+            [globalFilterFields]="['name', 'author', 'description', 'tags']" [scrollable]="true" scrollHeight="15rem"
+            [rowHover]="true" styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines">
+            <ng-template pTemplate="caption">
+                <div class="flex items-center">
+                    <p-checkbox [binary]="true" [(ngModel)]="enabledOnlyProviders" label="Enabled only"></p-checkbox>
+                    <span class="flex-grow"></span>
+                    <p-iconField iconPosition="left">
+                        <input pInputText type="text" (input)="dt1.filterGlobal(any($event.target).value, 'contains')"
+                            placeholder="Filter ..." />
+                        <p-inputIcon><i class="pi pi-search"></i></p-inputIcon>
+                    </p-iconField>
+                </div>
+            </ng-template>
+
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>
+                        <div class="flex items-center gap-2">
+                            <span>Name, Description, and Tags</span>
+                            <span class="flex-grow"></span>
+                            <span>Author</span>
+                        </div>
+                    </th>
+                </tr>
+            </ng-template>
+
+            <ng-template pTemplate="body" let-provider>
+                <tr>
+                    <td>
+                        <div class="flex items-center gap-2 w-full">
+                            <p-tableCheckbox [value]="provider" />
+                            <div class="flex flex-col flex-grow">
+                                <div class="flex items-center gap-2">
+                                    <span>{{ provider.name }}</span>
+                                    <span class="flex-grow"></span>
+                                    <span *ngIf="provider.author" class="text-sm">{{ provider.author }}</span>
+                                </div>
+                                <span *ngIf="provider.description" class="text-xs">
+                                    {{ provider.description }}
+                                </span>
+                                <span *ngIf="provider.tags.length != 0" class="text-xs">
+                                    tags: <span class="italic">{{ provider.tags.join(', ')}}</span>
+                                </span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </ng-template>
+
+            <ng-template pTemplate="emptymessage">
+                <tr>
+                    <td>
+                        <div class="text-xs text-center text-gray-400 w-full">
+                            no record matched, revise your filter keyword
+                        </div>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+
+        <div class="flex items-center gap-2">
+            <span>{{ providers.length || 0 }} providers selected.</span>
+            <span class="flex-grow"></span>
+            <p-button type="button" label="Cancel" icon="fa fa-chevron-left" severity="secondary"
+                (click)="providers = null;">
+            </p-button>
+            <p-button type="button" label="Save" icon="fa fa-save"
+                (click)="resource.providers = providers; providers = null;">
+            </p-button>
+        </div>
+    </div>
+</p-dialog>
+
+<p-dialog *ngIf="activities" header="Edit Unit Activities" [visible]="activities" [modal]="true" [closable]="false"
+    [style]="{ width: '50vw' }">
+    <div class="flex flex-col gap-2">
+        <div>Check the activities you want to include in this unit.</div>
+        <p-table #dt2 [value]="filteredActivitiesList" [(selection)]="activities"
+            [globalFilterFields]="['name', 'author', 'tags']" [scrollable]="true" scrollHeight="15rem" [rowHover]="true"
+            styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines">
+            <ng-template pTemplate="caption">
+                <div class="flex items-center">
+                    <p-checkbox [binary]="true" [(ngModel)]="selectedOnlyActivities" label="Selected only"></p-checkbox>
+                    <span class="flex-grow"></span>
+                    <p-iconField iconPosition="left">
+                        <input pInputText type="text" (input)="dt2.filterGlobal(any($event.target).value, 'contains')"
+                            placeholder="Filter ..." />
+                        <p-inputIcon><i class="pi pi-search"></i></p-inputIcon>
+                    </p-iconField>
+                </div>
+            </ng-template>
+
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>
+                        <div class="flex items-center gap-2">
+                            <span>Name and Tags</span>
+                            <span class="flex-grow"></span>
+                            <span>Author</span>
+                        </div>
+                    </th>
+                </tr>
+            </ng-template>
+
+            <ng-template pTemplate="body" let-activity>
+                <tr>
+                    <td>
+                        <div class="flex items-center gap-2">
+                            <p-tableCheckbox [value]="activity" />
+                            <div class="flex flex-col flex-grow">
+                                <div class="flex items-center gap-2">
+                                    <span>{{ activity.name }}</span>
+                                    <div class="text-sm text-gray-400">
+                                        [<a [href]="activity.url" target="_blank"
+                                            class="no-underline text-gray-400">preview</a>]
+                                    </div>
+                                    <span class="flex-grow"></span>
+                                    <span *ngIf="activity.author" class="text-sm">{{ activity.author }}</span>
+                                </div>
+                                <span *ngIf="activity.tags.length != 0" class="text-xs">
+                                    tags: <span class="italic">{{ activity.tags.join(', ') }}</span>
+                                </span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </ng-template>
+
+            <ng-template pTemplate="emptymessage">
+                <tr>
+                    <td>
+                        <div class="text-xs text-center text-gray-400 w-full">
+                            no record matched, revise your filter keyword
+                        </div>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+
+        <div class="flex items-center gap-2">
+            <span>{{ activities.length || 0 }} activities selected.</span>
+            <span class="flex-grow"></span>
+            <p-button type="button" label="Cancel" icon="fa fa-chevron-left" severity="secondary"
+                (click)="activities = null;">
+            </p-button>
+            <p-button type="button" label="Save" icon="fa fa-save"
+                (click)="unit.activities[resource.id] = activities; activities = null; unit = null; resource = null;">
+            </p-button>
+        </div>
+    </div>
+</p-dialog>

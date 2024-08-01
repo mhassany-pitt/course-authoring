@@ -15,6 +15,11 @@ export const routes: Routes = [
         canActivate: [AuthenticatedAuthorGuard]
     },
     {
+        path: 'courses/:id',
+        loadChildren: () => import('./course/course.module').then(m => m.CourseModule),
+        canActivate: [AuthenticatedAuthorGuard]
+    },
+    {
         path: 'hub',
         loadChildren: () => import('./hub/hub.module').then(m => m.HubModule),
         canActivate: [HandshakeGuard]
@@ -39,5 +44,5 @@ export const routes: Routes = [
         loadChildren: () => import('./update-password/update-password.module').then(m => m.UpdatePasswordModule),
         canActivate: [HandshakeGuard]
     },
-    { path: '**', redirectTo: 'hub' }
+    { path: '**', redirectTo: 'courses' }
 ];

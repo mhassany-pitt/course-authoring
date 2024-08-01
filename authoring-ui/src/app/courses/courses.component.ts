@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CoursesService } from './courses.service';
 import { AppService } from '../app.service';
+import { getNavLinks } from '../utils';
 
 @Component({
   selector: 'app-courses',
@@ -10,11 +11,13 @@ import { AppService } from '../app.service';
 })
 export class CoursesComponent implements OnInit {
 
-  _archived: boolean = localStorage.getItem('show-courses-archived') == 'true';
-  get archived() { return this._archived; }
-  set archived(bool) {
-    this._archived = bool;
-    localStorage.setItem('show-courses-archived', `${bool}`.toLowerCase());
+  navLinks = getNavLinks(this.app);
+
+  _trash_can: boolean = localStorage.getItem('show-trash-can') == 'true';
+  get trash_can() { return this._trash_can; }
+  set trash_can(bool) {
+    this._trash_can = bool;
+    localStorage.setItem('show-trash-can', `${bool}`.toLowerCase());
   }
 
   courses: any = [];
@@ -34,7 +37,7 @@ export class CoursesComponent implements OnInit {
   }
 
   reload() {
-    this.api.courses({ archived: this.archived }).subscribe({
+    this.api.courses({ trash_can: this.trash_can }).subscribe({
       next: (courses: any) => this.courses = courses,
       error: (error: any) => console.log(error)
     })
@@ -42,15 +45,7 @@ export class CoursesComponent implements OnInit {
 
   create() {
     this.api.create().subscribe({
-      next: (course: any) => this.router.navigate(['/editor', course.id]),
-      error: (error: any) => console.log(error)
-    });
-  }
-
-  toggleArchive(course: any) {
-    course.archived = !course.archived;
-    this.api.update(course).subscribe({
-      next: (course: any) => this.reload(),
+      next: (course: any) => this.router.navigate(['/courses', course.id]),
       error: (error: any) => console.log(error)
     });
   }

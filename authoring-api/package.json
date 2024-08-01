@@ -36,6 +36,7 @@
     "email-validator": "^2.0.4",
     "express-session": "^1.18.0",
     "fs-extra": "^11.2.0",
+    "jsonrepair": "^3.8.0",
     "mongoose": "^8.4.1",
     "openai": "^4.49.0",
     "passport": "^0.7.0",

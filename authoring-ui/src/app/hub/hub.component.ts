@@ -4,6 +4,7 @@ import { DomSanitizer, Title } from '@angular/platform-browser';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
 import { AppService } from '../app.service';
+import { getNavLinks } from '../utils';
 
 @Component({
   selector: 'app-hub',
@@ -12,8 +13,7 @@ import { AppService } from '../app.service';
 })
 export class HubComponent implements OnInit {
 
-  previewLink: any;
-  showPreview = false;
+  navLinks = getNavLinks(this.app);
 
   searchTimeout: any;
   courses: any[] = [];

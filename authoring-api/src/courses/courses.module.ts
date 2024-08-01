@@ -1,11 +1,16 @@
 import { Module } from '@nestjs/common';
 import { CoursesController } from './courses.controller';
-import { CoursesServiceModule } from 'src/courses-service/courses-service.module';
+import { MongooseModule } from '@nestjs/mongoose';
+import { CourseSchema } from './course.schema';
+import { CoursesService } from './courses.service';
 
 @Module({
+  imports: [
+    MongooseModule.forFeature([
+      { name: 'courses', schema: CourseSchema }
+    ])
+  ],
   controllers: [CoursesController],
-  imports: [CoursesServiceModule],
-  providers: [],
-  exports: []
+  providers: [CoursesService],
 })
 export class CoursesModule { }

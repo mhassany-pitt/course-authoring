@@ -10,6 +10,7 @@ import { UserAdminModule } from './user-admin/user-admin.module';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { HubModule } from './hub/hub.module';
+import { ProvidersModule } from './providers/providers.module';
 
 @Module({
   imports: [
@@ -23,7 +24,7 @@ import { HubModule } from './hub/hub.module';
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({ uri: config.get('MONGO_URI') }),
     }),
-    CoursesModule,
+    CoursesModule, ProvidersModule,
     AuthModule, UsersModule,
     UserAdminModule, HubModule,
   ],

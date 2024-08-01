@@ -15,12 +15,8 @@ export class CoursesService {
     private http: HttpClient
   ) { }
 
-  samples() {
-    return this.http.get(`${environment.apiUrl}/courses/samples`, { withCredentials: true });
-  }
-
-  courses({ archived }: any) {
-    return this.http.get(`${environment.apiUrl}/courses${archived ? '?include=archived' : ''}`, { withCredentials: true });
+  courses({ trash_can }: any) {
+    return this.http.get(`${environment.apiUrl}/courses${trash_can ? '?trash_can=true' : ''}`, { withCredentials: true });
   }
 
   create() {
@@ -35,8 +31,15 @@ export class CoursesService {
     return this.http.patch(`${environment.apiUrl}/courses/${course.id}`, course, { withCredentials: true });
   }
 
-  log(id: string, log: any) {
-    return this.http.post(`${environment.apiUrl}/courses/${id}/log`, log,
-      { withCredentials: true, context: new HttpContext().set(NGX_LOADING_BAR_IGNORED, true) });
+  delete(id: string, undo: boolean) {
+    return this.http.delete(`${environment.apiUrl}/courses/${id}${undo ? '?undo=true' : ''}`, { withCredentials: true });
+  }
+
+  providers() {
+    return this.http.get(`${environment.apiUrl}/providers`, { withCredentials: true });
+  }
+
+  activities(url: string) {
+    return this.http.get(url, { withCredentials: true });
   }
 }

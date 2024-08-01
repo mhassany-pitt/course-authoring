@@ -5,73 +5,80 @@
       <span class="text-xl font-bold hidden md:inline-block text-nowrap">Course Authoring</span>
       <span class="hidden md:inline-block"><i class="pi pi-chevron-right"></i></span>
 
-      <p-dropdown #navEl [options]="[
-          {label: 'Hub', value: '/hub'},
-          {label: 'Courses', value: '/courses'},
-        ]" [ngModel]="'/courses'" class="-my-2 course-nav-dropdown"
+      <p-dropdown #navEl [options]="navLinks" [ngModel]="'/courses'" class="-my-2 course-nav-dropdown"
         (onChange)="router.navigate([$event.value]);"></p-dropdown>
 
       <span class="flex-grow"></span>
-
-      <ng-container *ngIf="app.user?.roles?.includes('app-admin')">
-        <button pButton type="button" label="Users" icon="pi pi-users" class="p-button-sm p-button-text"
-          style="padding: 0.25rem 0.5rem;" routerLink="/user-admin">
-        </button>
-        <span class="border-r w-1 h-6"></span>
-      </ng-container>
 
       <app-user-auth-ctrl logoutRedirect="/hub"></app-user-auth-ctrl>
     </div>
   </div>
 
   <div class="container mx-auto mt-24 mb-16 border shadow-md z-0">
-    <p-table #table [value]="courses" [globalFilterFields]="['name','description']">
+    <p-table #table [value]="courses" [globalFilterFields]="['code','name','description','domain']">
       <ng-template pTemplate="caption">
         <div class="flex items-center gap-2">
-          <p-checkbox name="archived" label="Include Archives" [binary]="true" [(ngModel)]="archived"
-            (ngModelChange)="reload()"></p-checkbox>
-
-          <span class="flex-grow"></span>
-
-          <button pButton type="button" label="New Course" icon="pi pi-plus" class="p-button-sm"
-            (click)="create()"></button>
-
           <span class="p-input-icon-right">
             <i class="pi pi-search"></i>
             <input pInputText type="text" (input)="filter(table, $event)" placeholder="Filter" class="p-inputtext-sm" />
           </span>
+          <button pButton type="button" label="New Course" icon="pi pi-plus" class="p-button-sm"
+            (click)="create()"></button>
+
+          <span class="flex-grow"></span>
+
+          <p-button label="Recycle Bin" icon="pi pi-trash" iconPos="right" class="p-button-sm"
+            [severity]="trash_can ? 'danger' : 'secondary'" (click)="trash_can = !trash_can; reload()">
+          </p-button>
         </div>
       </ng-template>
       <ng-template pTemplate="header">
         <tr>
-          <th class="w-16" style="text-align: center;">Actions</th>
           <th>Name & Description</th>
+          <th>Code</th>
+          <th>Institution</th>
+          <th>Domain</th>
+          <th>Created by</th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-course>
         <tr>
           <td>
-            <div class="flex flex-col items-center justify-center gap-1">
-              <button pButton type="button" icon="pi pi-briefcase"
-                [title]="course.archived ? 'Unarchive course' : 'Archive course'"
-                class="p-button-text p-button-sm archive-btn" [ngClass]="{ 'p-button-plain': course.archived }"
-                (click)="toggleArchive(course)">
-              </button>
+            <div class="flex flex-col gap-2">
+              <span [routerLink]="['/courses/', course.id]" class="font-bold cursor-pointer text-blue-700">
+                {{ course.name || 'Untitled' }}
+                ({{ course.units?.length || 0 }} units)
+              </span>
+              <span *ngIf="course.description" class="text-xs">{{ course.description }}</span>
+              <div class="flex items-center gap-2">
+                <span *ngIf="course.deleted_at" class="flex items-center gap-1 text-xs text-red-600">
+                  <i class="fa fa-trash"></i>
+                  <span>Deleted at {{ course.deleted_at | date:'medium' }}</span>
+                </span>
+                <span *ngIf="course.published" class="flex items-center gap-1 text-xs text-green-600">
+                  <i class="fa fa-eye"></i>
+                  <span>Published</span>
+                </span>
+              </div>
             </div>
           </td>
           <td>
-            <div class="flex flex-col gap-2" [ngClass]="{ 'line-through': course.archived }">
-              <span [routerLink]="['/editor', course.id]" class="font-bold cursor-pointer text-blue-700">
-                {{course.name || '[name not specified]'}}
-              </span>
-              <span class="text-xs ml-2">{{course.description}}</span>
-            </div>
+            <span class="text-sm">{{ course.code }}</span>
+          </td>
+          <td>
+            <span class="text-sm">{{ course.institution }}</span>
+          </td>
+          <td>
+            <span class="text-sm uppercase">{{ course.domain }}</span>
+          </td>
+          <td>
+            <span class="text-sm">{{ course.user_email }} on {{ course.created_at | date:'medium' }}</span>
           </td>
         </tr>
       </ng-template>
       <ng-template pTemplate="emptymessage">
         <tr>
-          <td colspan="2">
+          <td colspan="5">
             <div class="text-xs text-center text-gray-400 w-full">
               no record matched, revise your filter keyword
             </div>

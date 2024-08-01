@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { UserAdminService } from './user-admin.service';
 import { Router } from '@angular/router';
+import { AppService } from '../app.service';
+import { getNavLinks } from '../utils';
 
 @Component({
   selector: 'app-user-admin',
@@ -8,6 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-admin.component.less']
 })
 export class UserAdminComponent {
+
+  navLinks = getNavLinks(this.app);
 
   private __areyousure = 'Are you sure that you want to proceed?';
   actions = [
@@ -38,7 +42,8 @@ export class UserAdminComponent {
   selected: any[] = [];
 
   constructor(
-    private router: Router,
+    public router: Router,
+    private app: AppService,
     private service: UserAdminService,
   ) { }
 
