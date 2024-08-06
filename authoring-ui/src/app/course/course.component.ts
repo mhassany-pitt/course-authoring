@@ -3,6 +3,7 @@ import { getNavLinks } from '../utils';
 import { AppService } from '../app.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CoursesService } from '../courses/courses.service';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-course',
@@ -45,6 +46,10 @@ export class CourseComponent implements OnInit {
 
   enabledOnlyProviders: boolean = false;
   selectedOnlyActivities: boolean = false;
+
+  activeIndex: number = 1;
+
+  tt: any = {};
 
   constructor(
     public router: Router,
@@ -132,4 +137,23 @@ export class CourseComponent implements OnInit {
   any(v: any): any {
     return v;
   }
+
+  reorder(event: any, list: any) {
+    moveItemInArray(list, event.previousIndex, event.currentIndex);
+  }
+
+  rand() {
+    return Math.random() + 0.01
+  }
+
+  refreshUnitDescEl(id: string) {
+    this.tt[id] = true;
+    setTimeout(() => delete this.tt[id], 0);
+  }
 }
+
+
+// --- specify the allocated page range for this unit on pdf-reader
+// --- range=[included,excluded)
+// pdf-reader__unit-page-range=12,45
+// pdf-reader__unit-page-range=sectionx,sectiony

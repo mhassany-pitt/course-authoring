@@ -1,23 +1,21 @@
-::ng-deep .units-table {
-    input[type=text] {
-        padding: 0.25rem;
+::ng-deep {
+    .units-table {
+        .p-button-label {
+            text-align: left;
+        }
     }
 
-    textarea {
-        font-size: 0.75rem;
-        padding: 0.25rem;
+    .units-table.p-datatable-sm {
+
+        th,
+        td {
+            padding: 0.125rem;
+        }
     }
 
-    .p-button-label {
-        text-align: left;
-    }
-}
-
-::ng-deep .units-table.p-datatable-sm {
-
-    th,
-    td {
-        padding: 0.125rem;
+    .order-btn,
+    .order-btn * {
+        cursor: move !important;
     }
 }
 
@@ -29,11 +27,14 @@
     max-width: 15rem;
 }
 
-th {
-    @apply bg-gray-100;
-}
 
-td.unit-description-col,
-th.add-unit-col {
-    @apply bg-gray-200;
+.cdk-drag-preview {
+    @apply bg-gray-100;
+    @apply text-xs;
+    @apply rounded-sm;
+    @apply px-1;
+    @apply text-blue-800;
+
+    width: 100px;
+    height: 40px;
 }

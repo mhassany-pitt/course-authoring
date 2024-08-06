@@ -3,7 +3,7 @@
         <div class="container mx-auto flex items-center gap-2 px-2 md:px-0">
             <img src="assets/logo.png" class="h-8 w-8" />
             <span class="text-xl font-bold hidden md:inline-block text-nowrap">Course Authoring</span>
-            <span class="hidden md:inline-block"><i class="pi pi-chevron-right"></i></span>
+            <span class="hidden md:inline-block"><i class="fa fa-chevron-right"></i></span>
 
             <p-dropdown #navEl [options]="navLinks" [ngModel]="'/courses'" class="-my-2 course-nav-dropdown"
                 (onChange)="router.navigate([$event.value]);"></p-dropdown>
@@ -22,7 +22,7 @@
                 </p-button>
 
                 <p-button type="button" [label]="course.published ? 'Published' : 'Publish'"
-                    [icon]="course.published ? 'fa fa-eye-slash' : 'fa fa-eye'"
+                    [icon]="course.published ? 'fa fa-eye' : 'fa fa-eye-slash'"
                     [severity]="course.published ? 'success' : 'secondary'"
                     (click)="course.published = !course.published">
                 </p-button>
@@ -34,9 +34,14 @@
                 </p-button>
                 <p-button type="submit" label="Save" icon="fa fa-save"></p-button>
             </div>
-            <p-tabView>
+            <p-tabView [(activeIndex)]="activeIndex">
                 <p-tabPanel header="General Information">
-                    <div class="flex flex-col gap-2 p-2">
+                    <div *ngIf="activeIndex == 0" class="flex flex-col gap-2 p-2">
+                        <div class="flex flex-col gap-1">
+                            <span class="text-sm text-gray-600">Institution:</span>
+                            <input type="text" pInputText name="institution" [(ngModel)]="course.institution"
+                                placeholder="University of ..." />
+                        </div>
                         <div class="flex items-center gap-2">
                             <div class="flex flex-col gap-1">
                                 <span class="text-sm text-gray-600">Code:</span>
@@ -58,104 +63,154 @@
                         <div class="flex flex-col gap-1">
                             <span class="text-sm text-gray-600">Description:</span>
                             <textarea rows="5" pInputTextarea name="description" [(ngModel)]="course.description"
-                                placeholder="This course is ..."></textarea>
-                        </div>
-
-                        <div class="flex flex-col gap-1">
-                            <span class="text-sm text-gray-600">Institution:</span>
-                            <input type="text" pInputText name="institution" [(ngModel)]="course.institution"
-                                placeholder="University of ..." />
+                                placeholder="This course is ..." [autoResize]="true"></textarea>
                         </div>
                     </div>
                 </p-tabPanel>
                 <p-tabPanel header="Units and Resources">
-                    <div class="overflow-x-auto">
-                        <p-table [value]="course.units" styleClass="p-datatable-sm units-table">
-                            <ng-template pTemplate="header">
+                    <div *ngIf="activeIndex == 1" class="overflow-x-auto">
+                        <p-table [value]="course.units" [columns]="course.resources" [reorderableColumns]="true"
+                            styleClass="p-datatable-sm units-table">
+                            <ng-template pTemplate="header" let-columns>
                                 <tr>
-                                    <th [rowSpan]="2" class="add-unit-col">
+                                    <th [rowSpan]="2" class="add-unit-col bg-gray-100">
                                         <div class="flex flex-col items-center justify-center gap-2 p-1">
                                             <span>{{ course.units.length }} Units</span>
-                                            <p-button type="button" label="new unit" icon="fa fa-plus"
-                                                severity="secondary" [text]="true" [raised]="true" class="p-button-xs"
-                                                (click)="course.units.push({ id: nextResourceId() })"></p-button>
+
+                                            <div class="flex items-center gap-1">
+                                                <p-button type="button" label="new unit" icon="fa fa-plus"
+                                                    severity="secondary" [text]="true" [raised]="true"
+                                                    class="p-button-xs"
+                                                    (click)="course.units.push({ id: nextResourceId() })">
+                                                </p-button>
+                                            </div>
                                         </div>
                                     </th>
-                                    <th [colSpan]="course.resources.length" class="add-resource-col">
+                                    <th [colSpan]="course.resources.length" class="add-resource-col bg-gray-100">
                                         <div class="flex items-center justify-center gap-2 py-1 relative">
                                             <span>{{ course.resources?.length || 0 }} Resources</span>
-                                            <p-button type="button" label="new resource" icon="fa fa-plus"
-                                                severity="secondary" [text]="true" [raised]="true" class="p-button-xs"
-                                                [ngClass]="{'absolute right-0':course.resources?.length > 1}"
-                                                (click)="course.resources.push({ id: nextResourceId() })"></p-button>
+
+                                            <div class="flex items-center gap-1"
+                                                [ngClass]="{'absolute right-0':course.resources?.length > 1}">
+                                                <p-button type="button" label="new resource" icon="fa fa-plus"
+                                                    severity="secondary" [text]="true" [raised]="true"
+                                                    class="p-button-xs"
+                                                    (click)="course.resources.push({ id: nextResourceId() })">
+                                                </p-button>
+                                            </div>
                                         </div>
                                     </th>
                                     <th></th>
                                 </tr>
-                                <tr>
+                                <tr *ngIf="course.resources?.length">
                                     <th *ngFor="let $resource of course.resources; let rindex = index;"
-                                        class="resource-col">
+                                        pReorderableColumn class="resource-col bg-gray-100">
                                         <div class="flex flex-col gap-0.5">
-                                            <input type="text" pInputText [name]="'resource'+$resource.id"
-                                                [(ngModel)]="$resource.name" placeholder="Resource ..." />
-                                            <div class="flex items-center gap-2">
-                                                <p-button type="button" [label]="$resource.providers?.length 
-                                                        ? ($resource.providers?.length || 0) + ' providers, click here to edit.' 
-                                                        : 'click here to enable providers.'" icon="fa fa-edit"
-                                                    severity="secondary" [text]="true" class="p-button-xs"
+                                            <div class="flex items-center">
+                                                <p-button type="button"
+                                                    [label]="($resource.providers?.length || 0) + ' providers'"
+                                                    icon="fa fa-edit" severity="secondary" [text]="true"
+                                                    class="p-button-xs"
                                                     (click)="resource = $resource; providers = $resource.providers || [];">
                                                 </p-button>
 
                                                 <span class="flex-grow"></span>
 
-                                                <p-button type="button" label="remove" icon="fa fa-trash"
-                                                    severity="secondary" [text]="true" class="p-button-xs"
+                                                <p-button type="button" icon="fa fa-bars" severity="secondary"
+                                                    [text]="true" pReorderableRowHandle class="p-button-xs order-btn">
+                                                </p-button>
+                                                <p-button type="button" icon="fa fa-trash" severity="secondary"
+                                                    [text]="true" class="p-button-xs"
                                                     (click)="removeResource($resource)">
                                                 </p-button>
                                             </div>
+
+                                            <textarea rows="1" pInputTextarea [name]="'resource'+$resource.id"
+                                                [(ngModel)]="$resource.name" placeholder="Resource ..."
+                                                [autoResize]="true" class="text-xs font-bold p-1"></textarea>
                                         </div>
                                     </th>
                                     <th></th>
                                 </tr>
                             </ng-template>
                             <ng-template pTemplate="body" let-$unit let-uindex="rowIndex">
-                                <tr>
-                                    <td class="align-top unit-description-col">
-                                        <div class="flex flex-col gap-0.5">
-                                            <input type="text" pInputText [name]="'unit-name'+$unit.id"
-                                                [(ngModel)]="$unit.name" placeholder="Name" />
-                                            <textarea rows="3" pInputTextarea [name]="'unit-description'+$unit.id"
-                                                [(ngModel)]="$unit.description" placeholder="Description"></textarea>
-                                            <div class="flex items-center gap-2">
-                                                <span class="flex-grow"></span>
-
-                                                <p-button type="button" label="remove" icon="fa fa-trash"
-                                                    severity="secondary" [text]="true" class="p-button-xs"
-                                                    (click)="removeUnit($unit)">
+                                <tr [pReorderableRow]="uindex" [ngClass]="{'opacity-50': !$unit.published}">
+                                    <td class="align-top unit-description-col bg-gray-100">
+                                        <div class="flex items-stretch gap-1"
+                                            [ngStyle]="{'padding-left': ($unit.indent||0)+'rem'}">
+                                            <div class="flex flex-col items-center gap-1">
+                                                <p-button type="button" icon="fa fa-bars" severity="secondary"
+                                                    [text]="true" pReorderableRowHandle class="p-button-xs order-btn">
                                                 </p-button>
+
+                                                <!-- 
+                                                <p-button type="button" icon="fa fa-chevron-left" severity="secondary"
+                                                    [text]="true" class="p-button-xs"
+                                                    (click)="$unit.indent = ($unit.indent||0) > 0 ? ($unit.indent||0) - 1 : 0">
+                                                </p-button>
+
+                                                <p-button type="button" icon="fa fa-chevron-right" severity="secondary"
+                                                    [text]="true" class="p-button-xs"
+                                                    (click)="$unit.indent = ($unit.indent||0) < 2 ? ($unit.indent||0) + 1 : 2">
+                                                </p-button> 
+                                                -->
+                                                <p-button type="button"
+                                                    [icon]="$unit.published ? 'fa fa-eye' : 'fa fa-eye-slash'"
+                                                    severity="secondary" [text]="true" class="p-button-xs"
+                                                    (click)="$unit.published = !$unit.published">
+                                                </p-button>
+
+                                                <p-button type="button" icon="fa fa-trash" severity="secondary"
+                                                    [text]="true" class="p-button-xs" (click)="removeUnit($unit)">
+                                                </p-button>
+
+                                                <p-button type="button"
+                                                    [icon]="'fa ' + ($unit.expand ? 'fa-chevron-up' : 'fa-chevron-down')"
+                                                    severity="secondary" [text]="true" class="p-button-xs"
+                                                    (click)="$unit.expand = !$unit.expand; refreshUnitDescEl('unitdesc-ref-tt:' + $unit.id);">
+                                                </p-button>
+                                            </div>
+                                            <div class="flex-grow flex flex-col gap-0.5">
+                                                <textarea rows="1" pInputTextarea [name]="'unit-name'+$unit.id"
+                                                    [(ngModel)]="$unit.name" placeholder="Name" [autoResize]="true"
+                                                    class="text-xs font-bold p-1"></textarea>
+                                                <textarea *ngIf="!tt['unitdesc-ref-tt:' + $unit.id]" rows="3"
+                                                    pInputTextarea [name]="'unit-description'+$unit.id"
+                                                    [(ngModel)]="$unit.description" placeholder="Description"
+                                                    [autoResize]="$unit.expand" class="text-xs p-1"></textarea>
                                             </div>
                                         </div>
                                     </td>
                                     <td *ngFor="let $resource of course.resources; let rindex = index;"
                                         class="relative align-top resource-col">
-                                        <div *ngIf="$resource.providers?.length"
-                                            class="flex flex-col justify-start gap-0 5">
-                                            <!-- Empty list of activities, 
-                                                    use the above button to add activities. -->
+                                        <div *ngIf="$resource.providers?.length; else thereIsNoProviders"
+                                            class="flex flex-col justify-start">
                                             <p-button type="button" [label]="$unit.activities?.[$resource.id]?.length 
-                                                    ? ($unit.activities?.[$resource.id]?.length || 0) + ' activities, click here to edit.' 
+                                                    ? ($unit.activities?.[$resource.id]?.length || 0) + ' activities' 
                                                     : 'click here to add activities.'" icon="fa fa-edit"
                                                 severity="secondary" [text]="true" class="p-button-xs"
                                                 (click)="editUnitActivities($unit, $resource)">
                                             </p-button>
-                                            <div *ngIf="$unit.activities?.[$resource.id]?.length > 0"
-                                                class="flex flex-col text-xs mt-2 ml-3">
-                                                <a *ngFor="let $activity of $unit.activities[$resource.id]"
-                                                    [href]="$activity.url" target="_blank" class="no-underline">
-                                                    - {{ $activity.name }}
+                                            <div cdkDropList *ngIf="$unit.activities?.[$resource.id]?.length > 0"
+                                                class="flex flex-col items-start text-xs ml-2"
+                                                (cdkDropListDropped)="reorder($event, $unit.activities[$resource.id])">
+                                                <a *ngFor="let $activity of $unit.activities[$resource.id]; let aindex = index;"
+                                                    cdkDrag [href]="$activity.url" target="_blank"
+                                                    class="no-underline min-w-max overflow-hidden">
+                                                    <!-- ⋮⋮ -->
+                                                    <i class="fa fa-bars text-gray-500 order-btn"></i>
+                                                    <span class="ml-1 text-wrap inline-block w-56" style="color: blue;">
+                                                        {{ $activity.name }}
+                                                    </span>
                                                 </a>
                                             </div>
                                         </div>
+                                        <ng-template #thereIsNoProviders>
+                                            <p-button *ngIf="uindex == 0" type="button"
+                                                label="click on the above button to enable providers for this resource."
+                                                severity="secondary" [text]="true" class="p-button-xs">
+                                            </p-button>
+                                        </ng-template>
                                     </td>
                                     <td></td>
                                 </tr>
@@ -163,7 +218,9 @@
                             <ng-template pTemplate="emptymessage">
                                 <tr>
                                     <td [colSpan]="course.resources.length + 2">
-                                        empty units
+                                        <div class="p-4 text-center text-gray-400 text-sm">
+                                            Empty course, use the 'new unit' button to add units.
+                                        </div>
                                     </td>
                                 </tr>
                             </ng-template>
@@ -171,10 +228,10 @@
                     </div>
                 </p-tabPanel>
                 <p-tabPanel header="Students">
-                    <div class="flex flex-col gap-2">
+                    <div *ngIf="activeIndex == 2" class="flex flex-col gap-2">
                         <span>Add students' email addresses (separated by comma).</span>
                         <textarea rows="10" pInputTextarea name="student_emails" [(ngModel)]="course.student_emails"
-                            [placeholder]="'std1-email-address,std2-email-address,...'"></textarea>
+                            [placeholder]="'std1-email-address,std2-email-address,...'" [autoResize]="true"></textarea>
                     </div>
                 </p-tabPanel>
             </p-tabView>
@@ -183,12 +240,12 @@
 </div>
 
 <p-dialog *ngIf="providers" header="Enable Providers" [visible]="providers" [modal]="true" [closable]="false"
-    [style]="{ width: '50vw' }">
+    [style]="{ 'max-width': '640px' }">
     <div class="flex flex-col gap-2">
         <div>Check the providers you want to enable for this resource.</div>
 
         <p-table #dt1 [value]="filteredProvidersList" [(selection)]="providers"
-            [globalFilterFields]="['name', 'author', 'description', 'tags']" [scrollable]="true" scrollHeight="15rem"
+            [globalFilterFields]="['name', 'author', 'description', 'tags']" [scrollable]="true" scrollHeight="20rem"
             [rowHover]="true" styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines">
             <ng-template pTemplate="caption">
                 <div class="flex items-center">
@@ -197,7 +254,7 @@
                     <p-iconField iconPosition="left">
                         <input pInputText type="text" (input)="dt1.filterGlobal(any($event.target).value, 'contains')"
                             placeholder="Filter ..." />
-                        <p-inputIcon><i class="pi pi-search"></i></p-inputIcon>
+                        <p-inputIcon><i class="fa fa-search"></i></p-inputIcon>
                     </p-iconField>
                 </div>
             </ng-template>
@@ -262,11 +319,11 @@
 </p-dialog>
 
 <p-dialog *ngIf="activities" header="Edit Unit Activities" [visible]="activities" [modal]="true" [closable]="false"
-    [style]="{ width: '50vw' }">
+    [style]="{ 'max-width': '640px' }">
     <div class="flex flex-col gap-2">
         <div>Check the activities you want to include in this unit.</div>
         <p-table #dt2 [value]="filteredActivitiesList" [(selection)]="activities"
-            [globalFilterFields]="['name', 'author', 'tags']" [scrollable]="true" scrollHeight="15rem" [rowHover]="true"
+            [globalFilterFields]="['name', 'author', 'tags']" [scrollable]="true" scrollHeight="20rem" [rowHover]="true"
             styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines">
             <ng-template pTemplate="caption">
                 <div class="flex items-center">
@@ -275,7 +332,7 @@
                     <p-iconField iconPosition="left">
                         <input pInputText type="text" (input)="dt2.filterGlobal(any($event.target).value, 'contains')"
                             placeholder="Filter ..." />
-                        <p-inputIcon><i class="pi pi-search"></i></p-inputIcon>
+                        <p-inputIcon><i class="fa fa-search"></i></p-inputIcon>
                     </p-iconField>
                 </div>
             </ng-template>
