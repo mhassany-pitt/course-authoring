@@ -47,7 +47,7 @@ export class CourseComponent implements OnInit {
   enabledOnlyProviders: boolean = false;
   selectedOnlyActivities: boolean = false;
 
-  activeIndex: number = 1;
+  activeIndex: number = 0;
 
   tt: any = {};
 

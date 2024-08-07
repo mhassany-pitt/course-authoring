@@ -165,9 +165,9 @@
                                                 </p-button>
 
                                                 <p-button type="button"
-                                                    [icon]="'fa ' + ($unit.expand ? 'fa-chevron-up' : 'fa-chevron-down')"
+                                                    [icon]="'fa ' + ($unit._ui_expand ? 'fa-chevron-up' : 'fa-chevron-down')"
                                                     severity="secondary" [text]="true" class="p-button-xs"
-                                                    (click)="$unit.expand = !$unit.expand; refreshUnitDescEl('unitdesc-ref-tt:' + $unit.id);">
+                                                    (click)="$unit._ui_expand = !$unit._ui_expand; refreshUnitDescEl('unitdesc-ref-tt:' + $unit.id);">
                                                 </p-button>
                                             </div>
                                             <div class="flex-grow flex flex-col gap-0.5">
@@ -177,7 +177,7 @@
                                                 <textarea *ngIf="!tt['unitdesc-ref-tt:' + $unit.id]" rows="3"
                                                     pInputTextarea [name]="'unit-description'+$unit.id"
                                                     [(ngModel)]="$unit.description" placeholder="Description"
-                                                    [autoResize]="$unit.expand" class="text-xs p-1"></textarea>
+                                                    [autoResize]="$unit._ui_expand" class="text-xs p-1"></textarea>
                                             </div>
                                         </div>
                                     </td>
