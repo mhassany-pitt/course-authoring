@@ -1,0 +1,18 @@
+<p-dialog header="Rearrange Resources" [visible]="true" [modal]="true" [closable]="false"
+  [style]="{ 'max-width': '640px' }">
+  <div class="flex flex-col gap-2">
+    <span class="ml-8 text-sm text-gray-400 text-left">
+      Drag and drop resources to rearrange them.
+    </span>
+    <div class="border border-solid border-gray-200 rounded-md p-2">
+      <div class="resources-tree"></div>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="flex-grow"></span>
+      <p-button type="button" label="Cancel" icon="fa fa-chevron-left" severity="secondary" (click)="close.emit()">
+      </p-button>
+      <p-button type="button" label="Save" icon="fa fa-save" (click)="applyResourcesArrangement()">
+      </p-button>
+    </div>
+  </div>
+</p-dialog>

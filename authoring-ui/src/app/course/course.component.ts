@@ -4,8 +4,6 @@ import { AppService } from '../app.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CoursesService } from '../courses/courses.service';
 import { moveItemInArray } from '@angular/cdk/drag-drop';
-import SortableTree, { SortableTreeNodeComponent, SortableTreeNodeData } from 'sortable-tree';
-import { of } from 'rxjs';
 
 @Component({
   selector: 'app-course',
@@ -39,22 +37,9 @@ export class CourseComponent implements OnInit {
   activitiesList: any[] = [];
   activitiesMap: any = {};
 
-  get filteredProvidersList() {
-    const $ = this.editingProviders.map((p: any) => p.id);
-    return this.providersList.filter((p: any) => !this.enabledOnlyProviders || $.includes(p.id));
-  }
-  get filteredActivitiesList() {
-    const $ = this.editingActivities.map((a: any) => a.id);
-    return this.activitiesList.filter((a: any) => !this.selectedOnlyActivities || $.includes(a.id));
-  }
-
-  enabledOnlyProviders: boolean = false;
-  selectedOnlyActivities: boolean = false;
-
   activeIndex: number = 0;
 
   arrangingItems = '';
-  newItemsArrangement: any;
 
   tt: any = {};
 
@@ -70,80 +55,13 @@ export class CourseComponent implements OnInit {
     this.loadProviders();
   }
 
-  startRearrangement(order: string) {
-    this.arrangingItems = order;
-    this.newItemsArrangement = [];
-    setTimeout(() => {
-      if (this.arrangingItems == 'resources') this.prepResourcesRearrangement();
-      else if (this.arrangingItems == 'units') this.prepUnitsRearrangement();
-    }, 0);
-  }
-
-  applyUnitsArrangement() {
-    let i = 0;
-    const map: any = {};
-    const mapIndices = (nodes: any[], level: number) => {
-      if (!nodes) return;
-      for (const node of nodes) {
-        map[node.id] = [i++, level];
-        mapIndices(node.children, level + 1);
-      }
-    }
-    mapIndices(this.newItemsArrangement, 0);
-    this.course.units.sort((u1: any, u2: any) => map[u1.id][0] - map[u2.id][0]);
-    this.course.units.forEach((u: any) => u.level = map[u.id][1]);
-  }
-
-  applyResourcesArrangement() {
-    const map: any = {};
-    this.newItemsArrangement.forEach((o: any, i: number) => map[o.id] = i);
+  applyResourcesArrangement(map: any) {
     this.course.resources.sort((r1: any, r2: any) => map[r1.id] - map[r2.id]);
   }
 
-  prepUnitsRearrangement() {
-    const nodes: any = [], stack: any = {};
-    this.course.units.forEach(({ id, name, level }: any) => {
-      const item = { data: { id: id, title: name || '[not defined]' }, nodes: [] };
-      if (level == 0) nodes.push(item);
-      else stack[level - 1].nodes.push(item);
-      stack[level] = item;
-    });
-
-    new SortableTree({
-      nodes: [{ data: { title: 'Units', root: true }, nodes }],
-      element: document.querySelector('.units-tree') as HTMLElement,
-      stateId: 'units-tree',
-      initCollapseLevel: 5,
-      onChange: ({ nodes, movedNode, srcParentNode, targetParentNode }) => {
-        this.newItemsArrangement = this.mapToTreeNodes(nodes)[0].children;
-        return Promise.resolve();
-      }
-    });
-  }
-
-  prepResourcesRearrangement() {
-    const nodes = this.course.resources.map((u: any) =>
-      ({ data: { id: u.id, title: u.name || '[not defined]' }, nodes: [] }));
-    new SortableTree({
-      nodes: [{ data: { title: 'Resources', root: true }, nodes }],
-      initCollapseLevel: 5,
-      element: document.querySelector('.resources-tree') as HTMLElement,
-      stateId: 'resources-tree',
-      confirm: (node: any, target: any) => {
-        return Promise.resolve(target.data.root);
-      },
-      onChange: ({ nodes, movedNode, srcParentNode, targetParentNode }) => {
-        this.newItemsArrangement = this.mapToTreeNodes(nodes)[0].children;
-        return Promise.resolve();
-      }
-    });
-  }
-
-  mapToTreeNodes(nodes: any[]): any[] {
-    return nodes ? nodes.map(node => ({
-      ...node.element._data,
-      children: this.mapToTreeNodes(node.subnodes),
-    })) : [];
+  applyUnitsArrangement(map: any) {
+    this.course.units.sort((u1: any, u2: any) => map[u1.id][0] - map[u2.id][0]);
+    this.course.units.forEach((u: any) => u.level = map[u.id][1]);
   }
 
   load() {
@@ -217,10 +135,6 @@ export class CourseComponent implements OnInit {
     return l.filter((i: any) => i.selected == b);
   }
 
-  any(v: any): any {
-    return v;
-  }
-
   rearrange(event: any, list: any) {
     moveItemInArray(list, event.previousIndex, event.currentIndex);
   }
@@ -237,4 +151,18 @@ export class CourseComponent implements OnInit {
   countUnits() {
     return (this.course.units.filter((u: any) => u.level == 0) || []).length;
   }
+
+  get allExpanded() {
+    return this.course.units.every((u: any) => u._ui_expand);
+  }
+
+  collapse(toggle: boolean) {
+    this.course.units.forEach((u: any) => {
+      u._ui_expand = !toggle;
+      this.refreshUnitDescEl(`unitdesc-ref-tt:${u.id}`);
+    });
+  }
 }
+
+// add demo grp/usr/... to each url for preview
+// ask kamil how to link to mastry grid

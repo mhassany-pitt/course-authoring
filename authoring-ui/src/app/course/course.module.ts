@@ -18,6 +18,10 @@ import { TableModule } from 'primeng/table';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { RearrangeResourcesComponent } from "./rearrange-resources/rearrange-resources.component";
+import { RearrangeUnitsComponent } from "./rearrange-units/rearrange-units.component";
+import { EditUnitActivitiesComponent } from "./edit-unit-activities/edit-unit-activities.component";
+import { EnableProvidersComponent } from "./enable-providers/enable-providers.component";
 
 @NgModule({
   declarations: [
@@ -33,6 +37,10 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     DialogModule, ListboxModule, TreeModule, TableModule,
     IconFieldModule, InputIconModule,
     DragDropModule,
+    RearrangeResourcesComponent,
+    RearrangeUnitsComponent,
+    EditUnitActivitiesComponent,
+    EnableProvidersComponent
   ]
 })
 export class CourseModule { }
