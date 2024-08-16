@@ -49,4 +49,8 @@ export class CoursesComponent implements OnInit {
       error: (error: any) => console.log(error)
     });
   }
+
+  countUnits(units: any[]) {
+    return (units.filter(u => u.level == 0) || []).length;
+  }
 }

@@ -1,40 +1,91 @@
+@import 'sortable-tree/dist/sortable-tree.css';
+
 ::ng-deep {
-    .units-table {
-        .p-button-label {
-            text-align: left;
-        }
+  .units-table {
+    .p-button-label {
+      text-align: left;
     }
+  }
 
-    .units-table.p-datatable-sm {
+  .units-table.p-datatable-sm {
 
-        th,
-        td {
-            padding: 0.125rem;
-        }
+    th,
+    td {
+      padding: 0.125rem;
     }
+  }
 
-    .order-btn,
-    .order-btn * {
-        cursor: move !important;
-    }
+  .order-btn,
+  .order-btn * {
+    cursor: move !important;
+  }
 }
 
 .add-unit-col,
 .unit-description-col,
 .resource-col {
-    width: 15rem;
-    min-width: 15rem;
-    max-width: 15rem;
+  width: 17rem;
+  min-width: 17rem;
+  max-width: 17rem;
 }
 
 
 .cdk-drag-preview {
-    @apply bg-gray-100;
-    @apply text-xs;
-    @apply rounded-sm;
-    @apply px-1;
-    @apply text-blue-800;
+  @apply bg-gray-100;
+  @apply text-xs;
+  @apply rounded-sm;
+  @apply px-1;
+  @apply text-blue-800;
 
-    width: 100px;
-    height: 40px;
+  width: 100px;
+  height: 40px;
+}
+
+
+::ng-deep {
+  .tree {
+    // --st-label-height: 2rem;
+    // --st-collapse-icon-height: var(--st-label-height);
+    margin-left: 2rem;
+  }
+
+  .tree__collapse {
+    top: 0.125rem !important;
+  }
+
+  .tree__label {
+    margin: 0.125rem 0;
+    padding: 0.5rem;
+    border: solid 0.125rem lightgray;
+    border-radius: 0.5rem;
+    cursor: grab;
+    // min-height: var(--st-label-height);
+    height: auto !important;
+  }
+
+  .tree__label:active {
+    cursor: grabbing !important;
+  }
+
+  .tree__node--dragging .tree__label {
+    border-style: dashed;
+    cursor: move !important;
+    cursor: grabbing !important;
+  }
+
+  .tree__node--drop-inside>.tree__label {
+    background-color: lightblue;
+  }
+
+  .tree__node--drop-before>.tree__label {
+    border-top-style: solid;
+    border-top-color: green;
+    border-top-width: 0.25rem;
+  }
+
+  .tree__node--drop-after>.tree__label {
+    border-bottom-style: solid;
+    border-bottom-color: green;
+    border-bottom-width: 0.25rem;
+  }
 }

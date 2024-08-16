@@ -33,6 +33,7 @@ export interface Resource {
 
 export interface Unit {
   id: number;
+  leve: number;
   name: string;
   description: string;
   activities: { [key: number]: any[] };

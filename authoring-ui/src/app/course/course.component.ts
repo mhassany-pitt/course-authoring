@@ -3,7 +3,9 @@ import { getNavLinks } from '../utils';
 import { AppService } from '../app.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CoursesService } from '../courses/courses.service';
-import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { moveItemInArray } from '@angular/cdk/drag-drop';
+import SortableTree, { SortableTreeNodeComponent, SortableTreeNodeData } from 'sortable-tree';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-course',
@@ -15,10 +17,12 @@ export class CourseComponent implements OnInit {
   navLinks = getNavLinks(this.app);
 
   course: any;
-  resource: any;
-  providers: any;
-  unit: any;
-  activities: any;
+  UNIT_MAX_LEVEL = 3;
+
+  editingProviders: any;
+  editingResource: any;
+  editingUnit: any;
+  editingActivities: any;
 
   domains: any = [
     { value: "java", label: "Java" },
@@ -36,18 +40,21 @@ export class CourseComponent implements OnInit {
   activitiesMap: any = {};
 
   get filteredProvidersList() {
-    const tmp = this.providers.map((p: any) => p.id);
-    return this.providersList.filter((p: any) => !this.enabledOnlyProviders || tmp.includes(p.id));
+    const $ = this.editingProviders.map((p: any) => p.id);
+    return this.providersList.filter((p: any) => !this.enabledOnlyProviders || $.includes(p.id));
   }
   get filteredActivitiesList() {
-    const tmp = this.activities.map((a: any) => a.id);
-    return this.activitiesList.filter((a: any) => !this.selectedOnlyActivities || tmp.includes(a.id));
+    const $ = this.editingActivities.map((a: any) => a.id);
+    return this.activitiesList.filter((a: any) => !this.selectedOnlyActivities || $.includes(a.id));
   }
 
   enabledOnlyProviders: boolean = false;
   selectedOnlyActivities: boolean = false;
 
   activeIndex: number = 0;
+
+  arrangingItems = '';
+  newItemsArrangement: any;
 
   tt: any = {};
 
@@ -61,6 +68,82 @@ export class CourseComponent implements OnInit {
   ngOnInit() {
     this.load();
     this.loadProviders();
+  }
+
+  startRearrangement(order: string) {
+    this.arrangingItems = order;
+    this.newItemsArrangement = [];
+    setTimeout(() => {
+      if (this.arrangingItems == 'resources') this.prepResourcesRearrangement();
+      else if (this.arrangingItems == 'units') this.prepUnitsRearrangement();
+    }, 0);
+  }
+
+  applyUnitsArrangement() {
+    let i = 0;
+    const map: any = {};
+    const mapIndices = (nodes: any[], level: number) => {
+      if (!nodes) return;
+      for (const node of nodes) {
+        map[node.id] = [i++, level];
+        mapIndices(node.children, level + 1);
+      }
+    }
+    mapIndices(this.newItemsArrangement, 0);
+    this.course.units.sort((u1: any, u2: any) => map[u1.id][0] - map[u2.id][0]);
+    this.course.units.forEach((u: any) => u.level = map[u.id][1]);
+  }
+
+  applyResourcesArrangement() {
+    const map: any = {};
+    this.newItemsArrangement.forEach((o: any, i: number) => map[o.id] = i);
+    this.course.resources.sort((r1: any, r2: any) => map[r1.id] - map[r2.id]);
+  }
+
+  prepUnitsRearrangement() {
+    const nodes: any = [], stack: any = {};
+    this.course.units.forEach(({ id, name, level }: any) => {
+      const item = { data: { id: id, title: name || '[not defined]' }, nodes: [] };
+      if (level == 0) nodes.push(item);
+      else stack[level - 1].nodes.push(item);
+      stack[level] = item;
+    });
+
+    new SortableTree({
+      nodes: [{ data: { title: 'Units', root: true }, nodes }],
+      element: document.querySelector('.units-tree') as HTMLElement,
+      stateId: 'units-tree',
+      initCollapseLevel: 5,
+      onChange: ({ nodes, movedNode, srcParentNode, targetParentNode }) => {
+        this.newItemsArrangement = this.mapToTreeNodes(nodes)[0].children;
+        return Promise.resolve();
+      }
+    });
+  }
+
+  prepResourcesRearrangement() {
+    const nodes = this.course.resources.map((u: any) =>
+      ({ data: { id: u.id, title: u.name || '[not defined]' }, nodes: [] }));
+    new SortableTree({
+      nodes: [{ data: { title: 'Resources', root: true }, nodes }],
+      initCollapseLevel: 5,
+      element: document.querySelector('.resources-tree') as HTMLElement,
+      stateId: 'resources-tree',
+      confirm: (node: any, target: any) => {
+        return Promise.resolve(target.data.root);
+      },
+      onChange: ({ nodes, movedNode, srcParentNode, targetParentNode }) => {
+        this.newItemsArrangement = this.mapToTreeNodes(nodes)[0].children;
+        return Promise.resolve();
+      }
+    });
+  }
+
+  mapToTreeNodes(nodes: any[]): any[] {
+    return nodes ? nodes.map(node => ({
+      ...node.element._data,
+      children: this.mapToTreeNodes(node.subnodes),
+    })) : [];
   }
 
   load() {
@@ -91,19 +174,19 @@ export class CourseComponent implements OnInit {
   }
 
   editUnitActivities($unit: any, $resource: any) {
-    this.unit = $unit;
+    this.editingUnit = $unit;
     if (!$unit.activities)
       $unit.activities = {};
     if (!$unit.activities[$resource.id])
       $unit.activities[$resource.id] = [];
-    this.activities = $unit.activities[$resource.id];
-    this.resource = $resource;
+    this.editingActivities = $unit.activities[$resource.id];
+    this.editingResource = $resource;
     this.loadActivitiesList();
   }
 
   loadActivitiesList() {
     this.activitiesList = [];
-    this.resource.providers.map((p: any) => {
+    this.editingResource.providers.map((p: any) => {
       const indexUrl = this.providersMap[p.id].index_url;
       this.courses.activities(indexUrl).subscribe((as: any) => {
         as.filter((a: any) => a.domain == this.course.domain).forEach((a: any) => {
@@ -138,7 +221,7 @@ export class CourseComponent implements OnInit {
     return v;
   }
 
-  reorder(event: any, list: any) {
+  rearrange(event: any, list: any) {
     moveItemInArray(list, event.previousIndex, event.currentIndex);
   }
 
@@ -150,10 +233,8 @@ export class CourseComponent implements OnInit {
     this.tt[id] = true;
     setTimeout(() => delete this.tt[id], 0);
   }
+
+  countUnits() {
+    return (this.course.units.filter((u: any) => u.level == 0) || []).length;
+  }
 }
-
-
-// --- specify the allocated page range for this unit on pdf-reader
-// --- range=[included,excluded)
-// pdf-reader__unit-page-range=12,45
-// pdf-reader__unit-page-range=sectionx,sectiony

@@ -47,7 +47,7 @@
             <div class="flex flex-col gap-2">
               <span [routerLink]="['/courses/', course.id]" class="font-bold cursor-pointer text-blue-700">
                 {{ course.name || 'Untitled' }}
-                ({{ course.units?.length || 0 }} units)
+                ({{ countUnits(course.units) }} units)
               </span>
               <span *ngIf="course.description" class="text-xs">{{ course.description }}</span>
               <div class="flex items-center gap-2">
