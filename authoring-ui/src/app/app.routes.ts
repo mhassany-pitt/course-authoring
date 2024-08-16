@@ -19,11 +19,11 @@ export const routes: Routes = [
         loadChildren: () => import('./course/course.module').then(m => m.CourseModule),
         canActivate: [AuthenticatedAuthorGuard]
     },
-    {
-        path: 'hub',
-        loadChildren: () => import('./hub/hub.module').then(m => m.HubModule),
-        canActivate: [HandshakeGuard]
-    },
+    // {
+    //     path: 'hub',
+    //     loadChildren: () => import('./hub/hub.module').then(m => m.HubModule),
+    //     canActivate: [HandshakeGuard]
+    // },
     {
         path: 'user-admin',
         loadChildren: () => import('./user-admin/user-admin.module').then(m => m.UserAdminModule),
