@@ -162,7 +162,10 @@ export class CourseComponent implements OnInit {
       this.refreshUnitDescEl(`unitdesc-ref-tt:${u.id}`);
     });
   }
+
+  getPreviewLink(activity: any) {
+    return `${activity.url}&usr=${this.app.user.email}&grp=preview&sid=preview`;
+  }
 }
 
-// add demo grp/usr/... to each url for preview
 // ask kamil how to link to mastry grid
