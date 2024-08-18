@@ -21,6 +21,8 @@ export class Course {
   @Prop() tags: string[];
 
   @Prop() student_emails: string;
+
+  @Prop({ type: Object }) linkings: any;
 }
 
 export const CourseSchema = SchemaFactory.createForClass(Course);
@@ -33,7 +35,8 @@ export interface Resource {
 
 export interface Unit {
   id: number;
-  leve: number;
+  level: number;
+  published: boolean;
   name: string;
   description: string;
   activities: { [key: number]: any[] };

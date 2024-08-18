@@ -4,7 +4,6 @@ import { Model } from 'mongoose';
 import { User } from './user.schema';
 import { toObject } from 'src/utils';
 import { hash } from 'bcryptjs';
-import { compare } from 'bcryptjs';
 
 @Injectable()
 export class UsersService {
@@ -44,7 +43,7 @@ export class UsersService {
     return await this.users.updateOne({ email }, model);
   }
 
-  async remove(emails) {
+  async remove(emails: string[]): Promise<any> {
     return await this.users.deleteMany({ email: { $in: emails } });
   }
 

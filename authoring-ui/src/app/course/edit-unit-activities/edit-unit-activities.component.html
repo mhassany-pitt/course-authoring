@@ -1,10 +1,10 @@
 <p-dialog header="Edit Unit Activities" [visible]="activities" [modal]="true" [closable]="false"
-  [style]="{ 'max-width': '640px' }">
+  [style]="{ 'max-width': '768px' }">
   <div class="flex flex-col gap-2">
     <div>Check the activities you want to include in this unit.</div>
     <p-table #dt2 [value]="filteredActivitiesList" [(selection)]="activities"
-      [globalFilterFields]="['name', 'author', 'tags']" [scrollable]="true" scrollHeight="20rem" [rowHover]="true"
-      styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines">
+      [globalFilterFields]="['name', 'provider_id', 'author_id', 'tags']" [scrollable]="true" scrollHeight="20rem"
+      [rowHover]="true" styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines">
       <ng-template pTemplate="caption">
         <div class="flex items-center">
           <p-checkbox [binary]="true" [(ngModel)]="selectedOnly" label="Selected only"></p-checkbox>
@@ -21,7 +21,7 @@
         <tr>
           <th>
             <div class="flex items-center gap-2">
-              <span>Name and Tags</span>
+              <span>Name</span>
               <span class="flex-grow"></span>
               <span>Author</span>
             </div>
@@ -35,15 +35,18 @@
             <div class="flex items-center gap-2">
               <p-tableCheckbox [value]="activity" />
               <div class="flex flex-col flex-grow">
+                <span class="text-xs text-gray-400">
+                  {{ providersMap[activity.provider_id].name }}
+                </span>
                 <div class="flex items-center gap-2">
                   <span>{{ activity.name }}</span>
                   <div class="text-sm text-gray-400">
                     [<a [href]="activity.url" target="_blank" class="no-underline text-gray-400">preview</a>]
                   </div>
                   <span class="flex-grow"></span>
-                  <span *ngIf="activity.author" class="text-sm">{{ activity.author }}</span>
+                  <span class="text-sm">{{ activity.author_id }}</span>
                 </div>
-                <span *ngIf="activity.tags.length != 0" class="text-xs">
+                <span *ngIf="activity.tags?.length" class="text-xs">
                   tags: <span class="italic">{{ activity.tags.join(', ') }}</span>
                 </span>
               </div>

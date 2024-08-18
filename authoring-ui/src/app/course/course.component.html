@@ -31,11 +31,11 @@
         <p-button type="button" label="Cancel" icon="fa fa-chevron-left" size="small" severity="secondary"
           (click)="router.navigate(['/courses'])">
         </p-button>
-        <p-button type="submit" label="Save" icon="fa fa-save" size="small"></p-button>
+        <p-button type="submit" label="Save" icon="fa fa-save" size="small" [disabled]="form.invalid"></p-button>
       </div>
-      <p-tabView [(activeIndex)]="activeIndex">
+      <p-tabView [(activeIndex)]="activeTabIndex" (activeIndexChange)="forceUiRefresh('textarea-ref-tt')">
         <p-tabPanel header="General Information">
-          <div *ngIf="activeIndex == 0" class="flex flex-col gap-2 p-2">
+          <div class="flex flex-col gap-2 p-2">
             <div class="flex flex-col gap-1">
               <span class="text-sm text-gray-600">Institution:</span>
               <input type="text" pInputText name="institution" [(ngModel)]="course.institution"
@@ -45,16 +45,17 @@
               <div class="flex flex-col gap-1">
                 <span class="text-sm text-gray-600">Code:</span>
                 <input type="text" pInputText name="code" [(ngModel)]="course.code" placeholder="INFSCI ..."
-                  size="10" />
+                  required="true" size="10" />
               </div>
               <div class="flex flex-col gap-1">
                 <span class="text-sm text-gray-600">Name:</span>
                 <input type="text" pInputText name="name" [(ngModel)]="course.name" placeholder="Introduction to ..."
-                  size="50" />
+                  required="true" size="50" />
               </div>
               <div class="flex flex-col gap-1">
                 <span class="text-sm text-gray-600">Domain:</span>
-                <p-dropdown [options]="domains" name="domain" [(ngModel)]="course.domain" placeholder="Select" />
+                <p-dropdown [options]="domains" name="domain" [(ngModel)]="course.domain" optionValue="id"
+                  optionLabel="name" placeholder="Select" required="true" (onChange)="loadProviders()" />
               </div>
             </div>
 
@@ -66,17 +67,17 @@
           </div>
         </p-tabPanel>
         <p-tabPanel header="Units and Resources">
-          <div *ngIf="activeIndex == 1" class="overflow-x-auto">
+          <div class="overflow-x-auto">
             <p-table [value]="course.units" [columns]="course.resources" styleClass="p-datatable-sm units-table">
               <ng-template pTemplate="header" let-columns>
                 <tr>
                   <th [rowSpan]="2" class="add-unit-col bg-gray-100">
                     <div class="flex flex-col items-center justify-center gap-2 p-1">
-                      <span class="flex-grow">{{ countUnits() }} Units</span>
+                      <span class="flex-grow">{{ numOfLvl0Units() }} Units</span>
                       <div class="flex items-center gap-1">
                         <p-button type="button" [label]="allExpanded ? 'collapse' : 'expand'"
                           [icon]="allExpanded ? 'fa fa-chevron-up' : 'fa fa-chevron-down'" severity="secondary"
-                          [text]="true" [raised]="true" class="p-button-xs" (click)="collapse(allExpanded)">
+                          [text]="true" [raised]="true" class="p-button-xs" (click)="expandTextarea(allExpanded)">
                         </p-button>
                         <p-button type="button" label="rearrange" icon="fa fa-list-ol" severity="secondary"
                           [text]="true" [raised]="true" class="p-button-xs" (click)="arrangingItems = 'units'">
@@ -92,14 +93,14 @@
                     <div class="flex items-center justify-center gap-2 py-1 relative">
                       <span>{{ course.resources?.length || 0 }} Resources</span>
 
-                      <div class="flex items-center gap-1"
-                        [ngClass]="{'absolute right-0':course.resources?.length > 1}">
-                        <p-button type="button" label="rearrange" icon="fa fa-list-ol" severity="secondary"
-                          [text]="true" [raised]="true" class="p-button-xs" (click)="arrangingItems = 'resources'">
+                      <div class="absolute right-0 flex items-center gap-1">
+                        <p-button type="button" [label]="course.resources?.length > 1 ? 'rearrange' : ''"
+                          icon="fa fa-list-ol" title="rearrange" severity="secondary" [text]="true" [raised]="true"
+                          class="p-button-xs" (click)="arrangingItems = 'resources'">
                         </p-button>
-                        <p-button type="button" label="new resource" icon="fa fa-plus" severity="secondary"
-                          [text]="true" [raised]="true" class="p-button-xs"
-                          (click)="course.resources.push({ id: nextResourceId() })">
+                        <p-button type="button" [label]="course.resources?.length > 1 ? 'new resource' : ''"
+                          icon="fa fa-plus" title="new resource" severity="secondary" [text]="true" [raised]="true"
+                          class="p-button-xs" (click)="course.resources.push({ id: nextResourceId() })">
                         </p-button>
                       </div>
                     </div>
@@ -122,8 +123,9 @@
                         </p-button>
                       </div>
 
-                      <textarea rows="1" pInputTextarea [name]="'resource'+resource.id" [(ngModel)]="resource.name"
-                        placeholder="Resource ..." [autoResize]="true" class="text-xs font-bold p-1"></textarea>
+                      <textarea *ngIf="!tt['textarea-ref-tt']" rows="1" pInputTextarea [name]="'resource'+resource.id"
+                        [(ngModel)]="resource.name" placeholder="Resource ..." required="true" [autoResize]="true"
+                        class="text-xs font-bold p-1"></textarea>
                     </div>
                   </th>
                   <th></th>
@@ -147,15 +149,17 @@
 
                         <p-button type="button" [icon]="'fa ' + (unit._ui_expand ? 'fa-chevron-up' : 'fa-chevron-down')"
                           severity="secondary" [text]="true" title="Expand/Collapse Description" class="p-button-xs"
-                          (click)="unit._ui_expand = !unit._ui_expand; refreshUnitDescEl('unitdesc-ref-tt:' + unit.id);">
+                          (click)="unit._ui_expand = !unit._ui_expand; forceUiRefresh('unitdesc-ref-tt:' + unit.id);">
                         </p-button>
                       </div>
                       <div class="flex-grow flex flex-col gap-0.5">
-                        <textarea rows="1" pInputTextarea [name]="'unit-name'+unit.id" [(ngModel)]="unit.name"
-                          placeholder="Name" [autoResize]="true" class="text-xs font-bold p-1"></textarea>
-                        <textarea *ngIf="!tt['unitdesc-ref-tt:' + unit.id]" rows="2" pInputTextarea
-                          [name]="'unit-description'+unit.id" [(ngModel)]="unit.description" placeholder="Description"
-                          [autoResize]="unit._ui_expand" class="text-xs p-1 flex-grow"></textarea>
+                        <textarea *ngIf="!tt['textarea-ref-tt']" rows="1" pInputTextarea [name]="'unit-name'+unit.id"
+                          [(ngModel)]="unit.name" placeholder="Name" required="true" [autoResize]="true"
+                          class="text-xs font-bold p-1"></textarea>
+                        <textarea *ngIf="!tt['textarea-ref-tt'] && !tt['unitdesc-ref-tt:' + unit.id]" rows="2"
+                          pInputTextarea [name]="'unit-description'+unit.id" [(ngModel)]="unit.description"
+                          placeholder="Description" [autoResize]="unit._ui_expand"
+                          class="text-xs p-1 flex-grow"></textarea>
                       </div>
                     </div>
                   </td>
@@ -174,9 +178,8 @@
                         (cdkDropListDropped)="rearrange($event, unit.activities[resource.id])">
                         <a *ngFor="let activity of unit.activities[resource.id]; let aindex = index;" cdkDrag
                           [href]="getPreviewLink(activity)" target="_blank"
-                          class="no-underline min-w-max overflow-hidden">
-                          <!-- ⋮⋮ -->
-                          <i class="fa fa-bars text-gray-500 order-btn"></i>
+                          class="no-underline min-w-max overflow-hidden flex items-center gap-1">
+                          <i class="fa fa-bars text-gray-500 cursor-move"></i>
                           <span class="ml-1 text-wrap inline-block w-56" style="color: blue;">
                             {{ activity.name }}
                           </span>
@@ -206,12 +209,13 @@
           </div>
         </p-tabPanel>
         <p-tabPanel header="Students">
-          <div *ngIf="activeIndex == 2" class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2">
             <span>Enter students' email addresses (one per line) using this format (full name is optional).</span>
             <pre
-              class="my-0 ml-2 bg-gray-200 p-2 rounded-md">email-address[:full name]<br/>email-address[:full name]<br/>...</pre>
-            <textarea rows="10" pInputTextarea name="student_emails" [(ngModel)]="course.student_emails"
-              [placeholder]="'std1-email-address,std2-email-address,...'" [autoResize]="true"></textarea>
+              class="my-0 ml-2 bg-gray-200 p-2 rounded-md text-sm">email-address[:full name]<br/>email-address[:full name]<br/>...</pre>
+            <textarea *ngIf="!tt['textarea-ref-tt']" rows="10" pInputTextarea name="student_emails"
+              [(ngModel)]="course.student_emails" [placeholder]="'std1-email-address,std2-email-address,...'"
+              [autoResize]="true"></textarea>
           </div>
         </p-tabPanel>
       </p-tabView>
@@ -229,5 +233,5 @@
   (complete)="applyUnitsArrangement($event); arrangingItems = '';" />
 
 <app-edit-unit-activities *ngIf="editingActivities" [activities]="editingActivities" [list]="activitiesList"
-  (close)="editingActivities = null" (complete)="editingUnit.activities[editingResource.id] = $event;
+  [providersMap]="providersMap" (close)="editingActivities = null" (complete)="editingUnit.activities[editingResource.id] = $event;
     editingUnit = null; editingResource = null; editingActivities = null;" />

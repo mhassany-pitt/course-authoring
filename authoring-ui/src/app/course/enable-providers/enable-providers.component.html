@@ -1,11 +1,11 @@
 <p-dialog header="Enable Providers" [visible]="providers" [modal]="true" [closable]="false"
-  [style]="{ 'max-width': '640px' }">
+  [style]="{ 'max-width': '768px' }">
   <div class="flex flex-col gap-2">
     <div>Check the providers you want to enable for this resource.</div>
 
-    <p-table #dt1 [value]="filteredProvidersList" [(selection)]="providers"
-      [globalFilterFields]="['name', 'author', 'description', 'tags']" [scrollable]="true" scrollHeight="20rem"
-      [rowHover]="true" styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines">
+    <p-table #dt1 [value]="filteredProvidersList" [(selection)]="providers" [globalFilterFields]="['name']"
+      [scrollable]="true" scrollHeight="20rem" [rowHover]="true"
+      styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines">
       <ng-template pTemplate="caption">
         <div class="flex items-center">
           <p-checkbox [binary]="true" [(ngModel)]="enabledOnly" label="Enabled only"></p-checkbox>
@@ -21,11 +21,7 @@
       <ng-template pTemplate="header">
         <tr>
           <th>
-            <div class="flex items-center gap-2">
-              <span>Name, Description, and Tags</span>
-              <span class="flex-grow"></span>
-              <span>Author</span>
-            </div>
+            <div class="flex items-center gap-2">Name</div>
           </th>
         </tr>
       </ng-template>
@@ -35,19 +31,7 @@
           <td>
             <div class="flex items-center gap-2 w-full">
               <p-tableCheckbox [value]="provider" />
-              <div class="flex flex-col flex-grow">
-                <div class="flex items-center gap-2">
-                  <span>{{ provider.name }}</span>
-                  <span class="flex-grow"></span>
-                  <span *ngIf="provider.author" class="text-sm">{{ provider.author }}</span>
-                </div>
-                <span *ngIf="provider.description" class="text-xs">
-                  {{ provider.description }}
-                </span>
-                <span *ngIf="provider.tags.length != 0" class="text-xs">
-                  tags: <span class="italic">{{ provider.tags.join(', ')}}</span>
-                </span>
-              </div>
+              <span class="flex flex-col flex-grow">{{ provider.name }}</span>
             </div>
           </td>
         </tr>

@@ -22,14 +22,7 @@ export class CourseComponent implements OnInit {
   editingUnit: any;
   editingActivities: any;
 
-  domains: any = [
-    { value: "java", label: "Java" },
-    { value: "sql", label: "SQL" },
-    { value: "c", label: "C" },
-    { value: "cpp", label: "C++" },
-    { value: "telcom", label: "Telcom" },
-    { value: "py", label: "Python" },
-  ];
+  domains: any = [];
 
   providersList: any[] = [];
   providersMap: any = {};
@@ -37,7 +30,7 @@ export class CourseComponent implements OnInit {
   activitiesList: any[] = [];
   activitiesMap: any = {};
 
-  activeIndex: number = 0;
+  activeTabIndex: number = 0;
 
   arrangingItems = '';
 
@@ -52,7 +45,7 @@ export class CourseComponent implements OnInit {
 
   ngOnInit() {
     this.load();
-    this.loadProviders();
+    this.loadDomains();
   }
 
   applyResourcesArrangement(map: any) {
@@ -66,11 +59,23 @@ export class CourseComponent implements OnInit {
 
   load() {
     const params: any = this.route.snapshot.params;
-    this.courses.read(params.id).subscribe((course: any) => this.course = course);
+    this.courses.read(params.id).subscribe((course: any) => {
+      this.course = course;
+      this.loadProviders();
+    });
+  }
+
+  loadDomains() {
+    this.courses.domains().subscribe((domains: any) => {
+      this.domains = domains;
+      this.loadProviders();
+    });
   }
 
   loadProviders() {
-    this.courses.providers().subscribe((providers: any) => {
+    if (!this.course || this.domains.length < 1)
+      return;
+    this.courses.providers(this.course.domain).subscribe((providers: any) => {
       this.providersList = providers;
       this.providersMap = {};
       providers.forEach((p: any) => this.providersMap[p.id] = p);
@@ -78,6 +83,13 @@ export class CourseComponent implements OnInit {
   }
 
   save() {
+    // -->> remove non-existing unit resources and activities
+    const resourceIds = this.course.resources.map((resource: any) => `${resource.id}`);
+    this.course.units.forEach((unit: any) => Object.keys(unit.activities || {})
+      .filter((resourceId: any) => !resourceIds.includes(resourceId))
+      .forEach((resourceId: any) => delete unit.activities[resourceId]));
+    // <<--
+
     this.courses.update(this.course).subscribe(() => {
       this.router.navigate(['/courses']);
     });
@@ -91,27 +103,27 @@ export class CourseComponent implements OnInit {
     }
   }
 
-  editUnitActivities($unit: any, $resource: any) {
-    this.editingUnit = $unit;
-    if (!$unit.activities)
-      $unit.activities = {};
-    if (!$unit.activities[$resource.id])
-      $unit.activities[$resource.id] = [];
-    this.editingActivities = $unit.activities[$resource.id];
-    this.editingResource = $resource;
+  editUnitActivities(unit: any, resource: any) {
+    this.editingUnit = unit;
+    if (!unit.activities)
+      unit.activities = {};
+    if (!unit.activities[resource.id])
+      unit.activities[resource.id] = [];
+    this.editingActivities = unit.activities[resource.id];
+    this.editingResource = resource;
     this.loadActivitiesList();
   }
 
   loadActivitiesList() {
     this.activitiesList = [];
-    this.editingResource.providers.map((p: any) => {
-      const indexUrl = this.providersMap[p.id].index_url;
-      this.courses.activities(indexUrl).subscribe((as: any) => {
-        as.filter((a: any) => a.domain == this.course.domain).forEach((a: any) => {
-          this.activitiesList.push(a);
-          this.activitiesMap[a.id] = a;
+    this.editingResource.providers.forEach((provider: any) => {
+      this.courses.activities(this.course.domain, provider.id)
+        .subscribe((activities: any) => {
+          activities.forEach((a: any) => {
+            this.activitiesList.push(a);
+            this.activitiesMap[a.id] = a;
+          });
         });
-      });
     });
   }
 
@@ -131,24 +143,16 @@ export class CourseComponent implements OnInit {
     return Date.now();
   }
 
-  filter(l: any[], b: boolean) {
-    return l.filter((i: any) => i.selected == b);
-  }
-
   rearrange(event: any, list: any) {
     moveItemInArray(list, event.previousIndex, event.currentIndex);
   }
 
-  rand() {
-    return Math.random() + 0.01
-  }
-
-  refreshUnitDescEl(id: string) {
+  forceUiRefresh(id: string) {
     this.tt[id] = true;
     setTimeout(() => delete this.tt[id], 0);
   }
 
-  countUnits() {
+  numOfLvl0Units() {
     return (this.course.units.filter((u: any) => u.level == 0) || []).length;
   }
 
@@ -156,10 +160,10 @@ export class CourseComponent implements OnInit {
     return this.course.units.every((u: any) => u._ui_expand);
   }
 
-  collapse(toggle: boolean) {
+  expandTextarea(toggle: boolean) {
     this.course.units.forEach((u: any) => {
       u._ui_expand = !toggle;
-      this.refreshUnitDescEl(`unitdesc-ref-tt:${u.id}`);
+      this.forceUiRefresh(`unitdesc-ref-tt:${u.id}`);
     });
   }
 
@@ -167,5 +171,3 @@ export class CourseComponent implements OnInit {
     return `${activity.url}&usr=${this.app.user.email}&grp=preview&sid=preview`;
   }
 }
-
-// ask kamil how to link to mastry grid

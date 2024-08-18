@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { HubService } from './hub.service';
+import { MasteryGridService } from './mastery-grid.service';
 
-describe('HubService', () => {
-  let service: HubService;
+describe('MasteryGridService', () => {
+  let service: MasteryGridService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [HubService],
+      providers: [MasteryGridService],
     }).compile();
 
-    service = module.get<HubService>(HubService);
+    service = module.get<MasteryGridService>(MasteryGridService);
   });
 
   it('should be defined', () => {

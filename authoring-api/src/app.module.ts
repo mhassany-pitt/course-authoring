@@ -9,8 +9,9 @@ import { UsersModule } from './users/users.module';
 import { UserAdminModule } from './user-admin/user-admin.module';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { HubModule } from './hub/hub.module';
-import { ProvidersModule } from './providers/providers.module';
+import { MasteryGridModule } from './mastery-grid/mastery-grid.module';
+import { AggregateModule } from './aggregate/aggregate.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
@@ -24,9 +25,17 @@ import { ProvidersModule } from './providers/providers.module';
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({ uri: config.get('MONGO_URI') }),
     }),
-    CoursesModule, ProvidersModule,
-    AuthModule, UsersModule,
-    UserAdminModule, HubModule,
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => ({ type: 'mysql', url: config.get('MYSQL_URI') }),
+    }),
+    UsersModule,
+    AuthModule,
+    UserAdminModule,
+    CoursesModule,
+    MasteryGridModule,
+    AggregateModule,
   ],
   controllers: [AppController],
   providers: [AppService, ConfigService],

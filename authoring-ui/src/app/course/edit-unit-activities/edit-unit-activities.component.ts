@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
@@ -8,6 +8,7 @@ import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { TableModule } from 'primeng/table';
 import { any } from '../../utils';
+import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-edit-unit-activities',
@@ -19,6 +20,7 @@ import { any } from '../../utils';
     DialogModule, TableModule,
     IconFieldModule, InputIconModule,
     ButtonModule, CheckboxModule,
+    InputTextModule,
   ],
 })
 export class EditUnitActivitiesComponent {
@@ -27,6 +29,7 @@ export class EditUnitActivitiesComponent {
 
   @Input() activities: any;
   @Input() list: any;
+  @Input() providersMap: any;
 
   @Output() close = new EventEmitter();
   @Output() complete = new EventEmitter();

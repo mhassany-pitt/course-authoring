@@ -35,11 +35,19 @@ export class CoursesService {
     return this.http.delete(`${environment.apiUrl}/courses/${id}${undo ? '?undo=true' : ''}`, { withCredentials: true });
   }
 
-  providers() {
-    return this.http.get(`${environment.apiUrl}/providers`, { withCredentials: true });
+  domains() {
+    return this.http.get(`${environment.apiUrl}/aggregate/domains`, { withCredentials: true });
   }
 
-  activities(url: string) {
-    return this.http.get(url, { withCredentials: true });
+  authors() {
+    return this.http.get(`${environment.apiUrl}/aggregate/authors`, { withCredentials: true });
+  }
+
+  providers(domainId: string) {
+    return this.http.get(`${environment.apiUrl}/aggregate/providers?domain_id=${domainId}`, { withCredentials: true });
+  }
+
+  activities(domainId: string, providerId: string) {
+    return this.http.get(`${environment.apiUrl}/aggregate/activites?domain_id=${domainId}&provider_id=${providerId}`, { withCredentials: true });
   }
 }

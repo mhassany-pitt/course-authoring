@@ -8,7 +8,7 @@ import { CoursesService } from './courses.service';
   imports: [
     MongooseModule.forFeature([
       { name: 'courses', schema: CourseSchema }
-    ])
+    ]),
   ],
   controllers: [CoursesController],
   providers: [CoursesService],
