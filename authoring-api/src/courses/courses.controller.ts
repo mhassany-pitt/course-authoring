@@ -15,8 +15,12 @@ export class CoursesController {
 
   @Get()
   @UseGuards(AuthenticatedGuard)
-  async index(@Query('trash_can') trash_can: boolean) {
-    return (await this.courses.list({ trash_can })).map(c => useId(toObject(c)));
+  async index(@Request() req: any, @Query('trash_can') trash_can: boolean) {
+    return (await this.courses.list({ user_email: req.user.email, trash_can })).map(c => {
+      c = useId(toObject(c));
+      delete c.linkings;
+      return c;
+    });
   }
 
   @Post()
@@ -29,21 +33,28 @@ export class CoursesController {
   @Get(':id')
   @UseGuards(AuthenticatedGuard)
   async read(@Request() req: any) {
-    const course = await this.courses.load(req.params.id);
-    return useId(toObject(course));
+    let course = await this.courses.load({ id: req.params.id, user_email: req.user.email });
+    course = useId(toObject(course));
+    course.linkings = course.linkings || {};
+    const masterygrid = course.linkings.mastery_grid;
+    course.linkings.mastery_grid = masterygrid ? {
+      id: masterygrid.mapped_course_id,
+      last_synced: masterygrid.last_synced
+    } : {};
+    return course;
   }
 
   @Patch(':id')
   @UseGuards(AuthenticatedGuard)
   async update(@Request() req: any) {
-    const course = await this.courses.update(req.params.id, req.body);
+    const course = await this.courses.update({ id: req.params.id, user_email: req.user.email }, req.body);
     return useId(toObject(course));
   }
 
   @Delete(':id')
   @UseGuards(AuthenticatedGuard)
   async delete(@Request() req: any, @Query('undo') undo: boolean) {
-    const course = await this.courses.delete(req.params.id, undo);
+    const course = await this.courses.delete({ id: req.params.id, user_email: req.user.email }, undo);
     return useId(toObject(course));
   }
 }

@@ -46,8 +46,8 @@
                   <span class="flex-grow"></span>
                   <span class="text-sm">{{ activity.author_id }}</span>
                 </div>
-                <span *ngIf="activity.tags?.length" class="text-xs">
-                  tags: <span class="italic">{{ activity.tags.join(', ') }}</span>
+                <span *ngIf="activity.tags" class="text-xs">
+                  tags: <span class="italic">{{ activity.tags }}</span>
                 </span>
               </div>
             </div>

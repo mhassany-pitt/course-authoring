@@ -10,9 +10,9 @@ export const getNavLinks = (app: AppService) => {
   ].filter(l => l);
 };
 
-export const mapToTreeNodes = (nodes: any[]): any[] => {
-  return nodes ? nodes.map(node => ({
-    ...node.element._data,
-    children: mapToTreeNodes(node.subnodes),
-  })) : [];
+export const mapToTreeNodes = (
+  nodes: any[],
+  map = (node: any) => ({ ...node.element._data, children: mapToTreeNodes(node.subnodes) })
+): any[] => {
+  return nodes ? nodes.map(map) : [];
 }

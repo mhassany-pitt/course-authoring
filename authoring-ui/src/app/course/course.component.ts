@@ -4,6 +4,7 @@ import { AppService } from '../app.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CoursesService } from '../courses/courses.service';
 import { moveItemInArray } from '@angular/cdk/drag-drop';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-course',
@@ -13,6 +14,7 @@ import { moveItemInArray } from '@angular/cdk/drag-drop';
 export class CourseComponent implements OnInit {
 
   navLinks = getNavLinks(this.app);
+  max = Math.max;
 
   course: any;
   UNIT_MAX_LEVEL = 3;
@@ -41,6 +43,8 @@ export class CourseComponent implements OnInit {
     public app: AppService,
     private route: ActivatedRoute,
     private courses: CoursesService,
+    private messages: MessageService,
+    private confirm: ConfirmationService,
   ) { }
 
   ngOnInit() {
@@ -96,11 +100,18 @@ export class CourseComponent implements OnInit {
   }
 
   deleteCourse() {
-    if (confirm('Are you sure about deleting this course?')) {
-      this.courses.delete(this.course.id, !!this.course.deleted_at).subscribe(() => {
-        this.router.navigate(['/courses']);
-      });
-    }
+    this.confirm.confirm({
+      header: 'Delete Course',
+      message: 'Are you sure you want to delete this course?',
+      icon: 'pi pi-exclamation-triangle',
+      acceptButtonStyleClass: 'p-button-danger',
+      rejectButtonStyleClass: 'p-button-secondary',
+      accept: () => {
+        this.courses.delete(this.course.id, !!this.course.deleted_at).subscribe(() => {
+          this.router.navigate(['/courses']);
+        });
+      }
+    });
   }
 
   editUnitActivities(unit: any, resource: any) {
@@ -128,15 +139,43 @@ export class CourseComponent implements OnInit {
   }
 
   removeResource(resource: any) {
-    if (confirm('Are you sure about removing this resource?')) {
-      this.course.resources = this.course.resources.filter((r: any) => r.id != resource.id);
-    }
+    this.confirm.confirm({
+      header: 'Remove Resource',
+      message: 'Are you sure you want to remove this resource?',
+      icon: 'pi pi-exclamation-triangle',
+      acceptButtonStyleClass: 'p-button-danger',
+      rejectButtonStyleClass: 'p-button-secondary',
+      accept: () => {
+        this.course.resources = this.course.resources.filter((r: any) => r.id != resource.id);
+      }
+    });
   }
 
   removeUnit(unit: any) {
-    if (confirm('Are you sure about removing this unit?')) {
-      this.course.units = this.course.units.filter((u: any) => u.id != unit.id);
-    }
+    this.confirm.confirm({
+      header: 'Remove Unit',
+      message: 'Are you sure you want to remove this unit?',
+      icon: 'pi pi-exclamation-triangle',
+      acceptButtonStyleClass: 'p-button-danger',
+      rejectButtonStyleClass: 'p-button-secondary',
+      accept: () => {
+        const removeIds = [unit, ...this.findChildUnits(unit)].map((u: any) => u.id);
+        this.course.units = this.course.units.filter((u: any) => !removeIds.includes(u.id));
+      }
+    });
+  }
+
+  toggleUnitPublished(unit: any) {
+    unit.published = !unit.published;
+    this.findChildUnits(unit).forEach((u: any) => u.published = unit.published);
+  }
+
+  findChildUnits(unit: any) {
+    const children = [];
+    const units = this.course.units;
+    for (let i = units.indexOf(unit) + 1; i < units.length && units[i].level > unit.level; i++)
+      children.push(units[i]);
+    return children;
   }
 
   nextResourceId() {
@@ -169,5 +208,41 @@ export class CourseComponent implements OnInit {
 
   getPreviewLink(activity: any) {
     return `${activity.url}&usr=${this.app.user.email}&grp=preview&sid=preview`;
+  }
+
+  syncToMasteryGrid() {
+    this.confirm.confirm({
+      header: 'Sync to Mastery Grid',
+      message: 'Are you sure you want to sync this course to mastery grid?',
+      icon: 'pi pi-question-circle',
+      acceptButtonStyleClass: 'p-button-danger',
+      rejectButtonStyleClass: 'p-button-secondary',
+      accept: () => {
+        this.courses.syncToMasteryGrid(this.course.id).subscribe({
+          next: (response: any) => {
+            this.course.linkings.mastery_grid = response;
+            this.messages.add({
+              severity: 'success',
+              summary: 'Course Synchronized!',
+              detail: 'Course synchronized to mastery grid successfully.',
+            });
+          },
+          error: (error: any) => {
+            this.messages.add({
+              severity: 'error',
+              summary: 'Error Synchronizing Course!',
+              detail: 'An error occurred while syncing the course to mastery grid. ' +
+                'Please check course details and try again. If the problem persists, contact support (moh70@pitt.edu).',
+              sticky: true,
+            });
+            console.error('error syncing course', this.course.id, error);
+          }
+        });
+      }
+    });
+  }
+
+  openInMasteryGrid() {
+    window.open(`http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=ADL&sid=TEST&cid=${this.course.linkings.mastery_grid.id}`, '_blank');
   }
 }

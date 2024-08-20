@@ -50,4 +50,8 @@ export class CoursesService {
   activities(domainId: string, providerId: string) {
     return this.http.get(`${environment.apiUrl}/aggregate/activites?domain_id=${domainId}&provider_id=${providerId}`, { withCredentials: true });
   }
+
+  syncToMasteryGrid(id: string) {
+    return this.http.put(`${environment.apiUrl}/mastery-grid/${id}/sync`, {}, { withCredentials: true });
+  }
 }

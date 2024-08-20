@@ -15,16 +15,25 @@
   </div>
 
   <div class="container mx-auto mt-24 mb-16 border shadow-md z-0 relative">
-    <form #form="ngForm" (submit)="save()">
-      <div class="absolute right-0 top-0 flex items-center justify-end gap-2 z-10">
+    <form #form="ngForm" (submit)="save()" class="flex flex-col gap-2">
+      <div class="lg:absolute lg:right-0 lg:top-0 flex items-end justify-end gap-2 z-10">
         <p-button type="button" [label]="course.deleted_at ? 'Deleted' : 'Delete'" icon="fa fa-trash" size="small"
           [severity]="course.deleted_at ? 'danger' : 'warning'" (click)="deleteCourse()">
         </p-button>
 
-        <p-button type="button" [label]="course.published ? 'Published' : 'Publish'"
-          [icon]="course.published ? 'fa fa-eye' : 'fa fa-eye-slash'" size="small"
-          [severity]="course.published ? 'success' : 'secondary'" (click)="course.published = !course.published">
-        </p-button>
+        <div class="relative overflow-visible">
+          <div *ngIf="course.linkings?.mastery_grid?.last_synced"
+            class="absolute -top-4 -mt-0.5 text-xs text-gray-400 min-w-max">
+            Last synchronized: {{ course.linkings?.mastery_grid?.last_synced | date:'short' }}
+          </div>
+          <p-buttonGroup>
+            <p-button type="button" label="Sync to Mastery Grid" icon="fa fa-refresh" size="small" severity="success"
+              (click)="syncToMasteryGrid()" [disabled]="form.invalid">
+            </p-button>
+            <p-button type="button" icon="fa fa-external-link" size="small" severity="success" class="ml-0.5"
+              (click)="openInMasteryGrid()" [disabled]="!course.linkings?.mastery_grid?.id"></p-button>
+          </p-buttonGroup>
+        </div>
 
         <span class="border border-solid border-gray-100 h-8"></span>
 
@@ -36,29 +45,35 @@
       <p-tabView [(activeIndex)]="activeTabIndex" (activeIndexChange)="forceUiRefresh('textarea-ref-tt')">
         <p-tabPanel header="General Information">
           <div class="flex flex-col gap-2 p-2">
-            <div class="flex flex-col gap-1">
-              <span class="text-sm text-gray-600">Institution:</span>
-              <input type="text" pInputText name="institution" [(ngModel)]="course.institution"
-                placeholder="University of ..." />
-            </div>
             <div class="flex items-center gap-2">
               <div class="flex flex-col gap-1">
                 <span class="text-sm text-gray-600">Code:</span>
                 <input type="text" pInputText name="code" [(ngModel)]="course.code" placeholder="INFSCI ..."
-                  required="true" size="10" />
+                  required="true" />
               </div>
-              <div class="flex flex-col gap-1">
+              <div class="flex-grow flex flex-col gap-1">
                 <span class="text-sm text-gray-600">Name:</span>
                 <input type="text" pInputText name="name" [(ngModel)]="course.name" placeholder="Introduction to ..."
-                  required="true" size="50" />
+                  required="true" />
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="flex-grow flex flex-col gap-1">
+                <span class="text-sm text-gray-600">Institution:</span>
+                <input type="text" pInputText name="institution" [(ngModel)]="course.institution"
+                  placeholder="University of ..." />
               </div>
               <div class="flex flex-col gap-1">
                 <span class="text-sm text-gray-600">Domain:</span>
                 <p-dropdown [options]="domains" name="domain" [(ngModel)]="course.domain" optionValue="id"
                   optionLabel="name" placeholder="Select" required="true" (onChange)="loadProviders()" />
               </div>
+              <div class="flex flex-col gap-1">
+                <span class="text-sm text-gray-600">Published:</span>
+                <p-dropdown [options]="[{label:'Yes',value: true}, {label:'No',value:false}]" name="published"
+                  [(ngModel)]="course.published" placeholder="Select" required="true" />
+              </div>
             </div>
-
             <div class="flex flex-col gap-1">
               <span class="text-sm text-gray-600">Description:</span>
               <textarea rows="5" pInputTextarea name="description" [(ngModel)]="course.description"
@@ -138,7 +153,7 @@
                       <div class="flex flex-col items-center gap-1 p-0.5 rounded border border-solid border-gray-300">
                         <p-button type="button" [icon]="unit.published ? 'fa fa-eye' : 'fa fa-eye-slash'"
                           severity="secondary" [text]="true" title="Enable/Disable" class="p-button-xs"
-                          (click)="unit.published = !unit.published">
+                          (click)="toggleUnitPublished(unit)">
                         </p-button>
 
                         <p-button type="button" icon="fa fa-trash" severity="secondary" [text]="true"
@@ -163,44 +178,55 @@
                       </div>
                     </div>
                   </td>
-                  <td *ngFor="let resource of course.resources; let rindex = index;"
-                    class="relative align-top resource-col">
-                    <div *ngIf="resource.providers?.length; else thereIsNoProviders"
-                      class="flex flex-col justify-start">
-                      <p-button type="button" [label]="unit.activities?.[resource.id]?.length
+                  <ng-container *ngFor="let resource of course.resources; let rindex = index;">
+                    <td *ngIf="resource.providers?.length" class="relative align-top resource-col">
+                      <div class="flex flex-col justify-start">
+                        <p-button type="button" [label]="unit.activities?.[resource.id]?.length
                                                     ? (unit.activities?.[resource.id]?.length || 0) + ' activities'
-                                                    : 'click here to add activities.'" icon="fa fa-edit"
-                        severity="secondary" [text]="true" class="p-button-xs"
-                        (click)="editUnitActivities(unit, resource)">
-                      </p-button>
-                      <div cdkDropList *ngIf="unit.activities?.[resource.id]?.length > 0"
-                        class="flex flex-col items-start text-xs ml-2"
-                        (cdkDropListDropped)="rearrange($event, unit.activities[resource.id])">
-                        <a *ngFor="let activity of unit.activities[resource.id]; let aindex = index;" cdkDrag
-                          [href]="getPreviewLink(activity)" target="_blank"
-                          class="no-underline min-w-max overflow-hidden flex items-center gap-1">
-                          <i class="fa fa-bars text-gray-500 cursor-move"></i>
-                          <span class="ml-1 text-wrap inline-block w-56" style="color: blue;">
-                            {{ activity.name }}
-                          </span>
-                        </a>
+                                                    : 'click here to add activities for this unit.'" icon="fa fa-edit"
+                          severity="secondary" [text]="true" class="p-button-xs"
+                          (click)="editUnitActivities(unit, resource)">
+                        </p-button>
+                        <div cdkDropList *ngIf="unit.activities?.[resource.id]?.length > 0"
+                          class="flex flex-col items-start text-xs ml-2"
+                          (cdkDropListDropped)="rearrange($event, unit.activities[resource.id])">
+                          <a *ngFor="let activity of unit.activities[resource.id]; let aindex = index;" cdkDrag
+                            [href]="getPreviewLink(activity)" target="_blank"
+                            class="no-underline min-w-max overflow-hidden flex items-center gap-1">
+                            <i class="fa fa-bars text-gray-500 cursor-move"></i>
+                            <span class="ml-1 text-wrap inline-block w-56" style="color: blue;">
+                              {{ activity.name }}
+                            </span>
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                    <ng-template #thereIsNoProviders>
-                      <p-button *ngIf="uindex == 0" type="button"
-                        label="click on the above button to enable providers for this resource." severity="secondary"
-                        [text]="true" class="p-button-xs">
+                    </td>
+                    <td *ngIf="!resource.providers?.length && uindex == 0" [rowSpan]="course.units.length"
+                      class="relative align-top resource-col">
+                      <div class="flex flex-col justify-start">
+                        <p-button type="button"
+                          label="click on the 'providers' button above to enable providers for this resource."
+                          severity="secondary" [text]="true" class="p-button-xs">
+                        </p-button>
+                      </div>
+                    </td>
+                  </ng-container>
+                  <td *ngIf="!course.resources?.length && uindex == 0" [rowSpan]="course.units.length"
+                    class="relative align-top resource-col">
+                    <div class="flex flex-col justify-start">
+                      <p-button type="button" label="use the plus '+' button above to add a resource"
+                        severity="secondary" [text]="true" class="p-button-xs">
                       </p-button>
-                    </ng-template>
+                    </div>
                   </td>
                   <td></td>
                 </tr>
               </ng-template>
               <ng-template pTemplate="emptymessage">
                 <tr>
-                  <td [colSpan]="course.resources.length + 2">
+                  <td [colSpan]="max(2, course.resources.length + 1)">
                     <div class="p-4 text-center text-gray-400 text-sm">
-                      Empty course, use the 'new unit' button to add units.
+                      use the 'new unit' button to add units.
                     </div>
                   </td>
                 </tr>
@@ -208,7 +234,7 @@
             </p-table>
           </div>
         </p-tabPanel>
-        <p-tabPanel header="Students">
+        <!-- <p-tabPanel header="Students">
           <div class="flex flex-col gap-2">
             <span>Enter students' email addresses (one per line) using this format (full name is optional).</span>
             <pre
@@ -217,11 +243,14 @@
               [(ngModel)]="course.student_emails" [placeholder]="'std1-email-address,std2-email-address,...'"
               [autoResize]="true"></textarea>
           </div>
-        </p-tabPanel>
+        </p-tabPanel> -->
       </p-tabView>
     </form>
   </div>
 </div>
+
+<p-toast />
+<p-confirmDialog />
 
 <app-enable-providers *ngIf="editingProviders" [providers]="editingProviders" [list]="providersList"
   (close)="editingProviders = null" (complete)="editingResource.providers = $event; editingProviders = null;" />

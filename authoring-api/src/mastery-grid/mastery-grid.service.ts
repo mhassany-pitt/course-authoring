@@ -2,7 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { Course } from 'src/courses/course.schema';
 import { EntityManager } from 'typeorm';
 
-export interface MGridLinking {
+export interface MasteryGrid {
+    last_synced: Date;
     mapped_course_id: number;
     units: {
         [unit_id: string]: {
@@ -23,27 +24,27 @@ export interface MGridLinking {
 @Injectable()
 export class MasteryGridService {
 
-    async deleteCourse(em: EntityManager, mg: MGridLinking) {
-        if (mg.mapped_course_id)
+    async deleteCourse(em: EntityManager, masterygrid: MasteryGrid) {
+        if (masterygrid.mapped_course_id)
             await this._deleteCourse(em, {
-                id: mg.mapped_course_id
+                id: masterygrid.mapped_course_id
             });
     }
 
-    async deleteCourseResources(em: EntityManager, mg: MGridLinking) {
-        for (const resource of (Object.values(mg.resources) as any[])) {
+    async deleteCourseResources(em: EntityManager, masterygrid: MasteryGrid) {
+        for (const resource of Object.values(masterygrid.resources)) {
             resource.provider_ids = resource.provider_ids || [];
             for (const provider_id of resource.provider_ids)
                 await this._deleteResourceProvider(em, {
                     resource_id: resource.mapped_resource_id,
-                    provider_id: provider_id
+                    provider_id, // provider_id is loaded from the aggregate db
                 });
             await this._deleteResource(em, { id: resource.mapped_resource_id });
         }
     }
 
-    async deleteCourseUnits(em: EntityManager, mg: MGridLinking) {
-        for (const unit of (Object.values(mg.units) as any[])) {
+    async deleteCourseUnits(em: EntityManager, masterygrid: MasteryGrid) {
+        for (const unit of Object.values(masterygrid.units)) {
             unit.activity_ids = unit.activity_ids || {};
             for (const activity_id of Object.values(unit.activity_ids))
                 await this._deleteUnitActivity(em, { id: activity_id });
@@ -51,35 +52,35 @@ export class MasteryGridService {
         }
     }
 
-    async addCourse(em: EntityManager, mg: MGridLinking, course: Course) {
+    async addCourse(em: EntityManager, masterygrid: MasteryGrid, course: Course) {
         const course_query = await this._addCourse(em, {
-            id: mg.mapped_course_id,
-            code: course.code,
-            name: course.name,
-            description: course.description,
-            domain: course.domain,
-            user_email: course.user_email,
-            published: course.published,
+            id: masterygrid.mapped_course_id,
+            code: course.code?.substring(0, 50),
+            name: course.name?.substring(0, 100),
+            description: course.description?.substring(0, 500),
+            domain: course.domain?.substring(0, 50),
+            user_email: course.user_email?.substring(0, 50),
+            published: !!course.published,
             created_at: course.created_at,
         });
 
-        if (!mg.mapped_course_id)
-            mg.mapped_course_id = course_query.insertId;
+        if (!masterygrid.mapped_course_id)
+            masterygrid.mapped_course_id = course_query.insertId;
     }
 
-    async addCourseResources(em: EntityManager, mg: MGridLinking, course: Course) {
+    async addCourseResources(em: EntityManager, masterygrid: MasteryGrid, course: Course) {
         let r_order = 1;
-        for (const resource of course.resources) {
-            if (resource.id in mg.resources == false)
-                mg.resources[resource.id] = { mapped_resource_id: null, provider_ids: [] };
+        for (const resource of (course.resources || [])) {
+            if (resource.id in masterygrid.resources == false)
+                masterygrid.resources[resource.id] = { mapped_resource_id: null, provider_ids: [] };
 
-            const mapped_resource = mg.resources[resource.id];
+            const mapped_resource = masterygrid.resources[resource.id];
             const resource_query = await this._addResource(em, {
                 id: mapped_resource.mapped_resource_id,
-                course_id: mg.mapped_course_id,
-                name: resource.name,
+                course_id: masterygrid.mapped_course_id,
+                name: resource.name?.substring(0, 100),
                 order: r_order++,
-                user_email: course.user_email,
+                user_email: course.user_email?.substring(0, 50),
                 created_at: course.created_at,
             });
 
@@ -87,13 +88,11 @@ export class MasteryGridService {
             if (!mapped_resource.mapped_resource_id)
                 mapped_resource.mapped_resource_id = resource_query.insertId;
 
-            mapped_resource.provider_ids = mapped_resource.provider_ids || [];
-
             // -- add resource providers
-            for (const provider of resource.providers) {
+            for (const provider of (resource.providers || [])) {
                 await this._addResourceProvider(em, {
                     resource_id: mapped_resource.mapped_resource_id,
-                    provider_id: provider.id,
+                    provider_id: provider.id, // provider.id is loaded from the aggregate db
                 });
                 if (mapped_resource.provider_ids.includes(provider.id) == false)
                     mapped_resource.provider_ids.push(provider.id);
@@ -101,30 +100,30 @@ export class MasteryGridService {
         }
 
         // -- filter out mapped resources that are not in the course anymore
-        const resource_ids = course.resources.map(r => `${r.id}`);
-        Object.keys(mg.resources).forEach(resource_id => {
+        const resource_ids = (course.resources || []).map(r => `${r.id}`);
+        Object.keys(masterygrid.resources).forEach(resource_id => {
             if (!resource_ids.includes(resource_id))
-                delete mg.resources[resource_id];
+                delete masterygrid.resources[resource_id];
         });
     }
 
-    async addCourseUnits(em: EntityManager, mg: MGridLinking, course: Course) {
+    async addCourseUnits(em: EntityManager, masterygrid: MasteryGrid, course: Course) {
         let u_order = 1;
         const parent_mapped_unit_ids = {};
-        for (const unit of course.units) {
-            if (unit.id in mg.units == false)
-                mg.units[unit.id] = { mapped_unit_id: null, activity_ids: {} };
+        for (const unit of (course.units || [])) {
+            if (unit.id in masterygrid.units == false)
+                masterygrid.units[unit.id] = { mapped_unit_id: null, activity_ids: {} };
 
-            const mapped_unit = mg.units[unit.id];
+            const mapped_unit = masterygrid.units[unit.id];
             const unit_query = await this._addUnit(em, {
                 id: mapped_unit.mapped_unit_id,
-                course_id: mg.mapped_course_id,
-                name: unit.name,
-                description: unit.description,
+                course_id: masterygrid.mapped_course_id,
+                name: unit.name?.substring(0, 100),
+                description: unit.description?.substring(0, 500),
                 parent: unit.level == 0 ? null : parent_mapped_unit_ids[unit.level - 1],
                 order: u_order++,
-                user_email: course.user_email,
-                published: unit.published,
+                user_email: course.user_email?.substring(0, 50),
+                published: !!unit.published,
                 created_at: course.created_at,
             });
 
@@ -144,11 +143,11 @@ export class MasteryGridService {
                     const activity_query = await this._addUnitActivity(em, {
                         id: mapped_unit.activity_ids[activity.id],
                         unit_id: mapped_unit.mapped_unit_id,
-                        resource_id: mg.resources[resource_id].mapped_resource_id,
+                        resource_id: masterygrid.resources[resource_id].mapped_resource_id,
                         content_id: activity.id,
-                        name: activity.name,
+                        name: activity.name?.substring(0, 100),
                         order: a_order++,
-                        user_email: course.user_email,
+                        user_email: course.user_email?.substring(0, 50),
                         created_at: course.created_at,
                     });
 
@@ -170,10 +169,10 @@ export class MasteryGridService {
         }
 
         // -- filter out mapped units that are not in the course anymore
-        const unit_ids = course.units.map(u => `${u.id}`);
-        Object.keys(mg.units).forEach(unit_id => {
+        const unit_ids = (course.units || []).map(u => `${u.id}`);
+        Object.keys(masterygrid.units).forEach(unit_id => {
             if (!unit_ids.includes(unit_id))
-                delete mg.units[unit_id];
+                delete masterygrid.units[unit_id];
         });
     }
 

@@ -48,6 +48,12 @@ export class RearrangeUnitsComponent implements OnInit {
         return Promise.resolve();
       }
     });
+
+    const map = ({ data, nodes }: any) => ({
+      ...data,
+      children: mapToTreeNodes(nodes, map)
+    });
+    this.arrangement = mapToTreeNodes(nodes, map);
   }
 
   applyUnitsArrangement() {

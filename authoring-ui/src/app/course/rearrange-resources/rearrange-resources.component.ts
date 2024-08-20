@@ -32,6 +32,7 @@ export class RearrangeResourcesComponent implements OnInit {
   prepArrangementList() {
     const nodes = this.resources.map((u: any) =>
       ({ data: { id: u.id, title: u.name || '[not defined]' }, nodes: [] }));
+
     new SortableTree({
       nodes: [{ data: { title: 'Resources', root: true }, nodes }],
       initCollapseLevel: 5,
@@ -45,6 +46,12 @@ export class RearrangeResourcesComponent implements OnInit {
         return Promise.resolve();
       }
     });
+
+    const map = ({ data, nodes }: any) => ({
+      ...data,
+      children: mapToTreeNodes(nodes, map)
+    });
+    this.arrangement = mapToTreeNodes(nodes, map);
   }
 
   applyResourcesArrangement() {

@@ -10,23 +10,27 @@ export class CoursesService {
     @InjectModel('courses') private courses: Model<Course>,
   ) { }
 
-  async list({ trash_can }) {
-    return await this.courses.find(trash_can ? { deleted_at: { $ne: null } } : { deleted_at: null });
+  async list({ user_email, trash_can }) {
+    const filter = { user_email, deleted_at: trash_can ? { $ne: null } : null }
+    return await this.courses.find(filter);
   }
 
   async create({ user_email }) {
     return await this.courses.create({ user_email, created_at: new Date() });
   }
 
-  async load(id: string) {
-    return await this.courses.findById(id);
+  async load({ user_email, id }) {
+    return await this.courses.findOne({ user_email, _id: id });
   }
 
-  async update(id: string, course: any) {
-    return await this.courses.findByIdAndUpdate(id, { ...course, updated_at: new Date() }, { new: true });
+  async update({ user_email, id }, course: any, alsoUpdateLinkings = false) {
+    const { linkings, ...rest } = course;
+    const update = { ...rest, updated_at: new Date() };
+    if (alsoUpdateLinkings) update.linkings = linkings;
+    return await this.courses.findOneAndUpdate({ user_email, _id: id }, update, { new: true });
   }
 
-  async delete(id: string, undo: boolean) {
-    return await this.courses.findByIdAndUpdate(id, { deleted_at: undo ? null : new Date() }, { new: true });
+  async delete({ user_email, id }, undo: boolean) {
+    return await this.courses.findOneAndUpdate({ user_email, _id: id }, { deleted_at: undo ? null : new Date() }, { new: true });
   }
 }

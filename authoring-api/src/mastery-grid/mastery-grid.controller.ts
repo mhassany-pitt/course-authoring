@@ -1,5 +1,5 @@
-import { Controller, Param, Put, UseGuards } from '@nestjs/common';
-import { MGridLinking, MasteryGridService } from './mastery-grid.service';
+import { Controller, Param, Put, Request, UseGuards } from '@nestjs/common';
+import { MasteryGrid, MasteryGridService } from './mastery-grid.service';
 import { CoursesService } from 'src/courses/courses.service';
 import { toObject, useId } from 'src/utils';
 import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
@@ -16,17 +16,16 @@ export class MasteryGridController {
 
     @Put(':id/sync')
     @UseGuards(AuthenticatedGuard)
-    async sync(@Param('id') id: string) {
-        if (true) return;
-
-        const course = useId(toObject(await this.courses.load(id)));
+    async sync(@Request() req: any, @Param('id') id: string) {
+        const raw = await this.courses.load({ user_email: req.user.email, id });
+        const course = useId(toObject(raw));
 
         if (!course.linkings)
             course.linkings = {};
         if (!course.linkings.mastery_grid)
             course.linkings.mastery_grid = {};
 
-        const masterygrid: MGridLinking = course.linkings.mastery_grid;
+        const masterygrid: MasteryGrid = course.linkings.mastery_grid;
         masterygrid.units = masterygrid.units || {};
         masterygrid.resources = masterygrid.resources || {};
 
@@ -41,20 +40,15 @@ export class MasteryGridController {
                 await this.service.addCourseUnits(em, masterygrid, course);
             });
 
-            await this.courses.update(id, { linkings: course.linkings });
+            masterygrid.last_synced = new Date();
+            await this.courses.update({ user_email: req.user.email, id }, { linkings: course.linkings }, true);
 
-            return { id: course.linkings.mastery_grid.mapped_course_id };
-
-            // add a button to the ui which call this endpoint
-            // then it syncs and redirect to user the mastery grid course 
-            // show the last sync date and let the user decide when to sync
-            // this is a new version of the course authoring, maybe this sync is part of saving the course?!
-            // maybe this needs to be done only when course is published?! or deleted?!
-
-            // how about group-authoring?
+            return {
+                id: course.linkings.mastery_grid.mapped_course_id,
+                last_synced: masterygrid.last_synced,
+            };
         } catch (error) {
-            console.error('error syncing course', id);
-            console.error(error);
+            console.error('error syncing course', id, error);
             throw error;
         }
     }
