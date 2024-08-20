@@ -15,6 +15,11 @@ services:
     restart: always
     depends_on:
       - mongodb
+    extra_hosts: 
+      # for docker v20.10+
+      - "host.docker.internal:host-gateway"
+      # for docker < v20.10
+      - "host.docker.internal:${HOST_IP}"
   mongodb:
     container_name: course-authoring__mongodb
     image: bitnami/mongodb
