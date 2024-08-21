@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { getNavLinks } from '../utils';
+import { getNavLinks, getPreviewLink } from '../utils';
 import { AppService } from '../app.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CoursesService } from '../courses/courses.service';
@@ -13,6 +13,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 })
 export class CourseComponent implements OnInit {
 
+  getPreviewLink = getPreviewLink;
   navLinks = getNavLinks(this.app);
   max = Math.max;
 
@@ -204,10 +205,6 @@ export class CourseComponent implements OnInit {
       u._ui_expand = !toggle;
       this.forceUiRefresh(`unitdesc-ref-tt:${u.id}`);
     });
-  }
-
-  getPreviewLink(activity: any) {
-    return `${activity.url}&usr=${this.app.user.email}&grp=preview&sid=preview`;
   }
 
   syncToMasteryGrid() {

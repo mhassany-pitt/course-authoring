@@ -191,7 +191,7 @@
                           class="flex flex-col items-start text-xs ml-2"
                           (cdkDropListDropped)="rearrange($event, unit.activities[resource.id])">
                           <a *ngFor="let activity of unit.activities[resource.id]; let aindex = index;" cdkDrag
-                            [href]="getPreviewLink(activity)" target="_blank"
+                            [href]="getPreviewLink(app.user, activity.url)" target="_blank"
                             class="no-underline min-w-max overflow-hidden flex items-center gap-1">
                             <i class="fa fa-bars text-gray-500 cursor-move"></i>
                             <span class="ml-1 text-wrap inline-block w-56" style="color: blue;">

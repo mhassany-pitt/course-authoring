@@ -7,8 +7,9 @@ import { DialogModule } from 'primeng/dialog';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { TableModule } from 'primeng/table';
-import { any } from '../../utils';
+import { any, getPreviewLink } from '../../utils';
 import { InputTextModule } from 'primeng/inputtext';
+import { AppService } from '../../app.service';
 
 @Component({
   selector: 'app-edit-unit-activities',
@@ -25,6 +26,7 @@ import { InputTextModule } from 'primeng/inputtext';
 })
 export class EditUnitActivitiesComponent {
 
+  getPreviewLink = getPreviewLink;
   any = any;
 
   @Input() activities: any;
@@ -35,6 +37,10 @@ export class EditUnitActivitiesComponent {
   @Output() complete = new EventEmitter();
 
   selectedOnly: boolean = false;
+
+  constructor(
+    public app: AppService,
+  ) { }
 
   get filteredActivitiesList() {
     const $ = this.activities.map((a: any) => a.id);

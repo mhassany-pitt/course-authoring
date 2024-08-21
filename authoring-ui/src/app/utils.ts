@@ -16,3 +16,7 @@ export const mapToTreeNodes = (
 ): any[] => {
   return nodes ? nodes.map(map) : [];
 }
+
+export const getPreviewLink = (user: any, url: string) => {
+  return `${url}&usr=${user.email}&grp=preview&sid=preview`;
+}

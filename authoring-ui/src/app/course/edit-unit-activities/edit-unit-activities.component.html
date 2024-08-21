@@ -41,7 +41,8 @@
                 <div class="flex items-center gap-2">
                   <span>{{ activity.name }}</span>
                   <div class="text-sm text-gray-400">
-                    [<a [href]="activity.url" target="_blank" class="no-underline text-gray-400">preview</a>]
+                    [<a [href]="getPreviewLink(app.user, activity.url)" target="_blank"
+                      class="no-underline text-gray-400">preview</a>]
                   </div>
                   <span class="flex-grow"></span>
                   <span class="text-sm">{{ activity.author_id }}</span>
