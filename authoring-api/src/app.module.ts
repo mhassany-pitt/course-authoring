@@ -26,9 +26,22 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       useFactory: (config: ConfigService) => ({ uri: config.get('MONGO_URI') }),
     }),
     TypeOrmModule.forRootAsync({
+      name: 'portal_test2',
       imports: [ConfigModule],
       inject: [ConfigService],
-      useFactory: (config: ConfigService) => ({ type: 'mysql', url: config.get('MYSQL_URI') }),
+      useFactory: (config: ConfigService) => ({ type: 'mysql', url: config.get('PORTAL_TEST2_MYSQL_URI') }),
+    }),
+    TypeOrmModule.forRootAsync({
+      name: 'aggregate',
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => ({ type: 'mysql', url: config.get('AGGREGATE_MYSQL_URI') }),
+    }),
+    TypeOrmModule.forRootAsync({
+      name: 'um2',
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => ({ type: 'mysql', url: config.get('UM2_MYSQL_URI') }),
     }),
     UsersModule,
     AuthModule,

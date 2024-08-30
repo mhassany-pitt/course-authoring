@@ -1,60 +1,51 @@
 import { Injectable } from '@nestjs/common';
-import { Course } from 'src/courses/course.schema';
 import { EntityManager } from 'typeorm';
-
-export interface MasteryGrid {
-    last_synced: Date;
-    mapped_course_id: number;
-    units: {
-        [unit_id: string]: {
-            mapped_unit_id: number,
-            activity_ids: {
-                [activity_id: string]: number
-            }
-        }
-    };
-    resources: {
-        [resource_id: string]: {
-            mapped_resource_id: number,
-            provider_ids: string[]
-        }
-    };
-}
+import { Course } from 'src/courses/course.schema';
+import { validate } from 'email-validator';
+import { nanoid } from 'nanoid';
 
 @Injectable()
 export class MasteryGridService {
 
-    async deleteCourse(em: EntityManager, masterygrid: MasteryGrid) {
-        if (masterygrid.mapped_course_id)
-            await this._deleteCourse(em, {
-                id: masterygrid.mapped_course_id
+    async agg_addCreatorIfNotExists(agg: EntityManager, user: User) {
+        return await agg.query(
+            'INSERT INTO ent_creator (creator_id, creator_name, affiliation, affiliation_code) ' +
+            'VALUES (?, ?, "", "") ON DUPLICATE KEY UPDATE creator_name = ?',
+            [user.email, user.fullname, user.fullname]
+        );
+    }
+
+    async agg_deleteCourse(agg: EntityManager, mapping_agg: Aggregate) {
+        if (mapping_agg.mapped_course_id)
+            await this._deleteCourse(agg, {
+                id: mapping_agg.mapped_course_id
             });
     }
 
-    async deleteCourseResources(em: EntityManager, masterygrid: MasteryGrid) {
-        for (const resource of Object.values(masterygrid.resources)) {
+    async agg_deleteCourseResources(agg: EntityManager, mapping_agg: Aggregate) {
+        for (const resource of Object.values(mapping_agg.resources)) {
             resource.provider_ids = resource.provider_ids || [];
             for (const provider_id of resource.provider_ids)
-                await this._deleteResourceProvider(em, {
+                await this._deleteResourceProvider(agg, {
                     resource_id: resource.mapped_resource_id,
                     provider_id, // provider_id is loaded from the aggregate db
                 });
-            await this._deleteResource(em, { id: resource.mapped_resource_id });
+            await this._deleteResource(agg, { id: resource.mapped_resource_id });
         }
     }
 
-    async deleteCourseUnits(em: EntityManager, masterygrid: MasteryGrid) {
-        for (const unit of Object.values(masterygrid.units)) {
+    async agg_deleteCourseUnits(agg: EntityManager, mapping_agg: Aggregate) {
+        for (const unit of Object.values(mapping_agg.units)) {
             unit.activity_ids = unit.activity_ids || {};
             for (const activity_id of Object.values(unit.activity_ids))
-                await this._deleteUnitActivity(em, { id: activity_id });
-            await this._deleteUnit(em, { id: unit.mapped_unit_id });
+                await this._deleteUnitActivity(agg, { id: activity_id });
+            await this._deleteUnit(agg, { id: unit.mapped_unit_id });
         }
     }
 
-    async addCourse(em: EntityManager, masterygrid: MasteryGrid, course: Course) {
-        const course_query = await this._addCourse(em, {
-            id: masterygrid.mapped_course_id,
+    async agg_addCourse(agg: EntityManager, mapping_agg: Aggregate, course: Course) {
+        const course_query = await this._addCourse(agg, {
+            id: mapping_agg.mapped_course_id,
             code: course.code?.substring(0, 50),
             name: course.name?.substring(0, 100),
             description: course.description?.substring(0, 500),
@@ -64,20 +55,20 @@ export class MasteryGridService {
             created_at: course.created_at,
         });
 
-        if (!masterygrid.mapped_course_id)
-            masterygrid.mapped_course_id = course_query.insertId;
+        if (!mapping_agg.mapped_course_id)
+            mapping_agg.mapped_course_id = course_query.insertId;
     }
 
-    async addCourseResources(em: EntityManager, masterygrid: MasteryGrid, course: Course) {
+    async agg_addCourseResources(agg: EntityManager, mapping_agg: Aggregate, course: Course) {
         let r_order = 1;
         for (const resource of (course.resources || [])) {
-            if (resource.id in masterygrid.resources == false)
-                masterygrid.resources[resource.id] = { mapped_resource_id: null, provider_ids: [] };
+            if (resource.id in mapping_agg.resources == false)
+                mapping_agg.resources[resource.id] = { mapped_resource_id: null, provider_ids: [] };
 
-            const mapped_resource = masterygrid.resources[resource.id];
-            const resource_query = await this._addResource(em, {
+            const mapped_resource = mapping_agg.resources[resource.id];
+            const resource_query = await this._addResource(agg, {
                 id: mapped_resource.mapped_resource_id,
-                course_id: masterygrid.mapped_course_id,
+                course_id: mapping_agg.mapped_course_id,
                 name: resource.name?.substring(0, 100),
                 order: r_order++,
                 user_email: course.user_email?.substring(0, 50),
@@ -90,7 +81,7 @@ export class MasteryGridService {
 
             // -- add resource providers
             for (const provider of (resource.providers || [])) {
-                await this._addResourceProvider(em, {
+                await this._addResourceProvider(agg, {
                     resource_id: mapped_resource.mapped_resource_id,
                     provider_id: provider.id, // provider.id is loaded from the aggregate db
                 });
@@ -101,23 +92,23 @@ export class MasteryGridService {
 
         // -- filter out mapped resources that are not in the course anymore
         const resource_ids = (course.resources || []).map(r => `${r.id}`);
-        Object.keys(masterygrid.resources).forEach(resource_id => {
+        Object.keys(mapping_agg.resources).forEach(resource_id => {
             if (!resource_ids.includes(resource_id))
-                delete masterygrid.resources[resource_id];
+                delete mapping_agg.resources[resource_id];
         });
     }
 
-    async addCourseUnits(em: EntityManager, masterygrid: MasteryGrid, course: Course) {
+    async agg_addCourseUnits(agg: EntityManager, mapping_agg: Aggregate, course: Course) {
         let u_order = 1;
         const parent_mapped_unit_ids = {};
         for (const unit of (course.units || [])) {
-            if (unit.id in masterygrid.units == false)
-                masterygrid.units[unit.id] = { mapped_unit_id: null, activity_ids: {} };
+            if (unit.id in mapping_agg.units == false)
+                mapping_agg.units[unit.id] = { mapped_unit_id: null, activity_ids: {} };
 
-            const mapped_unit = masterygrid.units[unit.id];
-            const unit_query = await this._addUnit(em, {
+            const mapped_unit = mapping_agg.units[unit.id];
+            const unit_query = await this._addUnit(agg, {
                 id: mapped_unit.mapped_unit_id,
-                course_id: masterygrid.mapped_course_id,
+                course_id: mapping_agg.mapped_course_id,
                 name: unit.name?.substring(0, 100),
                 description: unit.description?.substring(0, 500),
                 parent: unit.level == 0 ? null : parent_mapped_unit_ids[unit.level - 1],
@@ -140,10 +131,10 @@ export class MasteryGridService {
                     if (activity.id in mapped_unit.activity_ids == false)
                         mapped_unit.activity_ids[activity.id] = null;
 
-                    const activity_query = await this._addUnitActivity(em, {
+                    const activity_query = await this._addUnitActivity(agg, {
                         id: mapped_unit.activity_ids[activity.id],
                         unit_id: mapped_unit.mapped_unit_id,
-                        resource_id: masterygrid.resources[resource_id].mapped_resource_id,
+                        resource_id: mapping_agg.resources[resource_id].mapped_resource_id,
                         content_id: activity.id,
                         name: activity.name?.substring(0, 100),
                         order: a_order++,
@@ -170,89 +161,310 @@ export class MasteryGridService {
 
         // -- filter out mapped units that are not in the course anymore
         const unit_ids = (course.units || []).map(u => `${u.id}`);
-        Object.keys(masterygrid.units).forEach(unit_id => {
+        Object.keys(mapping_agg.units).forEach(unit_id => {
             if (!unit_ids.includes(unit_id))
-                delete masterygrid.units[unit_id];
+                delete mapping_agg.units[unit_id];
         });
+    }
+
+    async agg_addGroupIfNotExists(agg: EntityManager, mapping_agg: Aggregate, course: Course) {
+        if (!mapping_agg.mapped_group_mnemonic) {
+            mapping_agg.mapped_group_mnemonic = nanoid(28);
+            await agg.query(
+                'INSERT INTO ent_group (group_id, group_name, course_id, creation_date, term, year) ' +
+                'VALUES (?, ?, ?, NOW(), ?, ?)',
+                [mapping_agg.mapped_group_mnemonic, course.name,
+                mapping_agg.mapped_course_id, course.term, course.year]
+            );
+        }
+    }
+
+    async setStudentPasswords(students: any[], passwords: any) {
+        for (const student of students) {
+            if (validate(student.email) && !passwords[student.email])
+                passwords[student.email] = nanoid(8);
+            student.password = passwords[student.email];
+        }
+    }
+
+    async pt2_addTeacherIfNotExists(pt2: EntityManager, user: User, mapping_pt2: PortalTest2) {
+        if (!mapping_pt2.mapped_teacher_id) {
+            await pt2.query(
+                'INSERT INTO ent_user (Login, Name, Pass, IsGroup, Sync, EMail, Organization, City, Country, How, IsInstructor) ' +
+                'VALUES (?, ?, "", 0, 1, ?, "", "", "", "", 1) ON DUPLICATE KEY UPDATE Name = ?, EMail = ?, IsInstructor = 1',
+                [user.email, user.fullname, user.email, user.fullname, user.email]
+            );
+            mapping_pt2.mapped_teacher_id = (await this._getUser(pt2, user.email)).UserID;
+        }
+    }
+
+    async pt2_addGroupIfNotExists(pt2: EntityManager, mapping_pt2: PortalTest2, name: any) {
+        if (!mapping_pt2.mapped_group_id) {
+            mapping_pt2.mapped_group_id = (
+                await this._addGroup(pt2, mapping_pt2.mapped_group_mnemonic, name)
+            ).insertId;
+            await pt2.query(
+                'INSERT INTO rel_teacher_group (TeacherID, GroupID) VALUES (?, ?)',
+                [mapping_pt2.mapped_teacher_id, mapping_pt2.mapped_group_id]
+            );
+        }
+    }
+
+    async pt2_syncGroupStudents(pt2: EntityManager, mapping_pt2: PortalTest2, students: any[]) {
+        const pt2_userIds = [-1];
+        for (const student of students) {
+            // skip if email is invalid
+            if (!validate(student.email)) {
+                student.__result = 'email is invalid';
+                continue;
+            }
+
+            // insert or get user id for pt2
+            const pt2_user = await this._getUser(pt2, student.email);
+            const pt2_userId = pt2_user
+                ? pt2_user.UserID
+                : (await pt2.query(
+                    'INSERT INTO ent_user (Login, Name, Pass, IsGroup, Sync, EMail, Organization, City, Country, How, IsInstructor) ' +
+                    'VALUES (?, ?, MD5(?), 0, 1, ?, ?, ?, ?, "", 0)',
+                    [student.email, student.fullname, student.password, student.email, '', '', '']
+                )).insertId;
+            pt2_userIds.push(pt2_userId);
+
+            // ensure password is updated
+            await pt2.query('UPDATE ent_user SET Pass = MD5(?) WHERE UserID = ?', [student.password, pt2_userId]);
+
+            if (!pt2_user) pt2.query(
+                'INSERT INTO rel_user_user (ParentUserID, ChildUserID) VALUES (?, ?)',
+                [mapping_pt2.mapped_group_id, pt2_userId]
+            );
+        }
+
+        // delete students not in the csv file from pt2 and um2
+        await pt2.query(
+            'DELETE FROM rel_user_user WHERE ParentUserID = ? AND ChildUserID NOT IN (?)',
+            [mapping_pt2.mapped_group_id, pt2_userIds]
+        );
+    }
+
+    async um2_addGroupIfNotExists(um2: EntityManager, mapping_um2: UserModeling2, name: any) {
+        if (!mapping_um2.mapped_group_id) {
+            mapping_um2.mapped_group_id = (
+                await this._addGroup(um2, mapping_um2.mapped_group_mnemonic, name)
+            ).insertId;
+        }
+    }
+
+    async um2_syncGroupApps(um2: EntityManager, mapping_um2: UserModeling2, resources: any) {
+        // delete all apps for the group
+        await um2.query(
+            'DELETE FROM rel_app_user WHERE UserID = ?;',
+            [mapping_um2.mapped_group_id]
+        );
+
+        // find all unique provider ids
+        const providerIds = new Set<string>();
+        for (const resource of (resources || []))
+            for (const provider of (resource.providers || []))
+                providerIds.add(provider.id.trim())
+
+        // insert all apps for the group
+        for (const providerId of providerIds) {
+            if (providerId in PROVIDER_TO_APPID == false)
+                continue;
+            await um2.query(
+                'INSERT INTO rel_app_user (UserID, AppID) VALUES (?, ?)',
+                [mapping_um2.mapped_group_id, PROVIDER_TO_APPID[providerId]]
+            );
+        }
+    }
+
+    async um2_syncGroupStudents(um2: EntityManager, mapping_um2: UserModeling2, students: any[]) {
+        const um2_userIds = [-1];
+        for (const student of students) {
+            // skip if email is invalid
+            if (!student.email || !validate(student.email)) {
+                student.__result = 'email is invalid';
+                continue;
+            }
+
+            // insert or get user id for um2
+            const um2_user = await this._getUser(um2, student.email);
+            const um2_userId = um2_user
+                ? um2_user.UserID
+                : (await um2.query(
+                    'INSERT INTO ent_user (Login, Name, Pass, IsGroup, Sync, EMail, Organization, City, Country, How) ' +
+                    'VALUES (?, ?, MD5(?), 0, 1, ?, ?, ?, ?, "")',
+                    [student.email, student.fullname, student.password, student.email, '', '', '']
+                )).insertId;
+            um2_userIds.push(um2_userId);
+
+            // ensure password is updated
+            await um2.query('UPDATE ent_user SET Pass = MD5(?) WHERE UserID = ?', [student.password, um2_userId]);
+
+            if (!um2_user) um2.query(
+                'INSERT INTO rel_user_user (GroupID, UserID) VALUES (?, ?)',
+                [mapping_um2.mapped_group_id, um2_userId]
+            );
+        }
+
+        await um2.query(
+            'DELETE FROM rel_user_user WHERE GroupID = ? AND UserID NOT IN (?)',
+            [mapping_um2.mapped_group_id, um2_userIds]
+        );
+    }
+
+    private async _getUser(db: EntityManager, email: string) {
+        const result = await db.query('SELECT UserID FROM ent_user WHERE EMail = ?', [email]);
+        return result.length ? result[0] : null;
+    }
+
+    private async _addGroup(db: EntityManager, mnemonic: string, name: string) {
+        return await db.query(
+            'INSERT INTO ent_user (Login, Name, Pass, IsGroup, Sync, EMail, Organization, City, Country, How) ' +
+            'VALUES (?, ?, "", 1, 1, "", "", "", "", "")',
+            [mnemonic, name]
+        );
     }
 
     // -----------
 
-    private async _addCourse(em: EntityManager, { id, code, name, description, domain, user_email, published, created_at }) {
-        return await em.query(
+    private async _addCourse(agg: EntityManager, { id, code, name, description, domain, user_email, published, created_at }) {
+        return await agg.query(
             'INSERT INTO ent_course (' +
             '   course_id, course_name, `desc`, course_code, ' +
             '   `domain`, creation_date, creator_id, visible' +
-            ') VALUES(?, ?, ?, ?, ?, ?, ?, ?)',
+            ') VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
             [id, name, description, code, domain, created_at, user_email, published]
         );
     }
 
-    private async _deleteCourse(em: EntityManager, { id }) {
-        return await em.query('DELETE FROM ent_course WHERE course_id = ?', [id]);
+    private async _deleteCourse(agg: EntityManager, { id }) {
+        return await agg.query('DELETE FROM ent_course WHERE course_id = ?', [id]);
     }
 
     // -----------
 
-    private async _addResource(em: EntityManager, { id, course_id, name, order, user_email, created_at }) {
-        return em.query('INSERT INTO ent_resource (' +
+    private async _addResource(agg: EntityManager, { id, course_id, name, order, user_email, created_at }) {
+        return agg.query('INSERT INTO ent_resource (' +
             '   resource_id, resource_name, course_id, display_name, ' +
             '   `desc`, `order`, visible, creation_date, creator_id, ' +
             '   update_state_on, window_width, window_height' +
-            ') VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 800, 420);',
+            ') VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 800, 420)',
             [id, name, course_id, name, '', order, 1, created_at, user_email, 0]
         );
     }
 
-    private async _deleteResource(em: EntityManager, { id }) {
-        return em.query('DELETE FROM ent_resource WHERE resource_id = ?', [id]);
+    private async _deleteResource(agg: EntityManager, { id }) {
+        return agg.query('DELETE FROM ent_resource WHERE resource_id = ?', [id]);
     }
 
     // -----------
 
-    private async _addResourceProvider(em: EntityManager, { resource_id, provider_id }) {
-        return em.query('INSERT INTO rel_resource_provider (resource_id, provider_id) VALUES(?, ?);',
+    private async _addResourceProvider(agg: EntityManager, { resource_id, provider_id }) {
+        return agg.query('INSERT INTO rel_resource_provider (resource_id, provider_id) VALUES (?, ?)',
             [resource_id, provider_id]
         );
     }
 
-    private async _deleteResourceProvider(em: EntityManager, { resource_id, provider_id }) {
-        return em.query('DELETE FROM rel_resource_provider WHERE resource_id = ? AND provider_id = ?;',
+    private async _deleteResourceProvider(agg: EntityManager, { resource_id, provider_id }) {
+        return agg.query('DELETE FROM rel_resource_provider WHERE resource_id = ? AND provider_id = ?;',
             [resource_id, provider_id]
         );
     }
 
     // -----------
 
-    private async _addUnit(em: EntityManager, { id, course_id, name, description, parent, order, user_email, published, created_at }) {
-        return em.query('INSERT INTO ent_topic (' +
+    private async _addUnit(agg: EntityManager, { id, course_id, name, description, parent, order, user_email, published, created_at }) {
+        return agg.query('INSERT INTO ent_topic (' +
             '   topic_id, course_id, topic_name, display_name, ' +
             '   `desc`, parent, `order`, creation_date, ' +
             '   creator_id, visible, active' +
-            ') VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+            ') VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
             [id, course_id, name, name, description, parent, order, created_at, user_email, published, published]
         );
     }
 
-    private async _deleteUnit(em: EntityManager, { id }) {
-        return em.query('DELETE FROM ent_topic WHERE topic_id = ?', [id]);
+    private async _deleteUnit(agg: EntityManager, { id }) {
+        return agg.query('DELETE FROM ent_topic WHERE topic_id = ?', [id]);
     }
 
     // -----------
 
-    private async _addUnitActivity(em: EntityManager, { id, unit_id, resource_id, content_id, name, order, user_email, created_at }) {
-        return em.query('INSERT INTO rel_topic_content (' +
+    private async _addUnitActivity(agg: EntityManager, { id, unit_id, resource_id, content_id, name, order, user_email, created_at }) {
+        return agg.query('INSERT INTO rel_topic_content (' +
             '   id, topic_id, resource_id, content_id, display_name, ' +
             '   display_order, creation_date, creator, visible' +
-            ') VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)',
+            ') VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
             [id, unit_id, resource_id, content_id, name, order, created_at, user_email, 1]
         );
     }
 
-    private async _deleteUnitActivity(em: EntityManager, { id }) {
-        return em.query(
+    private async _deleteUnitActivity(agg: EntityManager, { id }) {
+        return agg.query(
             'DELETE FROM rel_topic_content WHERE id = ?',
             [id]
         );
     }
+}
+
+const PROVIDER_TO_APPID = {
+    animatedexamples: 35,
+    codecheck: 56,
+    codelab: 52,
+    codeocean: 54,
+    codeworkout: 49,
+    ctat: 50,
+    dbqa: 53,
+    educvideos: 40,
+    mchq: 42,
+    parsons: 48,
+    pcex: 46,
+    pcex_ch: 47,
+    pcrs: 44,
+    quizjet: 25,
+    quizpack: 2,
+    quizpet: 41,
+    readingmirror: 55,
+    salt: 37,
+    sqlknot: 23,
+    sqltutor: 19,
+    webex: 3,
+    video: 1,
+    pcex_activities: 1,
+};
+
+export interface User {
+    email: string;
+    fullname: string;
+}
+
+export interface Aggregate {
+    last_synced: Date;
+    mapped_course_id: number;
+    mapped_group_mnemonic: string;
+    units: {
+        [unit_id: string]: {
+            mapped_unit_id: number,
+            activity_ids: {
+                [activity_id: string]: number
+            }
+        }
+    };
+    resources: {
+        [resource_id: string]: {
+            mapped_resource_id: number,
+            provider_ids: string[]
+        }
+    };
+}
+
+export interface PortalTest2 {
+    mapped_teacher_id: number;
+    mapped_group_id: number;
+    mapped_group_mnemonic: string;
+}
+
+export interface UserModeling2 {
+    mapped_group_id: number;
+    mapped_group_mnemonic: string;
 }

@@ -1,9 +1,12 @@
 import { Controller, Param, Put, Request, UseGuards } from '@nestjs/common';
-import { MasteryGrid, MasteryGridService } from './mastery-grid.service';
-import { CoursesService } from 'src/courses/courses.service';
-import { toObject, useId } from 'src/utils';
-import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
+import { Aggregate, MasteryGridService, PortalTest2, UserModeling2 } from './mastery-grid.service';
 import { DataSource } from 'typeorm';
+import { toObject, useId } from 'src/utils';
+import { InjectDataSource } from '@nestjs/typeorm';
+import { parse } from 'csv-parse';
+import { CoursesService } from 'src/courses/courses.service';
+import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
+import { stringify } from 'csv-stringify/sync';
 
 @Controller('mastery-grid')
 export class MasteryGridController {
@@ -11,7 +14,9 @@ export class MasteryGridController {
     constructor(
         private service: MasteryGridService,
         private courses: CoursesService,
-        private dataSource: DataSource,
+        @InjectDataSource('aggregate') private aggregate: DataSource,
+        @InjectDataSource('um2') private user_modeling2: DataSource,
+        @InjectDataSource('portal_test2') private portal_test2: DataSource,
     ) { }
 
     @Put(':id/sync')
@@ -22,31 +27,70 @@ export class MasteryGridController {
 
         if (!course.linkings)
             course.linkings = {};
-        if (!course.linkings.mastery_grid)
-            course.linkings.mastery_grid = {};
+        const linkings = course.linkings;
 
-        const masterygrid: MasteryGrid = course.linkings.mastery_grid;
-        masterygrid.units = masterygrid.units || {};
-        masterygrid.resources = masterygrid.resources || {};
+        if (!linkings.aggregate) linkings.aggregate = {};
+        if (!linkings.portal_test2) linkings.portal_test2 = {};
+        if (!linkings.user_modeling2) linkings.user_modeling2 = {};
+        if (!linkings.ptum2_passwords) linkings.ptum2_passwords = {};
 
         try {
-            await this.dataSource.transaction(async (em) => {
-                await this.service.deleteCourseUnits(em, masterygrid);
-                await this.service.deleteCourseResources(em, masterygrid);
-                await this.service.deleteCourse(em, masterygrid);
+            const checkpoint = async () => {
+                linkings.last_synced = new Date();
+                await this.courses.update({ user_email: req.user.email, id }, { linkings }, true);
+            };
 
-                await this.service.addCourse(em, masterygrid, course);
-                await this.service.addCourseResources(em, masterygrid, course);
-                await this.service.addCourseUnits(em, masterygrid, course);
+            await this.aggregate.transaction(async agg => {
+                const mapping: Aggregate = linkings.aggregate;
+                mapping.units = mapping.units || {};
+                mapping.resources = mapping.resources || {};
+
+                await this.service.agg_deleteCourseUnits(agg, mapping);
+                await this.service.agg_deleteCourseResources(agg, mapping);
+                await this.service.agg_deleteCourse(agg, mapping);
+
+                await this.service.agg_addCreatorIfNotExists(agg, req.user);
+
+                await this.service.agg_addCourse(agg, mapping, course);
+                await this.service.agg_addCourseResources(agg, mapping, course);
+                await this.service.agg_addCourseUnits(agg, mapping, course);
+
+                await this.service.agg_addGroupIfNotExists(agg, mapping, course);
             });
 
-            masterygrid.last_synced = new Date();
-            await this.courses.update({ user_email: req.user.email, id }, { linkings: course.linkings }, true);
+            await checkpoint();
 
-            return {
-                id: course.linkings.mastery_grid.mapped_course_id,
-                last_synced: masterygrid.last_synced,
-            };
+            const students = course.students
+                ? await parse(course.students, {
+                    bom: true, columns: true, trim: true, skip_empty_lines: true
+                }).toArray()
+                : [];
+
+            await this.service.setStudentPasswords(students, linkings.ptum2_passwords);
+
+            await checkpoint();
+
+            await this.portal_test2.transaction(async pt2 => {
+                const mapping: PortalTest2 = linkings.portal_test2;
+                mapping.mapped_group_mnemonic = linkings.aggregate.mapped_group_mnemonic;
+                await this.service.pt2_addTeacherIfNotExists(pt2, req.user, mapping);
+                await this.service.pt2_addGroupIfNotExists(pt2, mapping, course.name);
+                await this.service.pt2_syncGroupStudents(pt2, mapping, students);
+            });
+
+            await checkpoint();
+
+            await this.user_modeling2.transaction(async um2 => {
+                const mapping: UserModeling2 = linkings.user_modeling2;
+                mapping.mapped_group_mnemonic = linkings.aggregate.mapped_group_mnemonic;
+                await this.service.um2_addGroupIfNotExists(um2, mapping, course.name);
+                await this.service.um2_syncGroupApps(um2, mapping, course.resources);
+                await this.service.um2_syncGroupStudents(um2, mapping, students);
+            });
+
+            await checkpoint();
+
+            return { students: stringify(students, { header: true }) };
         } catch (error) {
             console.error('error syncing course', id, error);
             throw error;

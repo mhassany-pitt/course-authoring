@@ -15,23 +15,22 @@
   </div>
 
   <div class="container mx-auto mt-24 mb-16 border shadow-md z-0 relative">
-    <form #form="ngForm" (submit)="save()" class="flex flex-col gap-2">
+    <form #form="ngForm" (submit)="save()" class="relative m-2 flex flex-col gap-2">
       <div class="lg:absolute lg:right-0 lg:top-0 flex items-end justify-end gap-2 z-10">
         <p-button type="button" [label]="course.deleted_at ? 'Deleted' : 'Delete'" icon="fa fa-trash" size="small"
           [severity]="course.deleted_at ? 'danger' : 'warning'" (click)="deleteCourse()">
         </p-button>
 
         <div class="relative overflow-visible">
-          <div *ngIf="course.linkings?.mastery_grid?.last_synced"
-            class="absolute -top-4 -mt-0.5 text-xs text-gray-400 min-w-max">
-            Last synchronized: {{ course.linkings?.mastery_grid?.last_synced | date:'short' }}
+          <div *ngIf="course.linkings?.last_synced" class="absolute -top-4 -mt-0.5 text-xs text-gray-400 min-w-max">
+            Last synchronized: {{ course.linkings?.last_synced | date:'short' }}
           </div>
           <p-buttonGroup>
             <p-button type="button" label="Sync to Mastery Grid" icon="fa fa-refresh" size="small" severity="success"
               (click)="syncToMasteryGrid()" [disabled]="form.invalid">
             </p-button>
             <p-button type="button" icon="fa fa-external-link" size="small" severity="success" class="ml-0.5"
-              (click)="openInMasteryGrid()" [disabled]="!course.linkings?.mastery_grid?.id"></p-button>
+              (click)="openInMasteryGrid()" [disabled]="!course.linkings?.course_id"></p-button>
           </p-buttonGroup>
         </div>
 
@@ -42,21 +41,14 @@
         </p-button>
         <p-button type="submit" label="Save" icon="fa fa-save" size="small" [disabled]="form.invalid"></p-button>
       </div>
+
+      <div class="flex items-center gap-1">
+        <span class="text-red-600 align-super">*</span>
+        <span class="text-sm text-gray-600">Required fields</span>
+      </div>
       <p-tabView [(activeIndex)]="activeTabIndex" (activeIndexChange)="forceUiRefresh('textarea-ref-tt')">
         <p-tabPanel header="General Information">
           <div class="flex flex-col gap-2 p-2">
-            <div class="flex items-center gap-2">
-              <div class="flex flex-col gap-1">
-                <span class="text-sm text-gray-600">Code:</span>
-                <input type="text" pInputText name="code" [(ngModel)]="course.code" placeholder="INFSCI ..."
-                  required="true" />
-              </div>
-              <div class="flex-grow flex flex-col gap-1">
-                <span class="text-sm text-gray-600">Name:</span>
-                <input type="text" pInputText name="name" [(ngModel)]="course.name" placeholder="Introduction to ..."
-                  required="true" />
-              </div>
-            </div>
             <div class="flex items-center gap-2">
               <div class="flex-grow flex flex-col gap-1">
                 <span class="text-sm text-gray-600">Institution:</span>
@@ -64,14 +56,60 @@
                   placeholder="University of ..." />
               </div>
               <div class="flex flex-col gap-1">
-                <span class="text-sm text-gray-600">Domain:</span>
-                <p-dropdown [options]="domains" name="domain" [(ngModel)]="course.domain" optionValue="id"
-                  optionLabel="name" placeholder="Select" required="true" (onChange)="loadProviders()" />
+                <span class="flex items-center gap-1 text-sm">
+                  <span class="text-gray-600">Year:</span>
+                  <span class="text-red-600 align-super">*</span>
+                </span>
+                <p-dropdown #yearEl [options]="years" name="year" [(ngModel)]="course.year" optionValue="id"
+                  optionLabel="name" placeholder="Select" required="true" styleClass="w-32"
+                  [ngClass]="{'ng-invalid ng-dirty': any(yearEl).errors?.['required']}" />
               </div>
               <div class="flex flex-col gap-1">
-                <span class="text-sm text-gray-600">Published:</span>
-                <p-dropdown [options]="[{label:'Yes',value: true}, {label:'No',value:false}]" name="published"
-                  [(ngModel)]="course.published" placeholder="Select" required="true" />
+                <span class="flex items-center gap-1 text-sm">
+                  <span class="text-gray-600">Term</span>
+                  <span class="text-red-600 align-super">*</span>
+                </span>
+                <p-dropdown #termEl [options]="terms" name="term" [(ngModel)]="course.term" optionValue="id"
+                  optionLabel="name" placeholder="Select" required="true" styleClass="w-32"
+                  [ngClass]="{'ng-invalid ng-dirty': any(termEl).errors?.['required']}" />
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="flex flex-col gap-1">
+                <span class="flex items-center gap-1 text-sm">
+                  <span class="text-gray-600">Code:</span>
+                  <span class="text-red-600 align-super">*</span>
+                </span>
+                <input #codeEl type="text" pInputText name="code" [(ngModel)]="course.code" placeholder="INFSCI ..."
+                  required="true" [ngClass]="{'ng-invalid ng-dirty': any(codeEl).errors?.['required']}" />
+              </div>
+              <div class="flex-grow flex flex-col gap-1">
+                <span class="flex items-center gap-1 text-sm">
+                  <span class="text-gray-600">Name:</span>
+                  <span class="text-red-600 align-super">*</span>
+                </span>
+                <input #nameEl type="text" pInputText name="name" [(ngModel)]="course.name"
+                  placeholder="Introduction to ..." required="true"
+                  [ngClass]="{'ng-invalid ng-dirty': any(nameEl).errors?.['required']}" />
+              </div>
+              <div class="flex flex-col gap-1">
+                <span class="flex items-center gap-1 text-sm">
+                  <span class="text-gray-600">Domain:</span>
+                  <span class="text-red-600 align-super">*</span>
+                </span>
+                <p-dropdown #domainEl [options]="domains" name="domain" [(ngModel)]="course.domain" optionValue="id"
+                  optionLabel="name" placeholder="Select" required="true" styleClass="w-32"
+                  [ngClass]="{'ng-invalid ng-dirty': any(domainEl).errors?.['required']}"
+                  (onChange)="loadProviders()" />
+              </div>
+              <div class="flex flex-col gap-1">
+                <span class="flex items-center gap-1 text-sm">
+                  <span class="text-gray-600">Published</span>
+                  <span class="text-red-600 align-super">*</span>
+                </span>
+                <p-dropdown #yesNoEl [options]="[{label:'Yes',value: true}, {label:'No',value:false}]" name="published"
+                  [(ngModel)]="course.published" placeholder="Select" required="true" styleClass="w-32"
+                  [ngClass]="{'ng-invalid ng-dirty': any(yesNoEl).errors?.['required']}" />
               </div>
             </div>
             <div class="flex flex-col gap-1">
@@ -138,9 +176,13 @@
                         </p-button>
                       </div>
 
-                      <textarea *ngIf="!tt['textarea-ref-tt']" rows="1" pInputTextarea [name]="'resource'+resource.id"
-                        [(ngModel)]="resource.name" placeholder="Resource ..." required="true" [autoResize]="true"
-                        class="text-xs font-bold p-1"></textarea>
+                      <div class="flex items-start gap-1 relative">
+                        <textarea *ngIf="!tt['textarea-ref-tt']" #resourceNameEl rows="1" pInputTextarea
+                          [name]="'resource'+resource.id" [(ngModel)]="resource.name" placeholder="Resource ..."
+                          required="true" [autoResize]="true" class="text-xs font-bold p-1 flex-grow"
+                          [ngClass]="{'ng-invalid ng-dirty': any(resourceNameEl).errors?.['required']}"></textarea>
+                        <span class="absolute right-0.5 top-0 text-red-600 align-super">*</span>
+                      </div>
                     </div>
                   </th>
                   <th></th>
@@ -168,9 +210,13 @@
                         </p-button>
                       </div>
                       <div class="flex-grow flex flex-col gap-0.5">
-                        <textarea *ngIf="!tt['textarea-ref-tt']" rows="1" pInputTextarea [name]="'unit-name'+unit.id"
-                          [(ngModel)]="unit.name" placeholder="Name" required="true" [autoResize]="true"
-                          class="text-xs font-bold p-1"></textarea>
+                        <div class="flex items-start gap-1 relative">
+                          <textarea *ngIf="!tt['textarea-ref-tt']" #unitNameEl rows="1" pInputTextarea
+                            [name]="'unit-name'+unit.id" [(ngModel)]="unit.name" placeholder="Name" required="true"
+                            [autoResize]="true" class="text-xs font-bold p-1 flex-grow"
+                            [ngClass]="{'ng-invalid ng-dirty': any(unitNameEl).errors?.['required']}"></textarea>
+                          <span class="absolute right-0.5 top-0 text-red-600 align-super">*</span>
+                        </div>
                         <textarea *ngIf="!tt['textarea-ref-tt'] && !tt['unitdesc-ref-tt:' + unit.id]" rows="2"
                           pInputTextarea [name]="'unit-description'+unit.id" [(ngModel)]="unit.description"
                           placeholder="Description" [autoResize]="unit._ui_expand"
@@ -234,16 +280,20 @@
             </p-table>
           </div>
         </p-tabPanel>
-        <!-- <p-tabPanel header="Students">
+        <p-tabPanel header="Students">
           <div class="flex flex-col gap-2">
-            <span>Enter students' email addresses (one per line) using this format (full name is optional).</span>
-            <pre
-              class="my-0 ml-2 bg-gray-200 p-2 rounded-md text-sm">email-address[:full name]<br/>email-address[:full name]<br/>...</pre>
-            <textarea *ngIf="!tt['textarea-ref-tt']" rows="10" pInputTextarea name="student_emails"
-              [(ngModel)]="course.student_emails" [placeholder]="'std1-email-address,std2-email-address,...'"
-              [autoResize]="true"></textarea>
+            <span>Specify the list of students by uploading a CSV file.</span>
+            <span class="italic text-gray-500 -my-1">Columns (fullname, email) are required.</span>
+            <div class="flex items-center gap-2">
+              <p-button type="button" label="upload" icon="fa fa-file-text" size="small" severity="secondary"
+                styleClass="px-2 py-1" (click)="csvFileInputEl.click()" />
+              <input #csvFileInputEl type="file" accept=".csv" class="hidden" (change)="loadCSV($event)" />
+            </div>
+            <textarea *ngIf="!tt['textarea-ref-tt'] && course.students" rows="10" pInputTextarea name="students"
+              [(ngModel)]="course.students" [autoResize]="true" [readonly]="true"
+              [placeholder]="'fullname,email\nstudent1,student1@university.edu\nstudent2,student2@university.edu\n...'"></textarea>
           </div>
-        </p-tabPanel> -->
+        </p-tabPanel>
       </p-tabView>
     </form>
   </div>

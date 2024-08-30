@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { getNavLinks, getPreviewLink } from '../utils';
+import { any, getNavLinks, getPreviewLink } from '../utils';
 import { AppService } from '../app.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CoursesService } from '../courses/courses.service';
@@ -16,6 +16,7 @@ export class CourseComponent implements OnInit {
   getPreviewLink = getPreviewLink;
   navLinks = getNavLinks(this.app);
   max = Math.max;
+  any = any;
 
   course: any;
   UNIT_MAX_LEVEL = 3;
@@ -26,6 +27,23 @@ export class CourseComponent implements OnInit {
   editingActivities: any;
 
   domains: any = [];
+  years = [
+    { id: 2021, name: '2021' },
+    { id: 2022, name: '2022' },
+    { id: 2023, name: '2023' },
+    { id: 2024, name: '2024' },
+    { id: 2025, name: '2025' },
+    { id: 2026, name: '2026' },
+    { id: 2027, name: '2027' },
+    { id: 2028, name: '2028' },
+    { id: 2029, name: '2029' },
+    { id: 2030, name: '2030' },
+  ];
+  terms = [
+    { id: 'spring', name: 'Spring' },
+    { id: 'summer', name: 'Summer' },
+    { id: 'fall', name: 'Fall' },
+  ];
 
   providersList: any[] = [];
   providersMap: any = {};
@@ -62,11 +80,12 @@ export class CourseComponent implements OnInit {
     this.course.units.forEach((u: any) => u.level = map[u.id][1]);
   }
 
-  load() {
+  load(loadProviders = true) {
     const params: any = this.route.snapshot.params;
     this.courses.read(params.id).subscribe((course: any) => {
       this.course = course;
-      this.loadProviders();
+      if (loadProviders)
+        this.loadProviders();
     });
   }
 
@@ -217,7 +236,16 @@ export class CourseComponent implements OnInit {
       accept: () => {
         this.courses.syncToMasteryGrid(this.course.id).subscribe({
           next: (response: any) => {
-            this.course.linkings.mastery_grid = response;
+            if (response.students) {
+              // save students.csv to file
+              const a = document.createElement('a');
+              const blob = new Blob([response.students], { type: 'text/csv' });
+              a.href = window.URL.createObjectURL(blob);
+              a.download = `${this.course.code}_${this.course.name}_${this.course.term}_${this.course.year}_students.csv`;
+              a.click();
+            }
+
+            this.load(false);
             this.messages.add({
               severity: 'success',
               summary: 'Course Synchronized!',
@@ -240,6 +268,17 @@ export class CourseComponent implements OnInit {
   }
 
   openInMasteryGrid() {
-    window.open(`http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=ADL&sid=TEST&cid=${this.course.linkings.mastery_grid.id}`, '_blank');
+    window.open(`http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=ADL&sid=TEST&cid=${this.course.linkings.course_id}`, '_blank');
+  }
+
+  loadCSV($event: any) {
+    const file = $event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = () => this.course.students = reader.result as string;
+    reader.onerror = (error) => this.messages.add({
+      severity: 'error', summary: 'Error Loading File!',
+      detail: 'An error occurred while loading the file. Please try again.',
+    });
+    reader.readAsText(file);
   }
 }

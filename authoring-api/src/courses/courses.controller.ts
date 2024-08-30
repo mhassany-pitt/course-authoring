@@ -35,12 +35,10 @@ export class CoursesController {
   async read(@Request() req: any) {
     let course = await this.courses.load({ id: req.params.id, user_email: req.user.email });
     course = useId(toObject(course));
-    course.linkings = course.linkings || {};
-    const masterygrid = course.linkings.mastery_grid;
-    course.linkings.mastery_grid = masterygrid ? {
-      id: masterygrid.mapped_course_id,
-      last_synced: masterygrid.last_synced
-    } : {};
+    course.linkings = {
+      course_id: course.linkings?.aggregate?.mapped_course_id,
+      last_synced: course.linkings?.last_synced,
+    };
     return course;
   }
 

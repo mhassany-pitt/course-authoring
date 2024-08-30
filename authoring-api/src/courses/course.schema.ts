@@ -15,12 +15,14 @@ export class Course {
   @Prop() name: string;
   @Prop() description: string;
   @Prop() domain: string;
+  @Prop() term: string;
+  @Prop() year: number;
   @Prop() institution: string;
   @Prop() resources: Resource[];
   @Prop() units: Unit[];
   @Prop() tags: string[];
 
-  @Prop() student_emails: string;
+  @Prop() students: string;
 
   @Prop({ type: Object }) linkings: any;
 }

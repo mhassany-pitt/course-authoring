@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { InjectDataSource } from '@nestjs/typeorm';
 import mysql from 'mysql2/promise';
 import { DataSource } from 'typeorm';
 
@@ -7,7 +8,8 @@ import { DataSource } from 'typeorm';
 export class AggregateService {
 
     constructor(
-        private ds: DataSource,
+        @InjectDataSource('aggregate')
+        private agg: DataSource,
     ) { }
 
     async getAggregate(con: mysql.Connection, contentType: string) {
@@ -28,19 +30,19 @@ export class AggregateService {
     }
 
     async domains() {
-        return await this.ds.query(
+        return await this.agg.query(
             'select name as id, `desc` as name from ent_domain'
         );
     }
 
     async authors() {
-        return await this.ds.query(
+        return await this.agg.query(
             'select creator_id as id, creator_name as name from ent_creator'
         );
     }
 
     async providers(domainId: string) {
-        return await this.ds.query(
+        return await this.agg.query(
             'select p.provider_id as id, p.name, pd.domain_name as domain ' +
             'from ent_provider p, rel_provider_domain pd ' +
             'where p.provider_id = pd.provider_id and pd.domain_name = ?',
@@ -49,7 +51,7 @@ export class AggregateService {
     }
 
     async activites(domainId: string, providerId: string) {
-        return await this.ds.query(
+        return await this.agg.query(
             'select content_id as id, provider_id, display_name as name, creator_id as author_id, url, domain, ' +
             '(select group_concat(tag separator \',\') as tags from ent_tagging where entity_id = ent_content.content_id) as tags ' +
             'from ent_content ' +
