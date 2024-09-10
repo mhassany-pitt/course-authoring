@@ -38,7 +38,13 @@ export class CoursesComponent implements OnInit {
 
   reload() {
     this.api.courses({ trash_can: this.trash_can }).subscribe({
-      next: (courses: any) => this.courses = courses,
+      next: (courses: any) => {
+        for (const course of courses)
+          if (course.collaborator_emails?.length && course.collaborator_emails.includes(course.user_email)) {
+            course.collaborator_emails = course.collaborator_emails.filter((email: string) => email != course.user_email);
+          }
+        this.courses = courses;
+      },
       error: (error: any) => console.log(error)
     })
   }

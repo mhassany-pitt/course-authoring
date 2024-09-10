@@ -23,7 +23,8 @@ export class CoursesService {
   }
 
   async list({ user_email, trash_can }) {
-    const filter = { user_email, deleted_at: trash_can ? { $ne: null } : null }
+    console.log(user_email)
+    const filter = { $or: [{ user_email }, { collaborator_emails: user_email }], deleted_at: trash_can ? { $ne: null } : null }
     return await this.courses.find(filter);
   }
 
@@ -32,14 +33,14 @@ export class CoursesService {
   }
 
   async load({ user_email, id }) {
-    return await this.courses.findOne({ user_email, _id: id });
+    return await this.courses.findOne({ $or: [{ user_email }, { collaborator_emails: user_email }], _id: id });
   }
 
   async update({ user_email, id }, course: any, alsoUpdateLinkings = false) {
     const { linkings, ...rest } = course;
     const update = { ...rest, updated_at: new Date() };
     if (alsoUpdateLinkings) update.linkings = linkings;
-    return await this.courses.findOneAndUpdate({ user_email, _id: id }, update, { new: true });
+    return await this.courses.findOneAndUpdate({ $or: [{ user_email }, { collaborator_emails: user_email }], _id: id }, update, { new: true });
   }
 
   async delete({ user_email, id }, undo: boolean) {

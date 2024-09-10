@@ -55,6 +55,11 @@ export class CourseComponent implements OnInit {
 
   arrangingItems = '';
 
+  collaborators = false;
+  get isMyCourse() {
+    return this.course.user_email == this.app.user.email;
+  }
+
   tt: any = {};
 
   constructor(

@@ -25,6 +25,8 @@ export class Course {
   @Prop() students: string;
 
   @Prop({ type: Object }) linkings: any;
+
+  @Prop() collaborator_emails: [string];
 }
 
 export const CourseSchema = SchemaFactory.createForClass(Course);

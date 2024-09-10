@@ -26,6 +26,7 @@ import { EditUnitActivitiesComponent } from "./edit-unit-activities/edit-unit-ac
 import { EnableProvidersComponent } from "./enable-providers/enable-providers.component";
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ChipsModule } from 'primeng/chips';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     InputTextareaModule, DropdownModule,
     CheckboxModule, ButtonModule, TabViewModule,
     DialogModule, ListboxModule, TreeModule, TableModule,
-    IconFieldModule, InputIconModule, ToastModule,
+    ChipsModule, IconFieldModule, InputIconModule, ToastModule,
     ConfirmDialogModule, DragDropModule,
   ],
   providers: [

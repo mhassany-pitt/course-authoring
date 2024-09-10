@@ -17,8 +17,8 @@
   <div class="container mx-auto mt-24 mb-16 border shadow-md z-0 relative">
     <form #form="ngForm" (submit)="save()" class="relative m-2 flex flex-col gap-2">
       <div class="lg:absolute lg:right-0 lg:top-0 flex items-end justify-end gap-2 z-10">
-        <p-button type="button" [label]="course.deleted_at ? 'Deleted' : 'Delete'" icon="fa fa-trash" size="small"
-          [severity]="course.deleted_at ? 'danger' : 'warning'" (click)="deleteCourse()">
+        <p-button *ngIf="isMyCourse" type="button" [label]="course.deleted_at ? 'Deleted' : 'Delete'" icon="fa fa-trash"
+          size="small" [severity]="course.deleted_at ? 'danger' : 'warning'" (click)="deleteCourse()">
         </p-button>
 
         <div class="relative overflow-visible">
@@ -33,6 +33,10 @@
               (click)="openInMasteryGrid()" [disabled]="!course.linkings?.course_id"></p-button>
           </p-buttonGroup>
         </div>
+
+        <p-button type="button" title="Collaborate" icon="pi pi-users" severity="help" [outlined]="true" size="small"
+          (click)="collaborators = true">
+        </p-button>
 
         <span class="border border-solid border-gray-100 h-8"></span>
 
@@ -301,6 +305,15 @@
 
 <p-toast />
 <p-confirmDialog />
+
+<p-dialog header="Collaborators" [(visible)]="collaborators" [modal]="true"
+  [style]="{ width: '75vw', 'max-width': '500px' }">
+  <div class="flex flex-col gap-2">
+    <p-chips *ngIf="course" [(ngModel)]="course.collaborator_emails" separator="," placeholder="user@company.com, ..."
+      class="p-chips-sm"></p-chips>
+    <span class="text-xs text-gray-400">Type collaborator's email and press enter to add.</span>
+  </div>
+</p-dialog>
 
 <app-enable-providers *ngIf="editingProviders" [providers]="editingProviders" [list]="providersList"
   (close)="editingProviders = null" (complete)="editingResource.providers = $event; editingProviders = null;" />

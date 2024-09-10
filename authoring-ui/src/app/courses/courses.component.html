@@ -38,7 +38,7 @@
           <th>Code</th>
           <th>Institution</th>
           <th>Domain</th>
-          <th>Created by</th>
+          <th>Created at</th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-course>
@@ -46,10 +46,15 @@
           <td>
             <div class="flex flex-col gap-2">
               <span [routerLink]="['/courses/', course.id]" class="font-bold cursor-pointer text-blue-700">
-                {{ course.name || 'Untitled' }}
-                ({{ countUnits(course.units) }} units)
+                {{ course.name || 'Untitled' }} ({{ countUnits(course.units) }} units)
               </span>
               <span *ngIf="course.description" class="text-xs">{{ course.description }}</span>
+              <span class="text-xs -mb-1" [ngClass]="{'font-bold': course.user_email == app.user.email}">
+                Created by: {{ course.user_email }} <span *ngIf="course.user_email == app.user.email">(you)</span>
+              </span>
+              <span *ngIf="course.collaborator_emails?.length" class="text-xs -mt-1">
+                Collaborators: {{ course.collaborator_emails.join(', ') }}
+              </span>
               <div class="flex items-center gap-2">
                 <span *ngIf="course.deleted_at" class="flex items-center gap-1 text-xs text-red-600">
                   <i class="fa fa-trash"></i>
@@ -72,7 +77,7 @@
             <span class="text-sm uppercase">{{ course.domain }}</span>
           </td>
           <td>
-            <span class="text-sm">{{ course.user_email }} on {{ course.created_at | date:'medium' }}</span>
+            <span class="text-sm">{{ course.created_at | date:'medium' }}</span>
           </td>
         </tr>
       </ng-template>
