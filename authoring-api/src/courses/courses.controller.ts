@@ -37,6 +37,7 @@ export class CoursesController {
     course = useId(toObject(course));
     course.linkings = {
       course_id: course.linkings?.aggregate?.mapped_course_id,
+      group_id: course.linkings?.portal_test2?.mapped_group_id,
       last_synced: course.linkings?.last_synced,
     };
     return course;
