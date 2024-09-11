@@ -1,0 +1,144 @@
+{
+  "id": "66ab7f7bc5ce4c32b8c69b05",
+  "created_at": "2024-08-01T12:28:43.838Z",
+  "user_email": "moh70@pitt.edu",
+  "resources": [
+    {
+      "id": 1724126580765,
+      "providers": [
+        {
+          "id": "pcex",
+          "name": "Program Construction Examples",
+          "domain": "java"
+        }
+      ],
+      "name": "PCEX Examples"
+    },
+    {
+      "id": 1724126638217,
+      "providers": [
+        {
+          "id": "pcex_ch",
+          "name": "Program Construction Challenges",
+          "domain": "java"
+        },
+        { "id": "codeworkout", "name": "CodeWorkout", "domain": "java" },
+        { "id": "webex", "name": "WebEx", "domain": "java" }
+      ],
+      "name": "PCEX Challenges"
+    }
+  ],
+  "units": [
+    {
+      "id": 1724169111877,
+      "level": 0,
+      "name": "Unit 1",
+      "_ui_expand": false,
+      "activities": {
+        "1724126580765": [
+          {
+            "id": 1913,
+            "provider_id": "pcex",
+            "name": "BMI Calculator",
+            "author_id": "r.hosseini",
+            "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=arithmetic.bmi_calculator",
+            "domain": "java",
+            "tags": null
+          },
+          {
+            "id": 1914,
+            "provider_id": "pcex",
+            "name": "Unit Converter",
+            "author_id": "r.hosseini",
+            "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=arithmetic.f_to_c_conversion",
+            "domain": "java",
+            "tags": null
+          },
+          {
+            "id": 1915,
+            "provider_id": "pcex",
+            "name": "Pythagorean Theorem",
+            "author_id": "r.hosseini",
+            "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=arithmetic.pythagorean_theorem",
+            "domain": "java",
+            "tags": null
+          }
+        ],
+        "1724126638217": [
+          {
+            "id": 2072,
+            "provider_id": "pcex_ch",
+            "name": "Calculating and Rounding Up Body Mass Index (BMI) To the Nearest Integer",
+            "author_id": "r.hosseini",
+            "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=arithmetic.bmi_calculator&ch=BmiCalculator2",
+            "domain": "java",
+            "tags": null
+          },
+          {
+            "id": 2073,
+            "provider_id": "pcex_ch",
+            "name": "Fahrenheit to Celsius Conversion",
+            "author_id": "r.hosseini",
+            "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=arithmetic.f_to_c_conversion&ch=FahrenheitToCelsius",
+            "domain": "java",
+            "tags": null
+          },
+          {
+            "id": 2074,
+            "provider_id": "pcex_ch",
+            "name": "Pythagorean Theorem (Case 2)",
+            "author_id": "r.hosseini",
+            "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=arithmetic.pythagorean_theorem&ch=PythagoreanTheorem2",
+            "domain": "java",
+            "tags": null
+          }
+        ]
+      },
+      "published": true
+    },
+    {
+      "id": 1724169112133,
+      "level": 0,
+      "name": "Unit 2",
+      "_ui_expand": false,
+      "published": true
+    },
+    {
+      "id": 1724169112292,
+      "level": 0,
+      "name": "Unit 3",
+      "_ui_expand": false,
+      "published": true
+    },
+    { "id": 1724169112470, "level": 0, "name": "Unit 4", "_ui_expand": false }
+  ],
+  "tags": [],
+  "domain": "java",
+  "name": "Introduction to Programming",
+  "updated_at": "2024-09-10T10:38:45.707Z",
+  "code": "INFSCI2500",
+  "description": "This course provides a comprehensive introduction to programming concepts and techniques using the Java programming language. Designed for beginners, it covers the fundamentals of software development, including variables, data types, control structures, functions, and object-oriented programming principles. Students will learn to write, debug, and execute Java programs, developing problem-solving skills and a solid foundation in coding.",
+  "institution": "University of Pittsburgh",
+  "published": true,
+  "deleted_at": null,
+  "students": "fullname,email\nmohammad hassany,jone30rw@gmail.com\nahmad ahmadi,ahmad@gmail.com\nmustafa heidari,mustafa@gmail.com",
+  "linkings": {
+    "portal_test2": {
+      "mapped_group_mnemonic": "FJzRoVoOKuZiEpcAgPlbfsUMbteW",
+      "mapped_teacher_id": 32909,
+      "mapped_group_id": 32910
+    },
+    "user_modeling2": {
+      "mapped_group_mnemonic": "FJzRoVoOKuZiEpcAgPlbfsUMbteW",
+      "mapped_group_id": 32153
+    },
+    "ptum2_passwords": {
+      "jone30rw@gmail.com": "1soS6tl4",
+      "ahmad@gmail.com": "sB0SPDSJ",
+      "mustafa@gmail.com": "JxOLgrA2"
+    }
+  },
+  "term": "summer",
+  "year": 2025,
+  "collaborator_emails": ["jone30rw@gmail.com"]
+}

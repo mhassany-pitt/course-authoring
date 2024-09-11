@@ -267,13 +267,23 @@ export class MasteryGridService {
             for (const provider of (resource.providers || []))
                 providerIds.add(provider.id.trim())
 
+        // always ensure unknown-app is added
+        providerIds.add('this-is-just-a-fake-provider-id-for-unknown-app');
+
         // insert all apps for the group
+        let unknownAdded = false;
         for (const providerId of providerIds) {
-            if (providerId in PROVIDER_TO_APPID == false)
-                continue;
+            const appId = providerId in PROVIDER_TO_APPID
+                ? PROVIDER_TO_APPID[providerId]
+                : 1;
+
+            if (appId == 1)
+                if (unknownAdded) continue;
+                else unknownAdded = true;
+
             await um2.query(
                 'INSERT INTO rel_app_user (UserID, AppID) VALUES (?, ?)',
-                [mapping_um2.mapped_group_id, PROVIDER_TO_APPID[providerId]]
+                [mapping_um2.mapped_group_id, appId]
             );
         }
     }
