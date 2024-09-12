@@ -284,18 +284,47 @@
             </p-table>
           </div>
         </p-tabPanel>
-        <p-tabPanel header="Students">
+        <p-tabPanel header="Groups">
+          <div class="flex flex-col gap-2 p-2 bg-gray-100 rounded-md mb-2">
+            <span>For each group, specify the list of students by uploading a CSV file with the following
+              columns:</span>
+            <span class="text-sm ml-4"><i>fullname</i>: full name of the student.</span>
+            <span class="text-sm ml-4 -my-2"><i>email</i>: email address to login to the system.</span>
+            <span class="text-sm ml-4">
+              <i>remark</i>: remarks on how student's account should be created
+              (leave it blank or use 'keep_password'<span class="align-super text-xs">1</span>).
+            </span>
+            <span class="text-xs text-gray-500">
+              1. By default, a random password will be set for each student, unless you set
+              <span class="italic text-orange-700">keep_password</span>
+              as the value for the student's remark column.
+            </span>
+            <span class="text-sm text-red-600">Note that groups can't be removed after you save the changes!</span>
+          </div>
           <div class="flex flex-col gap-2">
-            <span>Specify the list of students by uploading a CSV file.</span>
-            <span class="italic text-gray-500 -my-1">Columns (fullname, email) are required.</span>
-            <div class="flex items-center gap-2">
-              <p-button type="button" label="upload" icon="fa fa-file-text" size="small" severity="secondary"
-                styleClass="px-2 py-1" (click)="csvFileInputEl.click()" />
-              <input #csvFileInputEl type="file" accept=".csv" class="hidden" (change)="loadCSV($event)" />
-            </div>
-            <textarea *ngIf="!tt['textarea-ref-tt'] && course.students" rows="10" pInputTextarea name="students"
-              [(ngModel)]="course.students" [autoResize]="true" [readonly]="true"
-              [placeholder]="'fullname,email\nstudent1,student1@university.edu\nstudent2,student2@university.edu\n...'"></textarea>
+            <span class="text-sm text-gray-400">Group mnemonics <span class="font-bold">MUST be globally unique</span>.</span>
+            <ng-container *ngFor="let group of course.groups; let i = index;">
+              <div class="flex items-center gap-2 p-2 bg-gray-100 rounded-md">
+                <input type="text" pInputText [name]="'group_mnemonic'+i" [(ngModel)]="group.mnemonic"
+                  placeholder="group mnemonic" size="small" [required]="true" [size]="28" />
+                <input type="text" pInputText [name]="'group_name'+i" [(ngModel)]="group.name" placeholder="group name"
+                  class="flex-grow" [required]="true" />
+                <p-button type="button" label="upload" icon="fa fa-file-text" severity="secondary"
+                  (click)="csvFileInputEl.click()" />
+                <input #csvFileInputEl type="file" accept=".csv" class="hidden" (change)="loadCSV($event, group)" />
+                <p-button type="button" label="download" icon="fa fa-download" severity="secondary" [outlined]="true"
+                  (click)="downloadCSV(group)" [disabled]="!group.students"></p-button>
+                <p-button type="button" [icon]="'fa ' + (tt['group_students'+i] ? 'fa-chevron-up' : 'fa-chevron-down')"
+                  severity="secondary" [text]="true" (click)="tt['group_students'+i] = !tt['group_students'+i]"
+                  [disabled]="!group.students"></p-button>
+              </div>
+              <textarea *ngIf="tt['group_students'+i]" pInputTextarea [name]="'group_students'+i"
+                [(ngModel)]="group.students" [autoResize]="true" [readonly]="true"
+                [placeholder]="'fullname,email\nstudent1,student1@university.edu\nstudent2,student2@university.edu\n...'">
+              </textarea>
+            </ng-container>
+            <p-button type="button" label="add group" icon="fa fa-plus" size="small" severity="secondary"
+              (click)="course.groups.push({ id: nextResourceId() })"></p-button>
           </div>
         </p-tabPanel>
       </p-tabView>

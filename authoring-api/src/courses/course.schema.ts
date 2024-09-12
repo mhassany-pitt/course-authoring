@@ -22,7 +22,7 @@ export class Course {
   @Prop() units: Unit[];
   @Prop() tags: string[];
 
-  @Prop() students: string;
+  @Prop() groups: any[];
 
   @Prop({ type: Object }) linkings: any;
 

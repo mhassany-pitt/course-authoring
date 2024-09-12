@@ -2,28 +2,16 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Course } from './course.schema';
+import { toObject, useId } from 'src/utils';
 
 @Injectable()
 export class CoursesService {
 
   constructor(
     @InjectModel('courses') private courses: Model<Course>,
-  ) {
-    // (async () => {
-    //   const courses = await this.courses.find();
-    //   for (const course of courses) {
-    //     if (!course.linkings?.mastery_grid)
-    //       continue;
-    //     course.linkings.aggregate = course.linkings.mastery_grid;
-    //     course.linkings.last_synced = course.linkings.mastery_grid?.last_synced;
-    //     delete course.linkings.mastery_grid;
-    //     await this.courses.updateOne({ _id: course._id }, course);
-    //   }
-    // })();
-  }
+  ) { }
 
   async list({ user_email, trash_can }) {
-    console.log(user_email)
     const filter = { $or: [{ user_email }, { collaborator_emails: user_email }], deleted_at: trash_can ? { $ne: null } : null }
     return await this.courses.find(filter);
   }

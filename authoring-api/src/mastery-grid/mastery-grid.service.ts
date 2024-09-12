@@ -62,10 +62,10 @@ export class MasteryGridService {
     async agg_addCourseResources(agg: EntityManager, mapping_agg: Aggregate, course: Course) {
         let r_order = 1;
         for (const resource of (course.resources || [])) {
-            if (resource.id in mapping_agg.resources == false)
-                mapping_agg.resources[resource.id] = { mapped_resource_id: null, provider_ids: [] };
+            if (`${resource.id}` in mapping_agg.resources == false)
+                mapping_agg.resources[`${resource.id}`] = { mapped_resource_id: null, provider_ids: [] };
 
-            const mapped_resource = mapping_agg.resources[resource.id];
+            const mapped_resource = mapping_agg.resources[`${resource.id}`];
             const resource_query = await this._addResource(agg, {
                 id: mapped_resource.mapped_resource_id,
                 course_id: mapping_agg.mapped_course_id,
@@ -102,10 +102,10 @@ export class MasteryGridService {
         let u_order = 1;
         const parent_mapped_unit_ids = {};
         for (const unit of (course.units || [])) {
-            if (unit.id in mapping_agg.units == false)
-                mapping_agg.units[unit.id] = { mapped_unit_id: null, activity_ids: {} };
+            if (`${unit.id}` in mapping_agg.units == false)
+                mapping_agg.units[`${unit.id}`] = { mapped_unit_id: null, activity_ids: {} };
 
-            const mapped_unit = mapping_agg.units[unit.id];
+            const mapped_unit = mapping_agg.units[`${unit.id}`];
             const unit_query = await this._addUnit(agg, {
                 id: mapped_unit.mapped_unit_id,
                 course_id: mapping_agg.mapped_course_id,
@@ -128,14 +128,14 @@ export class MasteryGridService {
             let a_order = 1;
             for (const resource_id of Object.keys(unit.activities || {})) {
                 for (const activity of unit.activities[resource_id]) {
-                    if (activity.id in mapped_unit.activity_ids == false)
-                        mapped_unit.activity_ids[activity.id] = null;
+                    if (`${activity.id}` in mapped_unit.activity_ids == false)
+                        mapped_unit.activity_ids[`${activity.id}`] = null;
 
                     const activity_query = await this._addUnitActivity(agg, {
-                        id: mapped_unit.activity_ids[activity.id],
+                        id: mapped_unit.activity_ids[`${activity.id}`],
                         unit_id: mapped_unit.mapped_unit_id,
                         resource_id: mapping_agg.resources[resource_id].mapped_resource_id,
-                        content_id: activity.id,
+                        content_id: `${activity.id}`,
                         name: activity.name?.substring(0, 100),
                         order: a_order++,
                         user_email: course.user_email?.substring(0, 50),
@@ -143,8 +143,8 @@ export class MasteryGridService {
                     });
 
                     // -- set mapped_activity_id if not set
-                    if (!mapped_unit.activity_ids[activity.id])
-                        mapped_unit.activity_ids[activity.id] = activity_query.insertId;
+                    if (!mapped_unit.activity_ids[`${activity.id}`])
+                        mapped_unit.activity_ids[`${activity.id}`] = activity_query.insertId;
                 }
             }
 
@@ -167,98 +167,114 @@ export class MasteryGridService {
         });
     }
 
-    async agg_addGroupIfNotExists(agg: EntityManager, mapping_agg: Aggregate, course: Course) {
-        if (!mapping_agg.mapped_group_mnemonic) {
-            mapping_agg.mapped_group_mnemonic = nanoid(28);
+    async agg_addGroupIfNotExists(agg: EntityManager, mapping_agg: Aggregate, group: Group, course: Course) {
+        if (`${group.id}` in mapping_agg.groups) {
+            await agg.query(
+                'UPDATE ent_group SET group_id = ?, group_name = ? WHERE group_id = ?',
+                [group.mnemonic, group.name, mapping_agg.groups[`${group.id}`]]
+            );
+            mapping_agg.groups[`${group.id}`] = group.mnemonic;
+        } else {
             await agg.query(
                 'INSERT INTO ent_group (group_id, group_name, course_id, creation_date, term, year) ' +
                 'VALUES (?, ?, ?, NOW(), ?, ?)',
-                [mapping_agg.mapped_group_mnemonic, course.name,
-                mapping_agg.mapped_course_id, course.term, course.year]
+                [group.mnemonic, group.name, mapping_agg.mapped_course_id, course.term, course.year]
             );
+            mapping_agg.groups[`${group.id}`] = group.mnemonic;
         }
     }
 
     async setStudentPasswords(students: any[], passwords: any) {
         for (const student of students) {
-            if (validate(student.email) && !passwords[student.email])
+            if (!validate(student.email))
+                continue;
+
+            if (student.email in passwords == false)
                 passwords[student.email] = nanoid(8);
             student.password = passwords[student.email];
+            student.keep_password = student.remark?.toLowerCase().includes('keep_password');
         }
     }
 
     async pt2_addTeacherIfNotExists(pt2: EntityManager, user: User, mapping_pt2: PortalTest2) {
         if (!mapping_pt2.mapped_teacher_id) {
-            await pt2.query(
+            mapping_pt2.mapped_teacher_id = (await pt2.query(
                 'INSERT INTO ent_user (Login, Name, Pass, IsGroup, Sync, EMail, Organization, City, Country, How, IsInstructor) ' +
                 'VALUES (?, ?, "", 0, 1, ?, "", "", "", "", 1) ON DUPLICATE KEY UPDATE Name = ?, EMail = ?, IsInstructor = 1',
                 [user.email, user.fullname, user.email, user.fullname, user.email]
-            );
-            mapping_pt2.mapped_teacher_id = (await this._getUser(pt2, user.email)).UserID;
+            )).insertId;
         }
     }
 
-    async pt2_addGroupIfNotExists(pt2: EntityManager, mapping_pt2: PortalTest2, name: any) {
-        if (!mapping_pt2.mapped_group_id) {
-            mapping_pt2.mapped_group_id = (
-                await this._addGroup(pt2, mapping_pt2.mapped_group_mnemonic, name)
-            ).insertId;
-            await pt2.query(
-                'INSERT INTO rel_teacher_group (TeacherID, GroupID) VALUES (?, ?)',
-                [mapping_pt2.mapped_teacher_id, mapping_pt2.mapped_group_id]
-            );
+    async pt2_addGroupIfNotExists(pt2: EntityManager, mapping_pt2: PortalTest2, group: Group) {
+        if (`${group.id}` in mapping_pt2.groups) {
+            await this._updateGroup(pt2, group, mapping_pt2.groups[`${group.id}`]);
+        } else {
+            mapping_pt2.groups[`${group.id}`] = (await this._addGroup(pt2, group)).insertId;
         }
     }
 
-    async pt2_syncGroupStudents(pt2: EntityManager, mapping_pt2: PortalTest2, students: any[]) {
-        const pt2_userIds = [-1];
+    async pt2_syncGroupStudents(pt2: EntityManager, mapped_group_id: number, students: any[]) {
+        const pt2_userIds = [];
         for (const student of students) {
             // skip if email is invalid
             if (!validate(student.email)) {
-                student.__result = 'email is invalid';
+                student.results = 'email address is invalid!';
                 continue;
             }
 
             // insert or get user id for pt2
             const pt2_user = await this._getUser(pt2, student.email);
-            const pt2_userId = pt2_user
-                ? pt2_user.UserID
-                : (await pt2.query(
-                    'INSERT INTO ent_user (Login, Name, Pass, IsGroup, Sync, EMail, Organization, City, Country, How, IsInstructor) ' +
-                    'VALUES (?, ?, MD5(?), 0, 1, ?, ?, ?, ?, "", 0)',
-                    [student.email, student.fullname, student.password, student.email, '', '', '']
-                )).insertId;
+            const pt2_userId = pt2_user?.UserID || (await this._pt2_addStudents(pt2, student)).insertId;
             pt2_userIds.push(pt2_userId);
 
             // ensure password is updated
-            await pt2.query('UPDATE ent_user SET Pass = MD5(?) WHERE UserID = ?', [student.password, pt2_userId]);
+            if (!student.keep_password)
+                await pt2.query(
+                    'UPDATE ent_user SET Pass = MD5(?) WHERE UserID = ?',
+                    [student.password, pt2_userId]
+                );
 
+            // insert student into group if not already there
             if (!pt2_user) pt2.query(
                 'INSERT INTO rel_user_user (ParentUserID, ChildUserID) VALUES (?, ?)',
-                [mapping_pt2.mapped_group_id, pt2_userId]
+                [mapped_group_id, pt2_userId]
             );
+
+            student.results = pt2_user ? 'student added!' : 'new student added!';
         }
 
-        // delete students not in the csv file from pt2 and um2
+        if (pt2_userIds.length < 1)
+            pt2_userIds.push(-1); // ensure NOT IN clause works
+
+        // delete students not in the csv file from pt2
         await pt2.query(
             'DELETE FROM rel_user_user WHERE ParentUserID = ? AND ChildUserID NOT IN (?)',
-            [mapping_pt2.mapped_group_id, pt2_userIds]
+            [mapped_group_id, pt2_userIds]
         );
     }
 
-    async um2_addGroupIfNotExists(um2: EntityManager, mapping_um2: UserModeling2, name: any) {
-        if (!mapping_um2.mapped_group_id) {
-            mapping_um2.mapped_group_id = (
-                await this._addGroup(um2, mapping_um2.mapped_group_mnemonic, name)
-            ).insertId;
+    private async _pt2_addStudents(pt2: EntityManager, student: any) {
+        return await pt2.query(
+            'INSERT INTO ent_user (Login, Name, Pass, IsGroup, Sync, EMail, Organization, City, Country, How, IsInstructor) ' +
+            'VALUES (?, ?, MD5(?), 0, 1, ?, ?, ?, ?, "", 0)',
+            [student.email, student.fullname, student.password, student.email, '', '', '']
+        );
+    }
+
+    async um2_addGroupIfNotExists(um2: EntityManager, mapping_um2: UserModeling2, group: Group) {
+        if (`${group.id}` in mapping_um2.groups) {
+            await this._updateGroup(um2, group, mapping_um2.groups[`${group.id}`]);
+        } else {
+            mapping_um2.groups[`${group.id}`] = (await this._addGroup(um2, group)).insertId;
         }
     }
 
-    async um2_syncGroupApps(um2: EntityManager, mapping_um2: UserModeling2, resources: any) {
+    async um2_syncGroupApps(um2: EntityManager, mapped_group_id: number, resources: any) {
         // delete all apps for the group
         await um2.query(
             'DELETE FROM rel_app_user WHERE UserID = ?;',
-            [mapping_um2.mapped_group_id]
+            [mapped_group_id]
         );
 
         // find all unique provider ids
@@ -271,55 +287,67 @@ export class MasteryGridService {
         providerIds.add('this-is-just-a-fake-provider-id-for-unknown-app');
 
         // insert all apps for the group
-        let unknownAdded = false;
+        const appIds = new Set<string>();
         for (const providerId of providerIds) {
-            const appId = providerId in PROVIDER_TO_APPID
-                ? PROVIDER_TO_APPID[providerId]
-                : 1;
-
-            if (appId == 1)
-                if (unknownAdded) continue;
-                else unknownAdded = true;
+            const appId = PROVIDER_TO_APPID[providerId] || 1;
+            if (appId in appIds)
+                continue;
 
             await um2.query(
                 'INSERT INTO rel_app_user (UserID, AppID) VALUES (?, ?)',
-                [mapping_um2.mapped_group_id, appId]
+                [mapped_group_id, appId]
             );
+
+            appIds.add(appId);
         }
     }
 
-    async um2_syncGroupStudents(um2: EntityManager, mapping_um2: UserModeling2, students: any[]) {
-        const um2_userIds = [-1];
+    async um2_syncGroupStudents(um2: EntityManager, mapped_group_id: number, students: any[]) {
+        const um2_userIds = [];
         for (const student of students) {
             // skip if email is invalid
-            if (!student.email || !validate(student.email)) {
-                student.__result = 'email is invalid';
+            if (!validate(student.email)) {
+                student.results = 'email address is invalid!';
                 continue;
             }
 
             // insert or get user id for um2
             const um2_user = await this._getUser(um2, student.email);
-            const um2_userId = um2_user
-                ? um2_user.UserID
-                : (await um2.query(
-                    'INSERT INTO ent_user (Login, Name, Pass, IsGroup, Sync, EMail, Organization, City, Country, How) ' +
-                    'VALUES (?, ?, MD5(?), 0, 1, ?, ?, ?, ?, "")',
-                    [student.email, student.fullname, student.password, student.email, '', '', '']
-                )).insertId;
+            const um2_userId = um2_user?.UserID || (await this._um2_addStudents(um2, student)).insertId;
             um2_userIds.push(um2_userId);
 
             // ensure password is updated
-            await um2.query('UPDATE ent_user SET Pass = MD5(?) WHERE UserID = ?', [student.password, um2_userId]);
+            if (!student.keep_password)
+                await um2.query(
+                    'UPDATE ent_user SET Pass = MD5(?) WHERE UserID = ?',
+                    [student.password, um2_userId]
+                );
 
+            // insert student into group if not already there
             if (!um2_user) um2.query(
                 'INSERT INTO rel_user_user (GroupID, UserID) VALUES (?, ?)',
-                [mapping_um2.mapped_group_id, um2_userId]
+                [mapped_group_id, um2_userId]
             );
+
+            student.results = um2_user ? 'student added!' : 'new student added!';
         }
 
+
+        if (um2_userIds.length < 1)
+            um2_userIds.push(-1); // ensure NOT IN clause works
+
+        // delete students not in the csv file from um2
         await um2.query(
             'DELETE FROM rel_user_user WHERE GroupID = ? AND UserID NOT IN (?)',
-            [mapping_um2.mapped_group_id, um2_userIds]
+            [mapped_group_id, um2_userIds]
+        );
+    }
+
+    private async _um2_addStudents(um2: EntityManager, student: any) {
+        return await um2.query(
+            'INSERT INTO ent_user (Login, Name, Pass, IsGroup, Sync, EMail, Organization, City, Country, How) ' +
+            'VALUES (?, ?, MD5(?), 0, 1, ?, ?, ?, ?, "")',
+            [student.email, student.fullname, student.password, student.email, '', '', '']
         );
     }
 
@@ -328,11 +356,18 @@ export class MasteryGridService {
         return result.length ? result[0] : null;
     }
 
-    private async _addGroup(db: EntityManager, mnemonic: string, name: string) {
+    private async _addGroup(db: EntityManager, group: Group) {
         return await db.query(
             'INSERT INTO ent_user (Login, Name, Pass, IsGroup, Sync, EMail, Organization, City, Country, How) ' +
             'VALUES (?, ?, "", 1, 1, "", "", "", "", "")',
-            [mnemonic, name]
+            [group.mnemonic, group.name]
+        );
+    }
+
+    private async _updateGroup(db: EntityManager, group: Group, mapped_group_id: number) {
+        return await db.query(
+            'UPDATE ent_user SET Login = ?, Name = ? WHERE UserID = ?',
+            [group.mnemonic, group.name, mapped_group_id]
         );
     }
 
@@ -418,29 +453,29 @@ export class MasteryGridService {
 }
 
 const PROVIDER_TO_APPID = {
-    animatedexamples: 35,
-    codecheck: 56,
-    codelab: 52,
-    codeocean: 54,
-    codeworkout: 49,
-    ctat: 50,
-    dbqa: 53,
-    educvideos: 40,
-    mchq: 42,
-    parsons: 48,
-    pcex: 46,
-    pcex_ch: 47,
-    pcrs: 44,
-    quizjet: 25,
-    quizpack: 2,
-    quizpet: 41,
-    readingmirror: 55,
-    salt: 37,
-    sqlknot: 23,
-    sqltutor: 19,
-    webex: 3,
-    video: 1,
-    pcex_activities: 1,
+    'animatedexamples': 35,
+    'codecheck': 56,
+    'codelab': 52,
+    'codeocean': 54,
+    'codeworkout': 49,
+    'ctat': 50,
+    'dbqa': 53,
+    'educvideos': 40,
+    'mchq': 42,
+    'parsons': 48,
+    'pcex': 46,
+    'pcex_ch': 47,
+    'pcrs': 44,
+    'quizjet': 25,
+    'quizpack': 2,
+    'quizpet': 41,
+    'readingmirror': 55,
+    'salt': 37,
+    'sqlknot': 23,
+    'sqltutor': 19,
+    'webex': 3,
+    'video': 1,
+    'pcex_activities': 1,
 };
 
 export interface User {
@@ -451,7 +486,6 @@ export interface User {
 export interface Aggregate {
     last_synced: Date;
     mapped_course_id: number;
-    mapped_group_mnemonic: string;
     units: {
         [unit_id: string]: {
             mapped_unit_id: number,
@@ -466,15 +500,40 @@ export interface Aggregate {
             provider_ids: string[]
         }
     };
+    groups: {
+        [id: number]: string; // mnemonic
+    };
 }
 
 export interface PortalTest2 {
     mapped_teacher_id: number;
-    mapped_group_id: number;
-    mapped_group_mnemonic: string;
+    groups: {
+        [id: number]: number; // mapped_group_id
+    };
 }
 
 export interface UserModeling2 {
-    mapped_group_id: number;
-    mapped_group_mnemonic: string;
+    groups: {
+        [id: number]: number; // mapped_group_id
+    };
+}
+
+// export interface MappedGroup {
+//     mapped_group_id?: number;
+//     mapped_group_mnemonic?: string;
+// }
+
+export interface Group {
+    id: number;
+    mnemonic: string;
+    name: string;
+    students: any[];
+}
+
+export interface Linkings {
+    aggregate: Aggregate;
+    portal_test2: PortalTest2;
+    user_modeling2: UserModeling2;
+    ptum2_passwords: { [group_id: number]: { [student_id: string]: string } };
+    last_synced: Date;
 }

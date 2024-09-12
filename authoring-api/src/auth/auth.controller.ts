@@ -41,7 +41,6 @@ export class AuthController {
     const isLoggedIn = req.user;
     if (isLoggedIn) {
       const user = await this.users.findUser(req.user.email);
-      console.log(user.password, current_password, await compare(current_password, user.password));
       if (user && await compare(current_password, user.password))
         await this.users.updatePassword({ email: user.email, password: new_password });
       else throw new HttpException({ message: 'Current password did not match.' }, 422);

@@ -242,7 +242,6 @@ export class CourseComponent implements OnInit {
         this.courses.syncToMasteryGrid(this.course.id).subscribe({
           next: (response: any) => {
             if (response.students) {
-              // save students.csv to file
               const a = document.createElement('a');
               const blob = new Blob([response.students], { type: 'text/csv' });
               a.href = window.URL.createObjectURL(blob);
@@ -276,14 +275,22 @@ export class CourseComponent implements OnInit {
     window.open(`http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=ADL&sid=TEST&cid=${this.course.linkings.course_id}`, '_blank');
   }
 
-  loadCSV($event: any) {
+  loadCSV($event: any, group: any) {
     const file = $event.target.files[0];
     const reader = new FileReader();
-    reader.onload = () => this.course.students = reader.result as string;
+    reader.onload = () => group.students = reader.result as string;
     reader.onerror = (error) => this.messages.add({
       severity: 'error', summary: 'Error Loading File!',
       detail: 'An error occurred while loading the file. Please try again.',
     });
     reader.readAsText(file);
+  }
+
+  downloadCSV(group: any) {
+    const a = document.createElement('a');
+    const blob = new Blob([group.students], { type: 'text/csv' });
+    a.href = window.URL.createObjectURL(blob);
+    a.download = `${this.course.code}_${this.course.name}_${this.course.term}_${this.course.year}_${group.mnemonic}_${group.name}_students.csv`;
+    a.click();
   }
 }

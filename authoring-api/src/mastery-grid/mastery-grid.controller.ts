@@ -1,5 +1,5 @@
 import { Controller, Param, Put, Request, UseGuards } from '@nestjs/common';
-import { Aggregate, MasteryGridService, PortalTest2, UserModeling2 } from './mastery-grid.service';
+import { Aggregate, Group, Linkings, MasteryGridService } from './mastery-grid.service';
 import { DataSource } from 'typeorm';
 import { toObject, useId } from 'src/utils';
 import { InjectDataSource } from '@nestjs/typeorm';
@@ -27,12 +27,15 @@ export class MasteryGridController {
 
         if (!course.linkings)
             course.linkings = {};
-        const linkings = course.linkings;
+        const linkings: Linkings = course.linkings;
 
-        if (!linkings.aggregate) linkings.aggregate = {};
-        if (!linkings.portal_test2) linkings.portal_test2 = {};
-        if (!linkings.user_modeling2) linkings.user_modeling2 = {};
-        if (!linkings.ptum2_passwords) linkings.ptum2_passwords = {};
+        linkings.aggregate = linkings.aggregate || {} as any;
+        linkings.aggregate.groups = linkings.aggregate.groups || {};
+        linkings.portal_test2 = linkings.portal_test2 || {} as any;
+        linkings.portal_test2.groups = linkings.portal_test2.groups || {};
+        linkings.user_modeling2 = linkings.user_modeling2 || {} as any;
+        linkings.user_modeling2.groups = linkings.user_modeling2.groups || {};
+        linkings.ptum2_passwords = linkings.ptum2_passwords || {} as any;
 
         try {
             const checkpoint = async () => {
@@ -54,41 +57,57 @@ export class MasteryGridController {
                 await this.service.agg_addCourse(agg, mapping, course);
                 await this.service.agg_addCourseResources(agg, mapping, course);
                 await this.service.agg_addCourseUnits(agg, mapping, course);
-
-                await this.service.agg_addGroupIfNotExists(agg, mapping, course);
             });
-
-            await checkpoint();
-
-            const students = course.students
-                ? await parse(course.students, {
-                    bom: true, columns: true, trim: true, skip_empty_lines: true
-                }).toArray()
-                : [];
-
-            await this.service.setStudentPasswords(students, linkings.ptum2_passwords);
 
             await checkpoint();
 
             await this.portal_test2.transaction(async pt2 => {
-                const mapping: PortalTest2 = linkings.portal_test2;
-                mapping.mapped_group_mnemonic = linkings.aggregate.mapped_group_mnemonic;
-                await this.service.pt2_addTeacherIfNotExists(pt2, req.user, mapping);
-                await this.service.pt2_addGroupIfNotExists(pt2, mapping, course.name);
-                await this.service.pt2_syncGroupStudents(pt2, mapping, students);
+                await this.service.pt2_addTeacherIfNotExists(pt2, req.user, linkings.portal_test2);
             });
 
             await checkpoint();
 
-            await this.user_modeling2.transaction(async um2 => {
-                const mapping: UserModeling2 = linkings.user_modeling2;
-                mapping.mapped_group_mnemonic = linkings.aggregate.mapped_group_mnemonic;
-                await this.service.um2_addGroupIfNotExists(um2, mapping, course.name);
-                await this.service.um2_syncGroupApps(um2, mapping, course.resources);
-                await this.service.um2_syncGroupStudents(um2, mapping, students);
-            });
+            const students = [];
+            for (let i = 0; i < course.groups.length; i++) {
+                const group: Group = course.groups[i];
 
-            await checkpoint();
+                group.students = course.groups[i].students
+                    ? await parse(course.groups[i].students, {
+                        bom: true, columns: true, trim: true, skip_empty_lines: true
+                    }).toArray()
+                    : [];
+
+                const grp_passwords = linkings.ptum2_passwords[`${group.id}`] || {};
+                linkings.ptum2_passwords[`${group.id}`] = grp_passwords;
+                await this.service.setStudentPasswords(group.students, grp_passwords);
+
+                await this.aggregate.transaction(async agg => {
+                    await this.service.agg_addGroupIfNotExists(agg, linkings.aggregate, group, course);
+                });
+
+                await checkpoint();
+
+                await this.portal_test2.transaction(async pt2 => {
+                    await this.service.pt2_addGroupIfNotExists(pt2, linkings.portal_test2, group);
+                    await this.service.pt2_syncGroupStudents(pt2, linkings.portal_test2.groups[`${group.id}`], group.students);
+                });
+
+                await checkpoint();
+
+                await this.user_modeling2.transaction(async um2 => {
+                    await this.service.um2_addGroupIfNotExists(um2, linkings.user_modeling2, group);
+                    await this.service.um2_syncGroupApps(um2, linkings.user_modeling2.groups[`${group.id}`], course.resources);
+                    await this.service.um2_syncGroupStudents(um2, linkings.user_modeling2.groups[`${group.id}`], group.students);
+                });
+
+                await checkpoint();
+
+                for (const student of group.students) {
+                    const { fullname, email, results, keep_password } = student;
+                    const password = keep_password ? '[password was not changed]' : student.password;
+                    students.push({ group: `${group.mnemonic} - ${group.name}`, fullname, email, password, results });
+                }
+            }
 
             return { students: stringify(students, { header: true }) };
         } catch (error) {
