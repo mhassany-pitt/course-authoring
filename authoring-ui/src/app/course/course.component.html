@@ -59,26 +59,8 @@
                 <input type="text" pInputText name="institution" [(ngModel)]="course.institution"
                   placeholder="University of ..." />
               </div>
-              <div class="flex flex-col gap-1">
-                <span class="flex items-center gap-1 text-sm">
-                  <span class="text-gray-600">Year:</span>
-                  <span class="text-red-600 align-super">*</span>
-                </span>
-                <p-dropdown #yearEl [options]="years" name="year" [(ngModel)]="course.year" optionValue="id"
-                  optionLabel="name" placeholder="Select" required="true" styleClass="w-32"
-                  [ngClass]="{'ng-invalid ng-dirty': any(yearEl).errors?.['required']}" />
-              </div>
-              <div class="flex flex-col gap-1">
-                <span class="flex items-center gap-1 text-sm">
-                  <span class="text-gray-600">Term</span>
-                  <span class="text-red-600 align-super">*</span>
-                </span>
-                <p-dropdown #termEl [options]="terms" name="term" [(ngModel)]="course.term" optionValue="id"
-                  optionLabel="name" placeholder="Select" required="true" styleClass="w-32"
-                  [ngClass]="{'ng-invalid ng-dirty': any(termEl).errors?.['required']}" />
-              </div>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="flex flex-wrap lg:flex-nowrap items-center gap-2">
               <div class="flex flex-col gap-1">
                 <span class="flex items-center gap-1 text-sm">
                   <span class="text-gray-600">Code:</span>
@@ -302,18 +284,43 @@
             <span class="text-sm text-red-600">Note that groups can't be removed after you save the changes!</span>
           </div>
           <div class="flex flex-col gap-2">
-            <span class="text-sm text-gray-400">Group mnemonics <span class="font-bold">MUST be globally unique</span>.</span>
+            <span class="text-sm text-gray-400">Group mnemonics <span class="font-bold">MUST be globally
+                unique</span>.</span>
             <ng-container *ngFor="let group of course.groups; let i = index;">
-              <div class="flex items-center gap-2 p-2 bg-gray-100 rounded-md">
-                <input type="text" pInputText [name]="'group_mnemonic'+i" [(ngModel)]="group.mnemonic"
-                  placeholder="group mnemonic" size="small" [required]="true" [size]="28" />
-                <input type="text" pInputText [name]="'group_name'+i" [(ngModel)]="group.name" placeholder="group name"
-                  class="flex-grow" [required]="true" />
+              <div class="flex flex-wrap lg:flex-nowrap items-end gap-2 p-2 bg-gray-100 rounded-md">
+                <div class="flex flex-col">
+                  <span class="text-xs text-gray-400 ml-1">Mnemonic:</span>
+                  <input type="text" pInputText [name]="'group_mnemonic'+i" [(ngModel)]="group.mnemonic"
+                    placeholder="Group Mnemonic" size="small" [required]="true" [size]="20" />
+                </div>
+
+                <div class="flex flex-col flex-grow">
+                  <span class="text-xs text-gray-400 ml-1">Name:</span>
+                  <input type="text" pInputText [name]="'group_name'+i" [(ngModel)]="group.name"
+                    placeholder="Group Name" [required]="true" />
+                </div>
+
+                <div class="flex flex-col">
+                  <span class="text-xs text-gray-400 ml-1">Year:</span>
+                  <p-dropdown #yearEl [options]="years" [name]="'group_year'+i" [(ngModel)]="group.year"
+                    optionValue="id" optionLabel="name" placeholder="Year" required="true"
+                    [ngClass]="{'ng-invalid ng-dirty': any(yearEl).errors?.['required']}" />
+                </div>
+
+                <div class="flex flex-col">
+                  <span class="text-xs text-gray-400 ml-1">Term:</span>
+                  <p-dropdown #termEl [options]="terms" [name]="'group_term'+i" [(ngModel)]="group.term"
+                    optionValue="id" optionLabel="name" placeholder="Term" required="true"
+                    [ngClass]="{'ng-invalid ng-dirty': any(termEl).errors?.['required']}" />
+                </div>
+
                 <p-button type="button" label="upload" icon="fa fa-file-text" severity="secondary"
                   (click)="csvFileInputEl.click()" />
+
                 <input #csvFileInputEl type="file" accept=".csv" class="hidden" (change)="loadCSV($event, group)" />
                 <p-button type="button" label="download" icon="fa fa-download" severity="secondary" [outlined]="true"
                   (click)="downloadCSV(group)" [disabled]="!group.students"></p-button>
+
                 <p-button type="button" [icon]="'fa ' + (tt['group_students'+i] ? 'fa-chevron-up' : 'fa-chevron-down')"
                   severity="secondary" [text]="true" (click)="tt['group_students'+i] = !tt['group_students'+i]"
                   [disabled]="!group.students"></p-button>
@@ -323,8 +330,10 @@
                 [placeholder]="'fullname,email\nstudent1,student1@university.edu\nstudent2,student2@university.edu\n...'">
               </textarea>
             </ng-container>
-            <p-button type="button" label="add group" icon="fa fa-plus" size="small" severity="secondary"
-              (click)="course.groups.push({ id: nextResourceId() })"></p-button>
+            <div class="flex items-center gap-2">
+              <p-button type="button" label="add group" icon="fa fa-plus" size="small" severity="secondary"
+                (click)="course.groups.push({ id: nextResourceId() })"></p-button>
+            </div>
           </div>
         </p-tabPanel>
       </p-tabView>

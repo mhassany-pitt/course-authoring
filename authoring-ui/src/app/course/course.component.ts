@@ -245,7 +245,7 @@ export class CourseComponent implements OnInit {
               const a = document.createElement('a');
               const blob = new Blob([response.students], { type: 'text/csv' });
               a.href = window.URL.createObjectURL(blob);
-              a.download = `${this.course.code}_${this.course.name}_${this.course.term}_${this.course.year}_students.csv`;
+              a.download = `${this.course.code}_${this.course.name}_students.csv`;
               a.click();
             }
 
@@ -290,7 +290,7 @@ export class CourseComponent implements OnInit {
     const a = document.createElement('a');
     const blob = new Blob([group.students], { type: 'text/csv' });
     a.href = window.URL.createObjectURL(blob);
-    a.download = `${this.course.code}_${this.course.name}_${this.course.term}_${this.course.year}_${group.mnemonic}_${group.name}_students.csv`;
+    a.download = `${this.course.code}_${this.course.name}_${group.term}_${group.year}_${group.mnemonic}_${group.name}_students.csv`;
     a.click();
   }
 }

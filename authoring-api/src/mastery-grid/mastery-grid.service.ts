@@ -178,7 +178,7 @@ export class MasteryGridService {
             await agg.query(
                 'INSERT INTO ent_group (group_id, group_name, course_id, creation_date, term, year) ' +
                 'VALUES (?, ?, ?, NOW(), ?, ?)',
-                [group.mnemonic, group.name, mapping_agg.mapped_course_id, course.term, course.year]
+                [group.mnemonic, group.name, mapping_agg.mapped_course_id, group.term, group.year]
             );
             mapping_agg.groups[`${group.id}`] = group.mnemonic;
         }
@@ -527,6 +527,8 @@ export interface Group {
     id: number;
     mnemonic: string;
     name: string;
+    term: string;
+    year: number;
     students: any[];
 }
 
