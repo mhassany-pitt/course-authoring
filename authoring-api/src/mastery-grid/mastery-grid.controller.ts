@@ -33,8 +33,11 @@ export class MasteryGridController {
         linkings.aggregate.groups = linkings.aggregate.groups || {};
         linkings.portal_test2 = linkings.portal_test2 || {} as any;
         linkings.portal_test2.groups = linkings.portal_test2.groups || {};
+        linkings.portal_test2.student_ids = linkings.portal_test2.student_ids || {};
         linkings.user_modeling2 = linkings.user_modeling2 || {} as any;
         linkings.user_modeling2.groups = linkings.user_modeling2.groups || {};
+        linkings.user_modeling2.student_ids = linkings.user_modeling2.student_ids || {};
+        linkings.user_modeling2.app_ids = linkings.user_modeling2.app_ids || {};
         linkings.ptum2_passwords = linkings.ptum2_passwords || {} as any;
 
         try {
@@ -89,15 +92,15 @@ export class MasteryGridController {
 
                 await this.portal_test2.transaction(async pt2 => {
                     await this.service.pt2_addGroupIfNotExists(pt2, linkings.portal_test2, group);
-                    await this.service.pt2_syncGroupStudents(pt2, linkings.portal_test2.groups[`${group.id}`], group.students);
+                    await this.service.pt2_syncGroupStudents(pt2, linkings.portal_test2.groups[`${group.id}`], linkings.portal_test2.student_ids[`${group.id}`], group.students);
                 });
 
                 await checkpoint();
 
                 await this.user_modeling2.transaction(async um2 => {
                     await this.service.um2_addGroupIfNotExists(um2, linkings.user_modeling2, group);
-                    await this.service.um2_syncGroupApps(um2, linkings.user_modeling2.groups[`${group.id}`], course.resources);
-                    await this.service.um2_syncGroupStudents(um2, linkings.user_modeling2.groups[`${group.id}`], group.students);
+                    await this.service.um2_syncGroupApps(um2, linkings.user_modeling2.groups[`${group.id}`], linkings.user_modeling2.app_ids[`${group.id}`], course.resources);
+                    await this.service.um2_syncGroupStudents(um2, linkings.user_modeling2.groups[`${group.id}`], linkings.user_modeling2.student_ids[`${group.id}`], group.students);
                 });
 
                 await checkpoint();

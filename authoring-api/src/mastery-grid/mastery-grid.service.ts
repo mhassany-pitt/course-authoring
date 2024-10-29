@@ -17,9 +17,7 @@ export class MasteryGridService {
 
     async agg_deleteCourse(agg: EntityManager, mapping_agg: Aggregate) {
         if (mapping_agg.mapped_course_id)
-            await this._deleteCourse(agg, {
-                id: mapping_agg.mapped_course_id
-            });
+            await this._deleteCourse(agg, { id: mapping_agg.mapped_course_id });
     }
 
     async agg_deleteCourseResources(agg: EntityManager, mapping_agg: Aggregate) {
@@ -211,10 +209,11 @@ export class MasteryGridService {
             await this._updateGroup(pt2, group, mapping_pt2.groups[`${group.id}`]);
         } else {
             mapping_pt2.groups[`${group.id}`] = (await this._addGroup(pt2, group)).insertId;
+            mapping_pt2.student_ids[`${group.id}`] = [];
         }
     }
 
-    async pt2_syncGroupStudents(pt2: EntityManager, mapped_group_id: number, students: any[]) {
+    async pt2_syncGroupStudents(pt2: EntityManager, mapped_group_id: number, mapped_std_ids: number[], students: any[]) {
         const pt2_userIds = [];
         for (const student of students) {
             // skip if email is invalid
@@ -227,6 +226,10 @@ export class MasteryGridService {
             const pt2_user = await this._getUser(pt2, student.email);
             const pt2_userId = pt2_user?.UserID || (await this._pt2_addStudents(pt2, student)).insertId;
             pt2_userIds.push(pt2_userId);
+
+            // filter out current student from mapped_std_ids
+            const pt2_mapped_stdIdx = mapped_std_ids.indexOf(pt2_userId);
+            if (pt2_mapped_stdIdx > -1) mapped_std_ids.splice(pt2_mapped_stdIdx, 1);
 
             // ensure password is updated
             if (!student.keep_password)
@@ -244,14 +247,13 @@ export class MasteryGridService {
             student.results = pt2_user ? 'student added!' : 'new student added!';
         }
 
-        if (pt2_userIds.length < 1)
-            pt2_userIds.push(-1); // ensure NOT IN clause works
-
         // delete students not in the csv file from pt2
-        await pt2.query(
-            'DELETE FROM rel_user_user WHERE ParentUserID = ? AND ChildUserID NOT IN (?)',
-            [mapped_group_id, pt2_userIds]
+        if (mapped_std_ids.length > 0) await pt2.query(
+            'DELETE FROM rel_user_user WHERE ParentUserID = ? AND ChildUserID IN (?)',
+            [mapped_group_id, mapped_std_ids]
         );
+
+        mapped_std_ids.push(...pt2_userIds);
     }
 
     private async _pt2_addStudents(pt2: EntityManager, student: any) {
@@ -267,42 +269,38 @@ export class MasteryGridService {
             await this._updateGroup(um2, group, mapping_um2.groups[`${group.id}`]);
         } else {
             mapping_um2.groups[`${group.id}`] = (await this._addGroup(um2, group)).insertId;
+            mapping_um2.student_ids[`${group.id}`] = [];
+            mapping_um2.app_ids[`${group.id}`] = [];
         }
     }
 
-    async um2_syncGroupApps(um2: EntityManager, mapped_group_id: number, resources: any) {
-        // delete all apps for the group
-        await um2.query(
-            'DELETE FROM rel_app_user WHERE UserID = ?;',
-            [mapped_group_id]
+    async um2_syncGroupApps(um2: EntityManager, mapped_group_id: number, mapped_app_ids: any[], resources: any) {
+        // delete apps for the group
+        if (mapped_app_ids.length > 0) await um2.query(
+            'DELETE FROM rel_app_user WHERE UserID = ? AND AppID in (?)',
+            [mapped_group_id, mapped_app_ids]
         );
 
         // find all unique provider ids
-        const providerIds = new Set<string>();
+        const appIds = new Set<number>([1]);
         for (const resource of (resources || []))
-            for (const provider of (resource.providers || []))
-                providerIds.add(provider.id.trim())
+            for (const provider of (resource.providers || [])) {
+                const providerId = provider.id.trim();
+                if (providerId in PROVIDER_TO_APPID)
+                    appIds.add(PROVIDER_TO_APPID[providerId]);
+            }
 
-        // always ensure unknown-app is added
-        providerIds.add('this-is-just-a-fake-provider-id-for-unknown-app');
+        // insert apps for the group
+        for (const appId of appIds) await um2.query(
+            'INSERT INTO rel_app_user (UserID, AppID) VALUES (?, ?) ' +
+            'ON DUPLICATE KEY UPDATE AppID = ?',
+            [mapped_group_id, appId, appId]
+        );
 
-        // insert all apps for the group
-        const appIds = new Set<string>();
-        for (const providerId of providerIds) {
-            const appId = PROVIDER_TO_APPID[providerId] || 1;
-            if (appId in appIds)
-                continue;
-
-            await um2.query(
-                'INSERT INTO rel_app_user (UserID, AppID) VALUES (?, ?)',
-                [mapped_group_id, appId]
-            );
-
-            appIds.add(appId);
-        }
+        mapped_app_ids.push(...appIds);
     }
 
-    async um2_syncGroupStudents(um2: EntityManager, mapped_group_id: number, students: any[]) {
+    async um2_syncGroupStudents(um2: EntityManager, mapped_group_id: number, mapped_std_ids: number[], students: any[]) {
         const um2_userIds = [];
         for (const student of students) {
             // skip if email is invalid
@@ -315,6 +313,10 @@ export class MasteryGridService {
             const um2_user = await this._getUser(um2, student.email);
             const um2_userId = um2_user?.UserID || (await this._um2_addStudents(um2, student)).insertId;
             um2_userIds.push(um2_userId);
+
+            // filter out current student from mapped_std_ids
+            const um2_mapped_stdIdx = mapped_std_ids.indexOf(um2_userId);
+            if (um2_mapped_stdIdx > -1) mapped_std_ids.splice(um2_mapped_stdIdx, 1);
 
             // ensure password is updated
             if (!student.keep_password)
@@ -332,15 +334,13 @@ export class MasteryGridService {
             student.results = um2_user ? 'student added!' : 'new student added!';
         }
 
-
-        if (um2_userIds.length < 1)
-            um2_userIds.push(-1); // ensure NOT IN clause works
-
         // delete students not in the csv file from um2
-        await um2.query(
-            'DELETE FROM rel_user_user WHERE GroupID = ? AND UserID NOT IN (?)',
-            [mapped_group_id, um2_userIds]
+        if (mapped_std_ids.length > 0) await um2.query(
+            'DELETE FROM rel_user_user WHERE GroupID = ? AND UserID IN (?)',
+            [mapped_group_id, mapped_std_ids]
         );
+
+        mapped_std_ids.push(...um2_userIds);
     }
 
     private async _um2_addStudents(um2: EntityManager, student: any) {
@@ -412,7 +412,7 @@ export class MasteryGridService {
     }
 
     private async _deleteResourceProvider(agg: EntityManager, { resource_id, provider_id }) {
-        return agg.query('DELETE FROM rel_resource_provider WHERE resource_id = ? AND provider_id = ?;',
+        return agg.query('DELETE FROM rel_resource_provider WHERE resource_id = ? AND provider_id = ?',
             [resource_id, provider_id]
         );
     }
@@ -445,10 +445,7 @@ export class MasteryGridService {
     }
 
     private async _deleteUnitActivity(agg: EntityManager, { id }) {
-        return agg.query(
-            'DELETE FROM rel_topic_content WHERE id = ?',
-            [id]
-        );
+        return agg.query('DELETE FROM rel_topic_content WHERE id = ?', [id]);
     }
 }
 
@@ -507,21 +504,15 @@ export interface Aggregate {
 
 export interface PortalTest2 {
     mapped_teacher_id: number;
-    groups: {
-        [id: number]: number; // mapped_group_id
-    };
+    groups: { [id: number]: number }; // mapped_group_id
+    student_ids: { [id: number]: number[] };
 }
 
 export interface UserModeling2 {
-    groups: {
-        [id: number]: number; // mapped_group_id
-    };
+    groups: { [id: number]: number }; // mapped_group_id
+    student_ids: { [id: number]: number[] };
+    app_ids: { [id: number]: number[] };
 }
-
-// export interface MappedGroup {
-//     mapped_group_id?: number;
-//     mapped_group_mnemonic?: string;
-// }
 
 export interface Group {
     id: number;
