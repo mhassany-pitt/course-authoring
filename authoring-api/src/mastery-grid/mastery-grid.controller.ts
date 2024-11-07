@@ -92,8 +92,8 @@ export class MasteryGridController {
 
                 await this.portal_test2.transaction(async pt2 => {
                     await this.service.pt2_addGroupIfNotExists(pt2, linkings.portal_test2, group);
-                    if (group.id in linkings.portal_test2.student_ids === false)
-                        linkings.portal_test2.student_ids[`${group.id}`] = [];
+                    if (group.id in linkings.portal_test2.student_ids === false) // TODO: later remove this
+                        linkings.portal_test2.student_ids[`${group.id}`] = []; // TODO: later remove this
                     await this.service.pt2_syncGroupStudents(pt2, linkings.portal_test2.groups[`${group.id}`], linkings.portal_test2.student_ids[`${group.id}`], group.students);
                 });
 
@@ -101,11 +101,11 @@ export class MasteryGridController {
 
                 await this.user_modeling2.transaction(async um2 => {
                     await this.service.um2_addGroupIfNotExists(um2, linkings.user_modeling2, group);
-                    if (group.id in linkings.user_modeling2.app_ids === false)
-                        linkings.user_modeling2.app_ids[`${group.id}`] = [];
+                    if (group.id in linkings.user_modeling2.app_ids === false) // TODO: later remove this
+                        linkings.user_modeling2.app_ids[`${group.id}`] = []; // TODO: later remove this
                     await this.service.um2_syncGroupApps(um2, linkings.user_modeling2.groups[`${group.id}`], linkings.user_modeling2.app_ids[`${group.id}`], course.resources);
-                    if (group.id in linkings.user_modeling2.student_ids === false)
-                        linkings.user_modeling2.student_ids[`${group.id}`] = [];
+                    if (group.id in linkings.user_modeling2.student_ids === false) // TODO: later remove this
+                        linkings.user_modeling2.student_ids[`${group.id}`] = []; // TODO: later remove this
                     await this.service.um2_syncGroupStudents(um2, linkings.user_modeling2.groups[`${group.id}`], linkings.user_modeling2.student_ids[`${group.id}`], group.students);
                 });
 
