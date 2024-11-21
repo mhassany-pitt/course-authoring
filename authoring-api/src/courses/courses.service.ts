@@ -24,6 +24,10 @@ export class CoursesService {
     return await this.courses.findOne({ $or: [{ user_email }, { collaborator_emails: user_email }], _id: id });
   }
 
+  async findById({ id }) {
+    return await this.courses.findOne({ _id: id });
+  }
+
   async update({ user_email, id }, course: any, alsoUpdateLinkings = false) {
     const { linkings, ...rest } = course;
     const update = { ...rest, updated_at: new Date() };

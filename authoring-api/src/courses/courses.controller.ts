@@ -1,5 +1,5 @@
 import {
-  Controller, Delete, Get, Patch,
+  Controller, Delete, Get, HttpException, Param, Patch,
   Post, Query, Request, UseGuards
 } from '@nestjs/common';
 import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
@@ -46,9 +46,11 @@ export class CoursesController {
   }
 
   @Get(':id/export')
-  async export(@Request() req: any) {
-    let course: any = await this.courses.load({ id: req.params.id, user_email: req.user.email });
-    course = useId(toObject(course));
+  async export(@Param('id') id: string) {
+    const found = await this.courses.findById({ id });
+    if (!found) throw new HttpException('course not found!', 404);
+
+    const course = useId(toObject(found));
 
     course.instructor = {
       email: course.user_email,

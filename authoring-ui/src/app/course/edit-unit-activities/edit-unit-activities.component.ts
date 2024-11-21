@@ -43,7 +43,15 @@ export class EditUnitActivitiesComponent {
   ) { }
 
   get filteredActivitiesList() {
-    const $ = this.activities.map((a: any) => a.id);
-    return this.list.filter((a: any) => !this.selectedOnly || $.includes(a.id));
+    const list = [...this.list];
+    // -------------------------------------
+    // include activities that no longer exists (allow to remove them)
+    const ids = this.list.map((a: any) => a.id);
+    for (const selected of this.activities)
+      if (!ids.includes(selected.id))
+        list.push(selected);
+    // -------------------------------------
+    const selection = this.activities.map((a: any) => a.id);
+    return list.filter(a => !this.selectedOnly || selection.includes(a.id));
   }
 }
