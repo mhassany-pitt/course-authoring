@@ -231,6 +231,28 @@ export class CourseComponent implements OnInit {
     });
   }
 
+  clone() {
+    this.confirm.confirm({
+      header: "Cloning Course",
+      message: `Are you sure you want to clone the course "${this.course.name}"?`,
+      acceptButtonStyleClass: 'p-button-outlined',
+      rejectButtonStyleClass: 'p-button-secondary',
+      accept: () => this.courses.clone(this.course.id).subscribe({
+        next: (course: any) => {
+          this.router.navigate(['/courses', course.id]).then(() => location.reload());
+        },
+        error: (error: any) => {
+          this.messages.add({
+            severity: 'error',
+            summary: 'Error Cloning Course!',
+            detail: 'An error occurred while cloning the course. Please try again.',
+          });
+          console.error('error cloning course', this.course.id, error);
+        }
+      })
+    });
+  }
+
   syncToMasteryGrid() {
     this.confirm.confirm({
       header: 'Sync to Mastery Grid',

@@ -12,6 +12,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { MasteryGridModule } from './mastery-grid/mastery-grid.module';
 import { AggregateModule } from './aggregate/aggregate.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { HubModule } from './hub/hub.module';
 
 @Module({
   imports: [
@@ -47,6 +48,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     AuthModule,
     UserAdminModule,
     CoursesModule,
+    HubModule,
     MasteryGridModule,
     AggregateModule,
   ],

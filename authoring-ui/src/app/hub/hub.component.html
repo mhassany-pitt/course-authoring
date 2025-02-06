@@ -1,6 +1,6 @@
 <div class="flex flex-col">
   <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
-    <div class="container mx-auto flex items-center gap-2 px-2 md:px-0">
+    <div class="container mx-auto flex items-center gap-2 px-2 md:px-0 max-w-4xl">
       <img src="assets/logo.png" class="h-8 w-8" />
       <span class="text-xl font-bold hidden md:inline-block text-nowrap">Course Authoring</span>
       <span class="hidden md:inline-block"><i class="pi pi-chevron-right"></i></span>
@@ -22,10 +22,59 @@
 
     <div class="border shadow-md">
       <p-table #table [value]="courses">
-        <ng-template pTemplate="body" let-activity let-rowIndex="rowIndex">
+        <ng-template pTemplate="body" let-course let-rowIndex="rowIndex">
           <tr>
-            <td>
-              ...
+            <td class="relative">
+              <div *ngIf="app.user" class="flex items-center justify-center gap-1 absolute top-3 right-3">
+                <button pButton type="button" icon="pi pi-clone" title="Clone the course"
+                  class="p-button-text p-button-sm p-button-plain action-btn" (click)="clone(course)">
+                </button>
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <div class="text-xs text-gray-400">
+                  <span class="uppercase">{{ course.institution }}</span>
+                  <span> | </span>
+                  <span>{{ course.author.fullname }}</span>
+                </div>
+                <span class="text-xs text-gray-400">
+                  {{ course.created_at | date:"medium" }}
+                </span>
+                <span class="text-blue-600 cursor-pointer flex gap-1" (click)="toggleLoad(course)">
+                  <span class="capitalize font-bold">{{ course.name }}</span>
+                  <span class="uppercase">"{{ course.code }}"</span>
+                  <i class="pi pi-chevron-down text-gray-400"
+                    [ngClass]="{ 'pi-chevron-up': selected && selected.id == course.id }"></i>
+                </span>
+                <div class="text-xs">
+                  <span class="uppercase">{{ course.domain }}</span>
+                  <span>, </span>
+                  <span>{{ course.units_ct }} units</span>
+                </div>
+                <span *ngIf="course.description" class="text-xs text-gray-400">
+                  {{ course.description }}
+                </span>
+
+                <ng-container *ngIf="selected && selected.id == course.id">
+                  <span class="pl-2 text-sm font-bold">Units:</span>
+                  <div class="max-h-64 overflow-y-auto pl-2">
+                    <div *ngFor="let unit of selected.units" class="pl-2">
+                      <span class="text-sm font-bold capitalize">{{ unit.name }}</span>
+                      <div *ngFor="let r of keys(unit.activities)" class="flex gap-2">
+                        <span class="text-xs w-48 pl-4 capitalize">{{ selected.resources[r].name }} →</span>
+                        <ul class="m-0">
+                          <li *ngFor="let a of unit.activities[r]">
+                            <a href="{{ a.url }}" class="text-xs" target="_blank">{{ a.name }}</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div *ngIf="keys(unit.activities).length < 1">
+                        <span class="text-xs text-gray-400">no activities!</span>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
             </td>
           </tr>
         </ng-template>
@@ -42,3 +91,5 @@
     </div>
   </div>
 </div>
+
+<p-confirmDialog />

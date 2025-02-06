@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class UserAuthCtrlComponent {
 
   @Input() loginRedirect = '/courses';
-  @Input() logoutRedirect = '/login';
+  @Input() logoutRedirect = '/hub';
 
   constructor(
     public app: AppService,

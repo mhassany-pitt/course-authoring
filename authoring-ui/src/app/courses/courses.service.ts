@@ -54,4 +54,8 @@ export class CoursesService {
   syncToMasteryGrid(id: string) {
     return this.http.put(`${environment.apiUrl}/mastery-grid/${id}/sync`, {}, { withCredentials: true });
   }
+
+  clone(id: string) {
+    return this.http.post(`${environment.apiUrl}/courses/${id}/clone`, {}, { withCredentials: true });
+  }
 }

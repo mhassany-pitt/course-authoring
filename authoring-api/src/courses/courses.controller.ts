@@ -98,4 +98,15 @@ export class CoursesController {
     const course = await this.courses.delete({ id: req.params.id, user_email: req.user.email }, undo);
     return useId(toObject(course));
   }
+
+  @Post(':id/clone')
+  @UseGuards(AuthenticatedGuard)
+  async clone(@Request() req: any) {
+    const source = await this.courses.findById({ id: req.params.id });
+    if (!source || (source.user_email != req.user.email && !source.published))
+      throw new HttpException('course not found!', 404);
+
+    const course = await this.courses.clone({ id: req.params.id, user_email: req.user.email });
+    return useId(toObject(course));
+  }
 }

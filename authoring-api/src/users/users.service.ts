@@ -4,6 +4,7 @@ import { Model } from 'mongoose';
 import { User } from './user.schema';
 import { toObject } from 'src/utils';
 import { hash } from 'bcryptjs';
+import { exists, readJson, writeFile } from 'fs-extra';
 
 @Injectable()
 export class UsersService {
@@ -12,6 +13,7 @@ export class UsersService {
     @InjectModel('users') private users: Model<User>
   ) {
     this.addInitialUsers();
+    // setTimeout(() => this.migrate(), 3000);
   }
 
   private async addInitialUsers() {
@@ -68,5 +70,26 @@ export class UsersService {
 
   async updatePassword({ email, password }) {
     return await this.users.updateOne({ email }, { password: await hash(password, 10), reset_pass_token: null });
+  }
+
+  private async migrate() {
+    // if (await exists('./authors-to-migrate.done')) {
+    //   console.log('users already migrated!');
+    //   return;
+    // }
+    // const users = await readJson('./authors-to-migrate.json');
+    // for (const email of Object.keys(users)) {
+    //   if (await this.users.findOne({ email })) {
+    //     console.log('skipped user:', email);
+    //     continue;
+    //   }
+    //   await this.users.create({
+    //     fullname: users[email].name,
+    //     email, password: Math.random().toString(36).substring(2),
+    //     roles: ["author"],
+    //   });
+    //   console.log('migrated user:', email);
+    // }
+    // await writeFile('./authors-to-migrate.done', '');
   }
 }

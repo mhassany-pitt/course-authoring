@@ -11,6 +11,8 @@ import { TableModule } from 'primeng/table';
 import { DropdownModule } from 'primeng/dropdown';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { UserAuthCtrlModule } from '../user-auth-ctrl/user-auth-ctrl.module';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ConfirmationService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import { UserAuthCtrlModule } from '../user-auth-ctrl/user-auth-ctrl.module';
     DialogModule, ButtonModule,
     InputTextModule, TableModule,
     DropdownModule, SelectButtonModule,
-    UserAuthCtrlModule,
-  ]
+    UserAuthCtrlModule, ConfirmDialogModule,
+  ],
+  providers: [
+    ConfirmationService,
+  ],
 })
 export class HubModule { }

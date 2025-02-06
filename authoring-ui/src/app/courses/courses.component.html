@@ -49,8 +49,8 @@
                 {{ course.name || 'Untitled' }} ({{ countUnits(course.units) }} units)
               </span>
               <span *ngIf="course.description" class="text-xs">{{ course.description }}</span>
-              <span class="text-xs -mb-1" [ngClass]="{'font-bold': course.user_email == app.user.email}">
-                Created by: {{ course.user_email }} <span *ngIf="course.user_email == app.user.email">(you)</span>
+              <span class="text-xs -mb-1" [ngClass]="{'font-bold': course.user_email == app.user?.email}">
+                Created by: {{ course.user_email }} <span *ngIf="course.user_email == app.user?.email">(you)</span>
               </span>
               <span *ngIf="course.collaborator_emails?.length" class="text-xs -mt-1">
                 Collaborators: {{ course.collaborator_emails.join(', ') }}

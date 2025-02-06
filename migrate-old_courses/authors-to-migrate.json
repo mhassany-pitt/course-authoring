@@ -1,0 +1,94 @@
+{
+  "admin@ca.paws.lab": {
+    "id": "admin",
+    "name": "Administrator"
+  },
+  "ngoreva@ca.paws.lab": {
+    "id": "ngoreva",
+    "name": "Natalya Goreva"
+  },
+  "menon@pennwest.edu@ca.paws.lab": {
+    "id": "menon@pennwest.edu",
+    "name": "Pratibha Menon"
+  },
+  "lalbo@ca.paws.lab": {
+    "id": "lalbo",
+    "name": "Laia Albo"
+  },
+  "bobanvesin@ca.paws.lab": {
+    "id": "bobanvesin",
+    "name": "Boban Vesin"
+  },
+  "h.chau@ca.paws.lab": {
+    "id": "h.chau",
+    "name": "Hung Chau"
+  },
+  "yuh43@ca.paws.lab": {
+    "id": "yuh43",
+    "name": "Yun Huang"
+  },
+  "zrisha@ca.paws.lab": {
+    "id": "zrisha",
+    "name": "Zak Risha"
+  },
+  "jab464@ca.paws.lab": {
+    "id": "jab464",
+    "name": "Jordan Barria"
+  },
+  "akhuseyinoglu@ca.paws.lab": {
+    "id": "akhuseyinoglu",
+    "name": "Kamil Akhuseyinoglu"
+  },
+  "r.hosseini@ca.paws.lab": {
+    "id": "r.hosseini",
+    "name": "Roya Hosseini"
+  },
+  "dguerra@ca.paws.lab": {
+    "id": "dguerra",
+    "name": "dguerra"
+  },
+  "rah225@ca.paws.lab": {
+    "id": "rah225",
+    "name": "Rully Agus Hendrawan"
+  },
+  "riell@ca.paws.lab": {
+    "id": "riell",
+    "name": "Zoe Riell"
+  },
+  "andrew.petersen@ca.paws.lab": {
+    "id": "andrew.petersen",
+    "name": "Andrew Petersen"
+  },
+  "hnvasa@ca.paws.lab": {
+    "id": "hnvasa",
+    "name": "Hardik Vasa"
+  },
+  "pythonadmin@ca.paws.lab": {
+    "id": "pythonAdmin",
+    "name": "Python Admin"
+  },
+  "alj112@ca.paws.lab": {
+    "id": "alj112",
+    "name": "Alireza, Sabet"
+  },
+  "emma.mcdonald@ca.paws.lab": {
+    "id": "emma.mcdonald",
+    "name": "Emma, McDonald"
+  },
+  "michellewang@ca.paws.lab": {
+    "id": "michellewang",
+    "name": "Michelle, Wang"
+  },
+  "demmanse@ca.paws.lab": {
+    "id": "demmanse",
+    "name": "Carrie, Demmans"
+  },
+  "rah225@pitt.edu@ca.paws.lab": {
+    "id": "rah225@pitt.edu",
+    "name": "Rully"
+  },
+  "rafael.araujo@ca.paws.lab": {
+    "id": "rafael.araujo",
+    "name": "Rafael Araujo"
+  }
+}
