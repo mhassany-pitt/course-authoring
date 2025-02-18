@@ -6,11 +6,13 @@ import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
 import { toObject, useId } from 'src/utils';
 import { CoursesService } from './courses.service';
 import { UsersService } from 'src/users/users.service';
+import { ConfigService } from '@nestjs/config';
 
 @Controller('courses')
 export class CoursesController {
 
   constructor(
+    private config: ConfigService,
     private courses: CoursesService,
     private users: UsersService,
   ) { }
@@ -32,6 +34,14 @@ export class CoursesController {
     return useId(toObject(course));
   }
 
+  @Get('modulearn')
+  async modulearn(@Request() req: any) {
+    return {
+      URL: this.config.get('MODULEARN_URL'),
+      CREATE_COURSE_URL: this.config.get('MODULEARN_CREATE_COURSE_URL'),
+    };
+  }
+
   @Get(':id')
   @UseGuards(AuthenticatedGuard)
   async read(@Request() req: any) {
@@ -46,6 +56,7 @@ export class CoursesController {
   }
 
   @Get(':id/export')
+  @UseGuards(AuthenticatedGuard)
   async export(@Param('id') id: string) {
     const found = await this.courses.findById({ id });
     if (!found) throw new HttpException('course not found!', 404);

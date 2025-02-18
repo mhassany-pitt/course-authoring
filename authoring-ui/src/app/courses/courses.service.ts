@@ -58,4 +58,8 @@ export class CoursesService {
   clone(id: string) {
     return this.http.post(`${environment.apiUrl}/courses/${id}/clone`, {}, { withCredentials: true });
   }
+
+  getModuLearnConfigs() {
+    return this.http.get(`${environment.apiUrl}/courses/modulearn`, { withCredentials: true });
+  }
 }

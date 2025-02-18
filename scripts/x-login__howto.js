@@ -34,6 +34,7 @@ xLoginTokenXHR.send(JSON.stringify({
 
 // logout
 const logoutXHR = new XMLHttpRequest();
+logoutXHR.withCredentials = true;
 logoutXHR.open('POST', 'http://adapt2.sis.pitt.edu/next.course-authoring/api/auth/logout', true);
 logoutXHR.setRequestHeader('Content-Type', 'application/json');
 logoutXHR.onerror = () => console.log('There was an error with the request.');

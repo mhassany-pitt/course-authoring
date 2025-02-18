@@ -293,6 +293,22 @@ export class CourseComponent implements OnInit {
     });
   }
 
+  useCourseStructure() {
+    this.confirm.confirm({
+      header: 'Use Course Structure',
+      message: 'Are you sure you want to use this course structure?',
+      icon: 'pi pi-question-circle',
+      acceptButtonStyleClass: 'p-button-success',
+      rejectButtonStyleClass: 'p-button-secondary',
+      accept: () => {
+        this.courses.getModuLearnConfigs().subscribe({
+          next: (resp: any) => location.href = resp.CREATE_COURSE_URL.replace('{COURSE_ID}', this.course.id),
+          error: (err: any) => console.log(err)
+        });
+      }
+    });
+  }
+
   openInMasteryGrid() {
     window.open(`http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=ADL&sid=TEST&cid=${this.course.linkings.course_id}`, '_blank');
   }

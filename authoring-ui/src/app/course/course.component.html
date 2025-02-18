@@ -21,7 +21,11 @@
           size="small" [severity]="course.deleted_at ? 'danger' : 'warning'" (click)="deleteCourse()">
         </p-button>
 
-        <div class="relative overflow-visible">
+        <p-button *ngIf="app.user?.roles?.includes('x-author')" type="button" label="Use Course Structure"
+          icon="fa fa-folder-open" size="small" severity="success" [disabled]="form.invalid"
+          (click)="useCourseStructure()">
+        </p-button>
+        <div *ngIf="!app.user?.roles?.includes('x-author')" class="relative overflow-visible">
           <div *ngIf="course.linkings?.last_synced" class="absolute -top-4 -mt-0.5 text-xs text-gray-400 min-w-max">
             Last synchronized: {{ course.linkings?.last_synced | date:'short' }}
           </div>
@@ -34,7 +38,7 @@
           </p-buttonGroup>
         </div>
 
-        <p-button type="button" title="Collaborate" icon="pi pi-users" severity="help" [outlined]="true" size="small"
+        <p-button type="button" title="Collaborators" icon="pi pi-users" severity="help" [outlined]="true" size="small"
           (click)="collaborators = true">
         </p-button>
 
@@ -270,7 +274,7 @@
             </p-table>
           </div>
         </p-tabPanel>
-        <p-tabPanel header="Groups">
+        <p-tabPanel *ngIf="!app.user?.roles?.includes('x-author')" header="Groups">
           <div class="flex flex-col gap-2 p-2 bg-gray-100 rounded-md mb-2">
             <span>For each group, specify the list of students by uploading a CSV file with the following
               columns:</span>
