@@ -18,5 +18,5 @@ export const mapToTreeNodes = (
 }
 
 export const getPreviewLink = (user: any, url: string) => {
-  return `${url}&usr=${user.email}&grp=preview&sid=preview`;
+  return `${url}${url.includes('?') ? '&' : '?'}usr=${user.email}&grp=preview&sid=preview`;
 }
