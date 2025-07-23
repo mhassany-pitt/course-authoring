@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { LoginRoutingModule } from './login.routing.module';
+import { routes } from './login.routing';
 import { LoginComponent } from './login.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { InputTextModule } from 'primeng/inputtext';
   imports: [
     CommonModule, FormsModule,
     ButtonModule, InputTextModule,
-    LoginRoutingModule
+    RouterModule.forChild(routes)
   ]
 })
 export class LoginModule { }

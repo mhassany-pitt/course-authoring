@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { RegisterRoutingModule } from './register.routing.module';
+import { routes } from './register.routing';
 import { RegisterComponent } from './register.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { InputTextModule } from 'primeng/inputtext';
     CommonModule,
     CommonModule, FormsModule,
     ButtonModule, InputTextModule,
-    RegisterRoutingModule,
+    RouterModule.forChild(routes),
   ]
 })
 export class RegisterModule { }

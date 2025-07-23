@@ -7,6 +7,7 @@ export const getNavLinks = (app: AppService) => {
     { label: 'Hub', value: '/hub' },
     { label: 'Courses', value: '/courses' },
     (app.user?.roles?.includes('app-admin') ? { label: 'Users', value: '/user-admin' } : null),
+    { label: 'SLC Catalog', value: '/catalog' },
   ].filter(l => l);
 };
 

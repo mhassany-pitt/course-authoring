@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HubRoutingModule } from './hub.routing.module';
+import { routes } from './hub.routing';
 import { HubComponent } from './hub.component';
 import { FormsModule } from '@angular/forms';
 import { DialogModule } from 'primeng/dialog';
@@ -13,6 +13,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 import { UserAuthCtrlModule } from '../user-auth-ctrl/user-auth-ctrl.module';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ConfirmationService } from 'primeng/api';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { ConfirmationService } from 'primeng/api';
   ],
   imports: [
     CommonModule, FormsModule,
-    HubRoutingModule,
+    RouterModule.forChild(routes),
     DialogModule, ButtonModule,
     InputTextModule, TableModule,
     DropdownModule, SelectButtonModule,

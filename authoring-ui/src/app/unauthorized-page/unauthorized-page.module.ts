@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { UnauthorizedPageRoutingModule } from './unauthorized-page.routing.module';
+import { routes } from './unauthorized-page.routing';
 import { UnauthorizedPageComponent } from './unauthorized-page.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,7 @@ import { UnauthorizedPageComponent } from './unauthorized-page.component';
   ],
   imports: [
     CommonModule,
-    UnauthorizedPageRoutingModule
+    RouterModule.forChild(routes)
   ]
 })
 export class UnauthorizedPageModule { }

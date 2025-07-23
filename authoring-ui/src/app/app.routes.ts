@@ -20,6 +20,10 @@ export const routes: Routes = [
     canActivate: [AuthenticatedAuthorGuard]
   },
   {
+    path: 'catalog',
+    loadChildren: () => import('./catalog/catalog.module').then(m => m.CatalogModule),
+  },
+  {
     path: 'hub',
     loadChildren: () => import('./hub/hub.module').then(m => m.HubModule),
     canActivate: [HandshakeGuard]

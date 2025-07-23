@@ -13,6 +13,7 @@ import { MasteryGridModule } from './mastery-grid/mastery-grid.module';
 import { AggregateModule } from './aggregate/aggregate.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { HubModule } from './hub/hub.module';
+import { CatalogModule } from './catalog/catalog.module';
 
 @Module({
   imports: [
@@ -51,6 +52,7 @@ import { HubModule } from './hub/hub.module';
     HubModule,
     MasteryGridModule,
     AggregateModule,
+    CatalogModule,
   ],
   controllers: [AppController],
   providers: [AppService, ConfigService],

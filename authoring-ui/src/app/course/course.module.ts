@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CourseRoutingModule } from './course.routing.module';
+import { routes } from './course.routing';
 import { CourseComponent } from './course.component';
 import { DropdownModule } from 'primeng/dropdown';
 import { UserAuthCtrlModule } from '../user-auth-ctrl/user-auth-ctrl.module';
@@ -27,6 +27,7 @@ import { EnableProvidersComponent } from "./enable-providers/enable-providers.co
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ChipsModule } from 'primeng/chips';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { ChipsModule } from 'primeng/chips';
   ],
   imports: [
     CommonModule, FormsModule,
-    CourseRoutingModule,
+    RouterModule.forChild(routes),
     UserAuthCtrlModule,
     RearrangeResourcesComponent,
     RearrangeUnitsComponent,

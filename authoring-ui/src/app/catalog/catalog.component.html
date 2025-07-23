@@ -1,0 +1,191 @@
+<div class="flex flex-col">
+  <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
+    <div class="container mx-auto flex items-center gap-2 px-2 md:px-0 ">
+      <img src="assets/logo.png" class="h-8 w-8" />
+      <span class="text-xl font-bold hidden md:inline-block text-nowrap">Course Authoring</span>
+      <span class="hidden md:inline-block"><i class="pi pi-chevron-right"></i></span>
+
+      <p-dropdown #navEl [options]="navLinks" [ngModel]="'/catalog'" class="-my-2 course-nav-dropdown"
+        (onChange)="router.navigate([$event.value]);"></p-dropdown>
+
+      <span class="flex-grow"></span>
+
+      <app-user-auth-ctrl logoutRedirect="/hub"></app-user-auth-ctrl>
+    </div>
+  </div>
+
+  <div class="container mx-auto mt-24 mb-16 flex flex-col gap-4  z-0">
+    <div class="border shadow-md">
+      <p-table #tb [value]="contents" dataKey="id" paginator="true" [rows]="25" [rowsPerPageOptions]="[10, 25, 50, 100]"
+        [globalFilterFields]="['name', 'author_name', 'type', 'domain_name', 'provider_name', 'creation_date']"
+        styleClass="p-datatable-sm p-datatable-striped">
+        <ng-template pTemplate="caption">
+          <input #searchInputEl type="text" name="name" pInputText placeholder="Search ..."
+            class="text-xl border-gray-200 w-full" (input)="tb.filterGlobal(any($event.target).value, 'contains')" />
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th pSortableColumn="name">
+              <span>Display Name </span>
+              <p-sortIcon field="name"></p-sortIcon>
+            </th>
+            <th class="text-center" style="width: 175px;">
+              <div class="flex flex-col gap-1">
+                <span>Author </span>
+                <p-multiSelect [options]="opt_author_names" (onChange)="tb.filter($event.value, 'author_name', 'in')"
+                  appendTo="body" placeholder="Filter ..." scrollHeight="25rem"></p-multiSelect>
+              </div>
+            </th>
+            <th class="text-center" style="width: 175px;">
+              <div class="flex flex-col gap-1">
+                <span>Type </span>
+                <p-multiSelect [options]="opt_types" (onChange)="tb.filter($event.value, 'type', 'in')" appendTo="body"
+                  placeholder="Filter ..." scrollHeight="25rem"></p-multiSelect>
+              </div>
+            </th>
+            <th class="text-center" style="width: 175px;">
+              <div class="flex flex-col gap-1">
+                <span>Domain </span>
+                <p-multiSelect [options]="opt_domain_names" (onChange)="tb.filter($event.value, 'domain_name', 'in')"
+                  appendTo="body" placeholder="Filter ..." scrollHeight="25rem"></p-multiSelect>
+              </div>
+            </th>
+            <th class="text-center" style="width: 175px;">
+              <div class="flex flex-col gap-1">
+                <span>Provider </span>
+                <p-multiSelect [options]="opt_provider_names"
+                  (onChange)="tb.filter($event.value, 'provider_name', 'in')" appendTo="body" placeholder="Filter ..."
+                  scrollHeight="25rem"></p-multiSelect>
+              </div>
+            </th>
+            <th pSortableColumn="creation_date" class="text-center" style="width: 195px;">
+              <span>Creation Date</span>
+              <p-sortIcon field="creation_date"></p-sortIcon>
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-content>
+          <tr>
+            <td>
+              <span class="text-blue-700 flex-grow cursor-pointer" (click)="selectContent(content)">
+                {{ content.name }}
+              </span>
+            </td>
+            <td class="text-sm text-center">{{ content.author_name }}</td>
+            <td class="text-sm text-center">{{ content.type }}</td>
+            <td class="text-sm text-center">{{ content.domain_name }}</td>
+            <td class="text-sm text-center">{{ content.provider_name }}</td>
+            <td class="text-sm text-center">{{ content.creation_date | date:'medium' }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
+
+<p-sidebar [(visible)]="preview" position="right" [style]="{'min-width': '64rem'}" (onHide)="unselectContent()">
+  <ng-template pTemplate="header">
+    <h1>{{ selected.name }}</h1>
+  </ng-template>
+  <table *ngIf="selected" class="w-full parent-courses">
+    <tr>
+      <td class="font-bold">ID:</td>
+      <td>{{ selected.id }}</td>
+    </tr>
+    <tr>
+      <td class="font-bold">Name:</td>
+      <td>{{ selected.name }}</td>
+    </tr>
+    <tr>
+      <td class="font-bold">Type:</td>
+      <td>{{ selected.type }}</td>
+    </tr>
+    <tr>
+      <td class="font-bold">Domain:</td>
+      <td>{{ selected.domain_name }}</td>
+    </tr>
+    <tr>
+      <td class="font-bold">Provider:</td>
+      <td>{{ selected.provider_name }}</td>
+    </tr>
+    <tr>
+      <td class="font-bold">Author:</td>
+      <td>{{ selected.author_name }}</td>
+    </tr>
+    <tr>
+      <td class="font-bold">Date:</td>
+      <td>{{ selected.creation_date | date:"medium" }}</td>
+    </tr>
+    <tr>
+      <td class="font-bold">Description:</td>
+      <td>{{ selected.description }}</td>
+    </tr>
+    <tr>
+      <td class="font-bold">Concepts</td>
+      <td>
+        <div class="flex flex-col gap-2">
+          <div>
+            <span class="underline">Prerequisite:</span>
+            <span class="italic"> {{ getConcepts('prerequisite') || 'None' }}</span>
+          </div>
+          <div>
+            <span class="underline">Outcome:</span>
+            <span class="italic"> {{ getConcepts('outcome') || 'None' }}</span>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="font-bold align-top">Used in ({{ selected_courses.length }}) Courses:</td>
+      <td class="flex-grow">
+        <p-table [value]="selected_courses" dataKey="id" styleClass="p-datatable-sm p-datatable-striped w-full"
+          [scrollable]="true" scrollHeight="20rem">
+          <ng-template pTemplate="header">
+    <tr>
+      <th class="text-center">ID</th>
+      <th class="">
+        <span>Course Name</span>
+        <br />
+        <span class="text-xs">Creation Date | Author</span>
+      </th>
+      <th class="">Unit</th>
+    </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-course>
+      <tr>
+        <td class="text-sm text-center">{{ course.id }}</td>
+        <td>
+          <span class="text-sm">{{ course.code }} - {{ course.name }}</span>
+          <br />
+          <span class="text-xs">{{ course.creation_date | date:'medium' }} | {{ course.author_name }}</span>
+        </td>
+        <td class="text-sm">{{ course.unit_name }}</td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="empty">
+      <tr>
+        <td colspan="3" class="text-center">This SLC is not used in any courses!</td>
+      </tr>
+    </ng-template>
+    </p-table>
+    </td>
+    </tr>
+    <tr>
+      <td class="font-bold align-top">
+        <a [href]="selected.url" target="_blank">
+          Preview <i class="pi pi-external-link text-xs"></i>:
+        </a>
+      </td>
+      <td class="flex flex-col gap-1 flex-grow">
+        <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(selected.url)" class="flex-grow h-96"></iframe>
+        <span>
+          Tip: In case of an error, try
+          <a [href]="selected.url" target="_blank">
+            opening in a new browser tab
+            <i class="pi pi-external-link text-xs"></i>
+          </a>.
+        </span>
+      </td>
+    </tr>
+  </table>
+</p-sidebar>

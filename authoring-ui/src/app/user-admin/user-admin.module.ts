@@ -1,7 +1,7 @@
 import { Input, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { UserAdminRoutingModule } from './user-admin.routing.module';
+import { routes } from './user-admin.routing';
 import { UserAdminComponent } from './user-admin.component';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
@@ -27,7 +27,7 @@ import { DropdownModule } from 'primeng/dropdown';
   ],
   imports: [
     CommonModule, FormsModule, RouterModule,
-    UserAdminRoutingModule,
+    RouterModule.forChild(routes),
     UserAuthCtrlModule,
     TableModule, ButtonModule,
     InputTextModule, DialogModule,
