@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { AppService } from '../app.service';
 import { getNavLinks } from '../utils';
 import { ConfirmationService } from 'primeng/api';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-hub',
@@ -76,6 +77,17 @@ export class HubComponent implements OnInit {
         });
       }
     });
+  }
+
+  async export(course: any) {
+    course = await firstValueFrom(this.http.get(`${environment.apiUrl}/hub/${course.id}`));
+    delete course.user_email;
+    const blob = new Blob([JSON.stringify(course, null, 2)], { type: 'application/json' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `paws-catalog_course-export_${Date.now()}.json`;
+    link.click();
+    link.remove();
   }
 
   keys(obj: any) {

@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { CourseDto } from './course.dto';
 import { ConceptDto } from './concept.dto';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-catalog',
@@ -28,6 +29,9 @@ export class CatalogComponent implements OnInit {
   selected: ContentDto = null as any;
   selected_courses: CourseDto[] = [];
   selected_concepts: ConceptDto[] = [];
+
+  selection: ContentDto[] = [];
+  export_status: string = '';
 
   any(obj: any) { return obj; }
 
@@ -109,5 +113,31 @@ export class CatalogComponent implements OnInit {
 
   getConcepts(direction: string): string {
     return this.selected_concepts.filter(c => c.direction == direction).map(c => c.name).join(', ');
+  }
+
+  async export() {
+    this.export_status = 'Exporting...';
+
+    const selection: any[] = [];
+    for (let i = 0; i < this.selection.length; i++) {
+      this.export_status = `Exporting ${i + 1} of ${this.selection.length}...`;
+      const item = JSON.parse(JSON.stringify(this.selection[i]));
+      item.concepts = await firstValueFrom(this.service.getConcepts(item.id));
+      item.courses = await firstValueFrom(this.service.getCourses(item.id));
+      selection.push(item);
+    }
+
+    const blob = new Blob([JSON.stringify(selection, null, 2)], { type: 'application/json' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `paws-catalog_slcs-export_${Date.now()}.json`;
+    link.click();
+    link.remove();
+
+    this.export_status = 'Export completed!';
+    setTimeout(() => {
+      this.export_status = '';
+      this.selection = [];
+    }, 3000);
   }
 }

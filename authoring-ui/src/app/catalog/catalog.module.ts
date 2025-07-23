@@ -15,6 +15,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { SidebarModule } from 'primeng/sidebar';
 import { TooltipModule } from 'primeng/tooltip';
 import { MultiSelectModule } from 'primeng/multiselect';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
     InputTextModule, UserAuthCtrlModule,
     SidebarModule, TooltipModule,
     DropdownModule, MultiSelectModule,
+    ButtonModule,
   ],
   providers: [
     CatalogService

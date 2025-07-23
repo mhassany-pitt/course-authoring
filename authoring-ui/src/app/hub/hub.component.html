@@ -25,12 +25,6 @@
         <ng-template pTemplate="body" let-course let-rowIndex="rowIndex">
           <tr>
             <td class="relative">
-              <div *ngIf="app.user" class="flex items-center justify-center gap-1 absolute top-3 right-3">
-                <button pButton type="button" icon="pi pi-clone" title="Clone the course"
-                  class="p-button-text p-button-sm p-button-plain action-btn" (click)="clone(course)">
-                </button>
-              </div>
-
               <div class="flex flex-col gap-1">
                 <div class="text-xs text-gray-400">
                   <span class="uppercase">{{ course.institution }}</span>
@@ -40,12 +34,22 @@
                 <span class="text-xs text-gray-400">
                   {{ course.created_at | date:"medium" }}
                 </span>
-                <span class="text-blue-600 cursor-pointer flex gap-1" (click)="toggleLoad(course)">
-                  <span class="capitalize font-bold">{{ course.name }}</span>
-                  <span class="uppercase">"{{ course.code }}"</span>
-                  <i class="pi pi-chevron-down text-gray-400"
-                    [ngClass]="{ 'pi-chevron-up': selected && selected.id == course.id }"></i>
-                </span>
+                <div class="flex items-center gap-4">
+                  <span class="text-blue-600 cursor-pointer flex gap-1" (click)="toggleLoad(course)">
+                    <span class="capitalize font-bold">{{ course.name }}</span>
+                    <span class="uppercase">"{{ course.code }}"</span>
+                    <i class="pi pi-chevron-down text-gray-400"
+                      [ngClass]="{ 'pi-chevron-up': selected && selected.id == course.id }"></i>
+                  </span>
+
+                  <span *ngIf="app.user" class="cursor-pointer" (click)="clone(course)">
+                    <i class="pi pi-clone text-gray-400 hover:text-gray-900"></i>
+                  </span>
+
+                  <span class="cursor-pointer" (click)="export(course)">
+                    <i class="pi pi-download text-gray-400 hover:text-gray-900"></i>
+                  </span>
+                </div>
                 <div class="text-xs">
                   <span class="uppercase">{{ course.domain }}</span>
                   <span>, </span>

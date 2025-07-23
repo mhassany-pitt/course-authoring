@@ -14,9 +14,15 @@
     </div>
   </div>
 
-  <div class="container mx-auto mt-24 mb-16 flex flex-col gap-4  z-0">
+  <div class="container mx-auto mt-24 mb-16 flex flex-col gap-4 z-0">
+    <div *ngIf="selection.length" class="flex flex-col gap-2 bg-gray-100 border shadow-md p-2">
+      <p-button type="button"
+        [label]="export_status ? export_status : 'Export Selected SLCs ('+selection.length+') to a single JSON file!'"
+        icon="fa fa-download" (onClick)="export()" [disabled]="export_status.length > 0" />
+    </div>
     <div class="border shadow-md">
-      <p-table #tb [value]="contents" dataKey="id" paginator="true" [rows]="25" [rowsPerPageOptions]="[10, 25, 50, 100]"
+      <p-table #tb [value]="contents" [(selection)]="selection" dataKey="id" paginator="true" [rows]="25"
+        [rowsPerPageOptions]="[10, 25, 50, 100]"
         [globalFilterFields]="['name', 'author_name', 'type', 'domain_name', 'provider_name', 'creation_date']"
         styleClass="p-datatable-sm p-datatable-striped">
         <ng-template pTemplate="caption">
@@ -25,6 +31,9 @@
         </ng-template>
         <ng-template pTemplate="header">
           <tr>
+            <th style="width: 4rem">
+              <!-- <p-tableHeaderCheckbox /> -->
+            </th>
             <th pSortableColumn="name">
               <span>Display Name </span>
               <p-sortIcon field="name"></p-sortIcon>
@@ -66,6 +75,7 @@
         </ng-template>
         <ng-template pTemplate="body" let-content>
           <tr>
+            <td><p-tableCheckbox [value]="content" /></td>
             <td>
               <span class="text-blue-700 flex-grow cursor-pointer" (click)="selectContent(content)">
                 {{ content.name }}
