@@ -65,10 +65,11 @@ export class CatalogService {
 
   async getConcepts(contentId: number) {
     const query = `
-      SELECT acc.id, acc.concept_name as name, acc.direction
-      FROM agg_content_concept acc 
-      WHERE acc.content_id = ?
-      ORDER BY acc.direction DESC
+      SELECT kcc.id, kcc.component_name as name, kcc.source_method as source
+      FROM ent_content ec 
+      JOIN kc_content_component kcc on kcc.content_name = ec.content_name 
+      WHERE ec.content_id  = ?
+      ORDER BY kcc.source_method DESC
     `;
     const concepts = await this.aggregate.query(query, [contentId]);
     return concepts;

@@ -29,6 +29,7 @@ export class CatalogComponent implements OnInit {
   selected: ContentDto = null as any;
   selected_courses: CourseDto[] = [];
   selected_concepts: ConceptDto[] = [];
+  selected_concept_sources: Set<string> = new Set<string>();
 
   selection: ContentDto[] = [];
   export_status: string = '';
@@ -103,6 +104,9 @@ export class CatalogComponent implements OnInit {
   loadConcepts(contentId: number) {
     this.service.getConcepts(contentId).subscribe({
       next: (data) => {
+        this.selected_concept_sources = new Set<string>();
+        data.forEach(c => this.selected_concept_sources.add(c.source));
+
         this.selected_concepts = data;
       },
       error: (error) => {
@@ -111,8 +115,8 @@ export class CatalogComponent implements OnInit {
     });
   }
 
-  getConcepts(direction: string): string {
-    return this.selected_concepts.filter(c => c.direction == direction).map(c => c.name).join(', ');
+  getConcepts(source: string): string {
+    return this.selected_concepts.filter(c => c.source == source).map(c => c.name).join(', ');
   }
 
   async export() {
