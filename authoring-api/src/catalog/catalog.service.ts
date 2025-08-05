@@ -30,6 +30,7 @@ export class CatalogService {
       LEFT JOIN ent_domain dm ON dm.name = ec.domain
       LEFT JOIN ent_provider ep ON ep.provider_id = ec.provider_id 
       WHERE ec.visible = true AND ec.privacy = 'public'
+      ORDER BY ec.creation_date DESC
     `;
     const contents = await this.aggregate.query(query);
     return contents;

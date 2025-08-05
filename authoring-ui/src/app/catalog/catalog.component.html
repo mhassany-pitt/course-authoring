@@ -47,16 +47,16 @@
             </th>
             <th class="text-center" style="width: 175px;">
               <div class="flex flex-col gap-1">
-                <span>Type </span>
-                <p-multiSelect [options]="opt_types" (onChange)="tb.filter($event.value, 'type', 'in')" appendTo="body"
-                  placeholder="Filter ..." scrollHeight="25rem"></p-multiSelect>
+                <span>Domain </span>
+                <p-multiSelect [options]="opt_domain_names" (onChange)="tb.filter($event.value, 'domain_name', 'in')"
+                  appendTo="body" placeholder="Filter ..." scrollHeight="25rem"></p-multiSelect>
               </div>
             </th>
             <th class="text-center" style="width: 175px;">
               <div class="flex flex-col gap-1">
-                <span>Domain </span>
-                <p-multiSelect [options]="opt_domain_names" (onChange)="tb.filter($event.value, 'domain_name', 'in')"
-                  appendTo="body" placeholder="Filter ..." scrollHeight="25rem"></p-multiSelect>
+                <span>Type </span>
+                <p-multiSelect [options]="opt_types" (onChange)="tb.filter($event.value, 'type', 'in')" appendTo="body"
+                  placeholder="Filter ..." scrollHeight="25rem"></p-multiSelect>
               </div>
             </th>
             <th class="text-center" style="width: 175px;">
@@ -82,8 +82,8 @@
               </span>
             </td>
             <td class="text-sm text-center">{{ content.author_name }}</td>
-            <td class="text-sm text-center">{{ content.type }}</td>
             <td class="text-sm text-center">{{ content.domain_name }}</td>
+            <td class="text-sm text-center">{{ content.type }}</td>
             <td class="text-sm text-center">{{ content.provider_name }}</td>
             <td class="text-sm text-center">{{ content.creation_date | date:'medium' }}</td>
           </tr>
@@ -107,12 +107,12 @@
       <td>{{ selected.name }}</td>
     </tr>
     <tr>
-      <td class="font-bold">Type:</td>
-      <td>{{ selected.type }}</td>
-    </tr>
-    <tr>
       <td class="font-bold">Domain:</td>
       <td>{{ selected.domain_name }}</td>
+    </tr>
+    <tr>
+      <td class="font-bold">Type:</td>
+      <td>{{ selected.type }}</td>
     </tr>
     <tr>
       <td class="font-bold">Provider:</td>
@@ -128,15 +128,18 @@
     </tr>
     <tr>
       <td class="font-bold">Description:</td>
-      <td>{{ selected.description }}</td>
+      <td>{{ selected.description || '&lt;&lt;empty&gt;&gt;' }}</td>
     </tr>
     <tr>
-      <td class="font-bold">Concepts</td>
+      <td class="font-bold">Concepts:</td>
       <td>
-        <div class="flex flex-col gap-2 text-sm">
+        <div class="flex flex-col gap-2">
           <div *ngFor="let source of selected_concept_sources">
             <span class="font-bold capitalize">{{ source }}:</span>
             <span class="italic"> {{ getConcepts(source) || 'None' }}</span>
+          </div>
+          <div *ngIf="!selected_concept_sources.size">
+            <span class="italic">&lt;&lt;empty&gt;&gt;</span>
           </div>
         </div>
       </td>
@@ -147,34 +150,36 @@
         <p-table [value]="selected_courses" dataKey="id" styleClass="p-datatable-sm p-datatable-striped w-full"
           [scrollable]="true" scrollHeight="20rem">
           <ng-template pTemplate="header">
-    <tr>
-      <th class="text-center">ID</th>
-      <th class="">
-        <span>Course Name</span>
-        <br />
-        <span class="text-xs">Creation Date | Author</span>
-      </th>
-      <th class="">Unit</th>
-    </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-course>
-      <tr>
-        <td class="text-sm text-center">{{ course.id }}</td>
-        <td>
-          <span class="text-sm">{{ course.code }} - {{ course.name }}</span>
-          <br />
-          <span class="text-xs">{{ course.creation_date | date:'medium' }} | {{ course.author_name }}</span>
-        </td>
-        <td class="text-sm">{{ course.unit_name }}</td>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="empty">
-      <tr>
-        <td colspan="3" class="text-center">This SLC is not used in any courses!</td>
-      </tr>
-    </ng-template>
-    </p-table>
-    </td>
+            <tr>
+              <th class="text-center">ID</th>
+              <th class="">
+                <span>Course Name</span>
+                <br />
+                <span class="text-xs">Creation Date | Author</span>
+              </th>
+              <th class="">Unit</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-course>
+            <tr>
+              <td class="text-sm text-center">{{ course.id }}</td>
+              <td>
+                <span class="text-sm">{{ course.code }} - {{ course.name }}</span>
+                <br />
+                <span class="text-xs">{{ course.creation_date | date:'medium' }} | {{ course.author_name }}</span>
+              </td>
+              <td class="text-sm">{{ course.unit_name }}</td>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="emptymessage">
+            <tr>
+              <td colspan="3" class="text-center">
+                <span class="italic">&lt;&lt;empty&gt;&gt;</span>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </td>
     </tr>
     <tr>
       <td class="font-bold align-top">
