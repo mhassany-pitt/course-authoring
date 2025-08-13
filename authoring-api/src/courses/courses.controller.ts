@@ -71,6 +71,7 @@ export class CoursesController {
       r.id = `${r.id}`;
       delete r.providers;
     });
+    const providers = new Set<string>();
     course.units?.forEach((u: any, index: number) => {
       u.id = `${u.id}`;
       // find parent unit
@@ -79,6 +80,11 @@ export class CoursesController {
           u.parent = course.units[i].id;
           break;
         }
+
+      // find providers
+      Object.values(u.activities || {}).forEach((r: any[]) => {
+        r.forEach(a => providers.add(a.provider_id));
+      });
     });
     course.units?.forEach((u: any) => {
       delete u.level;
@@ -92,6 +98,8 @@ export class CoursesController {
     delete course.groups;
     delete course.year;
     delete course.term;
+
+    course.provider_protocols = this.courses.getProviderSupportedProtocols([...providers]);
 
     return course;
   }

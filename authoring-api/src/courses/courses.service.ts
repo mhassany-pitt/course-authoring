@@ -71,4 +71,37 @@ export class CoursesService {
     // }
     // await writeFile('./courses-to-migrate.done', '');
   }
+
+  getProviderSupportedProtocols(only: string[]) {
+    const mapping = {
+      "animatedexamples": "splice,lti,pitt",
+      "codecheck": "splice,lti",
+      "codelab": "lti",
+      "codeocean": "lti",
+      "codeworkout": "lti",
+      "ctat": "lti",
+      "dbqa": "lti",
+      "educvideos": "pitt",
+      "mchq": "pitt",
+      "opendsa_problems": "lti",
+      "opendsa_slideshows": "lti",
+      "parsons": "splice,lti,pitt",
+      "pcex": "splice,lti,pitt",
+      "pcex_activity": "splice,lti,pitt",
+      "pcex_ch": "splice,lti,pitt",
+      "pcrs": "pitt",
+      "quizjet": "pitt",
+      "quizpet": "pitt",
+      "readingmirror": "pitt",
+      "salt": "pitt",
+      "sqlknot": "pitt",
+      "sqltutor": "pitt",
+      "webex": "pitt",
+    };
+
+    return only.reduce((acc, curr) => {
+      acc[curr] = mapping[curr].split(",");
+      return acc;
+    }, {});
+  }
 }
