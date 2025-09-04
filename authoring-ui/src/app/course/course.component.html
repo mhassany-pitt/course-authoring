@@ -275,21 +275,20 @@
           </div>
         </p-tabPanel>
         <p-tabPanel *ngIf="!app.user?.roles?.includes('x-author')" header="Groups">
-          <div class="flex flex-col gap-2 p-2 bg-gray-100 rounded-md mb-2">
+          <div class="flex flex-col p-2 bg-gray-100 rounded-md mb-2">
             <span>For each group, specify the list of students by uploading a CSV file with the following
               columns:</span>
-            <span class="text-sm ml-4"><i>fullname</i>: full name of the student.</span>
-            <span class="text-sm ml-4 -my-2"><i>email</i>: email address to login to the system.</span>
-            <span class="text-sm ml-4">
-              <i>remark</i>: remarks on how student's account should be created
-              (leave it blank or use 'keep_password'<span class="align-super text-xs">1</span>).
+            <span class="text-sm ml-4 mt-2"><i>fullname</i>: full name of the student.</span>
+            <span class="text-sm ml-4"><i>email, password</i>: email address and password to login to the system.</span>
+            <span class="text-sm ml-4 mb-2">
+              <i>remark</i>: leave it blank or use 'keep_password'
+              <span class="text-xs text-gray-500">
+                (If a password is not provided for the user, a random password will be chosen; set <i>remark</i> to
+                <span class="italic text-orange-700">keep_password</span>
+                to keep user's existing password.)
+              </span>
             </span>
-            <span class="text-xs text-gray-500">
-              1. By default, a random password will be set for each student, unless you set
-              <span class="italic text-orange-700">keep_password</span>
-              as the value for the student's remark column.
-            </span>
-            <span class="text-sm text-red-600">Note that groups can't be removed after you save the changes!</span>
+            <span class="text-sm text-red-600 mt-2">Note that groups can't be removed after you save the changes!</span>
           </div>
           <div class="flex flex-col gap-2">
             <span class="text-sm text-gray-400">Group mnemonics <span class="font-bold">MUST be globally

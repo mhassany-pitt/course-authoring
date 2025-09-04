@@ -187,7 +187,9 @@ export class MasteryGridService {
             if (!validate(student.email))
                 continue;
 
-            if (student.email in passwords == false)
+            if (student.password?.trim().length > 0)
+                passwords[student.email] = student.password;
+            else if (student.email in passwords == false)
                 passwords[student.email] = nanoid(8);
             student.password = passwords[student.email];
             student.keep_password = student.remark?.toLowerCase().includes('keep_password');

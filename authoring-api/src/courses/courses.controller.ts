@@ -24,7 +24,7 @@ export class CoursesController {
       c = useId(toObject(c));
       delete c.linkings;
       return c;
-    });
+    }).sort((a, b) => b.created_at.getTime() - a.created_at.getTime());
   }
 
   @Post()

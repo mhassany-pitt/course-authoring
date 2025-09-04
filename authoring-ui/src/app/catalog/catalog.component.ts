@@ -36,29 +36,6 @@ export class CatalogComponent implements OnInit {
 
   any(obj: any) { return obj; }
 
-  private TYPES_MAPPING: any = {
-    'animatedexamples': 'animated_example',
-  };
-
-  private AUTHOR_NAMES_MAPPING: any = {
-    "admin": "Administrator",
-    "Akhuseyinoglu": "Kamil Akhuseyinoglu",
-    "akhuseyinoglu": "Kamil Akhuseyinoglu",
-    "akhuseyinoglu&Thea Wang": " Kamil Akhuseyinoglu & Thea Wang",
-    "akhuseyinoglu&theawang": " Kamil Akhuseyinoglu & Thea Wang",
-    "Arun Balajiee": "Arun Balajiee Lekshmi Narayanan",
-    "arunb": "Arun Balajiee Lekshmi Narayanan",
-    "arunb & rully": "Arun Balajiee Lekshmi Narayanan & Rully Hendrawan",
-    "cayhorstmann": "Cay Horstmann",
-    "jab464": "Jordan Barria-Pineda",
-    "Jordan Ariel Barria Pineda": "Jordan Barria-Pineda",
-    "Jordan Barria": "Jordan Barria-Pineda",
-    "Natalya": "Natalya Goreva",
-    "odg4": "Oliver Gladys",
-    "rully": "Rully Hendrawan",
-    "rah225": "Rully Hendrawan",
-  };
-
   constructor(
     public router: Router,
     private app: AppService,
@@ -82,17 +59,9 @@ export class CatalogComponent implements OnInit {
         const opt_provider_names = new Set<string>();
 
         this.contents.forEach(content => {
-          if (content.type) {
-            if (content.type in this.TYPES_MAPPING)
-              content.type = this.TYPES_MAPPING[content.type];
-            opt_types.add(content.type);
-          }
+          if (content.type) opt_types.add(content.type);
           if (content.domain_name) opt_domain_names.add(content.domain_name);
-          if (content.author_name) {
-            if (content.author_name in this.AUTHOR_NAMES_MAPPING)
-              content.author_name = this.AUTHOR_NAMES_MAPPING[content.author_name];
-            opt_author_names.add(content.author_name);
-          }
+          if (content.author_name) opt_author_names.add(content.author_name);
           if (content.provider_name) opt_provider_names.add(content.provider_name);
         });
 
@@ -177,5 +146,6 @@ export class CatalogComponent implements OnInit {
   }
 }
 
+// TODO: speed up the export -- move it to backend so that it can be used as api
 // TODO: also provide the slc code when exporting
 // TODO: show kcs from multiple providers
