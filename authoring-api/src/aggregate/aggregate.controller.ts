@@ -27,9 +27,9 @@ export class AggregateController {
         return this.service.providers(domainId);
     }
 
-    @Get('activites')
+    @Get('activities')
     @UseGuards(AuthenticatedGuard)
-    getActivites(@Query('domain_id') domainId: string, @Query('provider_id') providerId: string) {
-        return this.service.activites(domainId, providerId);
+    getActivities(@Query('domain_id') domainId: string, @Query('provider_id') providerId: string) {
+        return this.service.activities(domainId, providerId);
     }
 }

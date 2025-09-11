@@ -156,6 +156,7 @@ export class CourseComponent implements OnInit {
       this.courses.activities(this.course.domain, provider.id)
         .subscribe((activities: any) => {
           activities.forEach((a: any) => {
+            a.tags ||= [];
             this.activitiesList.push(a);
             this.activitiesMap[a.id] = a;
           });

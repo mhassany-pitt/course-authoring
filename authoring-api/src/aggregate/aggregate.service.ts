@@ -50,7 +50,7 @@ export class AggregateService {
         );
     }
 
-    async activites(domainId: string, providerId: string) {
+    async activities(domainId: string, providerId: string) {
         return await this.agg.query(
             'select content_id as id, provider_id, display_name as name, creator_id as author_id, url, domain, ' +
             '(select group_concat(tag separator \',\') as tags from ent_tagging where entity_id = ent_content.content_id) as tags ' +
