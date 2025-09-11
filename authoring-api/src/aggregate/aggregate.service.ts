@@ -55,7 +55,8 @@ export class AggregateService {
             'select content_id as id, provider_id, display_name as name, creator_id as author_id, url, domain, ' +
             '(select group_concat(tag separator \',\') as tags from ent_tagging where entity_id = ent_content.content_id) as tags ' +
             'from ent_content ' +
-            'where visible = 1 and domain = ? and provider_id = ?',
+            'where visible = 1 and domain = ? and provider_id = ? ' +
+            'order by display_name desc',
             [domainId, providerId]
         );
     }
