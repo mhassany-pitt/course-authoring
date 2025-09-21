@@ -212,6 +212,17 @@ export class CourseComponent implements OnInit {
     moveItemInArray(list, event.previousIndex, event.currentIndex);
   }
 
+  removeActivity(unit: any, resource: any, aindex: number) {
+    this.confirm.confirm({
+      header: 'Remove Activity',
+      message: 'Are you sure you want to remove this activity?',
+      icon: 'pi pi-exclamation-triangle',
+      acceptButtonStyleClass: 'p-button-danger',
+      rejectButtonStyleClass: 'p-button-secondary',
+      accept: () => unit.activities[resource.id].splice(aindex, 1),
+    });
+  }
+
   forceUiRefresh(id: string) {
     this.tt[id] = true;
     setTimeout(() => delete this.tt[id], 0);
