@@ -2,8 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Course } from './course.schema';
-import { toObject, useId } from 'src/utils';
-import { exists, readJson, write, writeFile } from 'fs-extra';
+import { toObject } from 'src/utils';
 
 @Injectable()
 export class CoursesService {
@@ -21,6 +20,10 @@ export class CoursesService {
 
   async create({ user_email }) {
     return await this.courses.create({ user_email, created_at: new Date() });
+  }
+
+  async createCustom(course: any) {
+    return await this.courses.create({ ...course, created_at: new Date() });
   }
 
   async clone({ id, user_email }) {

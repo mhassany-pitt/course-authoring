@@ -26,4 +26,8 @@ export class UserAdminService {
   genUpdatePassTokens(emails: string[]) {
     return this.http.post(`${environment.apiUrl}/user-admin/update-password-tokens`, emails, { withCredentials: true });
   }
+
+  createCustomCourse(course: any) {
+    return this.http.post(`${environment.apiUrl}/courses/custom`, course, { withCredentials: true });
+  }
 }

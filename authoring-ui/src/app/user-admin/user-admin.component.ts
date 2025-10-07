@@ -43,7 +43,7 @@ export class UserAdminComponent {
 
   constructor(
     public router: Router,
-    private app: AppService,
+    public app: AppService,
     private service: UserAdminService,
   ) { }
 
@@ -138,5 +138,28 @@ export class UserAdminComponent {
         next: (resp: any) => this.reload(),
         error: (error: any) => { console.log(error) },
       });
+  }
+
+  createCustomCourse(courseEl: any) {
+    const course_json = courseEl.value;
+    let course = null;
+    try {
+      course = JSON.parse(course_json);
+    } catch (e) {
+      alert('Invalid Course JSON Format! -- Course JSON Array Expected!');
+      return;
+    }
+
+    this.service.createCustomCourse(course).subscribe({
+      next: (resp: any) => {
+        courseEl.value = 'Successful!\n\n' + course_json;
+        setTimeout(() => courseEl.value = course_json, 3000);
+        alert('Courses Created!')
+      },
+      error: (err: any) => {
+        alert('Error! See console for details.');
+        console.log(err);
+      },
+    });
   }
 }

@@ -89,6 +89,23 @@
         </tr>
       </ng-template>
     </p-table>
+
+    <hr class="w-full" />
+
+    <div *ngIf="app.user?.email == 'moh70@pitt.edu'" class="flex flex-col gap-2 p-4 pt-0">
+      <span class="text-xs">
+        Instruction: Use the following textarea to create a new course -- e.g.: if you want to import a course from
+        previous course authoring tool!
+      </span>
+      <textarea #course rows="5" pInputTextarea placeholder="a valid json array which contains course objects"
+        class="w-full p-inputtext-sm"></textarea>
+      <div class="text-right">
+        <button pButton type="button" label="Create Course(s)" icon="pi pi-check"
+          class="p-button-sm p-button-secondary p-button-outlined" (click)="createCustomCourse(course)"
+          [disabled]="!course.value">
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 

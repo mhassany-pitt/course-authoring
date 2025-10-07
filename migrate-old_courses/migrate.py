@@ -15,7 +15,9 @@ prev_providers = {p["id"]: {"id":p["id"], "name":p["name"], "domain": p["domainI
 prev_authors = {a["name"]: a for a in prev["authors"]}
 # prev_domains = {d["id"]: d for d in prev["domains"]}
 
-idseq = 1737000000000
+# prev_providers['pcex_activity'] = {"id":"pcex_activity", "name":"PCEx Activities", "domain":"pcex"}
+
+idseq = 1790000000000
 def next_idseq():
     global idseq
     idseq += 1

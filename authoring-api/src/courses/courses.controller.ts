@@ -1,5 +1,5 @@
 import {
-  Controller, Delete, Get, HttpException, Param, Patch,
+  Body, Controller, Delete, Get, HttpException, Param, Patch,
   Post, Query, Request, UseGuards
 } from '@nestjs/common';
 import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
@@ -32,6 +32,14 @@ export class CoursesController {
   async create(@Request() req: any) {
     const course = await this.courses.create({ user_email: req.user.email });
     return useId(toObject(course));
+  }
+
+  @Post('custom')
+  @UseGuards(AuthenticatedGuard)
+  async createCustom(@Request() req: any, @Body() course: any) {
+    if (req.user.email != 'moh70@pitt.edu')
+      throw new HttpException('not allowed!', 403);
+    return useId(toObject(await this.courses.createCustom(course)));
   }
 
   @Get('modulearn')
