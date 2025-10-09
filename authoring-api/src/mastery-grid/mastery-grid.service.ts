@@ -184,6 +184,9 @@ export class MasteryGridService {
 
     async setStudentPasswords(students: any[], passwords: any) {
         for (const student of students) {
+            if (student.email)
+                student.email = student.email.toLowerCase().trim();
+
             if (!validate(student.email))
                 continue;
 
