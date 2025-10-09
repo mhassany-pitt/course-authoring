@@ -288,12 +288,9 @@ export class MasteryGridService {
 
         // find all unique provider ids
         const appIds = new Set<number>([1]);
-        for (const resource of (resources || []))
-            for (const provider of (resource.providers || [])) {
-                const providerId = provider.id.trim();
-                if (providerId in PROVIDER_TO_APPID)
-                    appIds.add(PROVIDER_TO_APPID[providerId]);
-            }
+        for (const resource of (resources || [])) for (const provider of (resource.providers || [])) {
+            PROVIDER_TO_APPID[provider.id.trim()]?.forEach(appId => appIds.add(appId));
+        }
 
         // insert apps for the group
         for (const appId of appIds) await um2.query(
@@ -454,30 +451,30 @@ export class MasteryGridService {
     }
 }
 
-const PROVIDER_TO_APPID = {
-    'animatedexamples': 35,
-    'codecheck': 56,
-    'codelab': 52,
-    'codeocean': 54,
-    'codeworkout': 49,
-    'ctat': 50,
-    'dbqa': 53,
-    'educvideos': 40,
-    'mchq': 42,
-    'parsons': 48,
-    'pcex': 46,
-    'pcex_ch': 47,
-    'pcrs': 44,
-    'quizjet': 25,
-    'quizpack': 2,
-    'quizpet': 41,
-    'readingmirror': 55,
-    'salt': 37,
-    'sqlknot': 23,
-    'sqltutor': 19,
-    'webex': 3,
-    'video': 1,
-    'pcex_activities': 1,
+const PROVIDER_TO_APPID: { [provider: string]: number[] } = {
+    'animatedexamples': [35],
+    'codecheck': [56],
+    'codelab': [52],
+    'codeocean': [54],
+    'codeworkout': [49],
+    'ctat': [50],
+    'dbqa': [53],
+    'educvideos': [40],
+    'mchq': [42],
+    'parsons': [38, 48],
+    'pcex': [46],
+    'pcex_ch': [47],
+    'pcrs': [44],
+    'quizjet': [25],
+    'quizpack': [2],
+    'quizpet': [41],
+    'readingmirror': [55],
+    'salt': [37],
+    'sqlknot': [23],
+    'sqltutor': [19],
+    'webex': [3],
+    'video': [1],
+    'pcex_activities': [1],
 };
 
 export interface User {
