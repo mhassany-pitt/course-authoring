@@ -5,18 +5,19 @@ import { CatalogService } from './catalog.service';
 export class CatalogController {
 
   private TYPES_MAPPING: any = {
+    "animatedexample": "Animated Example",
     "animated_example": "Animated Example",
     "educvideos": "Educational Videos",
     "example": "Example",
-    "lesslet": "Lesson Let",
-    "mchq": "Multiple Choice Questions",
+    "lesslet": "LessLet",
+    "mchq": "Multiple Choice Questions (MCHQ)",
     "opendsa_problems": "OpenDSA Problems",
     "opendsa_slideshows": "OpenDSA Slideshows",
     "parsons": "Parsons Problems",
     "pcex_set": "PCEX Set",
     "pcex_activity": "PCEX Activity",
     "pcex_challenge": "PCEX Challenge",
-    "pcrs": "Programming Course Resource System - PCRS",
+    "pcrs": "Programming Course Resource System (PCRS)",
     "question": "Question",
     "readingmirror": "ReadingMirror"
   };
