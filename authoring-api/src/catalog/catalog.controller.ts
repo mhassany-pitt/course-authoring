@@ -5,7 +5,20 @@ import { CatalogService } from './catalog.service';
 export class CatalogController {
 
   private TYPES_MAPPING: any = {
-    'animatedexamples': 'animated_example',
+    "animated_example": "Animated Example",
+    "educvideos": "Educational Videos",
+    "example": "Example",
+    "lesslet": "Lesson Let",
+    "mchq": "Multiple Choice Questions",
+    "opendsa_problems": "OpenDSA Problems",
+    "opendsa_slideshows": "OpenDSA Slideshows",
+    "parsons": "Parsons Problems",
+    "pcex_set": "PCEX Set",
+    "pcex_activity": "PCEX Activity",
+    "pcex_challenge": "PCEX Challenge",
+    "pcrs": "Programming Course Resource System - PCRS",
+    "question": "Question",
+    "readingmirror": "ReadingMirror"
   };
 
   private AUTHOR_NAMES_MAPPING: any = {
