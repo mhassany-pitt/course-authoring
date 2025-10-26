@@ -1,19 +1,19 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 import { CatalogService } from './catalog.service';
 
 @Controller('catalog')
 export class CatalogController {
 
   private TYPES_MAPPING: any = {
-    "animatedexample": "Animated Example",
+    "animatedexamples": "Animated Example",
     "animated_example": "Animated Example",
-    "educvideos": "Educational Videos",
+    "educvideos": "Educational Video",
     "example": "Example",
     "lesslet": "LessLet",
     "mchq": "Multiple Choice Questions (MCHQ)",
-    "opendsa_problems": "OpenDSA Problems",
-    "opendsa_slideshows": "OpenDSA Slideshows",
-    "parsons": "Parsons Problems",
+    "opendsa_problems": "OpenDSA Problem",
+    "opendsa_slideshows": "OpenDSA Slideshow",
+    "parsons": "Parsons Problem",
     "pcex_set": "PCEX Set",
     "pcex_activity": "PCEX Activity",
     "pcex_challenge": "PCEX Challenge",
@@ -26,8 +26,9 @@ export class CatalogController {
     "admin": "Administrator",
     "Akhuseyinoglu": "Kamil Akhuseyinoglu",
     "akhuseyinoglu": "Kamil Akhuseyinoglu",
-    "akhuseyinoglu&Thea Wang": " Kamil Akhuseyinoglu & Thea Wang",
-    "akhuseyinoglu&theawang": " Kamil Akhuseyinoglu & Thea Wang",
+    "akhuseyinoglu&Thea Wang": "Kamil Akhuseyinoglu & Thea Wang",
+    "akhuseyinoglu&theawang": "Kamil Akhuseyinoglu & Thea Wang",
+    "Thea Wang & Kamil Akhuseyinoglu": "Kamil Akhuseyinoglu & Thea Wang",
     "Arun Balajiee": "Arun Balajiee Lekshmi Narayanan",
     "arunb": "Arun Balajiee Lekshmi Narayanan",
     "arunb & rully": "Arun Balajiee Lekshmi Narayanan & Rully Hendrawan",
@@ -62,8 +63,13 @@ export class CatalogController {
     return await this.service.getCourses(contentId);
   }
 
-  @Get('contents/:contentId/concepts')
-  async getConcepts(@Param('contentId') contentId: number) {
-    return await this.service.getConcepts(contentId);
+  @Get('contents/aggregate-concepts')
+  async getAggregateConcepts(@Query('contentId') contentId: number) {
+    return await this.service.getAggregateConcepts(contentId);
+  }
+
+  @Get('contents/um2-concepts')
+  async getUM2Concepts(@Query('activityName') activityName: string) {
+    return await this.service.getUM2Concepts(activityName);
   }
 }

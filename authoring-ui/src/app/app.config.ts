@@ -11,12 +11,17 @@ import { AuthenticatedGuard } from './auth-guards/authenticated.guard';
 import { PublicGuard } from './auth-guards/public.guard';
 import { provideHttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideHighlightOptions } from 'ngx-highlightjs';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes, withHashLocation()),
     provideHttpClient(),
     importProvidersFrom(BrowserAnimationsModule),
+    provideHighlightOptions({
+      fullLibraryLoader: () => import('highlight.js'),
+      lineNumbersLoader: () => import('ngx-highlightjs/line-numbers'),
+    }),
     AppService, CoursesService,
     AuthenticatedAuthorGuard, HandshakeGuard,
     AppAdminGuard, AuthenticatedGuard, PublicGuard,

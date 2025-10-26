@@ -12,4 +12,8 @@ export type ContentDto = {
   author_id: string;
   author_name: string;
   creation_date: string;
+  problem_statement?: string;
+  code?: string;
+  iframe_url?: any;
+  metadata?: any;
 }

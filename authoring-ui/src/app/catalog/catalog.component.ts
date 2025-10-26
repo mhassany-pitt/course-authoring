@@ -28,8 +28,9 @@ export class CatalogComponent implements OnInit {
   preview: boolean = false;
   selected: ContentDto = null as any;
   selected_courses: CourseDto[] = [];
-  selected_concepts: ConceptDto[] = [];
-  selected_concept_sources: Set<string> = new Set<string>();
+  selected_aggconcept_sources: Set<string> = new Set<string>();
+  selected_aggconcepts: ConceptDto[] = [];
+  selected_um2concepts: any[] = [];
 
   selection: ContentDto[] = [];
   export_status: string = '';
@@ -63,6 +64,7 @@ export class CatalogComponent implements OnInit {
           if (content.domain_name) opt_domain_names.add(content.domain_name);
           if (content.author_name) opt_author_names.add(content.author_name);
           if (content.provider_name) opt_provider_names.add(content.provider_name);
+          content.problem_statement = content.problem_statement?.replace(/\\n/g, '\n');
         });
 
         this.opt_types = [...opt_types].sort();
@@ -79,15 +81,19 @@ export class CatalogComponent implements OnInit {
   selectContent(content: ContentDto) {
     this.preview = true;
     this.selected = content;
+    this.selected.iframe_url = this.sanitizer.bypassSecurityTrustResourceUrl(content.iframe_url || content.url);
     this.loadCourses(content.id);
-    this.loadConcepts(content.id);
+    this.loadAggregateConcepts(content.id);
+    this.loadUM2Concepts(content.short_name);
   }
 
   unselectContent() {
     this.preview = false;
     this.selected = null as any;
     this.selected_courses = [];
-    this.selected_concepts = [];
+    this.selected_aggconcept_sources = new Set<string>();
+    this.selected_aggconcepts = [];
+    this.selected_um2concepts = [];
   }
 
   loadCourses(contentId: number) {
@@ -101,13 +107,12 @@ export class CatalogComponent implements OnInit {
     });
   }
 
-  loadConcepts(contentId: number) {
-    this.service.getConcepts(contentId).subscribe({
+  loadAggregateConcepts(contentId: number) {
+    this.service.getAggregateConcepts(contentId).subscribe({
       next: (data) => {
-        this.selected_concept_sources = new Set<string>();
-        data.forEach(c => this.selected_concept_sources.add(c.source));
-
-        this.selected_concepts = data;
+        this.selected_aggconcept_sources = new Set<string>();
+        data.forEach(c => this.selected_aggconcept_sources.add(c.source));
+        this.selected_aggconcepts = data;
       },
       error: (error) => {
         console.error('Error fetching concepts:', error);
@@ -115,8 +120,19 @@ export class CatalogComponent implements OnInit {
     });
   }
 
-  getConcepts(source: string): string {
-    return this.selected_concepts.filter(c => c.source == source).map(c => c.name).join(', ');
+  loadUM2Concepts(activityName: string) {
+    this.service.getUM2Concepts(activityName).subscribe({
+      next: (data) => {
+        this.selected_um2concepts = data;
+      },
+      error: (error) => {
+        console.error('Error fetching concepts:', error);
+      }
+    });
+  }
+
+  getAggregateConcepts(source: string): string {
+    return this.selected_aggconcepts.filter(c => c.source == source).map(c => c.name).join(', ');
   }
 
   async export() {
@@ -126,7 +142,8 @@ export class CatalogComponent implements OnInit {
     for (let i = 0; i < this.selection.length; i++) {
       this.export_status = `Exporting ${i + 1} of ${this.selection.length}...`;
       const item = JSON.parse(JSON.stringify(this.selection[i]));
-      item.concepts = await firstValueFrom(this.service.getConcepts(item.id));
+      item.aggregate_concepts = await firstValueFrom(this.service.getAggregateConcepts(item.id));
+      item.um2_concepts = await firstValueFrom(this.service.getUM2Concepts(item.short_name));
       item.courses = await firstValueFrom(this.service.getCourses(item.id));
       selection.push(item);
     }

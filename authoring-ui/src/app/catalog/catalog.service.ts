@@ -19,7 +19,11 @@ export class CatalogService {
     return this.http.get<CourseDto[]>(`${environment.apiUrl}/catalog/contents/${contentId}/courses`, { withCredentials: true });
   }
 
-  getConcepts(contentId: number) {
-    return this.http.get<any[]>(`${environment.apiUrl}/catalog/contents/${contentId}/concepts`, { withCredentials: true });
+  getAggregateConcepts(contentId: number) {
+    return this.http.get<any[]>(`${environment.apiUrl}/catalog/contents/aggregate-concepts`, { params: { contentId }, withCredentials: true });
+  }
+
+  getUM2Concepts(activityName: string) {
+    return this.http.get<any[]>(`${environment.apiUrl}/catalog/contents/um2-concepts`, { params: { activityName }, withCredentials: true });
   }
 }

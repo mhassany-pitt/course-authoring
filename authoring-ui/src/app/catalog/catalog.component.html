@@ -97,58 +97,103 @@
   <ng-template pTemplate="header">
     <h1>{{ selected.name }}</h1>
   </ng-template>
-  <table *ngIf="selected" class="w-full parent-courses">
-    <tr>
-      <td class="font-bold">ID:</td>
-      <td>{{ selected.id }}</td>
-    </tr>
-    <tr>
-      <td class="font-bold">Name:</td>
-      <td>{{ selected.name }}</td>
-    </tr>
-    <tr>
-      <td class="font-bold">Domain:</td>
-      <td>{{ selected.domain_name }}</td>
-    </tr>
-    <tr>
-      <td class="font-bold">Type:</td>
-      <td>{{ selected.type }}</td>
-    </tr>
-    <tr>
-      <td class="font-bold">Provider:</td>
-      <td>{{ selected.provider_name }}</td>
-    </tr>
-    <tr>
-      <td class="font-bold">Author:</td>
-      <td>{{ selected.author_name }}</td>
-    </tr>
-    <tr>
-      <td class="font-bold">Date:</td>
-      <td>{{ selected.creation_date | date:"medium" }}</td>
-    </tr>
-    <tr>
-      <td class="font-bold">Description:</td>
-      <td>{{ selected.description || '&lt;&lt;empty&gt;&gt;' }}</td>
-    </tr>
-    <tr>
-      <td class="font-bold">Concepts:</td>
-      <td>
-        <div class="flex flex-col gap-2">
-          <div *ngFor="let source of selected_concept_sources">
-            <span class="font-bold capitalize">{{ source }}:</span>
-            <span class="italic"> {{ getConcepts(source) || 'None' }}</span>
-          </div>
-          <div *ngIf="!selected_concept_sources.size">
-            <span class="italic">&lt;&lt;empty&gt;&gt;</span>
-          </div>
+  <p-tabView *ngIf="selected" class="inline-block w-full h-full">
+    <p-tabPanel header="General">
+      <table class="w-full general-info-table">
+        <tr>
+          <td class="font-bold">ID:</td>
+          <td>{{ selected.id }}</td>
+        </tr>
+        <tr>
+          <td class="font-bold">Name:</td>
+          <td>{{ selected.name }}</td>
+        </tr>
+        <tr>
+          <td class="font-bold">Domain:</td>
+          <td>{{ selected.domain_name }}</td>
+        </tr>
+        <tr>
+          <td class="font-bold">Type:</td>
+          <td>{{ selected.type }}</td>
+        </tr>
+        <tr>
+          <td class="font-bold">Provider:</td>
+          <td>{{ selected.provider_name }}</td>
+        </tr>
+        <tr>
+          <td class="font-bold">Description:</td>
+          <td>{{ selected.description || '&lt;&lt;empty&gt;&gt;' }}</td>
+        </tr>
+        <tr>
+          <td class="font-bold">Author:</td>
+          <td>{{ selected.author_name }}</td>
+        </tr>
+        <tr>
+          <td class="font-bold">Date:</td>
+          <td>{{ selected.creation_date | date:"medium" }}</td>
+        </tr>
+        <tr>
+          <td class="font-bold">Problem Statement:</td>
+          <td>{{ selected.problem_statement || '&lt;&lt;empty&gt;&gt;' }}</td>
+        </tr>
+        <tr>
+          <td class="font-bold">Source Code:</td>
+          <td>
+            <ng-container *ngIf="!selected.code">
+              {{ '&lt;&lt;empty&gt;&gt;' }}
+            </ng-container>
+            <pre *ngIf="selected.code" class="m-0 ml-2"><code 
+              [highlight]="selected.code" 
+              [language]="selected.domain_id" lineNumbers 
+              style="padding: 0;"></code></pre>
+          </td>
+        </tr>
+      </table>
+    </p-tabPanel>
+    <p-tabPanel header="Concepts">
+      <div class="flex flex-col gap-2 h-full">
+        <div class="font-bold">Assigned Concepts:</div>
+        <p-table *ngIf="selected_um2concepts?.length" [value]="selected_um2concepts"
+          styleClass="p-datatable-sm p-datatable-striped w-full ml-2">
+          <ng-template pTemplate="header">
+            <tr>
+              <th colspan="2">Activity</th>
+              <th colspan="4">Concept</th>
+            </tr>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Weight</th>
+              <th>Direction</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-concept>
+            <tr>
+              <td>{{ concept.ActivityName }}</td>
+              <td>{{ concept.ActivityDescription }}</td>
+              <td>{{ concept.ConceptTitle }}</td>
+              <td>{{ concept.ConceptDescription }}</td>
+              <td>{{ concept.ConceptWeight }}</td>
+              <td>{{ concept.ConceptDirection }}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+        <div *ngFor="let source of selected_aggconcept_sources" class="ml-2">
+          <span class="font-bold capitalize">{{ source }}:</span>
+          <span class="italic"> {{ getAggregateConcepts(source) || 'None' }}</span>
         </div>
-      </td>
-    </tr>
-    <tr>
-      <td class="font-bold align-top">Used in ({{ selected_courses.length }}) Courses:</td>
-      <td class="flex-grow">
-        <p-table [value]="selected_courses" dataKey="id" styleClass="p-datatable-sm p-datatable-striped w-full"
-          [scrollable]="true" scrollHeight="20rem">
+        <div *ngIf="!selected_um2concepts?.length && !selected_aggconcept_sources.size" class="italic ml-2">
+          &lt;&lt;empty&gt;&gt;
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Courses">
+      <div class="flex flex-col gap-2 h-full">
+        <div class="font-bold">Used in {{ selected_courses.length }} Courses:</div>
+        <p-table *ngIf="selected_courses.length" [value]="selected_courses" dataKey="id"
+          styleClass="p-datatable-sm p-datatable-striped w-full ml-2">
           <ng-template pTemplate="header">
             <tr>
               <th class="text-center">ID</th>
@@ -171,32 +216,20 @@
               <td class="text-sm">{{ course.unit_name }}</td>
             </tr>
           </ng-template>
-          <ng-template pTemplate="emptymessage">
-            <tr>
-              <td colspan="3" class="text-center">
-                <span class="italic">&lt;&lt;empty&gt;&gt;</span>
-              </td>
-            </tr>
-          </ng-template>
         </p-table>
-      </td>
-    </tr>
-    <tr>
-      <td class="font-bold align-top">
+        <div *ngIf="!selected_courses.length" class="italic ml-2">
+          &lt;&lt;empty&gt;&gt;
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Preview">
+      <div class="flex flex-col gap-2 h-full">
         <a [href]="selected.url" target="_blank">
-          Preview <i class="pi pi-external-link text-xs"></i>:
+          <span>Open in New Tab </span>
+          <i class="pi pi-external-link text-xs"></i>
         </a>
-      </td>
-      <td class="flex flex-col gap-1 flex-grow">
-        <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(selected.url)" class="flex-grow h-96"></iframe>
-        <span>
-          Tip: In case of an error, try
-          <a [href]="selected.url" target="_blank">
-            opening in a new browser tab
-            <i class="pi pi-external-link text-xs"></i>
-          </a>.
-        </span>
-      </td>
-    </tr>
-  </table>
+        <iframe [src]="selected.iframe_url" class="flex-grow"></iframe>
+      </div>
+    </p-tabPanel>
+  </p-tabView>
 </p-sidebar>

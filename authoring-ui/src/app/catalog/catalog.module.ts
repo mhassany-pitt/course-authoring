@@ -16,6 +16,10 @@ import { SidebarModule } from 'primeng/sidebar';
 import { TooltipModule } from 'primeng/tooltip';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ButtonModule } from 'primeng/button';
+import { TabViewModule } from 'primeng/tabview';
+
+import { Highlight, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { HighlightLineNumbers } from 'ngx-highlightjs/line-numbers';
 
 @NgModule({
   declarations: [
@@ -26,12 +30,13 @@ import { ButtonModule } from 'primeng/button';
     RouterModule.forChild(routes),
     TableModule, DropdownModule,
     InputTextModule, UserAuthCtrlModule,
-    SidebarModule, TooltipModule,
-    DropdownModule, MultiSelectModule,
-    ButtonModule,
+    SidebarModule, TooltipModule, TabViewModule,
+    MultiSelectModule, ButtonModule,
+    Highlight, HighlightLineNumbers,
   ],
   providers: [
-    CatalogService
+    CatalogService,
+    { provide: HIGHLIGHT_OPTIONS, useValue: { themePath: 'assets/styles/solarized-dark.css' } }
   ]
 })
 export class CatalogModule { }
