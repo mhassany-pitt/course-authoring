@@ -26,8 +26,15 @@
         [globalFilterFields]="['name', 'author_name', 'type', 'domain_name', 'provider_name', 'creation_date']"
         styleClass="p-datatable-sm p-datatable-striped">
         <ng-template pTemplate="caption">
-          <input #searchInputEl type="text" name="name" pInputText placeholder="Search ..."
-            class="text-xl border-gray-200 w-full" (input)="tb.filterGlobal(any($event.target).value, 'contains')" />
+          <div class="flex items-center gap-2">
+            <input #searchInputEl type="text" name="name" pInputText placeholder="Search ..."
+              class="text-xl border-gray-200 w-full" (input)="tb.filterGlobal(any($event.target).value, 'contains')" />
+
+            <a href="https://docs.google.com/document/d/1URcBdMdkGWGlx7Z5cXrb9T_Oiqkfn1BEV7P3CBLleJo/edit?usp=sharing"
+              target="_blank">
+              <p-button type="button" label="Documentation" icon="fa fa-book" />
+            </a>
+          </div>
         </ng-template>
         <ng-template pTemplate="header">
           <tr>
@@ -224,11 +231,11 @@
     </p-tabPanel>
     <p-tabPanel header="Preview">
       <div class="flex flex-col gap-2 h-full">
-        <a [href]="selected.url" target="_blank">
+        <a [href]="selected.preview_url" target="_blank">
           <span>Open in New Tab </span>
           <i class="pi pi-external-link text-xs"></i>
         </a>
-        <iframe [src]="selected.iframe_url" class="flex-grow"></iframe>
+        <iframe [src]="selected.preview_url" class="flex-grow"></iframe>
       </div>
     </p-tabPanel>
   </p-tabView>

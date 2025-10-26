@@ -20,7 +20,7 @@ export class CatalogService {
         ec.desc AS description,
         eca.description AS problem_statement,
         eca.code AS code,
-        eca.iframe_url AS iframe_url,
+        eca.preview_url AS preview_url,
         eca.metadata AS metadata,
         ec.url AS url,
         ec.domain AS domain_id,
