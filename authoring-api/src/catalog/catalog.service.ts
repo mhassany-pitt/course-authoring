@@ -128,4 +128,18 @@ export class CatalogService {
     });
     return concepts;
   }
+
+  async getPCRSCodeSubmissions(activityName: string) {
+    const query = `
+      SELECT eua.AllParameters 
+      FROM ent_user_activity eua 
+      JOIN ent_activity ea ON ea.ActivityID = eua.ActivityID 
+      WHERE eua.AppID = 44 AND ea.Activity = ? 
+      ORDER BY eua.DateNTime DESC
+    `;
+    const submissions = await this.um2.query(query, [activityName]);
+    return submissions.filter((s: any) => s.AllParameters.includes(';fullcod=')).map((s: any) => {
+      return { code: s.AllParameters.split(';fullcod=')[1] };
+    });
+  }
 }
