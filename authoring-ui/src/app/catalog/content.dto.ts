@@ -15,5 +15,6 @@ export type ContentDto = {
   problem_statement?: string;
   code?: string;
   preview_url?: any;
+  preview_iframe_url?: any;
   metadata?: any;
 }

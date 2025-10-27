@@ -81,7 +81,8 @@ export class CatalogComponent implements OnInit {
   selectContent(content: ContentDto) {
     this.preview = true;
     this.selected = content;
-    this.selected.preview_url = this.sanitizer.bypassSecurityTrustResourceUrl(content.preview_url || content.url);
+    this.selected.preview_url = content.preview_url || content.url;
+    this.selected.preview_iframe_url = this.sanitizer.bypassSecurityTrustResourceUrl(this.selected.preview_url);
     this.loadCourses(content.id);
     this.loadAggregateConcepts(content.id);
     this.loadUM2Concepts(content.short_name);

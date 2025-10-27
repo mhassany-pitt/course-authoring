@@ -72,4 +72,9 @@ export class CatalogController {
   async getUM2Concepts(@Query('activityName') activityName: string) {
     return await this.service.getUM2Concepts(activityName);
   }
+
+  @Get('contents/pcrs/code-submissions')
+  async getPCRSCodeSubmissions(@Query('activityName') activityName: string) {
+    return await this.service.getPCRSCodeSubmissions(activityName);
+  }
 }

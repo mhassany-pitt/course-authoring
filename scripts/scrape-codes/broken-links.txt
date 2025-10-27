@@ -1,3 +1,24 @@
+COUNT    | SLC URL Pattern
+-----------------------------------------------------
+     165 | "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=...",
+     116 | "http://columbus.exp.sis.pitt.edu/sql_ae/sqlAE.html?act=...",
+     108 | "http://adapt2.sis.pitt.edu/sqlknot/index.html?cid=...",
+      82 | "http://columbus.exp.sis.pitt.edu/mc_question_authoring/client/mcquestion.jsp?act=...",
+      50 | "http://adapt2.sis.pitt.edu/lti/launch?tool=dbqa&sub=...",
+      48 | "http://adapt2.sis.pitt.edu/lti/launch?tool=opendsa_slideshows&sub=...",
+      45 | "http://columbus.exp.sis.pitt.edu/educvideos/loadVideo.html?videoid=...",
+      30 | "http://tycho.exp.sis.pitt.edu/SALT_MG/Home/ShowPage?lmid=...",
+      25 | "http://adapt2.sis.pitt.edu/lti/launch?tool=opendsa_problems&sub=...",
+      23 | "http://adapt2.sis.pitt.edu/lti/launch?tool=codeworkout&sub=...",
+       3 | "http://adapt2.sis.pitt.edu/lti/launch?tool=codecheck&sub=...",
+       1 | "http://adapt2.sis.pitt.edu/lti/launch?tool=codelab&sub=...",
+       1 | "http://adapt2.sis.pitt.edu/lti/launch?tool=codeocean&sub=...",
+       1 | "http://adapt2.sis.pitt.edu/lti/launch?tool=ctat&sub=...",
+       1 | "http://columbus.exp.sis.pitt.edu/educvideos/loadVideo.php?videoid=...",
+-----------------------------------------------------
+     699 | TOTAL SLC URLs
+      15 | DISTINCT SLC URL Patterns
+-----------------------------------------------------
 "http://adapt2.sis.pitt.edu/lti/launch?tool=codecheck&sub=codecheck-python-StringsNoLoops-2",
 "http://adapt2.sis.pitt.edu/lti/launch?tool=codecheck&sub=ebook-py-2-ch01-sec05-int1-1",
 "http://adapt2.sis.pitt.edu/lti/launch?tool=codecheck&sub=ebook-py-3-ch01-sec05-exampletable-1",
