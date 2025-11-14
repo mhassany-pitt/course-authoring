@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CatalogService } from './catalog.service';
 import { ContentDto } from './content.dto';
 import { getNavLinks } from '../utils';
@@ -8,6 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { CourseDto } from './course.dto';
 import { ConceptDto } from './concept.dto';
 import { firstValueFrom } from 'rxjs';
+import { Table } from 'primeng/table';
 
 @Component({
   selector: 'app-catalog',
@@ -17,6 +18,8 @@ import { firstValueFrom } from 'rxjs';
 export class CatalogComponent implements OnInit {
 
   navLinks = getNavLinks(this.app);
+
+  @ViewChild('tb') tb: Table | undefined;
 
   opt_types: string[] = [];
   opt_domain_names: string[] = [];
@@ -48,29 +51,31 @@ export class CatalogComponent implements OnInit {
     this.loadContents();
   }
 
+  getAttrOptions(all: any[], filtered: any[], attr: string): any[] {
+    const its: any = {};
+    all.forEach((it: any) => its[it[attr]] = 0);
+    filtered?.forEach(it => its[it[attr]] += 1);
+    return Array.from(Object.keys(its))
+      .map(k => ({ value: k, label: `${k} (${its[k]})`, count: its[k] }))
+      .sort((a, b) => b.count == a.count ? a.value.localeCompare(b.value) : b.count - a.count);
+  }
+
+  reloadFilterOptions($event?: any) {
+    const tb_filtered = this.tb?.filteredValue || this.contents;
+    this.opt_author_names = this.getAttrOptions(this.contents, tb_filtered, 'author_name');
+    this.opt_domain_names = this.getAttrOptions(this.contents, tb_filtered, 'domain_name');
+    this.opt_types = this.getAttrOptions(this.contents, tb_filtered, 'type');
+    this.opt_provider_names = this.getAttrOptions(this.contents, tb_filtered, 'provider_name');
+  }
+
   loadContents() {
     this.service.getContents().subscribe({
       next: (data: ContentDto[]) => {
         this.contents = data;
-
-        // ---- collect unique values for filters ----
-        const opt_types = new Set<string>();
-        const opt_domain_names = new Set<string>();
-        const opt_author_names = new Set<string>();
-        const opt_provider_names = new Set<string>();
-
         this.contents.forEach(content => {
-          if (content.type) opt_types.add(content.type);
-          if (content.domain_name) opt_domain_names.add(content.domain_name);
-          if (content.author_name) opt_author_names.add(content.author_name);
-          if (content.provider_name) opt_provider_names.add(content.provider_name);
           content.problem_statement = content.problem_statement?.replace(/\\n/g, '\n');
         });
-
-        this.opt_types = [...opt_types].sort();
-        this.opt_domain_names = [...opt_domain_names].sort();
-        this.opt_author_names = [...opt_author_names].sort();
-        this.opt_provider_names = [...opt_provider_names].sort();
+        this.reloadFilterOptions();
       },
       error: (error) => {
         console.error('Error fetching contents:', error);

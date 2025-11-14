@@ -24,7 +24,7 @@
       <p-table #tb [value]="contents" [(selection)]="selection" dataKey="id" paginator="true" [rows]="25"
         [rowsPerPageOptions]="[10, 25, 50, 100]"
         [globalFilterFields]="['name', 'author_name', 'type', 'domain_name', 'provider_name', 'creation_date']"
-        styleClass="p-datatable-sm p-datatable-striped">
+        styleClass="p-datatable-sm p-datatable-striped" (onFilter)="reloadFilterOptions($event)">
         <ng-template pTemplate="caption">
           <div class="flex items-center gap-2">
             <input #searchInputEl type="text" name="name" pInputText placeholder="Search ..."
@@ -48,30 +48,72 @@
             <th class="text-center" style="width: 175px;">
               <div class="flex flex-col gap-1">
                 <span>Author </span>
-                <p-multiSelect [options]="opt_author_names" (onChange)="tb.filter($event.value, 'author_name', 'in')"
-                  appendTo="body" placeholder="Filter ..." scrollHeight="25rem"></p-multiSelect>
+                <p-multiSelect [options]="opt_author_names" [showClear]="true"
+                  (onChange)="tb.filter($event.value, 'author_name', 'in')"
+                  (onClear)="tb.filter('', 'author_name', 'in')" appendTo="body" placeholder="Filter ..."
+                  scrollHeight="25rem">
+                  <ng-template let-item pTemplate="item">
+                    <span [class.text-gray-400]="item.count < 1">{{ item.label }}</span>
+                  </ng-template>
+                  <ng-template pTemplate="footer">
+                    <span class="block p-1 text-gray-600 text-xs bg-gray-100">
+                      Note: Count represents the number of matches in the filtered rows.
+                    </span>
+                  </ng-template>
+                </p-multiSelect>
               </div>
             </th>
             <th class="text-center" style="width: 175px;">
               <div class="flex flex-col gap-1">
                 <span>Domain </span>
-                <p-multiSelect [options]="opt_domain_names" (onChange)="tb.filter($event.value, 'domain_name', 'in')"
-                  appendTo="body" placeholder="Filter ..." scrollHeight="25rem"></p-multiSelect>
+                <p-multiSelect [options]="opt_domain_names" [showClear]="true"
+                  (onChange)="tb.filter($event.value, 'domain_name', 'in')"
+                  (onClear)="tb.filter('', 'domain_name', 'in')" appendTo="body" placeholder="Filter ..."
+                  scrollHeight="25rem">
+                  <ng-template let-item pTemplate="item">
+                    <span [class.text-gray-400]="item.count < 1">{{ item.label }}</span>
+                  </ng-template>
+                  <ng-template pTemplate="footer">
+                    <span class="block p-1 text-gray-600 text-xs bg-gray-100">
+                      Note: Count represents the number of matches in the filtered rows.
+                    </span>
+                  </ng-template>
+                </p-multiSelect>
               </div>
             </th>
             <th class="text-center" style="width: 175px;">
               <div class="flex flex-col gap-1">
                 <span>Type </span>
-                <p-multiSelect [options]="opt_types" (onChange)="tb.filter($event.value, 'type', 'in')" appendTo="body"
-                  placeholder="Filter ..." scrollHeight="25rem"></p-multiSelect>
+                <p-multiSelect [options]="opt_types" [showClear]="true"
+                  (onChange)="tb.filter($event.value, 'type', 'in')" (onClear)="tb.filter('', 'type', 'in')"
+                  appendTo="body" placeholder="Filter ..." scrollHeight="25rem">
+                  <ng-template let-item pTemplate="item">
+                    <span [class.text-gray-400]="item.count < 1">{{ item.label }}</span>
+                  </ng-template>
+                  <ng-template pTemplate="footer">
+                    <span class="block p-1 text-gray-600 text-xs bg-gray-100">
+                      Note: Count represents the number of matches in the filtered rows.
+                    </span>
+                  </ng-template>
+                </p-multiSelect>
               </div>
             </th>
             <th class="text-center" style="width: 175px;">
               <div class="flex flex-col gap-1">
                 <span>Provider </span>
-                <p-multiSelect [options]="opt_provider_names"
-                  (onChange)="tb.filter($event.value, 'provider_name', 'in')" appendTo="body" placeholder="Filter ..."
-                  scrollHeight="25rem"></p-multiSelect>
+                <p-multiSelect [options]="opt_provider_names" [showClear]="true"
+                  (onChange)="tb.filter($event.value, 'provider_name', 'in')"
+                  (onClear)="tb.filter('', 'provider_name', 'in')" appendTo="body" placeholder="Filter ..."
+                  scrollHeight="25rem">
+                  <ng-template let-item pTemplate="item">
+                    <span [class.text-gray-400]="item.count < 1">{{ item.label }}</span>
+                  </ng-template>
+                  <ng-template pTemplate="footer">
+                    <span class="block p-1 text-gray-600 text-xs bg-gray-100">
+                      Note: Count represents the number of matches in the filtered rows.
+                    </span>
+                  </ng-template>
+                </p-multiSelect>
               </div>
             </th>
             <th pSortableColumn="creation_date" class="text-center" style="width: 195px;">
