@@ -220,15 +220,8 @@
                   </td>
                   <ng-container *ngFor="let resource of course.resources; let rindex = index;">
                     <td *ngIf="resource.providers?.length" class="relative align-top resource-col">
-                      <div class="flex flex-col justify-start">
-                        <p-button type="button" [label]="unit.activities?.[resource.id]?.length
-                                                    ? (unit.activities?.[resource.id]?.length || 0) + ' activities'
-                                                    : 'click here to add activities for this unit.'" icon="fa fa-edit"
-                          severity="secondary" [text]="true" class="p-button-xs"
-                          (click)="editUnitActivities(unit, resource)">
-                        </p-button>
-                        <div cdkDropList *ngIf="unit.activities?.[resource.id]?.length > 0"
-                          class="flex flex-col items-start text-sm ml-2"
+                      <div class="flex flex-col justify-start gap-1 p-1">
+                        <div cdkDropList *ngIf="unit.activities?.[resource.id]?.length > 0" class="text-sm"
                           (cdkDropListDropped)="rearrange($event, unit.activities[resource.id])">
                           <span *ngFor="let activity of unit.activities[resource.id]; let aindex = index;" cdkDrag
                             class="flex items-center gap-1 overflow-hidden rounded 
@@ -242,6 +235,9 @@
                             </a>
                           </span>
                         </div>
+                        <p-button type="button" label="add activities" icon="fa fa-edit" severity="secondary"
+                          class="p-button-xs" [text]="true" (click)="editUnitActivities(unit, resource)">
+                        </p-button>
                       </div>
                     </td>
                     <td *ngIf="!resource.providers?.length && uindex == 0" [rowSpan]="course.units.length"

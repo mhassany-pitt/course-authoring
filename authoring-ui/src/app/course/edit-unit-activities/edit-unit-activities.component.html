@@ -1,7 +1,7 @@
-<p-dialog header="Edit Unit Activities" [visible]="activities" [modal]="true" [closable]="false"
-  [style]="{ 'max-width': '768px' }">
+<p-dialog header="Unit Activities" [visible]="activities" [modal]="true" [closable]="false"
+  [style]="{ 'min-width': '640px', 'max-width': '768px' }">
   <div class="flex flex-col gap-2">
-    <div>Check the activities you want to include in this unit.</div>
+    <div>Select the activities you want to include in this unit.</div>
     <p-table #dt2 [value]="filteredActivitiesList" [(selection)]="activities"
       [globalFilterFields]="['name', 'provider_id', 'author_id', 'tags']" [scrollable]="true" scrollHeight="20rem"
       [rowHover]="true" styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines">
@@ -44,12 +44,14 @@
                     [<a [href]="getPreviewLink(app.user, activity.url)" target="_blank"
                       class="no-underline text-gray-400">preview</a>]
                   </div>
-                  <span class="flex-grow"></span>
-                  <span class="text-sm">{{ activity.author_id }}</span>
                 </div>
                 <span *ngIf="activity.tags" class="text-xs">
-                  tags: <span class="italic">{{ activity.tags }}</span>
+                  keywords: <span class="italic">{{ activity.tags }}</span>
                 </span>
+              </div>
+              <div class="block text-xs text-right text-gray-600">
+                <span *ngIf="activity.author_id">{{ activity.author_id }}</span>
+                <span *ngFor="let author of activity.author" class="block">{{ author }}</span>
               </div>
             </div>
           </td>
@@ -68,7 +70,7 @@
     </p-table>
 
     <div class="flex items-center gap-2">
-      <span>{{ activities.length || 0 }} activities selected.</span>
+      <span>{{ activities.length || 0 }} of {{ list.length }} selected</span>
       <span class="flex-grow"></span>
       <p-button type="button" label="Cancel" icon="fa fa-chevron-left" severity="secondary" (click)="close.emit()">
       </p-button>

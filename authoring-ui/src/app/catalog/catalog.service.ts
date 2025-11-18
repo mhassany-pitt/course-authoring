@@ -26,4 +26,8 @@ export class CatalogService {
   getUM2Concepts(activityName: string) {
     return this.http.get<any[]>(`${environment.apiUrl}/catalog/contents/um2-concepts`, { params: { activityName }, withCredentials: true });
   }
+
+  report(content: any) {
+    return this.http.post(`${environment.apiUrl}/catalog/contents/report`, content, { withCredentials: true });
+  }
 }

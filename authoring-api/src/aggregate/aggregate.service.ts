@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
 import { InjectDataSource } from '@nestjs/typeorm';
 import mysql from 'mysql2/promise';
 import { DataSource } from 'typeorm';
+import axios from 'axios';
 
 @Injectable()
 export class AggregateService {
@@ -60,5 +60,23 @@ export class AggregateService {
             [domainId, providerId]
         );
     }
-}
 
+    async loadSpliceCatalogActivities(domainId: string) {
+        const res = await axios.get('https://splice.cs.vt.edu/api/items?programming_language=' + domainId);
+        const getProtocolUrls = (item: any) => item.protocol.reduce((urls: any, protocol: any, index: number) => {
+            urls[protocol] = item.protocol_url[index];
+            return urls;
+        }, {});
+        return res.data.results.map((item: any) => ({
+            id: `catalog.splice.${item.id}`,
+            provider_id: 'catalog.splice',
+            name: item.title,
+            author_id: null,
+            author: item.author,
+            url: item.iframe_url,
+            domain: domainId,
+            tags: item.keywords,
+            protocols: getProtocolUrls(item),
+        }));
+    }
+}

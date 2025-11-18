@@ -23,13 +23,22 @@ export class AggregateController {
 
     @Get('providers')
     @UseGuards(AuthenticatedGuard)
-    getProviders(@Query('domain_id') domainId: string) {
-        return this.service.providers(domainId);
+    async getProviders(@Query('domain_id') domainId: string) {
+        const providers = await this.service.providers(domainId);
+        // -- disable splice for now --
+        // providers.push({ id: 'catalog.splice', name: 'SPLICE Catalog', domain: domainId });
+        return providers;
     }
 
     @Get('activities')
     @UseGuards(AuthenticatedGuard)
     getActivities(@Query('domain_id') domainId: string, @Query('provider_id') providerId: string) {
-        return this.service.activities(domainId, providerId);
+        if (providerId == 'catalog.splice') {
+            // -- disable splice for now --
+            // return this.service.loadSpliceCatalogActivities(domainId);
+            return [];
+        } else {
+            return this.service.activities(domainId, providerId);
+        }
     }
 }

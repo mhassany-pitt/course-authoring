@@ -38,6 +38,8 @@ export class CatalogComponent implements OnInit {
   selection: ContentDto[] = [];
   export_status: string = '';
 
+  _t: any = {};
+
   any(obj: any) { return obj; }
 
   constructor(
@@ -69,6 +71,7 @@ export class CatalogComponent implements OnInit {
   }
 
   loadContents() {
+    this._t['loading-catalog'] = true;
     this.service.getContents().subscribe({
       next: (data: ContentDto[]) => {
         this.contents = data;
@@ -79,7 +82,8 @@ export class CatalogComponent implements OnInit {
       },
       error: (error) => {
         console.error('Error fetching contents:', error);
-      }
+      },
+      complete: () => delete this._t['loading-catalog']
     })
   }
 
@@ -167,8 +171,13 @@ export class CatalogComponent implements OnInit {
       this.selection = [];
     }, 3000);
   }
-}
 
-// TODO: speed up the export -- move it to backend so that it can be used as api
-// TODO: also provide the slc code when exporting
-// TODO: show kcs from multiple providers
+  report(content: ContentDto) {
+    const feedback = prompt(`Report content:\n - "${content.name}"\n\nPlease provide details about the issue (optional):`);
+    if (feedback === null) return; // user cancelled
+    this.service.report({ feedback, content }).subscribe({
+      next: () => alert(`Thank you for reporting content:\n - "${content.name}"`),
+      error: (err: any) => console.error('Error reporting content:', err)
+    });
+  }
+}

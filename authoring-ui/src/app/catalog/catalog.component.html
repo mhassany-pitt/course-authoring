@@ -24,7 +24,8 @@
       <p-table #tb [value]="contents" [(selection)]="selection" dataKey="id" paginator="true" [rows]="25"
         [rowsPerPageOptions]="[10, 25, 50, 100]"
         [globalFilterFields]="['name', 'author_name', 'type', 'domain_name', 'provider_name', 'creation_date']"
-        styleClass="p-datatable-sm p-datatable-striped" (onFilter)="reloadFilterOptions($event)">
+        styleClass="p-datatable-sm p-datatable-striped" (onFilter)="reloadFilterOptions($event)"
+        [loading]="_t['loading-catalog']">
         <ng-template pTemplate="caption">
           <div class="flex items-center gap-2">
             <input #searchInputEl type="text" name="name" pInputText placeholder="Search ..."
@@ -146,6 +147,10 @@
   <ng-template pTemplate="header">
     <h1>{{ selected.name }}</h1>
   </ng-template>
+
+  <p-button type="button" label="Report" icon="fa fa-flag" class="absolute top-0 right-6 z-10" severity="secondary"
+    outlined="true" (click)="report(selected)" />
+
   <p-tabView *ngIf="selected" class="inline-block w-full h-full">
     <p-tabPanel header="General">
       <table class="w-full general-info-table">
@@ -229,10 +234,14 @@
             </tr>
           </ng-template>
         </p-table>
+
+        <hr *ngIf="selected_um2concepts?.length || selected_aggconcept_sources.size" class="w-full" />
+
         <div *ngFor="let source of selected_aggconcept_sources" class="ml-2">
           <span class="font-bold capitalize">{{ source }}:</span>
           <span class="italic"> {{ getAggregateConcepts(source) || 'None' }}</span>
         </div>
+
         <div *ngIf="!selected_um2concepts?.length && !selected_aggconcept_sources.size" class="italic ml-2">
           &lt;&lt;empty&gt;&gt;
         </div>
@@ -277,6 +286,9 @@
           <span>Open in New Tab </span>
           <i class="pi pi-external-link text-xs"></i>
         </a>
+        <span class="text-sm text-gray-600">
+          Note: if preview is not working, try opening it in a new tab.
+        </span>
         <iframe [src]="selected.preview_iframe_url" class="flex-grow"></iframe>
       </div>
     </p-tabPanel>
