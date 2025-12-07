@@ -1,0 +1,494 @@
+{
+  "get_servlet_htm": {
+    "name": "ISD::HTTPGetServlet.html",
+    "description": "",
+    "language": "html",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "<!-- Fig. 19.6: HTTPGetServlet.html -->",
+        "comment": ""
+      },
+      {
+        "line": "\n<HTML>",
+        "comment": ""
+      },
+      {
+        "line": "   <HEAD>",
+        "comment": ""
+      },
+      {
+        "line": "      <TITLE>",
+        "comment": ""
+      },
+      {
+        "line": "         Servlet HTTP GET Example",
+        "comment": ""
+      },
+      {
+        "line": "      </TITLE>",
+        "comment": ""
+      },
+      {
+        "line": "   </HEAD>",
+        "comment": ""
+      },
+      {
+        "line": "   <BODY>",
+        "comment": ""
+      },
+      {
+        "line": "      <FORM",
+        "comment": ""
+      },
+      {
+        "line": "             ACTION=\"http://localhost:8080/servlet/HTTPGetServlet\"",
+        "comment": "ACTION specifies form handler, localhost means your computer, :8080 spcifies the  port, /servlet means the directory"
+      },
+      {
+        "line": "         METHOD=\"GET\">",
+        "comment": "METHOD specifies request type.\r\n"
+      },
+      {
+        "line": "         <P>Click the button to have the servlet send",
+        "comment": ""
+      },
+      {
+        "line": "            an HTML document</P>",
+        "comment": ""
+      },
+      {
+        "line": "         <INPUT TYPE=\"submit\" VALUE=\"Get HTML Document\">",
+        "comment": "Creates submit button, performs ACTION when clicked.\r\nINPUT specifies the element, TYPE specifies the \"submit\" button, VALUE specifies the label\r\n"
+      },
+      {
+        "line": "      </FORM>",
+        "comment": ""
+      },
+      {
+        "line": "   </BODY>",
+        "comment": ""
+      },
+      {
+        "line": "</HTML>",
+        "comment": ""
+      }
+    ]
+  },
+  "post_servlet_htm": {
+    "name": "ISD::HTTPPostServlet.html",
+    "description": "",
+    "language": "html",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "<!-- Fig. 19.8: HTTPPostServlet.html -->",
+        "comment": ""
+      },
+      {
+        "line": "\n<HTML>",
+        "comment": ""
+      },
+      {
+        "line": "   <HEAD>",
+        "comment": ""
+      },
+      {
+        "line": "      <TITLE>Servlet HTTP Post Example</TITLE>",
+        "comment": ""
+      },
+      {
+        "line": "   </HEAD>",
+        "comment": ""
+      },
+      {
+        "line": "\n",
+        "comment": ""
+      },
+      {
+        "line": "   <BODY>",
+        "comment": ""
+      },
+      {
+        "line": "      <FORM METHOD=\"POST\" ACTION=",
+        "comment": "Use a POST request type"
+      },
+      {
+        "line": "         \"http://localhost:8080/servlet/HTTPPostServlet\">",
+        "comment": ""
+      },
+      {
+        "line": "         What is your favorite pet?<BR><BR>",
+        "comment": ""
+      },
+      {
+        "line": "         <INPUT TYPE=radio NAME=animal VALUE=dog>Dog<BR>",
+        "comment": "Radio buttons (only one may be selected)\r\n"
+      },
+      {
+        "line": "         <INPUT TYPE=radio NAME=animal VALUE=cat>Cat<BR>",
+        "comment": ""
+      },
+      {
+        "line": "         <INPUT TYPE=radio NAME=animal VALUE=bird>Bird<BR>",
+        "comment": ""
+      },
+      {
+        "line": "         <INPUT TYPE=radio NAME=animal VALUE=snake>Snake<BR>",
+        "comment": ""
+      },
+      {
+        "line": "         <INPUT TYPE=radio NAME=animal VALUE=none CHECKED>None",
+        "comment": "Create radio buttons. Specify parameter name and value.  None is initially selected (CHECKED).\r\n"
+      },
+      {
+        "line": "         <BR><BR><INPUT TYPE=submit VALUE=\"Submit\">",
+        "comment": "Submit button (executes ACTION)\r\n"
+      },
+      {
+        "line": "         <INPUT TYPE=reset>",
+        "comment": "Returns form to original state (None selected).\r\n"
+      },
+      {
+        "line": "      </FORM>",
+        "comment": ""
+      },
+      {
+        "line": "   </BODY>",
+        "comment": ""
+      },
+      {
+        "line": "\n</HTML>",
+        "comment": ""
+      }
+    ]
+  },
+  "select_language": {
+    "name": "ISD::SelectLanguage.html",
+    "description": "",
+    "language": "html",
+    "author": "krnn",
+    "lines": [
+      {
+        "line": "<!-- Fig. 19.10: SelectLanguage.html -->\r",
+        "comment": ""
+      },
+      {
+        "line": "<HTML>\r",
+        "comment": ""
+      },
+      {
+        "line": "<HEAD>\r",
+        "comment": ""
+      },
+      {
+        "line": "   <TITLE>Cookies</TITLE> \r",
+        "comment": ""
+      },
+      {
+        "line": "</HEAD>\r",
+        "comment": ""
+      },
+      {
+        "line": "<BODY>\r",
+        "comment": ""
+      },
+      {
+        "line": "   <FORM ACTION=\"http://localhost:8080/servlet/CookieExample\"\r",
+        "comment": ""
+      },
+      {
+        "line": "         METHOD=\"POST\">      \r",
+        "comment": ""
+      },
+      {
+        "line": "      <STRONG>Select a programming language:<br>\r",
+        "comment": ""
+      },
+      {
+        "line": "      </STRONG><BR>\r",
+        "comment": ""
+      },
+      {
+        "line": "      <PRE>\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=\"radio\" NAME=\"lang\" VALUE=\"C\">C<BR>\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=\"radio\" NAME=\"lang\" VALUE=\"C++\">C++<BR>\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=\"radio\" NAME=\"lang\" VALUE=\"Java\" \r",
+        "comment": ""
+      },
+      {
+        "line": "             CHECKED>Java<BR>\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=\"radio\" NAME=\"lang\"\r",
+        "comment": ""
+      },
+      {
+        "line": "             VALUE=\"Visual Basic 6\">Visual Basic 6\r",
+        "comment": ""
+      },
+      {
+        "line": "      </PRE>\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=\"submit\" VALUE=\"Submit\">\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=\"reset\"> </P>\r",
+        "comment": ""
+      },
+      {
+        "line": "   </FORM>\r",
+        "comment": ""
+      },
+      {
+        "line": "</BODY>\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "</HTML>\r",
+        "comment": ""
+      }
+    ]
+  },
+  "book_recommend": {
+    "name": "ISD::BookRecommendation.html",
+    "description": "",
+    "language": "html",
+    "author": "yrqk",
+    "lines": [
+      {
+        "line": "<!-- Fig. 19.11: BookRecommendation.html -->\r",
+        "comment": ""
+      },
+      {
+        "line": "<HTML>\r",
+        "comment": ""
+      },
+      {
+        "line": "<HEAD> \r",
+        "comment": ""
+      },
+      {
+        "line": "   <TITLE>Cookies</TITLE> \r",
+        "comment": ""
+      },
+      {
+        "line": "</HEAD>\r",
+        "comment": ""
+      },
+      {
+        "line": "<BODY>\r",
+        "comment": ""
+      },
+      {
+        "line": "   <FORM ACTION=\"http://localhost:8080/servlet/CookieExample\"\r",
+        "comment": ""
+      },
+      {
+        "line": "         METHOD=\"GET\">\r",
+        "comment": ""
+      },
+      {
+        "line": "      Press \"Recommend books\" for a list of books.\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=submit VALUE=\"Recommend books\">\r",
+        "comment": ""
+      },
+      {
+        "line": "   </FORM>\r",
+        "comment": ""
+      },
+      {
+        "line": "</BODY>\r",
+        "comment": ""
+      }
+    ]
+  },
+  "select_language2": {
+    "name": "ISD::SelectLanguage2.html",
+    "description": "",
+    "language": "html",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "<!-- Fig. 19.14: SelectLanguage.html -->\r",
+        "comment": ""
+      },
+      {
+        "line": "<HTML>\r",
+        "comment": ""
+      },
+      {
+        "line": "<HEAD>\r",
+        "comment": ""
+      },
+      {
+        "line": "   <TITLE>Sessions</TITLE> \r",
+        "comment": ""
+      },
+      {
+        "line": "</HEAD>\r",
+        "comment": ""
+      },
+      {
+        "line": "<BODY>\r",
+        "comment": ""
+      },
+      {
+        "line": "   <FORM ACTION=\"http://localhost:8080/servlet/SessionExample\"\r",
+        "comment": ""
+      },
+      {
+        "line": "         METHOD=\"POST\">      \r",
+        "comment": ""
+      },
+      {
+        "line": "      <STRONG>Select a programming language:<br>\r",
+        "comment": ""
+      },
+      {
+        "line": "      </STRONG><BR>\r",
+        "comment": ""
+      },
+      {
+        "line": "      <PRE>\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=\"radio\" NAME=\"lang\" VALUE=\"C\">C<BR>\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=\"radio\" NAME=\"lang\" VALUE=\"C++\">C++<BR>\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=\"radio\" NAME=\"lang\" VALUE=\"Java\" \r",
+        "comment": ""
+      },
+      {
+        "line": "             CHECKED>Java<BR>\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=\"radio\" NAME=\"lang\" \r",
+        "comment": ""
+      },
+      {
+        "line": "             VALUE=\"Visual Basic 6\">Visual Basic 6\r",
+        "comment": ""
+      },
+      {
+        "line": "      </PRE>\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=\"submit\" VALUE=\"Submit\">\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=\"reset\"> </P>\r",
+        "comment": ""
+      },
+      {
+        "line": "   </FORM>\r",
+        "comment": ""
+      },
+      {
+        "line": "</BODY>\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "</HTML>\r",
+        "comment": ""
+      }
+    ]
+  },
+  "book_recommend2": {
+    "name": "ISD::BookRecommendation2.html",
+    "description": "",
+    "language": "html",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "<!-- Fig. 19.15: BookRecommendation.html -->\r",
+        "comment": ""
+      },
+      {
+        "line": "<HTML>\r",
+        "comment": ""
+      },
+      {
+        "line": "<HEAD> \r",
+        "comment": ""
+      },
+      {
+        "line": "   <TITLE>Sessions</TITLE> \r",
+        "comment": ""
+      },
+      {
+        "line": "</HEAD>\r",
+        "comment": ""
+      },
+      {
+        "line": "<BODY>\r",
+        "comment": ""
+      },
+      {
+        "line": "   <FORM ACTION=\"http://localhost:8080/servlet/SessionExample\"\r",
+        "comment": ""
+      },
+      {
+        "line": "         METHOD=\"GET\">\r",
+        "comment": ""
+      },
+      {
+        "line": "      Press \"Recommend books\" for a list of books.\r",
+        "comment": ""
+      },
+      {
+        "line": "      <INPUT TYPE=submit VALUE=\"Recommend books\">\r",
+        "comment": ""
+      },
+      {
+        "line": "   </FORM>\r",
+        "comment": ""
+      },
+      {
+        "line": "</BODY>\r",
+        "comment": ""
+      }
+    ]
+  }
+}

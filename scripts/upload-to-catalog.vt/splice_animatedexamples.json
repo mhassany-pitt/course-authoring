@@ -1,0 +1,5447 @@
+[
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2756",
+    "platform_name":"animatedexamples",
+    "title":"List Pop",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=list_pop&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=list_pop"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2757",
+    "platform_name":"animatedexamples",
+    "title":"Queue",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=queue&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=queue"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2758",
+    "platform_name":"animatedexamples",
+    "title":"Stack Lifo1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=stack_lifo1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=stack_lifo1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2759",
+    "platform_name":"animatedexamples",
+    "title":"Stack Lifo2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=stack_lifo2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=stack_lifo2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2749",
+    "platform_name":"animatedexamples",
+    "title":"Function Pass",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=function_pass&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=function_pass"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2750",
+    "platform_name":"animatedexamples",
+    "title":"Inheritance",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=inheritance&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=inheritance"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2751",
+    "platform_name":"animatedexamples",
+    "title":"Find Max2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=find_max2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=find_max2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2752",
+    "platform_name":"animatedexamples",
+    "title":"Find Target",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=find_target&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=find_target"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2753",
+    "platform_name":"animatedexamples",
+    "title":"Recursion Fibonacci",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_fibonacci&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_fibonacci"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2754",
+    "platform_name":"animatedexamples",
+    "title":"Bubble Sort Worst",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=bubble_sort_worst&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=bubble_sort_worst"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2755",
+    "platform_name":"animatedexamples",
+    "title":"Bubble Sort Best",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=bubble_sort_best&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=bubble_sort_best"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2742",
+    "platform_name":"animatedexamples",
+    "title":"Data Type Isinstance",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=data_type_isinstance&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=data_type_isinstance"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2743",
+    "platform_name":"animatedexamples",
+    "title":"Data Type Typeof",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=data_type_typeof&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=data_type_typeof"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2744",
+    "platform_name":"animatedexamples",
+    "title":"Import Math",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=import_math&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=import_math"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2745",
+    "platform_name":"animatedexamples",
+    "title":"Tree",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=tree&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=tree"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2746",
+    "platform_name":"animatedexamples",
+    "title":"Tree Node Access",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=tree_node_access&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=tree_node_access"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2747",
+    "platform_name":"animatedexamples",
+    "title":"Doubly Linked List",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=doubly_linked_list&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=doubly_linked_list"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2748",
+    "platform_name":"animatedexamples",
+    "title":"Singly Linked List",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=singly_linked_list&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=singly_linked_list"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2716",
+    "platform_name":"animatedexamples",
+    "title":"Greatest Divisor Brute Force2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=greatest_divisor_brute_force2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=greatest_divisor_brute_force2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2717",
+    "platform_name":"animatedexamples",
+    "title":"Leap Year",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=leap_year&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=leap_year"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2718",
+    "platform_name":"animatedexamples",
+    "title":"Leap Year2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=leap_year2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=leap_year2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2719",
+    "platform_name":"animatedexamples",
+    "title":"Leap Year3",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=leap_year3&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=leap_year3"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2720",
+    "platform_name":"animatedexamples",
+    "title":"Palindrome",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=palindrome&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=palindrome"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2721",
+    "platform_name":"animatedexamples",
+    "title":"Partition",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=partition&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=partition"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2722",
+    "platform_name":"animatedexamples",
+    "title":"Partition2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=partition2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=partition2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2723",
+    "platform_name":"animatedexamples",
+    "title":"Partition3",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=partition3&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=partition3"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2724",
+    "platform_name":"animatedexamples",
+    "title":"Power",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=power&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=power"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2725",
+    "platform_name":"animatedexamples",
+    "title":"Power2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=power2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=power2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2726",
+    "platform_name":"animatedexamples",
+    "title":"Power With Input",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=power_with_input&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=power_with_input"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2727",
+    "platform_name":"animatedexamples",
+    "title":"Power With Input2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=power_with_input2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=power_with_input2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2728",
+    "platform_name":"animatedexamples",
+    "title":"Power With Input3",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=power_with_input3&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=power_with_input3"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2729",
+    "platform_name":"animatedexamples",
+    "title":"Power With Input4",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=power_with_input4&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=power_with_input4"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2730",
+    "platform_name":"animatedexamples",
+    "title":"Recursion Greatest Divisor",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_greatest_divisor&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_greatest_divisor"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2731",
+    "platform_name":"animatedexamples",
+    "title":"Recursion Greatest Divisor2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_greatest_divisor2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_greatest_divisor2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2732",
+    "platform_name":"animatedexamples",
+    "title":"Recursion Halve",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_halve&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_halve"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2733",
+    "platform_name":"animatedexamples",
+    "title":"Recursion Halve2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_halve2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_halve2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2734",
+    "platform_name":"animatedexamples",
+    "title":"Recursion Mult2 Version1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_mult2_version1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_mult2_version1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2735",
+    "platform_name":"animatedexamples",
+    "title":"Recursion Mult2 Version2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_mult2_version2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_mult2_version2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2736",
+    "platform_name":"animatedexamples",
+    "title":"Recursion Sum",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_sum&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_sum"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2737",
+    "platform_name":"animatedexamples",
+    "title":"Recursion Sum2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_sum2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=recursion_sum2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2738",
+    "platform_name":"animatedexamples",
+    "title":"Selection Sort",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=selection_sort&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=selection_sort"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2739",
+    "platform_name":"animatedexamples",
+    "title":"Selection Sort2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=selection_sort2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=selection_sort2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2740",
+    "platform_name":"animatedexamples",
+    "title":"Student Class",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=student_class&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=student_class"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2741",
+    "platform_name":"animatedexamples",
+    "title":"Studet Class2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=studet_class2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=studet_class2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2706",
+    "platform_name":"animatedexamples",
+    "title":"Age Checking",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=age_checking&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=age_checking"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2707",
+    "platform_name":"animatedexamples",
+    "title":"Age Checking2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=age_checking2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=age_checking2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2708",
+    "platform_name":"animatedexamples",
+    "title":"Circle Class",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=circle_class&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=circle_class"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2709",
+    "platform_name":"animatedexamples",
+    "title":"Circle Class2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=circle_class2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=circle_class2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2710",
+    "platform_name":"animatedexamples",
+    "title":"Circle Class3",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=circle_class3&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=circle_class3"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2711",
+    "platform_name":"animatedexamples",
+    "title":"Discount Calculator",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=discount_calculator&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=discount_calculator"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2712",
+    "platform_name":"animatedexamples",
+    "title":"Discount Calculator2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=discount_calculator2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=discount_calculator2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2713",
+    "platform_name":"animatedexamples",
+    "title":"Discount Calculator3",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=discount_calculator3&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=discount_calculator3"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2714",
+    "platform_name":"animatedexamples",
+    "title":"Employee Class",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=employee_class&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=employee_class"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2715",
+    "platform_name":"animatedexamples",
+    "title":"Greatest Divisor Brute Force",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=greatest_divisor_brute_force&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=greatest_divisor_brute_force"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2684",
+    "platform_name":"animatedexamples",
+    "title":"f-string format 1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_format3&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_format3"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.2685",
+    "platform_name":"animatedexamples",
+    "title":"f-string format 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_format4&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "http:\/\/adapt2.sis.pitt.edu\/acos\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_format4"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1711",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_intro",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_intro&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_intro"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1712",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_assignment",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_assignment&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_assignment"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1713",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_input",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_input&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_input"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1714",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_float",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_float&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_float"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1715",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_if",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_if&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_if"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1716",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_while",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_while&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_while"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1717",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_for",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_for&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_for"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1718",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_function",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_function&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_function"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1719",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_list",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_list&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_list"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1720",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_split",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_split&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_split"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1721",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_dict",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_dict&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_dict"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1722",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_file",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_file&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_file"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1723",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_class1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_class1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_class1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1724",
+    "platform_name":"animatedexamples",
+    "title":"ae_python_class2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_class2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_python_class2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1725",
+    "platform_name":"animatedexamples",
+    "title":"ae_demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1288",
+    "platform_name":"animatedexamples",
+    "title":"Objects 3",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_objects3&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_objects3"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1264",
+    "platform_name":"animatedexamples",
+    "title":"Files 1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_file1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_file1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1265",
+    "platform_name":"animatedexamples",
+    "title":"Files 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_file2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_file2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1237",
+    "platform_name":"animatedexamples",
+    "title":"Try Except 1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_tryexcept1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_tryexcept1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1238",
+    "platform_name":"animatedexamples",
+    "title":"Try Except 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_tryexcept2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_tryexcept2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1235",
+    "platform_name":"animatedexamples",
+    "title":"Dictionary 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_dict2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_dict2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1236",
+    "platform_name":"animatedexamples",
+    "title":"Dictionary 3",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_dict3&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_dict3"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1098",
+    "platform_name":"animatedexamples",
+    "title":"Values and References 3",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_vals_refs3&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_vals_refs3"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1097",
+    "platform_name":"animatedexamples",
+    "title":"Values and References 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_vals_refs2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_vals_refs2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1096",
+    "platform_name":"animatedexamples",
+    "title":"Values and References 1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_vals_refs1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_vals_refs1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1060",
+    "platform_name":"animatedexamples",
+    "title":"Return value",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_returnvalue&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_returnvalue"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1059",
+    "platform_name":"animatedexamples",
+    "title":"Format 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_format2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_format2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1058",
+    "platform_name":"animatedexamples",
+    "title":"Format 1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_format1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_format1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1057",
+    "platform_name":"animatedexamples",
+    "title":"Input 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_input2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_input2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1056",
+    "platform_name":"animatedexamples",
+    "title":"Input 1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_input1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_input1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.1055",
+    "platform_name":"animatedexamples",
+    "title":"Greet",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_greet&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_greet"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.949",
+    "platform_name":"animatedexamples",
+    "title":"Objects 1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_objects1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_objects1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.950",
+    "platform_name":"animatedexamples",
+    "title":"Objects 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_objects2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_objects2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.937",
+    "platform_name":"animatedexamples",
+    "title":"While Loop",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_while&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_while"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.938",
+    "platform_name":"animatedexamples",
+    "title":"For Loop",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_for&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_for"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.939",
+    "platform_name":"animatedexamples",
+    "title":"Strings",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_strings&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_strings"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.940",
+    "platform_name":"animatedexamples",
+    "title":"Lists 1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_lists1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_lists1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.941",
+    "platform_name":"animatedexamples",
+    "title":"Lists 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_lists2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_lists2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.942",
+    "platform_name":"animatedexamples",
+    "title":"Lists 3",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_lists3&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_lists3"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.943",
+    "platform_name":"animatedexamples",
+    "title":"Find Max",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_findmax&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_findmax"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.944",
+    "platform_name":"animatedexamples",
+    "title":"Functions 1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_functions1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_functions1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.945",
+    "platform_name":"animatedexamples",
+    "title":"Functions 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_functions2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_functions2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.946",
+    "platform_name":"animatedexamples",
+    "title":"Functions 3",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_functions3&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_functions3"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.947",
+    "platform_name":"animatedexamples",
+    "title":"Recursion",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_recursion&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_recursion"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.948",
+    "platform_name":"animatedexamples",
+    "title":"Dictionary 1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_dict1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_dict1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.925",
+    "platform_name":"animatedexamples",
+    "title":"Hello",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_hello&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_hello"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.926",
+    "platform_name":"animatedexamples",
+    "title":"Variables",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_variables&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_variables"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.927",
+    "platform_name":"animatedexamples",
+    "title":"Simpel Arithmetics",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_simple_arithmetics&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_simple_arithmetics"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.928",
+    "platform_name":"animatedexamples",
+    "title":"Aritmethics 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_arithmetics2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_arithmetics2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.929",
+    "platform_name":"animatedexamples",
+    "title":"Swap",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_swap&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_swap"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.930",
+    "platform_name":"animatedexamples",
+    "title":"Comparison",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_comparison&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_comparison"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.931",
+    "platform_name":"animatedexamples",
+    "title":"Logic",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_logic&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_logic"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.932",
+    "platform_name":"animatedexamples",
+    "title":"Hiscore 1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_hiscore1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_hiscore1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.933",
+    "platform_name":"animatedexamples",
+    "title":"Hiscore 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_hiscore2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_hiscore2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.934",
+    "platform_name":"animatedexamples",
+    "title":"If Else",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_ifelse&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_ifelse"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.935",
+    "platform_name":"animatedexamples",
+    "title":"If El If Else",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_ifelifelse&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_ifelifelse"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.936",
+    "platform_name":"animatedexamples",
+    "title":"Nested If",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "python"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_nested_if&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-python\/ae?example-id=ae_adl_nested_if"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.897",
+    "platform_name":"animatedexamples",
+    "title":"2D array Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_multidimarray_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_multidimarray_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.898",
+    "platform_name":"animatedexamples",
+    "title":"Array Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_array_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_array_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.878",
+    "platform_name":"animatedexamples",
+    "title":"Interface",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_jeg_interface1_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_jeg_interface1_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.879",
+    "platform_name":"animatedexamples",
+    "title":"Measure ",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_Measure&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_Measure"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.880",
+    "platform_name":"animatedexamples",
+    "title":"Wrapper Classes",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_wrapper_class_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_wrapper_class_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.881",
+    "platform_name":"animatedexamples",
+    "title":"Exceptions",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_exception_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_exception_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.882",
+    "platform_name":"animatedexamples",
+    "title":"A Dog is also a Pet",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_inheritance_polymorphism_2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_inheritance_polymorphism_2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.883",
+    "platform_name":"animatedexamples",
+    "title":"Constsnt Math Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_constant_math_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_constant_math_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.884",
+    "platform_name":"animatedexamples",
+    "title":"Constant Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_constant_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_constant_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.885",
+    "platform_name":"animatedexamples",
+    "title":"Cash Register Constant Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_cash_register_constant_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_cash_register_constant_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.886",
+    "platform_name":"animatedexamples",
+    "title":"Primitive Datatype Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_primitive_datatype_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_primitive_datatype_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.887",
+    "platform_name":"animatedexamples",
+    "title":"DoWhile Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_do_while_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_do_while_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.888",
+    "platform_name":"animatedexamples",
+    "title":"Nested For Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_nested_for_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_nested_for_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.889",
+    "platform_name":"animatedexamples",
+    "title":"While Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_while_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_while_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.890",
+    "platform_name":"animatedexamples",
+    "title":"Concat Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_concat_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_concat_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.891",
+    "platform_name":"animatedexamples",
+    "title":"If Conditions Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_conditional_demo1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_conditional_demo1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.892",
+    "platform_name":"animatedexamples",
+    "title":"Switch Demo 1",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_switch_demo1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_switch_demo1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.893",
+    "platform_name":"animatedexamples",
+    "title":"Switch Demo 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_switch_demo2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_switch_demo2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.894",
+    "platform_name":"animatedexamples",
+    "title":"Unary Operator Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_unary_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_unary_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.895",
+    "platform_name":"animatedexamples",
+    "title":"ToString Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_tostring_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_tostring_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.896",
+    "platform_name":"animatedexamples",
+    "title":"For Loop Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Roya Hosseini"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_for_demo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_for_demo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.856",
+    "platform_name":"animatedexamples",
+    "title":"Polymorphism and Inheritance 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_inheritance_polymorphism_1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_inheritance_polymorphism_1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.852",
+    "platform_name":"animatedexamples",
+    "title":"Use 2D Array",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_use_2darray_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_use_2darray_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.853",
+    "platform_name":"animatedexamples",
+    "title":"ArrayList Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_arraylist2_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_arraylist2_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.854",
+    "platform_name":"animatedexamples",
+    "title":"For-Each with ArrayList",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_JavaTutorial_4_7_4&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_JavaTutorial_4_7_4"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.855",
+    "platform_name":"animatedexamples",
+    "title":"Simple Inheritance",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_simple_inheritance_1&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_simple_inheritance_1"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.847",
+    "platform_name":"animatedexamples",
+    "title":"Nested Loops",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_nested_loops_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_nested_loops_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.848",
+    "platform_name":"animatedexamples",
+    "title":"Using an Array2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_use_array_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_use_array_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.849",
+    "platform_name":"animatedexamples",
+    "title":"For-Each",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_JavaTutorial_4_7_5&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_JavaTutorial_4_7_5"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.850",
+    "platform_name":"animatedexamples",
+    "title":"For-each with break",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_JavaTutorial_4_7_8&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_JavaTutorial_4_7_8"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.851",
+    "platform_name":"animatedexamples",
+    "title":"Enhanced For Loop Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_EnhancedForLoopDemo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_EnhancedForLoopDemo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.591",
+    "platform_name":"animatedexamples",
+    "title":"Bank Account Tester",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch03_s06_BankAccountTester&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch03_s06_BankAccountTester"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.592",
+    "platform_name":"animatedexamples",
+    "title":"Cash Register Tester",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch03_s06_CashRegisterTester&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch03_s06_CashRegisterTester"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.593",
+    "platform_name":"animatedexamples",
+    "title":"Multiple Variables",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_JavaTutorial_4_1_3&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_JavaTutorial_4_1_3"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.594",
+    "platform_name":"animatedexamples",
+    "title":"Arithmetic Operations",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_arithmetic_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_arithmetic_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.595",
+    "platform_name":"animatedexamples",
+    "title":"String Example",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_StringExample_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_StringExample_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.596",
+    "platform_name":"animatedexamples",
+    "title":"Nested if",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_JavaTutorial_4_2_7&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_JavaTutorial_4_2_7"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.597",
+    "platform_name":"animatedexamples",
+    "title":"if-else-if",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_decisions1_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_decisions1_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.598",
+    "platform_name":"animatedexamples",
+    "title":"relational operators",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_relational_operators_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_relational_operators_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.599",
+    "platform_name":"animatedexamples",
+    "title":"comparison operators",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_comparison_operators_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_comparison_operators_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.600",
+    "platform_name":"animatedexamples",
+    "title":"While",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_while_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_while_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.601",
+    "platform_name":"animatedexamples",
+    "title":"DoWhile",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_do_while_v2&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_do_while_v2"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.602",
+    "platform_name":"animatedexamples",
+    "title":"For with Multiple Variables 2",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_JavaTutorial_4_6_6&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_JavaTutorial_4_6_6"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.583",
+    "platform_name":"animatedexamples",
+    "title":"Print Tester",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch01_s05_PrintTester&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch01_s05_PrintTester"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.584",
+    "platform_name":"animatedexamples",
+    "title":"Variable Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch02_s03_VariableDemo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch02_s03_VariableDemo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.585",
+    "platform_name":"animatedexamples",
+    "title":"Method Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch02_s05_MethodDemo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch02_s05_MethodDemo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.586",
+    "platform_name":"animatedexamples",
+    "title":"Constructor Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch02_s06_ConstructorDemo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch02_s06_ConstructorDemo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.587",
+    "platform_name":"animatedexamples",
+    "title":"Accessor Mutator Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch02_s07_AccessorMutatorDemo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch02_s07_AccessorMutatorDemo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.588",
+    "platform_name":"animatedexamples",
+    "title":"Move Tester",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch02_s09_MoveTester&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch02_s09_MoveTester"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.589",
+    "platform_name":"animatedexamples",
+    "title":"Copy Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch02_s10_CopyDemo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch02_s10_CopyDemo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.590",
+    "platform_name":"animatedexamples",
+    "title":"Counter Demo",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch03_s01_CounterDemo&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch03_s01_CounterDemo"
+    ]
+  },
+  {
+    "catalog_type":"SLCItem",
+    "persistentID":"animatedexamples.582",
+    "platform_name":"animatedexamples",
+    "title":"Hello Printer",
+    "description":"<<empty>>",
+    "license":"",
+    "author":[
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution":[
+
+    ],
+    "keywords":[
+
+    ],
+    "features":[
+      "Animated Example"
+    ],
+    "programming_language":[
+      "java"
+    ],
+    "natural_language":[
+      "en"
+    ],
+    "iframe_url":"https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch01_s05_HelloPrinter&grp=demo&usr=demo&sid=-1&cid=-1",
+    "protocol":[
+      "PITT"
+    ],
+    "protocol_url":[
+      "https:\/\/acos.cs.vt.edu\/pitt\/jsvee\/jsvee-java\/ae?example-id=ae_BJ4_ch01_s05_HelloPrinter"
+    ]
+  }
+]

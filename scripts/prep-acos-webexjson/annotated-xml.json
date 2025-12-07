@@ -1,0 +1,134 @@
+{
+  "web_xml_example": {
+    "name": "ISD:: Deployment Descriptor Example.xml",
+    "description": "",
+    "language": "xml",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n",
+        "comment": "xml header and encoding"
+      },
+      {
+        "line": "<web-app id=\"WebApp_ID\" \r\n",
+        "comment": ""
+      },
+      {
+        "line": "\tversion=\"2.4\" xmlns=\"http://java.sun.com/xml/ns/j2ee\" \r\n",
+        "comment": ""
+      },
+      {
+        "line": "\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \r\n",
+        "comment": ""
+      },
+      {
+        "line": "\txsi:schemaLocation=\"http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd\">\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t<display-name>is2470.examples</display-name>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t<welcome-file-list>\r\n",
+        "comment": "list of possible default files to be open when no pattern is specified"
+      },
+      {
+        "line": "\t\t<welcome-file>index.html</welcome-file>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t\t<welcome-file>index.htm</welcome-file>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t\t<welcome-file>index.jsp</welcome-file>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t</welcome-file-list>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t<servlet>\r\n",
+        "comment": "declaration of a servlet"
+      },
+      {
+        "line": "\t\t<servlet-name>GetServletExample</servlet-name>\r\n",
+        "comment": "name of the servlet to serve as a reference across web.xml"
+      },
+      {
+        "line": "\t\t<servlet-class>edu.pitt.sis.paws.is2470.GetServletExample</servlet-class>\r\n",
+        "comment": "full name of the servlet class, including package"
+      },
+      {
+        "line": "\t</servlet>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t<servlet-mapping>\r\n",
+        "comment": "mapping of the servlet to the servlet pattern"
+      },
+      {
+        "line": "\t\t<servlet-name>GetServletExample</servlet-name>\r\n",
+        "comment": "name of the servlet as defined before"
+      },
+      {
+        "line": "\t\t<url-pattern>/GetServletExample</url-pattern>\r\n",
+        "comment": "servlet pattern - path relative to the Tomcat application's folder"
+      },
+      {
+        "line": "\t</servlet-mapping>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "\t<servlet>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t\t<servlet-name>PostServletExample</servlet-name>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t\t<servlet-class>edu.pitt.sis.paws.is2470.PostServletExample</servlet-class>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t</servlet>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t<servlet-mapping>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t\t<servlet-name>PostServletExample</servlet-name>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t\t<url-pattern>/PostServletExample</url-pattern>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\t</servlet-mapping>\r\n",
+        "comment": ""
+      },
+      {
+        "line": "</web-app>",
+        "comment": ""
+      }
+    ]
+  }
+}

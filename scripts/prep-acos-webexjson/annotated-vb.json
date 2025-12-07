@@ -1,0 +1,5150 @@
+{
+  "GlobalVariablesAndProcedures": {
+    "name": "GlobalVariablesAndProcedures",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "Module mdlMain",
+        "comment": ""
+      },
+      {
+        "line": "    Public strConnectionString As New String(\"Server=ecb0240.ecobit.iup.edu;uid=student;pwd=student;Database=natalya\")",
+        "comment": "A global variable that stores the connection string<br/>Server=? record the name of the server<br/>iud=?;pwd=? record user id and password; in our case both are \"student\"<br/>database=? record the name of the database we are trying to access on the specif"
+      },
+      {
+        "line": "    Public CurrentProductName As String",
+        "comment": "This variable stores the product we are editing"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "    Public Sub OpenAddForm()",
+        "comment": "Procedure to open frmAdd"
+      },
+      {
+        "line": "        Dim FormAdd As New frmAdd",
+        "comment": "Declare a new instance of the form frmAdd"
+      },
+      {
+        "line": "        FormAdd.MdiParent = frmMain.ActiveForm",
+        "comment": "Make the main form frmMain its mdi container"
+      },
+      {
+        "line": "        FormAdd.Show()",
+        "comment": "Show the form"
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "    Public Sub OpenEditForm()",
+        "comment": "Same code for opening frmEdit"
+      },
+      {
+        "line": "        Dim FormEdit As New frmEdit",
+        "comment": ""
+      },
+      {
+        "line": "        FormEdit.MdiParent = frmMain.ActiveForm",
+        "comment": ""
+      },
+      {
+        "line": "        FormEdit.Show()",
+        "comment": ""
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      },
+      {
+        "line": "End Module",
+        "comment": ""
+      }
+    ]
+  },
+  "SelectCase": {
+    "name": "SelectCase",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Private Sub tbMain_ButtonClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolBarButtonClickEventArgs) Handles tbMain.ButtonClick",
+        "comment": "This event occurs when a user clicks a button on the toolbar tbMain"
+      },
+      {
+        "line": "        Select Case e.Button.Tag",
+        "comment": "e.Button.Tag returns the number of the button that was clicked on the toolbar"
+      },
+      {
+        "line": "            Case 1",
+        "comment": "First button was clicked"
+      },
+      {
+        "line": "                End",
+        "comment": "End the whole project"
+      },
+      {
+        "line": "            Case 2",
+        "comment": "Second button was clicked"
+      },
+      {
+        "line": "                Call OpenAddForm()",
+        "comment": "Open frmAdd"
+      },
+      {
+        "line": "            Case 3",
+        "comment": "Third button was clicked"
+      },
+      {
+        "line": "                Call OpenEditForm()",
+        "comment": "Open frmEdit"
+      },
+      {
+        "line": "        End Select",
+        "comment": "End Select clause"
+      },
+      {
+        "line": "    End Sub",
+        "comment": "End the procedure"
+      }
+    ]
+  },
+  "OpenFileDialog": {
+    "name": "OpenFileDialog",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Dim TempImgSmall As Image",
+        "comment": "Declare a variable of the type Image to temporarily store small product picture"
+      },
+      {
+        "line": "    Dim strFileNameSmall As String",
+        "comment": "Declare a string variable to store the path to the image file"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "    Private Sub btnSmallLookup_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSmallLookup.Click",
+        "comment": "btnSmallLookup is the button that users click to load a small product picture in the image box"
+      },
+      {
+        "line": "        ofdSmall.ShowDialog()",
+        "comment": "Show OpenFileDialog control"
+      },
+      {
+        "line": "        strFileNameSmall = ofdSmall.FileName",
+        "comment": "Record the path of the image selected by user into the variable strFileNameSmall"
+      },
+      {
+        "line": "        If strFileNameSmall.Length > 1 Then",
+        "comment": "Check if selected file is not empty (the length of its name is at least 1)"
+      },
+      {
+        "line": "            TempImgSmall = New Bitmap(strFileNameSmall)",
+        "comment": "Convert the file into the type Bitmap and record in the temporary image variable TempImgSmall"
+      },
+      {
+        "line": "            imgSmall.Image = TempImgSmall",
+        "comment": "Place the image into the image box imgSmall"
+      },
+      {
+        "line": "        End If",
+        "comment": ""
+      },
+      {
+        "line": "    End Sub",
+        "comment": "End procedure"
+      }
+    ]
+  },
+  "SavingDBData": {
+    "name": "SavingDBData",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click",
+        "comment": "When user clicks the button btnAdd, we add a new record to the database"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Try",
+        "comment": ""
+      },
+      {
+        "line": "            Dim Cnn As SqlConnection = New SqlConnection(strConnectionString)",
+        "comment": "Declare a new SQL connection based on the global connection string"
+      },
+      {
+        "line": "            Cnn.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim Cmd As New SqlCommand(\"SaveProductCatalog\", Cnn)",
+        "comment": "There is a stored procedure SaveProductCatalog which we recorded earlier on the database server; we are calling this procedure now"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim buffersize As Integer = 50000",
+        "comment": "Allocate buffer space for storing images; ~50Kb is enough for my images, but you may need more"
+      },
+      {
+        "line": "            Dim OutbyteSmall(buffersize - 1) As Byte",
+        "comment": "Declare a temporary variable where we will record a small image when we open it"
+      },
+      {
+        "line": "            Dim fs As FileStream",
+        "comment": "Declare a file stream to transfer an image file"
+      },
+      {
+        "line": "            fs = New FileStream(strFileNameSmall, FileMode.Open, FileAccess.Read)",
+        "comment": "Open the file stream with the following parameters:<br/>File name is strFileNameSmall, which was declared earlier; FileMode.Open  and FileAccess.Read mean that the file is being opened for reading only"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            fs.Read(OutbyteSmall, 0, buffersize)",
+        "comment": "File stream reads the specified file into the variable OutbyteSmall"
+      },
+      {
+        "line": "",
+        "comment": "from the very beginning of the file (element 0) till the element, the number of which is equal to the buffersize"
+      },
+      {
+        "line": "            Dim OutbyteLarge(buffersize - 1) As Byte",
+        "comment": "Same with the large image"
+      },
+      {
+        "line": "            Dim fs2 As FileStream",
+        "comment": ""
+      },
+      {
+        "line": "            fs2 = New FileStream(strFileNameLarge, FileMode.Open, FileAccess.Read)",
+        "comment": ""
+      },
+      {
+        "line": "            fs2.Read(OutbyteLarge, 0, buffersize)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Cmd.CommandType = CommandType.StoredProcedure",
+        "comment": "Specify that the type of the command Cmd is stored procedure<br/>The stored procedure on SQL Server takes several parameters. In the next code, we are going to pass these parameters to the procedure"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim parType As New SqlParameter(\"@Type\", SqlDbType.VarChar)",
+        "comment": "Declare parameter parType (for product type) that matches to the parameter @Type of type VarChar on SQL Server"
+      },
+      {
+        "line": "            parType.Direction = ParameterDirection.Input",
+        "comment": "Set parameter direction as input, because we are going to RECORD a value in this parameter"
+      },
+      {
+        "line": "            parType.Value = txtProductType.Text",
+        "comment": "Retrieve a value that user recorded in the text box txtType, and pass it to parameter"
+      },
+      {
+        "line": "            Cmd.Parameters.Add(parType)",
+        "comment": "Add the new parameter parType to the command Cmd"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim parName As New SqlParameter(\"@Name\", SqlDbType.VarChar)",
+        "comment": "Repeat the same for parameter parName (product name)"
+      },
+      {
+        "line": "            parName.Direction = ParameterDirection.Input",
+        "comment": ""
+      },
+      {
+        "line": "            parName.Value = txtProductName.Text",
+        "comment": ""
+      },
+      {
+        "line": "            Cmd.Parameters.Add(parName)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim parPrice As New SqlParameter(\"@Price\", SqlDbType.Money)",
+        "comment": "Repeat the same for parameter parPrice (product price)"
+      },
+      {
+        "line": "            parPrice.Direction = ParameterDirection.Input",
+        "comment": ""
+      },
+      {
+        "line": "            parPrice.Value = txtProductPrice.Text",
+        "comment": ""
+      },
+      {
+        "line": "            Cmd.Parameters.Add(parPrice)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim parDescription As New SqlParameter(\"@Description\", SqlDbType.VarChar)",
+        "comment": "Repeat the same for parameter parDescription (product description)"
+      },
+      {
+        "line": "            parDescription.Direction = ParameterDirection.Input",
+        "comment": ""
+      },
+      {
+        "line": "            parDescription.Value = txtProductDescription.Text",
+        "comment": ""
+      },
+      {
+        "line": "            Cmd.Parameters.Add(parDescription)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim parSmallPic As New SqlParameter(\"@SmallPicture\", SqlDbType.Image)",
+        "comment": "Repeat the same for parameter parSmallPicture (a thumbnail of the product)"
+      },
+      {
+        "line": "            parSmallPic.Direction = ParameterDirection.Input",
+        "comment": ""
+      },
+      {
+        "line": "            parSmallPic.Value = OutbyteSmall",
+        "comment": ""
+      },
+      {
+        "line": "            Cmd.Parameters.Add(parSmallPic)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim parLargePic As New SqlParameter(\"@LargePicture\", SqlDbType.Image)",
+        "comment": "Repeat the same for parameter parLagePic (large picture of the product)"
+      },
+      {
+        "line": "            parLargePic.Direction = ParameterDirection.Input",
+        "comment": ""
+      },
+      {
+        "line": "            parLargePic.Value = OutbyteLarge",
+        "comment": ""
+      },
+      {
+        "line": "            Cmd.Parameters.Add(parLargePic)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Cmd.ExecuteNonQuery()",
+        "comment": "Execute command with all added parameters"
+      },
+      {
+        "line": "            Cnn.Close()",
+        "comment": "Close connection"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            MessageBox.Show(\"The product has been added to the Catalog Table in the SQL Server Database\")",
+        "comment": "Show a message box saying that the product was added successfully"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            txtProductType.Text = \"\"",
+        "comment": "Clear the textboxes and the image boxes"
+      },
+      {
+        "line": "            txtProductName.Text = \"\"",
+        "comment": ""
+      },
+      {
+        "line": "            txtProductPrice.Text = \"\"",
+        "comment": ""
+      },
+      {
+        "line": "            txtProductDescription.Text = \"\"",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            imgSmall.Image = Nothing",
+        "comment": ""
+      },
+      {
+        "line": "            imgLarge.Image = Nothing",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Catch ex As Exception",
+        "comment": "Alternative action (in case something did not work in the code above)"
+      },
+      {
+        "line": "            MessageBox.Show(ex.Message)",
+        "comment": "Display the message about the cause of the error (ex is a generated exception)"
+      },
+      {
+        "line": "        End Try",
+        "comment": ""
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "DataToCombo": {
+    "name": "DataToCombo",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Private Sub frmEdit_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load",
+        "comment": ""
+      },
+      {
+        "line": "        btnSave.Enabled = False",
+        "comment": "Users cannot save product information unless they make changed to it"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Dim cnn As New SqlConnection(strConnectionString)",
+        "comment": "Declare a new SQL connection based on the global connection string (declared in the module)"
+      },
+      {
+        "line": "        Dim da As New SqlDataAdapter(\"Select ProductID, ProductName from tblProductCatalog order by ProductType\", cnn)",
+        "comment": "Declare a data adapter with the following SQL Select statement: select the fields ProductID and ProductName from the table tblProductCatalog in a specified database"
+      },
+      {
+        "line": "        Dim ds As New DataSet",
+        "comment": "Declare a new dataset which we will fill with the selected data"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        da.Fill(ds, \"tblProductCatalog\")",
+        "comment": "Fill dataset with the data from table tblProductCatalog, using the select statement in data adapter"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cbxProduct.DataSource = ds.Tables(0)",
+        "comment": "Assign dataset ds as the data source for the combo box cbxProduct"
+      },
+      {
+        "line": "        cbxProduct.DisplayMember = \"ProductName\"",
+        "comment": "Display the values of product names in the combo box"
+      },
+      {
+        "line": "        cbxProduct.ValueMember = \"ProductID\"",
+        "comment": "Make the actual value of the combo box Product ID (we need this to be able to uniquely identify each item in the combo box)"
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "ImageToFile": {
+    "name": "ImageToFile",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Private Sub SavePic(ByVal tempbyte() As Byte, ByVal PicName As String)",
+        "comment": "Procedure SavePic takes two variables: amount of memory allocated and a file name; it saves information from a given file to the buffer"
+      },
+      {
+        "line": "        Dim fs As FileStream",
+        "comment": "Writes the BLOB to a file (*.bmp)"
+      },
+      {
+        "line": "        Dim bw As BinaryWriter",
+        "comment": "Streams the binary data to the FileStream object"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        On Error Resume Next",
+        "comment": "This statement is close to try? catch method, but in case of error we pass to the next command"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        fs = New FileStream(PicName & \".bmp\", FileMode.OpenOrCreate, FileAccess.Write)",
+        "comment": "Create a file to hold the output."
+      },
+      {
+        "line": "        bw = New BinaryWriter(fs)",
+        "comment": "Declare a binary writer to read information from file"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        bw.Write(tempbyte)",
+        "comment": "Write the information stored in tempbyde to the writer"
+      },
+      {
+        "line": "        bw.Flush()",
+        "comment": "Record the binary write into a file"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        bw.Close()",
+        "comment": "Close the writer"
+      },
+      {
+        "line": "        fs.Close()",
+        "comment": "Close the file stream"
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "DataToForm": {
+    "name": "DataToForm",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Private Sub DisplayData(ByVal tempID As Integer)",
+        "comment": "This function will display product data based on product ID (tempID)"
+      },
+      {
+        "line": "        Dim sbufferSize As Integer = 25000",
+        "comment": "The size of the BLOB buffer space which we allocate for a small image"
+      },
+      {
+        "line": "        Dim lbufferSize As Integer = 50000",
+        "comment": "The size of the BLOB buffer space which we allocate for a large image"
+      },
+      {
+        "line": "        Dim Smallbyte(sbufferSize - 1) As Byte",
+        "comment": "The BLOB byte() buffer to be filled by reader.GetBytes command, related to a small image"
+      },
+      {
+        "line": "        Dim Largebyte(lbufferSize - 1) As Byte",
+        "comment": "The BLOB byte() buffer to be filled by reader.GetBytes command, related to a large image"
+      },
+      {
+        "line": "        Dim startIndex As Long = 0",
+        "comment": "The index of the starting position in the BLOB output"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Dim cnn As New SqlConnection(strConnectionString)",
+        "comment": "Declare a connection to the database"
+      },
+      {
+        "line": "        Dim cmd As New SqlCommand(\"Select * from tblProductCatalog Where ProductID = \" & tempID, cnn)",
+        "comment": "Declare an SQL command that selects product record based on a given product ID"
+      },
+      {
+        "line": "        Dim rd As SqlDataReader = Nothing",
+        "comment": "Declare a data reader"
+      },
+      {
+        "line": "        Dim tempPic As Bitmap",
+        "comment": "Declare a temporary storage for images"
+      },
+      {
+        "line": "        Dim dr As Directory",
+        "comment": "Declare a variable of the type Directory to return a path to current directory for saving images"
+      },
+      {
+        "line": "        imgSmall.Refresh()",
+        "comment": "Refresh small image box"
+      },
+      {
+        "line": "        imgLarge.Refresh()",
+        "comment": "Refresh large image box"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cnn.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "        rd = cmd.ExecuteReader(CommandBehavior.SequentialAccess)",
+        "comment": "Read the data selected after executing the SQL command cmd"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        If rd.Read() Then",
+        "comment": "First, we need to check if any data were actually selected"
+      },
+      {
+        "line": "            Dim strId As String = rd(0)",
+        "comment": "Declare a variable o store product ID (the indices of data readers start with 0; therefore if ProductID is the first field in the table, its index is 0)"
+      },
+      {
+        "line": "            txtProductID.Text = strId",
+        "comment": "Record ProductID in the matching text box txtProductID"
+      },
+      {
+        "line": "            txtProductType.Text = rd(1)",
+        "comment": "Record product type (2nd field in the table) in the text box txtProductType"
+      },
+      {
+        "line": "            txtProductName.Text = rd(2)",
+        "comment": "Record product name (3rd field in the table) in the text box txtProductName"
+      },
+      {
+        "line": "            txtProductPrice.Text = rd(3)",
+        "comment": "Record product price (4th field in the table) in the text box txtProductPrice"
+      },
+      {
+        "line": "            txtProductDescription.Text = rd(4)",
+        "comment": "Record product description (5th field in the table) in the text box txtProductDescription"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            rd.GetBytes(5, startIndex, Smallbyte, 0, sbufferSize)",
+        "comment": "Read all bytes from the 6th field (index = 5), beginning from startIndex, from the buffer Smallbyte, buffer index 0, total buffer size = sbufferSize"
+      },
+      {
+        "line": "            SavePic(Smallbyte, \"Small\" & strId)",
+        "comment": "Save an image from Smallbyte to the current directory with the name that looks like Small1, Small2, etc. - Small + index of the product in catalog"
+      },
+      {
+        "line": "            tempPic = New Bitmap(\"Small\" & strId & \".bmp\")",
+        "comment": "Convert the image into the type Bitmap and record it in the variable tempPic"
+      },
+      {
+        "line": "            imgSmall.Image = tempPic",
+        "comment": "Place tempPic in the image box imgSmall"
+      },
+      {
+        "line": "            tempPic = Nothing",
+        "comment": "Clear tempPic"
+      },
+      {
+        "line": "            strFileNameSmall = dr.GetCurrentDirectory() & \"Small\" & strId & \".bmp\"",
+        "comment": "Record the path to the image in the variable strFileNameSmall; we will need this information later when we record the changes in the database"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            rd.GetBytes(6, startIndex, Largebyte, 0, lbufferSize)",
+        "comment": "Same operations for the large image"
+      },
+      {
+        "line": "            SavePic(Largebyte, \"Large\" & strId)",
+        "comment": ""
+      },
+      {
+        "line": "            tempPic = New Bitmap(\"Large\" & strId & \".bmp\")",
+        "comment": ""
+      },
+      {
+        "line": "            imgLarge.Image = tempPic",
+        "comment": ""
+      },
+      {
+        "line": "            tempPic = Nothing",
+        "comment": ""
+      },
+      {
+        "line": "            strFileNameLarge = dr.GetCurrentDirectory() & \"Large\" & strId & \".bmp\"",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        End If",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        rd.Close()",
+        "comment": "Close reader"
+      },
+      {
+        "line": "        cnn.Close()",
+        "comment": "Close connection"
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "CallDisplayData": {
+    "name": "CallDisplayData",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Private Sub btnLoad_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLoad.Click",
+        "comment": ""
+      },
+      {
+        "line": "        btnSave.Enabled = True",
+        "comment": "Enable the button btnSave to be able to save product information"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Dim tempProdID As String = cbxProduct.SelectedValue",
+        "comment": "Declate a temporary variable that stores product ID and give it a value of selected product in data combo"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        imgSmall.Image = Nothing",
+        "comment": "Clear image box imgSmall"
+      },
+      {
+        "line": "        imgLarge.Image = Nothing",
+        "comment": "Clear image box imgLarge"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Call DisplayData(tempProdID)",
+        "comment": "Call the procedure that displays product information based on product ID, which we recorded in the variable tempProdID"
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "EditingDBData": {
+    "name": "EditingDBData",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click",
+        "comment": ""
+      },
+      {
+        "line": "        Try",
+        "comment": "We need Try/Catch method to catch invalid user input values"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim Cnn As SqlConnection = New SqlConnection(strConnectionString)",
+        "comment": "Declare a database connection"
+      },
+      {
+        "line": "            Dim Cmd As SqlCommand = New SqlCommand(\"EditProductCatalog\", Cnn)",
+        "comment": "Declare an SQL command to call procedure EditProductCatalog from the list of stored procedures in the database"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim buffersize As Integer = 50000",
+        "comment": "Allocate buffer space for storing images; ~50Kb is enough for my images, but you may need more"
+      },
+      {
+        "line": "            Dim Outbyte1(buffersize - 1) As Byte",
+        "comment": "Declare a temporary variable where we will record a small image when we open it"
+      },
+      {
+        "line": "            Dim fs As FileStream",
+        "comment": "Declare a file stream to transfer an image file"
+      },
+      {
+        "line": "            fs = New FileStream(strFileNameSmall, FileMode.Open, FileAccess.Read)",
+        "comment": "Open the file stream with the following parameters:<br/>File name is strFileNameSmall, which was declared earlier; FileMode.Open  and FileAccess.Read mean that the file is being opened for reading only"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            fs.Read(Outbyte1, 0, buffersize)",
+        "comment": "File stream reads the specified file into the variable OutbyteSmall from the very beginning of the file (element 0) till the element, the number of which is equal to the buffersize"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim Outbyte2(buffersize - 1) As Byte",
+        "comment": "Same for the large image"
+      },
+      {
+        "line": "            Dim fs2 As FileStream",
+        "comment": ""
+      },
+      {
+        "line": "            fs2 = New FileStream(strFileNameLarge, FileMode.Open, FileAccess.Read)",
+        "comment": ""
+      },
+      {
+        "line": "            fs2.Read(Outbyte2, 0, buffersize)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Cmd.CommandType = CommandType.StoredProcedure",
+        "comment": "Set the type of an SQL command for cmd as StoredProcedure"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim parSearchID As New SqlParameter(\"@SearchID\", SqlDbType.VarChar)",
+        "comment": "Declare parameter parSearchID (for the product ID nember) that matches to the parameter @SearchID of type VarChar on SQL Server"
+      },
+      {
+        "line": "            parSearchID.Direction = ParameterDirection.Input",
+        "comment": "Set parameter direction as input, because we are going to RECORD a value in this parameter"
+      },
+      {
+        "line": "            parSearchID.Value = CInt(txtProductID.Text)",
+        "comment": "Retrieve a value that user recorded in the text box txtType, and pass it to parameter"
+      },
+      {
+        "line": "            Cmd.Parameters.Add(parSearchID)",
+        "comment": "Add the new parameter parType to the command Cmd"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim parType As New SqlParameter(\"@Type\", SqlDbType.VarChar)",
+        "comment": "Declare parameter parType (for product type) that matches to the parameter @Type of type VarChar on SQL Server"
+      },
+      {
+        "line": "            parType.Direction = ParameterDirection.Input",
+        "comment": "Set parameter direction as input, because we are going to RECORD a value in this parameter"
+      },
+      {
+        "line": "            parType.Value = txtProductType.Text",
+        "comment": "Retrieve a value that user recorded in the text box txtType, and pass it to parameter"
+      },
+      {
+        "line": "            Cmd.Parameters.Add(parType)",
+        "comment": "Add the new parameter parType to the command Cmd"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim parName As New SqlParameter(\"@Name\", SqlDbType.VarChar)",
+        "comment": "Repeat the same for parameter parName (product name)"
+      },
+      {
+        "line": "            parName.Direction = ParameterDirection.Input",
+        "comment": ""
+      },
+      {
+        "line": "            parName.Value = txtProductName.Text",
+        "comment": ""
+      },
+      {
+        "line": "            Cmd.Parameters.Add(parName)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim parPrice As New SqlParameter(\"@Price\", SqlDbType.Money)",
+        "comment": "Repeat the same for parameter parPrice (product price)"
+      },
+      {
+        "line": "            parPrice.Direction = ParameterDirection.Input",
+        "comment": ""
+      },
+      {
+        "line": "            parPrice.Value = txtProductPrice.Text",
+        "comment": ""
+      },
+      {
+        "line": "            Cmd.Parameters.Add(parPrice)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim parDescription As New SqlParameter(\"@Description\", SqlDbType.VarChar)",
+        "comment": "Repeat the same for parameter parDescription (product description)"
+      },
+      {
+        "line": "            parDescription.Direction = ParameterDirection.Input",
+        "comment": ""
+      },
+      {
+        "line": "            parDescription.Value = txtProductDescription.Text",
+        "comment": ""
+      },
+      {
+        "line": "            Cmd.Parameters.Add(parDescription)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim parSmallPic As New SqlParameter(\"@SmallPicture\", SqlDbType.Image)",
+        "comment": "Repeat the same for parameter parSmallPicture (a thumbnail of the product)"
+      },
+      {
+        "line": "            parSmallPic.Direction = ParameterDirection.Input",
+        "comment": ""
+      },
+      {
+        "line": "            parSmallPic.Value = Outbyte1",
+        "comment": ""
+      },
+      {
+        "line": "            Cmd.Parameters.Add(parSmallPic)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Dim parLargePic As New SqlParameter(\"@LargePicture\", SqlDbType.Image)",
+        "comment": "Repeat the same for parameter parLagePic (large picture of the product)"
+      },
+      {
+        "line": "            parLargePic.Direction = ParameterDirection.Input",
+        "comment": ""
+      },
+      {
+        "line": "            parLargePic.Value = Outbyte2",
+        "comment": ""
+      },
+      {
+        "line": "            Cmd.Parameters.Add(parLargePic)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Cnn.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "            Cmd.ExecuteNonQuery()",
+        "comment": "Execute SQL command EditProductCatalog, which we assigned to Cmd"
+      },
+      {
+        "line": "            Cnn.Close()",
+        "comment": "Close connection"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            MessageBox.Show(\"The product has been Edited in the Catalog Table\")",
+        "comment": "Show success message"
+      },
+      {
+        "line": "            btnSave.Enabled = False",
+        "comment": "Disable the button that saves information changes, until user selects another product"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            txtProductID.Text = \"\"",
+        "comment": "Clear text fields"
+      },
+      {
+        "line": "            txtProductType.Text = \"\"",
+        "comment": "Clear text fields"
+      },
+      {
+        "line": "            txtProductName.Text = \"\"",
+        "comment": "Clear text fields"
+      },
+      {
+        "line": "            txtProductPrice.Text = \"\"",
+        "comment": "Clear text fields"
+      },
+      {
+        "line": "            txtProductDescription.Text = \"\"",
+        "comment": "Clear text fields"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            imgSmall.Refresh()",
+        "comment": "Refresh image boxes"
+      },
+      {
+        "line": "            imgLarge.Refresh()",
+        "comment": "Refresh image boxes"
+      },
+      {
+        "line": "            Outbyte1 = Nothing",
+        "comment": "Clear the buffer"
+      },
+      {
+        "line": "            Outbyte2 = Nothing",
+        "comment": "Clear the buffer"
+      },
+      {
+        "line": "            strFileNameSmall = \"\"",
+        "comment": "Clear the path to the images"
+      },
+      {
+        "line": "            strFileNameLarge = \"\"",
+        "comment": "Clear the path to the images"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Me.Close()",
+        "comment": "Close the current form"
+      },
+      {
+        "line": "            OpenEditForm()",
+        "comment": "Reopen the form to refresh the list box"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Catch ex As Exception",
+        "comment": "This part of code is executed if for some reason the product could not be changed in the database"
+      },
+      {
+        "line": "            MessageBox.Show(ex.Message)",
+        "comment": "Show user the message that was generated as a result of an error"
+      },
+      {
+        "line": "        End Try",
+        "comment": "End Try/Catch clause"
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "URLParam": {
+    "name": "URLParam",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "        If Page.IsPostBack = False Then",
+        "comment": "First, we check if the page was open, but not just refreshed or reloaded"
+      },
+      {
+        "line": "            Dim ProductType As String",
+        "comment": "Declare a variable that stores product type"
+      },
+      {
+        "line": "            Dim CaptureId() As String",
+        "comment": "Variable that stores Type identification retrieved from the web address"
+      },
+      {
+        "line": "            Dim ValueId As System.Collections.Specialized.NameValueCollection",
+        "comment": "Variable that \"remembers\" the collection of values passed to the page"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            ValueId = Request.QueryString",
+        "comment": "Request all values that were passed to the page"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            If ValueId.Count > 0 Then",
+        "comment": "Count the values and check if there number is actually >0"
+      },
+      {
+        "line": "                CaptureId = ValueId.GetValues(\"Id\")",
+        "comment": "Record the value of parameter Id into the variable CaptureID()"
+      },
+      {
+        "line": "                Select Case CaptureId(0).ToString",
+        "comment": "Analyze the possible values of the variable CaptureID"
+      },
+      {
+        "line": "                    Case \"1\"",
+        "comment": "If \"1\" was passed to the page as product category, we select products of Type1"
+      },
+      {
+        "line": "                        ProductType = \"standard\"",
+        "comment": "For clarity, in the database the first type of products is called \"standard\""
+      },
+      {
+        "line": "                    Case \"2\"",
+        "comment": "If \"2\" was passed to the page as product category, we select products of Type2"
+      },
+      {
+        "line": "                        ProductType = \"luxury\"",
+        "comment": "In my database the second type of products is called \"luxury\""
+      },
+      {
+        "line": "                End Select",
+        "comment": "Finish Select clause"
+      },
+      {
+        "line": "            Else",
+        "comment": "If no parameters were passed to the page (ValueId.Count=0)\u2026"
+      },
+      {
+        "line": "                ProductType = \"standard\"",
+        "comment": "\u2026then we display products of Type1 by default"
+      },
+      {
+        "line": "            End If",
+        "comment": "Finish IF statement"
+      }
+    ]
+  },
+  "CCVerifyParam": {
+    "name": "CCVerifyParam",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "        Dim coll As System.Collections.Specialized.NameValueCollection",
+        "comment": "This variable will store a collection of values posted from the form checkout.aspx"
+      },
+      {
+        "line": "        Dim URL() As String",
+        "comment": "Reember the address of the page where we need to return after running the web service"
+      },
+      {
+        "line": "        Dim CCNumber() As String",
+        "comment": "The variable CCNumber (stores credit #) is passed the web service for verification"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        coll = Request.Form",
+        "comment": "Request the form that was passed to the current page"
+      },
+      {
+        "line": "        URL = coll.GetValues(\"txtURL\")",
+        "comment": "Retrieve the value in the hidden text box txtURL"
+      },
+      {
+        "line": "        CCNumber = coll.GetValues(\"txtCCNumber\")",
+        "comment": "Retrieve the value in the text box txtCCNumber"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Dim oCCVerification As New CCVerification",
+        "comment": "Create a new instance of the web service"
+      },
+      {
+        "line": "        If oCCVerification.VerifyCreditCard(CCNumber(0)) = \"Valid\" Then",
+        "comment": "Run procedure .VerifyCreditCard() with the passed number and receive the value \"Valid\" or \"Invalid\""
+      },
+      {
+        "line": "            Response.Redirect(URL(0) & \"?Accepted=1\")",
+        "comment": "In case the card is valid, we pass back parameter Accepted with value 1"
+      },
+      {
+        "line": "        Else",
+        "comment": ""
+      },
+      {
+        "line": "            Response.Redirect(URL(0) & \"?Accepted=0\")",
+        "comment": "In case the card is invalid, we pass back parameter Accepted with value 0"
+      },
+      {
+        "line": "        End If",
+        "comment": ""
+      }
+    ]
+  },
+  "SQLDataReader": {
+    "name": "SQLDataReader",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "        Dim cnnSQL As New SqlConnection(cnnstring)",
+        "comment": "Declare a DB connection"
+      },
+      {
+        "line": "        Dim cmd As New SqlCommand(\"Select ProductID, ProductName, ProductPrice from tblProductCatalog Where ProductType='\" & strTemp & \"'\", cnnSQL)",
+        "comment": "Declare a command for selecting products with a given type"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Dim rdr As SqlDataReader",
+        "comment": "Declare a data reader"
+      },
+      {
+        "line": "        Dim counter As Integer",
+        "comment": "Need this variable to count products"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cnnSQL.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "        rdr = cmd.ExecuteReader()",
+        "comment": "Read selected items from the catalog"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        If intPage > 1 Then",
+        "comment": "This empty Read loop is needed to read up to the necessary page"
+      },
+      {
+        "line": "            For counter = 1 To 6 * (intPage - 1)",
+        "comment": "Only 6 items display on one page; we need to count which ones, based on page number"
+      },
+      {
+        "line": "                If rdr.Read() Then",
+        "comment": "Simply read an item so that data reader can switch to the next item"
+      },
+      {
+        "line": "                End If",
+        "comment": ""
+      },
+      {
+        "line": "            Next",
+        "comment": ""
+      },
+      {
+        "line": "        End If",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        If rdr.Read() Then",
+        "comment": "Read the first item (this code will repeat 6 times for the 6 products on the page)"
+      },
+      {
+        "line": "            lblName1.Text = rdr(1)",
+        "comment": "Write product name (filed 1) into the label lblName"
+      },
+      {
+        "line": "            lblPrice1.Text = rdr(2)",
+        "comment": "Write product price (filed 2) into the label lblPrice"
+      },
+      {
+        "line": "            lblPrice1.Text = \"$\" & Mid(lblPrice1.Text, 1, Len(lblPrice1.Text) - 2)",
+        "comment": "By default the price is displayed with 4 decimals, we need to cut it to 2"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            Session(\"Pic1\") = rdr(0)",
+        "comment": "Store the ID of the product in a session variable to retrieve its picture"
+      },
+      {
+        "line": "            HB1.Value = rdr(0)",
+        "comment": "Record product ID in a hidden box for later use"
+      },
+      {
+        "line": "            Panel1.Visible = True",
+        "comment": "If product exists (the reader could read it), we show the panel with product info"
+      },
+      {
+        "line": "        Else",
+        "comment": "If product does not exist in the database\u2026"
+      },
+      {
+        "line": "            Session(\"Pic1\") = 0",
+        "comment": "Session variable is 0"
+      },
+      {
+        "line": "            Panel1.Visible = False",
+        "comment": "Product information panel is invisible (blank panel does not look nice)"
+      },
+      {
+        "line": "        End If",
+        "comment": ""
+      }
+    ]
+  },
+  "ProcSQLDataReader": {
+    "name": "ProcSQLDataReader",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "        Dim rdLogin As SqlDataReader = Nothing",
+        "comment": "Declare a reader for reading login information"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cmd.CommandText = \"CheckLogin\"",
+        "comment": "Assign a SQL procedure to a global variable cmd of the type SQLCOnnection"
+      },
+      {
+        "line": "        cmd.Connection = cnn",
+        "comment": "Connect command cmd to the database through global connection cnn"
+      },
+      {
+        "line": "        cmd.CommandType = CommandType.StoredProcedure",
+        "comment": "The type of cmd is stored procedure (saved on SQL server)"
+      },
+      {
+        "line": "        cmd.Parameters.Add(\"@UserID\", txtUserId.Text)",
+        "comment": "Pass parameter @UserID to stored procedure; take its value from a text box"
+      },
+      {
+        "line": "        cmd.Parameters.Add(\"@Password\", txtPassword.Text)",
+        "comment": "Pass parameter @Password to stored procedure; take its value from a text box"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cnn.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "        rdLogin = cmd.ExecuteReader()",
+        "comment": "Read all items selected as a result of cmd, into the reader rdrLogin"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        If rdLogin.Read() Then",
+        "comment": "Check if the reader could read the customer with the given user name & pwd"
+      },
+      {
+        "line": "            Session(\"CustId\") = rdLogin(0)",
+        "comment": "Record customer ID into a session variable"
+      },
+      {
+        "line": "            Session(\"CustName\") = rdLogin(1)",
+        "comment": "Record customer name into a session variable"
+      },
+      {
+        "line": "            rdLogin.Close()",
+        "comment": "Close reader"
+      },
+      {
+        "line": "            Response.Redirect(\"checkout.aspx\")",
+        "comment": "Open the page checkout.aspx, where the user can provide credit card info"
+      },
+      {
+        "line": "        Else",
+        "comment": "If the reader could not read (i.e. no such user)"
+      },
+      {
+        "line": "            lblMessage.Visible = True",
+        "comment": "Show the message that the login was invalid"
+      },
+      {
+        "line": "            rdLogin.Close()",
+        "comment": "Close reader"
+      },
+      {
+        "line": "            cnn.Close()",
+        "comment": "Close connection"
+      },
+      {
+        "line": "        End If",
+        "comment": ""
+      }
+    ]
+  },
+  "ThumbDatabase": {
+    "name": "ThumbDatabase",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "        Dim cnnSQL As New SqlConnection(cnnstring)",
+        "comment": "Declare connection based on connection string cnnstring"
+      },
+      {
+        "line": "        Dim cmd As New SqlCommand(\"Select ProductSmallPicture from tblProductCatalog\"",
+        "comment": "Declare a SQL command that retrieves the 1st product displayed on the page"
+      },
+      {
+        "line": "        cmd = cmd & \"Where ProductID=\" & Session(\"Pic1\"), cnnSQL)",
+        "comment": ""
+      },
+      {
+        "line": "        Dim rdr As SqlDataReader",
+        "comment": "Declare a data reader"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Dim bufferSize As Integer = 50000",
+        "comment": "Declare a variable that stores the size of the buffer"
+      },
+      {
+        "line": "        Dim outbyte(bufferSize - 1) As Byte 'BLOB buffer array",
+        "comment": "Declare a buffer array of the size specified in the previous line"
+      },
+      {
+        "line": "        cnnSQL.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "        rdr = cmd.ExecuteReader(CommandBehavior.SequentialAccess)",
+        "comment": "Set the reader to read the records according to the SQL statement in cmd"
+      },
+      {
+        "line": "        rdr.Read()",
+        "comment": "Read (record data into data reader)"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        rdr.GetBytes(0, 0, outbyte, 0, bufferSize)",
+        "comment": "Read the image as a binary file into the array outbyte"
+      },
+      {
+        "line": "        Response.BinaryWrite(outbyte)",
+        "comment": "Write binary file"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        rdr.Close()",
+        "comment": "Close reader"
+      },
+      {
+        "line": "        cnnSQL.Close()",
+        "comment": "Close connection"
+      }
+    ]
+  },
+  "ImageDatabase": {
+    "name": "ImageDatabase",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "        Dim cnn As New SqlConnection(cnnstring)",
+        "comment": "Declare a connection based on connection string cnnstring"
+      },
+      {
+        "line": "        Dim cmd As New SqlCommand(\"Select ProductLargePicture from tblProductCatalog Where ProductId=\" & Session(\"ProductPicID\"), cnn)",
+        "comment": "Pass a session variable which stores Product ID to Select command"
+      },
+      {
+        "line": "        Dim rdr As SqlDataReader",
+        "comment": "Declare a data reader"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Dim bufferSize As Integer = 50000",
+        "comment": "Declare a variable to store the size of the buffer"
+      },
+      {
+        "line": "        Dim outbyte(bufferSize - 1)",
+        "comment": "Declare a buffer array with the given size"
+      },
+      {
+        "line": "        cnn.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "        rdr = cmd.ExecuteReader(CommandBehavior.SequentialAccess)",
+        "comment": "Set the reader to read the records according to the SQL statement in cmd"
+      },
+      {
+        "line": "        rdr.Read()",
+        "comment": "Read data"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        rdr.GetBytes(0, 0, outbyte, 0, bufferSize)",
+        "comment": "rdr.GetBytes(Field #, StartPoint, Array To Save Into, How Many at a time 0=all, Size of Image To be Read)"
+      },
+      {
+        "line": "        Response.BinaryWrite(outbyte)",
+        "comment": "Record data into the buffer outbyte"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        rdr.Close()",
+        "comment": "Close reader"
+      },
+      {
+        "line": "        cnn.Close()",
+        "comment": "Close connection"
+      }
+    ]
+  },
+  "CalatogDatabase": {
+    "name": "CalatogDatabase",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Private Sub ProductDisplayValues(ByVal temp As String)",
+        "comment": "Procedure for displaying product information on the page Product.aspx"
+      },
+      {
+        "line": "        Dim SearchId As Int32 = Convert.ToInt32(temp)",
+        "comment": "Search a product with a given ID"
+      },
+      {
+        "line": "        Session(\"ProductPicID\") = SearchId",
+        "comment": "Record SearchID as a session variable"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Dim cnnSQL As New SqlConnection(cnnstring)",
+        "comment": "Declare and open a connection to the Catalog table"
+      },
+      {
+        "line": "        Dim cmd As New SqlCommand(\"Select ProductName, ProductPrice, ProductDescription from tblProductCatalog Where ProductID=\" & SearchId, cnnSQL)",
+        "comment": "Select the product with ID number equal to SearchID"
+      },
+      {
+        "line": "        Dim rdr As SqlDataReader",
+        "comment": "Declare a data reader"
+      },
+      {
+        "line": "        Try",
+        "comment": ""
+      },
+      {
+        "line": "            cnnSQL.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "            rdr = cmd.ExecuteReader()",
+        "comment": "Set the reader to read the records according to the SQL statement in cmd"
+      },
+      {
+        "line": "            If rdr.Read Then",
+        "comment": "If the record with a given ID was found in the database\u2026"
+      },
+      {
+        "line": "                lblName.Text = rdr(0)",
+        "comment": "Record the first element of the reader rdr(0) (ProductName) in the label lblName"
+      },
+      {
+        "line": "                lblPrice.Text = rdr(1)",
+        "comment": "Record the second element of the reader rdr(1) (ProductPrice) in the label lblPrice"
+      },
+      {
+        "line": "                lblPrice.Text = \"$\" & Mid(lblPrice.Text, 1, Len(lblPrice.Text) - 2)",
+        "comment": "Change price format to 2 decimal places"
+      },
+      {
+        "line": "                txtDescription.Text = rdr(2)",
+        "comment": "Record the third element of the reader rdr(2) (ProductDescription) in the text box txtDescription"
+      },
+      {
+        "line": "            End If",
+        "comment": ""
+      },
+      {
+        "line": "            rdr.Close()",
+        "comment": "Close reader"
+      },
+      {
+        "line": "            cnnSQL.Close()",
+        "comment": "Close connection"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Catch ex As Exception",
+        "comment": ""
+      },
+      {
+        "line": "            Response.Write(ex.Message)",
+        "comment": "If the item was not found, show error message"
+      },
+      {
+        "line": "        End Try",
+        "comment": ""
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "DataBindProc": {
+    "name": "DataBindProc",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Private Sub BindGrid()",
+        "comment": "Declare a procedure to populate daga grid with data"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        Dim cnnSQL As New SqlConnection(cnnstring)",
+        "comment": "Declare a connection"
+      },
+      {
+        "line": "        Dim cmd As New SqlCommand",
+        "comment": "Declare a SQL command"
+      },
+      {
+        "line": "        Dim dr As SqlDataReader",
+        "comment": "Declare a data reader"
+      },
+      {
+        "line": "        Dim sSQL As String",
+        "comment": "Declare a SQL connection string"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        sSQL = \"Select Ct.CartItemID,Cg.ProductName,Ct.CartItemQuantity,Ct.CartItemPrice,\"",
+        "comment": "The following SQL Select statement selects Name, Price, Quantity, and Total price of the products which are currently added to the shopping cart"
+      },
+      {
+        "line": "        sSQL = sSQL & \"Ct.CartItemQuantity * Ct.CartItemPrice as CartTotal\"",
+        "comment": ""
+      },
+      {
+        "line": "        sSQL = sSQL & \" From tblCart Ct, tblProductCatalog Cg Where Cg.ProductID = Ct.CartItemID \"",
+        "comment": ""
+      },
+      {
+        "line": "        sSQL = sSQL & \" And Ct.CartSessionID = '\" & Session.SessionID & \"'\"",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cmd.CommandText = sSQL",
+        "comment": "Assign a command to cmd"
+      },
+      {
+        "line": "        cmd.Connection = cnnSQL",
+        "comment": "Assign a connection to cmd"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cnnSQL.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "        DataGrid1.DataSource = cmd.ExecuteReader",
+        "comment": "Set the data source for the data grid"
+      },
+      {
+        "line": "        DataGrid1.DataBind()",
+        "comment": "Bind the grid with selected data"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cnnSQL.Close()",
+        "comment": "Close connection"
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "EditDataGrid": {
+    "name": "EditDataGrid",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Public Sub DGEdit(ByVal obj As Object, ByVal e As DataGridCommandEventArgs)",
+        "comment": "Precedure that opens data grid for editing"
+      },
+      {
+        "line": "        DataGrid1.EditItemIndex = e.Item.ItemIndex",
+        "comment": "Choose the indices of the items to edit (in our case, only the column Quantity is editable)"
+      },
+      {
+        "line": "        BindGrid()",
+        "comment": "Bind the grid with new data (update grid)"
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "CancelEdit": {
+    "name": "CancelEdit",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Public Sub DGCancel(ByVal obj As Object, ByVal e As DataGridCommandEventArgs)",
+        "comment": "Procedure to cancel the edit mode"
+      },
+      {
+        "line": "        DataGrid1.EditItemIndex = -1",
+        "comment": "Close items for editing (assign their EditItemIndex value 1)"
+      },
+      {
+        "line": "        BindGrid()",
+        "comment": "Bind the grid"
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "SaveDataGrid": {
+    "name": "SaveDataGrid",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Public Sub DGSave(ByVal obj As Object, ByVal e As DataGridCommandEventArgs)",
+        "comment": "Procedure to save the modifyed data"
+      },
+      {
+        "line": "        Dim cnnSQL As New SqlConnection(cnnstring)",
+        "comment": "Declare a new SQL connection"
+      },
+      {
+        "line": "        Dim cmd As New SqlCommand",
+        "comment": "Declare a new SQL command"
+      },
+      {
+        "line": "        Dim sSQL As String",
+        "comment": "Declare a connection string"
+      },
+      {
+        "line": "        Dim ItemId As Integer",
+        "comment": "Declare a variable that stores CartItemID (a unique number of a record in the cart)"
+      },
+      {
+        "line": "        Dim ItemQty As Integer",
+        "comment": "Declare a variable that stores item quantity (which we will need to update)"
+      },
+      {
+        "line": "        Dim TB As String",
+        "comment": "Declare a temporary variable to store a new product quantity"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        ItemId = Convert.ToInt32(e.Item.Cells(2).Text)",
+        "comment": "Find ID of the Cart item that needs to be saved"
+      },
+      {
+        "line": "        TB = CType(e.Item.Cells(5).Controls(0), TextBox).Text",
+        "comment": "Read item quantity from Column 5"
+      },
+      {
+        "line": "        ItemQty = Convert.ToInt32(TB)",
+        "comment": "Record item quantity into the variable ItemQty"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        sSQL = \"Update tblCart Set CartItemQuantity = \" & ItemQty & \" Where CartItemID = \" & ItemId",
+        "comment": "Change Item Quantity in the Database for a product with the given ID (ItemID)"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cmd.CommandText = sSQL",
+        "comment": "Assign a command test to cmd"
+      },
+      {
+        "line": "        cmd.Connection = cnnSQL",
+        "comment": "Assign a connection to cmd"
+      },
+      {
+        "line": "        cnnSQL.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "        cmd.ExecuteNonQuery()",
+        "comment": "Execute command cmd"
+      },
+      {
+        "line": "        cnnSQL.Close()",
+        "comment": "Close connection"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        DataGrid1.EditItemIndex = -1",
+        "comment": "Cancel Edit mode"
+      },
+      {
+        "line": "        BindGrid()",
+        "comment": "Bind grid with new data"
+      },
+      {
+        "line": "        Call DisplayOrder()",
+        "comment": "Display new Order data"
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "DeleteDataGrid": {
+    "name": "DeleteDataGrid",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Public Sub DGDelete(ByVal obj As Object, ByVal e As DataGridCommandEventArgs)",
+        "comment": "Procedure to delete item from the data grid"
+      },
+      {
+        "line": "        Dim cnnSQL As New SqlConnection(cnnstring)",
+        "comment": "Declare a new connection"
+      },
+      {
+        "line": "        Dim cmd As New SqlCommand",
+        "comment": "Declare a new SQL command"
+      },
+      {
+        "line": "        Dim sSQl As String",
+        "comment": "Declare a connection string"
+      },
+      {
+        "line": "        Dim ItemId As Integer",
+        "comment": "Declare a variable for storing selected item ID to delete this item"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        ItemId = Convert.ToInt32(e.Item.Cells(2).Text)",
+        "comment": "Columnes in the data grid are numbered from 0, so the column that contains CartItemID had index 2"
+      },
+      {
+        "line": "        sSQl = \"Delete from tblCart where CartItemID = \" & ItemId",
+        "comment": "Set the command sSQL to delete an item with a given ID from tblCart"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cmd.CommandText = sSQl",
+        "comment": "Assign sSQL as a command text for cmd"
+      },
+      {
+        "line": "        cmd.Connection = cnnSQL",
+        "comment": "Assign cnnSQL as a connection for cmd"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cnnSQL.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "        cmd.ExecuteNonQuery()",
+        "comment": "Execute SQL command"
+      },
+      {
+        "line": "        cnnSQL.Close()",
+        "comment": "Close connection"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        BindGrid()",
+        "comment": "Bind grid with new data"
+      },
+      {
+        "line": "        Call DisplayOrder()",
+        "comment": "Display updated order in the grid"
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "DataGridHTML": {
+    "name": "DataGridHTML",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "<asp:datagrid id=\"DataGrid1\" runat=\"server\" OnEditCommand=\"DGEdit\" OnCancelCommand=\"DGCancel\"",
+        "comment": "Initialize a DataGrid object, set it to execute DGEdit command in Edit mode, DGCancel command when Edit mode is canceled,\u2026"
+      },
+      {
+        "line": "OnUpdateCommand=\"DGSave\" OnDeleteCommand=\"DGDelete\" AutoGenerateColumns=\"False\" BorderColor=\"#CC9966\"",
+        "comment": "DGSave when data grid is updated, and DGDelete connamd when a record is deleted"
+      },
+      {
+        "line": "BorderStyle=\"None\" BorderWidth=\"1px\" BackColor=\"White\" CellPadding=\"4\">",
+        "comment": "In the next couple of lines, data grid format is changed - you may have a different formatting"
+      },
+      {
+        "line": "<FooterStyle ForeColor=\"#330099\" BackColor=\"#FFFFCC\"></FooterStyle>",
+        "comment": ""
+      },
+      {
+        "line": "<SelectedItemStyle Font-Bold=\"True\" ForeColor=\"#663399\" BackColor=\"#FFCC66\"></SelectedItemStyle>",
+        "comment": ""
+      },
+      {
+        "line": "<ItemStyle ForeColor=\"#330099\" BackColor=\"White\"></ItemStyle>",
+        "comment": ""
+      },
+      {
+        "line": "<HeaderStyle Font-Bold=\"True\" ForeColor=\"#FFFFCC\" BackColor=\"#990000\"></HeaderStyle>",
+        "comment": ""
+      },
+      {
+        "line": "<Columns>",
+        "comment": "Set the names and the properties of all DataGrid columns"
+      },
+      {
+        "line": "<asp:EditCommandColumn ButtonType=\"LinkButton\" UpdateText=\"Save\" CancelText=\"Cancel\" EditText=\"Edit\">",
+        "comment": "First column has the type EditCommandColumn and displays commands \"Edit\", \"Save\", and \"Cancel\""
+      },
+      {
+        "line": "</asp:EditCommandColumn>",
+        "comment": ""
+      },
+      {
+        "line": "<asp:ButtonColumn Text=\"Del\" CommandName=\"Delete\"></asp:ButtonColumn>",
+        "comment": "Second column Displays the text \"Del\" and is set to execure \"Delete\" command when clicked"
+      },
+      {
+        "line": "<asp:BoundColumn DataField=\"CartItemID\" ReadOnly=\"True\" HeaderText=\"Cart Item ID\"></asp:BoundColumn>",
+        "comment": "Third column is set to display CartItemID from the table tblCart"
+      },
+      {
+        "line": "<asp:BoundColumn DataField=\"ProductName\" ReadOnly=\"True\" HeaderText=\"Product Name\"></asp:BoundColumn>",
+        "comment": "Fourth column is set to display ProductName from the table tblPoductCatalog"
+      },
+      {
+        "line": "<asp:BoundColumn DataField=\"CartItemPrice\" ReadOnly=\"True\" HeaderText=\"Product Price\"></asp:BoundColumn>",
+        "comment": "Fifth column is set to display CartItemPrice from the table tblCart"
+      },
+      {
+        "line": "<asp:BoundColumn DataField=\"CartItemQuantity\" HeaderText=\"Quantity\"></asp:BoundColumn>",
+        "comment": "Sixth column is set to display CartItemQuantity from the table tblCart"
+      },
+      {
+        "line": "<asp:BoundColumn DataField=\"CartTotal\" ReadOnly=\"True\" HeaderText=\"Total\"></asp:BoundColumn>",
+        "comment": "Finally, seventh column is set to display CartTotal from the table tblCart"
+      },
+      {
+        "line": "</Columns>",
+        "comment": "End columns"
+      },
+      {
+        "line": "<PagerStyle HorizontalAlign=\"Center\" ForeColor=\"#330099\" BackColor=\"#FFFFCC\"></PagerStyle>",
+        "comment": ""
+      },
+      {
+        "line": "</asp:datagrid>",
+        "comment": "End data grid"
+      }
+    ]
+  },
+  "DataGridCalc": {
+    "name": "DataGridCalc",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "    Private Sub CalculateOrder()",
+        "comment": "Declare a procedure CalculateOrder to calculate the total price of the cart items"
+      },
+      {
+        "line": "        Dim cnn As New SqlConnection(cnnstring)",
+        "comment": "Declare a new connection"
+      },
+      {
+        "line": "        Dim cmd As New SqlCommand",
+        "comment": "Declare a new SQL command"
+      },
+      {
+        "line": "        Dim rdOrder As SqlDataReader = Nothing",
+        "comment": "Declare and initialize a data reader"
+      },
+      {
+        "line": "        Dim OrderTotal As Double",
+        "comment": "Declare a variable that temporarily stores total order price"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cmd.CommandText = \"Select Sum(CartItemPrice*CartItemQuantity) as Price from tblCart \"",
+        "comment": "Set the command cmd to select and sum up all items prices in the cart"
+      },
+      {
+        "line": "        cmd.CommandText=cmdCommandText & \" where CartSessionId ='\" & Session.SessionID & \"'\"",
+        "comment": ""
+      },
+      {
+        "line": "        cmd.Connection = cnn",
+        "comment": "Assign a connection to cmd"
+      },
+      {
+        "line": "        cnn.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "        rdOrder = cmd.ExecuteReader()",
+        "comment": "Read the total value to the data reader rdrOrder"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        If rdOrder.Read() And rdOrder.IsDBNull(0) = False Then",
+        "comment": "Check if the reader could read an item (the cart was not empty)"
+      },
+      {
+        "line": "            OrderTotal = Convert.ToSingle(rdOrder(0))",
+        "comment": "Assign Total Order Cost (read from the reader) to OrderTotal"
+      },
+      {
+        "line": "            btnCheckout.Enabled = True",
+        "comment": "Enable checkout button so that the user can checkout on the next page"
+      },
+      {
+        "line": "        Else",
+        "comment": "If the reader was empty\u2026"
+      },
+      {
+        "line": "            OrderTotal = 0",
+        "comment": "Total order cost is 0"
+      },
+      {
+        "line": "            btnCheckout.Enabled = False",
+        "comment": "Do not let user to check out"
+      },
+      {
+        "line": "        End If",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        rdOrder.Close()",
+        "comment": "Close data reader"
+      },
+      {
+        "line": "        cnn.Close()",
+        "comment": "Close connection"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        txtTotal.Text = OrderTotal.ToString(\"c\")",
+        "comment": "Display total order amount in currency format in the text box txtTotal"
+      },
+      {
+        "line": "        Session(\"OrderTotal\") = OrderTotal.ToString(\"c\")",
+        "comment": "Record Order total as a session variable (in currency format)"
+      },
+      {
+        "line": "    End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "FindUserDB": {
+    "name": "FindUserDB",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "        Dim rdLogin As SqlDataReader = Nothing",
+        "comment": "Declare and initialize data reader"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cmd.CommandText = \"CheckLogin\"",
+        "comment": "Assign a stored procedure CheckLogin as the command text for cmd"
+      },
+      {
+        "line": "        cmd.Connection = cnn",
+        "comment": "Assign cnn as a connection for command cmd"
+      },
+      {
+        "line": "        cmd.CommandType = CommandType.StoredProcedure",
+        "comment": "Set the type of cmd equal to StoredProcedure"
+      },
+      {
+        "line": "        cmd.Parameters.Add(\"@UserID\", txtUserId.Text)",
+        "comment": "Add parameter with the name @UserID and the value txtUserID.text to the list of cmd parameters"
+      },
+      {
+        "line": "        cmd.Parameters.Add(\"@Password\", txtPassword.Text)",
+        "comment": "Add the second parameter, with the name @Password and the value taken from txtPassword"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        cnn.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "        rdLogin = cmd.ExecuteReader()",
+        "comment": "Read all selected customers (login values are unique, so it must be either 1 or zero)"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "        If rdLogin.Read() Then",
+        "comment": "If there is a customer with such UserID and Password\u2026"
+      },
+      {
+        "line": "            Session(\"CustId\") = rdLogin(0)",
+        "comment": "Record selected customer ID as a session variable"
+      },
+      {
+        "line": "            Session(\"CustName\") = rdLogin(1)",
+        "comment": "Record selected customer name as a session variable"
+      },
+      {
+        "line": "            rdLogin.Close()",
+        "comment": "Close reader"
+      },
+      {
+        "line": "            Response.Redirect(\"checkout.aspx\")",
+        "comment": "Go to the page checkout.aspx"
+      },
+      {
+        "line": "        Else",
+        "comment": "If there are no customers with such UserID and Password\u2026"
+      },
+      {
+        "line": "            lblMessage.Visible = True",
+        "comment": "Display the label with Invalid Login message"
+      },
+      {
+        "line": "            rdLogin.Close()",
+        "comment": "Close reader"
+      },
+      {
+        "line": "            cnn.Close()",
+        "comment": "Close connection"
+      },
+      {
+        "line": "        End If",
+        "comment": ""
+      }
+    ]
+  },
+  "AddUserDB": {
+    "name": "AddUserDB",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "            cmd.CommandText = \"SaveCustomer\"",
+        "comment": "Assign a SQL command \"SaveCustomer\" to a global connection variable cmd"
+      },
+      {
+        "line": "            cmd.Connection = cnn",
+        "comment": "Set global connection cnn as a connection for cmd"
+      },
+      {
+        "line": "            cmd.CommandType = CommandType.StoredProcedure",
+        "comment": "Set the type of cmd as StoredProcedure (saved earlier on SQL server)"
+      },
+      {
+        "line": "            cmd.Parameters.Add(\"@FName\", txtFirstName.Text)",
+        "comment": "Add a new parameter @FName with the value stored as text in txtFirstName"
+      },
+      {
+        "line": "            cmd.Parameters.Add(\"@LName\", txtLastName.Text)",
+        "comment": "Add a new parameter @LName with the value taken from the text box txtLastName"
+      },
+      {
+        "line": "            cmd.Parameters.Add(\"@Street\", txtStreet.Text)",
+        "comment": ""
+      },
+      {
+        "line": "            cmd.Parameters.Add(\"@City\", txtCity.Text)",
+        "comment": ""
+      },
+      {
+        "line": "            cmd.Parameters.Add(\"@State\", txtState.Text)",
+        "comment": ""
+      },
+      {
+        "line": "            cmd.Parameters.Add(\"@Zip\", txtZip.Text)",
+        "comment": ""
+      },
+      {
+        "line": "            cmd.Parameters.Add(\"@Phone\", txtPhone.Text)",
+        "comment": ""
+      },
+      {
+        "line": "            cmd.Parameters.Add(\"@Email\", txtEmail.Text)",
+        "comment": ""
+      },
+      {
+        "line": "            cmd.Parameters.Add(\"@UserID\", txtNewUserId.Text)",
+        "comment": ""
+      },
+      {
+        "line": "            cmd.Parameters.Add(\"@Password\", txtNewPassword.Text)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "            cnn.Open()",
+        "comment": "Open connection"
+      },
+      {
+        "line": "            cmd.ExecuteNonQuery()",
+        "comment": "Execute command (save customer with the given info in the database)"
+      },
+      {
+        "line": "            cnn.Close()",
+        "comment": "Close connection"
+      }
+    ]
+  },
+  "function_netpay": {
+    "name": "Function NetPay",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "Function NetPay(varGross As Double, varFederal As Double, varState As Double, varInsurance As Double) As Double\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "    NetPay = varGross * (1 - varFederal / 100 - varState / 100) - varInsurance\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "    If NetPay < 0 Then\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "        NetPay = 0\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "        MsgBox(\"Invalid data\")\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "    End If\r\n\r\n",
+        "comment": ""
+      }
+    ]
+  },
+  "ax1_arrays_calling": {
+    "name": "Arrays Calling",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Using the data from public array to retrieve the data about the last recorded employee\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub frmPayments_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load\r\n\r\n",
+        "comment": "Begin Form _Load clause"
+      },
+      {
+        "line": "\tlblCaption.Text = \"Calculating Payment for \" & Title(NOfEmployees - 1) & \" \" & FirstName(NOfEmployees - 1) & \" \" & LastName(NOfEmployees - 1)\r\n",
+        "comment": "Retrieve the values from the arrays Title(), FirstName(), and LastName(), connect them in one text string, and display in the label lblCaption"
+      },
+      {
+        "line": "End Sub\r\n",
+        "comment": "End Form _Load clause"
+      }
+    ]
+  },
+  "ax1_arrays_declaration": {
+    "name": "Arrays Declaration",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Declare three public arrays for storing Employees' titles, first names, and last names\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "'Declare a variable to calculate the numbers of employees\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "Module mdlData\r\n\r\n",
+        "comment": "Declare a module named mdlData to store all global variables"
+      },
+      {
+        "line": "\tPublic NOfEmployees As Integer = 0\r\n\r\n",
+        "comment": "Declare a public variable that stores the number of employees and assign 0 as the starting number"
+      },
+      {
+        "line": "\tPublic FirstName(50) As String\r\n\r\n",
+        "comment": "Declare an array that stores First Names of size 50 (we assume that there cannot be more than 50 employees)"
+      },
+      {
+        "line": "\tPublic LastName(50) As String\r\n\r\n",
+        "comment": "Declare an array that stores employees Last Names of size 50"
+      },
+      {
+        "line": "\tPublic Title(50) As String\r\n\r\n",
+        "comment": "Declare an array that stores employees' titles (same size)"
+      },
+      {
+        "line": "End Module\r\n\r\n",
+        "comment": "End the module code"
+      }
+    ]
+  },
+  "ax1_arrays_saveto": {
+    "name": "Arrays Save To",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Save employees' last name, first name, and title in array when user clicks the Save button\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click\r\n\r\n",
+        "comment": "When the button btnSave is clicked, employee information is save from the text boxes to the arrays"
+      },
+      {
+        "line": "\tLastName(NOfEmployees) = txtLastName.Text\r\n\r\n",
+        "comment": "Record the text in the text box txtLastName in the array LastName()"
+      },
+      {
+        "line": "\tFirstName(NOfEmployees) = txtFirstName.Text\r\n\r\n",
+        "comment": "Record the text in the text box txtFirstName in the array FirstName()"
+      },
+      {
+        "line": "\tTitle(NOfEmployees) = cbxTitle.Text\r\n\r\n",
+        "comment": "Record the text selected in the combo box txtTitle in the array Titles()"
+      },
+      {
+        "line": "\tNOfEmployees = NOfEmployees + 1\r\n\r\n",
+        "comment": "Since we added one employee, we increment the number of employees by 1"
+      },
+      {
+        "line": "End Sub\r\n\r\n",
+        "comment": "End the button btnSave _Click clause"
+      }
+    ]
+  },
+  "ax1_combo_departments": {
+    "name": "Combo Departments",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Populate a combo box cbxDepartments with the department names when the form is loaded \r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub frmEmployees_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load\r\n\r\n",
+        "comment": "When the form frmEmployees is loaded, we populate the combo box cbxDepartments with the department names "
+      },
+      {
+        "line": "\tcbxDepartment.Items.Add(\"Marketing\")\r\n\r\n",
+        "comment": "Add the line \"Marketing\" to the combo box"
+      },
+      {
+        "line": "\tcbxDepartment.Items.Add(\"Economics\")\r\n\r\n",
+        "comment": "Add the line \"Economics\" to the combo box"
+      },
+      {
+        "line": "\tcbxDepartment.Items.Add(\"Human Resources\")\r\n\r\n",
+        "comment": "Add the line \"Human Resources\" to the combo box"
+      },
+      {
+        "line": "\tcbxDepartment.Items.Add(\"Information Systems\")\r\n\r\n",
+        "comment": "Add the line \"Information Systems\" to the combo box"
+      },
+      {
+        "line": "\tcbxDepartment.Items.Add(\"Production\")\r\n\r\n",
+        "comment": "Add the line \"Production\" to the combo box"
+      },
+      {
+        "line": "End Sub\r\n\r\n",
+        "comment": "Finish the procedure"
+      }
+    ]
+  },
+  "ax1_combo_loops": {
+    "name": "Combo Loops",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Populate the combo bow cbxQuantity with numbers 1-20 \r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "'Populate the combo box cbxShipping item by item\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub frmOrderCost_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load\r\n\r\n",
+        "comment": "When the form frmOrderCost opens, we need to populate the combo boxes with the types of shipping and with the possible product quantities"
+      },
+      {
+        "line": "\tcbxShipping.Items.Add(\"USPS Ground (1-2 weeks)\")\r\n\r\n",
+        "comment": "Add the item \"UPS Ground ...\" to the combo box cbxShipping"
+      },
+      {
+        "line": "\tcbxShipping.Items.Add(\"Priority (3-5 bus days)\")\r\n\r\n",
+        "comment": "Add the item \"Priority ...\" to the combo box cbxShipping"
+      },
+      {
+        "line": "\tcbxShipping.Items.Add(\"Express (1-2 bus days)\")\r\n\r\n",
+        "comment": "Add the item \"Express ...\" to the combo box cbxShipping"
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\tDim intCounter As Integer\r\n\r\n",
+        "comment": "Initialize a variable intCounter which will serve as a counter for product quantities"
+      },
+      {
+        "line": "\tFor intCounter = 1 To 20 \r\n\r\n",
+        "comment": "Start a loop to add numbers 1-20 in the combo cbxQuantity"
+      },
+      {
+        "line": "\t\tcbxQuantity.Items.Add(intCounter) \r\n\r\n",
+        "comment": "Add a number intCounter to the combo box"
+      },
+      {
+        "line": "\tNext \r\n\r\n",
+        "comment": "Go to the next loop"
+      },
+      {
+        "line": "End Sub\r\n\r\n",
+        "comment": "Finish the form _Load clause"
+      }
+    ]
+  },
+  "ax1_data_lookup": {
+    "name": "Data Lookup",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Look up customer's name by his/her ID and place it in a text box \r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnLookupName_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLookupName.Click\r\n\r\n",
+        "comment": "When user clicks the button btnLookupName, the program will find selected customer's name by its ID and place the name in a text box txtCustomerName"
+      },
+      {
+        "line": "\tDim cnn As New SqlConnection(strConnectionString)\r\n\r\n",
+        "comment": "declare a new connection variable based on a public connection string strConnectionString"
+      },
+      {
+        "line": "\tDim cmd As New SqlCommand(\"Select * from Customers where Ltrim(Rtrim(CustomerID)) = '\" & cbxCustomerID.Text.Trim() & \"'\", cnn)\r\n\r\n",
+        "comment": "Declare a new SQL command SqlCommand based on a Sequel Select statemsnt"
+      },
+      {
+        "line": "\tDim rd As SqlDataReader = Nothing\r\n\r\n",
+        "comment": "Declare a data reader to read selected data"
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\tcnn.Open()\r\n\r\n",
+        "comment": "Open connection"
+      },
+      {
+        "line": "\trd = cmd.ExecuteReader(CommandBehavior.SequentialAccess)\r\n\r\n",
+        "comment": "Execute reader and place all selected data in the variable rd"
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\tIf rd.Read Then\r\n\r\n",
+        "comment": "Do the following statement if the reader could read anything (any data were found)"
+      },
+      {
+        "line": "\t\ttxtCustomerName.Text = rd(1)\r\n\r\n",
+        "comment": "Find the value in the second column of the reader rd (the numbers starts with 0, so 1 means second column)  and place it in the text box txtCustomerName"
+      },
+      {
+        "line": "\tEnd If\r\n\r\n",
+        "comment": "End the if statement"
+      },
+      {
+        "line": "End Sub\r\n\r\n",
+        "comment": "End the _Click clause"
+      }
+    ]
+  },
+  "ax1_database_data_to_form": {
+    "name": "Database Data To Form",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Retrieve customer info from Northwind table, place CustomerID in a combo box and \r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "'the rest of customer info in the data grid\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub frmDatabase_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load\r\n\r\n",
+        "comment": "When the form frmDatabase is loaded, we retrieve customers data from the Northwind database and place then into the data grid on the form"
+      },
+      {
+        "line": "\tDim cnn As New SqlConnection(strConnectionString)\r\n\r\n",
+        "comment": "Declare a new connection cnn based on the connection string strConnectionString saved earlier in the module"
+      },
+      {
+        "line": "\tDim da As New SqlDataAdapter(\"Select CustomerID, CompanyName, ContactName, ContactTitle from Customers Order by CustomerID\", cnn)\r\n\r\n",
+        "comment": "Declare a new data adapter to select the given fields (CustomerID, etc. ) from the table Customers "
+      },
+      {
+        "line": "\tDim ds As New DataSet\r\n\r\n",
+        "comment": "Declare a new data set ds that will store the data which we retrieve from the database"
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\tda.Fill(ds, \"Customers\")\r\n\r\n",
+        "comment": "Fill in the data set ds with selected data from the table Customers"
+      },
+      {
+        "line": "\tcbxCustomerID.DataSource = ds.Tables(0)\r\n\r\n",
+        "comment": "Record all values in the first column (all customer IDs) in the combo box cbxCustomerID"
+      },
+      {
+        "line": "\tcbxCustomerID.DisplayMember = \"CustomerID\"\r\n\r\n",
+        "comment": "Make the combo box display Customer IDs"
+      },
+      {
+        "line": "\tcbxCustomerID.ValueMember = \"CustomerID\"\r\n\r\n",
+        "comment": "Make the combo box associate the value of each item with a customer ID"
+      },
+      {
+        "line": "\tdgCustomers.DataSource = ds\r\n\r\n",
+        "comment": "Display the data saved in the data set ds in the data grid dgCustomers "
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\tcnn.Close()\r\n\r\n",
+        "comment": "Close connection"
+      },
+      {
+        "line": "End Sub\r\n\r\n",
+        "comment": "End the form _Load procedure"
+      }
+    ]
+  },
+  "ax1_forms_employees": {
+    "name": "Forms Employees",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Add a new instance of a form, open it, and change its controls dynamically\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "Dim Employees As New frmEmployees\r\n\r\n",
+        "comment": "Declare a variable Employees as a new instance of the form frmEmployees"
+      },
+      {
+        "line": "\tEmployees.MdiParent = frmMain.ActiveForm\r\n\r\n",
+        "comment": "Make the form Employees open inside the form frmMain as an Mdi Child"
+      },
+      {
+        "line": "\tEmployees.lblWelcome.ForeColor = Color.Navy\r\n\r\n",
+        "comment": "Change the color of the label lblWelcome on the form Employees to navy"
+      },
+      {
+        "line": "\tEmployees.lblWelcome.BackColor = Color.LightBlue\r\n\r\n",
+        "comment": "Change the background color of the form Employees to LightBlue"
+      },
+      {
+        "line": "\tEmployees.lblWelcome.Text = \"Welcome to Employess Data Page!\"\r\n\r\n",
+        "comment": "Change the text of the label lblWelcome to a greeting"
+      },
+      {
+        "line": "Employees.Show()\r\n\r\n",
+        "comment": "Finally, show the form Employees"
+      }
+    ]
+  },
+  "ax1_forms_procedure": {
+    "name": "Forms Procedure",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Declare a procedure that opens the form Employees\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "Public Sub ViewEmployees()\r\n\r\n",
+        "comment": "Declare a global procedure ViewEmployees that opens Employees form"
+      },
+      {
+        "line": "\tDim Employees As New frmEmployees\r\n\r\n",
+        "comment": "Declare an instance of the form frmEmployees"
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\tEmployees.MdiParent = frmMain.ActiveForm\r\n\r\n",
+        "comment": "Make the form Employees open inside the Main form (Mdi Container)"
+      },
+      {
+        "line": "\tEmployees.lblWelcome.ForeColor = Color.Navy\r\n\r\n",
+        "comment": "Change the color of the label lblWelcome to navy"
+      },
+      {
+        "line": "\tEmployees.lblWelcome.BackColor = Color.LightBlue\r\n\r\n",
+        "comment": "Change the background of the label lblWelcome to LightBlue"
+      },
+      {
+        "line": "\tEmployees.lblWelcome.Text = \"Welcome to Employess Data Page!\"\r\n\r\n",
+        "comment": "Change the text of the label lblWelcome to a greeting message"
+      },
+      {
+        "line": "\tEmployees.Show()\r\n\r\n",
+        "comment": "Show the form Employees"
+      },
+      {
+        "line": "End Sub\r\n\r\n",
+        "comment": "End the Procedure"
+      }
+    ]
+  },
+  "ax1_functions_msgbox": {
+    "name": "Functions Msgbox",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Calculating Employees Net Pay using a public function and an if .. then clause\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "'to give an invalid entry error message if the net pay value is negative\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "Module mdlData\r\n\r\n",
+        "comment": "Start the module mdlData"
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "    Function NetPay(varGross As Double, varFederal As Double, varState As Double, varInsurance As Double) As Double\r\n\r\n",
+        "comment": "Declare a global function that accepts four variables: Gross income, Federal Tax, State Tax, and Insurance, and returns the net pay"
+      },
+      {
+        "line": "        NetPay = varGross * (1 - varFederal / 100 - varState / 100) - varInsurance\r\n\r\n",
+        "comment": "Calculate the net pay by subtracting the percentage remaining after tax deduction, and then subtracting the cost of insurance"
+      },
+      {
+        "line": "        If NetPay < 0 Then\r\n\r\n",
+        "comment": "Start the error processing IF clause: if NetPay is negative, there must be some error in data entry"
+      },
+      {
+        "line": "            NetPay = 0\r\n\r\n",
+        "comment": "If NetPay is negative, we change it to 0"
+      },
+      {
+        "line": "            MsgBox(\"Invalid data\")\r\n\r\n",
+        "comment": "If NetPay is negative, display a message saying that there is an invalid data entry"
+      },
+      {
+        "line": "        End If\r\n\r\n",
+        "comment": "End the IF clause"
+      },
+      {
+        "line": "    End Function\r\n\r\n",
+        "comment": "End the function"
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "End Module\r\n\r\n",
+        "comment": "End the Module code"
+      }
+    ]
+  },
+  "ax1_if_then_else": {
+    "name": "If Then Else",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Put 5, 7 or 14 in Shipping Cost text box depending whether the shipping type is Ground, Priority or Express \r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub cbxShipping_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbxShipping.SelectedIndexChanged\r\n\r\n",
+        "comment": "This procedure is generated by VB, it runs when a user changes the item he or she is viewing in the combo box"
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\tIf cbxShipping.Text = \"USPS Ground (1-2 weeks)\" Then \r\n\r\n",
+        "comment": "This statement checks if user selected ground shipping in Shipping combo box"
+      },
+      {
+        "line": "\t\ttxtShipCost.Text = 5\r\n\r\n",
+        "comment": "If ground shipping was selected, we are going to charge $5 and so we record 5 in the text box txtShipCost"
+      },
+      {
+        "line": "\tElseIf cbxShipping.Text = \"Priority (3-5 bus days)\" Then \r\n\r\n",
+        "comment": "This alternative IF statement activates if the previous IF was false; it checks if user selected priority shipping in Shipping combo box"
+      },
+      {
+        "line": "\t\ttxtShipCost.Text = 7\r\n\r\n",
+        "comment": "If priority shipping was selected, $7 will be charged and so we record 7 in the text box txtShipCost"
+      },
+      {
+        "line": "\tElse \r\n\r\n",
+        "comment": "In all other cases (not Ground and not Priority)..."
+      },
+      {
+        "line": "\t\ttxtShipCost.Text = 14\r\n\r\n",
+        "comment": "Record 14 in the text box txtShipCost"
+      },
+      {
+        "line": "\tEnd If\r\n\r\n",
+        "comment": "Finish the IF clause"
+      },
+      {
+        "line": "\ttxtTotal.Text = CDbl(txtOrderCost.Text) + CDbl(txtTax.Text) + CDbl(txtShipCost.Text)\r\n\r\n",
+        "comment": "Add the amount charged for shipping with the order cost and the tax and record it in the text box txtTotal "
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "End Sub\r\n\r\n",
+        "comment": "End procedure"
+      }
+    ]
+  },
+  "ax1_operations_w_variables": {
+    "name": "Operations With Variables",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Calculate the total order cost based on product cost, tax, and shipping type\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub cbxQuantity_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbxQuantity.SelectedIndexChanged\r\n\r\n",
+        "comment": "Recalculate the total cost of the order every time user changes product quantity in the combo box cbxQuantity"
+      },
+      {
+        "line": "\ttxtOrderCost.Text = cbxQuantity.Text * txtProdPrice.Text\r\n\r\n",
+        "comment": "Calculate the order cost by multiplying product price by the quantity, and record it in the text box txtOrderCost"
+      },
+      {
+        "line": "\ttxtTax.Text = txtOrderCost.Text / 100 * 7\r\n\r\n",
+        "comment": "Calculate the tax amount (7% of the order cost) and record it in the text box txtTax"
+      },
+      {
+        "line": "\ttxtTotal.Text = CDbl(txtOrderCost.Text) + CDbl(txtTax.Text) + CDbl(txtShipCost.Text)\r\n\r\n",
+        "comment": "Add the order cost, the tax amount, and the shipping cost, and record the result in the text box txtTotal"
+      },
+      {
+        "line": "End Sub\r\n\r\n",
+        "comment": "End the combo box _Change clause"
+      }
+    ]
+  },
+  "ax1_with_statement": {
+    "name": "With Statement",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'With clause applied to Microsoft Excel called as an object from VS.NET\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "'Use function GreenCells to calculate the number of cells with green interior\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "Public Function GreenCells(objExcel As Excel.Application, intCells As Integer) As Integer\r\n\r\n",
+        "comment": "The function GreenCells accepts two variables: an Excel application and a number of rows and columns in the top left corner"
+      },
+      {
+        "line": "    Dim intRow As Integer\r\n\r\n",
+        "comment": "Declare a variable that will loop through the rows"
+      },
+      {
+        "line": "    Dim intColumn As Integer\r\n\r\n",
+        "comment": "Declare a variable that will loop through the columns"
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "    GreenCells = 0\r\n\r\n",
+        "comment": "Initialize the number of green cells by assigning 0 "
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "    With objExcel\r\n\r\n",
+        "comment": "The following statements will be executed WITH the object Excel"
+      },
+      {
+        "line": "        For intRow = 1 To intCells\r\n\r\n",
+        "comment": "Start a loop by rows"
+      },
+      {
+        "line": "            For intColumn = 1 To intCells\r\n\r\n",
+        "comment": "Start inner loop by columns"
+      },
+      {
+        "line": "                If .Cells(intRow, intColumn).interior.colorindex = 50 Then\r\n\r\n",
+        "comment": "If a cell color is green (colorindex = 50) then execute the following"
+      },
+      {
+        "line": "                    GreenCells = GreenCells + 1\r\n\r\n",
+        "comment": "Increment the number of green cells by 1"
+      },
+      {
+        "line": "                End If\r\n\r\n",
+        "comment": "End the IF clause"
+      },
+      {
+        "line": "            Next\r\n\r\n",
+        "comment": "Do next inner loop"
+      },
+      {
+        "line": "        Next intRow\r\n\r\n",
+        "comment": "Do next outer loop"
+      },
+      {
+        "line": "    End With\r\n\r\n",
+        "comment": "End WITH clause"
+      },
+      {
+        "line": "\r\n",
+        "comment": ""
+      },
+      {
+        "line": "End Function\r\n\r\n",
+        "comment": "End the function"
+      }
+    ]
+  },
+  "Ch1_ChangingButton": {
+    "name": "Ch1 Changing Button",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "Private Sub btnHourGlass_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnHourGlass.Click\r",
+        "comment": "what happens after you click the button"
+      },
+      {
+        "line": "    Dim mySize As Size\r",
+        "comment": "the value in the box is the actual size"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    btnHourGlass.Hide()\r",
+        "comment": ""
+      },
+      {
+        "line": "    btnHourGlass.BackColor = Color.Azure\r",
+        "comment": "background color in the hour glass button is azue"
+      },
+      {
+        "line": "    btnHourGlass.Text = \"I have been resized\"\r",
+        "comment": "the text  says i have been resized"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    mySize = New Size(btnHourGlass.Size.Width * 1.2, btnHourGlass.Size.Height * 1.2)\r",
+        "comment": "the formula that is to be used to determine the size is saved"
+      },
+      {
+        "line": "    btnHourGlass.Size = mySize\r",
+        "comment": "when you enter the value it is now saved as mysize and ran through the application"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    btnHourGlass.Show()\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub\r",
+        "comment": ""
+      }
+    ]
+  },
+  "Ch1_LasVegas": {
+    "name": "Ch1 Las Vegas",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "Private Sub btnBet_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBet.Click\r",
+        "comment": "When the button is clicked, btnBet information is saved from the text boxes to the arrays"
+      },
+      {
+        "line": "    Dim myRandom As Random = New Random()        \r",
+        "comment": "Declaration of myRandom variable as Random"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    txtNumber1.Text = CInt(myRandom.NextDouble * 10)\r",
+        "comment": "Generates 1st number from myRandom in text box and multiplies it * 10, number declared as double"
+      },
+      {
+        "line": "    txtNumber2.Text = CInt(myRandom.NextDouble * 10)\r",
+        "comment": "Generates 2nd  number from myRandom in text box and multiplies it * 10, number declared as double"
+      },
+      {
+        "line": "    txtNumber3.Text = CInt(myRandom.NextDouble * 10)\r",
+        "comment": "Generates 3rd number from myRandom in text box and multiplies it * 10, number declared as double"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    If CInt(txtNumber1.Text) + CInt(txtNumber2.Text) + CInt(txtNumber3.Text) = 21 Then\r",
+        "comment": "This statement checks if the 3 myRandom numbers = 21"
+      },
+      {
+        "line": "        picWin.Visible = True\r",
+        "comment": "if the number = 21 you win"
+      },
+      {
+        "line": "    Else\r",
+        "comment": "In all other cases (you lose)"
+      },
+      {
+        "line": "        picWin.Visible = False\r",
+        "comment": "if the number does not = 21 you lose"
+      },
+      {
+        "line": "    End If\r",
+        "comment": "Finish the IF clause"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub\r",
+        "comment": "End procedure"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnCheat_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCheat.Click\r",
+        "comment": "When the button btnCheat is clicked, information is saved from the text boxes to the arrays"
+      },
+      {
+        "line": "    Dim myRandom As Random = New Random()\r",
+        "comment": "Declaration of myRandom variable as Random"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    txtNumber1.Text = CInt(myRandom.NextDouble * 10)\r",
+        "comment": "Generates 1st myRandom as double and * 10, number declared as double"
+      },
+      {
+        "line": "    txtNumber2.Text = CInt(myRandom.NextDouble * 10)\r",
+        "comment": "Generates 2nd myRandom as double and * 10, number declared as double"
+      },
+      {
+        "line": "    txtNumber3.Text = 21 - CInt(txtNumber1.Text) - CInt(txtNumber2.Text)\r",
+        "comment": "Generates a 3rd numbers = to 21 and subtracts the first myRandom variables from it"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    picWin.Visible = True\r",
+        "comment": "Checks for win, your number will always be 21 with this procedure, you will win"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub",
+        "comment": "End procedure"
+      }
+    ]
+  },
+  "Ch2_NumbersAndDates_Average": {
+    "name": "Ch2 Numbers And Dates Average",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "Private Sub btnAverage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAverage.Click\r",
+        "comment": "Heading for the code involving the \"average\" button."
+      },
+      {
+        "line": "    Dim dblCalc As Double\r",
+        "comment": "declares the variable dimcalc as a double type."
+      },
+      {
+        "line": "    Static intHowManyNumbers As Integer = 0\r",
+        "comment": "declares the static variable \"HowManyNumbers\" as an integer type."
+      },
+      {
+        "line": "    Static dblSum As Double = 0\r",
+        "comment": "declares the static variable \"sum\" as a double type."
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    If IsNumeric(txtNumber.Text) Then\r",
+        "comment": "this starts the if loop and declares a variable for the result."
+      },
+      {
+        "line": "        dblSum = dblSum + CDbl(txtNumber.Text)\r",
+        "comment": "this is stating that the variable sum is going to be from adding the two variables up."
+      },
+      {
+        "line": "        intHowManyNumbers += 1\r",
+        "comment": "increases the variable \"howmanynumbers\" by increments of 1 each time the loop is run."
+      },
+      {
+        "line": "        dblCalc = dblSum / intHowManyNumbers\r",
+        "comment": "declaring that the \"dblcalc\" answer is going to be the \"dblsum\" variable divided by the \"inthowmanynumbers\" variable."
+      },
+      {
+        "line": "        txtResult.Text = CStr(dblCalc)\r",
+        "comment": "displays the answer of the \"dblcalc\" variable in a text."
+      },
+      {
+        "line": "    End If\r",
+        "comment": "ends the if loop."
+      },
+      {
+        "line": "End Sub",
+        "comment": "ends this section of the subscript and is the end of the code."
+      }
+    ]
+  },
+  "Ch2_NumbersAndDates_DatesDifference": {
+    "name": "Ch2 Numbers And Dates Dates Difference",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "Private Sub btnDifference_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDifference.Click\r",
+        "comment": "starts the program when the button difference is clicked"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim dateDiff As System.TimeSpan\r",
+        "comment": "the variable that will be stored as the difference between the two dates"
+      },
+      {
+        "line": "    Dim date1 As System.DateTime\r",
+        "comment": "the variable that will be stored as the first date entered"
+      },
+      {
+        "line": "    Dim date2 As System.DateTime\r",
+        "comment": "the variable that will be stored as the second date entered"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    If Not IsDate(txtDate1.Text) Then\r",
+        "comment": "if the first date is not a valid date then,"
+      },
+      {
+        "line": "        MsgBox(\"First date is not a valid date\", MsgBoxStyle.Critical, \"Date Error\")\r",
+        "comment": "a date error message box will show up and say \"first date is not a valid date\""
+      },
+      {
+        "line": "    End If\r",
+        "comment": "end of the IF statement"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    If Not IsDate(txtDate2.Text) Then\r",
+        "comment": "if the second date is not a valid date then,"
+      },
+      {
+        "line": "        MsgBox(\"Second date is not a valid date\", MsgBoxStyle.Critical, \"Date Error\")\r",
+        "comment": "a date error message box will show up and say \"second date is not a valid date\""
+      },
+      {
+        "line": "    End If\r",
+        "comment": "end of the IF statement"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    If IsDate(txtDate1.Text) And IsDate(txtDate2.Text) Then\r",
+        "comment": "if the two dates are valid then,"
+      },
+      {
+        "line": "        date1 = CDate(txtDate1.Text)\r",
+        "comment": "the first valid date entered"
+      },
+      {
+        "line": "        date2 = CDate(txtDate2.Text)\r",
+        "comment": "the second valid date is entered"
+      },
+      {
+        "line": "        dateDiff = date2.Subtract(date1)\r",
+        "comment": "subtracts the second valid date from the first valid date"
+      },
+      {
+        "line": "        txtDateDiff.Text = dateDiff.Days()\r",
+        "comment": "the time between the  two valid dates in number of days"
+      },
+      {
+        "line": "    End If\r",
+        "comment": "end of the IF statement"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub",
+        "comment": "end for the program"
+      }
+    ]
+  },
+  "Ch2_NumbersAndDates_RadioButtons": {
+    "name": "Ch2 Numbers And Dates Radio Buttons",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "Private Sub rbtnDays_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbtnDays.CheckedChanged\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim dateCalc As Date\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    If IsNumeric(txtTimeUnits.Text) And _\r",
+        "comment": ""
+      },
+      {
+        "line": "        IsDate(txtDate1.Text) And _\r",
+        "comment": ""
+      },
+      {
+        "line": "        rbtnDays.Checked Then\r",
+        "comment": ""
+      },
+      {
+        "line": "        dateCalc = CDate(txtDate1.Text)\r",
+        "comment": ""
+      },
+      {
+        "line": "        dateCalc = dateCalc.AddDays(CDbl(txtTimeUnits.Text))\r",
+        "comment": ""
+      },
+      {
+        "line": "        txtDate1.Text = CStr(dateCalc)\r",
+        "comment": ""
+      },
+      {
+        "line": "    End If\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub rbtnMonths_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles rbtnMonths.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim dateCalc As Date\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    If IsNumeric(txtTimeUnits.Text) And _\r",
+        "comment": ""
+      },
+      {
+        "line": "        IsDate(txtDate1.Text) Then\r",
+        "comment": ""
+      },
+      {
+        "line": "        dateCalc = CDate(txtDate1.Text)\r",
+        "comment": ""
+      },
+      {
+        "line": "        dateCalc = dateCalc.AddMonths(CDbl(txtTimeUnits.Text))\r",
+        "comment": ""
+      },
+      {
+        "line": "        txtDate1.Text = CStr(dateCalc)\r",
+        "comment": ""
+      },
+      {
+        "line": "    End If\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub rbtnYears_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles rbtnYears.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim dateCalc As Date\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    If IsNumeric(txtTimeUnits.Text) And _\r",
+        "comment": ""
+      },
+      {
+        "line": "        IsDate(txtDate1.Text) Then\r",
+        "comment": ""
+      },
+      {
+        "line": "        dateCalc = CDate(txtDate1.Text)\r",
+        "comment": ""
+      },
+      {
+        "line": "        dateCalc = dateCalc.AddYears(CDbl(txtTimeUnits.Text))\r",
+        "comment": ""
+      },
+      {
+        "line": "        txtDate1.Text = CStr(dateCalc)\r",
+        "comment": ""
+      },
+      {
+        "line": "    End If\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "Ch2_TimerAndText_LeftRightMiddle": {
+    "name": "Ch2 Timer And Text Left Right Middle",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "Private Sub btnLeft_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLeft.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim strCalc As String = txtInput.Text\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    If IsNumeric(txtLength.Text) Then\r",
+        "comment": ""
+      },
+      {
+        "line": "        If CInt(txtLength.Text) <= strCalc.Length Then\r",
+        "comment": ""
+      },
+      {
+        "line": "            txtOutput.Text = txtOutput.Text & txtInput.Text.Substring(0, CInt(txtLength.Text))\r",
+        "comment": ""
+      },
+      {
+        "line": "        End If\r",
+        "comment": ""
+      },
+      {
+        "line": "    End If\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnRight_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRight.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim strCalc As String = txtInput.Text\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    If IsNumeric(txtLength.Text) Then\r",
+        "comment": ""
+      },
+      {
+        "line": "        If CInt(txtLength.Text) <= strCalc.Length Then\r",
+        "comment": ""
+      },
+      {
+        "line": "            txtOutput.Text = txtOutput.Text & txtInput.Text.Substring(strCalc.Length - CDbl(txtLength.Text), CDbl(txtLength.Text))\r",
+        "comment": ""
+      },
+      {
+        "line": "        End If\r",
+        "comment": ""
+      },
+      {
+        "line": "    End If\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnMiddle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMiddle.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim strCalc As String = txtInput.Text\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    If IsNumeric(txtStart.Text) And IsNumeric(txtLength.Text) Then\r",
+        "comment": ""
+      },
+      {
+        "line": "        If CInt(txtStart.Text) + CInt(txtLength.Text) <= strCalc.Length Then\r",
+        "comment": ""
+      },
+      {
+        "line": "            txtOutput.Text = txtOutput.Text & txtInput.Text.Substring (CInt(txtStart.Text), CInt(txtLength.Text))\r",
+        "comment": ""
+      },
+      {
+        "line": "        End If\r",
+        "comment": ""
+      },
+      {
+        "line": "    End If\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "Ch2_TimerAndText_Timer": {
+    "name": "Ch2 Timer And Text Timer",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "Private Sub btnStart_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStart.Click\r\n\r\n",
+        "comment": "This begins a section of programming for a button to do a task when it is clicked"
+      },
+      {
+        "line": "    If tmrStrings.Enabled = True Then\r\n\r\n",
+        "comment": "This line of code gives a condition of an If statement which checks to see if the tmrString equals true and if it is......"
+      },
+      {
+        "line": "        tmrStrings.Enabled = False\r\n\r\n",
+        "comment": "Sets tmrString equals to false"
+      },
+      {
+        "line": "        btnStart.Text = \"Start the Timer\"\r\n\r\n",
+        "comment": "Putting text on the button Start"
+      },
+      {
+        "line": "    Else\r\n\r\n",
+        "comment": "If the condition is not met then do something else which is..."
+      },
+      {
+        "line": "        tmrStrings.Interval = 200\r\n\r\n",
+        "comment": "Set s tmrStrings to an interval of 200"
+      },
+      {
+        "line": "        tmrStrings.Start()\r\n\r\n",
+        "comment": "Starts the time"
+      },
+      {
+        "line": "        btnStart.Text = \"Stop the Timer\"\r\n\r\n",
+        "comment": "Changes the text on the button to stop the timer."
+      },
+      {
+        "line": "    End If\r\n\r\n",
+        "comment": "Ends the IF statement"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "End Sub\r\n\r\n",
+        "comment": "End that part of the program"
+      },
+      {
+        "line": "",
+        "comment": "This begins a section of programming for a button to do a task when it is clicked"
+      },
+      {
+        "line": "Private Sub tmrStrings_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tmrStrings.Tick\r\n\r\n",
+        "comment": "Declare a variable for counting of type string and set it equals to an output of text type."
+      },
+      {
+        "line": "    Dim strCalc As String = txtOutput.Text\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": "This line of code gives a condition of an If statement which states that if the variable for counting is greater than zero then...."
+      },
+      {
+        "line": "    If strCalc.Length > 0 Then\r\n\r\n",
+        "comment": "Sets the text output equals to the count length decreased by one"
+      },
+      {
+        "line": "        txtOutput.Text = txtOutput.Text.Substring(0, strCalc.Length - 1)\r\n\r\n",
+        "comment": "Ends the IF statement"
+      },
+      {
+        "line": "    End If\r\n\r\n",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": "Ends the program"
+      },
+      {
+        "line": "End Sub\r\n",
+        "comment": ""
+      }
+    ]
+  },
+  "Ch2_TimerAndText_TrimUpperReplace": {
+    "name": "Ch2 Timer And Text Trim Upper Replace",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "Private Sub btnTrim_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTrim.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim strCalc As String = txtOutput.Text\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    txtOutput.Text = strCalc.Trim\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnUpperCase_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpperCase.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim strCalc As String = txtOutput.Text\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    txtOutput.Text = strCalc.ToUpper\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnReplace_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReplace.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim strCalc As String = txtOutput.Text\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    txtOutput.Text = strCalc.Replace(txtReplace.Text, txtWith.Text)\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "Ch3_Case2_DoLoops": {
+    "name": "Ch3 Case2 Do Loops",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "' This subroutine demonstrates a Do Loop. \r",
+        "comment": ""
+      },
+      {
+        "line": "' The subroutine examines a string of unknown length,\r",
+        "comment": ""
+      },
+      {
+        "line": "' hence the Do Loop is a good way of handling it, and  \r",
+        "comment": ""
+      },
+      {
+        "line": "' returns the number of \"A\"s in it. \r",
+        "comment": ""
+      },
+      {
+        "line": "' The string is analyzed by examining its left-most\r",
+        "comment": ""
+      },
+      {
+        "line": "' character and then truncating it. \r",
+        "comment": ""
+      },
+      {
+        "line": "' Note that \"A\" is not the same as \"a\". \r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnDoLoop_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDoLoop.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim I As Integer\r",
+        "comment": "Delcating I as an Integer"
+      },
+      {
+        "line": "    Dim intTotal As Integer = 0\r",
+        "comment": "Declaring \"intTotal\" as an Integer, which = 0"
+      },
+      {
+        "line": "    Dim strText As String\r",
+        "comment": "Declaring \"strText\" as a String"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    strText = txtResult.Text\r",
+        "comment": "strText = the text box \"txtResults\""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    Do Until Not strText.Length > 0 \r",
+        "comment": "Looping until strText.Length is greater then 0"
+      },
+      {
+        "line": "        If strText.Chars(0) = \"A\" Then \r",
+        "comment": "If strText = an \"A\" value, increment then end if"
+      },
+      {
+        "line": "            intTotal += 1\r",
+        "comment": "Array Incrementation"
+      },
+      {
+        "line": "        End If\r",
+        "comment": "Ending If Statement"
+      },
+      {
+        "line": "        strText = strText.Substring(1)\r",
+        "comment": "strText = the strText Substring (Array)"
+      },
+      {
+        "line": "    Loop\r",
+        "comment": "Looping around for another pass"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    txtResult.Text = \"There were \" & CStr(intTotal) & \" letters A\"\r",
+        "comment": "txtResults = There were (intTotal)"
+      },
+      {
+        "line": "End Sub",
+        "comment": "End Sub Routine"
+      }
+    ]
+  },
+  "Ch3_Case2_Factorial": {
+    "name": "Ch3 Case2 Factorial",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "' This subroutine handles a click event on the btnFactorial \r",
+        "comment": ""
+      },
+      {
+        "line": "' button. When the button is clicked the value in the textbox\r",
+        "comment": ""
+      },
+      {
+        "line": "' txtResult is checked to verify that it is numeric, integer, and \r",
+        "comment": ""
+      },
+      {
+        "line": "' positive. If it is a For loop is used to calculate its factorial \r",
+        "comment": ""
+      },
+      {
+        "line": "' and display it back in the textbox. \r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnFactorial_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFactorial.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim I As Integer  \r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim dblSum As Double = 1 \r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    If IsNumeric(txtResult.Text) And txtResult.Text <> \"\" Then\r",
+        "comment": ""
+      },
+      {
+        "line": "        If CDbl(txtResult.Text) = CInt(txtResult.Text) Then\r",
+        "comment": ""
+      },
+      {
+        "line": "            If CInt(txtResult.Text) > 0 Then\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "                For I = 1 To CInt(txtResult.Text) Step 1\r",
+        "comment": ""
+      },
+      {
+        "line": "                    dblSum *= I\r",
+        "comment": ""
+      },
+      {
+        "line": "                Next\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "                txtResult.Text = \"The factorial of \" & txtResult.Text & \" is \" & CStr(dblSum)\r",
+        "comment": ""
+      },
+      {
+        "line": "            End If\r",
+        "comment": ""
+      },
+      {
+        "line": "        End If\r",
+        "comment": ""
+      },
+      {
+        "line": "    End If\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "Ch3_Case2_ForLoopDemo": {
+    "name": "Ch3 Case2 For Loop Demo",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "Private Sub btnForLoop_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnForLoop.Click\r",
+        "comment": "This begins a section of programming (a subroutine) for a button to do a task when it is clicked. It is generated by VB."
+      },
+      {
+        "line": "    Dim I As Integer\r",
+        "comment": "Declares the variable I as an Integer."
+      },
+      {
+        "line": "    Dim intSum As Integer = 0\r",
+        "comment": "Declares variable intSum as an integer and sets it initially equal to 0."
+      },
+      {
+        "line": "\r",
+        "comment": "There is no code on this line."
+      },
+      {
+        "line": "    If IsNumeric(txtResult.Text) Then\r",
+        "comment": "This code starts the IF statement (clause)and declares a varible for the result."
+      },
+      {
+        "line": "        For I = 1 To CInt(txtResult.Text)\r",
+        "comment": "This code will begin the code to start a Loop statement."
+      },
+      {
+        "line": "            intSum += I\r",
+        "comment": "This part of the code will increment the loop as it progresses."
+      },
+      {
+        "line": "        Next\r",
+        "comment": "This statement will end the For/Next Loop. It will aslo go to the next loop."
+      },
+      {
+        "line": "        txtResult.Text = \"The sum of all integer numbers from 1 to \" & txtResult.Text & \" is \" & intSum\r",
+        "comment": "This statement will display the result of the query on the screen. The information between the \"s will be as displayed/typed."
+      },
+      {
+        "line": "    End If\r",
+        "comment": "This part will end the IF statement(clause)."
+      },
+      {
+        "line": "End Sub",
+        "comment": "This ends this section (subroutine) of the programming.This ends the procedure."
+      }
+    ]
+  },
+  "Ch3_Case2_SearchArray": {
+    "name": "Ch3 Case2 Search Array",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "' This subroutine defines an array of integers,\r",
+        "comment": ""
+      },
+      {
+        "line": "' places random numbers between 10 and 20 into all \r",
+        "comment": ""
+      },
+      {
+        "line": "' its elements. Next, the application creates another \r",
+        "comment": ""
+      },
+      {
+        "line": "' random number within the same range and searches\r",
+        "comment": ""
+      },
+      {
+        "line": "' for it in the array. \r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch.Click\r",
+        "comment": "This begins a section of programming for a button to do a task when it is clicked"
+      },
+      {
+        "line": "    Dim intArray(9) As Integer\r",
+        "comment": "Declares the intArray  of size 9  as an Integer"
+      },
+      {
+        "line": "    Dim myRandom As New Random()\r",
+        "comment": "Declares variable myRandom as a new random that allows the system to pick random numbers from 0-9"
+      },
+      {
+        "line": "    Dim I As Integer\r",
+        "comment": "Declares variable I as an Integer type"
+      },
+      {
+        "line": "    Dim intSearch As Integer\r",
+        "comment": "Declares variable intSearch as an integer type"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    For I = 0 To 9\r",
+        "comment": "For loop type. A condition that allows us to populate memory spaces form 0-9"
+      },
+      {
+        "line": "        intArray(I) = myRandom.Next(10, 20)\r",
+        "comment": "This line of code will place random numbers into the integer array."
+      },
+      {
+        "line": "    Next\r",
+        "comment": "This line starts another process within the loop."
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    intSearch = myRandom.Next(10, 20)\r",
+        "comment": "the application creates another  random number within the same range"
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    txtResult.Text = \"Random value not found\"\r",
+        "comment": "This line of code tells the user that the search number is not in the array"
+      },
+      {
+        "line": "    For I = 0 To 9\r",
+        "comment": "For loop type. A condition that allows us to check for a match for the random number in memory spaces from 0-9"
+      },
+      {
+        "line": "        If intArray(I) = intSearch Then\r",
+        "comment": "This line of code set the condition for the IF statement to check for a match of the random number against the array numbers"
+      },
+      {
+        "line": "            txtResult.Text = _\r",
+        "comment": "resets the text for the user to say that there is a match"
+      },
+      {
+        "line": "                \"Random value found at element \" & CStr(I + 1)\r",
+        "comment": "Tells the user there is a match in the code and increments I by one."
+      },
+      {
+        "line": "        End If\r",
+        "comment": "Ends the If statement"
+      },
+      {
+        "line": "    Next\r",
+        "comment": "This line starts another process within the loop."
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub",
+        "comment": "Ends the program"
+      }
+    ]
+  },
+  "Ch3_Case3_AddToListbox": {
+    "name": "Ch3 Case3 Add To Listbox",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "Structure Friends\r",
+        "comment": ""
+      },
+      {
+        "line": "Public strFName As String\r",
+        "comment": ""
+      },
+      {
+        "line": "Public strLNAme As String\r",
+        "comment": ""
+      },
+      {
+        "line": "Public strAddr As String\r",
+        "comment": ""
+      },
+      {
+        "line": "Public dateDOB As Date\r",
+        "comment": ""
+      },
+      {
+        "line": "Public intAge As Integer\r",
+        "comment": ""
+      },
+      {
+        "line": "End Structure\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Public myList(100) As Friends\r",
+        "comment": ""
+      },
+      {
+        "line": "Public intFriendNumber As Integer\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "\tmyList(intFriendNumber).strFName = txtFName.Text\r",
+        "comment": ""
+      },
+      {
+        "line": "\tmyList(intFriendNumber).strLNAme = txtLName.Text\r",
+        "comment": ""
+      },
+      {
+        "line": "\tmyList(intFriendNumber).strAddr = txtAddr.Text\r",
+        "comment": ""
+      },
+      {
+        "line": "\t\r",
+        "comment": ""
+      },
+      {
+        "line": "\tIf IsDate(txtDOB.Text) Then\r",
+        "comment": ""
+      },
+      {
+        "line": "\t    myList(intFriendNumber).dateDOB = txtDOB.Text\r",
+        "comment": ""
+      },
+      {
+        "line": "\t    myList(intFriendNumber).intAge = Now.Year - myList(intFriendNumber).dateDOB.Year\r",
+        "comment": ""
+      },
+      {
+        "line": "\tEnd If\r",
+        "comment": ""
+      },
+      {
+        "line": "\t\r",
+        "comment": ""
+      },
+      {
+        "line": "\tlstFriends.Items.Add(myList(intFriendNumber).strFName)\r",
+        "comment": ""
+      },
+      {
+        "line": "\tintFriendNumber = intFriendNumber + 1\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub lstFriends_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstFriends.SelectedIndexChanged\r",
+        "comment": ""
+      },
+      {
+        "line": "\tIf lstFriends.SelectedIndex <> -1 Then\r",
+        "comment": ""
+      },
+      {
+        "line": "\t    txtFName.Text = lstFriends.SelectedItem\r",
+        "comment": ""
+      },
+      {
+        "line": "\t    txtLName.Text = myList(lstFriends.SelectedIndex).strLNAme\r",
+        "comment": ""
+      },
+      {
+        "line": "\t    txtAddr.Text = myList(lstFriends.SelectedIndex).strAddr\r",
+        "comment": ""
+      },
+      {
+        "line": "\t    txtDOB.Text = CStr(myList(lstFriends.SelectedIndex).dateDOB)\r",
+        "comment": ""
+      },
+      {
+        "line": "\t    txtAge.Text = CStr(myList(lstFriends.SelectedIndex).intAge)\r",
+        "comment": ""
+      },
+      {
+        "line": "\tEnd If\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "Ch3_Case3_RemoveFromListbox": {
+    "name": "Ch3 Case3 Remove From Listbox",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'There is a problem with this code\r",
+        "comment": ""
+      },
+      {
+        "line": "'It removes a friend by the first name\r",
+        "comment": ""
+      },
+      {
+        "line": "'May revove another person with the same name by mistake\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Structure Friends\r",
+        "comment": ""
+      },
+      {
+        "line": "    Public strFName As String\r",
+        "comment": ""
+      },
+      {
+        "line": "    Public strLNAme As String\r",
+        "comment": ""
+      },
+      {
+        "line": "    Public strAddr As String\r",
+        "comment": ""
+      },
+      {
+        "line": "    Public dateDOB As Date\r",
+        "comment": ""
+      },
+      {
+        "line": "    Public intAge As Integer\r",
+        "comment": ""
+      },
+      {
+        "line": "End Structure\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Public myList(100) As Friends\r",
+        "comment": ""
+      },
+      {
+        "line": "Public intFriendNumber As Integer\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnRemove_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRemove.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim I, J As Integer\r",
+        "comment": ""
+      },
+      {
+        "line": "    For I = 0 To intFriendNumber\r",
+        "comment": ""
+      },
+      {
+        "line": "        If myList(I).strFName = lstFriends.SelectedItem Then\r",
+        "comment": ""
+      },
+      {
+        "line": "            For J = I To intFriendNumber\r",
+        "comment": ""
+      },
+      {
+        "line": "                myList(J) = myList(J + 1)\r",
+        "comment": ""
+      },
+      {
+        "line": "            Next\r",
+        "comment": ""
+      },
+      {
+        "line": "            intFriendNumber = intFriendNumber - 1\r",
+        "comment": ""
+      },
+      {
+        "line": "            J = intFriendNumber + 1\r",
+        "comment": ""
+      },
+      {
+        "line": "            I = intFriendNumber + 1\r",
+        "comment": ""
+      },
+      {
+        "line": "        End If\r",
+        "comment": ""
+      },
+      {
+        "line": "    Next\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    lstFriends.Items.Clear()\r",
+        "comment": ""
+      },
+      {
+        "line": "    For I = 0 To intFriendNumber - 1\r",
+        "comment": ""
+      },
+      {
+        "line": "        lstFriends.Items.Add(myList(I).strFName)\r",
+        "comment": ""
+      },
+      {
+        "line": "    Next\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "Ch3_Case4_FunctionFactorial.txt": {
+    "name": "Ch3 Case4 Function Factorial",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "Private Function Factorial(ByVal intNumber As Integer) As Double\r",
+        "comment": ""
+      },
+      {
+        "line": "Dim I As Integer\r",
+        "comment": ""
+      },
+      {
+        "line": "Dim dblSum As Double = 1\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "If intNumber > 0 Then\r",
+        "comment": ""
+      },
+      {
+        "line": "    For I = 1 To intNumber\r",
+        "comment": ""
+      },
+      {
+        "line": "        dblSum = dblSum * I\r",
+        "comment": ""
+      },
+      {
+        "line": "    Next\r",
+        "comment": ""
+      },
+      {
+        "line": "    Return (dblSum)\r",
+        "comment": ""
+      },
+      {
+        "line": "Else\r",
+        "comment": ""
+      },
+      {
+        "line": "    Factorial = 1\r",
+        "comment": ""
+      },
+      {
+        "line": "End If\r",
+        "comment": ""
+      },
+      {
+        "line": "End Function\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnCalc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCalc.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Dim dblInput As Double, intInput As Integer\r",
+        "comment": ""
+      },
+      {
+        "line": "Dim I As Integer, dblSum As Double\r",
+        "comment": ""
+      },
+      {
+        "line": "Dim intDigit(9) As Integer\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "lstDigits.Items.Clear() \r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "If Not IsNumeric(txtInput.Text) Then\r",
+        "comment": ""
+      },
+      {
+        "line": "    txtFact.Text = \"Enter a number\"\r",
+        "comment": ""
+      },
+      {
+        "line": "    Exit Sub\r",
+        "comment": ""
+      },
+      {
+        "line": "End If\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "If CInt(txtInput.Text) < 0 Or CInt(txtInput.Text) > 100 Then\r",
+        "comment": ""
+      },
+      {
+        "line": "    txtFact.Text = \"Your number must be between 0 and 100\"\r",
+        "comment": ""
+      },
+      {
+        "line": "    Exit Sub\r",
+        "comment": ""
+      },
+      {
+        "line": "End If\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "dblSum = Factorial(intInput)\r",
+        "comment": ""
+      },
+      {
+        "line": "txtFact.Text = dblSum\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Do While dblSum > 0\r",
+        "comment": ""
+      },
+      {
+        "line": "    I = dblSum Mod 10   \r",
+        "comment": ""
+      },
+      {
+        "line": "    intDigit(I) += 1\r",
+        "comment": ""
+      },
+      {
+        "line": "    dblSum = (dblSum - I) / 10    \r",
+        "comment": ""
+      },
+      {
+        "line": "Loop\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "For I = 0 To 9\r",
+        "comment": ""
+      },
+      {
+        "line": "    If intDigit(I) > 0 Then\r",
+        "comment": ""
+      },
+      {
+        "line": "        lstDigits.Items.Add(\" The digit \" & I & \" appears \" & intDigit(I) & \" times.\")\r",
+        "comment": ""
+      },
+      {
+        "line": "    End If\r",
+        "comment": ""
+      },
+      {
+        "line": "Next\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "Ch3_Case6_RandomNumbers": {
+    "name": "Ch3 Case6 Random Numbers",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Create 24 text boxes \r",
+        "comment": ""
+      },
+      {
+        "line": "'Place them in 6 rows and 4 columns\r",
+        "comment": ""
+      },
+      {
+        "line": "'And Populate with random numbers 1 to 100\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Dim txtNumber(23) As TextBox\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnSet_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSet.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim intRow As Integer = 30\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim intCol As Integer = 100\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim I As Integer\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim myRandom As New Random()\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    For I = 0 To 23\r",
+        "comment": ""
+      },
+      {
+        "line": "        txtNumber(I) = New TextBox()\r",
+        "comment": ""
+      },
+      {
+        "line": "        txtNumber(I).Font = New Font(\"Times New Roman\", 10)\r",
+        "comment": ""
+      },
+      {
+        "line": "        txtNumber(I).Size = New Size(20, 20)  ' width and hight\r",
+        "comment": ""
+      },
+      {
+        "line": "        txtNumber(I).Location = New Point(intRow, intCol)\r",
+        "comment": ""
+      },
+      {
+        "line": "        Me.Controls.Add(txtNumber(I))\r",
+        "comment": ""
+      },
+      {
+        "line": "        txtNumber(I).Text = CStr(CInt(myRandom.NextDouble * 100))\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "        intRow += 30\r",
+        "comment": ""
+      },
+      {
+        "line": "        If intRow >= 30 + 6 * 30 Then\r",
+        "comment": ""
+      },
+      {
+        "line": "            intRow = 30\r",
+        "comment": ""
+      },
+      {
+        "line": "            intCol += 30\r",
+        "comment": ""
+      },
+      {
+        "line": "        End If\r",
+        "comment": ""
+      },
+      {
+        "line": "    Next\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    btnRandom.Enabled = True\r",
+        "comment": ""
+      },
+      {
+        "line": "    btnSort.Enabled = True\r",
+        "comment": ""
+      },
+      {
+        "line": "    btnVerify.Enabled = True\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnRandom_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRandom.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim I As Integer\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim myRandom As New Random()\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    For I = 0 To 23\r",
+        "comment": ""
+      },
+      {
+        "line": "        txtNumber(I).Text = CStr(CInt(myRandom.NextDouble * 100))\r",
+        "comment": ""
+      },
+      {
+        "line": "    Next\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub",
+        "comment": ""
+      }
+    ]
+  },
+  "Ch3_Case6_Sort": {
+    "name": "Ch3 Case6 Sort",
+    "description": "",
+    "language": "vb",
+    "author": "unknown",
+    "lines": [
+      {
+        "line": "'Sort random numbers in 24 text boxes\r",
+        "comment": ""
+      },
+      {
+        "line": "Private Sub btnSort_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSort.Click\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim intNumbers(23) As Integer\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim I, J As Integer\r",
+        "comment": ""
+      },
+      {
+        "line": "    Dim intcalc As Integer\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    For I = 0 To UBound(intNumbers)\r",
+        "comment": ""
+      },
+      {
+        "line": "        intNumbers(I) = CInt(txtNumber(I).Text)\r",
+        "comment": ""
+      },
+      {
+        "line": "    Next\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    For I = 0 To UBound(intNumbers) - 1\r",
+        "comment": ""
+      },
+      {
+        "line": "        If intNumbers(I) > intNumbers(I + 1) Then\r",
+        "comment": ""
+      },
+      {
+        "line": "            intcalc = intNumbers(I)\r",
+        "comment": ""
+      },
+      {
+        "line": "            intNumbers(I) = intNumbers(I + 1)\r",
+        "comment": ""
+      },
+      {
+        "line": "            intNumbers(I + 1) = intcalc\r",
+        "comment": ""
+      },
+      {
+        "line": "            For J = I To 1 Step -1\r",
+        "comment": ""
+      },
+      {
+        "line": "                If intNumbers(J) < intNumbers(J - 1) Then\r",
+        "comment": ""
+      },
+      {
+        "line": "                    intcalc = intNumbers(J)\r",
+        "comment": ""
+      },
+      {
+        "line": "                    intNumbers(J) = intNumbers(J - 1)\r",
+        "comment": ""
+      },
+      {
+        "line": "                    intNumbers(J - 1) = intcalc\r",
+        "comment": ""
+      },
+      {
+        "line": "                Else\r",
+        "comment": ""
+      },
+      {
+        "line": "                    J = 0\r",
+        "comment": ""
+      },
+      {
+        "line": "                End If\r",
+        "comment": ""
+      },
+      {
+        "line": "            Next\r",
+        "comment": ""
+      },
+      {
+        "line": "        End If\r",
+        "comment": ""
+      },
+      {
+        "line": "    Next\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "    For I = 0 To UBound(intNumbers)\r",
+        "comment": ""
+      },
+      {
+        "line": "        txtNumber(I).Text = CStr(intNumbers(I))\r",
+        "comment": ""
+      },
+      {
+        "line": "    Next\r",
+        "comment": ""
+      },
+      {
+        "line": "\r",
+        "comment": ""
+      },
+      {
+        "line": "End Sub",
+        "comment": ""
+      }
+    ]
+  }
+}

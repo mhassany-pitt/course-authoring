@@ -4,3 +4,4 @@ authoring-storage/
 
 .env.production
 .env.development
+scripts/upload-to-catalog.vt/cache/
