@@ -91,13 +91,18 @@ export const transform = (content: any): any => {
 };
 
 export const filter = (content: any): boolean => {
-    const exclude = [
+    if (content.provider_id == "pcex_activity" &&
+        content.author_id == "moh70@pitt.edu" &&
+        content.creation_date?.toISOString()?.startsWith('2024-08-22')) {
+        // exclude duplicate pcex contents (from pcex_v1/v2 migration to weat)
+        return false;
+    }
+
+    return ![
         { type: "animated_example", domain_id: "sql" },
         { type: "animatedexamples", domain_id: "sql" },
         { type: "lesslet" },
         { type: "mchq", domain_id: "telcom" },
         { type: "educvideos" },
-    ];
-
-    return !exclude.some(e => Object.keys(e).every(k => content[k] === e[k]));
+    ].some(e => Object.keys(e).every(k => content[k] === e[k]));
 };
