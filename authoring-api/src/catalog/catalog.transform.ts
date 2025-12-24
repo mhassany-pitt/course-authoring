@@ -65,6 +65,18 @@ export const transform = (content: any): any => {
         content.author_name = AUTHOR_NAMES_MAPPING[content.author_name];
     }
 
+    if (content.type == 'Animated Example') {
+        content.provider_id = 'JSVEE';
+        content.provider_name = 'JSVEE';
+    } else if (content.type == 'Parsons Problem') {
+        content.provider_id = 'jsParsons';
+        content.provider_name = 'jsParsons';
+    } else if (content.type == 'Question') {
+        // content.type = 'Parsons Problem';
+        // content.provider_id = 'jsParsons';
+        // content.provider_name = 'jsParsons';
+    }
+
     if (content.provider_id == "pcex_activity") {
         content.provider_name = "PCEX Activity";
     }
