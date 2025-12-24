@@ -11,9 +11,9 @@ const TYPES_MAPPING: any = {
     "pcex_set": "PCEX Set",
     "pcex_activity": "PCEX Activity",
     "pcex_challenge": "PCEX Challenge",
-    "pcrs": "Programming Course Resource System (PCRS)",
+    "pcrs": "PCRS",
     "question": "Question",
-    "readingmirror": "ReadingMirror"
+    "readingmirror": "ReadingMirror",
 };
 
 const AUTHOR_NAMES_MAPPING: any = {
@@ -48,13 +48,6 @@ const AUTHOR_IDNAMES_MAPPING: any = {
 };
 
 export const transform = (content: any): any => {
-    if (content.provider_id == "webex" && (
-        content.author_id == "py.teacher" || content.domain_id == "c"
-    )) {
-        content.author_id = "peterb";
-        content.author_name = "Peter Brusilovsky";
-    }
-
     if (content.type in TYPES_MAPPING) {
         content.type = TYPES_MAPPING[content.type];
     }
@@ -63,6 +56,11 @@ export const transform = (content: any): any => {
         content.author_name = AUTHOR_IDNAMES_MAPPING[content.author_id];
     } else if (content.author_name in AUTHOR_NAMES_MAPPING) {
         content.author_name = AUTHOR_NAMES_MAPPING[content.author_name];
+    }
+
+    if (content.provider_id == "webex" && (content.author_id == "py.teacher" || content.domain_id == "c")) {
+        content.author_id = "peterb";
+        content.author_name = "Peter Brusilovsky";
     }
 
     if (content.type == 'Animated Example') {
@@ -77,8 +75,12 @@ export const transform = (content: any): any => {
         // content.provider_name = 'jsParsons';
     }
 
-    if (content.provider_id == "pcex_activity") {
-        content.provider_name = "PCEX Activity";
+    if (content.provider_id == "pcex" || content.provider_id == "pcex_ch" || content.provider_id == "pcex_activity") {
+        content.provider_name = "PCEX";
+    } else if (content.provider_id == "parsons") {
+        content.provider_name = "jsParsons";
+    } else if (content.provider_id == "opendsa_problems" || content.provider_id == "opendsa_slideshows") {
+        content.provider_name = "OpenDSA";
     }
 
     if (content.author_name == 'Administrator') {

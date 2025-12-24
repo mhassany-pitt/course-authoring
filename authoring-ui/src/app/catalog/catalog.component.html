@@ -1,4 +1,4 @@
-<div class="flex flex-col">
+<div class="flex flex-col catalog-page">
   <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
     <div class="container mx-auto flex items-center gap-2 px-2 md:px-0 ">
       <img src="assets/logo.png" class="h-8 w-8" />
@@ -39,14 +39,14 @@
         </ng-template>
         <ng-template pTemplate="header">
           <tr>
-            <th style="width: 4rem">
+            <th style="min-width: 4rem;">
               <!-- <p-tableHeaderCheckbox /> -->
             </th>
-            <th pSortableColumn="name">
+            <th pSortableColumn="name" style="min-width: 20rem;">
               <span>Display Name </span>
               <p-sortIcon field="name"></p-sortIcon>
             </th>
-            <th class="text-center" style="width: 175px;">
+            <th class="text-center" style="min-width: 10rem;">
               <div class="flex flex-col gap-1">
                 <span>Author </span>
                 <p-multiSelect [options]="opt_author_names" [showClear]="true"
@@ -64,7 +64,7 @@
                 </p-multiSelect>
               </div>
             </th>
-            <th class="text-center" style="width: 175px;">
+            <th class="text-center" style="min-width: 10rem;">
               <div class="flex flex-col gap-1">
                 <span>Domain </span>
                 <p-multiSelect [options]="opt_domain_names" [showClear]="true"
@@ -82,7 +82,7 @@
                 </p-multiSelect>
               </div>
             </th>
-            <th class="text-center" style="width: 175px;">
+            <th class="text-center" style="min-width: 10rem;">
               <div class="flex flex-col gap-1">
                 <span>Type </span>
                 <p-multiSelect [options]="opt_types" [showClear]="true"
@@ -99,7 +99,7 @@
                 </p-multiSelect>
               </div>
             </th>
-            <th class="text-center" style="width: 175px;">
+            <th class="text-center" style="min-width: 10rem;">
               <div class="flex flex-col gap-1">
                 <span>Provider </span>
                 <p-multiSelect [options]="opt_provider_names" [showClear]="true"
@@ -117,7 +117,7 @@
                 </p-multiSelect>
               </div>
             </th>
-            <th pSortableColumn="creation_date" class="text-center" style="width: 195px;">
+            <th pSortableColumn="creation_date" class="text-center" style="min-width: 12rem;">
               <span>Creation Date</span>
               <p-sortIcon field="creation_date"></p-sortIcon>
             </th>
@@ -125,17 +125,17 @@
         </ng-template>
         <ng-template pTemplate="body" let-content>
           <tr>
-            <td><p-tableCheckbox [value]="content" /></td>
-            <td>
+            <td style="min-width: 4rem;"><p-tableCheckbox [value]="content" /></td>
+            <td style="min-width: 20rem;">
               <span class="text-blue-700 flex-grow cursor-pointer" (click)="selectContent(content)">
                 {{ content.name }}
               </span>
             </td>
-            <td class="text-sm text-center">{{ content.author_name }}</td>
-            <td class="text-sm text-center">{{ content.domain_name }}</td>
-            <td class="text-sm text-center">{{ content.type }}</td>
-            <td class="text-sm text-center">{{ content.provider_name }}</td>
-            <td class="text-sm text-center">{{ content.creation_date | date:'medium' }}</td>
+            <td class="text-sm text-center" style="min-width: 10rem;">{{ content.author_name }}</td>
+            <td class="text-sm text-center" style="min-width: 10rem;">{{ content.domain_name }}</td>
+            <td class="text-sm text-center" style="min-width: 10rem;">{{ content.type }}</td>
+            <td class="text-sm text-center" style="min-width: 10rem;">{{ content.provider_name }}</td>
+            <td class="text-sm text-center" style="min-width: 12rem;">{{ content.creation_date | date:'medium' }}</td>
           </tr>
         </ng-template>
       </p-table>
@@ -188,7 +188,11 @@
         </tr>
         <tr>
           <td class="font-bold">Problem Statement:</td>
-          <td>{{ selected.problem_statement || '&lt;&lt;empty&gt;&gt;' }}</td>
+          <td>
+            <div class="overflow-x-auto" style="width: 45rem;">
+              {{ selected.problem_statement || '&lt;&lt;empty&gt;&gt;' }}
+            </div>
+          </td>
         </tr>
         <tr>
           <td class="font-bold">Source Code:</td>
@@ -196,10 +200,12 @@
             <ng-container *ngIf="!selected.code">
               {{ '&lt;&lt;empty&gt;&gt;' }}
             </ng-container>
-            <pre *ngIf="selected.code" class="m-0 ml-2"><code 
+            <div class="overflow-x-auto" style="width: 45rem;">
+              <pre *ngIf="selected.code" class="m-0 ml-2"><code 
               [highlight]="selected.code" 
               [language]="selected.domain_id == 'asm' ? 'x86asm' : selected.domain_id" 
               lineNumbers style="padding: 0;"></code></pre>
+            </div>
           </td>
         </tr>
       </table>
