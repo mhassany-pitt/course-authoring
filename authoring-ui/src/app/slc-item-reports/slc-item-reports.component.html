@@ -1,0 +1,210 @@
+<div class="flex flex-col slc-item-reports">
+  <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
+    <div
+      class="container mx-auto flex items-center gap-2 px-2 md:px-0 max-w-6xl"
+    >
+      <img src="assets/logo.png" class="h-8 w-8" />
+      <span class="text-xl font-bold hidden md:inline-block text-nowrap">
+        Course Authoring
+      </span>
+      <span class="hidden md:inline-block">
+        <i class="pi pi-chevron-right"></i>
+      </span>
+
+      <p-dropdown
+        #navEl
+        [options]="navLinks"
+        [ngModel]="'/slc-item-reports'"
+        class="-my-2 course-nav-dropdown"
+        (onChange)="router.navigate([$event.value])"
+      ></p-dropdown>
+
+      <span class="flex-grow"></span>
+
+      <app-user-auth-ctrl logoutRedirect="/hub"></app-user-auth-ctrl>
+    </div>
+  </div>
+
+  <div class="container mx-auto mt-24 mb-16 border shadow-md z-0 max-w-6xl">
+    <p-table
+      #table
+      [value]="reports"
+      [globalFilterFields]="[
+        'item.identity.title',
+        'item.identity.id',
+        'item_id',
+        'reason'
+      ]"
+      styleClass="p-datatable-striped"
+    >
+      <ng-template pTemplate="caption">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">SLC Item Reports</span>
+          <span class="flex-grow"></span>
+          <span class="text-xs text-gray-500" *ngIf="loading">
+            Loading reports...
+          </span>
+          <span class="p-input-icon-right">
+            <i class="pi pi-search"></i>
+            <input
+              pInputText
+              type="text"
+              (input)="filter(table, $event)"
+              placeholder="Filter"
+              class="p-inputtext-sm"
+            />
+          </span>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Status</th>
+          <th>Item</th>
+          <th class="w-96">Reason</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-report>
+        <tr>
+          <td class="text-center">
+            <button
+              pButton
+              type="button"
+              [label]="report.resolved ? 'Resolved' : 'Open'"
+              icon="pi pi-{{
+                report.resolved ? 'check' : 'exclamation-triangle'
+              }}"
+              class="p-button-sm p-button-outlined"
+              [class.text-emerald-600]="report.resolved"
+              [class.text-amber-600]="!report.resolved"
+              (click)="editReport(report)"
+            ></button>
+          </td>
+          <td>
+            <div class="flex flex-col gap-1">
+              <div class="flex items-center gap-2">
+                <span
+                  *ngIf="report.item?.id; else missingItem"
+                  class="font-semibold cursor-pointer text-blue-700"
+                  [routerLink]="['/slc-items', report.item.id]"
+                >
+                  {{ report.item?.identity?.title || "Untitled" }}
+                </span>
+                <ng-template #missingItem>
+                  <span class="font-semibold">
+                    {{ report.item_id }}
+                  </span>
+                </ng-template>
+                <span
+                  *ngIf="report.item?.status"
+                  class="text-xs rounded px-1"
+                  [class.bg-slate-200]="report.item?.status == 'private'"
+                  [class.bg-green-200]="report.item?.status == 'public'"
+                  [class.bg-red-200]="report.item?.status == 'deprecated'"
+                >
+                  {{ report.item?.status }}
+                </span>
+              </div>
+              <span class="text-xs text-gray-500">
+                Item ID: {{ report.item?.identity?.id || report.item_id }}
+              </span>
+              <span
+                *ngIf="report.item?.user_email"
+                class="text-xs text-gray-500"
+              >
+                Owner: {{ report.item?.user_email }}
+              </span>
+            </div>
+          </td>
+          <td class="w-96 align-top">
+            <div>
+              <div class="text-xs text-gray-400">
+                {{ report.created_at | date : "medium" }}
+              </div>
+              <div class="text-xs">
+                {{ report.reason || "N/A" }}
+              </div>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="6">
+            <div class="text-xs text-center text-gray-400 w-full">
+              no reports found
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
+
+<p-dialog
+  *ngIf="model"
+  header="Edit Report"
+  [visible]="dialog"
+  (visibleChange)="dialog = $event"
+  [modal]="true"
+  [style]="{ width: '35rem' }"
+>
+  <form #form="ngForm" class="flex flex-col gap-3" (ngSubmit)="saveReport()">
+    <div class="flex flex-col gap-1">
+      <span class="text-xs text-gray-500">Item</span>
+      <span class="font-semibold">
+        {{ model.item?.identity?.title || "Untitled" }}
+      </span>
+      <span class="text-xs text-gray-500">
+        Item ID: {{ model.item?.identity?.id || model.item_id }}
+      </span>
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <span class="text-xs text-gray-500">Reason</span>
+      <input
+        pInputText
+        name="reason"
+        [(ngModel)]="model.reason"
+        class="p-inputtext-sm"
+      />
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <span class="text-xs text-gray-500">Details</span>
+      <textarea
+        pInputTextarea
+        name="details"
+        rows="4"
+        [(ngModel)]="model.details"
+        class="p-inputtext-sm"
+      ></textarea>
+    </div>
+
+    <p-checkbox
+      [binary]="true"
+      name="resolved"
+      [(ngModel)]="model.resolved"
+      label="Resolved"
+    ></p-checkbox>
+
+    <div class="flex items-center justify-end gap-2 mt-2">
+      <button
+        pButton
+        type="button"
+        label="Cancel"
+        icon="pi pi-chevron-left"
+        class="p-button-sm p-button-secondary p-button-outlined"
+        (click)="dialog = false"
+      ></button>
+      <button
+        pButton
+        type="submit"
+        label="Save"
+        icon="pi pi-check"
+        class="p-button-sm"
+        [loading]="saving"
+        [disabled]="!form.valid || saving"
+      ></button>
+    </div>
+  </form>
+</p-dialog>

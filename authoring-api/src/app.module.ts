@@ -14,13 +14,15 @@ import { AggregateModule } from './aggregate/aggregate.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { HubModule } from './hub/hub.module';
 import { CatalogModule } from './catalog/catalog.module';
+import { SLCItemsModule } from './slc-items/slc-items.module';
+import { CatalogV2Module } from './catalog_v2/catalog_v2.module';
 
 @Module({
   imports: [
     ServeStaticModule.forRoot({ rootPath: join(__dirname, '..', 'public') }),
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: `.env.${(process.env.NODE_ENV || 'development').toLowerCase()}`
+      envFilePath: `.env.${(process.env.NODE_ENV || 'development').toLowerCase()}`,
     }),
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
@@ -31,19 +33,28 @@ import { CatalogModule } from './catalog/catalog.module';
       name: 'portal_test2',
       imports: [ConfigModule],
       inject: [ConfigService],
-      useFactory: (config: ConfigService) => ({ type: 'mysql', url: config.get('PORTAL_TEST2_MYSQL_URI') }),
+      useFactory: (config: ConfigService) => ({
+        type: 'mysql',
+        url: config.get('PORTAL_TEST2_MYSQL_URI'),
+      }),
     }),
     TypeOrmModule.forRootAsync({
       name: 'aggregate',
       imports: [ConfigModule],
       inject: [ConfigService],
-      useFactory: (config: ConfigService) => ({ type: 'mysql', url: config.get('AGGREGATE_MYSQL_URI') }),
+      useFactory: (config: ConfigService) => ({
+        type: 'mysql',
+        url: config.get('AGGREGATE_MYSQL_URI'),
+      }),
     }),
     TypeOrmModule.forRootAsync({
       name: 'um2',
       imports: [ConfigModule],
       inject: [ConfigService],
-      useFactory: (config: ConfigService) => ({ type: 'mysql', url: config.get('UM2_MYSQL_URI') }),
+      useFactory: (config: ConfigService) => ({
+        type: 'mysql',
+        url: config.get('UM2_MYSQL_URI'),
+      }),
     }),
     UsersModule,
     AuthModule,
@@ -53,9 +64,11 @@ import { CatalogModule } from './catalog/catalog.module';
     MasteryGridModule,
     AggregateModule,
     CatalogModule,
+    CatalogV2Module,
+    SLCItemsModule,
   ],
   controllers: [AppController],
   providers: [AppService, ConfigService],
-  exports: [AppService]
+  exports: [AppService],
 })
-export class AppModule { }
+export class AppModule {}

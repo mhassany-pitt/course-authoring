@@ -1,0 +1,943 @@
+<div class="flex flex-col">
+  <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
+    <div
+      class="container mx-auto flex items-center gap-2 px-2 md:px-0 max-w-6xl"
+    >
+      <img src="assets/logo.png" class="h-8 w-8" />
+      <span class="text-xl font-bold hidden md:inline-block text-nowrap">
+        Course Authoring
+      </span>
+      <span class="hidden md:inline-block">
+        <i class="pi pi-chevron-right"></i>
+      </span>
+
+      <p-dropdown
+        #navEl
+        [options]="navLinks"
+        [ngModel]="'/slc-items'"
+        class="-my-2 course-nav-dropdown"
+        (onChange)="router.navigate([$event.value])"
+      ></p-dropdown>
+
+      <span class="flex-grow"></span>
+
+      <app-user-auth-ctrl logoutRedirect="/hub"></app-user-auth-ctrl>
+    </div>
+  </div>
+
+  <div
+    class="mx-auto mt-24 mb-16 max-w-6xl flex flex-col gap-4 z-0"
+    *ngIf="!loading; else loadingTpl"
+  >
+    <div
+      class="bg-white border border-solid border-gray-200 rounded-lg p-4 shadow-sm"
+    >
+      <div class="flex items-center gap-2">
+        <div class="grow flex flex-col">
+          <div class="text-xs uppercase text-gray-500">SLC Catalog</div>
+          <h2 class="text-2xl font-semibold my-0">
+            {{ model.id ? "Edit Item" : "Create New Item" }}
+          </h2>
+        </div>
+
+        <p-button
+          type="button"
+          label="Cancel"
+          icon="pi pi-chevron-left"
+          severity="secondary"
+          [outlined]="true"
+          [routerLink]="['/slc-items']"
+        ></p-button>
+        <p-button
+          type="button"
+          label="{{ model.id ? 'Save Changes' : 'Create New Item' }}"
+          icon="pi pi-save"
+          [disabled]="saving"
+          (click)="save()"
+        ></p-button>
+      </div>
+
+      <div class="mt-4 flex flex-col gap-4">
+        <div class="text-xs text-gray-500">
+          Required fields are marked with *
+        </div>
+        <div
+          class="rounded-lg border border-rose-200 bg-rose-50 p-3 text-rose-700"
+          *ngIf="validationErrors.length"
+        >
+          <div class="text-sm font-semibold mb-2">
+            Please fix the following:
+          </div>
+          <ul class="list-disc pl-5 text-sm">
+            <li *ngFor="let err of validationErrors">{{ err }}</li>
+          </ul>
+        </div>
+        <!-- identity -->
+        <section
+          id="identity"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Identity</div>
+          <div class="flex flex-wrap items-end gap-2">
+            <label class="grow min-w-[240px] flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Title *</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('title')"
+                ></i>
+              </span>
+              <input
+                pInputText
+                type="text"
+                class="w-full"
+                [(ngModel)]="model.identity.title"
+                placeholder="Clear, concise title"
+                required
+                maxlength="250"
+              />
+            </label>
+            <label class="w-96 flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Unique ID *</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('uniqueId')"
+                ></i>
+              </span>
+              <input
+                pInputText
+                type="text"
+                class="w-full"
+                [(ngModel)]="model.identity.id"
+                placeholder="UUID or slug"
+                required
+                maxlength="250"
+              />
+            </label>
+            <label class="min-w-64 flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Type (select or type) *</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('type')"
+                ></i>
+              </span>
+              <p-dropdown
+                [options]="catalogTypeOptions"
+                [(ngModel)]="model.identity.type"
+                optionLabel="label"
+                optionValue="value"
+                placeholder="Select"
+                styleClass="w-full"
+                [editable]="true"
+                required
+              ></p-dropdown>
+            </label>
+          </div>
+          <div class="flex flex-wrap items-end gap-2">
+            <label class="grow min-w-[240px] flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Demo URL *</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('demoUrl')"
+                ></i>
+                <a
+                  *ngIf="
+                    model.links.demo_url && isValidUrl(model.links.demo_url)
+                  "
+                  [href]="model.links.demo_url"
+                  target="_blank"
+                >
+                  (preview)
+                </a>
+              </span>
+              <input
+                pInputText
+                type="url"
+                class="w-full"
+                [(ngModel)]="model.links.demo_url"
+                placeholder="https://..."
+                required
+                maxlength="1000"
+              />
+            </label>
+            <label class="w-40 flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Status *</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('status')"
+                ></i>
+              </span>
+              <p-dropdown
+                [options]="statusOptions"
+                [(ngModel)]="model.status"
+                optionLabel="label"
+                optionValue="value"
+                placeholder="Select"
+                styleClass="w-full"
+                required
+              ></p-dropdown>
+            </label>
+          </div>
+
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600 flex items-center gap-1">
+              <span>Tags (comma separated)</span>
+              <i class="fa fa-info-circle" (click)="showFieldInfo('tags')"></i>
+            </span>
+            <textarea
+              pInputTextarea
+              rows="1"
+              class="w-full"
+              [autoResize]="true"
+              [(ngModel)]="tagInput"
+              placeholder="arrays, recursion, assessment"
+            ></textarea>
+          </label>
+        </section>
+
+        <!-- languages -->
+        <section
+          id="languages"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Language</div>
+          <label class="w-48 flex flex-col items-start gap-1">
+            <span class="text-xs text-gray-600 flex items-center gap-1">
+              <span>Content language (bcp-47) *</span>
+              <i
+                class="fa fa-info-circle"
+                (click)="showFieldInfo('contentLanguage')"
+              ></i>
+            </span>
+            <input
+              pInputText
+              type="text"
+              class="w-full"
+              [(ngModel)]="model.languages.content_language"
+              placeholder="en, en-US"
+              required
+              maxlength="20"
+            />
+          </label>
+          <label class="grow min-w-[240px] flex flex-col gap-1">
+            <span class="text-xs text-gray-600 flex items-center gap-1">
+              <span>Programming languages (comma separated) *</span>
+              <i
+                class="fa fa-info-circle"
+                (click)="showFieldInfo('programmingLanguages')"
+              ></i>
+            </span>
+            <textarea
+              pInputTextarea
+              rows="1"
+              class="w-full"
+              [autoResize]="true"
+              [(ngModel)]="programmingLanguageInput"
+              placeholder="python, java"
+              required
+              maxlength="250"
+            ></textarea>
+          </label>
+        </section>
+
+        <section
+          id="attribution"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Attribution</div>
+          <div class="flex flex-wrap items-end gap-2">
+            <label class="w-96 flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Publisher</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('publisher')"
+                ></i>
+              </span>
+              <input
+                pInputText
+                type="text"
+                class="w-full"
+                [(ngModel)]="model.attribution.publisher"
+                maxlength="100"
+              />
+            </label>
+            <label class="grow flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Provider *</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('provider')"
+                ></i>
+              </span>
+              <input
+                pInputText
+                type="text"
+                class="w-full"
+                [(ngModel)]="model.attribution.provider"
+                required
+                maxlength="100"
+              />
+            </label>
+            <label class="w-64 flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Created at</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('createdAt')"
+                ></i>
+              </span>
+              <p-calendar
+                [(ngModel)]="model.attribution.created_at"
+                dataType="string"
+                dateFormat="yyyy-mm-ddT00:00:00Z"
+                styleClass="w-full"
+                inputStyleClass="w-full"
+              ></p-calendar>
+            </label>
+          </div>
+
+          <div
+            class="flex items-center gap-2 rounded-md p-2 border border-solid bg-white border-gray-200 hover:bg-gray-200"
+            *ngFor="let a of model.attribution.authors; let i = index"
+          >
+            <span class="">{{ a.name || "Author" }}</span>
+            <span *ngIf="a.affiliation" class="text-gray-500 text-xs">
+              — {{ a.affiliation }}</span
+            >
+            <span class="grow"></span>
+            <p-button
+              type="button"
+              icon="pi pi-times"
+              severity="secondary"
+              [text]="true"
+              (click)="removeAuthor(i)"
+            ></p-button>
+          </div>
+          <div
+            class="text-xs text-red-600"
+            *ngIf="!model.attribution.authors?.length"
+          >
+            No authors yet. At least one author is required.
+          </div>
+
+          <div class="flex flex-wrap items-end gap-2">
+            <label class="w-96 flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Author name *</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('authorName')"
+                ></i>
+              </span>
+              <input
+                pInputText
+                type="text"
+                class="w-full"
+                [(ngModel)]="authorName"
+                maxlength="100"
+              />
+            </label>
+            <label class="grow flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Affiliation</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('authorAffiliation')"
+                ></i>
+              </span>
+              <input
+                pInputText
+                type="text"
+                class="w-full"
+                [(ngModel)]="authorAffiliation"
+                maxlength="100"
+              />
+            </label>
+            <p-button
+              type="button"
+              label="Add Author"
+              icon="fa fa-plus"
+              severity="secondary"
+              (click)="addAuthor()"
+            ></p-button>
+          </div>
+        </section>
+
+        <section
+          id="rights"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Rights</div>
+          <div class="flex items-center gap-2">
+            <label class="w-48 flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>License *</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('license')"
+                ></i>
+              </span>
+              <input
+                pInputText
+                type="text"
+                class="w-full"
+                [(ngModel)]="model.rights.license"
+                required
+                maxlength="50"
+              />
+            </label>
+            <label class="grow min-w-[240px] flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>License URL</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('licenseUrl')"
+                ></i>
+              </span>
+              <input
+                pInputText
+                type="url"
+                class="w-full"
+                [(ngModel)]="model.rights.license_url"
+              />
+            </label>
+          </div>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600 flex items-center gap-1">
+              <span>Usage notes</span>
+              <i
+                class="fa fa-info-circle"
+                (click)="showFieldInfo('usageNotes')"
+              ></i>
+            </span>
+            <textarea
+              pInputTextarea
+              rows="1"
+              class="w-full"
+              [autoResize]="true"
+              [(ngModel)]="model.rights.usage_notes"
+              placeholder="Attribution, usage terms, etc."
+              maxlength="250"
+            ></textarea>
+          </label>
+        </section>
+
+        <hr class="w-full" />
+
+        <!-- content -->
+        <section
+          id="content"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Content</div>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600 flex items-center gap-1">
+              <span>Prompt / description</span>
+              <i
+                class="fa fa-info-circle"
+                (click)="showFieldInfo('prompt')"
+              ></i>
+            </span>
+            <textarea
+              pInputTextarea
+              rows="1"
+              class="w-full"
+              [autoResize]="true"
+              [(ngModel)]="model.content.prompt"
+              placeholder="Short markdown description"
+              maxlength="250"
+            ></textarea>
+          </label>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600 flex items-center gap-1">
+              <span>Source Snippet</span>
+              <i
+                class="fa fa-info-circle"
+                (click)="showFieldInfo('sourceCode')"
+              ></i>
+            </span>
+            <textarea
+              pInputTextarea
+              rows="3"
+              class="w-full font-mono text-sm"
+              [autoResize]="true"
+              [(ngModel)]="model.content.source_code"
+              placeholder="Optional source code or sample"
+              maxlength="1000"
+            ></textarea>
+          </label>
+        </section>
+
+        <!-- classification -->
+        <section
+          id="classification"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Classification</div>
+          <div class="flex flex-wrap items-end gap-2">
+            <label class="w-64 flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Difficulty</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('difficulty')"
+                ></i>
+              </span>
+              <p-dropdown
+                [options]="difficultyOptions"
+                [(ngModel)]="model.classification.difficulty"
+                optionLabel="label"
+                optionValue="value"
+                placeholder="Select"
+                styleClass="w-full"
+              ></p-dropdown>
+            </label>
+            <label class="w-64 flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Interaction type (select or type)</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('interactionType')"
+                ></i>
+              </span>
+              <p-dropdown
+                [options]="interactionTypeOptions"
+                [(ngModel)]="model.interaction.interaction_type"
+                optionLabel="label"
+                optionValue="value"
+                placeholder="Select"
+                styleClass="w-full"
+                [editable]="true"
+              ></p-dropdown>
+            </label>
+          </div>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600 flex items-center gap-1">
+              <span>Topics (comma separated)</span>
+              <i
+                class="fa fa-info-circle"
+                (click)="showFieldInfo('topics')"
+              ></i>
+            </span>
+            <textarea
+              pInputTextarea
+              rows="1"
+              class="w-full"
+              [autoResize]="true"
+              [(ngModel)]="topicsInput"
+              placeholder="loops, conditionals"
+              maxlength="1000"
+            ></textarea>
+          </label>
+        </section>
+
+        <!-- knowledge components -->
+        <section
+          id="knowledge-components"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Knowledge Components</div>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600 flex items-center gap-1">
+              <span>Note</span>
+              <i
+                class="fa fa-info-circle"
+                (click)="showFieldInfo('kcNote')"
+              ></i>
+            </span>
+            <textarea
+              pInputTextarea
+              rows="1"
+              class="w-full"
+              [autoResize]="true"
+              [(ngModel)]="kcNote"
+              placeholder="Short summary of this classifier"
+              maxlength="250"
+            ></textarea>
+          </label>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600 flex items-center gap-1">
+              <span>Concepts (comma separated)</span>
+              <i
+                class="fa fa-info-circle"
+                (click)="showFieldInfo('kcConcepts')"
+              ></i>
+            </span>
+            <textarea
+              pInputTextarea
+              rows="1"
+              class="w-full"
+              [autoResize]="true"
+              [(ngModel)]="kcConceptsInput"
+              placeholder="variables, loops"
+              maxlength="1000"
+            ></textarea>
+          </label>
+          <div class="flex items-end gap-2">
+            <label class="grow flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Classifier</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('kcClassifier')"
+                ></i>
+              </span>
+              <input
+                pInputText
+                type="text"
+                class="w-full"
+                [(ngModel)]="kcId"
+                maxlength="100"
+              />
+            </label>
+            <div class="flex items-center gap-2">
+              <p-button
+                type="button"
+                label="{{ selectedKcKey ? 'Save KC' : 'Add KC' }}"
+                icon="fa fa-plus"
+                severity="secondary"
+                (click)="addKnowledgeComponent()"
+              ></p-button>
+              <p-button
+                type="button"
+                label="Clear selection"
+                severity="secondary"
+                [text]="true"
+                *ngIf="selectedKcKey"
+                (click)="clearKnowledgeComponentForm()"
+              ></p-button>
+            </div>
+          </div>
+
+          <hr class="w-full" />
+
+          <ng-container
+            *ngIf="
+              model.classification.knowledge_components || {}
+                | keyvalue as kcList;
+              else noKcList
+            "
+          >
+            <div
+              class="flex items-center gap-2 p-2 border border-solid bg-white border-slate-200 hover:bg-gray-200 rounded-md cursor-pointer"
+              *ngFor="let kcKey of kcList"
+              [class.ring-1]="selectedKcKey === kcKey.key"
+              [class.ring-gray-400]="selectedKcKey === kcKey.key"
+              (click)="editKnowledgeComponent(kcKey.key)"
+            >
+              <div class="grow">
+                <div class="text-xs text-gray-500">{{ kcKey.key }}</div>
+                <div class="">
+                  {{ kcKey.value.concepts.join(", ") }}
+                </div>
+                <div class="text-gray-400 text-xs" *ngIf="kcKey.value.note">
+                  {{ kcKey.value.note }}
+                </div>
+              </div>
+              <p-button
+                type="button"
+                icon="pi pi-times"
+                severity="secondary"
+                [text]="true"
+                (click)="
+                  $event.stopPropagation(); removeKnowledgeComponent(kcKey.key)
+                "
+              ></p-button>
+            </div>
+          </ng-container>
+          <ng-template #noKcList>
+            <div class="text-xs text-gray-500">
+              No knowledge components yet.
+            </div>
+          </ng-template>
+        </section>
+
+        <!-- pedagogy -->
+        <section
+          id="pedagogy"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Pedagogy</div>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600 flex items-center gap-1">
+              <span>Instructional role</span>
+              <i
+                class="fa fa-info-circle"
+                (click)="showFieldInfo('instructionalRole')"
+              ></i>
+            </span>
+            <p-dropdown
+              [options]="instructionalRoleOptions"
+              [(ngModel)]="model.pedagogy.instructional_role"
+              optionLabel="label"
+              optionValue="value"
+              placeholder="Select"
+              styleClass="w-full"
+              [editable]="true"
+            ></p-dropdown>
+          </label>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600 flex items-center gap-1">
+              <span>Learning objectives (one per line)</span>
+              <i
+                class="fa fa-info-circle"
+                (click)="showFieldInfo('learningObjectives')"
+              ></i>
+            </span>
+            <textarea
+              pInputTextarea
+              rows="1"
+              class="w-full"
+              [autoResize]="true"
+              [(ngModel)]="learningObjectivesInput"
+              placeholder="Learners can..."
+            ></textarea>
+          </label>
+          <div class="flex items-start gap-2">
+            <label class="flex flex-col gap-1 w-1/3">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Prereq topics (comma separated)</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('prereqTopics')"
+                ></i>
+              </span>
+              <textarea
+                pInputTextarea
+                rows="1"
+                class="max-w-full"
+                [autoResize]="true"
+                [(ngModel)]="prereqTopicsInput"
+                placeholder="arrays, loops"
+                maxlength="1000"
+              ></textarea>
+            </label>
+            <label class="flex flex-col gap-1 w-1/3">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Prereq concepts (comma separated)</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('prereqConcepts')"
+                ></i>
+              </span>
+              <textarea
+                pInputTextarea
+                rows="1"
+                class="max-w-full"
+                [autoResize]="true"
+                [(ngModel)]="prereqConceptsInput"
+                placeholder="recursion, variables"
+                maxlength="1000"
+              ></textarea>
+            </label>
+            <label class="flex flex-col gap-1 w-1/3">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Prereq item IDs (comma separated)</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('prereqItemIds')"
+                ></i>
+              </span>
+              <textarea
+                pInputTextarea
+                rows="1"
+                class="max-w-full"
+                [autoResize]="true"
+                [(ngModel)]="prereqItemIdsInput"
+                placeholder="uuid-1, uuid-2"
+                maxlength="1000"
+              ></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section
+          id="delivery"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Delivery *</div>
+          <div class="text-xs text-gray-500">
+            At least one delivery URL is required.
+          </div>
+          <div class="flex flex-wrap items-end gap-2">
+            <label class="w-40 flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Format (select or type)</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('deliveryFormat')"
+                ></i>
+              </span>
+              <p-dropdown
+                [options]="deliveryFormatOptions"
+                [(ngModel)]="deliveryFormat"
+                optionLabel="label"
+                optionValue="value"
+                placeholder="Select"
+                styleClass="w-full"
+                [editable]="true"
+              ></p-dropdown>
+            </label>
+            <label class="grow min-w-[240px] flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>URL</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('deliveryUrl')"
+                ></i>
+              </span>
+              <input
+                pInputText
+                type="url"
+                class="w-full"
+                [(ngModel)]="deliveryUrl"
+                placeholder="Delivery URL"
+              />
+            </label>
+            <p-button
+              type="button"
+              label="Add Delivery"
+              icon="fa fa-plus"
+              severity="secondary"
+              (click)="addDelivery()"
+            ></p-button>
+          </div>
+          <ng-container *ngIf="model.delivery?.length; else noDelivery">
+            <div
+              class="flex items-center gap-2 p-2 border border-solid bg-white border-slate-200 hover:bg-gray-200 rounded-md"
+              *ngFor="let d of model.delivery; let i = index"
+            >
+              <span class="uppercase"> {{ d.format || "format" }}: </span>
+              <a [href]="d.url" target="_blank">{{
+                d.url || "&lt;&lt;empty&gt;&gt;"
+              }}</a>
+              <p-button
+                type="button"
+                icon="pi pi-times"
+                severity="secondary"
+                [text]="true"
+                (click)="removeDelivery(i)"
+              ></p-button>
+            </div>
+          </ng-container>
+          <ng-template #noDelivery>
+            <p class="text-xs text-gray-500">No delivery endpoints yet.</p>
+          </ng-template>
+        </section>
+
+        <section
+          id="uses"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Uses</div>
+          <div
+            class="flex flex-col gap-1 relative p-2 border border-solid bg-white border-slate-200 hover:bg-gray-200 rounded-md"
+            *ngFor="let a of model.uses; let i = index"
+          >
+            <span class="">{{ a.context_name }} </span>
+            <span *ngIf="a.used_by" class="text-gray-500 text-xs">
+              {{ a.used_by || "n/a" }}
+            </span>
+            <span *ngIf="a.used_at" class="text-gray-500 text-xs">
+              {{ a.used_at }}: [{{ a.context_id }}]
+            </span>
+            <span class="grow"></span>
+            <p-button
+              type="button"
+              icon="pi pi-times"
+              severity="secondary"
+              [text]="true"
+              (click)="removeUse(i)"
+              class="absolute top-2 right-2"
+            ></p-button>
+          </div>
+          <div class="text-xs text-gray-500" *ngIf="!model.uses?.length">
+            No uses yet.
+          </div>
+          <div class="flex flex-wrap items-end gap-2">
+            <label class="w-32 flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Context ID</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('useContextId')"
+                ></i>
+              </span>
+              <input
+                pInputText
+                type="text"
+                class="w-full"
+                [(ngModel)]="useContextId"
+                maxlength="100"
+              />
+            </label>
+            <label class="grow flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Context name</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('useContextName')"
+                ></i>
+              </span>
+              <input
+                pInputText
+                type="text"
+                class="w-full"
+                [(ngModel)]="useContextName"
+                maxlength="250"
+              />
+            </label>
+            <label class="flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Used by</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('useUsedBy')"
+                ></i>
+              </span>
+              <input
+                pInputText
+                type="text"
+                class="w-full"
+                [(ngModel)]="useBy"
+                maxlength="100"
+              />
+            </label>
+            <label class="w-64 flex flex-col gap-1">
+              <span class="text-xs text-gray-600 flex items-center gap-1">
+                <span>Used at</span>
+                <i
+                  class="fa fa-info-circle"
+                  (click)="showFieldInfo('useUsedAt')"
+                ></i>
+              </span>
+              <p-calendar
+                [(ngModel)]="useDate"
+                dataType="string"
+                dateFormat="yyyy-mm-ddT00:00:00Z"
+                styleClass="w-full"
+                inputStyleClass="w-full"
+              ></p-calendar>
+            </label>
+            <p-button
+              type="button"
+              label="Add Use"
+              icon="fa fa-plus"
+              severity="secondary"
+              (click)="addUse()"
+            ></p-button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loadingTpl>
+    <div class="py-4 text-sm text-gray-500">Loading catalog...</div>
+  </ng-template>
+</div>

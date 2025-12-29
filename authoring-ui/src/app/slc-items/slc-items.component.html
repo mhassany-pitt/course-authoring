@@ -1,0 +1,117 @@
+<div class="flex flex-col">
+  <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
+    <div class="container mx-auto flex items-center gap-2 px-2 md:px-0">
+      <img src="assets/logo.png" class="h-8 w-8" />
+      <span class="text-xl font-bold hidden md:inline-block text-nowrap"
+        >Course Authoring</span
+      >
+      <span class="hidden md:inline-block"
+        ><i class="pi pi-chevron-right"></i
+      ></span>
+
+      <p-dropdown
+        #navEl
+        [options]="navLinks"
+        [ngModel]="'/slc-items'"
+        class="-my-2 course-nav-dropdown"
+        (onChange)="router.navigate([$event.value])"
+      ></p-dropdown>
+
+      <span class="flex-grow"></span>
+
+      <app-user-auth-ctrl logoutRedirect="/hub"></app-user-auth-ctrl>
+    </div>
+  </div>
+
+  <div class="container mx-auto mt-24 mb-16 border shadow-md z-0">
+    <p-table
+      #table
+      [value]="items"
+      [globalFilterFields]="[
+        'id',
+        'identity.title',
+        'identity.id',
+        'identity.type',
+        'status',
+        'content.prompt',
+        'tags'
+      ]"
+    >
+      <ng-template pTemplate="caption">
+        <div class="flex items-center gap-2">
+          <span class="p-input-icon-right">
+            <i class="pi pi-search"></i>
+            <input
+              pInputText
+              type="text"
+              (input)="filter(table, $event)"
+              placeholder="Filter"
+              class="p-inputtext-sm"
+            />
+          </span>
+          <button
+            pButton
+            type="button"
+            label="New Item"
+            icon="pi pi-plus"
+            class="p-button-sm"
+            [routerLink]="['/slc-items', 'new']"
+          ></button>
+
+          <span class="flex-grow"></span>
+
+          <span class="text-xs text-gray-500" *ngIf="loading">
+            Loading catalog...
+          </span>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="body" let-item>
+        <tr>
+          <td>
+            <div class="flex flex-col gap-1">
+              <span class="text-xs uppercase text-gray-400">
+                {{ item.identity?.type }} |
+                {{ item.listed_at | date : "medium" }}
+              </span>
+              <div class="flex items-center gap-1">
+                <span
+                  [routerLink]="['/slc-items', item.id]"
+                  class="font-bold cursor-pointer text-blue-700"
+                >
+                  {{ item.identity?.title || "Untitled" }}
+                </span>
+                <span
+                  class="text-xs rounded-lg px-1"
+                  [class.bg-slate-200]="item.status == 'private'"
+                  [class.bg-green-200]="item.status == 'public'"
+                  [class.bg-red-200]="item.status == 'deprecated'"
+                >
+                  {{ item.status }}
+                </span>
+              </div>
+              <span class="ml-2 text-xs"> ID: {{ item.identity?.id }} </span>
+              <span class="ml-2 text-xs">
+                Author(s): {{ itemAuthors[item.id] || "Unknown Author" }}
+              </span>
+              <span *ngIf="item.content?.prompt" class="ml-2 text-xs">
+                Prompt: {{ item.content.prompt }}
+              </span>
+              <span *ngIf="item.tags?.length" class="ml-2 text-xs">
+                Tags: {{ item.tags.join(", ") }}
+              </span>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td>
+            <div class="text-xs text-center text-gray-400 w-full">
+              no record matched, revise your filter keyword
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

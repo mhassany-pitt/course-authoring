@@ -23,9 +23,7 @@
             "outputPath": "dist/authoring-ui",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "less",
             "assets": [
@@ -48,13 +46,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1.25mb",
-                  "maximumError": "2mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4kb",
+                  "maximumError": "8kb"
                 }
               ],
               "fileReplacements": [
@@ -94,19 +92,11 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "less",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.less"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.less"],
             "scripts": []
           }
         }

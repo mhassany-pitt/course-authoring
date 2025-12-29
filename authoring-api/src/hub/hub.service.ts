@@ -7,16 +7,19 @@ import { toObject } from 'src/utils';
 
 @Injectable()
 export class HubService {
-
   constructor(
     private config: ConfigService,
-    @InjectModel('courses') private courses: Model<Course>
-  ) { }
+    @InjectModel('courses') private courses: Model<Course>,
+  ) {}
 
-  async list({ key }) {
-    const filter = { published: true };
-    if (key) filter['name'] = { $regex: key, $options: 'i' };
-    return (await this.courses.find(filter)).map(toObject);
+  async list() {
+    return (
+      await this.courses
+        .find({ published: true })
+        .select(
+          'id code name description domain institution units resources user_email created_at',
+        )
+    ).map(toObject);
   }
 
   async get(id: string) {

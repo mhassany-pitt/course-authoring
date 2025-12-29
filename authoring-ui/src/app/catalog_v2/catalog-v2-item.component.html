@@ -1,0 +1,519 @@
+<div class="flex flex-col">
+  <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
+    <div
+      class="container mx-auto flex items-center gap-2 px-2 md:px-0 max-w-7xl"
+    >
+      <img src="assets/logo.png" class="h-8 w-8" />
+      <span class="text-xl font-bold hidden md:inline-block text-nowrap"
+        >Course Authoring</span
+      >
+      <span class="hidden md:inline-block"
+        ><i class="pi pi-chevron-right"></i
+      ></span>
+
+      <p-dropdown
+        #navEl
+        [options]="navLinks"
+        [ngModel]="'/catalog-v2'"
+        class="-my-2 course-nav-dropdown"
+        (onChange)="router.navigate([$event.value])"
+      ></p-dropdown>
+
+      <span class="flex-grow"></span>
+
+      <app-user-auth-ctrl logoutRedirect="/hub"></app-user-auth-ctrl>
+    </div>
+  </div>
+
+  <div
+    class="mx-auto mt-24 mb-16 max-w-7xl flex flex-col gap-4 z-0"
+    *ngIf="!loading; else loadingTpl"
+  >
+    <div
+      class="bg-white border border-solid border-gray-200 rounded-lg p-4 shadow-sm"
+    >
+      <div class="flex items-center gap-2">
+        <div class="grow flex flex-col">
+          <div class="text-xs uppercase text-gray-500">SLC Catalog</div>
+          <h2 class="text-2xl font-semibold my-0">
+            {{ item.identity.title || "Catalog Item Detail" }}
+          </h2>
+        </div>
+
+        <p-button
+          type="button"
+          label="Back to Catalog"
+          icon="pi pi-chevron-left"
+          severity="secondary"
+          [outlined]="true"
+          (click)="router.navigate(['/catalog-v2'])"
+        ></p-button>
+        <p-button
+          type="button"
+          label="Report"
+          icon="pi pi-flag"
+          severity="secondary"
+          [outlined]="true"
+          (click)="reportState.show = true"
+        ></p-button>
+      </div>
+
+      <div class="mt-4 flex flex-col gap-4">
+        <!-- identity -->
+        <section
+          id="identity"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Identity</div>
+          <div class="flex items-start gap-2">
+            <label class="grow min-w-[240px] flex flex-col gap-1">
+              <span class="text-xs text-gray-600">Title</span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{ item.identity.title || "&lt;&lt;empty&gt;&gt;" }}
+              </span>
+            </label>
+            <label class="w-96 flex flex-col gap-1">
+              <span class="text-xs text-gray-600">Unique ID</span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md break-words"
+              >
+                {{ item.identity.id || "&lt;&lt;empty&gt;&gt;" }}
+              </span>
+            </label>
+            <label class="min-w-64 flex flex-col gap-1">
+              <span class="text-xs text-gray-600">Type</span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{ item.identity.type || "&lt;&lt;empty&gt;&gt;" }}
+              </span>
+            </label>
+          </div>
+          <div class="flex items-end gap-2">
+            <label class="grow min-w-[240px] flex flex-col gap-1">
+              <span class="text-xs text-gray-600">Demo URL</span>
+              <a
+                [href]="item.links.demo_url"
+                target="_blank"
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{ item.links.demo_url || "&lt;&lt;empty&gt;&gt;" }}
+              </a>
+            </label>
+          </div>
+
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600">
+              Tags (comma or newline separated)
+            </span>
+            <span
+              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+            >
+              {{ item.tags.join(", ") || "&lt;&lt;empty&gt;&gt;" }}
+            </span>
+          </label>
+        </section>
+
+        <!-- languages -->
+        <section
+          id="languages"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Language</div>
+          <label class="w-48 flex flex-col items-start gap-1">
+            <span class="text-xs text-gray-600">
+              Content language (bcp-47)
+            </span>
+            <span
+              class="w-full block p-2 border border-solid border-slate-200 bg-white rounded-md"
+            >
+              {{ item.languages.content_language || "&lt;&lt;empty&gt;&gt;" }}
+            </span>
+          </label>
+          <label class="grow min-w-[240px] flex flex-col gap-1">
+            <span class="text-xs text-gray-600">
+              Programming languages (comma or newline separated)
+            </span>
+            <span
+              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+            >
+              {{
+                item.languages.programming_languages.join(", ") ||
+                  "&lt;&lt;empty&gt;&gt;"
+              }}
+            </span>
+          </label>
+        </section>
+
+        <section
+          id="attribution"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Attribution</div>
+          <div class="flex flex-wrap items-start gap-2">
+            <label class="w-80 flex flex-col gap-1">
+              <span class="text-xs text-gray-600">Publisher</span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{ item.attribution.publisher || "&lt;&lt;empty&gt;&gt;" }}
+              </span>
+            </label>
+            <label class="grow flex flex-col gap-1">
+              <span class="text-xs text-gray-600">Providers</span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{ item.attribution.provider || "&lt;&lt;empty&gt;&gt;" }}
+              </span>
+            </label>
+            <label class="w-64 flex flex-col gap-1">
+              <span class="text-xs text-gray-600">Created at</span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                <ng-container *ngIf="item.attribution.created_at">
+                  {{ item.attribution.created_at }}
+                </ng-container>
+                <ng-container *ngIf="!item.attribution.created_at"
+                  >&lt;&lt;empty&gt;&gt;</ng-container
+                >
+              </span>
+            </label>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded-md p-2 border border-solid bg-white border-gray-200"
+            *ngFor="let a of item.attribution.authors; let i = index"
+          >
+            <span class="">{{ a.name || "Author" }}</span>
+            <span *ngIf="a.affiliation" class="text-gray-500 text-xs">
+              — {{ a.affiliation }}</span
+            >
+          </div>
+          <div
+            class="text-xs text-gray-500"
+            *ngIf="!item.attribution.authors.length"
+          >
+            No authors yet.
+          </div>
+        </section>
+
+        <section
+          id="rights"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Rights</div>
+          <div class="flex items-center gap-2">
+            <label class="w-48 flex flex-col gap-1">
+              <span class="text-xs text-gray-600">License</span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{ item.rights.license || "&lt;&lt;empty&gt;&gt;" }}
+              </span>
+            </label>
+            <label class="grow min-w-[240px] flex flex-col gap-1">
+              <span class="text-xs text-gray-600">License URL</span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{ item.rights.license_url || "&lt;&lt;empty&gt;&gt;" }}
+              </span>
+            </label>
+          </div>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600">Usage notes</span>
+            <span
+              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+            >
+              {{ item.rights.usage_notes || "&lt;&lt;empty&gt;&gt;" }}
+            </span>
+          </label>
+        </section>
+
+        <hr class="w-full" />
+
+        <!-- content -->
+        <section
+          id="content"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Content</div>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600">Prompt / description</span>
+            <span
+              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+            >
+              {{ item.content.prompt || "&lt;&lt;empty&gt;&gt;" }}
+            </span>
+          </label>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600">Source Snippet</span>
+            <pre
+              *ngIf="item.content.source_code"
+              class="block p-2 border border-solid border-slate-200 rounded-md text-sm leading-5"
+            ><code
+              [highlight]="item.content.source_code || '&lt;&lt;empty&gt;&gt;'"
+              [language]="
+                item.languages.programming_languages.length == 0 ? 'plaintext' : (
+                  item.languages.programming_languages[0] == 'asm' ? 'x86asm' : item.languages.programming_languages[0]
+                )"
+              lineNumbers style="padding: 0;"></code></pre>
+          </label>
+        </section>
+
+        <!-- classification -->
+        <section
+          id="classification"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Classification</div>
+          <div class="flex flex-wrap items-end gap-2">
+            <label class="w-64 flex flex-col gap-1">
+              <span class="text-xs text-gray-600">Difficulty</span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{ item.classification.difficulty || "&lt;&lt;empty&gt;&gt;" }}
+              </span>
+            </label>
+            <label class="w-64 flex flex-col gap-1">
+              <span class="text-xs text-gray-600">Interaction type</span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{
+                  item.interaction.interaction_type || "&lt;&lt;empty&gt;&gt;"
+                }}
+              </span>
+            </label>
+          </div>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600">
+              Topics (comma or newline separated)
+            </span>
+            <span
+              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+            >
+              {{
+                item.classification.topics.join(", ") || "&lt;&lt;empty&gt;&gt;"
+              }}
+            </span>
+          </label>
+        </section>
+
+        <!-- knowledge components -->
+        <section
+          id="knowledge-components"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Knowledge Components</div>
+          <div
+            class="flex flex-col gap-2"
+            *ngIf="
+              item.classification.knowledge_components || {}
+                | keyvalue as kcList;
+              else noKcList
+            "
+          >
+            <div
+              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              *ngFor="let kcKey of kcList"
+            >
+              <div class="text-xs text-gray-500">{{ kcKey.key }}</div>
+              <div class="">
+                {{ kcKey.value.concepts.join(", ") }}
+              </div>
+              <div class="text-gray-400 text-xs" *ngIf="kcKey.value.note">
+                {{ kcKey.value.note }}
+              </div>
+            </div>
+          </div>
+          <ng-template #noKcList>
+            <div class="text-xs text-gray-500">
+              No knowledge components yet.
+            </div>
+          </ng-template>
+        </section>
+
+        <!-- pedagogy -->
+        <section
+          id="pedagogy"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Pedagogy</div>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600">Instructional role</span>
+            <span
+              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+            >
+              {{ item.pedagogy.instructional_role || "&lt;&lt;empty&gt;&gt;" }}
+            </span>
+          </label>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-600"
+              >Learning objectives (one per line)</span
+            >
+            <span
+              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+            >
+              {{
+                item.pedagogy.learning_objectives.join("\n") ||
+                  "&lt;&lt;empty&gt;&gt;"
+              }}
+            </span>
+          </label>
+          <div class="flex items-start gap-2">
+            <label class="flex flex-col gap-1 w-1/3">
+              <span class="text-xs text-gray-600">
+                Prereq topics (comma separated)
+              </span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{
+                  item.pedagogy.prerequisites.topics.join(", ") ||
+                    "&lt;&lt;empty&gt;&gt;"
+                }}
+              </span>
+            </label>
+            <label class="flex flex-col gap-1 w-1/3">
+              <span class="text-xs text-gray-600">
+                Prereq concepts (comma separated)
+              </span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{
+                  item.pedagogy.prerequisites.concepts.join(", ") ||
+                    "&lt;&lt;empty&gt;&gt;"
+                }}
+              </span>
+            </label>
+            <label class="flex flex-col gap-1 w-1/3">
+              <span class="text-xs text-gray-600">
+                Prereq item IDs (comma separated)
+              </span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{
+                  item.pedagogy.prerequisites.item_ids.join(", ") ||
+                    "&lt;&lt;empty&gt;&gt;"
+                }}
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <section
+          id="delivery"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Delivery</div>
+          <ng-container *ngIf="item.delivery.length; else noDelivery">
+            <div
+              class="flex items-center gap-2 p-2 border border-solid border-slate-200 bg-white rounded-md"
+              *ngFor="let d of item.delivery; let i = index"
+            >
+              <span class="uppercase"> {{ d.format || "format" }}: </span>
+              <a [href]="d.url" target="_blank">{{
+                d.url || "&lt;&lt;empty&gt;&gt;"
+              }}</a>
+            </div>
+          </ng-container>
+          <ng-template #noDelivery>
+            <p class="text-xs text-gray-500">No delivery endpoints yet.</p>
+          </ng-template>
+        </section>
+
+        <section
+          id="uses"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+        >
+          <div class="text-sm font-semibold">Used In</div>
+          <div
+            class="flex flex-col gap-1 p-2 border border-solid border-slate-200 bg-white rounded-md"
+            *ngFor="let a of item.uses; let i = index"
+          >
+            <span class="">{{ a.context_name }} </span>
+            <span *ngIf="a.used_by" class="text-gray-500 text-xs">
+              {{ a.used_by || "n/a" }}
+            </span>
+            <span *ngIf="a.used_at" class="text-gray-500 text-xs">
+              {{ a.used_at }}: [{{ a.context_id }}]
+            </span>
+          </div>
+          <div class="text-xs text-gray-500" *ngIf="!item.uses.length">
+            No uses yet.
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loadingTpl>
+    <div class="py-4 text-sm text-gray-500">Loading catalog...</div>
+  </ng-template>
+</div>
+
+<p-dialog
+  *ngIf="reportState.show"
+  [(visible)]="reportState.show"
+  header="Report Catalog Item"
+  [modal]="true"
+  [closable]="true"
+  [closeOnEscape]="true"
+  [style]="{ width: '35rem' }"
+>
+  <form #form="ngForm" class="flex flex-col gap-2" (ngSubmit)="submitReport()">
+    <div class="text-sm font-semibold">Report Item</div>
+    <div class="text-xs text-gray-500">Flag content in this catalog item.</div>
+    <label class="flex flex-col gap-1">
+      <span class="text-xs text-gray-600">Reason *</span>
+      <input
+        pInputText
+        type="text"
+        class="w-full"
+        name="reason"
+        [(ngModel)]="report.reason"
+        maxlength="200"
+        placeholder="Short summary of the issue"
+      />
+    </label>
+
+    <label class="flex flex-col gap-1">
+      <span class="text-xs text-gray-600">Details</span>
+      <textarea
+        pInputTextarea
+        rows="8"
+        class="w-full"
+        [autoResize]="true"
+        name="details"
+        [(ngModel)]="report.details"
+        maxlength="1000"
+        placeholder="Optional details to help triage the report"
+      ></textarea>
+    </label>
+
+    <span *ngIf="reportState.success" class="text-xs text-emerald-600">
+      {{ reportState.success }}
+    </span>
+    <span *ngIf="reportState.error" class="text-xs text-rose-600">
+      {{ reportState.error }}
+    </span>
+
+    <div class="flex items-center justify-end gap-2">
+      <p-button
+        type="submit"
+        label="Submit Report"
+        icon="fa fa-flag"
+        severity="secondary"
+        [loading]="reportState.submitting"
+        [disabled]="form.invalid"
+      ></p-button>
+    </div>
+  </form>
+</p-dialog>
