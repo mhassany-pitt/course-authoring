@@ -6,6 +6,7 @@ import {
   CatalogItemReportSchema,
   CatalogItemSchema,
 } from 'src/catalog_v2/catalog-item.schema';
+import { SLCItemsAPIController } from './slc-items-api.controller';
 
 @Module({
   imports: [
@@ -14,8 +15,8 @@ import {
       { name: 'catalog_item_reports_v2', schema: CatalogItemReportSchema },
     ]),
   ],
-  controllers: [SLCItemsController],
+  controllers: [SLCItemsController, SLCItemsAPIController],
   providers: [SLCItemsService],
   exports: [SLCItemsService],
 })
-export class SLCItemsModule {}
+export class SLCItemsModule { }

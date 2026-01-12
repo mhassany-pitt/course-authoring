@@ -7,7 +7,7 @@
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 @import "font-awesome/css/font-awesome.min.css";
-@import 'sortable-tree/dist/sortable-tree.css';
+@import "sortable-tree/dist/sortable-tree.css";
 
 @layer tailwind-base {
   @tailwind base;
@@ -53,6 +53,15 @@ body {
   .p-dropdown-trigger {
     width: auto;
     margin-left: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .p-dropdown-items {
+    padding: 0.25rem 0;
+  }
+
+  .p-dropdown-item {
+    padding: 0.25rem 0.5rem;
   }
 }
 
@@ -63,7 +72,6 @@ p-chips .p-chips,
 
 .p-chips-sm,
 .p-chips-sm .p-chips {
-
   .p-inputtext,
   .p-chips-input-token input,
   .p-chips-token-icon {
@@ -105,7 +113,6 @@ p-chips .p-chips,
 }
 
 .p-checkbox-sm {
-
   .p-checkbox,
   .p-checkbox-box {
     width: 1rem;
@@ -145,7 +152,7 @@ p-chips .p-chips,
     width: 1rem;
     font-size: 0.75rem;
 
-    >.p-icon-wrapper {
+    > .p-icon-wrapper {
       width: 0.75rem;
     }
   }
