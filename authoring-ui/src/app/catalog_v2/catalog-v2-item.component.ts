@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
 })
 export class CatalogV2ItemComponent implements OnInit, OnDestroy {
   navLinks = getNavLinks(this.app);
+  history = history;
 
   item: CatalogV2Item = blankItem();
   loading = true;
@@ -52,6 +53,22 @@ export class CatalogV2ItemComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.routeSub?.unsubscribe();
+  }
+
+  get canEdit() {
+    return this.isAdmin || this.isOwner;
+  }
+
+  private get isAdmin() {
+    return this.app.user?.roles?.includes('app-admin');
+  }
+
+  private get isOwner() {
+    return (
+      !!this.app.user?.email &&
+      !!this.item?.user_email &&
+      this.app.user.email === this.item.user_email
+    );
   }
 
   private ensureDefaults(item: CatalogV2Item): CatalogV2Item {

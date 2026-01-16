@@ -46,7 +46,7 @@
           icon="pi pi-chevron-left"
           severity="secondary"
           [outlined]="true"
-          (click)="router.navigate(['/catalog-v2'])"
+          (click)="history.back()"
         ></p-button>
         <p-button
           type="button"
@@ -55,6 +55,13 @@
           severity="secondary"
           [outlined]="true"
           (click)="reportState.show = true"
+        ></p-button>
+        <p-button
+          *ngIf="canEdit"
+          type="button"
+          label="Edit"
+          icon="pi pi-pencil"
+          [routerLink]="['/slc-items', item.id]"
         ></p-button>
       </div>
 
@@ -94,13 +101,23 @@
           <div class="flex items-end gap-2">
             <label class="grow min-w-[240px] flex flex-col gap-1">
               <span class="text-xs text-gray-600">Demo URL</span>
-              <a
-                [href]="item.links.demo_url"
-                target="_blank"
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{ item.links.demo_url || "&lt;&lt;empty&gt;&gt;" }}
-              </a>
+              @if (item.links.demo_url) {
+                <a
+                  [href]="item.links.demo_url || undefined"
+                  target="_blank"
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                >
+                  {{ item.links.demo_url || "&lt;&lt;empty&gt;&gt;" }}
+                </a>
+              } @else {
+                <a
+                  [href]="item.links.demo_url || undefined"
+                  target="_blank"
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                >
+                  {{ item.links.demo_url || "&lt;&lt;empty&gt;&gt;" }}
+                </a>
+              }
             </label>
           </div>
 
@@ -438,12 +455,28 @@
             class="flex flex-col gap-1 p-2 border border-solid border-slate-200 bg-white rounded-md"
             *ngFor="let a of item.uses; let i = index"
           >
-            <span class="">{{ a.context_name }} </span>
+            <a
+              *ngIf="a.context_url || a.context_id; else contextNameOnly"
+              class="text-blue-700 hover:underline break-words"
+              [href]="a.context_url || a.context_id"
+              target="_blank"
+              rel="noopener"
+            >
+              {{ a.context_name || a.context_url || a.context_id }}
+            </a>
+            <ng-template #contextNameOnly>
+              <span class=""
+                >{{ a.context_name || "&lt;&lt;empty&gt;&gt;" }}
+              </span>
+            </ng-template>
             <span *ngIf="a.used_by" class="text-gray-500 text-xs">
               {{ a.used_by || "n/a" }}
             </span>
             <span *ngIf="a.used_at" class="text-gray-500 text-xs">
-              {{ a.used_at }}: [{{ a.context_id }}]
+              {{ a.used_at
+              }}<span *ngIf="a.context_url || a.context_id"
+                >: [{{ a.context_url || a.context_id }}]</span
+              >
             </span>
           </div>
           <div class="text-xs text-gray-500" *ngIf="!item.uses.length">

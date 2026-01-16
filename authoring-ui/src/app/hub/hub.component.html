@@ -53,7 +53,7 @@
             class="flex items-center gap-1 text-red-700 cursor-pointer border border-solid border-red-400 px-2 py-1 rounded hover:bg-red-100 active:bg-red-200"
             (click)="clearQuickFilters(table)"
           >
-            <span class="">clear filters</span>
+            <span class="">Clear Filters</span>
             <i class="pi pi-times"></i>
           </a>
         </div>
@@ -163,9 +163,9 @@
               'author.email',
               'units_ct',
               'resources_ct',
-              'created_at'
+              'created_at',
             ]"
-            (onFilter)="reloadFilterKVs(table.filteredValue)"
+            (onFilter)="reloadFilterKVs(table.filteredValue || courses)"
           >
             <ng-template pTemplate="body" let-course>
               <tr>
@@ -177,7 +177,7 @@
                       <span>{{ course.author.fullname }}</span>
                     </div>
                     <span class="text-xs text-gray-400">
-                      {{ course.created_at | date : "medium" }}
+                      {{ course.created_at | date: "medium" }}
                     </span>
                     <div class="flex items-center gap-4">
                       <span
@@ -192,7 +192,7 @@
                           class="pi pi-chevron-down text-gray-400"
                           [ngClass]="{
                             'pi-chevron-up':
-                              selected && selected.id == course.id
+                              selected && selected.id == course.id,
                           }"
                         ></i>
                       </span>

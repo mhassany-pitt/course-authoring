@@ -1,0 +1,3202 @@
+item_language,set_name,item_name,item_type,item_statement,item_code,item_url
+PYTHON,py_work_hours,py_work_hours1,PCEX Set,"Suppose we have an input file that contains information about how many hours each employee of a company has worked. The file looks like the following (Employee's name, Hours):\nErica 7.5 8.5 10.25 8 8.5\nErin 10.5 11.5 12 11 10.75\nSimone 8 8 8\n...\nConstruct a program that reads this file and calculates the total number of hours worked by each individual. Make sure that the program handles each specific exception that could occur. ","#Step 1: Define the function
+def report_work_hours(file_name):
+    #Step 1.1: Enclose the code that might throw an exception within the try block
+    try :
+        #Step 1.1.1: Open the file and process each line in the file        
+        myfile = open( file_name, ""r"")
+        for line in myfile:
+            tokens = line.split()
+            name = tokens[0]
+            total = 0.0;
+            for i in range(1, len(tokens)) :
+                try :
+                    total += float(tokens[i])
+                except ValueError:
+                    print(""Error in the hour."")
+            print(""Total hours worked by "" + name  + "" = "" + str(total))
+        #Step 1.1.2: Close the file
+        myfile.close()
+    #Step 1.2: Handle all possible exceptions that may be thrown in the try block 
+    except FileNotFoundError:
+        print(""File not found"")
+    except IOError:
+        print(""Problem with the file!"")
+#Step 2: Call the function
+name = input(""Enter the full path of a file: "")
+report_work_hours(name)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_work_hours
+PYTHON,py_work_hours,py_work_hours2,PCEX Challenge,"Suppose we have an input file that contains information about how many hours each employee of a company has worked. The file looks like the following (Employee's identification number, Employee's name, Hours):\n101 Erica 7.5 8.5 10.25 8 8.5\n783 Erin 10.5 11.5 12 11 10.75\n114 Simone 8 8 8\n...\nConstruct a program that reads this file and calculates the total number of hours worked by each individual. Make sure that the program handles each specific exception that could occur. ","#Step 1: Define the function
+def report_work_hours(file_name):
+    #Step 1.1: Enclose the code that might throw an exception within the try block
+    try :
+        #Step 1.1.1: Open the file and process each line in the file
+        myfile = open( file_name, ""r"")
+        for line in myfile:
+            tokens = line.split()
+            #Try to get the id of the employee as a number
+            try :
+                eid = int(tokens[0])
+            except ValueError :
+                print(""Error in the employee's id."")
+            name = tokens[1]
+            total = 0.0;
+            for i in range(2, len(tokens)) :
+                try :
+                    total += float(tokens[i])
+                except ValueError:
+                    print(""Error in the employee's hour."")
+            print(""Total hours worked by "" + name  + "" = "" + str(total))
+        #Step 1.1.2: Close the file
+        myfile.close()
+    #Step 1.2: Handle all possible exceptions that may be thrown in the try block 
+    except FileNotFoundError:
+        print(""File not found"")
+    except IOError:
+        print(""Problem with the file!"")
+#Step 2: Call the function
+name = input(""Enter the full path of a file: "")
+report_work_hours(name)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_work_hours&ch=py_work_hours2
+PYTHON,py_win_percentage,py_win_percentage,PCEX Set,Construct a program that receives from the user the number of games that a sports team won in a tournament of 12 games and calculates the winning percentage of that sports team. The program must ask for the number of the games won until the user enters a valid number.,"#Step 1: Assign initial values to the variables which we need for this program
+total_games = 12
+#Step 2: Read the number that the user enters
+text = input(""Enter the number of games that the sports team won in the tournament: "")
+wins = int(text)      
+#Step 3: Validate the user input, ask for a valid input as long as the user enters an invalid number; otherwise stop
+while wins < 0 or wins > total_games :
+    text = input(""Enter the number of games that the sports team won in the tournament: "")
+    wins = int(text)
+#Step 4: Calculate and print the percentage of games won by a team
+ratio = wins / total_games
+print(""Winning percentage:"", ratio)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_win_percentage
+PYTHON,py_win_percentage,py_win_percentage_input,PCEX Challenge,"Construct a program that receives from the user the number of games in a tournament and the number of the games that a sports team won in the tournament, and calculates the winning percentage of that sports team. The program must ask the user for each of the two inputs until the user enters a valid number.","#Step 1: Read the number of games in the tournament
+text = input(""Enter the number of games in the tournament: "")
+total_games = int(text)       
+#Step 2: Validate the user input for the number of games in the tournament, ask for a valid input as long as the user enters an invalid number; otherwise stop
+while total_games <= 0 :
+    text = input(""Enter the number of games in the tournament: "")
+    total_games = int(text)
+#Step 3: Read the number of games that the sports team won in the tournament
+text = input(""Enter the number of games that the sports team won in the tournament: "")
+wins = int(text)      
+#Step 4: Validate the user input for the number of games that the sports team won in the tournament, ask for a valid input as long as the user enters an invalid number; otherwise stop
+while wins < 0 or wins > total_games :
+    text = input(""Enter the number of games that the sports team won in the tournament: "")
+    wins = int(text)
+#Step 5: Calculate and print the percentage of games won by a team
+ratio = wins / total_games
+print(""Winning percentage:"", ratio)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_win_percentage&ch=py_win_percentage_input
+PYTHON,py_win_percentage,py_win_percentage_won_equal,PCEX Challenge,"Construct a program that receives from the user the number of games that a sports team won and tied in a tournament of 12 games and calculates the winning percentage of the sports team, counting ties as half wins. The program must ask the user for each of the two inputs until the user enters a valid number.","#Step 1: Assign initial values to the variables which we need for this program
+total_games = 12
+#Step 2: Read the number of games that the sports team won in the tournament
+text = input(""Enter the number of games that the sports team won in the tournament: "")
+wins = int(text)      
+#Step 3: Validate the user input for the number of wins, ask for a valid input as long as the user enters an invalid number; otherwise stop
+while wins < 0 or wins > total_games :
+    text = input(""Enter the number of games that the sports team won in the tournament: "")
+    wins = int(text)
+#Step 4: Read the number of games that the sports team tied in the tournament
+text = input(""Enter the number of games tied: "")
+ties = int(text)
+#Step 5: Validate the user input for the number of ties, ask for a valid input as long as the user enters an invalid number; otherwise stop
+while ties < 0 or total_games < (ties + wins) :
+    text = input(""Enter the number of games tied: "")
+    ties = int(text)
+#Step 6: Calculate and print the percentage of games won by a team, counting ties as half wins
+ratio = ( wins + ties // 2) / total_games
+print(""Winning percentage:"", ratio)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_win_percentage&ch=py_win_percentage_won_equal
+PYTHON,py_vending_machine,py_vending_machine1,PCEX Set,"Suppose we have a vending machine that gives change. A customer selects an item for purchase and inserts a bill into the vending machine. The vending machine dispenses the purchased item and gives change. We will assume that all item prices are multiples of 25 cents, and the machine gives all change in dollar and quarters. Construct a program that computes how many dollars and quarters to return to the customer.","#Step 1: Assign initial values to the variables which we need for this program
+pennies_per_dollar = 100
+pennies_per_quarter = 25
+#Step 2: Read the bill value and item price
+text = input(""Enter bill value in dollars (1 = $1 bill, 5 = $5 bill, etc.): "")
+bill_value = int(text)
+text = input(""Enter item price in pennies: "")
+item_price = int(text)
+#Step 3: Compute the change due
+change_due = pennies_per_dollar * bill_value - item_price
+#Step 4: Compute the number of dollars and update the change due after taking away the dollars
+dollars = change_due // pennies_per_dollar
+change_due = change_due % pennies_per_dollar
+#Step 5: Compute the number of quarters in the remaining change due
+quarters = change_due // pennies_per_quarter
+#Step 6: Display the result
+print(""Your change consists of:"") 
+print(dollars, ""dollars"")
+print(quarters, ""quarters"")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_vending_machine
+PYTHON,py_vending_machine,py_vending_machine2,PCEX Challenge,"Suppose we have a vending machine that gives change. A customer selects an item for purchase and inserts a bill into the vending machine. The vending machine dispenses the purchased item and gives change. We will assume that all item prices are multiples of 5 cents, and the machine gives all change in quarters, dimes, and nickels. Construct a program that computes how many quarters, dimes, and nickels to return to the customer.","#Step 1: Assign initial values to the variables which we need for this program
+pennies_per_dollar = 100
+pennies_per_quarter = 25
+pennies_per_dime = 10
+pennies_per_nickel = 5
+#Step 2: Read the bill value and item price
+text = input(""Enter bill value in dollars (1 = $1 bill, 5 = $5 bill, etc.): "")
+bill_value = int(text)
+text = input(""Enter item price in pennies: "")
+itemPrice = int(text)
+#Step 3: Compute the change due
+change_due = pennies_per_dollar * bill_value - itemPrice
+#Step 4: Compute the number of quarters in the change due and update the change due after taking away the quarters
+quarters = change_due // pennies_per_quarter
+change_due = change_due % pennies_per_quarter
+#Step 5: Compute the number of dimes in the remaining change due and update the change due after taking away the dimes
+dimes = change_due // pennies_per_dime
+change_due = change_due % pennies_per_dime
+#Step 6: Compute the number of nickels in the remaining change due
+nickels = change_due // pennies_per_nickel
+#Step 7: Display the result
+print(""Your change consists of:"") 
+print(quarters, ""quarters"")
+print(dimes, ""dimes"") 
+print(nickels, ""nickels"")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_vending_machine&ch=py_vending_machine2
+PYTHON,py_trees_traversal,traversal,PCEX Set,"The tree can be traversed by deciding on a sequence to visit each node. There are three traversal algorithms: in-order traversal, pre-order traversal and post-order traversal.\n<b>In-order traversal</b> visits the nodes from the left, the root node and the right\n<b>Pre-order traversal</b> visits the nodes from the root node, the left and the right\n<b>Post-order traversal</b> visits the nodes from the left, the right and the root node.\nIn this example, we construct an in-order traversal algorithm. ","# Define a binary tree class
+class BinaryTree:
+    def __init__(self, root):
+        self.left = None
+        self.right = None
+        self.key = root
+    # Define the Insert Node function
+    def insert(self, data):
+        if self.key:
+            if data < self.key:
+                if self.left is None:
+                    self.left = BinaryTree(data)
+                else:
+                    self.left.insert(data)
+            elif data > self.key:
+                if self.right is None:
+                    self.right = BinaryTree(data)
+                else:
+                    self.right.insert(data)
+        else:
+            self.key = data
+    # Define Inorder traversal function
+    def inorder_traversal(self, root):
+        res = []
+        if root:
+            res = self.inorder_traversal(root.left)
+            res.append(root.key)
+            res = res + self.inorder_traversal(root.right)
+        return res
+root = BinaryTree(5)
+root.insert(14)
+root.insert(16)
+root.insert(3)
+root.insert(4)
+root.insert(10)
+print(root.inorder_traversal(root))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_traversal
+PYTHON,py_trees_traversal,traversal_ch,PCEX Challenge,"The tree can be traversed by deciding on a sequence to visit each node. There are three traversal algorithms: in-order traversal, pre-order traversal and post-order traversal.\n<b>In-order traversal</b> visits the nodes from the left, the root node and the right\n<b>Pre-order traversal</b> visits the nodes from the root node, the left and the right\n<b>Post-order traversal</b> visits the nodes from the left, the right and the root node.\nIn this challenge, we construct an post-order traversal algorithm. ","# Define a binary tree class
+class BinaryTree:
+    def __init__(self, root):
+        self.left = None
+        self.right = None
+        self.key = root
+    # Define the Insert Node function
+    def insert(self, data):
+        if self.key:
+            if data < self.key:
+                if self.left is None:
+                    self.left = BinaryTree(data)
+                else:
+                    self.left.insert(data)
+            elif data > self.key:
+                if self.right is None:
+                    self.right = BinaryTree(data)
+                else:
+                    self.right.insert(data)
+        else:
+            self.key = data
+    # Define Post order traversal function
+    def postorder_traversal(self, root):
+        res = []
+        if root:
+            res = self.postorder_traversal(root.left)
+            res = res + self.postorder_traversal(root.right)
+            res.append(root.key)
+        return res
+root = BinaryTree(5)
+root.insert(14)
+root.insert(16)
+root.insert(3)
+root.insert(4)
+root.insert(10)
+print(root.postorder_traversal(root))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_traversal&ch=traversal_ch
+PYTHON,py_trees_insert_binarytree,insert_binarytree,PCEX Set,"In a BinaryTree, adding new nodes to the tree is an important capability to have.\nConstruct a simple implementation of a BinaryTree consisting of an __init__ method and an insertLeft method, which adds new nodes to the tree to the left of the root. ","# Define a binary tree class
+class BinaryTree:
+    def __init__(self, root):
+        self.key = root
+        self.left = None
+        self.right = None
+    # Define a function to insert node from the left
+    def insert_left(self, new_node):
+        if self.left is None:
+            self.left = BinaryTree(new_node)
+        else:
+            node_tree = BinaryTree(new_node)
+            node_tree.left = self.left
+            self.left = node_tree
+    # Define a function to print the tree
+    def print_tree(self):
+        if self.left:
+            self.left.print_tree()
+        print(self.key, "" "", end="""")
+        if self.right:
+            self.right.print_tree()
+# Initializing a tree
+root = BinaryTree(10)
+root.insert_left(5)
+root.insert_left(6)
+root.insert_left(14)
+root.print_tree()",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_insert_binarytree
+PYTHON,py_trees_insert_binarytree,insert_binarytree_ch,PCEX Challenge,"In a BinaryTree, adding new nodes to the tree is an important capability to have.\nConstruct a simple implementation of a BinaryTree consisting of an __init__ method and an insertRight method, which adds new nodes to the tree to the right of the root.","# Define a binary tree class
+class BinaryTree:
+    def __init__(self, root):
+        self.key = root
+        self.left = None
+        self.right = None
+    # Define a function to insert node from the right
+    def insert_right(self, new_node):
+        if self.right is None:
+            self.right = BinaryTree(new_node)
+        else:
+            node_tree = BinaryTree(new_node)
+            node_tree.right = self.right
+            self.right = node_tree
+    # Define a function to print the tree
+    def print_tree(self):
+        if self.left:
+            self.left.print_tree()
+        print(self.key, "" "", end="""")
+        if self.right:
+            self.right.print_tree()
+# Initializing a tree
+root = BinaryTree(10)
+root.insert_right(5)
+root.insert_right(6)
+root.insert_right(14)
+root.print_tree()",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_insert_binarytree&ch=insert_binarytree_ch
+PYTHON,py_time_conversion,py_display_time1,PCEX Set,"Construct a program that obtains minutes and remaining seconds from the input amount of time in seconds. For example, 500 seconds contains 8 minutes and 20 seconds.","#Step 1: Read the seconds
+text = input(""Enter an integer for seconds: "")
+seconds = int(text)
+#Step 2: Obtain minutes and remaining seconds from the input seconds
+minutes = seconds // 60 
+remaining_seconds = seconds % 60
+#Step 3: Display the result
+print(seconds , ""seconds is"" , minutes , ""minutes and"" , remaining_seconds , ""seconds."")  ",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_time_conversion
+PYTHON,py_time_conversion,py_display_time2,PCEX Challenge,"Construct a program that obtains hours, minutes, and seconds from an amount of time in milliseconds.","#Step 1: Read the milliseconds
+text = input(""Enter the milliseconds: "")
+milliseconds = int(text)
+#Step 2: Obtain hours, minutes, and seconds from the milliseconds
+total_secs = milliseconds // 1000
+hours = total_secs // 3600
+mins = ( total_secs // 60 ) % 60
+secs = total_secs % 60
+#Step 3: Display the result
+print(milliseconds, ""milliseconds is"", hours, ""hours and"" , mins , ""minutes and"" , secs , ""seconds."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_time_conversion&ch=py_display_time2
+PYTHON,py_three_booleans,py_three_boolean1,PCEX Set,Construct a program that determines whether at least one of the three boolean variables is True based on the inputs that it receives from the user.,"#Step 1: Read the user input for the value of the first boolean variable (variable a)
+text = input(""Enter 1 if the value of the first boolean variable (variable a) is True, otherwise enter 0:"")
+input_num = int(text)
+#Step 2: Determine whether the value of the first boolean variable (variable a) is True 
+if input_num == 1 :
+    a = True
+else:
+    a = False
+#Step 3: Read the user input for the value of the second boolean variable (variable b)
+text = input(""Enter 1 if the value of the second boolean variable (variable b) is True, otherwise enter 0:"")
+input_num = int(text)
+#Step 4: Determine whether the value of the second boolean variable (variable b) is True 
+if input_num == 1 :
+    b = True
+else:
+    b = False
+#Step 5: Read the user input for the value of the third boolean variable (variable c)
+text = input(""Enter 1 if the value of the third boolean variable (variable c) is True, otherwise enter 0:"")
+input_num = int(text)
+#Step 6: Determine whether the value of the third boolean variable (variable c) is True 
+if input_num == 1 :
+    c = True
+else:
+    c = False
+#Step 7: Write the boolean expression to determine whether at least one of the three boolean variables is True
+result = a or b or c
+#Step 8: Print the result
+if result == True :
+    print(""Yes! At least one of the three boolean variables is True."")
+else:
+    print(""No! None of the boolean variables are True."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_three_booleans
+PYTHON,py_three_booleans,py_three_boolean2,PCEX Challenge,Construct a program that determines whether at least one of the three boolean variables is False based on the inputs that it receives from the user.,"#Step 1: Read the user input for the value of the first boolean variable (variable a)
+text = input(""Enter 1 if the value of the first boolean variable (variable a) is True, otherwise enter 0:"")
+input_num = int(text)
+#Step 2: Determine whether the value of the first boolean variable (variable a) is True 
+if input_num == 1 :
+    a = True
+else:
+    a = False
+#Step 3: Read the user input for the value of the second boolean variable (variable b)
+text = input(""Enter 1 if the value of the second boolean variable (variable b) is True, otherwise enter 0:"")
+input_num = int(text)
+#Step 4: Determine whether the value of the second boolean variable (variable b) is True 
+if input_num == 1 :
+    b = True
+else:
+    b = False
+#Step 5: Read the user input for the value of the third boolean variable (variable c)
+text = input(""Enter 1 if the value of the third boolean variable (variable c) is True, otherwise enter 0:"")
+input_num = int(text)
+#Step 6: Determine whether the value of the third boolean variable (variable c) is True 
+if input_num == 1 :
+    c = True
+else:
+    c = False
+#Step 7: Write the boolean expression to determine whether at least one of the three boolean variables is False
+result = not (a and b and c)
+#Step 8: Print the result
+if result == True :
+    print(""Yes! At least one of the three boolean variables is False."")
+else:
+    print(""No! None of the boolean variables are False."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_three_booleans&ch=py_three_boolean2
+PYTHON,py_three_booleans,py_three_boolean3,PCEX Challenge,"Construct a program that receives the value of three boolean variables from the user and determines whether all variables have the same value, either all three True or all three False.","#Step 1: Read the user input for the value of the first boolean variable (variable a)
+text = input(""Enter 1 if the value of the first boolean variable (variable a) is True, otherwise enter 0:"")
+input_num = int(text)
+#Step 2: Determine whether the value of the first boolean variable (variable a) is True 
+if input_num == 1 :
+    a = True
+else:
+    a = False
+#Step 3: Read the user input for the value of the second boolean variable (variable b)
+text = input(""Enter 1 if the value of the second boolean variable (variable b) is True, otherwise enter 0:"")
+input_num = int(text)
+#Step 4: Determine whether the value of the second boolean variable (variable b) is True 
+if input_num == 1 :
+    b = True
+else:
+    b = False
+#Step 5: Read the user input for the value of the third boolean variable (variable c)
+text = input(""Enter 1 if the value of the third boolean variable (variable c) is True, otherwise enter 0:"")
+input_num = int(text)
+#Step 6: Determine whether the value of the third boolean variable (variable c) is True 
+if input_num == 1 :
+    c = True
+else:
+    c = False
+#Step 7: Write the boolean expression to determine whether all the three boolean variables have the same value
+result = (a == b and b == c)
+#Step 8: Print the result
+if result == True :
+    print(""Yes! All the three boolean variables have the same value."")
+else:
+    print(""No! Not all the variables have the same value."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_three_booleans&ch=py_three_boolean3
+PYTHON,py_temperature,py_temperature_above_average,PCEX Set,Construct a program that reads a series of temperatures and reports the average temperature and the number of the days that are above the average. Assume that the input values could have a decimal point.,"#Step 1: Read the number of days that we have to enter their temperature data
+num_days = int(input(""Enter the number of temperature values that will be entered: ""))
+#Step 2: Read the temperature values
+temps = []
+total = 0
+for i in range(num_days):
+    val = float(input(""Enter the temperature: ""))
+    temps.append(val)
+    total += val
+#Step 3: Calculate the average temperature
+average = 0
+if num_days == 0:
+    print(""No temperature values were entered."")
+else:
+    average = total / num_days
+#Step 4: Count the number of the days that are above the average temperature
+above = 0
+for x in temps:
+    if x > average:
+        above += 1
+#Step 5: Display the results
+print(""Average temperature:"", average)
+print(above, ""days above average."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_temperature
+PYTHON,py_temperature,py_temperature_list_days_above_threshold,PCEX Challenge,Construct a program that reads a series of temperatures and reports the days that are above 32 degrees Fahrenheit. Assume that the temperature values are in Fahrenheit. Also assume that input values could have a decimal point.,"#Step 1: Read the number of days that we have to enter their temperature data
+num_days = int(input(""Enter the number of temperature values that will be entered: ""))
+#Step 2: Read the temperature values
+temps = []
+for i in range(num_days):
+    val = float(input(""Enter the temperature: ""))
+    temps.append(val)
+#Step 3: Create a list that contains the days that are above 32 degrees Fahrenheit
+days_above_32 = []
+for i in range(len(temps)) :
+    if temps[i] > 32:
+        days_above_32.append(""Day "" + str(i+1))
+#Step 4: Print the result
+print(""Days above 32 degrees Fahrenheit:"", days_above_32)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_temperature&ch=py_temperature_list_days_above_threshold
+PYTHON,py_student_score,py_score_dict1,PCEX Set,"Assume we have a list of students and a list of their corresponding test scores. Construct a program that has a function which receives these two lists and returns a dictionary that maps each student to the scores of that student.\nFor example, if the student list is ['Sam', 'Kim', 'Sam'] and the scores list is [15, 10, 14], the program creates the following dictionary:\n{'Sam': [15, 14], 'Kim': [10]}","#Step 1: Define the function
+def create_dictionary(std_lst, test_lst):
+    #Step 1.1: Create an empty dictionary
+    res_dict={}
+    #Step 1.2: Update the dictionary entries as we iterate through the indexes in the given lists
+    for i in range(len(std_lst)):
+        if std_lst[i]  in res_dict:
+            res_dict[ std_lst[i] ].append( test_lst[i] )
+        else:
+            res_dict[ std_lst[i] ] = [ test_lst[i] ]
+    return res_dict
+#Step 2: Call the function
+names = ['Joe', 'Tom', 'Barbara', 'Sue', 'Sally', 'Joe', 'Sue']
+scores=[10, 23, 13, 18, 12, 9, 15]
+print(create_dictionary(names, scores))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_student_score
+PYTHON,py_student_score,py_score_dict2,PCEX Challenge,"Assume we have a list of students and a list of their corresponding test scores. Construct a program that has two functions:\n- a function that receives these two lists and returns a dictionary that maps each student to the scores of that student, and \n- a function that receives the dictionary created by the above function and calculates the average score of each student","#Step 1: Define the function that creates the dictionary
+def create_dictionary(std_lst, test_lst):
+    #Step 1.1: Create an empty dictionary 
+    res_dict={}
+    #Step 1.2: Update the dictionary entries as we iterate through the indexes in the given lists
+    for i in range(len(std_lst)):
+        if std_lst[i]  in res_dict:
+            res_dict[ std_lst[i] ].append( test_lst[i] )
+        else:
+            res_dict[ std_lst[i] ] = [ test_lst[i] ]
+    return res_dict
+#Step 2: Define the function that calculates the average of each student's scores
+def average(new_dict):
+    #Step 2.1: Iterate through the students in the dictionary
+    for std_name in new_dict :
+        #Step 2.1.1: Iterate through the list of student's scores, add each score to the running total
+        total = 0;
+        for score in new_dict[std_name]:
+            total+= score
+        #Step 2.1.2: Calculate and print the average of student's scores
+        average = total/len(new_dict[std_name])
+        print(std_name, average)
+#Step 3: Call the functions
+names = ['Joe', 'Tom', 'Barbara', 'Sue', 'Sally', 'Joe', 'Sue']
+scores=[10, 23, 13, 18, 12, 9, 15]
+average( create_dictionary(names, scores) )",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_student_score&ch=py_score_dict2
+PYTHON,py_str_repeat_chars,py_str_repeat1,PCEX Set,"Construct a program that has a function that receives a string and creates a new string that has each character of the given string repeated two times.\nFor example, the new string that will be formed from the string 'abc' is 'aabbcc'.","#Step 1: Define the function
+def double_char(s):
+    #Step 1.1: Assign initial value to the variable that we need for the new string
+    new_s = """"
+    #Step 1.2: Iterate through the characters in the given string
+    for char in s:
+        #Step 1.2.1: Add the repeated character to the the new string
+        new_s += char * 2
+    #String 1.3: Print the new string
+    print(new_s)
+#Step 2: Call the function
+double_char(""Hi There"")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_str_repeat_chars
+PYTHON,py_str_repeat_chars,py_str_repeat2,PCEX Challenge,"Construct a program that has a function that receives a string and creates a new string that has every other character of the given string, starting with the first character, repeated two times.\nFor example, the new string that will be formed from the string 'abcde' is 'aaccee'.","#Step 1: Define the function
+def double_char(s):
+    #Step 1.1: Assign initial value to the variable that we need for the new string
+    new_s = """"
+    #Step 1.2: Iterate through every other characters in the given string
+    for i in range(0, len(s), 2) :
+        #Step 1.2.1: Add the repeated character to the the new string
+        new_s += s[i] * 2
+    #String 1.3: Print the new string
+    print(new_s)
+#Step 2: Call the function
+double_char(""Hi There"")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_str_repeat_chars&ch=py_str_repeat2
+PYTHON,py_str_count,py_str_count1,PCEX Set,"Construct a program that has a function that receives a string and returns the number of times that the string ""hi"" appears anywhere in the given string, ignoring the case.","#Step 1: Define the function
+def count_hi(s):
+    #Step 1.1: Assign initial value to the variable that we need for the counts
+    count = 0
+    #Step 1.2: Iterate through the characters in the given string 
+    for i in range(len(s)-1):
+        #Step 1.2.1: Increment the counts by 1 if we find a match
+        if s[i:i+2].lower() == ""hi"":
+            count += 1
+    #Step 1.3: Return the counts
+    return count
+#Step 2: Call the function
+print(count_hi(""hiabc Hi ho hIx""))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_str_count
+PYTHON,py_str_count,py_str_count2,PCEX Challenge,"Construct a program that has a function that receives a string and returns the number of times that the string ""hi?t"" appears anywhere in the given string where '?' could be any letter. For example, ""hint"" and ""hilt"" would count as a match.\nAll string comparisons should be case-insensitive.","#Step 1: Define the function
+def count_hi(s):
+    #Step 1.1: Assign initial value to the variable that we need for the counts
+    count = 0
+    #Step 1.2: Iterate through the characters in the given string 
+    for i in range(len(s)-3):
+        #Step 1.2.1: Increment the counts by 1 if we find a match
+        if s[i:i+2].lower() == ""hi"" and s[i+3].lower() == ""t"":
+            count += 1
+    #Step 1.3: Return the counts
+    return count
+#Step 2: Call the function
+print(count_hi(""hiatc?Hi ho hIx""))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_str_count&ch=py_str_count2
+PYTHON,py_star_patterns,py_stars_1,PCEX Set,"A Right triangle star pattern contains N asterisks in N-th row. Construct a program that receives the number of rows in the right triangle star pattern and prints that triangle. For example, when the number of rows in the right triangle star pattern is 5, the program prints the following output:\n*\n**\n***\n****\n*****","#Step 1: Read the number of rows in the right triangle star pattern
+N = int(input(""Enter the number of rows in the right triangle star pattern: ""))
+#Step 2: Print the rows in the star pattern, one by one
+for i in range(1, N+1):  
+    #Step 2.1: Generate the asterisks in the i-th row 
+    row = """"
+    for j in range(1, i+1):  
+        row = row + ""*""
+    #Step 2.2: Print the asterisks in the i-th row
+    print(row)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_star_patterns
+PYTHON,py_star_patterns,py_stars_2,PCEX Challenge,"An inverted right triangle star pattern of N rows contains N-i+1 asterisks in the i-th row. Construct a program that receives the number of rows in the inverted right triangle star pattern and prints that triangle. For example, when the number of rows in the inverted right triangle star pattern is 5, the program prints the following output:\n*****\n****\n***\n**\n*","#Step 1: Read the number of rows in the inverted right triangle star pattern
+N = int(input(""Enter the number of rows in the inverted right triangle star pattern:""))
+#Step 2: Print the rows in the star pattern, one by one
+for i in range(1, N+1):  
+    #Step 2.1: Generate the asterisks in the i-th row 
+    row = """"
+    for j in range(1, N-i+2):  
+        row = row + ""*""
+    #Step 2.2: Print the asterisks in the i-th row
+    print(row)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_star_patterns&ch=py_stars_2
+PYTHON,py_stack_stack,stack,PCEX Set,Implementing Stack. Using Class to construct a Stack structure.,"# Define a Stack Class
+class Stack:
+    # Initializing the stack
+    def __init__(self):
+        self.items = []
+    # Checking if the stack is empty
+    def is_empty(self):
+        return len(self.items) == 0
+    # Adding elements to the stack
+    def push(self, item):
+        self.items.append(item)
+    # Removing the elements from the stack
+    def pop(self):
+        return self.items.pop()
+    # Checking the element in the stack
+    def peek(self):
+        if not self.is_empty():
+            return self.items[len(self.items) - 1]
+    # Checking the size of the stack
+    def size(self):
+        return len(self.items)
+s=Stack()
+print(s.is_empty())
+s.push(4)
+s.push('dog')
+print(s.peek())
+s.push(True)
+print(s.size())
+print(s.is_empty())
+s.push(8.4)
+print(s.pop())
+print(s.pop())
+print(s.size())",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_stack_stack
+PYTHON,py_stack_stack,stack_ch,PCEX Challenge," Implementing Stack. Using Class to construct a Stack. Implement a function to determine if all the given brackets are paired.\nFor example:\n       paired brackets list:['[','{','(','{','}',')','}',']’] ; unpaired brackets list:['{',']','(','{','}',')','}',']']","# Define a Stack Class
+class Stack:
+# Initializing the stack
+    def __init__(self):
+        self.items = []
+    # Checking if the stack is empty
+    def is_empty(self):
+        return len(self.items) == 0
+    # Adding elements to the stack
+    def push(self, item):
+        self.items.append(item)
+    # Removing the elements from the stack
+    def pop(self):
+        return self.items.pop()
+    # Checking the element in the stack
+    def peek(self):
+        return self.items[- 1]
+# Checking the if the brackets are matched
+def match(bracket):
+    left =['(','[','{']
+    right={')',']','}'}
+    s=Stack()
+    for brackets in bracket:
+        if brackets in left:
+            # We try to store the current bracket in the stack if it is the left one
+            s.push(brackets)
+        elif brackets in right:
+            if s.is_empty():
+                return False
+            if 1 <= ord(brackets) - ord(s.peek()) <= 2:
+                # We try to empty the stack if any right bracket matches a left bracket in the stack.
+                s.pop()
+    return s.is_empty()
+expr1=['[','{','(','{','}',')','}',']']
+expr2=['{','[','}','(',')']
+print(match(expr1))
+print(match(expr2))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_stack_stack&ch=stack_ch
+PYTHON,py_squares,py_write_squares_even,PCEX Set,Construct a program to write out the squares of even positive integers less than or equal to 10.,"#Step 1: Iterate through the numbers in the sequence
+for num in range(2, 11, 2):
+    #Step 1.1: Square and print each number in the sequence
+    print(num, ""squared ="", num * num)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_squares
+PYTHON,py_squares,py_write_squares_odd,PCEX Challenge,Construct a program to write out the squares of odd positive integers less than 10.,"#Step 1: Iterate through the numbers in the sequence
+for num in range(1, 10, 2):
+    #Step 1.1: Square and print each number in the sequence
+    print(num, ""squared ="", num * num)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_squares&ch=py_write_squares_odd
+PYTHON,py_squares,py_write_squares_range,PCEX Challenge,"Construct a program to write out the squares of every number between 20 and 25, both inclusive.","#Step 1: Iterate through the numbers in the sequence
+for num in range(20, 26):
+    #Step 1.1: Square and print each number in the sequence
+    print(num, ""squared ="", num * num)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_squares&ch=py_write_squares_range
+PYTHON,py_sorting_selection_sort,selection_sort_ch,PCEX Challenge,"Descending-order Selection sort operates by finding the maximum element of an array and moving it to the “beginning” of the array, with the “beginning” of the array incrementing forward after each element is placed in its proper position. Construct a function that performs selection sort on the given list, in descending order.","# Define a function that achieves descending-order selection sort.
+def sel_sort(data):
+    for i in range(len(data)):
+            max_index = i
+            for j in range(i+1, len(data)):
+            # Check if the current element at maxindex is smaller than the next element
+                if data[max_index] < data[j]:
+                    max_index = j
+            data[i], data[max_index] = data[max_index], data[i]
+    return data
+num_list = [20, -3, 0, 25, 300, 10]
+print(sel_sort(num_list))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_sorting_selection_sort&ch=selection_sort_ch
+PYTHON,py_sorting_selection_sort,selection_sort_ex,PCEX Set,"Ascending-order Selection sort operates by finding the minimum element of an array and moving it to the “beginning” of the array, with the “beginning” of the array incrementing forward after each element is placed in its proper position. Construct a function that performs selection sort on the given list, in ascending order. ","# Define a function that achieves ascending-order selection sort.
+def sel_sort(data):
+    # Reorder the list in an ascending order.
+    for i in range(len(data)):
+        min_index = i
+        for j in range(i+1, len(data)):
+            if data[min_index] > data[j]:
+                    min_index = j
+        data[i], data[min_index] = data[min_index], data[i]
+    return data
+num_list = [20, -3, 0, 25, 300, 10]
+print(sel_sort(num_list))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_sorting_selection_sort
+PYTHON,py_sorting_insertion_sort,insertion_sort_ch,PCEX Challenge,Insertion sort works similarly to how one would sort a hand of cards: by choosing an element and searching through the rest of the array to determine its proper place. Construct a function that performs insertion sort in descending order on the given list.,"# Define the insertion sorting function that sorts the given list in a descending order
+def insertion_sort(data):
+    for i in range(1, len(data)):
+        current = data[i]
+        j = i-1
+        while j>=0 and current > data[j]:
+            data[j+1] = data[j]
+            j -=1
+        data[j+1] = current
+    return data
+num_list = [30, -20, 25, 0, 2, 5]
+print(insertion_sort(num_list))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_sorting_insertion_sort&ch=insertion_sort_ch
+PYTHON,py_sorting_insertion_sort,insertion_sort_ex,PCEX Set,Insertion sort works similarly to how one would sort a hand of cards: by choosing an element and searching through the rest of the array to determine its proper place. Construct a function that performs insertion sort in ascending order on the given list.,"# Define the insertion sorting function that sorts the given list in an ascending order
+def insertion_sort(data):
+    for i in range(1, len(data)):
+        current = data[i]
+        j = i-1
+        while j>=0 and current < data[j]:
+            data[j+1] = data[j]
+            j -=1
+        data[j+1] = current
+    return data
+num_list = [30, -20, 25, 0, 2, 5]
+print(insertion_sort(num_list))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_sorting_insertion_sort
+PYTHON,py_soda_survey,py_soda_survey_soda_avg,PCEX Challenge,"Suppose a soda manufacturer held a taste test for four new flavors to determine if people liked them. The manufacturer got 10 people to try each new flavor and give it a score from 1 to 5, where 1 equals poor and 5 equals excellent. The results of that survey is stored in a matrix. Each row of the matrix holds the responses that all testers gave for one particular soda flavor, and each column holds the responses of one person for all sodas.\nConstruct a program that determines the average ratings that respondents provided to four new flavors of soda.","#Step 1: Define a 4x10 two-dimensional list
+ratings_data = [[3, 4, 5, 2, 1, 4, 3, 2, 4, 4],
+                [2, 4, 3, 4, 3, 3, 2, 1, 2, 2],
+                [3, 5, 4, 5, 5, 3, 2, 5, 5, 5],
+                [1, 1, 1, 3, 1, 2, 1, 3, 2, 4]]
+#Step 2: Get the dimensions of the list that stores the ratings data
+num_sodas = len(ratings_data)
+num_respondents = len(ratings_data[0])
+#Step 3: Create a list to store the sum of rating of each soda flavor
+soda_sum = [0] * num_sodas
+#Step 4: Iterate through the sodas 
+for i in range(num_sodas):
+    #Step 4.1: Calculate the sum of the ratings for the soda i+1    
+    for j in range(num_respondents):
+        soda_sum[i] += ratings_data[i][j]
+#Step 5: Calculate and print the average rating for each soda
+print(""Averages:"")   
+for i in range(num_sodas):
+    print(""Soda # {:d} : {:.2f}"".format((i+1), soda_sum[i]/num_respondents))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_soda_survey&ch=py_soda_survey_soda_avg
+PYTHON,py_soda_survey,py_soda_survey_soda_max,PCEX Set,"Suppose a soda manufacturer held a taste test for four new flavors to determine if people liked them. The manufacturer got 10 people to try each new flavor and give it a score from 1 to 5, where 1 equals poor and 5 equals excellent. The results of that survey is stored in a matrix. Each row of the matrix holds the responses that all testers gave for one particular soda flavor, and each column holds the responses of one person for all sodas.\nConstruct a program that determines the maximum rating that each of the four new flavors of soda received.","#Step 1: Define a 4x10 two-dimensional list
+ratings_data = [[3, 4, 5, 2, 1, 4, 3, 2, 4, 4],
+                [2, 4, 3, 4, 3, 3, 2, 1, 2, 2],
+                [3, 5, 4, 5, 5, 3, 2, 5, 5, 5],
+                [1, 1, 1, 3, 1, 2, 1, 3, 2, 4]]
+#Step 2: Get the dimensions of the list that stores the ratings data
+num_sodas = len(ratings_data)
+num_respondents = len(ratings_data[0])
+#Step 3: Create a list to store the maximum rating of each soda flavor
+soda_max = [0] * num_sodas
+#Step 4: Iterate through the sodas 
+for i in range(num_sodas):
+    #Step 4.1: Find the maximum rating of soda i+1 by iterating through its ratings 
+    for j in range(num_respondents):
+        if ratings_data[i][j] > soda_max[i] :
+            soda_max[i] = ratings_data[i][j]
+#Step 5: Print the maximum rating for each soda
+print(""Maximums:"")   
+for i in range(num_sodas):
+    print(""Soda # {:d} : {:d}"".format((i+1), soda_max[i]))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_soda_survey
+PYTHON,py_soda_survey,py_soda_survey_soda_respondent_avg,PCEX Challenge,"Suppose a soda manufacturer held a taste test for four new flavors to determine if people liked them. The manufacturer got 10 people to try each new flavor and give it a score from 1 to 5, where 1 equals poor and 5 equals excellent. The results of that survey is stored in a matrix. Each row of the matrix holds the responses that all testers gave for one particular soda flavor, and each column holds the responses of one person for all sodas.\nConstruct a program that determines the average ratings that respondents provided to four new flavors of soda as well as the average ratings of each respondent.","#Step 1: Define a 4x10 two-dimensional list
+ratings_data = [[3, 4, 5, 2, 1, 4, 3, 2, 4, 4],
+                [2, 4, 3, 4, 3, 3, 2, 1, 2, 2],
+                [3, 5, 4, 5, 5, 3, 2, 5, 5, 5],
+                [1, 1, 1, 3, 1, 2, 1, 3, 2, 4]]
+#Step 2: Get the dimensions of the list that stores the ratings data
+num_sodas = len(ratings_data)
+num_respondents = len(ratings_data[0])
+#Step 3: Create a list to store the sum of rating of each soda flavor
+soda_sum = [0] * num_sodas
+#Step 4: Create a list to store the sum of rating of each respondent
+respondent_sum = [0] * num_respondents
+#Step 5: Iterate through the sodas 
+for i in range(num_sodas):
+    #Step 5.1: Iterate through the respondents
+    for j in range(num_respondents):
+        #Step 5.1.1: Update sum of ratings given to soda i+1
+        soda_sum[i] += ratings_data[i][j]
+        #Step 5.1.2: Update sum of ratings from respondent j+1
+        respondent_sum[j] += ratings_data[i][j]
+#Step 6: Calculate and print the average rating for each soda
+print(""Averages:"")   
+for i in range(num_sodas):
+    print(""Soda # {:d} : {:.2f}"".format((i+1), soda_sum[i]/num_respondents))
+#Step 7: Calculate and print the average rating for each respondent    
+for j in range(num_respondents):
+    print(""Respondent # {:d} : {:.2f}"".format((j+1), respondent_sum[j]/num_sodas))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_soda_survey&ch=py_soda_survey_soda_respondent_avg
+PYTHON,py_single_linked_list,slinkedlist1,PCEX Set,"Create the necessary classes for a Singly Linked List, containing the method append(item) to add a new item to the end of the linked list. Test the singly linked list after the classes are created.","# Step 1: Define Node class
+class SLinkedListNode:
+    def __init__(self, initData, initNext):
+        self.data = initData
+        self.next = initNext
+    def getData(self):
+        return self.data
+    def getNext(self):
+        return self.next
+    def setData(self, newData):
+        self.data = newData
+    def setNext(self, newNext):
+        self.next = newNext
+# Step 2: Define the Singly Linked List class
+class SLinkedList:
+    def __init__(self):
+        self.head = None
+        self.size = 0
+    def __str__(self):
+        s = '['
+        i = 0
+        current = self.head
+        while current != None:
+            if i > 0:
+                s = s + ','
+            dataObject = current.getData()
+            if dataObject != None:
+                s = s + '%s' % dataObject
+                i = i + 1
+            current = current.getNext()
+        s = s + ']'
+        return s
+    def append(self, item):
+        temp = SLinkedListNode(item, None)
+        if (self.head == None):
+            self.head = temp
+        else:
+            current = self.head
+            while (current.getNext() != None):
+                current = current.getNext()
+            current.setNext(temp)
+        self.size += 1
+# Step 3: Test the Linked List
+linked_list = SLinkedList()
+linked_list.append('Hello')
+linked_list.append('World')
+print(linked_list)",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_single_linked_list
+PYTHON,py_single_linked_list,slinkedlist1_challenge,PCEX Challenge,"Create the necessary classes for a Singly Linked List, containing the method add(item) to add a new item to the beginning of the linked list. Test the singly linked list after the classes are created.","# Step 1: Define Node class
+class SLinkedListNode:
+    def __init__(self, initData, initNext):
+        self.data = initData
+        self.next = initNext
+    def getData(self):
+        return self.data
+    def getNext(self):
+        return self.next
+    def setData(self, newData):
+        self.data = newData
+    def setNext(self, newNext):
+        self.next = newNext
+# Step 2: Define the Singly Linked List class
+class SLinkedList:
+    def __init__(self):
+        self.head = None
+        self.size = 0
+    def __str__(self):
+        s = '['
+        i = 0
+        current = self.head
+        while current != None:
+            if i > 0:
+                s = s + ','
+            dataObject = current.getData()
+            if dataObject != None:
+                s = s + '%s' % dataObject
+                i = i + 1
+            current = current.getNext()
+        s = s + ']'
+        return s
+    def add(self, item):
+        temp = SLinkedListNode(item, None)
+        temp.setNext(self.head)
+        self.head = temp
+        self.size += 1
+# Step 3: Test the Linked List
+linked_list = SLinkedList()
+linked_list.add('Position 1')
+linked_list.add('Position 0')
+print(linked_list)",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_single_linked_list&ch=slinkedlist1_challenge
+PYTHON,py_search_list,py_search_list_count_each,PCEX Challenge,"Construct a program that has a function that receives two lists and creates a list that contains the number of times each element in the 2nd list appears in the 1st list. For example, if the 1st list is [1, 2, 3, 3, 4, 4, 5, 6] and the 2nd list is [3, 4, 5, 6, 7], then the list that contains the number of times each element in the 2nd list appears in the 1st list is [2, 2, 1, 1, 0].\nAssume that all elements in the 2nd list are unique.","#Step 1: Define the function 
+def search_lists(lst1, lst2):
+    #Step 1.1: Create a list that we need to store the number of matches
+    counts = [0] * len(lst2)
+    #Step 1.2: Iterate through the values in the 2nd list
+    for val2 in lst2:
+        #Step 1.2.1: Iterate through the values in the 1st list
+        for val1 in lst1:
+            #Step 1.2.1.1: Increment the number of matches for val2 if we find a match for that
+            if val2 == val1: 
+                counts[ lst2.index(val2) ] += 1
+    print(""The list that contains the number of times each element in the 2nd list appears in the 1st list:"", counts)
+#Step 2: Call the function
+values_1 = [2.0, 11, 11, 4, 5, 3, 3, 3.5, 4, 10, 16]
+values_2 =  [7, 11, 3]
+search_lists(values_1, values_2)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_list&ch=py_search_list_count_each
+PYTHON,py_search_list,py_search_list_of_values,PCEX Set,Construct a program that has a function that receives two lists and prints the values in the 2nd list that exist in the 1st list.,"#Step 1: Define the function
+def search_lists(lst1, lst2):
+    #Step 1.1: Iterate through the values in the 2nd list
+    for val2 in lst2:
+        #Step 1.1.1: Print the value in the 2nd list if it exists in the 1st list
+        if val2 in lst1: 
+            print(val2, ""exists in both list."")
+#Step 2: Call the function
+values_1 = [2.0, 11, 4, 5, 3, 3.5, 4, 10, 16]
+values_2 =  [7, 11, 3]
+search_lists(values_1, values_2)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_list
+PYTHON,py_search_list,py_search_list_total_count,PCEX Challenge,"Construct a program that has a function that receives two lists and prints the total number of times the elements in the 2nd list appear in the 1st list. For example, if the 1st list is [1, 2, 3, 3, 4, 4, 5, 6] and the 2nd list is [3, 4, 5, 6, 7], then the total number of times that the elements in the 2nd list appear in the 1st list is 6.\nNote that we need to count matches for all values in the 2nd list (including duplicate values, if any).","#Step 1: Define the function
+def search_lists(lst1, lst2):
+    #Step 1.1: Iterate through the values in the 2nd list
+    count = 0
+    for val2 in lst2:
+        #Step 1.1.1: Iterate through the values in the 1st list
+        for val1 in lst1:
+            #Step 1.1.1.1: Increment the number of matches if we find a match
+            if val2 == val1: 
+                count += 1
+    print(""Total number of times the elements in the 2nd list appear in the 1st list is"", count)
+#Step 2: Call the function
+values_1 = [2.0, 11, 11, 4, 5, 3, 3, 3.5, 4, 10, 16]
+values_2 =  [7, 11, 3]
+search_lists(values_1, values_2)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_list&ch=py_search_list_total_count
+PYTHON,py_search_binary_search,binary_search_ch,PCEX Challenge,"Binary Search operates by dividing an array in half, and then determining whether or not the target value would be in the larger or smaller half. Then, this process repeats by dividing whichever half must contain the target in half again, over and over until the target is found.
+Construct a function that performs binary search on a given array and returns the index of the target value if it is found, and -1 if it is not.","# Define a binary search function that also detects if the key in the given list.
+def binary_search(data, key):
+    found = False
+    low = 0
+    high = len(data)-1
+    # Using while to conduct a search iteration
+    while (not found and low <= high):
+        guess = (high + low) // 2
+        if (key == data[guess]):
+            found = True
+        else:
+            if (key<data[guess]):
+                high = guess-1
+            else:
+                low = guess+1
+    # After one of the while conditions is not satisfied anymore, we need to check if the key is found
+    if not found:
+        guess = -1
+    return guess
+data = [1, 5, 7, 9, 11, 13]
+print(binary_search(data, 14))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_binary_search&ch=binary_search_ch
+PYTHON,py_search_binary_search,binary_search_ex,PCEX Set,"Binary Search operates by dividing an array in half, and then determining whether or not the target value would be in the larger or smaller half. Then, this process repeats by dividing whichever half must contain the target in half again, over and over until the target is found.
+Construct a function that performs binary search on a given array and returns the index of the target value if it is found in the array. Assume that the target will be in the array (in other words, do not handle the case where the target does not exist in the array).","# Define a binary search function
+def binary_search(data, key):
+    found = False
+    low = 0
+    high = len(data)-1
+    while not found:
+        guess = (high+low)//2
+        if (key == data[guess]):
+            found = True
+        else:
+            if (key<data[guess]):
+                high = guess-1
+            else:
+                low = guess+1
+    return guess
+data = [1, 5, 7, 9, 11, 13]
+print(binary_search(data, 13))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_binary_search
+PYTHON,py_search_binary_recursive,search_binary_rec,PCEX Set,"Construct a function that uses recursive binary search to find if a specific value is in a list (known as a ""key""). Recall: Binary search uses the ""Divide and Conquer"" strategy. Given a list of ordered integers, the key is searched by dividing the data list in half and only searching in the half that contains the key, and repeating the process until the key is found and the index of the key is returned. If the key is not found, -1 is returned.","# Step 1: Define the function
+def binary_search(data, key, low, high):
+    # Step 1.1: Set default values
+    guess = (high + low) // 2
+    # Step 1.2: Set terminating condition(s)
+    if low >= high:
+        return -1
+    elif key == data[guess]:
+        return data.index(key)
+    # Step 1.3: Set recursion condition
+    else:
+        if (key < data[guess]):
+            high = guess
+        else:
+            low = guess + 1
+        return binary_search(data, key, low, high)
+#Step 2: Test the function
+List = [1,2,3,4,5,6,7,8,9,10]
+key = 8
+idx = binary_search(List, key, 0, len(List))
+print(idx)",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_binary_recursive
+PYTHON,py_search_binary_recursive,search_binary_rec_challenge,PCEX Challenge,"Construct a function that uses recursive binary search to find if a specific value is in a list (known as a ""key""). Recall: Binary search uses the ""Divide and Conquer"" strategy. Given a list of ordered integers, the key is searched by dividing the data list in half and only searching in the half that contains the key, and repeating the process until the key is found and the index of the key is returned. If the key is not found, -1 is returned.","# Step 1: Define the function
+def binary_search(data, key, low, high):
+    # Step 1.1: Set default values
+    guess = (high + low) // 2
+    # Step 1.2: Set terminating condition(s)
+    if low >= high:
+        return -1
+    elif key == data[guess]:
+        return data.index(key)
+    # Step 1.3: Set recursion condition
+    else:
+        if (key < data[guess]):
+            high = guess
+        else:
+            low = guess + 1
+        return binary_search(data, key, low, high)
+# Step 2: Test the function
+List = [2,4,8,15,19,20,22,29,31,35,38]
+key = 5
+idx = binary_search(List, key, 0, len(List))
+print(idx)",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_binary_recursive&ch=search_binary_rec_challenge
+PYTHON,py_rich_compare,rich_compare1,PCEX Set,"Construct a program with two classes, where each class has a comparison method. Test whether instances of each class is equal to each other using the comparison method.","# Step 1: Define the first class containing the comparison method
+class A:
+    def __init__(self, value):
+        self.value = value
+    def __eq__(self, other):
+        print (""A __eq__ called"")
+        return self.value == other
+# Step 2: Define the second class containing the comparison method
+class B:
+    def __init__(self, value):
+        self.value = value
+    def __eq__(self, other):
+        print (""B __eq__ called"")
+        return self.value == other
+# Step 3: Test the comparison function
+valueA = A(3)
+valueB = B(3)
+print(valueA==valueB)",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_rich_compare
+PYTHON,py_rich_compare,rich_compare1_challenge,PCEX Challenge,"Construct a program with two classes, where each class has a comparison method. Test whether the value of the first class is greater than the value of the second class using the comparison method.","# Step 1: Define the first class containing the comparison method
+class A:
+    def __init__(self, value):
+        self.value = value
+    def __gt__(self, other):
+        print (""A __gt__ called"")
+        return self.value > other.value
+# Step 2: Define the second class containing the comparison method
+class B:
+    def __init__(self, value):
+        self.value = value
+    def __gt__(self, other):
+        print (""B __gt__ called"")
+        return self.value > other.value
+# Step 3: Test the comparison function
+a = A(4)
+b = B(8)
+print(a > b)
+print(b > a)",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_rich_compare&ch=rich_compare1_challenge
+PYTHON,py_repeated_sequence,py_repeated_sequence1,PCEX Set,Construct a program that receives an integer N from the user and prints a sequence of space-separated numbers from 1 to N such that each number in the sequence is repeated 5 times.,"#Step 1: Read the integer N that the user enters
+N = int(input(""Enter the integer N: ""))
+#Step 2: Print N space-separated numbers
+for i in range(1, N+1):  
+    #Step 2.1: Print the i-th number five times
+    for j in range(1, 6): 
+        print(i)            ",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_repeated_sequence
+PYTHON,py_repeated_sequence,py_repeated_sequence2,PCEX Challenge,Construct a program that receives an integer N from the user and prints a sequence of space-separated numbers from 1 to N such that the N-th number in the sequence is repeated N times.,"#Step 1: Read the integer N that the user enters
+N = int(input(""Enter the integer N: ""))
+#Step 2: Print N space-separated numbers
+for i in range(1, N+1):  
+    #Step 2.1: Print the i-th number i times
+    for j in range(1, i+1): 
+        print(i) ",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_repeated_sequence&ch=py_repeated_sequence2
+PYTHON,py_rent_car,py_rent_car1,PCEX Set,Construct a program that determines whether a customer could rent a car based on the inputs that it receives from the car rental agent. Rental cars are available to licensed drivers of 21 years of age or over.,"#Step 1: Read the inputs from the car rental agent
+text = input(""Enter the customer's age:"")
+age = int(text)
+text = input(""Enter 1 if the customer has driver's license, otherwise enter 0:"")
+input_num = int(text)
+#Step 2: Determine whether the customer has driver's license
+if input_num == 1 :
+    has_license = True
+else:
+    has_license = False
+#Step 3: Write the boolean expression to determine whether a customer could rent a car
+can_rent_car = age >= 21 and has_license
+#Step 4: Print the result
+if can_rent_car == True :
+    print(""Yes! The customer could rent a car."")
+else:
+    print(""No! The customer could not rent a car."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_rent_car
+PYTHON,py_rent_car,py_rent_car2,PCEX Challenge,Construct a program that determines whether a customer could rent a car based on the inputs that it receives from the car rental agent. Rental cars are available to licensed drivers of 21 years of age or over who have not had a car accident.,"#Step 1: Read the input for the customer's age 
+text = input(""Enter the customer's age:"")
+age = int(text)
+#Step 2: Read the input for determining whether the customer has driver's license
+text = input(""Enter 1 if the customer has driver's license, otherwise enter 0:"")
+input_num = int(text)
+#Step 3: Determine whether the customer has driver's license
+if input_num == 1 :
+    has_license = True
+else:
+    has_license = False
+#Step 4: Read the input for determining whether the customer has had an accident
+text = input(""Enter 1 if the customer has had an accident, otherwise enter 0:"")
+input_num = int(text)
+#Step 5: Determine whether the customer has had an accident
+if input_num == 1 :
+    had_accidents = True
+else:
+    had_accidents = False
+#Step 6: Write the boolean expression to determine whether a customer could rent a car
+can_rent_car = age >= 21 and has_license and not had_accidents
+#Step 7: Print the result
+if can_rent_car == True :
+    print(""Yes! The customer could rent a car."")
+else:
+    print(""No! The customer could not rent a car."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_rent_car&ch=py_rent_car2
+PYTHON,py_rent_car,py_rent_car3,PCEX Challenge,"Construct a program that determines whether a customer could rent a car based on the inputs that it receives from the car rental agent. Rental cars are available to licensed drivers who are either at least 21 years old or have a credit card with $10,000 or more of credit.","#Step 1: Read the input for the customer's age 
+text = input(""Enter the customer's age:"")
+age = int(text)
+#Step 2: Read the input for determining whether the customer has driver's license
+text = input(""Enter 1 if the customer has driver's license, otherwise enter 0:"")
+input_num = int(text)
+#Step 3: Determine whether the customer has driver's license
+if input_num == 1 :
+    has_license = True
+else:
+    has_license = False
+#Step 4: Read the input for the customer's credit amount
+text = input(""Enter the customer's credit amount:"")
+credit = int(text)
+#Step 5: Write the boolean expression to determine whether a customer could rent a car
+can_rent_car = has_license and (age >= 21 or credit >= 10000)
+#Step 6: Print the result
+if can_rent_car == True :
+    print(""Yes! The customer could rent a car."")
+else:
+    print(""No! The customer could not rent a car."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_rent_car&ch=py_rent_car3
+PYTHON,py_references_passing_values,passing_values,PCEX Set,Construct a function that increases the original integer's value by 1 and return the increased value's memory address.,"# Step 1: Define the function
+def increment(x):
+    # Step 1.1: Print x’s original memory address
+    print(f""Initial address of x: {id(x)}"")
+    # Step 1.2: Increase x by 1
+    x += 1
+    # Step 1.3: Print x’s current memory address
+    print(f""Final address of x: {id(x)}"")
+#Step2: Initiate n
+n = 9001
+print(f""Initial address of n: {id(n)}"")
+#Step2: Call the funtion
+increment(n)
+print(f""Final address of n: {id(n)}"")",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_references_passing_values
+PYTHON,py_references_passing_values,passing_values_ch,PCEX Challenge,Construct a program that convert Celsius to Fahrenheit.,"#Step 1: Define the function
+def convert(x):
+    F = (x * 1.8) + 32
+    return F
+# Step 2: Initiate the value
+c = 32
+# Step 3: Print the converted temperature
+print(""The Fahrenheit is:"", convert(c))
+# Step 4: Print the original Celsius.
+print(""The Celsius is:"",c)",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_references_passing_values&ch=passing_values_ch
+PYTHON,py_references_passing_lists,passing_lists,PCEX Set,Construct a function that calculate square values of the list’s elements.,"# Step 1: Define the function
+def square(list):
+#Step 1.1 :Iterate through the list and compute each value’s square value
+    for i in range(len(list)):
+        list[i] *= list[i]
+    print(list)
+#Step 2: Initiate the list
+num_list = [2,3,4,5]
+#Step 3: Call the function
+square(num_list)
+#Step 4: Print the list
+print(num_list)",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_references_passing_lists
+PYTHON,py_references_passing_lists,passing_lists_ch,PCEX Challenge,Construct a program that convert Celsius temperature values in a list to Fahrenheit temperature values,"# Step 1: Define the function
+def Fahrenheit(c_list):
+#Step 1.1 :Iterate through the list and compute each value’s Fahrenheit value
+    for i in range(len(c_list)):
+        c_list[i] = (c_list[i]*1.8)+32
+# Step 2: Initiate the list
+celsius_list = [25, 3, 40, -5]
+# Step 3: Call the function
+Fahrenheit(celsius_list)
+# Step4: Print the Fahrenheit values
+print('The converted Fahrenheit temperature is:',celsius_list)",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_references_passing_lists&ch=passing_lists_ch
+PYTHON,py_recursion_gcf,recursion_gcf,PCEX Set,Construct a program that recursively finds and returns the great common factor between of two integers.,"# Step 1: Define the starting condition
+def Recurgcf(a, b):
+    low = min(a, b)
+    high = max(a, b)
+# Step 2: Define the terminating condition
+    if low == 0:
+        return high
+    elif low == 1:
+        return 1
+    # Step 3: Recursion
+    else:
+        return Recurgcf(low, high%low)
+print(Recurgcf(12,14))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_recursion_gcf
+PYTHON,py_recursion_gcf,recursion_gcf_challenge,PCEX Challenge,Construct a program that recursively finds and returns the great common factor between of two integers. This is a simple implementation--fill in the missing lines.,"# Step 1: Define the terminating condition
+def gcd2(a, b):
+    if b == 0:
+        return a
+        # Step 3: Recursion
+    else:
+        return gcd2(b, a%b)
+print(gcd2(12,14))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_recursion_gcf&ch=recursion_gcf_challenge
+PYTHON,py_range_two,py_range2_1,PCEX Set,Construct a program that prints a sequence of numbers from 1 (inclusive) to 9 (inclusive).,"#Step 1: Iterate through the numbers in the sequence
+for num in range(1, 10): 
+    #Step 1.1: Print each number in the sequence
+    print(num)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_range_two
+PYTHON,py_range_two,py_range2_2,PCEX Challenge,Construct a program that prints a sequence of numbers from 8 (inclusive) to 14 (inclusive).,"#Step 1: Iterate through the numbers in the sequence
+for num in range(8, 15): 
+    #Step 1.1: Print each number in the sequence
+    print(num)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_range_two&ch=py_range2_2
+PYTHON,py_range_three,py_range3_1,PCEX Set,Construct a program that prints a sequence of numbers from 1 (inclusive) to 16 (exclusive) in increments of 4.,"#Step 1: Iterate through the numbers in the sequence
+for num in range(1, 15, 4): 
+    #Step 1.1: Print each number in the sequence
+    print(num)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_range_three
+PYTHON,py_range_three,py_range3_2,PCEX Challenge,Construct a program that prints a sequence of numbers from 7 (inclusive) to 35 (inclusive) in increments of 7.,"#Step 1: Iterate through the numbers in the sequence
+for num in range(7, 36, 7): 
+    #Step 1.1: Print each number in the sequence
+    print(num)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_range_three&ch=py_range3_2
+PYTHON,py_range_one,py_range1_1,PCEX Set,Construct a program that prints a sequence of numbers from 0 (inclusive) to 10 (exclusive).,"#Step 1: Iterate through the numbers in the sequence
+for num in range(10): 
+    #Step 1.1: Print each number in the sequence
+    print(num)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_range_one
+PYTHON,py_range_one,py_range1_2,PCEX Challenge,Construct a program that prints a sequence of numbers from 0 (inclusive) to 6 (exclusive).,"#Step 1: Iterate through the numbers in the sequence
+for num in range(6): 
+    #Step 1.1: Print each number in the sequence
+    print(num)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_range_one&ch=py_range1_2
+PYTHON,py_queue_queue,queue_ch,PCEX Challenge,"Construct a program by using Queue structure to solve a Josephus problem. Josephus problem is a counting-out game. N people are in a circle, labeled as 1, 2, 3, … ,n. Given a skip number k, counting from the person labeled as 1, in every round, after k number of people are skipped, the next person will be counted out of the circle. Repeat the process with the remaining people until only one person remains. Then free the last one person. The program should return the last freed  person.","# Define a Queue Class
+class Queue:
+    # Initializing the queue
+    def __init__(self):
+        self.items = []
+    # Adding elements to the queue
+    def enqueue(self,item):
+        self.items.insert(0,item)
+    # Removing elements from the queue
+    def dequeue(self):
+        return self.items.pop()
+    # Checking the size of the queue
+    def size(self):
+        return  len(self.items)
+# Define a function to solve Josephus problem
+def circle(k,name_list):
+    q = Queue()
+    for i in range(len(name_list)):
+    # We are trying to store the elements from the name_list into the queue structure
+        q.enqueue(name_list[i])
+    i = 0
+    while q.size() != 1:
+    # We are trying to count each element till the kth element
+        temp = q.dequeue()
+        if i != k:
+        # We need to restore the non-kth elements so the Kth element is out of the queue.
+            q.enqueue(temp)
+        else:
+            i = 0
+        i += 1
+    return q.dequeue()
+name_list = [""Lily"",""David"",""Susan"",""Julia"",""David"",""Brad""]
+print(circle(7,name_list))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_queue_queue&ch=queue_ch
+PYTHON,py_queue_queue,queue_impl,PCEX Set,Implementing Queue. Using Class to construct a Queue structure.,"# Define a Queue Class
+class Queue:
+    # Initializing the queue
+    def __init__(self):
+        self.items =[]
+    # Adding elements to the queue
+    def enqueue(self, item):
+        self.items.insert(0,item)
+    # Removing elements to the queue
+    def dequeue(self):
+        return self.items.pop()
+    # Returning the queue as a string
+    def __str__(self):
+        return str(self.items)
+q=Queue()
+q.enqueue('cat')
+q.enqueue(3)
+print(q.dequeue())
+print(q)",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_queue_queue
+PYTHON,py_pythagorean_theorem,py_pythagorean_theorem1,PCEX Set,"Construct a program that accepts two input values from the user, one for each side of a right-angle triangle. The program uses the Pythagorean theorem (c^2 = a^2 + b^2) to calculate the length of the triangle's hypotenuse.","#Step 1: Receive the values for each side of a right-angle triangle
+text = input(""Enter the length of side A:"")
+side_A = float(text)
+text = input(""Enter the length of side B:"")
+side_B = float(text)
+#Step 2: Calculate square of side A
+squareside_A = side_A ** 2
+#Step 3: Calculate square of side B
+squareside_B = side_B ** 2
+#Step 4: Use Pythagorean theorem to calculate the length of the triangle's hypotenuse
+hypotenuse = ( squareside_A + squareside_B ) ** 0.5
+#Step 5: Print the result
+print(""Given that side A is"", side_A, ""and side B is"", side_B, "", the hypotenuse is"", hypotenuse)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pythagorean_theorem
+PYTHON,py_pythagorean_theorem,py_pythagorean_theorem2,PCEX Challenge,Suppose that the user provides two input values for a right-angle triangle. The first input is for the length of an adjacent side in the triangle and the second input is for the hypotenuse of that triangle. The program calculates the second adjacent side of the triangle using these two input values. Use the Pythagorean theorem (c^2 = a^2 + b^2) to find the length of the second adjacent side.,"#Step 1: Receive the values for the first side of a right-angle triangle and the hypotenuse
+text = input(""Enter the length of side A:"")
+side_A = float(text)
+text = input(""Enter the length of the hypotenuse:"")
+hypotenuse = float(text)
+#Step 2: Calculate square of side A
+square_side_A = side_A ** 2
+#Step 3: Calculate square of hypotenuse
+square_hypotenuse = hypotenuse ** 2
+#Step 4: Use Pythagorean theorem to calculate the length of the triangle's other adjacent side
+side_B = (square_hypotenuse - square_side_A) ** 0.5
+#Step 5: Print the result
+print(""Given that side A is"", side_A, ""and the hypotenuse is"", hypotenuse, "", side B is"", side_B)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pythagorean_theorem&ch=py_pythagorean_theorem2
+PYTHON,py_print_medals,py_print_medals_row_column_total,PCEX Challenge,"Assume that we have a 7x4 matrix that stores the number of medals that seven countries won in the skating competitions at the Winter Olympic. This matrix looks like as follows:\n[[ ""Canada"", 1, 0, 1 ],\n [ ""China"", 1, 1, 0 ],\n ...]\nEach row of this matrix corresponds to the medal counts for the country in that row. The second, third, and fourth numbers within a row represent the number of Gold, Silver, and Bronze medals won by the corresponding country in that row.\nConstruct a program that takes this matrix and prints a table of medal counts with row and column totals. The column totals are the sum of the gold, silver, and bronze medals won in the competition. The output table should look like as follows:\n      Country    Gold  Silver  Bronze   Total\n         Canada        1       0       1          2\n            China        1       1       0          2\n           ...\nColumn Total      4       4       4","#Step 1: Define a 7x4 matrix that stores the number of medals won by seven countries
+medal_counts = [[ ""CAN"", 1, 0, 1 ],
+                [ ""CHN"", 1, 1, 0 ],
+                [ ""GER"", 0, 0, 1 ],
+                [ ""KOR"", 1, 0, 0 ],
+                [ ""JPN"", 0, 1, 1 ],
+                [ ""RUS"", 0, 1, 1 ],
+                [ ""USA"", 1, 1, 0 ]]
+#Step 2: Create a list to store column totals
+column_totals = [0] * ( len(medal_counts[0]) - 1 )
+#Step 3: Print the header of the output table
+print(""{:>4s}{:>3s}{:>3s}{:>3s}{:>4s}"".format(""Name"",""G"",""S"",""B"",""All""))
+#Step 4: Iterate through the rows in the medal counts matrix
+for i in range(len(medal_counts)):
+    #Step 4.1: Assign initial values to variables we need for printing row i
+    line = ""{:>4s}"".format(medal_counts[i][0])
+    row_total = 0
+    #Step 4.2: Iterate through the columns that have medal counts  
+    for j in range(1, len(medal_counts[0])):
+        #Step 4.2.1: Append medal counts to the content of row i
+        line += ""{:>3d}"".format(medal_counts[i][j])
+        #Step 4.2.2: Update the row total for row i 
+        row_total += medal_counts[i][j]
+        #Step 4.2.3: Update the column total for the column j 
+        column_totals[j-1] += medal_counts[i][j]
+    #Step 4.3: Add the row total to the content of the output table for row i
+    line += ""{:>3d}"".format(row_total)
+    #Step 4.4: Print the content of the output table for row i
+    print(line)
+#Step 5: Print the column totals
+line = ""{:>4s}"".format(""All"")
+for j in range(len(column_totals)):
+    line += ""{:>3d}"".format(column_totals[j])
+print(line)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_print_medals&ch=py_print_medals_row_column_total
+PYTHON,py_print_medals,py_print_medals_row_total,PCEX Set,"Assume that we have a 7x4 matrix that stores the number of medals that seven countries won in the skating competitions at the Winter Olympic. This matrix looks like as follows:\n[[ ""Canada"", 1, 0, 1 ],\n [ ""China"", 1, 1, 0 ],\n ...]\nEach row of this matrix corresponds to the medal counts for the country in that row. The second, third, and fourth numbers within a row represent the number of Gold, Silver, and Bronze medals won by the corresponding country in that row.\nConstruct a program that takes this matrix and prints a table of medal counts with row total that shows the number of Gold, Silver, Bronze, and Total medals for each of the countries who participated in the competition. The output table should look like as follows:\n    Country    Gold  Silver  Bronze   Total\n     Canada        1       0       1            2\n        China        1       1       0            2\n       ...\n","#Step 1: Define a 7x4 matrix that stores the number of medals won by seven countries
+medal_counts = [[ ""CAN"", 1, 0, 1 ],
+                [ ""CHN"", 1, 1, 0 ],
+                [ ""GER"", 0, 0, 1 ],
+                [ ""KOR"", 1, 0, 0 ],
+                [ ""JPN"", 0, 1, 1 ],
+                [ ""RUS"", 0, 1, 1 ],
+                [ ""USA"", 1, 1, 0 ]]
+#Step 2: Print the header of the output table
+print(""{:>4s}{:>3s}{:>3s}{:>3s}{:>4s}"".format(""Name"",""G"",""S"",""B"",""All""))
+#Step 3: Iterate through the rows in the medal counts matrix
+for i in range(len(medal_counts)):
+    #Step 3.1: Assign initial values to variables we need for printing row i
+    line = ""{:>4s}"".format(medal_counts[i][0])
+    row_total = 0
+    #Step 3.2: Iterate through the columns that have medal counts
+    for j in range(1, len(medal_counts[0])):
+        #Step 3.2.1: Append medal counts to the content of row i
+        line += ""{:>3d}"".format(medal_counts[i][j])
+        #Step 3.2.2: Update the row total for row i 
+        row_total += medal_counts[i][j]
+    #Step 3.3: Add the row total to the content of the output table for row i
+    line += ""{:>3d}"".format(row_total)
+    #Step 3.4: Print the content of the output table for row i
+    print(line)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_print_medals
+PYTHON,py_phone_age,py_phone_age1,PCEX Set,Construct a program that determines whether it is time to buy a new phone based on the inputs that it receives from the user. A new phone should be bought if the phone breaks or the phone is at least 3 years old.,"#Step 1: Read the user inputs
+text = input(""Enter the phone age in years:"")
+phone_age = int(text)
+text = input(""Enter 1 if the phone is broken, otherwise enter 0:"")
+input_num = int(text)
+#Step 2: Determine whether the phone is broken
+if input_num == 1 :
+    is_broken = True
+else:
+    is_broken = False
+#Step 3: Write the boolean expression to determine whether it is time to buy a new phone
+need_phone = is_broken or phone_age >= 3
+#Step 4: Print the result
+if need_phone == True :
+    print(""Yes! It is time to buy a new phone."")
+else:
+    print(""No! It is not yet the time to buy a new phone."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_phone_age
+PYTHON,py_phone_age,py_phone_age2,PCEX Challenge,Construct a program that determines whether it is time to buy a new phone based on the inputs that it receives from the user. A new phone should be bought in either of the following cases:\nthe phone breaks\nthe screen has a problem\nthe phone has the random shutdown problem,"#Step 1: Read the user input for determining whether the phone is broken 
+text = input(""Enter 1 if the phone is broken, otherwise enter 0:"")
+input_num = int(text)
+#Step 2: Determine whether the phone is broken
+if input_num == 1 :
+    is_broken = True
+else:
+    is_broken = False
+#Step 3: Read the user input for determining whether the phone screen is good 
+text = input(""Enter 1 if the phone screen is good, otherwise enter 0:"")
+input_num = int(text)
+#Step 4: Determine whether the phone screen is good
+if input_num == 1 :
+    screen_is_good = True
+else:
+    screen_is_good = False
+#Step 5: Read the user input for determining whether the phone has random shutdown problem 
+text = input(""Enter 1 if the phone has the random shutdown problem, otherwise enter 0:"")
+input_num = int(text)
+#Step 6: Determine whether the phone has random shutdown problem
+if input_num == 1 :
+    random_shutdown = True
+else:
+    random_shutdown = False
+#Step 7: Write the boolean expression to determine whether it is time to buy a new phone
+need_phone = is_broken or not screen_is_good or random_shutdown
+#Step 8: Print the result
+if need_phone == True :
+    print(""Yes! It is time to buy a new phone."")
+else:
+    print(""No! It is not yet the time to buy a new phone."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_phone_age&ch=py_phone_age2
+PYTHON,py_pandas_statistics_1,py_pandas_statistics_1_ch,PCEX Challenge,"From a class of 200 students, you have a dataset of students, their section, and grades. Find students with grade == 'A' and print the top 10 names.","import pandas as pd
+
+# Read dataset
+df = pd.read_csv(""students.csv"")
+
+
+section_2_counts = df[df[""grade""] == 'A']
+section_2_counts.sort_values(by=['name'])
+# Print first 10 entries
+print(""Top 10 student names with grade A"")
+print(section_2_counts.head(10))
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pandas_statistics_1&ch=py_pandas_statistics_1_ch
+PYTHON,py_pandas_statistics_1,py_pandas_statistics_1_ex,PCEX Set,"From a class of 200 students, you have a dataset of students, their section, and grades. Start by inspecting the dataset. Get the sample size. Then, print top 5 examples. Next, get the mean. Also, try the pandas describe function. Get student counts by grade. Find students in section 2 and get the counts by grade.  Print the 10 entries in this result. Use the value_counts function","import pandas as pd
+
+# Read dataset
+df = pd.read_csv(""students.csv"")
+
+# Get sample size
+sample_size = df.shape[0]
+print(""Sample size:"",sample_size)
+
+# Print top 5 examples
+print(""Top 5 rows:"")
+print(df.head(5))
+
+# Get mean grade
+mean_grade = df[""grade""].mean()
+print(f""Mean grade:"", mean_grade)
+
+# Use describe function
+print(""Summary statistics:"")
+print(df[""grade""].describe())
+
+# Get student counts by grade
+print(""Counts by grade:"")
+print(df[""grade""].value_counts())
+
+# Find students in section 2 and get counts by grade
+section_2_counts = df[df[""section""] == 2][""grade""].value_counts()
+
+# Print first 10 entries
+print(""Top 10 grade counts for Section 2:"")
+print(section_2_counts.head(10))
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pandas_statistics_1
+PYTHON,py_pandas_select_1,py_pandas_select_1_ch,PCEX Challenge,"From a class of 200 students, first select only student ids and their letter grades. Then, select students with grades 'A' or 'B' You're given a dataset as a .csv format, read dataframe using pandas. ","
+import pandas as pd
+
+
+df = pd.read_csv('science_class.csv')  
+
+
+df_selected = df[['student_id', 'letter_grade']]
+
+
+df_section1 = df[(df['section'] == 'A')|(df['section'] == 'B')]
+
+
+print(df_section1)
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pandas_select_1&ch=py_pandas_select_1_ch
+PYTHON,py_pandas_select_1,py_pandas_select_1_ex,PCEX Set,"From a class of 200 students, first select only student ids and their letter grades. Then, select students in 'Section 1'. You're given a dataset as a .csv format, read dataframe using pandas. ","# Source: ChatGPT
+import pandas as pd
+
+# Load the dataset
+df = pd.read_csv('science_class.csv')  # Replace with your actual CSV file
+
+# Select only student IDs and their letter grades
+df_selected = df[['student_id', 'letter_grade']]
+
+# Filter students in 'Section 1'
+df_section1 = df[df['section'] == 'Section 1']
+
+# Display the result
+print(df_section1)
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pandas_select_1
+PYTHON,py_pandas_groupby_1,py_pandas_groupby_1_ch,PCEX Challenge,"From a class of 200 students, you have a dataset of students, their section, grades for 10 homeworks and grades. Group students who got highest points in 5 homeworks and who got a final grade greater than 80.","import pandas as pd
+
+# Load the dataset
+df = pd.read_csv('students_data.csv')
+
+# Step 1: Find max score for each homework
+max_scores = {}
+for i in range(1, 11):
+    max_scores[f'Homework_{i}'] = df[f'Homework_{i}'].max()
+
+# Step 2: Identify students who scored the highest in at least 5 homeworks
+top_homework_scorers = []
+for index, row in df.iterrows():
+    count = 0
+    for i in range(1, 11):
+        if row[f'Homework_{i}'] == max_scores[f'Homework_{i}']:
+            count += 1
+    top_homework_scorers.append(count >= 5)
+
+df.loc[:,'Top_Homework_Scorer'] = top_homework_scorers
+
+# Step 4: Filter students who got a final grade greater than 'B' and scored highest in at least 5 homeworks
+filtered_students = []
+for ind, row in df.iterrows():
+    if (df.loc[ind,'Grade'] > 80) & (df.loc[ind,'Top_Homework_Scorer']):
+        filtered_students.append(True)
+    else:
+        filtered_students.append(False)
+
+df['Filtered'] = filtered_students
+top_students = df[df['Filtered']]
+
+# Step 5: Group by Section and Final Grade
+grouped_students = top_students.groupby(['Section', 'Grade']).size()
+
+# Display results
+print(""Students scoring highest in at least 5 homeworks & having final grade > B:\n"", grouped_students)
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pandas_groupby_1&ch=py_pandas_groupby_1_ch
+PYTHON,py_pandas_groupby_1,py_pandas_groupby_1_ex,PCEX Set,"From a class of 200 students, you have a dataset of students, their section, and grades. get the mean grade by section. Assume you're given the dataset file in a .csv file and you will read this into a dataframe object using pandas","import pandas as pd
+
+
+df = pd.read_csv('students_data.csv')
+
+
+grouped_by_section_grade = df.groupby(['Section', 'Grade']).size()
+
+
+print(""Grouped by Section and Grade:"", grouped_by_section_grade)
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pandas_groupby_1
+PYTHON,py_nestedloops_print_a_square_star_pattern,print_a_square_star_pattern,PCEX Set,"Construct a program that takes an input as the size of a solid square  and print the square.\nFor example, if a user’s input is 4, the printed solid square should look like:\n****\n****\n****\n****","# Step 1: Read the size of the square star pattern
+size = int(input(""Enter size of side of square :""))
+# Step 2: Print the rows in the star pattern, one by one
+for i in range(size):
+    # Step 2.1: Generate the asterisks in the corresponding row
+    for j in range(size):
+        # Step 2.2: Print the asterisks in each row
+        print(""*"", end = """")
+    # Step 3: Print the next line
+    print()",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_nestedloops_print_a_square_star_pattern
+PYTHON,py_nestedloops_print_a_square_star_pattern,print_a_square_star_pattern_ch,PCEX Challenge,"Construct a program that takes an input as the size of a square and print the outline of the square.\nFor example, if a user’s input is 4, the printed square should look like:\n****\n*  *\n*  *\n****","# Step 1: Read the size of the square star pattern
+size = int(input(""Enter size of side of square :""))
+# Step 2: Print the rows in the star pattern, one by one
+for i in range(size):
+    # Step 2.1: Check if the current row is the first or the last one
+    if i == 0 or i == size - 1:
+        for k in range(size):
+            print(""*"", end = """")
+    else:
+        print(""*"", end = """")
+        # Step 2.2: Print other rows pattern.
+        for j in range(size - 2):
+            print("" "", end = """")
+        print(""*"", end="""")
+    # Step 3: Print the next line
+    print()",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_nestedloops_print_a_square_star_pattern&ch=print_a_square_star_pattern_ch
+PYTHON,py_nested_if_temperature,py_nested_if_temperature1,PCEX Set,Construct a program that receives the temperature for today and yesterday and warns the user when it is getting colder or warmer or neither. The temperature values could have a decimal point.,"#Step 1: Read the temperature for today and yesterday
+text = input(""Enter the yesterday's temperature: "")
+yesterday = float(text)
+text = input(""Enter the today's temperature: "")
+today = float(text)  
+#Step 2: Warn the user about the changes in the temperature
+if  today < yesterday :
+    print(""It is getting colder!"")
+else :
+    if  today > yesterday :
+        print(""It is getting warmer!"")
+    else :
+        print(""Temperature is the same as yesterday!"")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_nested_if_temperature
+PYTHON,py_nested_if_temperature,py_nested_if_temperature2,PCEX Challenge,"Construct a program that receives the temperature and humidity for today and yesterday and warns the user when it is getting colder or warmer or neither. When it is getting warmer, the program should also warn the user about the changes in humidity. In particular, it should warn the user when today's humidity is more, less, or has not changed compared to yesterday's humidity. Note that the temperature and humidity values could have a decimal point.","#Step 1: Read the temperature for today and yesterday
+text = input(""Enter the yesterday's temperature: "")
+yesterday = float(text)
+text = input(""Enter the today's temperature: "")
+today = float(text)  
+#Step 2: Read the humidity for today and yesterday
+text = input(""Enter yesterday's humidity: "")
+humidity_yesterday = float(text)
+text = input(""Enter today's humidity: "")
+humidity_today = float(text)
+#Step 3: Warn the user about the changes in the temperature
+if today < yesterday :
+    print(""It is getting colder!"")
+else :
+    if today > yesterday :
+        #Step 3.1: Determine and warn the user about the changes in humidity when it is getting warmer
+        if humidity_today < humidity_yesterday :
+            print(""It is getting warmer but less humid!"")
+        elif humidity_today > humidity_yesterday :
+            print(""It is getting warmer and more humid!"")
+        else :
+            print(""It is getting warmer but humidity has not changed!"")
+    else :
+        print(""Temperature is the same as yesterday!"")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_nested_if_temperature&ch=py_nested_if_temperature2
+PYTHON,py_nested_if_min_max,py_nested_if_max_of_three,PCEX Challenge,Construct a program that determines the largest of the three integer values entered by the user.,"#Step 1: Read the three integers 
+text = input(""Enter the first integer: "")
+num1 = int(text)
+text = input(""Enter the second integer: "")
+num2 = int(text)
+text = input(""Enter the third integer: "")
+num3 = int(text)
+#Step 2: Determine the maximum integer
+if num1 > num2 :
+    if num1 > num3 :
+        max_num = num1
+    else :
+        max_num = num3
+else :
+    if num2 > num3 :
+        max_num = num2
+    else :
+        max_num = num3
+#Step 3: Print the maximum integer
+print(""Maximum value:"", max_num)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_nested_if_min_max&ch=py_nested_if_max_of_three
+PYTHON,py_nested_if_min_max,py_nested_if_min_of_three,PCEX Set,Construct a program that determines the smallest of the three integer values entered by the user.,"#Step 1: Read the three integers 
+text = input(""Enter the first integer: "")
+num1 = int(text)
+text = input(""Enter the second integer: "")
+num2 = int(text)
+text = input(""Enter the third integer: "")
+num3 = int(text)
+#Step 2: Determine the minimum integer
+if num1 < num2 : 
+    if num1 < num3 :
+        min_num = num1
+    else :
+        min_num = num3
+else :
+    if num2 < num3 :
+        min_num = num2
+    else :
+        min_num = num3
+#Step 3: Print the minimum integer
+print(""Minimum value:"", min_num)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_nested_if_min_max
+PYTHON,py_list2d_basic,py_list2d_basic1,PCEX Set,"Construct a program that initializes a 3x4 two-dimensional matrix that has the numbers 1 through 12 for entries, updates the last row to a list filled with 5s, then sets the left-most element in the middle row of the matrix to be 20, and finally prints the matrix.","#Step 1: Define a 3x4 two-dimensional list 
+matrix = [[ 1, 2, 3, 4 ],
+          [ 5, 6, 7, 8 ],
+          [ 9, 10, 11, 12]]
+#Step 2: Update the two-dimensional list 
+matrix[2] = [5, 5, 5, 5]
+matrix[1][0] = 20
+#Step 3: Print the list
+print(matrix)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list2d_basic
+PYTHON,py_list2d_basic,py_list2d_basic2,PCEX Challenge,"Construct a program that initializes a 3x3 two-dimensional matrix that has the numbers 1 through 9 for entries, updates the middle row to a list filled with 1s, then sets the top-right element of the matrix to be 10, and finally prints the matrix.","#Step 1: Define a 3x3 two-dimensional list 
+matrix = [[ 1, 2, 3 ],
+          [ 4, 5, 6 ],
+          [ 7, 8, 9 ]]
+#Step 2: Update the two-dimensional list 
+matrix[1] = [1, 1, 1]
+matrix[0][2] = 10
+#Step 3: Print the list
+print(matrix)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list2d_basic&ch=py_list2d_basic2
+PYTHON,py_list2d_basic,py_list2d_basic3,PCEX Challenge,"Construct a program that initializes a 2x4 two-dimensional matrix that has multiples of 10 from 10 to 80 for entries, updates the last row to a list holding values 1,3,5,7, then sets the second element of the first row to be 8, and finally prints the matrix.","#Step 1: Define a 2x4 two-dimensional list 
+matrix = [[ 10, 20, 30, 40 ],
+          [ 50, 60, 70, 80 ]]
+#Step 2: Update the two-dimensional list 
+matrix[1] = [1, 3, 5, 7]
+matrix[0][1] = 8
+#Step 3: Print the list
+print(matrix)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list2d_basic&ch=py_list2d_basic3
+PYTHON,py_list_rotate,py_list_rotate_left,PCEX Set,"Construct a program that has a function that receives a list of values and returns the list rotated to the left by 1 position so that the value at the front of the list goes to the back and the order of the other values stays the same. For example, if the list is [1, 2, 3, 4, 5, 6], the program will change it to [2, 3, 4, 5, 6, 1].","#Step 1: Define the function
+def rotate_left(lst):
+    #Step 1.1: Store the value at the front in a local variable
+    first = lst[0] 
+    #Step 1.2: Rotate the remaining values of the list to the left 
+    for i in range(len(lst)-1):
+        lst[i] = lst[i + 1]
+    #Step 1.3: Move the value at the front to the back of the list
+    lst[len(lst)-1] = first    
+    return lst
+#Step 2: Call the function
+values =  [3, 8, 9, 8, 7, 5]
+print(""Original list:"", values)
+print(""Rotated list: "", rotate_left(values))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_rotate
+PYTHON,py_list_rotate,py_list_rotate_left_twice,PCEX Challenge,"Construct a program that has a function that receives a list of values and returns the list rotated to the left by 2 position so that the value at the front of the list goes to the second last position, the second value of the list goes to the back, and the order of the other values stays the same. For example, if the list is [1, 2, 3, 4, 5, 6], the program will change it to [3, 4, 5, 6, 1, 2].","#Step 1: Define the function
+def rotate_left_by_2(lst):
+    #Step 1.1: Store the first two values of the list in local variables
+    first = lst[0] 
+    second = lst[1]
+    #Step 1.2: Rotate the remaining values of the list to the left by 2 position
+    for i in range(len(lst)-2):
+        lst[i] = lst[i + 2]
+    #Step 1.3: Move the first two values of the list to the back of the list
+    lst[len(lst)-2] = first 
+    lst[len(lst)-1] = second
+    return lst
+#Step 2: Call the function
+values = [3, 8, 9, 8, 7, 5]
+print(""Original list:"", values)
+print(""Rotated list: "", rotate_left_by_2(values))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_rotate&ch=py_list_rotate_left_twice
+PYTHON,py_list_rotate,py_list_rotate_right,PCEX Challenge,"Construct a program that has a function that receives a list of values and returns the list rotated to the right by one position so that the value that is currently at the end of the list is moved to the front, shifting the remaining values to the right. For example, if the list is [1, 2, 3, 4, 5, 6], the program will change it to [6, 1, 2, 3, 4, 5].","#Step 1: Define the function
+def rotate_right(lst):
+    #Step 1.1: Store the value at the end of the list in a local variable
+    last = lst[len(lst)-1]
+    #Step 1.2: Rotate the remaining values of the list to the right 
+    for i in range(len(lst)-1, 0, -1):
+        lst[i] = lst[i - 1]
+    #Step 1.3: Move the value at the end to the front of the list
+    lst[0] = last
+    return lst
+#Step 2: Call the function
+values = [3, 8, 9, 8, 7, 5]
+print(""Original list:"", values)
+print(""Rotated list: "", rotate_right(values))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_rotate&ch=py_list_rotate_right
+PYTHON,py_list_rotate,py_list_rotate_right_twice,PCEX Challenge,"Construct a program that has a function that receives a list of values and returns the list rotated to the right by 2 position so that the value that is currently at the end of the list is moved to the second position, the second last value of the list is moved to the front of the list, and the remaining values are shifted to the right. For example, if the list is [1, 2, 3, 4, 5, 6], the program will change it to [5, 6, 1, 2, 3, 4].","#Step 1: Define the function
+def rotate_right_by_2(lst):
+    #Step 1.1: Store the last two values of the list in local variables
+    last = lst[len(lst)-1]
+    second_last = lst[len(lst)-2]
+    #Step 1.2: Rotate the remaining values of the list to the right by 2 position
+    for i in range(len(lst)-1, 1, -1):
+        lst[i] = lst[i - 2]
+    #Step 1.3: Move the last two values of the list to the front of the list
+    lst[0] = second_last
+    lst[1] = last
+    return lst
+#Step 2: Call the function
+values = [3, 8, 9, 8, 7, 5]
+print(""Original list:"", values)
+print(""Rotated list: "", rotate_right_by_2(values))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_rotate&ch=py_list_rotate_right_twice
+PYTHON,py_list_process_elements,py_average_list_elements,PCEX Challenge,Construct a program that has a function that receives a list and calculates the average of the values in that list. The program should handle lists with arbitrary number of values (including an empty list).,"#Step 1: Define the function
+def calculate_list_average(lst):
+    #Step 1.1: Assign initial value to the variable which we need for this program
+    total = 0
+    #Step 1.2: Iterate through the list values and add each value to the running total
+    for x in lst:
+        total += x
+    #Step 1.3: Calculate and print the average of the list values
+    if len(lst) == 0 :
+        print(""The list has no values."")
+    else :
+        average = total / len(lst)
+        print(""Average is:"", average)
+#Step 2: Call the function
+values = [6, 15, 9, 12, 1, 8]
+calculate_list_average(values)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_process_elements&ch=py_average_list_elements
+PYTHON,py_list_process_elements,py_sum_list_elements,PCEX Set,Construct a program that has a function that receives a list and calculates the sum of the values in that list.,"#Step 1: Define the function
+def calculate_list_sum(lst):
+    #Step 1.1: Assign initial value to the variable which we need for this program
+    total = 0
+    #Step 1.2: Iterate through the list values and add each value to the running total
+    for x in lst:
+        total += x
+    #Step 1.3: Print the sum of the list values 
+    print(""The sum of all values in the list:"", total)
+#Step 2: Call the function
+values = [6, 15, 9, 12, 1, 8]
+calculate_list_sum(values)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_process_elements
+PYTHON,py_list_min_max,py_list_max,PCEX Set,Write a program that finds the maximum value in a list.,"#Step 1: Define and initialize the list
+values = [5, 8, 4, 78, 95, 12, 1, 0, 6, 35, 46]
+#Step 2: Set the first value to be the maximum value so far.
+max_value = values[0]
+#Step 3: Iterate through the remaining values in the list and decide which one is the maximum value 
+for i in range(1, len(values)): 
+    # Step 3.1: Determine if the element at index i is the maximum value so far
+    if (values[i] > max_value):
+        max_value = values[i]
+#Step 4: Print the maximum value in the list
+print(""Maximum value:"", max_value)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_min_max
+PYTHON,py_list_min_max,py_list_min,PCEX Challenge,Write a program that finds the minimum value in a list.,"#Step 1: Define and initialize the list
+values = [5, 8, 4, 78, 95, 12, 1, 0, 6, 35, 46]
+#Step 2: Set the first value to be the minimum value so far.
+min_value = values[0]
+#Step 3: Iterate through the remaining values in the list and decide which one is the minimum value 
+for i in range(1, len(values)): 
+    # Step 3.1: Determine if the element at index i is the minimum value so far
+    if (values[i] < min_value):
+        min_value = values[i]
+#Step 4: Print the minimum value in the list
+print(""Minimum value:"", min_value)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_min_max&ch=py_list_min
+PYTHON,py_list_fill,py_list_fill_odds,PCEX Set,Construct a program that creates a list of first ten positive odd numbers.,"#Step 1: Create an empty list
+lst = []
+#Step 2: Add the odd numbers to the list one by one
+for i in range(10):
+    lst.append( 2 * i + 1 ) 
+#Step 3: Print the list
+print(lst)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_fill
+PYTHON,py_list_fill,py_list_fill_user_input,PCEX Challenge,Construct a program that creates a list of eight string values received from the user.,"#Step 1: Create an empty list
+lst = []
+#Step 2: Add the user inputs to the list one by one
+for i in range(8):
+    lst.append( input(""Enter a value:"") ) 
+#Step 3: Print the list
+print(lst)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_fill&ch=py_list_fill_user_input
+PYTHON,py_list_change,py_list_increment_elements,PCEX Set,Construct a program that increments all values of the list by 1.,"#Step 1: Define and initialize the list
+lst = [1, 2, 3, 4, 5, 6]
+#Step 2: Iterate through the list elements 
+for i in range(len(lst)):
+    #Step 2.1: Increment the element at index i by 1
+    lst[i] += 1
+#Step 3: Print the list
+print(lst)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_change
+PYTHON,py_list_change,py_list_swap_adjacent_elements,PCEX Challenge,"Construct a program that swaps pairs of adjacent elements of the list. For example, if the list is [1, 2, 3, 4, 5, 6], the program will change it to [2, 1, 4, 3, 6, 5].\nThis program assumes that the list has always an even number of elements.","#Step 1: Define and initialize the list
+lst = [1, 2, 3, 4, 5, 6]
+#Step 2: Iterate through the pairs of adjacent elements in the list
+for i in range(0, len(lst), 2):
+    #Step 2.1: Swap the element at index i with the element at index i+1
+    temp = lst[i]
+    lst[i] = lst[i+1]
+    lst[i+1] = temp
+#Step 3: Print the list
+print(lst)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_change&ch=py_list_swap_adjacent_elements
+PYTHON,py_list_basic,py_list_basic1,PCEX Set,"Construct a program that initializes a list with three values, changes the first element in the list, and finally, prints the list.","#Step 1: Define a list of three integer values
+lst = [123, 100, 39]
+#Step 2: Update the list element
+lst[0] = 2
+#Step 3: Print the list
+print(lst)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_basic
+PYTHON,py_list_basic,py_list_basic2,PCEX Challenge,"Construct a program that initializes a list with five floating-point numbers, changes the second element in the list, and finally, prints the list.","#Step 1: Define a list of five floating-point numbers
+lst = [1.1, 2.2, 3.3, 4.4, 5.5]
+#Step 2: Update the list element
+lst[1] = 20.5
+#Step 3: Print the list
+print(lst)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_basic&ch=py_list_basic2
+PYTHON,py_list_basic,py_list_basic3,PCEX Challenge,"Construct a program that initializes a list with four string values, changes the last element in the list, and finally, prints the list.","#Step 1: Define a list of four string values
+lst = [""a"", ""b"", ""c"", ""d""]
+#Step 2: Update the list elements
+lst[3] = ""e""
+#Step 3: Print the list
+print(lst)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_basic&ch=py_list_basic3
+PYTHON,py_linkedlist_searching,linklist_search_ch,PCEX Challenge,"When using a LinkedList, it is possible that you may want to search through the list to see if a specific value is in it. To do so, each node must be checked individually. Construct a search function within the LinkedList class that traverses through all nodes in the list and keeps track of all instances of the target value (if any) are in the LinkedList, returning the final count at the end of the search.","# Define a Node class
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+# Define a LinkedList class
+class LinkedList:
+    def __init__(self):
+        self.head = None
+    def push(self, new):
+        new_node = Node(new)
+        new_node.next = self.head
+        self.head = new_node
+    # Define the search function that count how many times the target appears.
+    def search(self, target):
+        current = self.head
+        count = 0
+        while current is not None:
+            if current.data == target:
+                count += 1
+            current = current.next
+        return count
+linked_list = LinkedList()
+linked_list.push(1)
+linked_list.push(3)
+linked_list.push(3)
+linked_list.push(7)
+linked_list.push(9)
+linked_list.push(11)
+linked_list.push(11)
+target = 11
+print(""There are"", linked_list.search(target), ""instances of"", target, ""in the list"")",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_linkedlist_searching&ch=linklist_search_ch
+PYTHON,py_linkedlist_searching,linklist_search_ex,PCEX Set,"When using a LinkedList, it is possible that you may want to search through the list to see if a specific value is in it. To do so, each node must be checked individually. Construct a search function within the LinkedList class that traverses through all nodes in the list and returns True if a given target value is within the list.","# Define a Node class
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+# Define a LinkedList class
+class LinkedList:
+    def __init__(self):
+        self.head = None
+    def push(self, new):
+        new_node = Node(new)
+        new_node.next = self.head
+        self.head = new_node
+    # Define the search function
+    def search(self, target):
+        current = self.head
+        while current is not None:
+            if current.data == target:
+                return True
+            current = current.next
+        return False
+linked_list = LinkedList()
+linked_list.push(1)
+linked_list.push(3)
+linked_list.push(3)
+linked_list.push(7)
+linked_list.push(9)
+linked_list.push(11)
+linked_list.push(11)
+target = 11
+# Calling the search function
+if (linked_list.search(target)):
+    print(""Found"", target, ""in list"")
+else:
+    print(""Did not find"", target, ""in list"")",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_linkedlist_searching
+PYTHON,py_json_iterate_1,py_json_iterate_1_ch,PCEX Challenge,Write the code that prints the names of all restaurants. You're provided with list of restaurants in json format,"restaurant_json = [
+    {""name"": ""Taqueria"",""menu"":['Tacos','Quesedillas','Fajitas']},
+    {""name"": ""Romanos"",""menu"":['Pizzas','Pastas']},
+    {""name"": ""Bao"", ""menu"":['orange chicken','spicy ramen']}
+]
+
+for item in restaurant_json:
+    print(item['name'])
+
+
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_iterate_1&ch=py_json_iterate_1_ch
+PYTHON,py_json_iterate_1,py_json_iterate_1_ex,PCEX Set,Write the code that prints the all NFL stats for the superbowl winning teams from the year 2022 to 2025. You're provided with a simple json data assigned to a variable,"# Modified from ChatGPT
+import json
+
+# Sample JSON data (structure with year, team, and stats)
+nfl_data = '''
+[
+    {""year"": 2022, ""team"": ""Los Angeles Rams"", ""stats"": {""wins"": 12, ""losses"": 5, ""points_scored"": 460}},
+    {""year"": 2023, ""team"": ""Kansas City Chiefs"", ""stats"": {""wins"": 14, ""losses"": 3, ""points_scored"": 496}},
+    {""year"": 2024, ""team"": ""San Francisco 49ers"", ""stats"": {""wins"": 13, ""losses"": 4, ""points_scored"": 478}},
+    {""year"": 2025, ""team"": ""Buffalo Bills"", ""stats"": {""wins"": 15, ""losses"": 2, ""points_scored"": 510}}
+]
+'''
+
+# Load JSON data
+data = json.loads(nfl_data)
+
+# Print stats for Super Bowl-winning teams from 2022 to 2025
+for entry in data:
+    print(""Year:"", entry['year'])
+    print(f""Team:"",entry['team'])
+    print(""Stats:"")
+    for stat, value in entry['stats'].items():
+        print(stat,value)
+    print(""-"")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_iterate_1
+PYTHON,py_json_conditionals_2,py_json_conditionals_2_ch,PCEX Challenge,"You're provide a JSON list of different books, find non-fiction books with rating greater than 4.5","import json
+
+# Sample book data
+book_data = [
+    {""_id"": 1, ""title"": ""The Great Adventure"", ""genre"": ""Fiction"", ""pages"": 350, ""rating"": 4.2},
+    {""_id"": 2, ""title"": ""Science 101"", ""genre"": ""Non-Fiction"", ""pages"": 250, ""rating"": 4.7},
+    {""_id"": 3, ""title"": ""Mystery Night"", ""genre"": ""Fiction"", ""pages"": 290, ""rating"": 4.1},
+    {""_id"": 4, ""title"": ""Epic Saga"", ""genre"": ""Fiction"", ""pages"": 450, ""rating"": 4.8},
+    {""_id"": 5, ""title"": ""History of Time"", ""genre"": ""Non-Fiction"", ""pages"": 400, ""rating"": 4.9},
+    {""_id"": 6, ""title"": ""Self-Improvement Guide"", ""genre"": ""Non-Fiction"", ""pages"": 320, ""rating"": 4.3},
+    {""_id"": 7, ""title"": ""Cooking Basics"", ""genre"": ""Non-Fiction"", ""pages"": 200, ""rating"": 4.6},
+]
+
+# Filtering books that are Non-Fiction and have a rating of at least 4.5
+high_rated_nonfiction_books = []
+
+for book in book_data:
+    if book[""genre""] == ""Non-Fiction"" and book[""rating""] >= 4.5:
+        high_rated_nonfiction_books.append(book[""title""])
+
+# Display result
+print(high_rated_nonfiction_books)
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_conditionals_2&ch=py_json_conditionals_2_ch
+PYTHON,py_json_conditionals_2,py_json_conditionals_2_ex,PCEX Set,"You're provide a JSON list of different books, find the ones with greater than 300 pages.","import json
+
+
+book_data = [
+    {""_id"": 1, ""title"": ""The Great Adventure"", ""genre"": ""Fiction"", ""pages"": 350},
+    {""_id"": 2, ""title"": ""Science 101"", ""genre"": ""Non-Fiction"", ""pages"": 250},
+    {""_id"": 3, ""title"": ""Mystery Night"", ""genre"": ""Fiction"", ""pages"": 290},
+    {""_id"": 4, ""title"": ""Epic Saga"", ""genre"": ""Fiction"", ""pages"": 450},
+]
+
+
+long_fiction_books = []
+
+for book in book_data:
+    if book[""genre""] == ""Fiction"" and book[""pages""] > 300:
+        long_fiction_books.append(book[""title""])
+
+# Display result
+print(long_fiction_books)
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_conditionals_2
+PYTHON,py_json_conditionals_1,py_json_conditionals_1_ch,PCEX Challenge,"A customer is looking for a restaurant that has at least 1 review and mexican cuisine, with spicy food.  I should have at least tables with 2 seating and has a number of maximum allowed reservation exactly at 30. Write a python code when you're assumed to be given a dataset of restaurants in json assigned to a variable","
+
+import json
+
+
+restaurants_json = [
+    {
+        ""name"": ""Taco Fiesta"",
+        ""reviews"": 5,
+        ""cuisine"": ""Mexican"",
+        ""spicy_food"": True,
+        ""seating"": [2, 4, 6],
+        ""max_reservation"": 30
+    },
+    {
+        ""name"": ""Burrito King"",
+        ""reviews"": 10,
+        ""cuisine"": ""Mexican"",
+        ""spicy_food"": False,
+        ""seating"": [2, 4],
+        ""max_reservation"": 30
+    },
+    {
+        ""name"": ""Salsa Heaven"",
+        ""reviews"": 3,
+        ""cuisine"": ""Mexican"",
+        ""spicy_food"": True,
+        ""seating"": [2, 4, 8],
+        ""max_reservation"": 30
+    },
+    {
+        ""name"": ""Pasta Palace"",
+        ""reviews"": 8,
+        ""cuisine"": ""Italian"",
+        ""spicy_food"": False,
+        ""seating"": [2, 4],
+        ""max_reservation"": 20
+    }
+]
+
+filtered_restaurants = []
+
+for r in restaurants_json:
+    if r[""reviews""] >= 1:
+        if r[""cuisine""].lower() == ""mexican"":
+            if r[""spicy_food""]:
+                if 2 in r[""seating""]:
+                        if r[""max_reservation""] <= 30:
+                            filtered_restaurants.append(r)
+
+
+
+
+print(filtered_restaurants)
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_conditionals_1&ch=py_json_conditionals_1_ch
+PYTHON,py_json_conditionals_1,py_json_conditionals_1_ex,PCEX Set,Display names of food items in a restaurant that have a beef as an ingredient from Mexican Cuisine. Assume you're provided a json of all food items in a restaurant,"
+
+import json
+
+
+restaurant_data = [
+    {""_id"": 1, ""name"": ""Taco"", ""cuisine"": ""Mexican"", ""ingredients"": [""beef"", ""tortilla"", ""cheese""]},
+    {""_id"": 2, ""name"": ""Burrito"", ""cuisine"": ""Mexican"", ""ingredients"": [""chicken"", ""rice"", ""beans""]},
+    {""_id"": 3, ""name"": ""Quesadilla"", ""cuisine"": ""Mexican"", ""ingredients"": [""beef"", ""cheese"", ""tortilla""]},
+    {""_id"": 4, ""name"": ""Pasta"", ""cuisine"": ""Italian"", ""ingredients"": [""tomato"", ""cheese""]},
+]
+
+
+
+for _item in restaurant_data:
+    if _item[""cuisine""] == ""Mexican"" and ""beef"" in _item[""ingredients""]:
+        beef_mexican_items.append(_item[""name""]) 
+
+
+print(beef_mexican_items)
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_conditionals_1
+PYTHON,py_json_agg_2,py_json_agg_2_ch,PCEX Challenge,"You're give the age of different people in JSON format, find the name of the person","import json
+
+data = [
+    {""name"": ""Alice"", ""age"": 25},
+    {""name"": ""Bob"", ""age"": 30},
+    {""name"": ""Charlie"", ""age"": 22},
+    {""name"": ""David"", ""age"": 28},
+    {""name"": ""Eve"", ""age"": 35}
+]
+
+min_age = None
+name = None
+
+# Loop through the list to calculate aggregations
+for person in people:
+    age = person[""age""]
+    
+    if max_age is None or age < min_age:
+        min_age = age
+        name = person[""name""]
+    
+
+print(""Youngest Person"", name)
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_agg_2&ch=py_json_agg_2_ch
+PYTHON,py_json_agg_2,py_json_agg_2_ex,PCEX Set,"You're give the age of different people in JSON format, find the name of the person","import json
+
+data = [
+    {""name"": ""Alice"", ""age"": 25},
+    {""name"": ""Bob"", ""age"": 30},
+    {""name"": ""Charlie"", ""age"": 22},
+    {""name"": ""David"", ""age"": 28},
+    {""name"": ""Eve"", ""age"": 35}
+]
+
+max_age = None
+name = None
+
+# Loop through the list to calculate aggregations
+for person in people:
+    age = person[""age""]
+    
+    if max_age is None or age > max_age:
+        max_age = age
+        name = person[""name""]
+    
+
+print(""Oldest Person"", name)
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_agg_2
+PYTHON,py_json_agg_1,py_json_agg_1_ch,PCEX Challenge,"how many employees in this company with the highest salary.  You're provided a json data assigned to a variable. only use simple code, for loops","import json
+
+data = [
+    {""name"": ""John"", ""salary"": 35000},
+    {""name"": ""Sarah"", ""salary"": 25000},
+    {""name"": ""James"", ""salary"": 45000},
+    {""name"": ""Emily"", ""salary"": 45000}
+]
+
+
+highest_salary = 0
+count = 0
+for employee in data:
+    if employee[""salary""] > highest_salary:
+        highest_salary = employee[""salary""]
+        count += 1
+
+
+print(count)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_agg_1&ch=py_json_agg_1_ch
+PYTHON,py_json_agg_1,py_json_agg_1_ex,PCEX Set,"How many employees in this company have salary greater than 30,000.  You're provided a json data assigned to a variable. only use simple python code, for loops","import json
+data = [
+    {""name"": ""John"", ""salary"": 35000},
+    {""name"": ""Sarah"", ""salary"": 25000},
+    {""name"": ""James"", ""salary"": 45000},
+    {""name"": ""Emily"", ""salary"": 29000}
+]
+
+
+count = 0
+
+
+for employee in data:
+    if employee[""salary""] > 30000:
+        count += 1
+
+
+print(count)
+",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_agg_1
+PYTHON,py_input,py_input1,PCEX Set,"Construct a program that receives an integer from the user, outputs that integer, and stops receiving integers when the user enters a negative integer.","#Step 1: Read the first integer that the user enters
+text = input(""Enter an integer:"")
+num = int(text)
+#Step 2: Print the integer that the user has entered, then receive the next integers as long as the user enters an integer that is not negative;; otherwise stop
+while num >= 0 :
+    print(""The integer entered is:"", num)
+    text = input(""Enter an integer:"")
+    num = int(text)
+print(""End of input."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_input
+PYTHON,py_input,py_input2,PCEX Challenge,"Construct a program that receives an integer from the user, outputs that integer, and stops receiving integers when the user enters an integer that is not in the range of 30 to 90 both inclusive.","#Step 1: Read the first integer that the user enters
+text = input(""Enter an integer:"")
+num = int(text)
+#Step 2: Print the integer that the user has entered, then receive the next integers as long as the user enters an integer that is in the range of 30 to 90 both inclusive; otherwise stop
+while num >= 30 and num <= 90 :
+    print(""The integer entered is:"", num)
+    text = input(""Enter an integer:"")
+    num = int(text)
+print(""End of input."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_input&ch=py_input2
+PYTHON,py_input,py_input3,PCEX Challenge,"Construct a program that receives an integer from the user, outputs that integer, and stops receiving integers when the user enters a negative integer or an integer greater than 1000.","#Step 1: Read the first integer that the user enters
+text = input(""Enter an integer:"")
+num = int(text)
+#Step 2: Print the integer that the user has entered, then receive the next integers as long as the user enters an integer that is not negative and is not greater than 1000; otherwise stop
+while num >= 0 and num <= 1000 :
+    print(""The integer entered is:"", num)
+    text = input(""Enter an integer:"")
+    num = int(text)
+print(""End of input."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_input&ch=py_input3
+PYTHON,py_input,py_input4,PCEX Challenge,"Construct a program that receives an integer from the user, outputs that integer, and stops receiving integers when the user enters an even integer less than 10.","#Step 1: Read the first integer that the user enters
+text = input(""Enter an integer:"")
+num = int(text)
+#Step 2: Print the integer that the user has entered, then receive the next integers as long as the user enters an integer that is not even or is not less than 10; otherwise stop
+while num % 2 != 0 or num >= 10 :
+    print(""The integer entered is:"", num)
+    text = input(""Enter an integer:"")
+    num = int(text)
+print(""End of input."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_input&ch=py_input4
+PYTHON,py_if_else_wage,py_if_else_wage1,PCEX Set,"Construct a program for the payment department of a company to calculate the wage of an employee based on the number of hours that the employee has worked. If an employee works over 40 hours in a week, the payment amount should take into account the overtime hours. The overtime hours are paid at a rate one and a half times the regular pay rate.","#Step 1: Assign initial values to the variables which we need for this program
+rate = 8.25 
+standard = 40 
+#Step 2: Read the number of hours that the employee has worked
+text = input(""Enter the number of hours that the employee has worked: "")
+hours = int(text)
+#Step 3: Pay overtime at ""time and a half"" of the regular rate of pay
+if hours > standard : 
+    wage = standard * rate + ( hours - standard ) * ( rate * 1.5 )
+else :
+    wage = hours * rate
+#Step 4: Print the calculated wage
+print(""Wage:"", wage)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_if_else_wage
+PYTHON,py_if_else_wage,py_if_else_wage2,PCEX Challenge,"Construct a program for the payment department of a company to calculate the wage of an employee who works at the customer service call center. Like other employees in the company, the employees at the customer service call center are paid based on the hours that they work. If they work over 40 hours in a week, the payment amount should take into account the overtime hours. The overtime hours are paid at a rate one and a half times the regular pay rate.\nThe company's policy is to pay more to those employees at the customer service call center who work during weekends. Therefore, the minimum extra pay that the employees could receive for each day of work during weekends is $30. The extra pay increases to the maximum of $50 for the employees who have at least 5 days of work during weekends.","#Step 1: Assign initial values to the variables which we need for this program
+rate = 8.25 
+standard = 40 
+weekend_pay_min = 30 
+weekend_pay_max = 50 
+#Step 2: Read the input data
+text = input(""Enter the number of hours that the employee has worked: "")
+hours = int(text)
+text = input(""Enter the number of days that the employee has worked during weekends: "")
+no_weekend_days = int(text)
+#Step 3: Pay overtime at ""time and a half"" of the regular rate of pay
+if hours > standard :
+    wage = standard * rate + ( hours-standard ) * ( rate * 1.5 )
+else :
+    wage = hours * rate
+#Step 4: Take into account the extra pay for the work during weekends days
+if no_weekend_days < 5 :
+    wage += (no_weekend_days * weekend_pay_min)
+else :
+    wage += (no_weekend_days * weekend_pay_max)
+#Step 5: Print the calculated wage
+print(""Wage:"", wage)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_if_else_wage&ch=py_if_else_wage2
+PYTHON,py_if_else_num,py_ifelse_num_sign1,PCEX Set,"Construct a program that determines whether an integer is positive, negative, or zero.","#Step 1: Read the integer 
+text = input(""Enter an integer: "")
+num = int(text)       
+#Step 2: Determine whether the integer is positive, negative, or zero
+if num > 0 : 
+    print(""The integer is positive."")
+elif num < 0 : 
+    print(""The integer is negative."")
+else :
+    print(""The integer is zero."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_if_else_num
+PYTHON,py_if_else_num,py_ifelse_odd_even,PCEX Challenge,Construct a program that determines whether an integer is even or odd.,"#Step 1: Read the integer 
+text = input(""Enter an integer: "")
+num = int(text)       
+#Step 2: Determine whether the integer is even or odd
+if num % 2 == 0 : 
+    print(""The integer is even."") 
+else :
+    print(""The integer is odd."") ",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_if_else_num&ch=py_ifelse_odd_even
+PYTHON,py_if_else_grade,py_ifelseif_grade1,PCEX Set,Construct a program that receives a score from the user and determines the grade as follows:\nA for scores ≥ 90\nB for scores ≥ 80\nC for scores ≥ 70\nD for scores ≥ 60\nF for scores < 60\n,"#Step 1: Read the score 
+text = input(""Enter a score: "") 
+score = int(text)
+#Step 2: Determine the grade for the score 
+if score >= 90 : 
+    grade = ""A""
+elif score >= 80 :
+    grade = ""B""
+elif score >= 70 :
+    grade = ""C""
+elif score >= 60 :
+    grade = ""D""
+else :
+    grade = ""F""
+#Step 3: Print the grade
+print(""Grade ="", grade)    ",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_if_else_grade
+PYTHON,py_if_else_grade,py_ifelseif_grade2,PCEX Challenge,"Construct a program that receives a grade from the user and prints the numeric range for that grade using the following grading rules:\nA for scores ≥ 90\nB for scores ≥ 80\nC for scores ≥ 70\nD for scores ≥ 60\nF for scores < 60\nFor example, if the user enters the grade D, the program prints ""Score is in range [60-70)"". ","#Step 1: Read the letter grade
+grade = input(""Enter a grade letter in uppercase: "") 
+#Step 2: Determine and print the numeric range for the input letter grade
+if grade == ""A"" : 
+    print(""Score is greater than or equal 90."")
+elif grade == ""B"" :
+    print(""Score is in range [80-90)."")
+elif grade == ""C"" :
+    print(""Score is in range [70-80)."")
+elif grade == ""D"" :
+    print(""Score is in range [60-70)."")
+else :
+    print(""Score is below 60."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_if_else_grade&ch=py_ifelseif_grade2
+PYTHON,py_hot_dry,py_boolean_dry_hot1,PCEX Set,Construct a program that determines whether it is both too hot and too dry based on the inputs that it receives from the user.,"#Step 1: Read the user input for determining whether it is too hot
+text = input(""Enter 1 if it is too hot, otherwise enter 0:"")
+input_num = int(text)
+#Step 2: Determine whether it is too hot
+if input_num == 1 :
+    too_hot = True
+else:
+    too_hot = False
+#Step 3: Read the user input for determining whether it is too dry
+text = input(""Enter 1 if it is too dry, otherwise enter 0:"")
+input_num = int(text)
+#Step 4: Determine whether it is too dry
+if input_num == 1 :
+    too_dry = True
+else:
+    too_dry = False
+#Step 5: Write the boolean expression to determine whether it is both too hot and too dry
+result = too_hot and too_dry
+#Step 6: Print the result
+if result == True :
+    print(""Yes! It is too hot and too dry."")
+else:
+    print(""No! the weather condition 'too hot and too dry' is not met."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_hot_dry
+PYTHON,py_hot_dry,py_boolean_dry_hot2,PCEX Challenge,Construct a program that determines whether it is either too hot or too dry (or both) based on the inputs that it receives from the user.,"#Step 1: Read the user input for determining whether it is too hot
+text = input(""Enter 1 if it is too hot, otherwise enter 0:"")
+input_num = int(text)
+#Step 2: Determine whether it is too hot
+if input_num == 1 :
+    too_hot = True
+else:
+    too_hot = False
+#Step 3: Read the user input for determining whether it is too dry
+text = input(""Enter 1 if it is too dry, otherwise enter 0:"")
+input_num = int(text)
+#Step 4: Determine whether it is too dry
+if input_num == 1 :
+    too_dry = True
+else:
+    too_dry = False
+#Step 5: Write the boolean expression to determine whether it is either too hot or too dry (or both)
+result = too_hot or too_dry
+#Step 6: Print the result
+if result == True :
+    print(""Yes! It is either too hot or too dry (or both)."")
+else:
+    print(""No! the weather condition 'too hot or too dry (or both)' is not met."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_hot_dry&ch=py_boolean_dry_hot2
+PYTHON,py_hot_dry,py_boolean_dry_hot3,PCEX Challenge,Construct a program that determines whether it is too hot but not too dry based on the inputs that it receives from the user.,"#Step 1: Read the user input for determining whether it is too hot
+text = input(""Enter 1 if it is too hot, otherwise enter 0:"")
+input_num = int(text)
+#Step 2: Determine whether it is too hot
+if input_num == 1 :
+    too_hot = True
+else:
+    too_hot = False
+#Step 3: Read the user input for determining whether it is too dry
+text = input(""Enter 1 if it is too dry, otherwise enter 0:"")
+input_num = int(text)
+#Step 4: Determine whether it is too dry
+if input_num == 1 :
+    too_dry = True
+else:
+    too_dry = False
+#Step 5: Write the boolean expression to determine whether it is too hot but not too dry
+result = too_hot and not too_dry
+#Step 6: Print the result
+if result == True :
+    print(""Yes! It is too hot but not too dry."")
+else:
+    print(""No! the weather condition 'too hot but not too dry' is not met."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_hot_dry&ch=py_boolean_dry_hot3
+PYTHON,py_hot_dry,py_boolean_dry_hot4,PCEX Challenge,Construct a program that determines whether it is either too hot or too dry but not both based on the inputs that it receives from the user.,"#Step 1: Read the user input for determining whether it is too hot
+text = input(""Enter 1 if it is too hot, otherwise enter 0:"")
+input_num = int(text)
+#Step 2: Determine whether it is too hot
+if input_num == 1 :
+    too_hot = True
+else:
+    too_hot = False
+#Step 3: Read the user input for determining whether it is too dry
+text = input(""Enter 1 if it is too dry, otherwise enter 0:"")
+input_num = int(text)
+#Step 4: Determine whether it is too dry
+if input_num == 1 :
+    too_dry = True
+else:
+    too_dry = False
+#Step 5: Write the boolean expression to determine whether it is either too hot or too dry but not both.
+result1 = ( too_hot or too_dry ) and not ( too_hot and too_dry )
+result2 = too_hot ^ too_dry
+#Step 6: Print the result
+if result1 == True :
+    print(""Yes! it is either too hot or too dry but not both."")
+else:
+    print(""No! the weather condition 'too hot or too dry but not both' is not met."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_hot_dry&ch=py_boolean_dry_hot4
+PYTHON,py_functions_multiple_parameters,multiple_parameters,PCEX Set,Construct a program that calculates the current savings after getting paid and the total expense.,"# Step 1 : Define the budget function that returns the current savings.
+def budget(rent, utilities, food, paycheck, current_savings):
+    # Step 1.1: add up all expenses for the month
+    total_expenses = rent + utilities + food
+    # Step 1.2: find total amount left after getting paid
+    current_savings = current_savings + paycheck
+    # Step 1.3: find total amount left after expenses
+    current_savings = current_savings - total_expenses
+    return (current_savings)
+# Step 2: Display the current saving
+print(""after payday and expenses, you will have: """"$"", budget(900, 150, 300, 700, 1500))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_functions_multiple_parameters
+PYTHON,py_functions_multiple_parameters,multiple_parameters_ch,PCEX Challenge,Construct a program that calculates the pay and current savings.,"# Step 1 : Define the calculatePay function that returns the final pay.
+def calculate_pay(work_hours):
+    # Step 1.1: establish base pay rate
+    base_rate = 10.0
+    # Step 1.2 determine total pay based on hours worked (including possible overtime)
+    if work_hours <= 40:
+        pay = work_hours * base_rate
+    else:
+        overtime_hours = work_hours - 40
+        normal_pay = 40 * base_rate
+        overtime_pay = overtime_hours * (base_rate * 1.5)
+        pay = normal_pay + overtime_pay
+    return pay
+# Step 2: Define the budget function that returns the current saving
+def budget(rent, utilities, food, work_hours, current_savings):
+    # Step 2.1:#add up all expenses for the month
+    total_expenses = rent + utilities + food
+    # Step 2.2:calculate total paycheck amount based on hours
+    paycheck = calculate_pay(work_hours)
+    # Step 2.3: find the current saving after getting paid
+    current_savings = current_savings + paycheck
+    # Step 2.4 find the current saving left after expenses
+    current_savings = current_savings - total_expenses
+    return current_savings
+print(""after payday and expenses, you will have: "", budget(900, 150, 300, 41, 1500))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_functions_multiple_parameters&ch=multiple_parameters_ch
+PYTHON,py_find_average,py_average,PCEX Set,"Construct a program that reads a series of integers from the user, sums them up, and calculates their average. The user enters 0 to indicate the end of the input.","#Step 1: Assign initial values to the variables which we need for this program
+total = 0
+count = 0
+#Step 2: Read the first integer that the user enters
+text = input(""Enter an integer (0 to quit): "")
+num = int(text)
+#Step 3: Process the integer that the user has entered, then receive and process the next integers as long as the user enters a non-zero integer; otherwise stop
+while num != 0 :
+    count += 1
+    total += num
+    print(""The sum so far is"", total, "", count ="", count)
+    text = input(""Enter an integer (0 to quit): "")
+    num = int(text)
+#Step 4: Calculate and print the average of the integers entered by the user
+if count == 0 :
+    print(""No integers were entered."")
+else :
+    average = total / count
+print(""The average is:"", average)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_find_average
+PYTHON,py_find_average,py_average_even_nums,PCEX Challenge,"Construct a program that reads a series of integer values from the user, sums up the integers that are an even number, and calculate their average. The user enters 0 to indicate the end of the input.","#Step 1: Assign initial values to the variables which we need for this program
+total = 0
+count = 0
+#Step 2: Read the first integer that the user enters
+text = input(""Enter an integer (0 to quit): "")
+num = int(text)
+#Step 3: Process the integer that the user has entered, then receive and process the next integers as long as the user enters a non-zero integer; otherwise stop
+while num != 0 :
+    if num % 2 == 0 :
+        count += 1
+        total += num
+    print(""The sum of even numbers so far is"", total, "", count of even numbers ="", count)
+    text = input(""Enter an integer (0 to quit): "")
+    num = int(text)
+#Step 4: Calculate and print the average of the even integers entered by the user
+if count == 0 :
+    print(""No even integers were entered."")
+else :
+    average = total / count
+print(""The average is:"", average)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_find_average&ch=py_average_even_nums
+PYTHON,py_find_average,py_average_float,PCEX Challenge,"Construct a program that reads a series of non-negative floating-point numbers from the user, sums them up, and calculate their average.\nNote that you need to think what value should the program use to indicate the end of the input.","#Step 1: Define the variables that we need for this program
+total = 0
+count = 0
+#/Step 2: Read the first number that the user enters
+text = input(""Enter a number: "")
+num = float(text)
+#Step 3: Process the number that the user has entered, then receive and process the next numbers as long as the user enters a non-negative number; otherwise stop
+while num >= 0.0 :
+    count += 1
+    total += num
+    print(""The sum so far is"", total, "", count ="", count)
+    text = input(""Enter a number: "")
+    num = float(text) 
+#Step 4: Calculate and print the average of the numbers entered by the user
+if count == 0 :
+    print(""No numbers were entered."")
+else :
+    average = total / count
+print(""The average is:"", average)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_find_average&ch=py_average_float
+PYTHON,py_file_input_stat,py_input_stat1,PCEX Set," Construct a program that receives the full path to an input file from the user, reads that file and reports the number of lines, the longest line, the number of words on each line, and the length of the longest word on each line. Make sure that the program handles each specific exception that could occur.","#Step 1: Define the function
+def get_stat(file_name):
+    #Step 1.1: Assign initial value to variable that we need for reporting the file information
+    num_lines = 0
+    longest_line = """"
+    #Step 1.2: Enclose the code that might throw an exception within the try block
+    try :
+        #Step 1.2.1: Open the file and process each line in the file
+        myfile = open( file_name, ""r"")
+        for line in myfile:
+            num_lines += 1
+            num_words = len(line.split())
+            #Determine if the line is the longest line so far
+            if (len(line) > len(longest_line)) :
+                longest_line = line
+            #Find the length of the longest word in the line
+            longest_word = 0
+            for w in line.split() :
+                if len(w) > longest_word :
+                    longest_word = len(w)
+            #Print the line information
+            print(""Line "" + str(num_lines) + "" has "" + str(num_words) + "" tokens (longest = "" + str(longest_word) + "")"")
+        print(""Longest line:"" + longest_line)
+        #Step 1.2.2: Close the file
+        myfile.close()
+    #Step 1.3: Handle all possible exceptions that may be thrown in the try block 
+    except FileNotFoundError:
+        print(""File not found."")
+    except IOError:
+        print(""Problem with the file!"")
+#Step 2: Call the function
+name = input(""Enter the full path of a file: "" )
+get_stat( name )",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_file_input_stat
+PYTHON,py_file_input_stat,py_input_stat2,PCEX Challenge," Construct a program that receives the full path to an input file from the user, reads that file and reports the number of lines, the longest line, the number of words on each line, and the length of the longest word on each line. Make sure that the program handles each specific exception that could occur. Also, the program must ask the user for a valid file path until the user enters a file path that could be accessed without any exception.","#Step 1: Define the function that gets the valid file path
+def get_file():
+    valid = False
+    while not valid : 
+        try:
+            file_name = input(""Enter the full path of a file: "")
+            myfile = open( file_name, ""r"") 
+            myfile.close()
+            valid = True
+        except FileNotFoundError:
+            print(""File not found."")
+        except IOError:
+            print(""Problem with the file!"")
+    return file_name
+#Step 2: Define the function that processes the file
+def get_stat(file_name):
+    #Step 2.1: Assign initial value to variable that we need for reporting the file information
+    num_lines = 0
+    longest_line = """"
+    #Step 2.2: Enclose the code that might throw an exception within the try block
+    try :
+        #Step 2.2.1: Open the file and process each line in the file
+        myfile = open( file_name, ""r"")
+        for line in myfile:
+            num_lines += 1
+            num_words = len(line.split())
+            #Determine if the line is the longest line so far
+            if (len(line) > len(longest_line)) :
+                longest_line = line
+            #Find the length of the longest word in the line
+            longest_word = 0
+            for w in line.split() :
+                if len(w) > longest_word :
+                    longest_word = len(w)
+            #Print the line information
+            print(""Line "" + str(num_lines) + "" has "" + str(num_words) + "" tokens (longest = "" + str(longest_word) + "")"")
+        print(""Longest line:"" + longest_line)
+        #Step 2.2.2: Close the file
+        myfile.close()
+    #Step 2.3: Handle all possible exceptions that may be thrown in the try block 
+    except FileNotFoundError:
+        print(""File not found."")
+    except IOError:
+        print(""Problem with the file!"")
+#Step 3: Call the functions
+get_stat( get_file() )",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_file_input_stat&ch=py_input_stat2
+PYTHON,py_fail_course,py_fail_course1,PCEX Set,Construct a program to determine whether a student fails the course based on the inputs that it receives from the instructor. The student fails the course if the exam score is less than 55 or student has more than 2 missing homework.,"#Step 1: Read the instructor inputs
+text = input(""Enter the exam score:"")
+exam_score = int(text)
+text = input(""Enter number of missing homework:"")
+number_of_missing_hw = int(text)
+#Step 2: Write the boolean expression to determine whether the student fails the course
+is_failing = exam_score < 55 or number_of_missing_hw > 2
+#Step 3: Print the result
+if is_failing == True :
+    print(""Yes! The student fails the course."")
+else:
+    print(""No! The student does not fail the course."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_fail_course
+PYTHON,py_fail_course,py_fail_course2,PCEX Challenge,Construct a program that determines whether a student fails the course based on the inputs that it receives from the instructor. The student fails the course if the exam score is less than 55 or when the student has cheated.,"#Step 1: Read the instructor inputs
+text = input(""Enter the exam score:"")
+exam_score = int(text)
+text = input(""Enter 1 if the student has cheated, otherwise enter 0:"")
+input_num = int(text)
+#Step 2: Determine whether the student has cheated
+if input_num == 1 :
+    has_cheated = True
+else:
+    has_cheated = False
+#Step 3: Write the boolean expression to determine whether the student fails the course
+is_failing = exam_score < 55 or has_cheated
+#Step 4: Print the result
+if is_failing == True :
+    print(""Yes! The student fails the course."")
+else:
+    print(""No! The student does not fail the course."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_fail_course&ch=py_fail_course2
+PYTHON,py_fail_course,py_fail_course3,PCEX Challenge,Construct a program that determines whether a student fails the course based on the inputs that it receives from the instructor. The student fails the course if his/her score is not above the class average.,"#Step 1: Read the instructor inputs
+text = input(""Enter the student's score:"")
+student_score = int(text)
+text = input(""Enter the class average:"")
+class_average = int(text)
+#Step 2: Write the boolean expression to determine whether the student fails the course
+is_failing = not ( student_score > class_average )
+#Step 3: Print the result
+if is_failing == True :
+    print(""Yes! The student fails the course."")
+else:
+    print(""No! The student does not fail the course."")",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_fail_course&ch=py_fail_course3
+PYTHON,py_f_to_c_conversion,py_celsius_to_fahrenheit,PCEX Set,Construct a program that computes the Fahrenheit equivalent of an input Celsius value using the formula F = (9/5)C + 32. The input Celsius value is an integer.,"#Step 1: Assign initial values to the variables which we need for this program
+base = 32
+conversion_factor = 9 / 5
+#Step 2: Read the input Celsius value
+text = input(""Enter the Celsius value: "")
+celsius_temp = int(text)
+#Step 3: Compute the  Fahrenheit equivalent of the Celsius value
+fahrenheit_temp = celsius_temp * conversion_factor + base
+print(""Celsius Temperature:"" , celsius_temp)
+print(""Fahrenheit Equivalent:"" , fahrenheit_temp)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_f_to_c_conversion
+PYTHON,py_f_to_c_conversion,py_fahrenheit_to_celsius,PCEX Challenge,Construct a program that computes the Celsius equivalent of an input Fahrenheit value using the formula C = (F - 32) (5/9). The input Fahrenheit value is an integer.,"#Step 1: Assign initial values to the variables which we need for this program
+base = 32
+conversion_factor = 5 / 9
+#Step 2: Read the input Fahrenheit value
+text = input(""Enter the Fahrenheit value: "")
+fahrenheit_temp = int(text)
+#Step 3: Compute the Celsius equivalent of the Fahrenheit value
+celsius_temp = (fahrenheit_temp - base) * conversion_factor 
+print(""Fahrenheit Temperature:"" , fahrenheit_temp)
+print(""Celsius Equivalent:"" , celsius_temp)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_f_to_c_conversion&ch=py_fahrenheit_to_celsius
+PYTHON,py_double_linked_list,dlinkedlist1,PCEX Set,"Create the necessary classes for a Doubly Linked List, containing the method insert_at_start(data) to add a new item to the beginning of the linked list, insert_at_end(data) to add a new item to the end of the linked list, delete_at_start() to delete the first item from the link, and an __str__ method to print out the doubly linked list. Test the doubly linked list after all classes and methods are created.","# Step 1: Define Node class
+class DoublyLinkedListNode:
+    def __init__(self, initData):
+        self.item = initData
+        self.nref = None
+        self.pref = None
+# Step 2: Define the Doubly Linked List class
+class DoublyLinkedList:
+    def __init__(self):
+        self.start_node = None
+    def __str__(self):
+        s = '['
+        i = 0
+        current = self.start_node
+        while current != None:
+            if i != 0:
+                s = s + ', ' + current.item
+            else:
+                s = s + current.item
+            current = current.nref
+            i += 1
+        return s + ']'
+    def insert_at_start(self, data):
+        new_node = DoublyLinkedListNode(data)
+        if self.start_node is None:
+            self.start_node = new_node
+            return
+        new_node.nref = self.start_node
+        self.start_node.pref = new_node
+        self.start_node = new_node
+    def insert_at_end(self, data):
+        new_node = DoublyLinkedListNode(data)
+        if self.start_node is None:
+            self.start_node = new_node
+            return
+        n = self.start_node
+        while n.nref is not None:
+            n = n.nref
+        n.nref = new_node
+        new_node.pref = n
+    def delete_at_start(self):
+        if self.start_node is None:
+            print(""The list has no element to delete"")
+            return
+        if self.start_node.nref is None:
+            self.start_node = None
+            return
+        self.start_node = self.start_node.nref
+        self.start_node.pref = None
+# Step 3: Test the Linked List
+dlist = DoublyLinkedList()
+dlist.insert_at_start('Jeff')
+dlist.insert_at_start('John')
+dlist.insert_at_start('Dory')
+dlist.insert_at_end('Gray')
+dlist.delete_at_start()
+print(dlist)",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_double_linked_list
+PYTHON,py_double_linked_list,dlinkedlist1_challenge,PCEX Challenge,"Create the necessary classes for a Doubly Linked List, containing the method insert_at_start(data) to add a new item to the beginning of the linked list, insert_at_end(data) to add a new item to the end of the linked list, delete_at_start() to delete the first item from the link, and an __str__ method to print out the doubly linked list. Test the doubly linked list after all classes and methods are created.","# Step 1: Define Node class
+class DoublyLinkedListNode:
+    def __init__(self, initData):
+        self.item = initData
+        self.nref = None
+        self.pref = None
+# Step 2: Define the Doubly Linked List class
+class DoublyLinkedList:
+    def __init__(self):
+        self.start_node = None
+    def __str__(self):
+        s = '['
+        i = 0
+        current = self.start_node
+        while current != None:
+            if i != 0:
+                s = s + ', ' + current.item
+            else:
+                s = s + current.item
+            current = current.nref
+            i += 1
+        return s + ']'
+    def insert_at_start(self, data):
+        new_node = DoublyLinkedListNode(data)
+        if self.start_node is None:
+            self.start_node = new_node
+            return
+        new_node.nref = self.start_node
+        self.start_node.pref = new_node
+        self.start_node = new_node
+    def delete_at_end(self):
+        if self.start_node is None:
+            print(""The list has no element to delete"")
+            return
+        if self.start_node.nref is None:
+            self.start_node = None
+            return
+        n = self.start_node
+        while n.nref is not None:
+            n = n.nref
+        n.pref.nref = None
+# Step 3: Test the Linked List
+dlist = DoublyLinkedList()
+dlist.insert_at_start('Hugo')
+dlist.insert_at_start('Mike')
+dlist.insert_at_start('Riley')
+dlist.insert_at_start('Greyson')
+dlist.delete_at_end()
+print(dlist)",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_double_linked_list&ch=dlinkedlist1_challenge
+PYTHON,py_divisor,py_largest_divisor,PCEX Challenge,"Construct a program that finds the largest divisor of a positive number, excluding the number itself. For example, the largest divisor of 24 is 12.","#Step 1: Assign initial values to the variables which we need for this program
+num = 15
+divisor = num-1
+#Step 2: Find the largest divisor of the number        
+while num % divisor != 0 :
+    divisor -= 1
+print(""The largest divisor of"", num, ""is"", divisor)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_divisor&ch=py_largest_divisor
+PYTHON,py_divisor,py_smallest_divisor,PCEX Set,"Construct a program that finds the smallest divisor (other than 1) of a positive number. For example, the smallest divisor of 4 is 2.","#Step 1: Assign initial values to the variables which we need for this program
+num = 15
+divisor = 2
+#Step 2: Find the smallest divisor of the number
+while num % divisor != 0 :
+    divisor += 1
+print(""The smallest divisor of"", num, ""is"", divisor)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_divisor
+PYTHON,py_digits,py_print_digits_reverse,PCEX Set,Construct a program that prints the digits of an integer from right to left.,"#Step 1: Assign initial values to the variables which we need for this program
+num = 1234
+#Step 2: Print the digits of the integer from right to left
+while num > 0 :
+    #Step 2.1: Get the last digit in the integer
+    last_digit = num % 10
+    #Step 2.2: Print the extracted digit
+    print(last_digit)
+    #Step 2.3: Remove the last digit from the integer
+    num = num // 10",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_digits
+PYTHON,py_digits,py_reverse_number,PCEX Challenge,Construct a program that reverses the digits of an integer mathematically.,"#Step 1: Assign initial values to the variables which we need for this program
+num = 1234
+reverse = 0
+#Step 2: Reverse the digits of the integer mathematically
+while num > 0 :
+    #Step 2.1: Get the last digit in the integer
+    last_digit = num % 10
+    #Step 2.2:?Append the last digit to reverse
+    reverse = (reverse * 10) + last_digit
+    #Step 2.3: Remove the last digit from the integer
+    num = num // 10
+    print(""last digit:"", last_digit, "", reverse:"", reverse, "", integer:"", num)
+print(""The reversed integer is:"", reverse)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_digits&ch=py_reverse_number
+PYTHON,py_digits,py_sum_digits,PCEX Challenge,Construct a program that calculates the sum of the digits of an integer.,"#Step 1: Assign initial values to the variables which we need for this program
+num = 1234
+total = 0
+#Step 2: Sum up the digits of the integer 
+while num > 0 :
+    #Step 2.1: Get the last digit in the integer
+    last_digit = num % 10
+    #Step 2.2:?Add the last digit to the sum of digits so far
+    total = total + last_digit
+    #Step 2.3: Remove the last digit from the integer
+    num = num // 10
+    print(""last digit:"", last_digit, "", sum:"", total, "", integer:"", num)
+print(""The sum of the digits:"", total)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_digits&ch=py_sum_digits
+PYTHON,py_datatype_input_manipulation,input_manipulation,PCEX Set,"Construct a program that takes a user's inputs and multiplies the inputs.Then print the type of the result, convert the result to float and print its float absolute value. ","# Step 1: Import math library
+import math
+# Step 2: Take the first input from the user
+input_a = input(""Enter the first integer:"")
+a = int(input_a)
+# Step 3: Take the second input from the user
+input_b = input(""Enter the second integer:"")
+b = int(input_b)
+# Step 3: Multiply the two variables
+c = a*b
+print(type(c))
+print(float(c))
+print(math.fabs(c))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_datatype_input_manipulation
+PYTHON,py_datatype_input_manipulation,input_multiplication_ch,PCEX Challenge,"Construct a program that takes a user's inputs and calculate the division of the inputs.Then convert the division result into an integer, check the current division result's type and print the original division result, converted result and the original division result's float absolute value.","# Step 1: Import math library
+import math
+# Step 2: Take the first input from the user
+input_a = input(""Enter the first integer:"")
+a = int(input_a)
+# Step 3: Take the second input from the user
+input_b = input(""Enter the second integer:"")
+b = int(input_b)
+# Step 3: Division
+c = a/b
+d = int(c)
+# Check if d's type is integer and store the boolean result into the variable f
+f = isinstance(d,int)
+print(d)
+print(f)
+print(math.fabs(c))",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_datatype_input_manipulation&ch=input_multiplication_ch
+PYTHON,py_concat_str_num,py_concat_str_num1,PCEX Set,"Construct a program that uses variables x, y, and z to print ""Python was invented in 1989."".","#Step 1: Assign initial values to the variables x, y, and z
+x = ""Python was invented in ""
+y = 1989
+z = "".""
+#Step 2: Print the text using the variables initialized above 
+print(x + str(y) + z)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_concat_str_num
+PYTHON,py_concat_str_num,py_concat_str_num2,PCEX Challenge,"Construct a program that uses variables x, y, and z to print ""x * 2 = 4"".","#Step 1: Assign initial values to the variables x, y, and z
+x = 2
+y = ""x * 2 = ""
+z = x * 2
+#Step 2: Print the text using the variables initialized above 
+print(y + str(z))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_concat_str_num&ch=py_concat_str_num2
+PYTHON,py_concat_str_num,py_concat_string_num3,PCEX Challenge,"Construct a program that uses variables x, y, and z to print ""10 + 20 = 30"".","#Step 1: Assign initial values to the variables x, y, and z
+x = 10
+y = 20
+z = x + y
+#Step 2: Print the text using the variables initialized above 
+print(str(x) + "" + "" + str(y) + "" = "" + str(z))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_concat_str_num&ch=py_concat_string_num3
+PYTHON,py_concat_char_two_str,py_concat_char_two_str1,PCEX Set,"Construct a program that has a function that receives two strings and returns a string formed from the given strings such that the first character of each string is omitted.\nFor example, the new string that will be formed from the strings 'abc' and 'xyz' is 'bcyz'.\nAssume that both strings have at least one character.","#Step 1: Define the function
+def concat_chars(a, b):
+    return a[1:] + b[1:]
+#Step 2: Call the function
+print(concat_chars(""Hello"", ""There""))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_concat_char_two_str
+PYTHON,py_concat_char_two_str,py_concat_char_two_str2,PCEX Challenge,"Construct a program that has a function that receives two strings and returns a string formed from the given strings separated by a space character such that the first two characters of the given strings are swapped.\nFor example, the new string that will be formed from the strings 'abc' and 'xyz' is 'xyc abz'.\nAssume that both strings have at least two characters.","#Step 1: Define the function
+def concat_chars(a, b):
+    new_a = b[:2] + a[2:]
+    new_b = a[:2] + b[2:]
+    return (new_a + "" "" + new_b)
+#Step 2: Call the function
+print(concat_chars(""Hello"", ""There""))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_concat_char_two_str&ch=py_concat_char_two_str2
+PYTHON,py_classes_inheritance,person_employee,PCEX Set,Construct two classes: one represents a Person and another one represents an Employee that should be defined as Person's child class. The classes should define the functions to check if the person is an employee and return the person's name.,"# Step1: Define the class
+class Person():
+    # Step 1.1: Initialize the attributes of the Person class.
+    def __init__(self, name):
+        self.name = name
+    # Step 1.2: Define the method to return the person’s name
+    def get_name(self):
+        return self.name
+    # Step 1.3: Define the method to return if the person is an employee
+    def is_employee(self):
+        return False
+# Step2: Define a class that is Person’s child class or subclass
+class Employee(Person):
+    # Step 2.1: Define the method to return if the person is an employee
+    def is_employee(self):
+        return True
+# Step3: Test the class
+emp = Person(""Melody"")
+print(emp.get_name(), emp.is_employee())
+emp = Employee(""Linda"")
+print(emp.get_name(), emp.is_employee())",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_classes_inheritance
+PYTHON,py_classes_inheritance,person_employee_ch,PCEX Challenge,Construct two classes: one represents a Person and another one represents an Employee that should be defined as Person's child class. The classes should define functions to display the employee's information,"# Step1: Define the class
+class Person():
+    #Step 1.1: Initialize the attributes of the Person class.
+    def __init__(self, name, idnumber):
+        self.name = name
+        self.idnumber = idnumber
+    # Step 1.2: Define the method to print the person's name and id
+    def display(self):
+        print(self.name)
+        print(self.idnumber)
+# Step2: Define a class that is Person's child class or subclass
+class Employee(Person):
+    # Step 2.1: Initialize the attributes of the Employee class.
+    def __init__(self, name, idnumber, salary, post):
+        self.salary = salary
+        self.post = post
+        Person.__init__(self, name, idnumber)
+    # Step 1.2: Define the method to print the person's salary and post
+    def info(self):
+        print(self.salary)
+        print(self.post)
+a = Employee('Rahul', 886012, 200000, 'Intern')
+a.display()
+a.info()",http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_classes_inheritance&ch=person_employee_ch
+PYTHON,py_check_product_code,py_check_product_code1,PCEX Set,"Suppose a hypothetical company uses codes to represent its various products. A product code includes, among other information, a character in the tenth position that represents the zone from which that product was made. Due to some reorganization, products from zone R are banned from being sold.\nConstruct a program that reads product codes from the user and counts the number of valid and banned codes entered. Make sure that the program handles all possible exceptions.\nThe program must ask the user for an input until the user enters STOP.","#Step 1: Define the function
+def check_product_code():
+    #Step 1.1: Assign initial values to the variables that we need for counts 
+    valid = 0
+    banned = 0
+    #Step 1.2: Ask for a valid input as long as the user does'nt enter STOP; otherwise stop
+    code = input(""Enter product code: "")
+    while ( code != ""STOP"") :
+        #Step 1.2.1: Enclose the code that might throw an exception within the try block
+        try : 
+            zone = code[9]
+            valid += 1
+            if zone == ""R"" :
+                banned += 1
+        #Step 1.2.2: Handle all possible exceptions that may be thrown in the try block 
+        except IndexError :                        
+            print(""Improper code length."")
+        code = input(""Enter product code: "")
+    #Step 1.3: Print the result    
+    print(""# of valid codes entered:"", valid)
+    print(""# of banned codes entered:"", banned)
+#Step 2: Call the function
+check_product_code()",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_check_product_code
+PYTHON,py_check_product_code,py_check_product_code2,PCEX Challenge,"Suppose a hypothetical company uses codes to represent its various products. A product code includes, among other information, a character in the tenth position that represents the zone from which that product was made, and a four-digit integer representing the district in which it will be sold. This four-digit integer begins at the 4th character and extends to the 7th character in the input code (inclusive). Due to some reorganization, products from zone R are banned from being sold in districts with a designation of 2000 or higher.\nConstruct a program that reads product codes from the user and counts the number of valid and banned codes entered. Make sure that the program handles all possible exceptions.\nThe program must ask the user for an input until the user enters STOP.","#Step 1: Define the function
+def check_product_code():
+    #Step 1.1: Assign initial values to the variables that we need for counts
+    valid = 0
+    banned = 0
+    #Step 1.2: Ask for a valid input as long as the user does'nt enter STOP; otherwise stop
+    code = input(""Enter product code: "")
+    while ( code != ""STOP"") :
+        #Step 1.2.1: Enclose the code that might throw an exception within the try block
+        try : 
+            zone = code[9]
+            district = int(code[3:7])
+            valid += 1
+            if zone == ""R"" and district >= 2000:
+                banned += 1
+        #Step 1.2.2: Handle all possible exceptions that may be thrown in the try block 
+        except IndexError :
+            print(""Improper code length."")
+        except ValueError :
+            print(""Error! District is not numeric."")
+        code = input(""Enter product code: "")
+    #Step 1.3: Print the result
+    print(""# of valid codes entered:"", valid)
+    print(""# of banned codes entered:"", banned)
+#Step 2: Call the function
+check_product_code()",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_check_product_code&ch=py_check_product_code2
+PYTHON,py_check_age,py_check_age1,PCEX Set,"Construct a program that receives a string that has the user name and age separated by a colon, and prints whether the user is a teenager. Make sure that the program handles all possible exceptions.","#Step 1: Define the function
+def check_age(s):
+    #Step 1.1: Split the given string into the name and age 
+    lst = s.split("":"")
+    #Step 1.2: Enclose the code that might throw an exception within the try block
+    try:
+        name = lst[0]
+        age = int(lst[1])
+        if age >= 13 and age <= 19 :            
+            print(name + "" is a teenager."")
+        else:            
+            print(name + "" is not a teenager."")     
+    #Step 1.3: Handle all possible exceptions that may be thrown in the try block 
+    except IndexError :
+        print(""Error! Separate the name and age by a colon."")
+    except ValueError :
+        print(""Error! Age must be an integer."")
+#Step 2: Call the function
+check_age(input(""Enter the name and age, separated by a colon:""))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_check_age
+PYTHON,py_check_age,py_check_age2,PCEX Challenge,"Construct a program that asks the user to enter a string that has the user name and age separated by a colon, and prints whether the user is a teenager. Make sure that the program handles all possible exceptions. The program must ask the user for an input until the user enters a string that could be processed without any exception.","#Step 1: Define the function
+def check_age():
+    #Step 1.1: Ask for a valid input as long as the input could not be processed; otherwise stop
+    processed = False
+    while not processed :
+        s = input(""Enter the name and age, separated by a colon:"")
+        #Step 1.1.1: Split the given string into the name and age 
+        lst = s.split("":"")
+        #Step 1.1.2: Enclose the code that might throw an exception within the try block
+        try:
+            name = lst[0]
+            age = int(lst[1])
+            if age >= 13 and age <= 19 :
+                print(name + "" is a teenager."")
+            else:
+                print(name + "" is not a teenager."")     
+            processed = True
+        #Step 1.1.3: Handle all possible exceptions that may be thrown in the try block 
+        except IndexError :
+            print(""Error! Separate the name and age by a colon."")
+        except ValueError :
+            print(""Error! Age must be an integer."")
+#Step 2: Call the function
+check_age()",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_check_age&ch=py_check_age2
+PYTHON,py_check_adjacent,py_adjacent_consecutive,PCEX Challenge,"Construct a program that checks whether a sequence of integers, entered one at a time, contains adjacent integers that are consecutive. The user enters -1 to indicate the end of the input.\nNote that integers which follow each other in order, without gaps, from smallest to largest are consecutive numbers. For example, 12, 13, 14 and 15 are consecutive numbers.","#Step 1: Read the first integer that the user enters
+text = input(""Enter an integer: "")
+num = int(text)
+#Step 2: Read the rest of the integers that the user enters and check for adjacent consecutive numbers
+while num != -1 :
+    previous = num
+    text = input(""Enter an integer: "")
+    num = int(text)
+    if num != -1 and num - previous == 1 :
+        print(previous, ""and"", num, ""are consecutive."") ",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_check_adjacent&ch=py_adjacent_consecutive
+PYTHON,py_check_adjacent,py_adjacent_duplicates,PCEX Set,"Construct a program that checks whether a sequence of numbers, entered one at a time, contains adjacent duplicates. The user enters -1 to indicate the end of the input.\nFor example, 4 is a duplicate in the sequence of numbers 1, 3, 4, 4, -1.","#Step 1: Read the first number that the user enters
+text = input(""Enter a number: "")
+num = float(text)
+#Step 2: Read the rest of the numbers that the user enters and check for adjacent duplicates
+while num != -1 :
+    previous = num
+    text = input(""Enter a number: "")
+    num = float(text)    
+    if num == previous :
+        print(""Duplicate input for number:"", num) ",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_check_adjacent
+PYTHON,py_check_adjacent,py_adjacent_greater,PCEX Challenge,"Construct a program that checks whether a sequence of non-zero numbers, entered one at a time, contains adjacent numbers in ascending order. Numbers are said to be in ascending order when they are arranged from the smallest to the largest number. For example, 5, 9, 13, 17 and 21 are arranged in ascending order.\nNote that you need to think what value should the program use to indicate the end of the input.","#Step 1: Read the first number that the user enters
+text = input(""Enter a number: "")
+num = float(text)
+#Step 2: Read the rest of the numbers that the user enters and check for adjacent numbers in ascending order
+while num != 0 :
+    previous = num
+    text = input(""Enter a number: "")
+    num = float(text)     
+    if num != 0 and num > previous :
+        print(previous,""and"", num, ""are in ascending order."") ",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_check_adjacent&ch=py_adjacent_greater
+PYTHON,py_char_dict,py_char_count_dict,PCEX Set,"Construct a program that has a function which receives a string from the user and creates a dictionary that maps each character in the given string to its frequency, that is, how many times that character appears in the given string.\nFor example, if the given string is ""book"", the program creates the following dictionary:\nb : 1\no : 2\nk : 1","#Step 1: Define the function
+def create_dictionary(s):
+    #Step 1.1: Create an empty dictionary 
+    counts = {}
+    #Step 1.2: Update the dictionary entries as we iterate through the string characters
+    for char in s:
+        if char in counts:
+            counts[char] += 1 
+        else:
+            counts[char] = 1
+    #Step 1.3: Print the dictionary
+    print(""The character counts for"", s)
+    for char in counts:
+        print(char, "":"", counts[char])
+#Step 2: Call the function
+s = input(""Enter a string: "")
+create_dictionary(s)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_char_dict
+PYTHON,py_char_dict,py_first_char_words_dict,PCEX Challenge,"Construct a program that has a function which receives a string and creates a dictionary that maps each character to the list of distinct words in the given string that start with that character. The dictionary should be case insensitive.\nFor example, if the given string is ""This is my test score"", the program creates the following dictionary:\nt : ['this', 'test']\ni : ['is']\nm : ['my']\ns : ['score']","#Step 1: Define the function
+def create_dictionary(s):
+    #Step 1.1: Create an empty dictionary
+    res_dict = {}
+    #Step 1.2: Split the given string into words
+    s = s.lower()
+    words = s.split()
+    #Step 1.3: Update the dictionary entries as we iterate through the words
+    for word in words:
+        if word[0] in res_dict:
+            if word not in res_dict[ word[0] ] :
+                res_dict[ word[0] ].append(word)
+        else:
+            res_dict[ word[0] ] = [ word ]
+    #Step 1.4: Print the dictionary
+    for char in res_dict:
+        print(char, "":"", res_dict[char])
+#Step 2: Call the function
+s = input(""Enter a string: "")
+create_dictionary(s)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_char_dict&ch=py_first_char_words_dict
+PYTHON,py_bmi_calculator,py_bmi_calculator1,PCEX Set,BMI is a measure of body fat based on height and weight that applies to adult men and women. BMI Categories are as follows:\nUnderweight = <18.5\nNormal weight = 18.5–24.9\nOverweight = 25–29.9\nObesity = BMI of 30 or greater.\nEnglish BMI Formula (Imperial) is: BMI = (Weight in Pounds / (Height in inches x Height in inches)) x 703.\nConstruct a program that calculates the Body Mass Index (BMI) according to this formula.,"#Step 1: Receive the weight and height from the user
+text = input(""Enter the weight in pounds:"")
+weight = float(text)
+text = input(""Enter the height in inches:"")
+height = float(text)
+#Step 2: Calculate BMI
+bmi = weight / height ** 2 * 703    
+#Step 3: Print the result
+print(""The BMI is:"", bmi)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_bmi_calculator
+PYTHON,py_bmi_calculator,py_bmi_calculator2,PCEX Challenge,BMI is a measure of body fat based on height and weight that applies to adult men and women. BMI Categories are as follows: \nUnderweight = <18.5\nNormal weight = 18.5–24.9\nOverweight = 25–29.9\nObesity = BMI of 30 or greater.\nEnglish BMI Formula (Imperial) is: BMI = (Weight in Pounds / (Height in inches x Height in inches)) x 703.\n BMI results are usually displayed as integers (values without decimal points). Construct a program to round the BMI result to the nearest integer.,"#Step 1: Receive the weight and height from the user
+text = input(""Enter the weight in pounds:"")
+weight = float(text)
+text = input(""Enter the height in inches:"")
+height = float(text)
+#Step 2: Calculate BMI
+bmi = weight / height ** 2 * 703    
+#Step 3: Round up BMI
+bmi = round(bmi)
+#Step 4: Print results
+print(""The BMI rounded to the nearest integer is:"", bmi)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_bmi_calculator&ch=py_bmi_calculator2
+PYTHON,objects_classes_tv,py_tv1,PCEX Set,"Construct a class that represents a TV. The class should contain data that represents the TV's state (power on or off, current channel). The state of the TV could be accessed or changed only through the getter and setter methods. The class should also include methods to change the state of the TV (turn on/off, change channels). Assume that the valid channel range is from 1 to 120 (both inclusive).","#Step 1: Define the class
+class TV1 :
+    #Step 1.1: Initialize the state of the TV
+    def __init__(self):
+        self.__on = False
+        self.__channel = 1   
+    #Step 1.2: Define the methods to change the on/off state of the TV 
+    def turn_on(self) :
+        self.__on = True
+    def turn_off(self) :
+        self.__on = False
+    #Step 1.3: Define the methods to change the channel of the TV 
+    def set_channel(self, new_channel) :
+        if self.__on and new_channel >= 1 and new_channel <= 120 :
+            self.__channel = new_channel
+    def channel_up(self) :
+        if self.__on and self.__channel < 120 :
+            self.__channel += 1
+    def channel_down(self) :
+        if self.__on and self.__channel > 1 :
+            self.__channel -= 1
+    #Step 1.4: Define the methods to get the current state of the TV 
+    def get_channel(self) :
+        return self.__channel
+    def is_on(self) :
+        return self.__on
+#Step 2: Test the class
+tv1 = TV1()
+tv1.turn_on()
+tv1.set_channel(30)
+tv2 = TV1()
+tv2.turn_on()
+tv2.channel_up()
+tv2.channel_up()
+tv2.channel_down()
+print(""tv1's channel is "" + str(tv1.get_channel()))
+print(""tv2's channel is "" + str(tv2.get_channel()))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=objects_classes_tv
+PYTHON,objects_classes_tv,py_tv2,PCEX Challenge,"Construct a class that represents a TV. The class should contain data that represents the TV's state (power on or off, current volume level). The state of the TV could be accessed or changed only through the getter and setter methods. The class should also include methods to change the state of the TV (turn on/off, change volume level). Assume that the volume level is an integer and ranges from 1 to 7 (both inclusive).","#Step 1: Define the class
+class TV2 :
+    #Step 1.1: Initialize the state of the TV
+    def __init__(self):
+        self.__on = False
+        self.__volume_level = 1   
+    #Step 1.2: Define the methods to change the on/off state of the TV 
+    def turn_on(self) :
+        self.__on = True
+    def turn_off(self) :
+        self.__on = False
+    #Step 1.3: Define the methods to change the volume level of the TV 
+    def set_volume(self, new_volume_level) :
+        if self.__on and new_volume_level >= 1 and new_volume_level <= 7 :
+            self.__volume_level = new_volume_level
+    def volume_up(self) :
+        if self.__on and self.__volume_level < 7 :
+            self.__volume_level += 1
+    def volume_down(self) :
+        if self.__on and self.__volume_level > 1 :
+            self.__volume_level -= 1
+    #Step 4: Define the methods to get the current state of the TV 
+    def get_volume_level(self) :
+        return self.__volume_level
+    def is_on(self) :
+        return self.__on
+#Step 2: Test the class
+tv1 = TV2()
+tv1.turn_on()
+tv1.set_volume(4)
+tv1.set_volume(-1)
+tv1.volume_down()
+tv2 = TV2()
+tv2.turn_on()
+tv2.volume_up()
+print(""tv1's volume level is "" + str(tv1.get_volume_level()))
+print(""tv2's volume level is "" + str(tv2.get_volume_level()))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=objects_classes_tv&ch=py_tv2
+PYTHON,objects_classes_point,py_point1,PCEX Set,"Construct a class that represents a point in the Euclidean plane. The class should contain data that represents the point’s integer coordinates (x,y). The point's coordinates could be accessed or changed only through the getter and setter methods. The class should also include a method to translate the point, i.e., shift the point's location by the specified amount.","#Step 1: Define the class
+class Point1 :
+    #Step 1.1: Declare the method to shift the location of the point by the given amount
+    def translate(self, dx, dy) :
+        self.__x += dx
+        self.__y += dy
+    #Step 1.2: Define the setter and getter methods for the x-coordinate of the point
+    def set_x(self, new_x) :
+        self.__x = new_x
+    def get_x(self) :
+        return self.__x
+    #Step 1.3: Define the setter and getter methods for the y-coordinate of the point
+    def set_y(self, new_y) :
+        self.__y = new_y
+    def get_y(self) :
+        return self.__y
+#Step 2: Test the class
+p1 = Point1()
+p1.set_x(7)
+p1.set_y(2)
+p1.translate(11, 6)
+print(""p1 coordinates: ("" + str(p1.get_x()) + "", "" + str(p1.get_y()) + "")"") ",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=objects_classes_point
+PYTHON,objects_classes_point,py_point2,PCEX Challenge,"Construct a class that represents a point in the Euclidean plane. The class should contain data that represents the point’s integer coordinates (x,y). The point's coordinates could be accessed or changed only through the getter and setter methods. The class should also include a method to calculate and return the point's distance from the origin (0,0).","#Step 1: Define the class
+class Point2 :
+    #Step 1.1: Declare the method to calculate and return the point's distance from the origin
+    def distance_from_origin(self) :
+        return (self.__x * self.__x + self.__y * self.__y) ** 0.5
+    #Step 1.2: Define the setter and getter methods for the x-coordinate of the point
+    def set_x(self, new_x) :
+        self.__x = new_x
+    def get_x(self) :
+        return self.__x
+    #Step 1.3: Define the setter and getter methods for the y-coordinate of the point
+    def set_y(self, new_y) :
+        self.__y = new_y
+    def get_y(self) :
+        return self.__y
+#Step 2: Test the class
+p2 = Point2()
+p2.set_x(7)
+p2.set_y(2)
+print(""p2 coordinates: ("" + str(p2.get_x()) + "", "" + str(p2.get_y()) + "")"") 
+print(""Distance of p2 from origin = "" + str(p2.distance_from_origin()))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=objects_classes_point&ch=py_point2
+PYTHON,objects_classes_loan,py_loan1,PCEX Set,"Construct a class that represents a loan. This class should contain data representing the interest rate, loan amount, and the length of loan period (in years); all of which could be accessed or changed only through the getter and setter methods. An instance of the class should be created by specifying annual interest rate, length of loan period, and loan amount.\nThe other method of the this class should calculate the amount of monthly payments on the loan.","#Step 1: Define the class
+class Loan1 :
+    #Step 1.1: Initialize the loan with the specified values 
+    def __init__(self, annual_interest_rate, number_of_years, loan_amount) :
+        self.__annual_interest_rate = annual_interest_rate
+        self.__number_of_years = number_of_years
+        self.__loan_amount = loan_amount
+    #Step 1.2: Define the method that calculates the amount of monthly payments on the loan
+    def get_monthly_payment(self) :
+        monthly_interest_rate = self.__annual_interest_rate / 12
+        monthly_payment = self.__loan_amount * monthly_interest_rate / (1 -
+                (1 / (1 + monthly_interest_rate) ** (self.__number_of_years * 12) ))
+        return monthly_payment    
+    #Step 1.3: Define the methods to get/set the properties of the loan
+    def get_annual_interest_rate(self) :
+        return self.__annual_interest_rate
+    def set_annual_interest_rate(self, annual_interest_rate) :
+        self.__annual_interest_rate = annual_interest_rate
+    def get_number_of_years(self) :
+        return self.__number_of_years
+    def set_number_of_years(self, number_of_years) :
+        self.__number_of_years = number_of_years
+    def get_loan_amount(self) :
+        return self.__loan_amount
+    def set_loan_amount(self, loan_amount) :
+        self.__loan_amount = loan_amount
+#Step 2: Test the class
+annual_interest_rate = float(input(""Enter the annual interest rate: ""))
+number_of_years = int(input(""Enter the number of years for the loan period: ""))
+loan_amount = (float(input(""Enter the loan amount: "")))
+loan1 = Loan1(annual_interest_rate, number_of_years, loan_amount)
+print(""The monthly payment for the loan is: {:.2f} "".format(loan1.get_monthly_payment()))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=objects_classes_loan
+PYTHON,objects_classes_loan,py_loan2,PCEX Challenge,"Construct a class that represents a loan. This class should contain data representing the interest rate, loan amount, and the length of loan period (in years); all of which could be accessed or changed only through the getter and setter methods. An instance of the class should be created by specifying annual interest rate, length of loan period, and loan amount.\nThe other methods of the this class should calculate the amount of monthly payments on the loan as well as the total payment.","#Step 1: Define the class
+class Loan2 :
+    #Step 1.1: Initialize the loan with the specified values 
+    def __init__(self, annual_interest_rate, number_of_years, loan_amount) :
+        self.__annual_interest_rate = annual_interest_rate
+        self.__number_of_years = number_of_years
+        self.__loan_amount = loan_amount
+    #Step 1.2: Define the method that calculates the amount of monthly payments on the loan
+    def get_monthly_payment(self) :
+        monthly_interest_rate = self.__annual_interest_rate / 12
+        monthly_payment = self.__loan_amount * monthly_interest_rate / (1 -
+                (1 / (1 + monthly_interest_rate) ** (self.__number_of_years * 12) ))
+        return monthly_payment    
+    #Step 1.3: Define the method that calculates the amount of total payments on the loan
+    def get_total_payment(self) :
+        total_payment = self.get_monthly_payment() * self.__number_of_years * 12
+        return total_payment
+    #Step 1.4: Define the methods to get/set the properties of the loan
+    def get_annual_interest_rate(self) :
+        return self.__annual_interest_rate
+    def set_annual_interest_rate(self, annual_interest_rate) :
+        self.__annual_interest_rate = annual_interest_rate
+    def get_number_of_years(self) :
+        return self.__number_of_years
+    def set_number_of_years(self, number_of_years) :
+        self.__number_of_years = number_of_years
+    def get_loan_amount(self) :
+        return self.__loan_amount
+    def set_loan_amount(self, loan_amount) :
+        self.__loan_amount = loan_amount
+#Step 2: Test the class
+annual_interest_rate = float(input(""Enter the annual interest rate: ""))
+number_of_years = int(input(""Enter the number of years for the loan period: ""))
+loan_amount = (float(input(""Enter the loan amount: "")))
+loan2 = Loan2(annual_interest_rate, number_of_years, loan_amount)
+print(""The monthly payment for the loan is: {:.2f} "".format(loan2.get_monthly_payment()))
+print(""The total payment for the loan is: {:.2f} "".format(loan2.get_total_payment()))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=objects_classes_loan&ch=py_loan2
+PYTHON,objects_classes_account,py_account1,PCEX Set,"Construct a class that represents a basic bank account. This class should contain data representing the name of the account’s owner, the account number, and the account’s current balance; all of which could be accessed or changed only through the getter and setter methods. An instance of the class should be created by specifying three parameters that are used to initialize the instance (i.e., object) data. The other methods of this class should perform various services on the account (making deposits, withdrawals, adding interest to the account). These methods should examine the data passed into them to make sure the requested transaction is valid.","#Step 1: Define the class
+class Account1 :
+    #Step 1.1: Initialize the account with the specified values
+    def __init__(self, owner, account, initial) :
+        self.__acct_name = owner
+        self.__acct_number = account
+        self.__balance = initial
+    #Step 1.2: Define a method to perform the deposit transaction
+    def deposit(self, amount) :
+        if (amount > 0) :
+            self.__balance = self.__balance + amount
+        return self.__balance
+    #Step 1.3: Define a method to perform a withdraw transaction
+    def withdraw(self, amount, fee) :
+        if (amount > 0 and fee >= 0 and amount+fee < self.__balance) :
+            self.__balance = self.__balance - amount - fee
+        return self.__balance
+    #Step 1.4: Define a method to add interest to the account
+    def add_interest(self) :
+        self.__balance += (self.__balance * 0.035)
+        return self.__balance
+    #Step 1.5: Define the methods to get the  state of the account 
+    def get_name(self) :
+        return self.__acct_name
+    def get_balance(self) :
+        return self.__balance
+    def get_acct_number(self) :
+        return self.__acct_number
+#Step 2: Test the class
+acct1 = Account1(""Tina Murphy"", 72354, 25.59)
+acct2 = Account1(""Angelica Adams"", 69713, 500.00)
+acct3 = Account1(""Edward Demsey"", 93757, 769.32)
+acct1.deposit(44.10)  
+adams_balance = acct2.deposit(75.25)
+print(""{:s}'s balance after deposit: {:.2f}"".format(acct2.get_name(), adams_balance))
+print(""{:s}'s balance after deposit: {:.2f}"".format(acct2.get_name(), acct2.withdraw (480, 1.50)))
+acct3.withdraw(-100.00, 1.50)  
+acct2.add_interest()
+print(""{:s}'s balance after adding interest: {:.2f}"".format(acct2.get_name(), acct2.get_balance()))",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=objects_classes_account
+PYTHON,objects_classes_account,py_account2,PCEX Challenge,"Construct a class that represents a basic bank account. This class should contain data representing the name of the account’s owner, the account number, and the account’s current balance; all of which could be accessed or changed only through the getter and setter methods. An instance of the class should be created by specifying three parameters that are used to initialize the instance (i.e., object) data. The other methods of this class should:\n - provide a one-line description of the account, and\n - perform various services on the account (making deposits, withdrawals, adding interest to the account). These methods should examine the data passed into them to make sure the requested transaction is valid.","#Step 1: Define the class
+class Account2 :
+    #Step 1.1: Initialize the account with the specified values
+    def __init__(self, owner, account, initial) :
+        self.__acct_name = owner
+        self.__acct_number = account
+        self.__balance = initial
+    #Step 1.2: Define a method to provide a one-line description of the account
+    def __str__(self) :
+        return ""{:d}{:>20s}{:>10.2f}"".format(self.__acct_number, self.__acct_name, self.__balance)
+    #Step 1.3: Define a method to perform the deposit transaction
+    def deposit(self, amount) :
+        if (amount > 0) :
+            self.__balance = self.__balance + amount
+        return self.__balance
+    #Step 1.4: Define a method to perform a withdraw transaction
+    def withdraw(self, amount, fee) :
+        if (amount > 0 and fee >= 0 and amount+fee < self.__balance) :
+            self.__balance = self.__balance - amount - fee
+        return self.__balance
+    #Step 1.5: Define a method to add interest to the account
+    def add_interest(self) :
+        self.__balance += (self.__balance * 0.035)
+        return self.__balance
+    #Step 1.6: Define the methods to get the  state of the account 
+    def get_name(self) :
+        return self.__acct_name
+    def get_balance(self) :
+        return self.__balance
+    def get_acct_number(self) :
+        return self.__acct_number
+#Step 2: Test the class
+acct1 = Account2(""Tina Murphy"", 72354, 25.59)
+acct2 = Account2(""Angelica Adams"", 69713, 500.00)
+acct3 = Account2(""Edward Demsey"", 93757, 769.32)
+print(acct1)
+print(acct2)
+print(acct3)",http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=objects_classes_account&ch=py_account2

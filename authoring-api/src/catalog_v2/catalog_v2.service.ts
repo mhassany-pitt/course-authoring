@@ -19,7 +19,7 @@ export class CatalogV2Service {
       .find({ status: { $in: ['public', 'deprecated'] } })
       .sort({ listed_at: 'desc' })
       .select(
-        'identity.id identity.title identity.type status listed_at ' +
+        'identity.id identity.title identity.type status listed_at links.demo_url ' +
           'content.prompt tags attribution.authors languages.programming_languages ' +
           'attribution.provider rights.license',
       );

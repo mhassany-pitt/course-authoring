@@ -46,7 +46,7 @@
           icon="pi pi-chevron-left"
           severity="secondary"
           [outlined]="true"
-          [routerLink]="['/slc-items']"
+          (click)="history.back()"
         ></p-button>
         <p-button
           type="button"
@@ -839,12 +839,26 @@
             class="flex flex-col gap-1 relative p-2 border border-solid bg-white border-slate-200 hover:bg-gray-200 rounded-md"
             *ngFor="let a of model.uses; let i = index"
           >
-            <span class="">{{ a.context_name }} </span>
+            <a
+              *ngIf="a.context_url || a.context_id; else contextNameOnly"
+              class="text-blue-700 hover:underline break-words"
+              [href]="a.context_url || a.context_id"
+              target="_blank"
+              rel="noopener"
+            >
+              {{ a.context_name || a.context_url || a.context_id }}
+            </a>
+            <ng-template #contextNameOnly>
+              <span>{{ a.context_name || "&lt;&lt;empty&gt;&gt;" }} </span>
+            </ng-template>
             <span *ngIf="a.used_by" class="text-gray-500 text-xs">
               {{ a.used_by || "n/a" }}
             </span>
             <span *ngIf="a.used_at" class="text-gray-500 text-xs">
-              {{ a.used_at }}: [{{ a.context_id }}]
+              {{ a.used_at
+              }}<span *ngIf="a.context_url || a.context_id"
+                >: [{{ a.context_url || a.context_id }}]</span
+              >
             </span>
             <span class="grow"></span>
             <p-button
@@ -862,18 +876,18 @@
           <div class="flex flex-wrap items-end gap-2">
             <label class="w-32 flex flex-col gap-1">
               <span class="text-xs text-gray-600 flex items-center gap-1">
-                <span>Context ID</span>
+                <span>Context URL</span>
                 <i
                   class="fa fa-info-circle"
-                  (click)="showFieldInfo('useContextId')"
+                  (click)="showFieldInfo('useContextUrl')"
                 ></i>
               </span>
               <input
                 pInputText
                 type="text"
                 class="w-full"
-                [(ngModel)]="useContextId"
-                maxlength="100"
+                [(ngModel)]="useContextUrl"
+                maxlength="500"
               />
             </label>
             <label class="grow flex flex-col gap-1">

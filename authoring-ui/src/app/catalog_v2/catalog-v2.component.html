@@ -47,7 +47,8 @@
     <p class="text-gray-400 text-xs -mt-2">
       Use the search box below to filter SLCs by ID, title, type, status,
       author, prompt, or tags. <br />
-      Click on an SLC title to view more details.
+      Click on an SLC title to view more details. or click the
+      <i class="fa fa-external-link"></i> to view the demo page.
     </p>
 
     <div class="flex items-start gap-6">
@@ -64,7 +65,7 @@
             class="flex items-center gap-1 text-red-700 cursor-pointer border border-solid border-red-400 px-2 py-1 rounded hover:bg-red-100 active:bg-red-200"
             (click)="clearQuickFilters(table)"
           >
-            <span class="">clear filters</span>
+            <span class="">Clear Filters</span>
             <i class="pi pi-times"></i>
           </a>
         </div>
@@ -272,10 +273,10 @@
             'status',
             'content.prompt',
             'attribution._authors',
-            'tags'
+            'tags',
           ]"
           class="border shadow-md"
-          (onFilter)="reloadFilterKVs(table.filteredValue)"
+          (onFilter)="reloadFilterKVs(table.filteredValue || items)"
         >
           <ng-template pTemplate="body" let-item let-rowIndex="rowIndex">
             <tr>
@@ -283,24 +284,33 @@
                 <div class="flex flex-col gap-1">
                   <span class="text-xs uppercase text-gray-400">
                     {{ item.identity?.type }} |
-                    {{ item.listed_at | date : "medium" }}
+                    {{ item.listed_at | date: "medium" }}
                   </span>
-                  <div class="flex items-center gap-1">
-                    <span
+                  <div class="flex items-center gap-2">
+                    <a
                       [routerLink]="['/catalog-v2', item.id]"
                       class="font-bold cursor-pointer text-blue-700"
                     >
-                      {{ rowIndex + 1 }}.
                       {{ item.identity?.title || "Untitled" }}
-                    </span>
+                    </a>
                     <span
-                      class="text-xs rounded-lg px-1"
+                      class="text-xs rounded-md px-1"
                       [class.bg-slate-200]="item.status == 'private'"
                       [class.bg-green-200]="item.status == 'public'"
                       [class.bg-red-200]="item.status == 'deprecated'"
+                      [class.bg-yellow-200]="item.status == 'broken:pending-fix'"
                     >
                       {{ item.status }}
                     </span>
+                    <a
+                      *ngIf="item.links?.demo_url"
+                      [href]="item.links.demo_url"
+                      target="_blank"
+                      class="text-gray-400"
+                      title="View Demo"
+                    >
+                      <i class="fa fa-external-link"></i>
+                    </a>
                   </div>
                   <span class="ml-2 text-xs">
                     ID: {{ item.identity?.id }}

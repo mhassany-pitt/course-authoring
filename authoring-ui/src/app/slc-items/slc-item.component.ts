@@ -17,6 +17,7 @@ import {
 })
 export class SlcItemComponent implements OnInit, OnDestroy {
   navLinks = getNavLinks(this.app);
+  history = history;
 
   model: CatalogV2Item = blankItem();
 
@@ -33,7 +34,7 @@ export class SlcItemComponent implements OnInit, OnDestroy {
   kcNote = '';
   kcConceptsInput = '';
   selectedKcKey = '';
-  useContextId = '';
+  useContextUrl = '';
   useContextName = '';
   useBy = '';
   useDate = '';
@@ -81,13 +82,13 @@ export class SlcItemComponent implements OnInit, OnDestroy {
     prereqItemIds: 'IDs of items learners should complete first.',
     deliveryFormat: 'Delivery channel or packaging format.',
     deliveryUrl: 'URL where the item can be accessed.',
-    useContextId: 'ID of the course or context where used.',
+    useContextUrl: 'URL of the course or context where used.',
     useContextName: 'Name of the course or context where used.',
     useUsedBy: 'Instructor, team, or system that used it.',
     useUsedAt: 'Date the item was used.',
   };
 
-  statusOptions = ['public', 'private', 'deprecated'].map((value) => ({
+  statusOptions = ['public', 'private', 'deprecated', 'broken:pending-fix'].map((value) => ({
     label: value,
     value,
   }));
@@ -112,7 +113,7 @@ export class SlcItemComponent implements OnInit, OnDestroy {
     private app: AppService,
     public router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.loadHistoricalOptions();
@@ -180,7 +181,7 @@ export class SlcItemComponent implements OnInit, OnDestroy {
     this.kcNote = '';
     this.kcConceptsInput = '';
     this.useBy = '';
-    this.useContextId = '';
+    this.useContextUrl = '';
     this.useContextName = '';
     this.useDate = '';
     this.refreshOptionLists();
@@ -209,9 +210,9 @@ export class SlcItemComponent implements OnInit, OnDestroy {
   private splitTokens(value: string) {
     return value
       ? value
-          .split(/[\n,]/)
-          .map((t) => t.trim())
-          .filter(Boolean)
+        .split(/[\n,]/)
+        .map((t) => t.trim())
+        .filter(Boolean)
       : [];
   }
 
@@ -389,10 +390,10 @@ export class SlcItemComponent implements OnInit, OnDestroy {
 
     const uses = this.model.uses || [];
     uses.forEach((use, index) => {
-      const contextId = (use?.context_id || '').trim();
-      if (contextId && contextId.length > 100) {
+      const contextUrl = (use?.context_url || '').trim();
+      if (contextUrl && contextUrl.length > 500) {
         errors.push(
-          `Use ${index + 1} context ID must be under 100 characters.`
+          `Use ${index + 1} context URL must be under 500 characters.`
         );
       }
       const contextName = (use?.context_name || '').trim();
@@ -494,7 +495,7 @@ export class SlcItemComponent implements OnInit, OnDestroy {
 
   copyId() {
     if (!this.model.id) return;
-    navigator.clipboard?.writeText(this.model.id).catch(() => {});
+    navigator.clipboard?.writeText(this.model.id).catch(() => { });
   }
 
   save() {
@@ -509,9 +510,9 @@ export class SlcItemComponent implements OnInit, OnDestroy {
     this.model.pedagogy = this.model.pedagogy || {};
     this.model.pedagogy.learning_objectives = this.learningObjectivesInput
       ? this.learningObjectivesInput
-          .split('\n')
-          .map((t) => t.trim())
-          .filter(Boolean)
+        .split('\n')
+        .map((t) => t.trim())
+        .filter(Boolean)
       : [];
     this.model.pedagogy.prerequisites = {
       topics: this.splitTokens(this.prereqTopicsInput),
@@ -592,15 +593,15 @@ export class SlcItemComponent implements OnInit, OnDestroy {
   }
 
   addUse() {
-    if (!this.useContextId && !this.useContextName) return;
+    if (!this.useContextUrl && !this.useContextName) return;
     this.model.uses = this.model.uses || [];
     this.model.uses.push({
-      context_id: this.useContextId,
+      context_url: this.useContextUrl,
       context_name: this.useContextName,
       used_at: this.useDate,
       used_by: this.useBy,
     });
-    this.useContextId = '';
+    this.useContextUrl = '';
     this.useContextName = '';
     this.useBy = '';
     this.useDate = '';

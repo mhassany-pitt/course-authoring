@@ -61,7 +61,9 @@ export interface CatalogV2Item {
     usage_notes: string;
   };
   uses: {
-    context_id: string;
+    context_url: string;
+    // legacy support for existing records before rename
+    context_id?: string;
     context_name: string;
     used_at: string;
     used_by: string;

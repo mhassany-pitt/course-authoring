@@ -13,7 +13,7 @@ export class SLCItemsService {
     @InjectModel('catalog_items_v2') private items: Model<CatalogItem>,
     @InjectModel('catalog_item_reports_v2')
     private reports: Model<CatalogItemReport>,
-  ) {}
+  ) { }
 
   async list(user_email: string, isAdmin = false) {
     const items = await this.items
@@ -50,6 +50,7 @@ export class SLCItemsService {
     payload: Partial<CatalogItem>,
     isAdmin = false,
   ) {
+    delete (payload as any)._id; // prevent _id updates
     const updated = await this.items.findOneAndUpdate(
       isAdmin ? { _id: id } : { _id: id, user_email },
       { ...payload, updated_at: new Date() },
@@ -71,8 +72,8 @@ export class SLCItemsService {
     ];
     const items = itemIds.length
       ? await this.items
-          .find({ _id: { $in: itemIds } })
-          .select('identity.id identity.title identity.type status user_email')
+        .find({ _id: { $in: itemIds } })
+        .select('identity.id identity.title identity.type status user_email')
       : [];
     const itemMap = new Map(
       items.map((item) => [item._id.toString(), useId(toObject(item))]),
