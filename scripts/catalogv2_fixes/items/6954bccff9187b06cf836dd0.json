@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836dd0",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:19:48.000Z",
+  "updated_at": "2026-01-17T05:27:28.595Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_list_reverse2_es",
+    "title": "Invertir la lista",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_reverse2_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:19:48.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que cree una nueva lista que sea la inversa de la lista original.",
+    "source_code": "lista1 = [1, 2, 3, 4, 5]\nnueva_lista = []\ni = 0\nwhile i < len(lista1):\n    elemento = lista1[i]\n    nueva_lista.insert(0, elemento)\n    i += 1\nprint(nueva_lista)\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_reverse2_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.947Z"
+}

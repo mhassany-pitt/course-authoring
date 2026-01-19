@@ -1,0 +1,119 @@
+{
+  "id": "6954bccff9187b06cf836f05",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:04.793Z",
+  "tags": [],
+  "identity": {
+    "id": "py_dairy_farm_es",
+    "title": "Calculo: containers y botellas en lecheria (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/350/embed?act=PCRS&sub=py_dairy_farm_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Una lecher\u00eda envia botellas de leche utilizando contenedores de un tamano especifico. Cada contenedor contiene un cierto numero de botellas de leche.Complete el siguiente programa que calcula e imprime el numero de contenedores completamente llenos con botellas de leche y el numero de botellas de leche restantes.Suponga que el tamano de un contenedor y el numero de botellas de leche se almacenan en tamano_contenedor y cantidad_botellas respectivamente.Almacene el numero de contenedores completamente llenos y las botellas de leche restantes en las variables cantidad_contenedores y restante respectivamente.Por ejemplo, si la granja necesita enviar 118 botellas de leche y la capacidad de un contenedor es de 24 botellas, entonces 4 contenedores estaran completamente llenos y sobraran 22 botellas de leche.En este caso, el numero de contenedores completamente llenos es 4 y sobran 22 botella(s)Autores: Yana Kortsarts, Yulia Kempner, Leonid Kugel, Kamil Akhuseyinoglu",
+    "source_code": "[student_code]\r\n\r\n[/student_code]\r\n[blocked]\r\n[/blocked]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "IntegerLiteral",
+          "Division",
+          "FindRemainder",
+          "ChangingValueVariable"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "IntegerLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "ChangingValueVariable",
+          "Division",
+          "FindRemainder"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/350/embed?act=PCRS&sub=py_dairy_farm_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Variables y Operaciones",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Variables y Operaciones",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Variables y Operaciones",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.980Z"
+}

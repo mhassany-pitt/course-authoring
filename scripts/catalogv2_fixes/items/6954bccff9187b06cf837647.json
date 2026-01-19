@@ -1,0 +1,96 @@
+{
+  "id": "6954bccff9187b06cf837647",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:04.835Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "insummax.c",
+    "title": "IS12:: insummax.c (111.1)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=insummax.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*     Example insummax.c: Input, sum and max as functions\n\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky\n*/\n\n#include <stdio.h>\n#define N 7 /* dimension of the array */\nint readarray(int ar[], int n);\nint sumarray(int ar[], int n);\nint maxelement(int ar[], int n);\n\nvoid main() {\n\n\u00a0\u00a0\u00a0\u00a0/* declare an array */\n\u00a0\u00a0\u00a0\u00a0int testarray[N]; /* elements from ar[0] to ar[N-1]; */\n\u00a0\u00a0\u00a0\u00a0readarray(testarray, N);\n\u00a0\u00a0\u00a0\u00a0printf(\"Sum = %d, max = %d\n\", sumarray(testarray, N), testarray[maxelement(testarray, N)]);\n}\n\n/* array input */\nint readarray(int ar[], int n_of_elements) {\n\u00a0\u00a0\u00a0\u00a0int i;\n\u00a0\u00a0\u00a0\u00a0for (i = 0; i < n_of_elements; ++i) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%d> \", i);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &ar[i]);\n\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\n\n/* summing array elements */\nint sumarray(int ar[], int n_of_elements) {\n\u00a0\u00a0\u00a0\u00a0int i, sum = 0;\n\u00a0\u00a0\u00a0\u00a0for (i = 0; i < n_of_elements; ++i)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0sum += ar[i];\n\u00a0\u00a0\u00a0\u00a0return sum;\n}\n\n/* finding index of max array element */\nint maxelement(int ar[], int n) {\n\u00a0\u00a0\u00a0\u00a0int i, maxind = 0;\n\u00a0\u00a0\u00a0\u00a0for (i = 1; i < n; ++i)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (ar[maxind] < ar[i]) maxind = i;\n\u00a0\u00a0\u00a0\u00a0return maxind;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "variable_initialization",
+          "pre_increment",
+          "return",
+          "for",
+          "array_declaration",
+          "reference",
+          "add_assignment",
+          "simple_assignment",
+          "int",
+          "if",
+          "main_function",
+          "less",
+          "define",
+          "void",
+          "variable_declaration",
+          "include",
+          "function_declaration",
+          "printf",
+          "scanf"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=insummax.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.176Z"
+}

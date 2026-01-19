@@ -1,0 +1,97 @@
+{
+  "id": "6954bccff9187b06cf836d98",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:21:10.000Z",
+  "updated_at": "2026-01-17T05:27:22.299Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_search_min_max_index_es",
+    "title": "Practicar la b\u00fasqueda del \u00edndice de los elementos m\u00ednimo y m\u00e1ximo",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_search_min_max_index_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:21:10.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que encuentre los indices tanto del elemento maximo como del minimo en una lista. num_lista es el caso de prueba donde se deben encontrar los indices minimo y maximo. El programa debe imprimir el indice del elemento minimo y el del elemento maximo. Este programa no necesita considerar elementos duplicados.",
+    "source_code": "indice_min = 0\nindice_max = 0\nfor indice in range(1, len(num_lista)):\n\tif num_lista[indice] < num_lista[indice_min]:\n\t\tindice_min = indice\n\tif num_lista[indice] > num_lista[indice_max]:\n\t\tindice_max = indice\nprint(indice_min, indice_max)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "For",
+          "Gt",
+          "Assign",
+          "Index",
+          "Lt",
+          "Call",
+          "If"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Gt",
+          "For",
+          "Constant",
+          "Call",
+          "Assign",
+          "Lt",
+          "If",
+          "Index"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_search_min_max_index_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.941Z"
+}

@@ -1,0 +1,81 @@
+{
+  "id": "6954bccff9187b06cf836e61",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:45.424Z",
+  "tags": [],
+  "identity": {
+    "id": "py_context_to_next_words",
+    "title": "PCRS C3-PL  Context To Next Words",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/89/embed?act=PCRS&sub=py_context_to_next_words"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Here is an example of a story list:['And', 'the', 'fan,', 'and', 'the', 'cup,', 'And', 'the', 'ship,', 'and', 'the', 'fish.']You have worked out that it makes sense to represent the context information as a dictionary where the keys are tuples of strings and the values are lists of strings.  Below, we have given you the first key; write the list of values for it.  Fill in the dictionary with all the 2-word contexts and their values.Reminder: Python is case sensitive, so 'And' and 'and' are not equal.",
+    "source_code": "[student_code]\r\ncontext_to_next_words = {('And', 'the'): [\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/89/embed?act=PCRS&sub=py_context_to_next_words"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Dictionaries",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Dictionaries",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.961Z"
+}

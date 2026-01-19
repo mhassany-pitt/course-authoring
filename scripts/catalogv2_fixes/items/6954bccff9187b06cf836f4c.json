@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836f4c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-03-28T00:42:49.000Z",
+  "updated_at": "2026-01-17T05:28:12.551Z",
+  "tags": [],
+  "identity": {
+    "id": "py_return_list_of_list_even",
+    "title": "List of Lists with Even",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/59/embed?act=PCRS&sub=py_return_list_of_list_even"
+  },
+  "attribution": {
+    "created_at": "2025-03-28T00:42:49.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "This problem has you write a nested loop to process a list of list of int, and accumulate a list of list of int.  The starter code provides an accumulator for the result and a loop over the lists, and you need to write the code that checks whether sublist contains only even ints.  You'll probably want a one-way flag: a Boolean variable that starts out as True and is set to False if you find an odd int in the sublist.  You'll need to check the value of this variable to figure out whether to append sublist to the even_lists accumulator.",
+    "source_code": "[student_code]\r\ndef only_evens(lst):\r\n    \"\"\" (list of list of int) -> list of list of int\r\n\r\n    Return a list of the lists in lst that contain only even integers. \r\n   \r\n    >>> only_evens([[1, 2, 4], [4, 0, 6], [22, 4, 3], [2]])\r\n    [[4, 0, 6], [2]]\r\n    \"\"\"\r\n    \r\n    even_lists = []\r\n\r\n    for sublist in lst:\r\n    \r\n        # write your code here (be sure to read above for a suggested approach)\r\n\r\n    return even_lists\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/59/embed?act=PCRS&sub=py_return_list_of_list_even"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Lists",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > Lists",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Lists",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.990Z"
+}

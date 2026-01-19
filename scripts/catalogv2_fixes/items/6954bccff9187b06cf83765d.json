@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf83765d",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:07.770Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fig02_05.c",
+    "title": "fig02_05.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig02_05.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 2.5: fig02_05.c\n\u00a0\u00a0\u00a0Addition program */\n#include <stdio.h>\n\n/* function main begins program execution */\nint main( void )\n{\n\u00a0\u00a0\u00a0int integer1;\n\u00a0\u00a0\u00a0int integer2;\n\u00a0\u00a0\u00a0int sum;\n\n\u00a0\u00a0\u00a0printf( \"Enter first integer\\n\" );\n\u00a0\u00a0\u00a0scanf( \"%d\", &integer1 );\n\n\u00a0\u00a0\u00a0printf( \"Enter second integer\\n\" );\n\u00a0\u00a0\u00a0scanf( \"%d\", &integer2 );\n\n\u00a0\u00a0\u00a0sum = integer1 + integer2;\n\n\u00a0\u00a0\u00a0printf( \"Sum is %d\\n\", sum );\n\n\u00a0\u00a0\u00a0return 0;\n\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig02_05.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.178Z"
+}

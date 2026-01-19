@@ -1,0 +1,212 @@
+{
+  "id": "6954bccff9187b06cf83759a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2015-02-15T14:55:45.000Z",
+  "updated_at": "2026-01-17T12:57:38.164Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "ae_inheritance_polymorphism_2",
+    "title": "A Dog is also a Pet",
+    "type": "Animated Example"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-java/ae?example-id=ae_inheritance_polymorphism_2&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2015-02-15T14:55:45.000Z",
+    "provider": "JSVEE",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "class Pet {\n  public void speak() {\n    System.out.println(\"\");\n  }\n}\n\nclass Dog extends Pet {\n  public void speak() {\n    System.out.println(\"woof! woof!\");\n  }\n}\n\nclass Cat extends Pet{\n  public void speak() {\n    System.out.println(\"meow!\");\n  }\n}\n\npublic class InheritanceAndPolymorphism2 {\n  public static void main (String args[]) {\n    Pets[] myPets = new Pet[3];\n    myPets[0] = new Dog();\n    myPets[1] = new Cat();\n    myPets[2] = new Dog();\n    whoTheyAre(myPets);\n  }\n\n  public static void whoTheyAre(Pet[] pets){\n    for (Pet pet : pets){\n      pet.speak();\n    }\n  }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "parser": {
+        "concepts": [
+          "ExtendsSpecification",
+          "ForEachStatement",
+          "FormalMethodParameter",
+          "FormalMethodParameter",
+          "InheritanceBasedPolymorphism",
+          "InheritanceBasedPolymorphism",
+          "java.lang.System.out.println",
+          "java.lang.System.out.println",
+          "java.lang.System.out.println",
+          "MethodDefinition",
+          "MethodDefinition",
+          "MethodDefinition",
+          "MethodDefinition",
+          "MethodDefinition",
+          "MethodOverriding",
+          "MethodOverriding",
+          "ObjectCreationStatement",
+          "ObjectCreationStatement",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "PolymorphicObjectCreationStatement",
+          "PolymorphicObjectCreationStatement",
+          "PolymorphicObjectCreationStatement",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "PublicMethodSpecifier",
+          "PublicMethodSpecifier",
+          "PublicMethodSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StaticMethodSpecifier",
+          "StringDataType",
+          "StringDataType",
+          "StringDataType",
+          "StringLiteral",
+          "StringLiteral",
+          "StringLiteral",
+          "VoidDataType",
+          "VoidDataType",
+          "VoidDataType",
+          "VoidDataType",
+          "VoidDataType",
+          "ActualMethodParameter",
+          "ActualMethodParameter",
+          "ActualMethodParameter",
+          "ActualMethodParameter",
+          "ArrayCreationStatement",
+          "ArrayDataType",
+          "ArrayElement",
+          "ArrayElement",
+          "ArrayElement",
+          "ArrayVariable",
+          "ClassDefinition",
+          "ClassDefinition",
+          "ClassDefinition",
+          "ClassDefinition",
+          "ConstructorCall",
+          "ConstructorCall",
+          "ConstructorCall",
+          "ExtendsSpecification"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-java/ae?example-id=ae_inheritance_polymorphism_2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=13",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=13",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] - Animated Examples > Inheritance",
+      "used_at": "2014-09-09T15:38:38.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=21",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=21",
+      "context_name": "Java: INFSCI 0017 2 | Demo Course 2 > Inheritance",
+      "used_at": "2015-04-15T13:10:54.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=29",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=29",
+      "context_name": "Java: INFSCI 0017 | mg-gs-demo > Inheritance",
+      "used_at": "2015-09-14T11:10:25.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=31",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_name": "Java: INFSCI 0017 | roya-clone-test-java > Inheritance",
+      "used_at": "2015-12-08T17:16:50.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=32",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=32",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 > Inheritance",
+      "used_at": "2016-01-15T10:31:22.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=339",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=339",
+      "context_name": "Java: INFSCI 0017 | Java Study 2016 A > Inheritance",
+      "used_at": "2016-11-02T14:34:05.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=361",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=361",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 (QJ-AE-PCEX-PCRS) > Inheritance",
+      "used_at": "2018-09-11T14:14:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=366",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=366",
+      "context_name": "Java: INFSCI 0017 | CSEdPad course v1 (all Java content) > Inheritance",
+      "used_at": "2018-10-18T16:24:57.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=374",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=374",
+      "context_name": "Java: INFSCI 0017 | Java Course (AE-QP-PCEX-CodeWorkout) > Inheritance",
+      "used_at": "2019-05-31T05:04:44.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=382",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=382",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v3 > Inheritance",
+      "used_at": "2020-01-11T16:29:42.000Z",
+      "used_by": "Zak Risha, Zak Risha - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.163Z"
+}

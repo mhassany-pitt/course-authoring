@@ -1,0 +1,102 @@
+{
+  "id": "6954bccff9187b06cf837071",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-09-16T11:35:08.000Z",
+  "updated_at": "2026-01-17T05:28:38.285Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_list_reverse2",
+    "title": "Reverse the list",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_reverse2&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2021-09-16T11:35:08.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program which creates a new list that is the reverse of the orginal list.",
+    "source_code": "list1 = [1, 2, 3, 4, 5]\nnew_list = []\ni = 0\nwhile i < len(list1):\n    element = list1[i]\n    new_list.insert(0, element)\n    i += 1\nprint(new_list)\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_reverse2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=421",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=421",
+      "context_name": "Python: PYTHON001 | Australia Spring 2022 > Lists",
+      "used_at": "2022-05-09T01:08:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=426",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=426",
+      "context_name": "Python: PYTHON001 | Novi Sad Python Fall 2022 > Lists",
+      "used_at": "2022-10-03T23:23:00.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=429",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=429",
+      "context_name": "Python: INFO063-17 | INTRODUCCI\u00c3\u0093N A LA PROGRAMACI\u00c3\u0093N > Lists",
+      "used_at": "2023-05-30T22:07:20.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=430",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=430",
+      "context_name": "Python: PYTHON001 | Preference Study Course > Lists",
+      "used_at": "2024-04-30T00:00:17.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=448",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=448",
+      "context_name": "Python: Temple-MIS2502-2025-Spring-2Python | Temple MIS2502 2025-Spring 2-Python > Lists",
+      "used_at": "2024-12-12T15:41:33.000Z",
+      "used_by": "Rully Agus Hendrawan, Rully Agus Hendrawan - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.030Z"
+}

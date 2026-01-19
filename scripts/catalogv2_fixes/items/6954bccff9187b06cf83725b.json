@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf83725b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2018-01-22T00:59:22.000Z",
+  "updated_at": "2026-01-17T05:29:35.103Z",
+  "tags": [],
+  "identity": {
+    "id": "largest_prime_factor",
+    "title": "Largest prime factor",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/389/embed?act=PCRS&sub=largest_prime_factor"
+  },
+  "attribution": {
+    "created_at": "2018-01-22T00:59:22.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The prime factors of 455 are 5, 7 and 13.Write a method that calculates the largest prime factor of a given number.",
+    "source_code": "[file SCode.java]\n[blocked]\npublic int largestPrimeFactor(int n) {\n[/blocked]\n[student_code]\n// TODO: Write your code here\n[/student_code]\n[blocked]\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/389/embed?act=PCRS&sub=largest_prime_factor"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=352",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=352",
+      "context_name": "Java: INFSCI 0017 | Norway-Spring2018 Java Course > For Loops",
+      "used_at": "2018-01-15T17:35:55.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.087Z"
+}

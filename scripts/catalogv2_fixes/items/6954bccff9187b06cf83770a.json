@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf83770a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:33.827Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "encryption",
+    "title": "Encryption Program",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=encryption&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\n#include <stdlib.h>\n#include <time.h>\n//function prototypes\nvoid encrypt(char [], int);\nvoid decrypt(char [], int);\nmain()\n{\nchar myString[21] = {'\\0'};\nint iSelection = 0;\nint iRand;\nsrand(time(NULL));\niRand = 1 + rand() % 4; // random #, 1-4\n\nwhile ( iSelection != 4 ) {\n\u00a0\u00a0\u00a0printf(\"\\n\\n1\\tEncrypt Clear Text\\n\");\n\u00a0\u00a0\u00a0printf(\"2\\tDecrypt Cipher Text\\n\");\n\u00a0\u00a0\u00a0printf(\"3\\tGenerate New Key\\n\");\n\u00a0\u00a0\u00a0printf(\"4\\tQuit\\n\");\n\u00a0\u00a0\u00a0printf(\"\\nSelect a Cryptography Option: \");\n\u00a0\u00a0\u00a0scanf(\"%d\", &iSelection);\n\n\u00a0\u00a0\u00a0switch (iSelection) {\n\u00a0\u00a0\u00a0\u00a0case 1:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nEnter clear text: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%s\", myString);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0encrypt(myString, iRand);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0\u00a0case 2:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nEnter cipher text: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%s\", myString);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0decrypt(myString, iRand);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0\u00a0case 3:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0srand(time(NULL));\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0iRand = 1+ rand() % 4; // random #, 1-4\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nNew Key Generated\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0}  //end switch\n\n}  //end loop\n\n}  //end main\n\nvoid encrypt(char sMessage[], int random)\n{\n\u00a0\u00a0int x = 0;\n\n\u00a0\u00a0while ( sMessage[x] != '\\0' ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0sMessage[x] += random;\n\u00a0\u00a0\u00a0\u00a0\u00a0x++;\n} //end loop\n\n\u00a0\u00a0x = 0;\n\u00a0\u00a0printf(\"\\nEncrypted Message is: \");\n\u00a0\u00a0while ( sMessage[x] != '\\0' ) {\n\u00a0\u00a0\u00a0\u00a0printf(\"%c\", sMessage[x]);\n\u00a0\u00a0\u00a0\u00a0x++;\n} //end loop\n}  //end encrypt function\n\nvoid decrypt(char sMessage[], int random)\n{\n\u00a0\u00a0int x = 0;\n\u00a0\u00a0x = 0;\n\u00a0while ( sMessage[x] != '\\0' ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0sMessage[x] = sMessage[x] - random;\n\u00a0\u00a0\u00a0\u00a0\u00a0x++;\n} //end loop\n\nx = 0;\nprintf(\"\\nDecrypted Message is: \");\nwhile ( sMessage[x] != '\\0' ) {\n\u00a0\u00a0printf(\"%c\", sMessage[x]);\n\u00a0\u00a0x++;\n} //end loop\n\n}  //end decrypt function"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=encryption&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.188Z"
+}

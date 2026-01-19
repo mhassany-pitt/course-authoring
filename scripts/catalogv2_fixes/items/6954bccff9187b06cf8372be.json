@@ -1,0 +1,95 @@
+{
+  "id": "6954bccff9187b06cf8372be",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2017-11-05T18:43:19.000Z",
+  "updated_at": "2026-01-17T05:29:47.868Z",
+  "tags": [],
+  "identity": {
+    "id": "2d_arrays_2",
+    "title": "2D Arrays 2",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/375/embed?act=PCRS&sub=2d_arrays_2"
+  },
+  "attribution": {
+    "created_at": "2017-11-05T18:43:19.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following method which takes a 2D int array (square or rectangular) called arr and returns the sum of all the elements in the specified column columnIndex of the 2D array arr.Assume that none of the rows in this 2D array is null. If the columnIndex is invalid, the method should return -1.For exampe:sumColumn( new int[][] { {1,0,1}, {2,1,2}, {0,0,0} }, 1) => 1sumColumn( new int[][]  { {1}, {1}, {5} }, 0) => 7sumColumn( new int[][] { {1,0}, {2,1}, {1,2} }, 2) => -1",
+    "source_code": "[file SCode.java]\n[student_code]\npublic int sumColumn(int[][] arr, int columnIndex) {\n    // TODO: Write your code here\n\n    \n    \n    \n}\n[/student_code]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/375/embed?act=PCRS&sub=2d_arrays_2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=31",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_name": "Java: INFSCI 0017 | roya-clone-test-java > Two-dimensional Arrays",
+      "used_at": "2015-12-08T17:16:50.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=345",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=345",
+      "context_name": "Java: INFSCI 0017 | Introduction to JAVA Programming - Program Construction > Two-Dimensional Arrays",
+      "used_at": "2017-08-20T11:59:48.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=350",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=350",
+      "context_name": "Java: INFSCI 0017 | Java programming course - Norway > Two-Dimensional Arrays",
+      "used_at": "2017-12-13T17:21:41.000Z",
+      "used_by": "Boban Vesin, Boban Vesin - NTNU"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 4 - Arrays ",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.099Z"
+}

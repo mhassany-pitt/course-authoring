@@ -1,0 +1,98 @@
+{
+  "id": "6954bccff9187b06cf836f23",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:07.941Z",
+  "tags": [],
+  "identity": {
+    "id": "py_operator1_es",
+    "title": "PCRS C3-PL  Operator1",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/234/embed?act=PCRS&sub=py_operator1_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "First, click the green \"Submit\" button in the centre bottom of the window and follow the instructions on your handout.",
+    "source_code": "[student_code]\r\n# when you arrive at UofT you need 20 credits\r\ncompleted = 0\r\nrequired = 20\r\ncredits_to_go = required - completed\r\n\r\n# but by Christmas break, you've done\r\n# 5 courses\r\ncompleted = 5\r\n\r\n# oops. They were 5 half-courses\r\ncompleted = completed / 2\r\n\r\n# let's update the credits left to take\r\ncredits_to_go = required - completed\r\n\r\n# now by April, you have completed 5 full credits\r\ncompleted = 5\r\n\r\n# by the end of 2nd year, you have done 5 more\r\n# TODO: Write your last assignment statement here:\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "Subtraction",
+          "Addition",
+          "SimpleAssignmentStatement",
+          "ChangingValueVariable",
+          "IntegerLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "IntegerLiteral",
+          "SimpleAssignmentStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "ChangingValueVariable"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/234/embed?act=PCRS&sub=py_operator1_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.985Z"
+}

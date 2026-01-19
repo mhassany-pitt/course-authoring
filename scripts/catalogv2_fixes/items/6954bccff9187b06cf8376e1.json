@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8376e1",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:27.711Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "IF2",
+    "title": "IF2",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=IF2&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int grade;\n\u00a0\u00a0\u00a0int aCount = 0, bCount = 0, cCount = 0;\n\u00a0\u00a0\u00a0int dCount = 0, fCount = 0;\n\n\u00a0\u00a0\u00a0printf( \"Enter the letter grades.\" );\n\u00a0\u00a0\u00a0printf( \" Enter the EOF character to end input:\\n\" );\n\n\u00a0\u00a0\u00a0while ( ( grade = getchar() ) != EOF ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( grade == 'A' || grade == 'a' )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++aCount;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if ( grade == 'B' || grade == 'b' )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++bCount;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if ( grade == 'C' || grade == 'c' )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++cCount;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if ( grade == 'D' || grade == 'd' )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++dCount;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if ( grade == 'F' || grade == 'f' )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++fCount;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if ( grade == '\\n' || grade == ' ' )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0;     /* empty body */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"Incorrect letter grade entered.\" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \" Enter a new grade.\\n\" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0printf( \"\\nTotals for each letter grade were:\\n\" );\n\u00a0\u00a0\u00a0printf( \"A: %d\\n\", aCount );\n\u00a0\u00a0\u00a0printf( \"B: %d\\n\", bCount );\n\u00a0\u00a0\u00a0printf( \"C: %d\\n\", cCount );\n\u00a0\u00a0\u00a0printf( \"D: %d\\n\", dCount );\n\u00a0\u00a0\u00a0printf( \"F: %d\\n\", fCount );\n\n\u00a0\u00a0\u00a0return 0;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=IF2&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.186Z"
+}

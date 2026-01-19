@@ -1,0 +1,91 @@
+{
+  "id": "6954bccff9187b06cf837629",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:00.505Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "capitalyears.c",
+    "title": "IS12:: capitalyears.c (4.3)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=capitalyears.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*  The growth of capital over years\n\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky\n\u00a0\u00a0\u00a0\u00a0Primary objective: Practicing while loop with countdown control\n\u00a0\u00a0\u00a0\u00a0Secondary objective: Practicing data input and compound assignment\n\u00a0*/\n\n#include <stdio.h>\n\nvoid main() {\n\u00a0\u00a0\u00a0\u00a0int years; /* years the capital stays in bank */\n\u00a0\u00a0\u00a0\u00a0float interest_rate; /* interest rate in percents */\n\u00a0\u00a0\u00a0\u00a0float capital; /* capital in dollars */\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Startup capital ($$$.cc): \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%f\", &capital);\n\u00a0\u00a0\u00a0\u00a0printf(\"Interest rate in percents (xx.xx): \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%f\", &interest_rate);\n\u00a0\u00a0\u00a0\u00a0printf(\"How many years? \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &years);\n\n\u00a0\u00a0\u00a0\u00a0while (years) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0capital += capital * interest_rate / 100;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0--years;\n\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0printf(\"New capital %9.2f\n\", capital);\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "int",
+          "pre_decrement",
+          "void",
+          "div",
+          "reference",
+          "include",
+          "variable_declaration",
+          "mul",
+          "main_function",
+          "float",
+          "add_assignment",
+          "while",
+          "printf",
+          "scanf"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=capitalyears.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.175Z"
+}

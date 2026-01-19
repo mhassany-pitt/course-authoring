@@ -1,0 +1,122 @@
+{
+  "id": "6954bccff9187b06cf836da4",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:19:48.000Z",
+  "updated_at": "2026-01-17T05:27:23.535Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_addition_es",
+    "title": "Practicar el orden de l\u00edneas para obtener el n\u00famero correcto",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_addition_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:19:48.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que imprima el valor 8.",
+    "source_code": "primero = 3\nprimero = primero + 1\nprimero = primero + primero\nprint(primero)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "Printing"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "parser": {
+        "concepts": [
+          "Int",
+          "Add",
+          "Call",
+          "Assign"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Int",
+          "Call",
+          "Assign",
+          "Add"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "Printing"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_addition_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Variables y Operaciones",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.942Z"
+}

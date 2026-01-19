@@ -1,0 +1,90 @@
+{
+  "id": "6954bccff9187b06cf837625",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:57:59.955Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "capital.c",
+    "title": "IS12:: capital.c (3.3)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=capital.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\nmain() {\n\u00a0\u00a0\u00a0\u00a0float interest_rate; /* interest rate in percents */\n\u00a0\u00a0\u00a0\u00a0int capital; /* starting capital in dollars */\n\u00a0\u00a0\u00a0\u00a0float annual_interest; /* annual interest in dollars */\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Capital ($$) and interest rate (%%xx.xx): \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%d %f\",&capital, &interest_rate);\n\n\u00a0\u00a0\u00a0\u00a0annual_interest = capital * interest_rate / 100;\n\u00a0\u00a0\u00a0\u00a0printf(\"Interest %6.2f; Total %9.2f\n\", annual_interest, capital + annual_interest);\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "scanf",
+          "int",
+          "void",
+          "div",
+          "reference",
+          "include",
+          "variable_declaration",
+          "add",
+          "mul",
+          "main_function",
+          "float",
+          "printf",
+          "simple_assignment"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=capital.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.175Z"
+}

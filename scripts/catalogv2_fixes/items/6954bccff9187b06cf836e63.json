@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e63",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:45.716Z",
+  "tags": [],
+  "identity": {
+    "id": "py_user_class1",
+    "title": "PCRS C3-PL  User Class1",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/91/embed?act=PCRS&sub=py_user_class1"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "The User class represents a user with a username, password, and account information.Complete the update_account method in the code below according to its docstring description. Call the login method in your solution.",
+    "source_code": "[student_code]\r\nclass User:\r\n    \r\n    def __init__(self, username, password, account_info):\r\n        \"\"\" (User, str, str, str) -> NoneType\r\n        \r\n        Initialize the user with username, password, and account_info.\r\n        \r\n        >>> new_user = User('xyz', 'password1', \"Bob's Online Banking\")\r\n        >>> new_user.username\r\n        'xyz'\r\n        >>> new_user.password\r\n        'password1'\r\n        >>> new_user.account_info\r\n        \"Bob's Online Banking\"\r\n        \"\"\"\r\n        self.username = username\r\n        self.password = password\r\n        self.account_info = account_info\r\n        \r\n    def login(self, entered_password):\r\n        \"\"\" (User, str) -> bool\r\n        \r\n        Return True iff the user's password matches entered_password.\r\n        \r\n        >>> new_user = User('xyz', 'password1', \"Bob's Online Banking\")\r\n        >>> new_user.login('password1')\r\n        True\r\n        >>> new_user.login('1234')\r\n        False\r\n        \"\"\"\r\n        return self.password == entered_password\r\n\r\n    def update_account(self, entered_password, new_info):\r\n        \"\"\" (User, str, str) -> NoneType\r\n        \r\n        Modify the user's account_info to be new_info if the user's password\r\n        matches entered_password.\r\n        \r\n        >>> new_user = User('xyz', 'password1', \"Bob's Online Banking\")\r\n        >>> new_user.update_account('1234', 'B.O.B.')\r\n        >>> new_user.account_info\r\n        \"Bob's Online Banking\"\r\n        >>> new_user.update_account('password1', 'B.O.B.')\r\n        >>> new_user.account_info\r\n        'B.O.B.'\r\n        \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/91/embed?act=PCRS&sub=py_user_class1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.961Z"
+}

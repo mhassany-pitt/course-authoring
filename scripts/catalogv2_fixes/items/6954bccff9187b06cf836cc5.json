@@ -1,0 +1,81 @@
+{
+  "id": "6954bccff9187b06cf836cc5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:26:08.000Z",
+  "updated_at": "2026-01-17T05:26:45.559Z",
+  "tags": [],
+  "identity": {
+    "id": "objects.classes.tv__68bdb308f6cc3d7a9cc096b7",
+    "title": "The Class for Representing a TV (Case 1)",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096b7?_t=1757557568035&index=0"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:26:08.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a class that represents a TV. The class should contain data that represents the TV's state (power on or off, current channel). The class should include methods to access the state of the TV and also methods to change the state of the TV (turn on/off, change channels). Assume that the valid channel range is from 1 to 120 (both inclusive). \\n\\nThe class TVTester1 instantiates two objects from this class and invokes the methods on those objects to turn on the TV and change the channel.",
+    "source_code": "public class TVTester1 {  \n\tpublic static void main(String[] args) {\n\t\tTV1 tv1 = new TV1();\n\t\ttv1.turnOn();\n\t\ttv1.setChannel(30);\n\t\tTV1 tv2 = new TV1();\n\t\ttv2.turnOn();\n\t\ttv2.channelUp();\n\t\ttv2.channelUp();\n\t\ttv2.channelDown();\n\t\tSystem.out.println(\"tv1's channel is \" + tv1.getChannel());\n\t\tSystem.out.println(\"tv2's channel is \" + tv2.getChannel());\n\t}\n}\nclass TV1 {\n\t//Step 1: Declare the instance variables \n\tprivate boolean on = false; \n\tprivate int channel = 1; \n\t//Step 2: Define the methods to change the on/off state of the TV \n\tpublic void turnOn() {\n\t\ton = true;\n\t}\n\tpublic void turnOff() {\n\t\ton = false;\n\t}\n\t//Step 3: Define the methods to change the channel of the TV \n\tpublic void setChannel(int newChannel) {\n\t\tif (on && newChannel >= 1 && newChannel <= 120)\n\t\t\tchannel = newChannel;\n\t}\n\tpublic void channelUp() {\n\t\tif (on && channel < 120)\n\t\t\tchannel++;\n\t}\n\tpublic void channelDown() {\n\t\tif (on && channel > 1)\n\t\t\tchannel--;\n\t}\n\t//Step 4: Define the methods to get the current state of the TV \n\tpublic int getChannel() {\n\t\treturn channel;\n\t}\n\tpublic boolean isOn() {\n\t\treturn on;\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096b7?_t=1757557568035&index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Objects and Classes",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > Objects and Classes",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.915Z"
+}

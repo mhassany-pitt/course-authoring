@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836f55",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-03-28T00:39:01.000Z",
+  "updated_at": "2026-01-17T05:28:13.621Z",
+  "tags": [],
+  "identity": {
+    "id": "py_nth_character",
+    "title": "nth Character",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/10/embed?act=PCRS&sub=py_nth_character"
+  },
+  "attribution": {
+    "created_at": "2025-03-28T00:39:01.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the body for the following function. While this function could be completed with a for loop, for practice, we request that you use a while loop.",
+    "source_code": "[student_code]\r\ndef every_nth_character(s, n):\r\n    \"\"\" (str, int) -> str\r\n\r\n    Return every nth character in s starting at index 0.\r\n\r\n    >>> every_nth_character('Computer Science', 3)\r\n    'CpeSee'\r\n    \"\"\"\r\n\r\n    result = ''\r\n    i = 0\r\n\r\n    #TODO add the rest of the code here\r\n\r\n    return result\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/10/embed?act=PCRS&sub=py_nth_character"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > While Loops",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > While Loops",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > While Loops",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.992Z"
+}

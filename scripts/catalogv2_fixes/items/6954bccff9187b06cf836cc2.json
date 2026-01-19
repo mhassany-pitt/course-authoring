@@ -1,0 +1,81 @@
+{
+  "id": "6954bccff9187b06cf836cc2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:26:48.000Z",
+  "updated_at": "2026-01-17T05:26:45.201Z",
+  "tags": [],
+  "identity": {
+    "id": "Accessing String Characters (Case 2)__68bdb308f6cc3d7a9cc096a7-68bdb308f6cc3d7a9cc096a5-1",
+    "title": "Accessing String Characters (Case 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096a7?_t=1757557608459&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:26:48.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that prints the 7th, 11th, and 14th character of the string \"Second Example!\".",
+    "source_code": "public class JCharAt2 {\n\tpublic static void main(String[] args) {\n\t\t//Step 1: Extract the characters from the string\n\t\tString str = \"Second Example!\"; \n\t\tchar ch1 = str.charAt(6);\n\t\tchar ch2 = str.charAt(10);\n\t\tchar ch3 = str.charAt(13);\n\t\t//Step 2: Print the extracted characters\n\t\tSystem.out.println(\"The 7th character: \"+ch1);\n\t\tSystem.out.println(\"The 11th character: \"+ch2);\n\t\tSystem.out.println(\"The 14th character: \"+ch3);\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096a7?_t=1757557608459&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Strings",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > Strings",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.915Z"
+}

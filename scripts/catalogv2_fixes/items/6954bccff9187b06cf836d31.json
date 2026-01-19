@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836d31",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T18:16:06.000Z",
+  "updated_at": "2026-01-17T05:26:58.726Z",
+  "tags": [],
+  "identity": {
+    "id": "arithmetic.time_conversion__68bdb309f6cc3d7a9cc09853",
+    "title": "Seconds to Minutes Conversion",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09853?_t=1757995090636&index=0"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T18:16:06.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that obtains minutes and remaining seconds from the input amount of time in seconds. For example, 500 seconds contains 8 minutes and 20 seconds.",
+    "source_code": "import java.util.Scanner;\npublic class DisplayTime1 {\n\tpublic static void main(String[] args) {\n\t\t//Step 1: Read the seconds\n\t\tScanner scan = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter an integer for seconds: \");\n\t\tint seconds = scan.nextInt();\n\t\tscan.close();\n\t\t//Step 2: Obtain minutes and remaining seconds from the input seconds\n\t\tint minutes = seconds / 60; \n\t\tint remainingSeconds = seconds % 60;\n\t\t//Step 3: Display the result\n\t\tSystem.out.println(seconds + \" seconds is \" + minutes +    \" minutes and \" + remainingSeconds + \" seconds.\");  \n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09853?_t=1757995090636&index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Arithmetic Operations",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Variables and Operations",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > Variables and Operations",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.929Z"
+}

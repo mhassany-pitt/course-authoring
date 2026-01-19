@@ -1,0 +1,244 @@
+{
+  "id": "6954bccff9187b06cf8372b0",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2017-11-12T08:54:53.000Z",
+  "updated_at": "2026-01-17T05:29:46.059Z",
+  "tags": [],
+  "identity": {
+    "id": "inheritance_1",
+    "title": "Inheritance 1",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/376/embed?act=PCRS&sub=inheritance_1"
+  },
+  "attribution": {
+    "created_at": "2017-11-12T08:54:53.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Suppose that we have a class Book and we want to extend it to produce class Dictionary. The class Book has one data member, pages, that is an integer that represents the number of the pages in the book. A Dictionary has two data members, pages (representing number of pages in the dictionary) and definitions (representing the number of definitions in the dictionary). Complete the class Dictionary by adding the required data member, two constructors, and the required getter method to return the data member of class Dictionary. The Dictionary class should have constructors that permit a dictionary to be created when:(1) the number of pages  and the number of definitions in the dictionary are specified(2) none of the dictionary properties are specified. In this case, we create a dictionary with default values, that is a dictionary with 200 pages and 10000 definitions.",
+    "source_code": "[file SCode.java]\n[blocked]\nclass Book {\n\tprivate int pages;\n\t\n    public Book (int numPages) {\n\t      pages = numPages;\n\t}\n\t\n    public int getPages() {\n\t\treturn pages;\n\t}\n}\n\nclass Dictionary extends Book {\n[/blocked]   \n[student_code]\n    // TODO: Write your code here\n\t\n    \n    \n    \n    \n    \n    \n    \n    \n    \n[/student_code]\n[blocked]\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "SuperclassConstructorCall",
+          "ConstructorDefinition",
+          "PublicConstructorSpecifier",
+          "ExtendsSpecification",
+          "PrivateFieldSpecifier",
+          "FormalMethodParameter"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "parser": {
+        "concepts": [
+          "ReturnStatement",
+          "MethodDefinition",
+          "SimpleAssignmentExpression",
+          "ClassDefinition",
+          "InstanceField",
+          "IntDataType",
+          "SimpleVariable",
+          "PublicMethodSpecifier"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ClassDefinition",
+          "ConstructorDefinition",
+          "ExtendsSpecification",
+          "FormalMethodParameter",
+          "InstanceField",
+          "IntDataType",
+          "MethodDefinition",
+          "PrivateFieldSpecifier",
+          "PublicConstructorSpecifier",
+          "PublicMethodSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "SuperclassConstructorCall"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/376/embed?act=PCRS&sub=inheritance_1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=31",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_name": "Java: INFSCI 0017 | roya-clone-test-java > Inheritance",
+      "used_at": "2015-12-08T17:16:50.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=345",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=345",
+      "context_name": "Java: INFSCI 0017 | Introduction to JAVA Programming - Program Construction > Inheritance",
+      "used_at": "2017-08-20T11:59:48.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=350",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=350",
+      "context_name": "Java: INFSCI 0017 | Java programming course - Norway > Inheritance",
+      "used_at": "2017-12-13T17:21:41.000Z",
+      "used_by": "Boban Vesin, Boban Vesin - NTNU"
+    },
+    {
+      "context_id": "cid=351",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=351",
+      "context_name": "Java: INFSCI 0017 | CS 0401 - Intermediate Java Programming (Spring 2018) > Inheritance",
+      "used_at": "2017-12-17T19:07:09.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=352",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=352",
+      "context_name": "Java: INFSCI 0017 | Norway-Spring2018 Java Course > Inheritance",
+      "used_at": "2018-01-15T17:35:55.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=361",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=361",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 (QJ-AE-PCEX-PCRS) > Inheritance",
+      "used_at": "2018-09-11T14:14:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=366",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=366",
+      "context_name": "Java: INFSCI 0017 | CSEdPad course v1 (all Java content) > Inheritance",
+      "used_at": "2018-10-18T16:24:57.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Inheritance",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=402",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=402",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming (No Labs - Extra content) > Inheritance",
+      "used_at": "2020-09-04T14:53:50.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Constructors/Overload/Inheritance",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Inheritance",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Inheritance",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Inheritance",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=416",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=416",
+      "context_name": "Java: INFSCI 0017 | Novi Sad Java Fall 2021 > Inheritance",
+      "used_at": "2021-10-18T14:55:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Inheritance",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 3c- Inheritance ",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Inheritance",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=474",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=474",
+      "context_name": "Java: CMU15-121 | CMU 15-121 - Intro Data Structures - Fall 2025 > Inheritance",
+      "used_at": "2025-09-16T16:41:24.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.097Z"
+}

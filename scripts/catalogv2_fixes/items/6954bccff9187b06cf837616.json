@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837616",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:57:57.823Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "read_seq_file",
+    "title": "read_seq_file",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=read_seq_file&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int account;    \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 /* account number */\n\u00a0\u00a0\u00a0char name[ 30 ]; \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/*  account name */\n\u00a0\u00a0\u00a0double balance;  \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/*  account balance */\n\n\u00a0\u00a0\u00a0FILE *cfPtr;    \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* cfPtr = clients.dat file pointer */\n\n\u00a0\u00a0\u00a0/* fopen opens file; exits program if file cannot be opened */\n\n\u00a0\u00a0\u00a0if ( ( cfPtr = fopen( \"clients.dat\", \"r\" ) ) == NULL ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"File could not be opened\\n\" );\n\u00a0\u00a0\u00a0} /* end if */\n\u00a0\u00a0\u00a0else { /* read account, name and balance from file */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%-10s%-13s%s\\n\", \"Account\", \"Name\", \"Balance\" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fscanf( cfPtr, \"%d%s%lf\", &account, name, &balance );\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* while not end of file */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0while ( !feof( cfPtr ) ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%-10d%-13s%7.2f\\n\", account, name, balance );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fscanf( cfPtr, \"%d%s%lf\", &account, name, &balance );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} /* end while */\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fclose( cfPtr ); /* fclose closes the file */\n\u00a0\u00a0\u00a0} /* end else */\n\n\u00a0\u00a0\u00a0return 0; /* indicates successful termination */\n\n} /* end main */\n} /* end main */"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=read_seq_file&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.174Z"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e4f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:43.520Z",
+  "tags": [],
+  "identity": {
+    "id": "py_reverse_lookup",
+    "title": "PCRS C3-PL  Reverse Lookup",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/64/embed?act=PCRS&sub=py_reverse_lookup"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "You have been asked to write a function that supplies the \"reverse lookup\" name for the person associated with a phone number.  This means that given a phone number, you get the name of the person who is registered with that phone number.  Write this function using parallel lists.Complete the following functions:",
+    "source_code": "[student_code]\r\ndef reverse_lookup_lists(phone_num, phone_numbers, names):\r\n    \"\"\" (str, list of str, list of str) -> str\r\n\r\n    Precondition: len(phone_numbers) == len(names)\r\n\r\n    This function receives a phone number phone_num, and two lists: a list of \r\n    phone numbers phone_numbers and a list of names names.  These lists are\r\n    parallel lists, so the name in position 0 of the names list is \r\n    associated with the phone number in position 0 of the phone_numbers \r\n    list, and so on.\r\n\r\n    Return the name associated with phone_num according to phone_numbers\r\n    and names, or an empty string if there is no match.\r\n    \r\n    >>> reverse_lookup_lists('416-555-6543', ['416-555-3498', \\\r\n        '647-555-9812', '416-555-6543', '905-555-6681'], ['John A. Macdonald', \\\r\n        'Louis Riel', 'Canoe Head', 'Tim Horton'])        \r\n    'Canoe Head'\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/64/embed?act=PCRS&sub=py_reverse_lookup"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.959Z"
+}

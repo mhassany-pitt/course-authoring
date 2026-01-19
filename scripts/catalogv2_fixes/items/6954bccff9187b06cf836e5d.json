@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836e5d",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:44.976Z",
+  "tags": [],
+  "identity": {
+    "id": "py_overdue_fees",
+    "title": "PCRS C3-PL  Overdue Fees",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/84/embed?act=PCRS&sub=py_overdue_fees"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "A library charges overdue fees for a borrowed book using the following fee schedule:less than 4 days late: 1 dollar per day4 to 6 days late: 2 dollars per day (for all days, including the first 3 days)more than 6 days late: 3 dollars per day (for all days, including the first 6 days)Borrowers of books are in one of these age groups: CHILD, ADULT, or SENIOR. A CHILD gets charged only half of the fees and a SENIOR gets charged only one quarter of the fees. An ADULT pays the full fee.Complete the following function according to the description above and the docstring below.",
+    "source_code": "[student_code]\r\nCHILD = \"child\"\r\nSENIOR = \"senior\"\r\nADULT = \"adult\"\r\n\r\ndef overdue_fees(days_late, age_group):\r\n    \"\"\" (int, str) -> number\r\n    \r\n    Return the fees for a book that is days_late days late for a borrower\r\n    in the age group age_group.\r\n    \r\n    >>> overdue_fees(2, SENIOR) # 2 days late, SENIOR borrower\r\n    0.5\r\n    >>> overdue_fees(5, ADULT) # 5 days late, ADULT borrower\r\n    10\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/84/embed?act=PCRS&sub=py_overdue_fees"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > If-Else",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > If-Else",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > If-Else",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.961Z"
+}

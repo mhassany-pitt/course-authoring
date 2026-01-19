@@ -1,0 +1,190 @@
+{
+  "id": "6954bccff9187b06cf836dcb",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:19:48.000Z",
+  "updated_at": "2026-01-17T05:27:28.007Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_palindrome3_es",
+    "title": "Crear una funci\u00f3n que verifique si una cadena es un pal\u00edndromo o no",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_palindrome3_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:19:48.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye una funcion que determine si la cadena dada como parametro es un palindromo. La funcion debe ser insensible a mayusculas y minusculas.",
+    "source_code": "def es_palindromo(cadena):\n    n_cadena = cadena.lower()\n    cadena_invertida = \"\"\n    for caracter in n_cadena:\n        cadena_invertida = caracter + cadena_invertida\n    if n_cadena == cadena_invertida:\n        return True\n    else:\n        return False\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "Attribute",
+          "Try",
+          "arg",
+          "Assign",
+          "Str",
+          "ExceptHandler",
+          "If",
+          "For",
+          "Eq",
+          "FunctionDef",
+          "Add",
+          "Call"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm_rully": {
+        "concepts": [
+          "StringLiteral",
+          "BooleanLiteral",
+          "LogicalExpression",
+          "ComparisonExpression",
+          "SimpleAssignmentStatement",
+          "Concatenation",
+          "IfElseChecking",
+          "BooleanEvaluating",
+          "IfElseCheckingInForLoop",
+          "ReplacingStringContent",
+          "CreatingString",
+          "TransformingToStringType",
+          "IndexingString",
+          "ConvertStringToLowerCase",
+          "Addition",
+          "SingleForLoopIteration",
+          "CallingStandardFunction",
+          "DefiningFunctionCallingFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "ExceptHandler",
+          "For",
+          "Call",
+          "Assign",
+          "Eq",
+          "FunctionDef",
+          "Try",
+          "Attribute",
+          "Add",
+          "If",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "CallingStandardFunction",
+          "ComparisonExpression",
+          "SimpleAssignmentStatement",
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "BooleanEvaluating",
+          "BooleanLiteral",
+          "Concatenation",
+          "ConvertStringToLowerCase",
+          "CreatingString",
+          "DefiningFunctionCallingFunction",
+          "IfElseChecking",
+          "IfElseCheckingInForLoop",
+          "IndexingString",
+          "ReplacingStringContent",
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_palindrome3_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Strings",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Strings",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Strings",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=464",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=464",
+      "context_name": "Python: UTFSM-Progra | Test Jordan Thesis Python ES > Strings",
+      "used_at": "2025-07-10T18:56:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.946Z"
+}

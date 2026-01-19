@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8370f0",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-09-06T00:34:41.000Z",
+  "updated_at": "2026-01-17T12:55:18.523Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "circle_class2",
+    "title": "Circle Class2",
+    "type": "Animated Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=circle_class2&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2021-09-06T00:34:41.000Z",
+    "provider": "JSVEE",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "class Circle():\n\n    def __init__(self, r):\n        self.__radius = r\n\n    def area(self):\n        return self.__radius ** 2 * 3.14\n\n    def perimeter(self):\n        return 2 * self.__radius * 3.14\n\n\ncircle1 = Circle(8)\nprint(circle1.area())\nprint(circle1.perimeter())\n\nnew_radius = int(input(\"Enter the radius of a new circle:\"))\ncircle2 = Circle(new_radius)\nprint(circle2.area())\nprint(circle2.perimeter())\n\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=circle_class2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.046Z"
+}

@@ -1,0 +1,259 @@
+{
+  "id": "6954bccff9187b06cf837576",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2015-06-15T11:01:16.000Z",
+  "updated_at": "2026-01-17T12:57:33.617Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "ae_adl_arithmetics2",
+    "title": "Aritmethics 2",
+    "type": "Animated Example"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_arithmetics2&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2015-06-15T11:01:16.000Z",
+    "provider": "JSVEE",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Sirki\u00e4 Teemu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "a = 2 + 3 * 9\nb = a * (50 - a) / 2.5\nprint(\"The end result is\", b)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "Multiplication",
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "Printing",
+          "Division",
+          "Subtraction",
+          "CreatingString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "parser": {
+        "concepts": [
+          "Int",
+          "Float",
+          "Div",
+          "Sub",
+          "Call",
+          "Str",
+          "Assign",
+          "Add",
+          "Mult"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Sub",
+          "Call",
+          "Assign",
+          "Float",
+          "Int",
+          "Div",
+          "Add",
+          "Mult",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "CreatingString",
+          "Division",
+          "Multiplication",
+          "Printing",
+          "Subtraction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_arithmetics2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=23",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=23",
+      "context_name": "Python: PYTHON001 | Python Course (v1) > Variables",
+      "used_at": "2015-05-11T10:25:58.000Z",
+      "used_by": "Python Admin - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=344",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
+      "context_name": "Python: PYTHON001 | PythonCourseV1Clones > Variables",
+      "used_at": "2017-05-22T17:58:24.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=355",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=355",
+      "context_name": "Python: PYTHON001 | PythonCourse (Full) > Variables",
+      "used_at": "2018-02-13T09:11:23.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=356",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=356",
+      "context_name": "Python: PYTHON001 | PythonCourse (AE-QP-Parsons) > Variables",
+      "used_at": "2018-02-17T17:22:08.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=396",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=396",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Fall 2020) > Variables and Operations",
+      "used_at": "2020-08-16T23:39:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=403",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=403",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 > Variables and Operations",
+      "used_at": "2020-09-04T17:46:26.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > Variables and Operations",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=407",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=407",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Spring 2021) > Variables and Operations",
+      "used_at": "2021-01-26T22:51:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=410",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=410",
+      "context_name": "Python: PYTHON001 | Utrecht Python Spring 2021 > Variables and Operations",
+      "used_at": "2021-02-16T21:53:05.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=411",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=411",
+      "context_name": "Python: PYTHON001 | Intelligent Textbooks Utrecht Python > Variables and Operations",
+      "used_at": "2021-05-07T09:41:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=420",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=420",
+      "context_name": "Python: PYTHON001 | Utrecht-Python-Textbook > Lecture 3",
+      "used_at": "2022-02-01T14:15:04.000Z",
+      "used_by": "Alireza, Sabet - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=421",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=421",
+      "context_name": "Python: PYTHON001 | Australia Spring 2022 > Variables and Operations",
+      "used_at": "2022-05-09T01:08:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=426",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=426",
+      "context_name": "Python: PYTHON001 | Novi Sad Python Fall 2022 > Variables and Operations",
+      "used_at": "2022-10-03T23:23:00.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=429",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=429",
+      "context_name": "Python: INFO063-17 | INTRODUCCI\u00c3\u0093N A LA PROGRAMACI\u00c3\u0093N > Variables and Operations",
+      "used_at": "2023-05-30T22:07:20.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=448",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=448",
+      "context_name": "Python: Temple-MIS2502-2025-Spring-2Python | Temple MIS2502 2025-Spring 2-Python > Variables and Operations",
+      "used_at": "2024-12-12T15:41:33.000Z",
+      "used_by": "Rully Agus Hendrawan, Rully Agus Hendrawan - "
+    },
+    {
+      "context_id": "cid=460",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Worked Examples > Variables and Operations",
+      "used_at": "2025-04-09T10:48:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=465",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=465",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Fall 2025) > Variables and Operations",
+      "used_at": "2025-08-08T15:59:35.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=490",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=490",
+      "context_name": "Python: KAU001 | Intro to Python - Fall 2025 > Variables and Operations",
+      "used_at": "2025-10-08T19:58:50.000Z",
+      "used_by": "Rafaella Sampaio de Alencar - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.159Z"
+}

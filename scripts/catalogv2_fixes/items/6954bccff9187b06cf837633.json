@@ -1,0 +1,85 @@
+{
+  "id": "6954bccff9187b06cf837633",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:01.906Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "better_copycat.c",
+    "title": "IS12:: better_copycat.c (6.5)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=better_copycat.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\nint main()\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int c;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0while ((c = getchar()) != EOF)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0putchar ( c );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return 0;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "int",
+          "variable_declaration",
+          "include",
+          "return",
+          "main_function",
+          "while",
+          "not_equal",
+          "simple_assignment"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=better_copycat.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.175Z"
+}

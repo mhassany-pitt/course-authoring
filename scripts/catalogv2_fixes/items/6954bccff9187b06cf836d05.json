@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf836d05",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:14:08.000Z",
+  "updated_at": "2026-01-17T05:26:53.295Z",
+  "tags": [],
+  "identity": {
+    "id": " Animal Class Hierarchy (Case 2) __68bdb309f6cc3d7a9cc097ac-68bdb309f6cc3d7a9cc097aa-1",
+    "title": " Animal Class Hierarchy (Case 2) ",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097ac?_t=1757556848204&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:14:08.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Suppose we have a class Animal and we want to extend it to produce class Dog. An animal has a name. A Dog has a name and an owner. Write the class declarations, the constructors, and the toString methods for these two classes. Also, include a method called speak to print a string that represents an animal's and a dog's voice. We show the voice of an animal by printing its name. We show the voice of a dog by printing its name followed by the text Woof Woof.\\n\\nThe class AnimalTester2 tests these classes and their methods.",
+    "source_code": "public class AnimalTester2 {\n\tpublic static void main(String[] args) {\n\t\tAnimal anim = new Animal(\"Fido\");   \n\t\tanim.speak();\n\t\tDog doggy = new Dog(\"Smokey\",\"Bob\"); \n\t\tdoggy.speak();\n\t}\n}\n//Step 1: Define the class Animal\nclass Animal {\n\t//Step 1.1: Declare the instance variable\n\tprivate String name;\n\t//Step 1.2: Define the constructor to create an animal with the specified name\n\tpublic Animal(String name) {\n\t\tthis.name = name;\n\t}\n\t //Step 1.3: Define the method to give a voice to the animal\n\tpublic void speak() {\n\t\tSystem.out.println(\"My name is \" + name);\n\t}\n\t//Step 1.4: Define the toString method to get the string representation of the Animal instance\n\tpublic String toString() {\n\t\treturn \" Name: \" + name;\n\t}\n\t//Step 1.5: Define the method to get the animal's name\n\tpublic String getName() {\n\t\treturn name;\n\t}\n}\n//Step 2: Extend the class Animal to define the class Dog\nclass Dog extends Animal {\n\t//Step 2.1: Declare the instance variable\n\tprivate String owner;\n\t//Step 2.2: Define the constructor to create a dog with the specified name and owner\n \tpublic Dog(String name, String owner) {\n \t\tsuper(name); \n\t\tthis.owner = owner;\t\n\t}\n\t//Step 2.3: Override the speak method of the class Animal to give a voice to the Dog\n\tpublic void speak() {\n\t\tsuper.speak();\n\t\tSystem.out.println(\"Woof, Woof!\");\n\t}\n\t//Step 2.4: Override the toString method of class Animal to get the string representation of the Dog instance\n\tpublic String toString() {\n\t\treturn super.toString() + \",  Owner: \" + owner;\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097ac?_t=1757556848204&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Inheritance",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.921Z"
+}

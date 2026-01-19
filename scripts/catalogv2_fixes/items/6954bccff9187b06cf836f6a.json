@@ -1,0 +1,95 @@
+{
+  "id": "6954bccff9187b06cf836f6a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-02-23T15:45:46.000Z",
+  "updated_at": "2026-01-17T05:28:15.959Z",
+  "tags": [],
+  "identity": {
+    "id": "py_json_agg_2",
+    "title": "JSON Aggregate 2",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_agg_2"
+  },
+  "attribution": {
+    "created_at": "2025-02-23T15:45:46.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Rully Hendrawan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "You're give the age of different people in JSON format, find the name of the person",
+    "source_code": "import json\n\ndata = [\n    {\"name\": \"Alice\", \"age\": 25},\n    {\"name\": \"Bob\", \"age\": 30},\n    {\"name\": \"Charlie\", \"age\": 22},\n    {\"name\": \"David\", \"age\": 28},\n    {\"name\": \"Eve\", \"age\": 35}\n]\n\nmax_age = None\nname = None\n\n# Loop through the list to calculate aggregations\nfor person in people:\n    age = person[\"age\"]\n    \n    if max_age is None or age > max_age:\n        max_age = age\n        name = person[\"name\"]\n    \n\nprint(\"Oldest Person\", name)\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_agg_2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=448",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=448",
+      "context_name": "Python: Temple-MIS2502-2025-Spring-2Python | Temple MIS2502 2025-Spring 2-Python > JSON - aggregate",
+      "used_at": "2024-12-12T15:41:33.000Z",
+      "used_by": "Rully Agus Hendrawan, Rully Agus Hendrawan - "
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > JSON processing",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=460",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Worked Examples > JSON processing/Statistics",
+      "used_at": "2025-04-09T10:48:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > JSON processing",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.994Z"
+}

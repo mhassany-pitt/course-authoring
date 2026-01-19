@@ -1,0 +1,426 @@
+{
+  "id": "6954bccff9187b06cf8377e0",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:59:07.294Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "jInheritance5",
+    "title": "Inheritance 5",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jInheritance5&act=Inheritance&sub=jInheritance5&svc=progvis"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "QuizJET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Sharon Hsiao",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class Tester {\n\n   public static void main(String[] args) { \n\t\n      Animal it = new Animal(1000, 8);\n\t\t\n      Animal doggy = new Dog(8, 4);\n\t\t\n      Animal billy = new Man(8*5, 2, 100);\n\t\t\n      System.out.println(it);\n      System.out.println(doggy);\n      System.out.println(billy);\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "ObjectMethodInvocation",
+          "java.lang.Object~ObjectMethodInvocation",
+          "ImplicitTypeCasting",
+          "java.lang.Object~java.lang.System.out.println",
+          "InheritanceBasedPolymorphism~java.lang.System.out.println",
+          "DoubleDataType~StringAddition",
+          "IntDataType~StringAddition",
+          "OverridingToString~SuperclassMethodCall",
+          "AndExpression",
+          "BooleanDataType",
+          "ClassConstantInitializationStatement",
+          "ClassDefinition",
+          "ClassField",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "DivideExpression",
+          "DoubleDataType",
+          "EqualExpression",
+          "ExpressionStatement",
+          "ExtendsSpecification",
+          "FinalModifier",
+          "FormalMethodParameter",
+          "IfElseStatement",
+          "Inheritance",
+          "InheritanceBasedPolymorphism",
+          "InstanceField",
+          "InstanceFieldDefinitionStatement",
+          "InstanceFieldInvocation",
+          "IntDataType",
+          "java.lang.Object",
+          "java.lang.System.out.println",
+          "LessExpression",
+          "MethodDefinition",
+          "MethodOverriding",
+          "MultiplyExpression",
+          "ObjectCreationStatement",
+          "ObjectVariable",
+          "OverridingEquals",
+          "OverridingToString",
+          "PolymorphicObjectCreationStatement",
+          "PrivateAccessSpecifier",
+          "PublicAccessSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StaticModifier",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "SuperclassConstructorCall",
+          "SuperclassMethodCall",
+          "SuperclassSubclassConversion",
+          "SuperReference",
+          "ThisReference",
+          "VariableInitializationStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "webex_parser": {
+        "concepts": [
+          "Inheritance",
+          "Inheritance",
+          "ReturnStatement",
+          "ReturnStatement",
+          "ExpressionStatement",
+          "ExpressionStatement",
+          "InstanceFieldDefinitionStatement",
+          "InstanceFieldDefinitionStatement",
+          "ThisReference",
+          "ThisReference",
+          "AndExpression",
+          "AndExpression",
+          "StaticModifier",
+          "StaticModifier",
+          "InheritanceBasedPolymorphism",
+          "InheritanceBasedPolymorphism",
+          "EqualExpression",
+          "EqualExpression",
+          "StringAddition",
+          "StringAddition",
+          "MethodDefinition",
+          "MethodDefinition",
+          "ExtendsSpecification",
+          "ExtendsSpecification",
+          "SuperclassSubclassConversion",
+          "SuperclassSubclassConversion",
+          "SuperclassConstructorCall",
+          "SuperclassConstructorCall",
+          "java.lang.System.out.println",
+          "java.lang.System.out.println",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "SuperclassMethodCall",
+          "SuperclassMethodCall",
+          "ClassDefinition",
+          "ClassDefinition",
+          "InstanceField",
+          "InstanceField",
+          "MethodOverriding",
+          "MethodOverriding",
+          "SuperReference",
+          "SuperReference",
+          "ConstructorDefinition",
+          "ConstructorDefinition",
+          "java.lang.Object",
+          "java.lang.Object",
+          "DoubleDataType",
+          "DoubleDataType",
+          "OverridingToString",
+          "OverridingToString",
+          "ObjectCreationStatement",
+          "ObjectCreationStatement",
+          "LessExpression",
+          "LessExpression",
+          "MultiplyExpression",
+          "MultiplyExpression",
+          "IntDataType",
+          "IntDataType",
+          "BooleanDataType",
+          "BooleanDataType",
+          "ConstructorCall",
+          "ConstructorCall",
+          "ClassConstantInitializationStatement",
+          "ClassConstantInitializationStatement",
+          "StringLiteral",
+          "StringLiteral",
+          "DivideExpression",
+          "DivideExpression",
+          "ObjectVariable",
+          "ObjectVariable",
+          "PrivateAccessSpecifier",
+          "PrivateAccessSpecifier",
+          "PolymorphicObjectCreationStatement",
+          "PolymorphicObjectCreationStatement",
+          "VariableInitializationStatement",
+          "VariableInitializationStatement",
+          "PublicAccessSpecifier",
+          "PublicAccessSpecifier",
+          "IfElseStatement",
+          "IfElseStatement",
+          "SimpleVariable",
+          "SimpleVariable",
+          "FormalMethodParameter",
+          "FormalMethodParameter",
+          "FinalModifier",
+          "FinalModifier",
+          "ClassField",
+          "ClassField",
+          "StringDataType",
+          "StringDataType",
+          "OverridingEquals",
+          "OverridingEquals",
+          "InstanceFieldInvocation",
+          "InstanceFieldInvocation"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Inheritance"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "AndExpression",
+          "BooleanDataType",
+          "ClassConstantInitializationStatement",
+          "ClassDefinition",
+          "ClassField",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "DivideExpression",
+          "DoubleDataType",
+          "EqualExpression",
+          "ExpressionStatement",
+          "ExtendsSpecification",
+          "FinalModifier",
+          "FormalMethodParameter",
+          "IfElseStatement",
+          "InheritanceBasedPolymorphism",
+          "InstanceField",
+          "InstanceFieldDefinitionStatement",
+          "InstanceFieldInvocation",
+          "IntDataType",
+          "java.lang.Object",
+          "java.lang.System.out.println",
+          "LessExpression",
+          "MethodDefinition",
+          "MethodOverriding",
+          "MultiplyExpression",
+          "ObjectCreationStatement",
+          "ObjectVariable",
+          "OverridingEquals",
+          "OverridingToString",
+          "PolymorphicObjectCreationStatement",
+          "PrivateAccessSpecifier",
+          "PublicAccessSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StaticModifier",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "SuperclassConstructorCall",
+          "SuperclassMethodCall",
+          "SuperclassSubclassConversion",
+          "SuperReference",
+          "ThisReference",
+          "VariableInitializationStatement",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "VoidDataType",
+          "ActualMethodParameter",
+          "ConstructorCall",
+          "ObjectCreationStatement",
+          "SimpleAssignmentExpression",
+          "ActualMethodParameter",
+          "ConstructorCall",
+          "ObjectCreationStatement",
+          "SimpleAssignmentExpression",
+          "ActualMethodParameter",
+          "ConstructorCall",
+          "MultiplyExpression",
+          "ObjectCreationStatement",
+          "SimpleAssignmentExpression",
+          "ActualMethodParameter",
+          "java.lang.System.out.println",
+          "ActualMethodParameter",
+          "java.lang.System.out.println",
+          "ActualMethodParameter",
+          "java.lang.System.out.println"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jInheritance5&act=Inheritance&sub=jInheritance5&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=1",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=1",
+      "context_name": "Java: INFSCI 0017 | Introduction to Java Programming > Inheritance",
+      "used_at": "2013-05-23T12:19:44.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=11",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=11",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] > Inheritance",
+      "used_at": "2014-08-30T12:57:33.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=13",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=13",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] - Animated Examples > Inheritance",
+      "used_at": "2014-09-09T15:38:38.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=17",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=17",
+      "context_name": "Java: INFSCI 0017 | Introduction to Java Programming (Fall 2014-ae) > Inheritance",
+      "used_at": "2014-09-11T11:50:18.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=19",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=19",
+      "context_name": "Java: INFSCI 0017 | Test - (ISD) JAVA course [clone] > Inheritance",
+      "used_at": "2014-11-06T10:59:11.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=21",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=21",
+      "context_name": "Java: INFSCI 0017 2 | Demo Course 2 > Inheritance",
+      "used_at": "2015-04-15T13:10:54.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=29",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=29",
+      "context_name": "Java: INFSCI 0017 | mg-gs-demo > Inheritance",
+      "used_at": "2015-09-14T11:10:25.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=31",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_name": "Java: INFSCI 0017 | roya-clone-test-java > Inheritance",
+      "used_at": "2015-12-08T17:16:50.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=32",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=32",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 > Inheritance",
+      "used_at": "2016-01-15T10:31:22.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=339",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=339",
+      "context_name": "Java: INFSCI 0017 | Java Study 2016 A > Inheritance",
+      "used_at": "2016-11-02T14:34:05.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=361",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=361",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 (QJ-AE-PCEX-PCRS) > Inheritance",
+      "used_at": "2018-09-11T14:14:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=366",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=366",
+      "context_name": "Java: INFSCI 0017 | CSEdPad course v1 (all Java content) > Inheritance",
+      "used_at": "2018-10-18T16:24:57.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=374",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=374",
+      "context_name": "Java: INFSCI 0017 | Java Course (AE-QP-PCEX-CodeWorkout) > Inheritance",
+      "used_at": "2019-05-31T05:04:44.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=382",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=382",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v3 > Inheritance",
+      "used_at": "2020-01-11T16:29:42.000Z",
+      "used_by": "Zak Risha, Zak Risha - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 3c- Inheritance ",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.206Z"
+}

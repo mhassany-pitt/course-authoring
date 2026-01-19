@@ -1,0 +1,97 @@
+{
+  "id": "6954bccff9187b06cf836ed1",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:59.003Z",
+  "tags": [],
+  "identity": {
+    "id": "py_compute_product_es",
+    "title": "PCRS C3-PL  Compute Product",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/284/embed?act=PCRS&sub=py_compute_product_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Escribe una funcion llamada calcularProducto quetome dos parametros y devuelva su producto.Ejemplos de llamadas: calcularProducto(2, 3) => 6 calcularProducto(4, -11) => -44 calcularProducto(42, 0) => 0",
+    "source_code": "[student_code]\r\ndef calcularProducto(numero1, numero2):\r\n    \"\"\"\r\n    Calcula el producto de dos numeros.\r\n\r\n    Parametros:\r\n    numero1 (int, float): El primer numero.\r\n    numero2 (int, float): El segundo numero.\r\n\r\n    Devuelve:\r\n    El producto de numero1 y numero2.\r\n    \"\"\"\r\n    # Escribe tu codigo aqui\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "IntegerLiteral",
+          "Multiplication",
+          "DefiningSimpleFunction",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "IntegerLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "CallingSimpleFunction",
+          "DefiningSimpleFunction",
+          "Multiplication"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/284/embed?act=PCRS&sub=py_compute_product_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.972Z"
+}

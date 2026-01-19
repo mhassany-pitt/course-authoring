@@ -1,0 +1,131 @@
+{
+  "id": "6954bccff9187b06cf836efb",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:03.740Z",
+  "tags": [],
+  "identity": {
+    "id": "py_reverse_dictionary_es",
+    "title": "Busqueda inversa telefono diccionario (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/341/embed?act=PCRS&sub=py_reverse_dictionary_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Se te ha pedido que escribas una funcion que proporcione el nombre de una persona usando su numero de telefono (\"busqueda inversa\"). Esto significa que, dado un numero de telefono, obtienes el nombre de la persona que esta registrada con ese numero de telefono. Para este problema, se te ha pedido que escribas una solucion usando un diccionario.",
+    "source_code": "[student_code]\r\ndef busqueda_inversa_diccionario(num_telefono, telefono_a_nombre):\r\n    \"\"\"\"\" (str, dict de {str: str}) -> str\r\n\r\n    Esta funcion recibe un numero de telefono num_telefono, y un diccionario\r\n    telefono_a_nombre en el cual cada clave es un numero de telefono y cada valor\r\n    es el nombre asociado con ese numero de telefono.\r\n\t\r\n    Devuelve el nombre asociado con num_telefono en telefono_a_nombre, o\r\n    un string vacio si no hay coincidencia.\r\n    \r\n    >>> busqueda_inversa_diccionario(\"416-555-3498\", {\"416-555-3498\": \\\\\r\n        \"John A. Macdonald\", \"647-555-9812\": \"Louis Riel\", \"416-555-6543\": \\\\\r\n        \"Canoe Head\", \"905-555-6681\":\"Tim Horton\"})\r\n    'John A. Macdonald'   \"\"\"     \r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "AccessingDictionary"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "IfElifChecking",
+          "IndexingList",
+          "CheckingForItem",
+          "CreatingDictionary",
+          "TransformingToStringType",
+          "DefiningSimpleFunction",
+          "IfElseChecking",
+          "IfChecking",
+          "StringLiteral",
+          "DictLiteral",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "DictLiteral",
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AccessingDictionary",
+          "CallingSimpleFunction",
+          "CreatingDictionary",
+          "DefiningSimpleFunction",
+          "IfChecking",
+          "IfElseChecking"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/341/embed?act=PCRS&sub=py_reverse_dictionary_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Diccionarios",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Diccionarios",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.979Z"
+}

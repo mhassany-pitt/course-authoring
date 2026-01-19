@@ -1,0 +1,83 @@
+{
+  "id": "6954bccff9187b06cf837500",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2015-09-11T09:32:40.000Z",
+  "updated_at": "2026-01-17T12:57:13.962Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "pyt3.11",
+    "title": "Single Line IF...ELSE Statement",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt3.11&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2015-09-11T09:32:40.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Hardik Vasa",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#Single Line IF...ELSE Condition\n\nnumber = 100\nprint(\"Number less than 100\") if (number <= 100) else print(\"Number Greater than 100\")"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt3.11&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > If-Else",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=460",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Worked Examples > If-Else",
+      "used_at": "2025-04-09T10:48:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.144Z"
+}

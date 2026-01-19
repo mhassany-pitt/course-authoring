@@ -1,0 +1,69 @@
+{
+  "id": "6954bccff9187b06cf836dee",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-17T19:47:54.000Z",
+  "updated_at": "2026-01-17T13:18:32.990Z",
+  "tags": [
+    "TODO:add-prompt",
+    "TODO:add-source-code"
+  ],
+  "identity": {
+    "id": "opendsa-bst-search-slideshow",
+    "title": "BST Search Slideshow",
+    "type": "OpenDSA Slideshow"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/lti/launch?tool=opendsa_slideshows&sub=BSTsearchCON"
+  },
+  "attribution": {
+    "created_at": "2025-04-17T19:47:54.000Z",
+    "provider": "OpenDSA",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Cliff Shaffer",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": null,
+    "source_code": null
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/lti/launch?tool=opendsa_slideshows&sub=BSTsearchCON"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.949Z"
+}

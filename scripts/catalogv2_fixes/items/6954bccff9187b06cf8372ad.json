@@ -1,0 +1,284 @@
+{
+  "id": "6954bccff9187b06cf8372ad",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2017-12-18T23:35:25.000Z",
+  "updated_at": "2026-01-17T12:42:06.731Z",
+  "tags": [],
+  "identity": {
+    "id": "InheritancePointTester2",
+    "title": "Point Class Hierarchy (Case 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=JAVA&set=inheritance.point&ch=InheritancePointTester2"
+  },
+  "attribution": {
+    "created_at": "2017-12-18T23:35:25.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Suppose we have a class Point and we want to extend it to produce class Point3D. The class Point has two data members, x and y that represent the point's integer coordinates in the two-dimensional space. A Point3D has three data members, x, y, and z that represent the point's integer coordinates in the three-dimensional space. For each class, write the class declaration, the constructor, the toString method, and a method to move (translate) the point, i.e., shift the point's location by the specified amount.\\n\\nThe class InheritancePointTester2 tests these classes and their methods.",
+    "source_code": "public class InheritancePointTester2 {\n\tpublic static void main(String[] args) {\n\t\tPoint p = new Point(1, 2);\n\t\tp.translate(5, 1);\n\t    System.out.println(p);\n\t    Point3D p3d = new Point3D(11, 12, 13);\n\t    p3d.translate(5, 1, 3);\n\t    System.out.println(p3d);  \n\t}\n}\n//Step 1: Define the class Point\nclass Point {\n\t//Step 1.1: Declare the instance variables\n\tprivate int x;\n\tprivate int y;\n\t//Step 1.2: Define the constructor to create a point with the specified xy-coordinate\n\tpublic Point(int x, int y) {\n\t\tthis.x = x;\n\t    this.y = y;\n\t}\n\t//Step 1.3: Declare the method to shift the point's location by the given amount\n\tpublic void translate(int dx, int dy) {\n\t\tx += dx;\n\t\ty += dy;\n\t}\n\t//Step 1.4: Define the toString method to get the string representation of the Point instance\n\tpublic String toString() {\n\t    return \"(\" + x + \", \" + y + \")\";\n\t}\n\t//Step 1.5: Define the methods for getting the xy-coordinate of the point\n\tpublic int getX() {\n\t\treturn x;\n\t}\n\tpublic int getY() {\n\t\treturn y;\n\t}\t\t\n}\n//Step 2: Extend the class Point to define the class Point3D\nclass Point3D extends Point {\n\t//Step 2.1: Declare the instance variable\n\tprivate int z;\n\t//Step 2.2: Define the constructor to create a 3D point with the specified xyz-coordinates\n\tpublic Point3D(int x, int y, int z) {\n\t\tsuper(x, y);\n\t    this.z = z;\n\t}\n\t//Step 1.3: Declare the method to shift the point's location in the 3D space by the specified amount\n\tpublic void translate(int dx, int dy, int dz) {\n\t    super.translate(dx, dy);\n\t    z += dz;\n\t}\n\t//Step 1.4: Define the method to get the z-coordinate of the 3D point\n\tpublic int getZ() {\n\t\treturn z;\n\t}\t\n\t//Step 1.5: Override the toString method of class Point to get the string representation of the Point3D instance\n\tpublic String toString() {\n\t    return \"(\" + super.getX() + \",\" + super.getY() + \",\" + this.z + \")\";\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "ThisReference",
+          "InstanceFieldInvocation",
+          "SuperReference",
+          "SuperclassMethodCall",
+          "ReturnStatement",
+          "OverridingToString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "InstanceFieldInvocation",
+          "OverridingToString",
+          "ReturnStatement",
+          "SuperclassMethodCall",
+          "SuperReference",
+          "ThisReference"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=inheritance.point&ch=InheritancePointTester2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=351",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=351",
+      "context_name": "Java: INFSCI 0017 | CS 0401 - Intermediate Java Programming (Spring 2018) > Inheritance",
+      "used_at": "2017-12-17T19:07:09.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=352",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=352",
+      "context_name": "Java: INFSCI 0017 | Norway-Spring2018 Java Course > Inheritance",
+      "used_at": "2018-01-15T17:35:55.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=361",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=361",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 (QJ-AE-PCEX-PCRS) > Inheritance",
+      "used_at": "2018-09-11T14:14:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=366",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=366",
+      "context_name": "Java: INFSCI 0017 | CSEdPad course v1 (all Java content) > Inheritance",
+      "used_at": "2018-10-18T16:24:57.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=374",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=374",
+      "context_name": "Java: INFSCI 0017 | Java Course (AE-QP-PCEX-CodeWorkout) > Inheritance",
+      "used_at": "2019-05-31T05:04:44.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Inheritance",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=397",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=397",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming > Inheritance",
+      "used_at": "2020-08-18T15:45:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=402",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=402",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming (No Labs - Extra content) > Inheritance",
+      "used_at": "2020-09-04T14:53:50.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=405",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=405",
+      "context_name": "Java: CMPINF0401 | COMP1050 Wentworth Institute of Technology > Inheritance",
+      "used_at": "2021-01-24T18:40:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Constructors/Overload/Inheritance",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Inheritance",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Inheritance",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Inheritance",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=416",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=416",
+      "context_name": "Java: INFSCI 0017 | Novi Sad Java Fall 2021 > Inheritance",
+      "used_at": "2021-10-18T14:55:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=417",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=417",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming (2022 version) > Inheritance",
+      "used_at": "2022-01-18T22:56:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Inheritance",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=425",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=425",
+      "context_name": "Java: CMPINF0401 | Wentworth Institute of Technology > Inheritance",
+      "used_at": "2022-09-14T03:07:18.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=432",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=432",
+      "context_name": "Java: CMPINF0401 | Preference Study Java Course > Inheritance",
+      "used_at": "2024-06-27T11:56:00.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 3c- Inheritance ",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    },
+    {
+      "context_id": "cid=444",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=444",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming (2022 version - alternate order) > Inheritance",
+      "used_at": "2024-09-12T01:36:40.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=449",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=449",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 (Peter B) > Inheritance",
+      "used_at": "2025-01-15T05:27:01.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=450",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=450",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 - Fully reversed > Inheritance",
+      "used_at": "2025-01-21T13:45:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Inheritance",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=474",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=474",
+      "context_name": "Java: CMU15-121 | CMU 15-121 - Intro Data Structures - Fall 2025 > Inheritance",
+      "used_at": "2025-09-16T16:41:24.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=477",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=477",
+      "context_name": "Java: CMPINF0401 | WIT COMP1050 - Computer Science II > Inheritance",
+      "used_at": "2025-09-19T03:00:59.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=488",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=488",
+      "context_name": "Java: CMPINF0401 | WIT COMP1050 - Computer Science II > Inheritance",
+      "used_at": "2025-10-07T14:15:48.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=489",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=489",
+      "context_name": "Java: 002 | Data Structures (Intermediate Java) - Fall 2025 > Inheritance",
+      "used_at": "2025-10-08T04:59:33.000Z",
+      "used_by": "Rafaella Sampaio de Alencar - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.096Z"
+}

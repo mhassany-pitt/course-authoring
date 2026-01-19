@@ -1,0 +1,172 @@
+{
+  "id": "6954bccff9187b06cf837056",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-09-16T11:36:31.000Z",
+  "updated_at": "2026-01-17T05:28:35.538Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_print_specific_element",
+    "title": "Dictionary manipulation.",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_print_specific_element&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2021-09-16T11:36:31.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that prints a blue Toyota car.",
+    "source_code": "car = cardict[\"brand\"]\ncolor = cardict[\"colors\"]\nprint(\"The car\"s brand is\", car[2],\"and it is\",color[2] )"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "List",
+          "Assign",
+          "Constant",
+          "Index",
+          "Call",
+          "Dict"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Constant",
+          "Call",
+          "Assign",
+          "List",
+          "Dict",
+          "Index"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_print_specific_element"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=413",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Dictionaries",
+      "used_at": "2021-08-11T18:22:22.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=421",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=421",
+      "context_name": "Python: PYTHON001 | Australia Spring 2022 > Dictionary",
+      "used_at": "2022-05-09T01:08:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=422",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > OPTIONAL (Dictionaries)",
+      "used_at": "2022-05-23T22:24:04.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=424",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=424",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 174 Fall 2022 (Python I) > Dictionaries",
+      "used_at": "2022-08-10T17:36:39.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=426",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=426",
+      "context_name": "Python: PYTHON001 | Novi Sad Python Fall 2022 > Dictionary",
+      "used_at": "2022-10-03T23:23:00.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=429",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=429",
+      "context_name": "Python: INFO063-17 | INTRODUCCI\u00c3\u0093N A LA PROGRAMACI\u00c3\u0093N > Dictionary",
+      "used_at": "2023-05-30T22:07:20.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=430",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=430",
+      "context_name": "Python: PYTHON001 | Preference Study Course > Dictionary",
+      "used_at": "2024-04-30T00:00:17.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=448",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=448",
+      "context_name": "Python: Temple-MIS2502-2025-Spring-2Python | Temple MIS2502 2025-Spring 2-Python > Dictionaries",
+      "used_at": "2024-12-12T15:41:33.000Z",
+      "used_by": "Rully Agus Hendrawan, Rully Agus Hendrawan - "
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Dictionaries",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > Dictionaries",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Dictionaries",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.026Z"
+}

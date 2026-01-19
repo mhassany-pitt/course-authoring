@@ -1,0 +1,139 @@
+{
+  "id": "6954bccff9187b06cf836d66",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-09T10:31:21.000Z",
+  "updated_at": "2026-01-17T05:27:05.379Z",
+  "tags": [],
+  "identity": {
+    "id": "py_nested_if_temperature_es__6827373266a8e1b992c81241",
+    "title": "Advertir al Usuario sobre los Cambios en la Temperatura",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6827373266a8e1b992c81241?_t=1749534494091&index=0"
+  },
+  "attribution": {
+    "created_at": "2025-06-09T10:31:21.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "es",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construir un programa que reciba la temperatura de hoy y de ayer y advierta al usuario cuando est\u00e9 haciendo m\u00e1s fr\u00edo, m\u00e1s calor o ninguno de los dos. Los valores de temperatura podr\u00edan tener una parte decimal.",
+    "source_code": "#Paso 1: Leer la temperatura de hoy y de ayer\ntexto = input(\"Ingrese la temperatura de ayer: \")\nayer = float(texto)\ntexto = input(\"Ingrese la temperatura de hoy: \")\nhoy = float(texto)  \n#Paso 2: Advertir al usuario sobre los cambios en la temperatura\nif  hoy < ayer :\n    print(\"\u00a1Est\u00e1 haciendo m\u00e1s fr\u00edo!\")\nelse :\n    if  hoy > ayer :\n        print(\"\u00a1Est\u00e1 haciendo m\u00e1s calor!\")\n    else :\n        print(\"\u00a1La temperatura es la misma que ayer!\")"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "Arun parser v0.1": {
+        "concepts": [
+          "If",
+          "Assign",
+          "Str",
+          "Call",
+          "Lt",
+          "Gt"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "TransformingToFloatType",
+          "IfElseChecking",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "Printing",
+          "NestedIfChecking",
+          "TransformingToFloatType",
+          "IfElseChecking",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "Printing",
+          "NestedIfChecking"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Gt",
+          "Call",
+          "Assign",
+          "Lt",
+          "If",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6827373266a8e1b992c81241?_t=1749534494091&index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Condicionales",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Condicionales",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Condicionales",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.936Z"
+}

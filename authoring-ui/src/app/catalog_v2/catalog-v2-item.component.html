@@ -26,7 +26,7 @@
   </div>
 
   <div
-    class="mx-auto mt-24 mb-16 max-w-7xl flex flex-col gap-4 z-0"
+    class="container mx-auto flex flex-col gap-4 mt-24 mb-16 max-w-7xl z-0 px-2 md:px-0"
     *ngIf="!loading; else loadingTpl"
   >
     <div
@@ -71,66 +71,73 @@
           id="identity"
           class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
         >
-          <div class="text-sm font-semibold">Identity</div>
-          <div class="flex items-start gap-2">
-            <label class="grow min-w-[240px] flex flex-col gap-1">
-              <span class="text-xs text-gray-600">Title</span>
+          <div
+            class="text-sm font-semibold cursor-pointer"
+            (click)="_t['identity'] = !_t['identity']"
+          >
+            Identity
+            {{ _t["identity"] ? "▼" : "▶" }}
+          </div>
+          <ng-container *ngIf="_t['identity']">
+            <div class="flex items-start gap-2">
+              <label class="grow min-w-[240px] flex flex-col gap-1">
+                <span class="text-xs text-gray-600">Title</span>
+                <span
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                >
+                  {{ item.identity.title || "&lt;&lt;empty&gt;&gt;" }}
+                </span>
+              </label>
+              <label class="w-96 flex flex-col gap-1">
+                <span class="text-xs text-gray-600">Unique ID</span>
+                <span
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md break-words"
+                >
+                  {{ item.identity.id || "&lt;&lt;empty&gt;&gt;" }}
+                </span>
+              </label>
+              <label class="min-w-64 flex flex-col gap-1">
+                <span class="text-xs text-gray-600">Type</span>
+                <span
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                >
+                  {{ item.identity.type || "&lt;&lt;empty&gt;&gt;" }}
+                </span>
+              </label>
+            </div>
+            <div class="flex items-end gap-2">
+              <label class="grow min-w-[240px] flex flex-col gap-1">
+                <span class="text-xs text-gray-600">Demo URL</span>
+                @if (item.links.demo_url) {
+                  <a
+                    [href]="item.links.demo_url || undefined"
+                    target="_blank"
+                    class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                  >
+                    {{ item.links.demo_url || "&lt;&lt;empty&gt;&gt;" }}
+                  </a>
+                } @else {
+                  <a
+                    [href]="item.links.demo_url || undefined"
+                    target="_blank"
+                    class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                  >
+                    {{ item.links.demo_url || "&lt;&lt;empty&gt;&gt;" }}
+                  </a>
+                }
+              </label>
+            </div>
+            <label class="flex flex-col gap-1">
+              <span class="text-xs text-gray-600">
+                Tags (comma or newline separated)
+              </span>
               <span
                 class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
               >
-                {{ item.identity.title || "&lt;&lt;empty&gt;&gt;" }}
+                {{ item.tags.join(", ") || "&lt;&lt;empty&gt;&gt;" }}
               </span>
             </label>
-            <label class="w-96 flex flex-col gap-1">
-              <span class="text-xs text-gray-600">Unique ID</span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md break-words"
-              >
-                {{ item.identity.id || "&lt;&lt;empty&gt;&gt;" }}
-              </span>
-            </label>
-            <label class="min-w-64 flex flex-col gap-1">
-              <span class="text-xs text-gray-600">Type</span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{ item.identity.type || "&lt;&lt;empty&gt;&gt;" }}
-              </span>
-            </label>
-          </div>
-          <div class="flex items-end gap-2">
-            <label class="grow min-w-[240px] flex flex-col gap-1">
-              <span class="text-xs text-gray-600">Demo URL</span>
-              @if (item.links.demo_url) {
-                <a
-                  [href]="item.links.demo_url || undefined"
-                  target="_blank"
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  {{ item.links.demo_url || "&lt;&lt;empty&gt;&gt;" }}
-                </a>
-              } @else {
-                <a
-                  [href]="item.links.demo_url || undefined"
-                  target="_blank"
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  {{ item.links.demo_url || "&lt;&lt;empty&gt;&gt;" }}
-                </a>
-              }
-            </label>
-          </div>
-
-          <label class="flex flex-col gap-1">
-            <span class="text-xs text-gray-600">
-              Tags (comma or newline separated)
-            </span>
-            <span
-              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-            >
-              {{ item.tags.join(", ") || "&lt;&lt;empty&gt;&gt;" }}
-            </span>
-          </label>
+          </ng-container>
         </section>
 
         <!-- languages -->
@@ -138,82 +145,98 @@
           id="languages"
           class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
         >
-          <div class="text-sm font-semibold">Language</div>
-          <label class="w-48 flex flex-col items-start gap-1">
-            <span class="text-xs text-gray-600">
-              Content language (bcp-47)
-            </span>
-            <span
-              class="w-full block p-2 border border-solid border-slate-200 bg-white rounded-md"
-            >
-              {{ item.languages.content_language || "&lt;&lt;empty&gt;&gt;" }}
-            </span>
-          </label>
-          <label class="grow min-w-[240px] flex flex-col gap-1">
-            <span class="text-xs text-gray-600">
-              Programming languages (comma or newline separated)
-            </span>
-            <span
-              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-            >
-              {{
-                item.languages.programming_languages.join(", ") ||
-                  "&lt;&lt;empty&gt;&gt;"
-              }}
-            </span>
-          </label>
+          <div
+            class="text-sm font-semibold cursor-pointer"
+            (click)="_t['languages'] = !_t['languages']"
+          >
+            Language
+            {{ _t["languages"] ? "▼" : "▶" }}
+          </div>
+          <ng-container *ngIf="_t['languages']">
+            <label class="w-48 flex flex-col items-start gap-1">
+              <span class="text-xs text-gray-600">
+                Content language (bcp-47)
+              </span>
+              <span
+                class="w-full block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{ item.languages.content_language || "&lt;&lt;empty&gt;&gt;" }}
+              </span>
+            </label>
+            <label class="grow min-w-[240px] flex flex-col gap-1">
+              <span class="text-xs text-gray-600">
+                Programming languages (comma or newline separated)
+              </span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{
+                  item.languages.programming_languages.join(", ") ||
+                    "&lt;&lt;empty&gt;&gt;"
+                }}
+              </span>
+            </label>
+          </ng-container>
         </section>
 
         <section
           id="attribution"
           class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
         >
-          <div class="text-sm font-semibold">Attribution</div>
-          <div class="flex flex-wrap items-start gap-2">
-            <label class="w-80 flex flex-col gap-1">
-              <span class="text-xs text-gray-600">Publisher</span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{ item.attribution.publisher || "&lt;&lt;empty&gt;&gt;" }}
-              </span>
-            </label>
-            <label class="grow flex flex-col gap-1">
-              <span class="text-xs text-gray-600">Providers</span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{ item.attribution.provider || "&lt;&lt;empty&gt;&gt;" }}
-              </span>
-            </label>
-            <label class="w-64 flex flex-col gap-1">
-              <span class="text-xs text-gray-600">Created at</span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                <ng-container *ngIf="item.attribution.created_at">
-                  {{ item.attribution.created_at }}
-                </ng-container>
-                <ng-container *ngIf="!item.attribution.created_at"
-                  >&lt;&lt;empty&gt;&gt;</ng-container
+          <div
+            class="text-sm font-semibold cursor-pointer"
+            (click)="_t['attribution'] = !_t['attribution']"
+          >
+            Attribution
+            {{ _t["attribution"] ? "▼" : "▶" }}
+          </div>
+          <div *ngIf="_t['attribution']">
+            <div class="flex flex-wrap items-start gap-2">
+              <label class="w-80 flex flex-col gap-1">
+                <span class="text-xs text-gray-600">Publisher</span>
+                <span
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
                 >
-              </span>
-            </label>
-          </div>
-          <div
-            class="flex items-center gap-2 rounded-md p-2 border border-solid bg-white border-gray-200"
-            *ngFor="let a of item.attribution.authors; let i = index"
-          >
-            <span class="">{{ a.name || "Author" }}</span>
-            <span *ngIf="a.affiliation" class="text-gray-500 text-xs">
-              — {{ a.affiliation }}</span
+                  {{ item.attribution.publisher || "&lt;&lt;empty&gt;&gt;" }}
+                </span>
+              </label>
+              <label class="grow flex flex-col gap-1">
+                <span class="text-xs text-gray-600">Providers</span>
+                <span
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                >
+                  {{ item.attribution.provider || "&lt;&lt;empty&gt;&gt;" }}
+                </span>
+              </label>
+              <label class="w-64 flex flex-col gap-1">
+                <span class="text-xs text-gray-600">Created at</span>
+                <span
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                >
+                  <ng-container *ngIf="item.attribution.created_at">
+                    {{ item.attribution.created_at }}
+                  </ng-container>
+                  <ng-container *ngIf="!item.attribution.created_at"
+                    >&lt;&lt;empty&gt;&gt;</ng-container
+                  >
+                </span>
+              </label>
+            </div>
+            <div
+              class="flex items-center gap-2 rounded-md p-2 border border-solid bg-white border-gray-200"
+              *ngFor="let a of item.attribution.authors; let i = index"
             >
-          </div>
-          <div
-            class="text-xs text-gray-500"
-            *ngIf="!item.attribution.authors.length"
-          >
-            No authors yet.
+              <span class="">{{ a.name || "Author" }}</span>
+              <span *ngIf="a.affiliation" class="text-gray-500 text-xs">
+                — {{ a.affiliation }}</span
+              >
+            </div>
+            <div
+              class="text-xs text-gray-500"
+              *ngIf="!item.attribution.authors.length"
+            >
+              No authors yet.
+            </div>
           </div>
         </section>
 
@@ -221,64 +244,78 @@
           id="rights"
           class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
         >
-          <div class="text-sm font-semibold">Rights</div>
-          <div class="flex items-center gap-2">
-            <label class="w-48 flex flex-col gap-1">
-              <span class="text-xs text-gray-600">License</span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{ item.rights.license || "&lt;&lt;empty&gt;&gt;" }}
-              </span>
-            </label>
-            <label class="grow min-w-[240px] flex flex-col gap-1">
-              <span class="text-xs text-gray-600">License URL</span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{ item.rights.license_url || "&lt;&lt;empty&gt;&gt;" }}
-              </span>
-            </label>
+          <div
+            class="text-sm font-semibold cursor-pointer"
+            (click)="_t['rights'] = !_t['rights']"
+          >
+            Rights
+            {{ _t["rights"] ? "▼" : "▶" }}
           </div>
-          <label class="flex flex-col gap-1">
-            <span class="text-xs text-gray-600">Usage notes</span>
-            <span
-              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-            >
-              {{ item.rights.usage_notes || "&lt;&lt;empty&gt;&gt;" }}
-            </span>
-          </label>
+          <ng-container *ngIf="_t['rights']">
+            <div class="flex items-center gap-2">
+              <label class="w-48 flex flex-col gap-1">
+                <span class="text-xs text-gray-600">License</span>
+                <span
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                >
+                  {{ item.rights.license || "&lt;&lt;empty&gt;&gt;" }}
+                </span>
+              </label>
+              <label class="grow min-w-[240px] flex flex-col gap-1">
+                <span class="text-xs text-gray-600">License URL</span>
+                <span
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                >
+                  {{ item.rights.license_url || "&lt;&lt;empty&gt;&gt;" }}
+                </span>
+              </label>
+            </div>
+            <label class="flex flex-col gap-1">
+              <span class="text-xs text-gray-600">Usage notes</span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{ item.rights.usage_notes || "&lt;&lt;empty&gt;&gt;" }}
+              </span>
+            </label>
+          </ng-container>
         </section>
-
-        <hr class="w-full" />
 
         <!-- content -->
         <section
           id="content"
           class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
         >
-          <div class="text-sm font-semibold">Content</div>
-          <label class="flex flex-col gap-1">
-            <span class="text-xs text-gray-600">Prompt / description</span>
-            <span
-              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-            >
-              {{ item.content.prompt || "&lt;&lt;empty&gt;&gt;" }}
-            </span>
-          </label>
-          <label class="flex flex-col gap-1">
-            <span class="text-xs text-gray-600">Source Snippet</span>
-            <pre
-              *ngIf="item.content.source_code"
-              class="block p-2 border border-solid border-slate-200 rounded-md text-sm leading-5"
-            ><code
+          <div
+            class="text-sm font-semibold cursor-pointer"
+            (click)="_t['content'] = !_t['content']"
+          >
+            Content
+            {{ _t["content"] ? "▼" : "▶" }}
+          </div>
+          <ng-container *ngIf="_t['content']">
+            <label class="flex flex-col gap-1">
+              <span class="text-xs text-gray-600">Prompt / description</span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{ item.content.prompt || "&lt;&lt;empty&gt;&gt;" }}
+              </span>
+            </label>
+            <label class="flex flex-col gap-1">
+              <span class="text-xs text-gray-600">Source Snippet</span>
+              <pre
+                *ngIf="item.content.source_code"
+                class="block p-2 border border-solid border-slate-200 rounded-md text-sm leading-5 min-h-10"
+              ><code
               [highlight]="item.content.source_code || '&lt;&lt;empty&gt;&gt;'"
               [language]="
                 item.languages.programming_languages.length == 0 ? 'plaintext' : (
                   item.languages.programming_languages[0] == 'asm' ? 'x86asm' : item.languages.programming_languages[0]
                 )"
               lineNumbers style="padding: 0;"></code></pre>
-          </label>
+            </label>
+          </ng-container>
         </section>
 
         <!-- classification -->
@@ -286,39 +323,50 @@
           id="classification"
           class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
         >
-          <div class="text-sm font-semibold">Classification</div>
-          <div class="flex flex-wrap items-end gap-2">
-            <label class="w-64 flex flex-col gap-1">
-              <span class="text-xs text-gray-600">Difficulty</span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{ item.classification.difficulty || "&lt;&lt;empty&gt;&gt;" }}
+          <div
+            class="text-sm font-semibold cursor-pointer"
+            (click)="_t['classification'] = !_t['classification']"
+          >
+            Classification
+            {{ _t["classification"] ? "▼" : "▶" }}
+          </div>
+          <ng-container *ngIf="_t['classification']">
+            <div class="flex flex-wrap items-end gap-2">
+              <label class="w-64 flex flex-col gap-1">
+                <span class="text-xs text-gray-600">Difficulty</span>
+                <span
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                >
+                  {{
+                    item.classification.difficulty || "&lt;&lt;empty&gt;&gt;"
+                  }}
+                </span>
+              </label>
+              <label class="w-64 flex flex-col gap-1">
+                <span class="text-xs text-gray-600">Interaction type</span>
+                <span
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                >
+                  {{
+                    item.interaction.interaction_type || "&lt;&lt;empty&gt;&gt;"
+                  }}
+                </span>
+              </label>
+            </div>
+            <label class="flex flex-col gap-1">
+              <span class="text-xs text-gray-600">
+                Topics (comma or newline separated)
               </span>
-            </label>
-            <label class="w-64 flex flex-col gap-1">
-              <span class="text-xs text-gray-600">Interaction type</span>
               <span
                 class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
               >
                 {{
-                  item.interaction.interaction_type || "&lt;&lt;empty&gt;&gt;"
+                  item.classification.topics.join(", ") ||
+                    "&lt;&lt;empty&gt;&gt;"
                 }}
               </span>
             </label>
-          </div>
-          <label class="flex flex-col gap-1">
-            <span class="text-xs text-gray-600">
-              Topics (comma or newline separated)
-            </span>
-            <span
-              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-            >
-              {{
-                item.classification.topics.join(", ") || "&lt;&lt;empty&gt;&gt;"
-              }}
-            </span>
-          </label>
+          </ng-container>
         </section>
 
         <!-- knowledge components -->
@@ -326,33 +374,41 @@
           id="knowledge-components"
           class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
         >
-          <div class="text-sm font-semibold">Knowledge Components</div>
           <div
-            class="flex flex-col gap-2"
-            *ngIf="
-              item.classification.knowledge_components || {}
-                | keyvalue as kcList;
-              else noKcList
-            "
+            class="text-sm font-semibold cursor-pointer"
+            (click)="_t['knowledge-components'] = !_t['knowledge-components']"
           >
-            <div
-              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              *ngFor="let kcKey of kcList"
-            >
-              <div class="text-xs text-gray-500">{{ kcKey.key }}</div>
-              <div class="">
-                {{ kcKey.value.concepts.join(", ") }}
-              </div>
-              <div class="text-gray-400 text-xs" *ngIf="kcKey.value.note">
-                {{ kcKey.value.note }}
-              </div>
-            </div>
+            Knowledge Components
+            {{ _t["knowledge-components"] ? "▼" : "▶" }}
           </div>
-          <ng-template #noKcList>
-            <div class="text-xs text-gray-500">
-              No knowledge components yet.
+          <ng-container *ngIf="_t['knowledge-components']">
+            <div
+              class="flex flex-col gap-2"
+              *ngIf="
+                item.classification.knowledge_components || {}
+                  | keyvalue as kcList;
+                else noKcList
+              "
+            >
+              <div
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                *ngFor="let kcKey of kcList"
+              >
+                <div class="text-xs text-gray-500">{{ kcKey.key }}</div>
+                <div class="">
+                  {{ kcKey.value.concepts.join(", ") }}
+                </div>
+                <div class="text-gray-400 text-xs" *ngIf="kcKey.value.note">
+                  {{ kcKey.value.note }}
+                </div>
+              </div>
             </div>
-          </ng-template>
+            <ng-template #noKcList>
+              <div class="text-xs text-gray-500">
+                No knowledge components yet.
+              </div>
+            </ng-template>
+          </ng-container>
         </section>
 
         <!-- pedagogy -->
@@ -360,128 +416,154 @@
           id="pedagogy"
           class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
         >
-          <div class="text-sm font-semibold">Pedagogy</div>
-          <label class="flex flex-col gap-1">
-            <span class="text-xs text-gray-600">Instructional role</span>
-            <span
-              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-            >
-              {{ item.pedagogy.instructional_role || "&lt;&lt;empty&gt;&gt;" }}
-            </span>
-          </label>
-          <label class="flex flex-col gap-1">
-            <span class="text-xs text-gray-600"
-              >Learning objectives (one per line)</span
-            >
-            <span
-              class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-            >
-              {{
-                item.pedagogy.learning_objectives.join("\n") ||
-                  "&lt;&lt;empty&gt;&gt;"
-              }}
-            </span>
-          </label>
-          <div class="flex items-start gap-2">
-            <label class="flex flex-col gap-1 w-1/3">
-              <span class="text-xs text-gray-600">
-                Prereq topics (comma separated)
-              </span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{
-                  item.pedagogy.prerequisites.topics.join(", ") ||
-                    "&lt;&lt;empty&gt;&gt;"
-                }}
-              </span>
-            </label>
-            <label class="flex flex-col gap-1 w-1/3">
-              <span class="text-xs text-gray-600">
-                Prereq concepts (comma separated)
-              </span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{
-                  item.pedagogy.prerequisites.concepts.join(", ") ||
-                    "&lt;&lt;empty&gt;&gt;"
-                }}
-              </span>
-            </label>
-            <label class="flex flex-col gap-1 w-1/3">
-              <span class="text-xs text-gray-600">
-                Prereq item IDs (comma separated)
-              </span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{
-                  item.pedagogy.prerequisites.item_ids.join(", ") ||
-                    "&lt;&lt;empty&gt;&gt;"
-                }}
-              </span>
-            </label>
+          <div
+            class="text-sm font-semibold cursor-pointer"
+            (click)="_t['pedagogy'] = !_t['pedagogy']"
+          >
+            Pedagogy
+            {{ _t["pedagogy"] ? "▼" : "▶" }}
           </div>
+          <ng-container *ngIf="_t['pedagogy']">
+            <label class="flex flex-col gap-1">
+              <span class="text-xs text-gray-600">Instructional role</span>
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{
+                  item.pedagogy.instructional_role || "&lt;&lt;empty&gt;&gt;"
+                }}
+              </span>
+            </label>
+            <label class="flex flex-col gap-1">
+              <span class="text-xs text-gray-600"
+                >Learning objectives (one per line)</span
+              >
+              <span
+                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+              >
+                {{
+                  item.pedagogy.learning_objectives.join("\n") ||
+                    "&lt;&lt;empty&gt;&gt;"
+                }}
+              </span>
+            </label>
+            <div class="flex items-start gap-2">
+              <label class="flex flex-col gap-1 w-1/3">
+                <span class="text-xs text-gray-600">
+                  Prereq topics (comma separated)
+                </span>
+                <span
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                >
+                  {{
+                    item.pedagogy.prerequisites.topics.join(", ") ||
+                      "&lt;&lt;empty&gt;&gt;"
+                  }}
+                </span>
+              </label>
+              <label class="flex flex-col gap-1 w-1/3">
+                <span class="text-xs text-gray-600">
+                  Prereq concepts (comma separated)
+                </span>
+                <span
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                >
+                  {{
+                    item.pedagogy.prerequisites.concepts.join(", ") ||
+                      "&lt;&lt;empty&gt;&gt;"
+                  }}
+                </span>
+              </label>
+              <label class="flex flex-col gap-1 w-1/3">
+                <span class="text-xs text-gray-600">
+                  Prereq item IDs (comma separated)
+                </span>
+                <span
+                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
+                >
+                  {{
+                    item.pedagogy.prerequisites.item_ids.join(", ") ||
+                      "&lt;&lt;empty&gt;&gt;"
+                  }}
+                </span>
+              </label>
+            </div>
+          </ng-container>
         </section>
 
         <section
           id="delivery"
           class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
         >
-          <div class="text-sm font-semibold">Delivery</div>
-          <ng-container *ngIf="item.delivery.length; else noDelivery">
-            <div
-              class="flex items-center gap-2 p-2 border border-solid border-slate-200 bg-white rounded-md"
-              *ngFor="let d of item.delivery; let i = index"
-            >
-              <span class="uppercase"> {{ d.format || "format" }}: </span>
-              <a [href]="d.url" target="_blank">{{
-                d.url || "&lt;&lt;empty&gt;&gt;"
-              }}</a>
-            </div>
+          <div
+            class="text-sm font-semibold cursor-pointer"
+            (click)="_t['delivery'] = !_t['delivery']"
+          >
+            Delivery
+            {{ _t["delivery"] ? "▼" : "▶" }}
+          </div>
+          <ng-container *ngIf="_t['delivery']">
+            <ng-container *ngIf="item.delivery.length; else noDelivery">
+              <div
+                class="flex items-center gap-2 p-2 border border-solid border-slate-200 bg-white rounded-md"
+                *ngFor="let d of item.delivery; let i = index"
+              >
+                <span class="uppercase"> {{ d.format || "format" }}: </span>
+                <a [href]="d.url" target="_blank">{{
+                  d.url || "&lt;&lt;empty&gt;&gt;"
+                }}</a>
+              </div>
+            </ng-container>
+            <ng-template #noDelivery>
+              <p class="text-xs text-gray-500">No delivery endpoints yet.</p>
+            </ng-template>
           </ng-container>
-          <ng-template #noDelivery>
-            <p class="text-xs text-gray-500">No delivery endpoints yet.</p>
-          </ng-template>
         </section>
 
         <section
           id="uses"
           class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
         >
-          <div class="text-sm font-semibold">Used In</div>
           <div
-            class="flex flex-col gap-1 p-2 border border-solid border-slate-200 bg-white rounded-md"
-            *ngFor="let a of item.uses; let i = index"
+            class="text-sm font-semibold cursor-pointer"
+            (click)="_t['uses'] = !_t['uses']"
           >
-            <a
-              *ngIf="a.context_url || a.context_id; else contextNameOnly"
-              class="text-blue-700 hover:underline break-words"
-              [href]="a.context_url || a.context_id"
-              target="_blank"
-              rel="noopener"
+            Used In
+            {{ _t["uses"] ? "▼" : "▶" }}
+          </div>
+          <ng-container *ngIf="_t['uses']">
+            <div
+              class="flex flex-col gap-1 p-2 border border-solid border-slate-200 bg-white rounded-md"
+              *ngFor="let a of item.uses; let i = index"
             >
-              {{ a.context_name || a.context_url || a.context_id }}
-            </a>
-            <ng-template #contextNameOnly>
-              <span class=""
-                >{{ a.context_name || "&lt;&lt;empty&gt;&gt;" }}
-              </span>
-            </ng-template>
-            <span *ngIf="a.used_by" class="text-gray-500 text-xs">
-              {{ a.used_by || "n/a" }}
-            </span>
-            <span *ngIf="a.used_at" class="text-gray-500 text-xs">
-              {{ a.used_at
-              }}<span *ngIf="a.context_url || a.context_id"
-                >: [{{ a.context_url || a.context_id }}]</span
+              <a
+                *ngIf="a.context_url || a.context_id; else contextNameOnly"
+                class="text-blue-700 hover:underline break-words"
+                [href]="a.context_url || a.context_id"
+                target="_blank"
+                rel="noopener"
               >
-            </span>
-          </div>
-          <div class="text-xs text-gray-500" *ngIf="!item.uses.length">
-            No uses yet.
-          </div>
+                {{ a.context_name || a.context_url || a.context_id }}
+              </a>
+              <ng-template #contextNameOnly>
+                <span class=""
+                  >{{ a.context_name || "&lt;&lt;empty&gt;&gt;" }}
+                </span>
+              </ng-template>
+              <span *ngIf="a.used_by" class="text-gray-500 text-xs">
+                {{ a.used_by || "n/a" }}
+              </span>
+              <span *ngIf="a.used_at" class="text-gray-500 text-xs">
+                {{ a.used_at
+                }}<span *ngIf="a.context_url || a.context_id"
+                  >: [{{ a.context_url || a.context_id }}]</span
+                >
+              </span>
+            </div>
+            <div class="text-xs text-gray-500" *ngIf="!item.uses.length">
+              No uses yet.
+            </div>
+          </ng-container>
         </section>
       </div>
     </div>

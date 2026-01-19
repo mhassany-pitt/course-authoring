@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf83734d",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2017-06-28T17:34:06.000Z",
+  "updated_at": "2026-01-17T05:30:09.475Z",
+  "tags": [],
+  "identity": {
+    "id": "pcrs_java_test",
+    "title": "pcrs java test",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/113/embed?act=PCRS&sub=pcrs_java_test"
+  },
+  "attribution": {
+    "created_at": "2017-06-28T17:34:06.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following code fragment to sum all even numbers up to and including n.",
+    "source_code": "[file Sum.java]\n[blocked]\n// Initialization of n is hidden.\nint sum = 0, i;\n\nfor        \n[/blocked]\n[student_code]\n(;;)\n[/student_code]\n[blocked]\n{        \n\tsum += i;\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/113/embed?act=PCRS&sub=pcrs_java_test"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=31",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_name": "Java: INFSCI 0017 | roya-clone-test-java > Loops For",
+      "used_at": "2015-12-08T17:16:50.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.116Z"
+}

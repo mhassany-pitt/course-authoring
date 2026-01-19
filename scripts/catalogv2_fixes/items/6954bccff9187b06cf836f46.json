@@ -1,0 +1,81 @@
+{
+  "id": "6954bccff9187b06cf836f46",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-03-28T00:42:49.000Z",
+  "updated_at": "2026-01-17T05:28:11.870Z",
+  "tags": [],
+  "identity": {
+    "id": "py_checkout",
+    "title": "Checkout",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/22/embed?act=PCRS&sub=py_checkout"
+  },
+  "attribution": {
+    "created_at": "2025-03-28T00:42:49.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "The express checkout is for grocery orders with 8 or fewer items. Complete the examples in the docstringand then complete the function body.",
+    "source_code": "[student_code]\r\ndef caja_rapida(producto_a_cantidad):\r\n    \"\"\"\" (diccionario de {str: int}) -> booleano\r\n\r\n    Devuelve True si y solo si el pedido de comestibles en producto_a_cantidad califica para la\r\n    caja rapida. producto_a_cantidad asigna productos a la cantidad de esos\r\n    articulos en el pedido de comestibles.\r\n\r\n    >>> caja_rapida({'platano': 3, 'leche de soya': 1, 'mantequilla de mani': 1})\r\n    #Pendiente: Completar el valor de retorno de la llamada a la funcion anterior.\r\n    >>> caja_rapida({'platano': 3, 'leche de soya': 1, 'pastelito': 5})\r\n    #Pendiente: Completar el valor de retorno de la llamada a la funcion anterior.\r\n    \"\"\"\"\r\n    \r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/22/embed?act=PCRS&sub=py_checkout"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Dictionaries",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Dictionaries",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.990Z"
+}

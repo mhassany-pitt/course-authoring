@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836f67",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-02-23T16:01:36.000Z",
+  "updated_at": "2026-01-17T12:41:42.485Z",
+  "tags": [],
+  "identity": {
+    "id": "py_pandas_select_1_ch",
+    "title": "PANDAS Select 1 Challenge",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_pandas_select_1&ch=py_pandas_select_1_ch"
+  },
+  "attribution": {
+    "created_at": "2025-02-23T16:01:36.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Rully Hendrawan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "From a class of 200 students, first select only student ids and their letter grades. Then, select students with grades 'A' or 'B' You're given a dataset as a .csv format, read dataframe using pandas. ",
+    "source_code": "\r\nimport pandas as pd\r\n\r\n\r\ndf = pd.read_csv('science_class.csv')  \r\n\r\n\r\ndf_selected = df[['student_id', 'letter_grade']]\r\n\r\n\r\ndf_section1 = df[(df['section'] == 'A')|(df['section'] == 'B')]\r\n\r\n\r\nprint(df_section1)\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pandas_select_1&ch=py_pandas_select_1_ch"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.994Z"
+}

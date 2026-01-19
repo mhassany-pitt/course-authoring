@@ -1,0 +1,124 @@
+{
+  "id": "6954bccff9187b06cf83718b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-06-09T01:08:18.000Z",
+  "updated_at": "2026-01-17T12:55:30.815Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "csedpad_exceptionhandling_arithmetic",
+    "title": "(Exception Handling) Arithmetic - CSEdPad",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_exceptionhandling_arithmetic&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2020-06-09T01:08:18.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class Arithmetic {\n\u00a0\u00a0public static void main(String[] args) {\n\n\u00a0\u00a0\u00a0\u00a0int x = 5;\n\u00a0\u00a0\u00a0\u00a0int y = 0;\n\n\u00a0\u00a0\u00a0\u00a0try {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int z = x / y;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Result = \" + z);\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0catch (ArithmeticException e) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Arithmetic Exception Error. Can't divide a number by 0\");\n\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0}\n\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "TryCatchStatement",
+          "StringAddition",
+          "MethodDefinition",
+          "java.lang.System.out.println",
+          "SimpleAssignmentExpression",
+          "ClassDefinition",
+          "VoidDataType",
+          "IntDataType",
+          "StringLiteral",
+          "DivideExpression",
+          "FormalMethodParameter",
+          "ActualMethodParameter",
+          "StringDataType",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "ClassDefinition",
+          "DivideExpression",
+          "FormalMethodParameter",
+          "IntDataType",
+          "java.lang.System.out.println",
+          "MethodDefinition",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "TryCatchStatement",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_exceptionhandling_arithmetic&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=389",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
+      "context_name": "Java: CSEdPad | CSEdPad Examples > Exception handling",
+      "used_at": "2020-05-10T20:11:07.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.063Z"
+}

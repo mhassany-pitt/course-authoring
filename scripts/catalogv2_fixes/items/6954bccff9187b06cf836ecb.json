@@ -1,0 +1,152 @@
+{
+  "id": "6954bccff9187b06cf836ecb",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:58.280Z",
+  "tags": [],
+  "identity": {
+    "id": "py_reorganize_es",
+    "title": "Reorganizar diccionario (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/276/embed?act=PCRS&sub=py_reorganize_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa la funcion reorganizar a continuacion que devuelve un diccionario nuevo_dicc que mapea llaves de string a listas de strings a partir de los datos proporcionados por el parametro dicc_entradaLas llaves en resultado_dicc son los strings de los valores en orig_dicc. Para cada llave k en nuevo_dicc, el valor correspondiente es la lista de claves en orig_dicc donde k se encontro en su lista de valores.Completa la funcion a continuacion incluyendo la escritura de una descripcion.",
+    "source_code": "[student_code]\r\ndef reorganizar(orig_dicc):\r\n    \"\"\" (dict de str a lista de str) -> dict de str a lista de str\r\n    \r\n    >>> reorganizar({'Clave1':[\"string1\", \"string2\"], 'Clave2':[\"string2\"]})\r\n    {'string1':['Clave1'], 'string2':['Clave1', 'Clave2']}\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "TransformingToStringType",
+          "MixedNestedLoopIteration",
+          "IfElifElseChecking",
+          "IfChecking",
+          "ComparisonExpression",
+          "CheckingForItem",
+          "list()",
+          "dict()",
+          "AddingListElementWithAppend",
+          "DefiningSimpleFunction",
+          "NestedForLoopIteration",
+          "ListReferencing",
+          "ChangingValueVariable",
+          "IfCheckingInForLoop",
+          "StringLiteral",
+          "ListLiteral",
+          "DictLiteral",
+          "CallingSimpleFunction",
+          "CallingObjectMethod",
+          "CreatingObject",
+          "IndexingList",
+          "AddingItemToDictionary",
+          "IndexingDictionary"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm mod": {
+        "concepts": [
+          "AccessingDictionary"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "DictLiteral",
+          "ListLiteral",
+          "MixedNestedLoopIteration",
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AccessingDictionary",
+          "AddingItemToDictionary",
+          "AddingListElementWithAppend",
+          "CallingObjectMethod",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "IfChecking",
+          "IfCheckingInForLoop",
+          "IndexingDictionary",
+          "ListReferencing",
+          "NestedForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/276/embed?act=PCRS&sub=py_reorganize_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Diccionarios",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Diccionarios",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.971Z"
+}

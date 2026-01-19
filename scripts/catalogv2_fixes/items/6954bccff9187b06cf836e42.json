@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf836e42",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-15T22:16:22.000Z",
+  "updated_at": "2026-01-17T05:27:42.083Z",
+  "tags": [],
+  "identity": {
+    "id": "java_linkedlist_repeated_no_feedback",
+    "title": "LinkedList repeated two lists - NFB",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/563/embed?act=PCRS&sub=java_linkedlist_repeated_no_feedback"
+  },
+  "attribution": {
+    "created_at": "2025-04-15T22:16:22.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "By using the LinkedList class implemented in the java.lang package, complete the method listRepeated in order to return a LinkedList that includes only the elements that appear in BOTH listA and listB. The elements in the returned LinkedList must follow the number of appearances and the order of appearance specified in listA.E.g. listA = [3,4,5,6], listB = [6,6,7,3,8], then returned newList = [3,6] (here we include 6 only once because in listA it only appears once)listA = [3,4,4,5,6,7], listB = [34,7,12], then returned newList = [7]listA = [4,90,1,2], listB=[3,67,0,55,12], then returned newList = [] (empty LinkedList, no elements)",
+    "source_code": "[file Lab7.java]\n[student_code]\nstatic LinkedList<Integer> listRepeated(LinkedList<Integer> listA, LinkedList<Integer> listB){\n\n}\n      \n[/student_code]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/563/embed?act=PCRS&sub=java_linkedlist_repeated_no_feedback"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Linked Lists",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.958Z"
+}

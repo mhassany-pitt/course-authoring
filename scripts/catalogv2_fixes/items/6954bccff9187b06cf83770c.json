@@ -1,0 +1,186 @@
+{
+  "id": "6954bccff9187b06cf83770c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:34.129Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "comparison_operators_v2",
+    "title": "comparison operators",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=comparison_operators_v2&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "class ComparisonDemo {\n\u00a0\u00a0\u00a0\u00a0\u00a0public static void main(String[] args){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int value1 = 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int value2 = 2;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(value1 == value2) System.out.println(\"equal\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(value1 != value2) System.out.println(\"not equal\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(value1 > value2) System.out.println(\"greater than\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(value1 >= value2) System.out.println(\"greater than or equal\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(value1 < value2) System.out.println(\"less than\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(value1 <= value2) System.out.println(\"less than or equal\");\n\u00a0\u00a0\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "ActualMethodParameter",
+          "ClassDefinition",
+          "EqualExpression",
+          "FormalMethodParameter",
+          "GreaterExpression",
+          "IfStatement",
+          "IntDataType",
+          "java.lang.System.out.println",
+          "LessEqualExpression",
+          "LessExpression",
+          "MethodDefinition",
+          "NotEqualExpression",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "StringDataType",
+          "StringLiteral",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=comparison_operators_v2&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=1",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=1",
+      "context_name": "Java: INFSCI 0017 | Introduction to Java Programming > Boolean Expressions",
+      "used_at": "2013-05-23T12:19:44.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=3",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=3",
+      "context_name": "Java: STUDY2013 | Lab Study 2013 - 2014 > Decisions and Boolean Expressions",
+      "used_at": "2013-12-07T14:35:37.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=10",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=10",
+      "context_name": "Java: STUDY2013 | Lab Study 2013 - 2014 [cloned on 8/21/2014 at 10:55:44 PM] > Decisions and Boolean Expressions",
+      "used_at": "2014-08-21T22:55:46.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=11",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=11",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] > Boolean Expressions",
+      "used_at": "2014-08-30T12:57:33.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=13",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=13",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] - Animated Examples > Boolean Expressions",
+      "used_at": "2014-09-09T15:38:38.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=17",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=17",
+      "context_name": "Java: INFSCI 0017 | Introduction to Java Programming (Fall 2014-ae) > Boolean Expressions",
+      "used_at": "2014-09-11T11:50:18.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=19",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=19",
+      "context_name": "Java: INFSCI 0017 | Test - (ISD) JAVA course [clone] > Boolean Expressions",
+      "used_at": "2014-11-06T10:59:11.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=21",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=21",
+      "context_name": "Java: INFSCI 0017 2 | Demo Course 2 > Boolean Expressions",
+      "used_at": "2015-04-15T13:10:54.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=29",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=29",
+      "context_name": "Java: INFSCI 0017 | mg-gs-demo > Boolean Expressions",
+      "used_at": "2015-09-14T11:10:25.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=31",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_name": "Java: INFSCI 0017 | roya-clone-test-java > Boolean Expressions",
+      "used_at": "2015-12-08T17:16:50.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=32",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=32",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 > Boolean Expressions",
+      "used_at": "2016-01-15T10:31:22.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=339",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=339",
+      "context_name": "Java: INFSCI 0017 | Java Study 2016 A > Boolean Expressions",
+      "used_at": "2016-11-02T14:34:05.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=382",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=382",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v3 > Boolean Expressions",
+      "used_at": "2020-01-11T16:29:42.000Z",
+      "used_by": "Zak Risha, Zak Risha - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.189Z"
+}

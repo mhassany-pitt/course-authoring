@@ -1,0 +1,230 @@
+{
+  "id": "6954bccff9187b06cf83725e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2017-12-25T15:53:47.000Z",
+  "updated_at": "2026-01-17T05:29:35.455Z",
+  "tags": [],
+  "identity": {
+    "id": "pcrs_2d_arrays_2",
+    "title": "Two-Dimensional Arrays 2",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/375/embed?act=PCRS&sub=pcrs_2d_arrays_2"
+  },
+  "attribution": {
+    "created_at": "2017-12-25T15:53:47.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following method which takes a 2D int array (square or rectangular) called arr and returns the sum of all the elements in the specified column columnIndex of the 2D array arr.Assume that none of the rows in this 2D array is null. If the columnIndex is invalid, the method should return -1.For exampe:sumColumn( new int[][] { {1,0,1}, {2,1,2}, {0,0,0} }, 1) => 1sumColumn( new int[][]  { {1}, {1}, {5} }, 0) => 7sumColumn( new int[][] { {1,0}, {2,1}, {1,2} }, 2) => -1",
+    "source_code": "[file SCode.java]\n[student_code]\npublic int sumColumn(int[][] arr, int columnIndex) {\n    // TODO: Write your code here\n\n    \n    \n    \n}\n[/student_code]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "ArrayElement",
+          "MultiDimensionalArrayDataType",
+          "IntDataType",
+          "ReturnStatement",
+          "AddAssignmentExpression",
+          "ArrayLength"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "parser": {
+        "concepts": [
+          "IfStatement",
+          "GreaterExpression",
+          "PostIncrementExpression",
+          "SimpleAssignmentExpression",
+          "LessExpression",
+          "SubtractExpression",
+          "ForStatement",
+          "SimpleVariable"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "AddAssignmentExpression",
+          "ArrayElement",
+          "ArrayLength",
+          "ForStatement",
+          "GreaterExpression",
+          "IfStatement",
+          "IntDataType",
+          "LessExpression",
+          "MultiDimensionalArrayDataType",
+          "PostIncrementExpression",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "SubtractExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/375/embed?act=PCRS&sub=pcrs_2d_arrays_2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=351",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=351",
+      "context_name": "Java: INFSCI 0017 | CS 0401 - Intermediate Java Programming (Spring 2018) > Two-Dimensional Arrays",
+      "used_at": "2017-12-17T19:07:09.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=352",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=352",
+      "context_name": "Java: INFSCI 0017 | Norway-Spring2018 Java Course > Two-Dimensional Arrays",
+      "used_at": "2018-01-15T17:35:55.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=361",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=361",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 (QJ-AE-PCEX-PCRS) > Two-dimensional Arrays",
+      "used_at": "2018-09-11T14:14:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=366",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=366",
+      "context_name": "Java: INFSCI 0017 | CSEdPad course v1 (all Java content) > Two-dimensional Arrays",
+      "used_at": "2018-10-18T16:24:57.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=381",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=381",
+      "context_name": "Java: INFSCI 0017 | CS 0007 - Java Programming (Fall 2019) > Two-Dimensional Arrays",
+      "used_at": "2019-12-02T23:01:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=385",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=385",
+      "context_name": "Java: CS 007 | Revised Java Course v3 (QJ-AE-PCEX-PCRS) > Two-dimensional Arrays",
+      "used_at": "2020-01-27T00:06:20.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=400",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=400",
+      "context_name": "Java: CIS 120 | CIS 120 - Java Programming CALU > Two-dimensional Arrays",
+      "used_at": "2020-08-30T15:14:13.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=401",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=401",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2020) > Two-dimensional Arrays",
+      "used_at": "2020-08-30T22:58:55.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=402",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=402",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming (No Labs - Extra content) > Two-Dimensional Arrays",
+      "used_at": "2020-09-04T14:53:50.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=412",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=412",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Summer 2021) > Two-dimensional Arrays",
+      "used_at": "2021-05-20T10:36:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=416",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=416",
+      "context_name": "Java: INFSCI 0017 | Novi Sad Java Fall 2021 > Two-Dimensional Arrays",
+      "used_at": "2021-10-18T14:55:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 4 - Arrays ",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    },
+    {
+      "context_id": "cid=442",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=442",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2024) > Two-dimensional Arrays",
+      "used_at": "2024-09-10T16:51:32.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=443",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=443",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2024) Alternative Order > Two-dimensional Arrays",
+      "used_at": "2024-09-10T18:36:13.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Two-dimensional Arrays",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=474",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=474",
+      "context_name": "Java: CMU15-121 | CMU 15-121 - Intro Data Structures - Fall 2025 > Two-Dimensional Arrays",
+      "used_at": "2025-09-16T16:41:24.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.087Z"
+}

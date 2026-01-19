@@ -1,0 +1,98 @@
+{
+  "id": "6954bccff9187b06cf836ef2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:02.800Z",
+  "tags": [],
+  "identity": {
+    "id": "py_is_teenager_if_es",
+    "title": " PCRS C3-PL Is teenager",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/206/embed?act=PCRS&sub=py_is_teenager_if_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Generalmente se considera que una persona es un adolescente entre las edades de 13 y 18 a\u00f1os. Escriba una funci\u00f3n que determine si la edad dada es a la vez adolescente y no un n\u00famero primo. (Pista: s\u00f3lo 13 y 17 son primos en ese rango).",
+    "source_code": "[student_code]\r\ndef adolescenteNoPrimo(edad):\r\n    return\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "NestedIfChecking"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "DefiningSimpleFunction",
+          "IfChecking",
+          "BooleanLiteral",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "LogicalExpression",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm mod": {
+        "concepts": [
+          "IfElseChecking"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/206/embed?act=PCRS&sub=py_is_teenager_if_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.977Z"
+}

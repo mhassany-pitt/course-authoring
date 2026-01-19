@@ -1,0 +1,154 @@
+{
+  "id": "6954bccff9187b06cf836dc1",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:19:48.000Z",
+  "updated_at": "2026-01-17T05:27:26.804Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_nested_loops_es",
+    "title": "Construir un problema con ciclos anidados",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_loops_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:19:48.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que primero imprima 15, luego 14, luego 12, luego 9 y finalmente 5 en lineas consecutivas.",
+    "source_code": "MAXIMO = 5\ni = 0\nwhile i < MAXIMO:\n    suma = 0\n    j = MAXIMO\n    while j > i:\n        suma = suma + j\n        j = j - 1\n    print(suma)\n    i = i + 1"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "Assign",
+          "Int",
+          "AugAssign",
+          "Gt",
+          "Sub",
+          "GtE",
+          "While",
+          "Str",
+          "Call"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "NestedWhileLoopIteration",
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "ChangingValueVariable",
+          "Printing",
+          "WhileLoopWith",
+          "Subtraction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Gt",
+          "Sub",
+          "Call",
+          "Assign",
+          "GtE",
+          "Int",
+          "While",
+          "AugAssign",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "AssigningValueVariable",
+          "BooleanEvaluating",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "NestedWhileLoopIteration",
+          "Printing",
+          "Subtraction",
+          "WhileLoopWith"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_loops_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Ciclos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Ciclos",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=464",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=464",
+      "context_name": "Python: UTFSM-Progra | Test Jordan Thesis Python ES > Ciclos",
+      "used_at": "2025-07-10T18:56:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.945Z"
+}

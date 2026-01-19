@@ -1,0 +1,154 @@
+{
+  "id": "6954bccff9187b06cf836d85",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-26T23:55:35.000Z",
+  "updated_at": "2026-01-17T05:27:20.291Z",
+  "tags": [],
+  "identity": {
+    "id": "py_num_above_average_es",
+    "title": "Contar el numero de valores que estan por encima del promedio (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/305/embed?act=PCRS&sub=py_num_above_average_es"
+  },
+  "attribution": {
+    "created_at": "2025-05-26T23:55:35.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Escribe un programa que tome dos listas de enteros como parametros, y devuelva el numero de elementos en la segunda lista que son mayores que el promedio de la primera lista. No uses la funcion sum().    numPorEncimaDelPromedio([5,5,5,5], [3,4,5,6,7])=>2    numPorEncimaDelPromedio([5,15,10,20,25], [34, 12, 19, -1])=>2    numPorEncimaDelPromedio([5, 7], [])=>0",
+    "source_code": "[blocked]\r\ndef numPorEncimaDelPromedio(lista1, lista2):\r\n    #Escribir codigo aqui\r\n[/blocked]\r\n[student_code]\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "Division",
+          "ListReferencing",
+          "ListLiteral",
+          "FloatLiteral",
+          "IndexingList",
+          "CheckingForItem",
+          "Addition",
+          "list()",
+          "DefiningSimpleFunction",
+          "ForLoopWith+=",
+          "AugmentedAssignmentStatement",
+          "ChangingValueVariable",
+          "IfElifElseChecking",
+          "IfChecking",
+          "IfCheckingInForLoop",
+          "BooleanLiteral",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm mod": {
+        "concepts": [
+          "IfElifElseCheckingInForLoop"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "AugmentedAssignmentStatement",
+          "ComparisonExpression",
+          "FloatLiteral",
+          "ForLoopWith+=",
+          "IntegerLiteral",
+          "ListLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "BooleanLiteral",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "Division",
+          "IfChecking",
+          "IfCheckingInForLoop",
+          "IndexingList",
+          "ListReferencing"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/305/embed?act=PCRS&sub=py_num_above_average_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Listas",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Listas",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Listas",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.939Z"
+}

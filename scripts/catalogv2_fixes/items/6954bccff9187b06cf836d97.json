@@ -1,0 +1,95 @@
+{
+  "id": "6954bccff9187b06cf836d97",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:21:10.000Z",
+  "updated_at": "2026-01-17T05:27:22.191Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_search_min_index_es",
+    "title": "Practicar la b\u00fasqueda del \u00edndice del elemento m\u00ednimo",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_search_min_index_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:21:10.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que encuentre el indice del elemento minimo en una lista. num_lista es el caso de prueba donde se debe encontrar el indice minimo. El programa debe imprimir el indice del elemento minimo.",
+    "source_code": "indice_min = 0\nfor indice in range(1,len(num_lista)):\n\tif (num_lista[indice] < num_lista[indice_min]):\n\t\tindice_min = indice\nprint(indice_min)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "Assign",
+          "For",
+          "Lt",
+          "If",
+          "Call",
+          "Index"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "For",
+          "Constant",
+          "Call",
+          "Assign",
+          "Lt",
+          "If",
+          "Index"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_search_min_index_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.941Z"
+}

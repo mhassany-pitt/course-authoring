@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8370df",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-09-06T00:34:42.000Z",
+  "updated_at": "2026-01-17T12:55:16.265Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "power_with_input3",
+    "title": "Power With Input3",
+    "type": "Animated Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=power_with_input3&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2021-09-06T00:34:42.000Z",
+    "provider": "JSVEE",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "def power(base, exp):\n    result = 1\n    i = 0\n    while i < exp:\n        result = result * base\n        i += 1\n    return result\n\ndef main():\n    exponent = int(input(\"Enter exponent: \"))\n    new_num = power(2, exponent)\n    print(new_num)\n\nmain()\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=power_with_input3"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.044Z"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e67",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:46.198Z",
+  "tags": [],
+  "identity": {
+    "id": "py_student_by_degree",
+    "title": "PCRS C3-PL  Student By Degree",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/95/embed?act=PCRS&sub=py_student_by_degree"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "This exercise uses the student record format from assignment 1. Recall that each student record was a comma separated sequence where the last item in the sequence is the degree being applied to.Complete the function students_by_degree according to its docstring.",
+    "source_code": "[student_code]\r\ndef students_by_degree(student_list, degree_type):\r\n    \"\"\" (list of str, str) -> list of str\r\n\r\n    Return a list of the elements of student_list which are enrolling in the degree_type in the order\r\n    they appear in the original list.\r\n\r\n    >>> students_by_degree(['Jacqueline Smith,Best High School,2002,MAT,90,94,ENG,92,88,CHM,80,85,BArts',\r\n                           'Paul Gries,Another High School,1990,BIO,60,70,CHM,80,90,CAT,95,96,BEng',\r\n                           'Jen Campbell,Yet Another High School,2015,ENG,75,78,SCI,80,81,CHM,80,81,BEng'],\r\n                           'BEng')\r\n    ['Paul Gries,Another High School,1990,BIO,60,70,CHM,80,90,CAT,95,96,BEng', 'Jen Campbell,Yet Another High School,2015,ENG,75,78,SCI,80,81,CHM,80,81,BEng']\r\n    \"\"\"\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/95/embed?act=PCRS&sub=py_student_by_degree"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.962Z"
+}

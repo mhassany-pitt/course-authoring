@@ -1,0 +1,100 @@
+{
+  "id": "6954bccff9187b06cf837638",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:02.595Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "babyweighting.c",
+    "title": "IS12:: babyweighting.c (9.4)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=babyweighting.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Example: baby weighting station\n\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky */\n\n#include <stdio.h>\n#define NBABIES 7 /* dimension of the array */\n\nvoid main(){\n\u00a0\u00a0\u00a0\u00a0float weight[NBABIES]; /* elements from ar[0] to ar[DIM-1]; */\n\u00a0\u00a0\u00a0\u00a0int i;\n\u00a0\u00a0\u00a0\u00a0float sum = 0, max = 0, average, diff;\n\n\u00a0\u00a0\u00a0\u00a0/* array input */\n\u00a0\u00a0\u00a0\u00a0for (i = 0; i < NBABIES; ++i) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Weight of baby %d: \", i);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%f\", &weight[i]);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0sum += weight[i];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(weight[i] > max) max = weight[i];\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0average = sum / NBABIES;\n\n\u00a0\u00a0\u00a0\u00a0/* array output */\n\u00a0\u00a0\u00a0\u00a0printf(\"\nThe max weight is %.2f.\n\", max);\n\u00a0\u00a0\u00a0\u00a0printf(\"The average weight is %.2f.\n\", average);\n\u00a0\u00a0\u00a0\u00a0for (i = 0; i < NBABIES; ++i) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0diff = weight[i] - average;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Baby %d: weight %.2f \", i, weight[i]);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(diff >= 0)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"(%.2f heavier than the average)\n\", diff);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"(%.2f lighter than the average)\n\", -diff);\n\u00a0\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "variable_initialization",
+          "pre_increment",
+          "for",
+          "if_else",
+          "array_declaration",
+          "reference",
+          "add_assignment",
+          "simple_assignment",
+          "int",
+          "greater_equal",
+          "if",
+          "main_function",
+          "float",
+          "less",
+          "greater",
+          "define",
+          "div",
+          "void",
+          "sub",
+          "include",
+          "variable_declaration",
+          "printf",
+          "scanf"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=babyweighting.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.176Z"
+}

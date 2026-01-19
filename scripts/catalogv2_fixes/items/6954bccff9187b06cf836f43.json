@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836f43",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-03-28T00:42:49.000Z",
+  "updated_at": "2026-01-17T05:28:11.512Z",
+  "tags": [],
+  "identity": {
+    "id": "py_word_correctly_spelled",
+    "title": "Word Spelling",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/30/embed?act=PCRS&sub=py_word_correctly_spelled"
+  },
+  "attribution": {
+    "created_at": "2025-03-28T00:42:49.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Many Unix-like systems (including CDF) have a dictionary of correctly spelled words in a \ufb01le. On CDF,here is the path to the \ufb01le: /etc/dictionaries-common/words. See below some of those words (the \ufb01lecontains both capitalized and lowercase words); complete the function below, where dictionaryrefers to a \ufb01le that has been opened for reading:",
+    "source_code": "[student_code]\r\ndef is_correct(dictionary, word):\r\n    \"\"\" (Open File for reading, str) -> bool\r\n    \r\n    Return True iff word is a correctly-spelled word in dictionary.\r\n    \r\n    >>> dict1 = open('dict.txt', 'r')\r\n    >>> is_correct(dict1, \"Zyrtec\")\r\n    True\r\n    >>> dict1.close()\r\n\r\n    >>> dict1 = open('dict.txt', 'r')\r\n    >>> is_correct(dict1, \"lolz\")\r\n    False\r\n    >>> dict1.close()\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/30/embed?act=PCRS&sub=py_word_correctly_spelled"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.989Z"
+}

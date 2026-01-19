@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836d24",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T18:19:22.000Z",
+  "updated_at": "2026-01-17T05:26:56.823Z",
+  "tags": [],
+  "identity": {
+    "id": "Receiving Input Integers Until a Certain Condition is Met (Case 4)__68bdb309f6cc3d7a9cc0981f-68bdb309f6cc3d7a9cc0981d-3",
+    "title": "Receiving Input Integers Until a Certain Condition is Met (Case 4)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc0981f?_t=1757542762742&index=3"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T18:19:22.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that receives an integer from the user, outputs that integer, and stops receiving integers when the user enters an even integer less than 10.",
+    "source_code": "import java.util.Scanner;\npublic class JInput4 {\n\tpublic static void main(String[] args) {\n\t\t//Step 1: Read the first integer that the user enters\n\t\tScanner scan = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter an integer:\");\n\t\tint num = scan.nextInt();\n\t\t//Step 2: Print the integer that the user has entered, then receive the next integers as long as the user enters an integer that is not even or is not less than 10; otherwise stop\n\t\twhile ( num % 2 != 0 || num >= 10 ) {\n\t\t\tSystem.out.println(\"The integer entered is \" + num);\n\t\t\tSystem.out.println(\"Enter an integer:\");\n\t\t\tnum = scan.nextInt(); \n\t\t}\n\t\tscan.close();\n\t\tSystem.out.println(\"End of input.\");\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc0981f?_t=1757542762742&index=3"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Loops while",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > While Loops",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > While Loops",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.924Z"
+}

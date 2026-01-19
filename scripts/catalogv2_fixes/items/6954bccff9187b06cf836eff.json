@@ -1,0 +1,155 @@
+{
+  "id": "6954bccff9187b06cf836eff",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:04.159Z",
+  "tags": [],
+  "identity": {
+    "id": "py_valid_es",
+    "title": "Solo caracteres de un cierto alfabeto (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/277/embed?act=PCRS&sub=py_valid_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa la funcion a continuacion segun su docstring.",
+    "source_code": "[student_code]\r\ndef valido(string, alfabeto):\r\n    \"\"\" (str, str) -> bool\r\n\r\n    Devolver True si y solo si string esta compuesta solo de caracteres en alfabeto.\r\n    \r\n    >>> valido('adc', 'abcd')\r\n    True\r\n    >>> valido('ABC', 'abcd')\r\n    False\r\n    >>> valido('abc', 'abz')\r\n    False\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "TransformingToStringType",
+          "IfChecking",
+          "StringLiteral",
+          "ComparisonExpression",
+          "LogicalExpression",
+          "CheckingForItem",
+          "DefiningSimpleFunction",
+          "IfCheckingInForLoop",
+          "BooleanLiteral",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm mod": {
+        "concepts": [
+          "IndexingString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "LogicalExpression",
+          "ComparisonExpression",
+          "LogicalExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "BooleanLiteral",
+          "CallingSimpleFunction",
+          "DefiningSimpleFunction",
+          "IfChecking",
+          "IfCheckingInForLoop",
+          "IndexingString",
+          "SingleForLoopIteration",
+          "BooleanLiteral",
+          "CallingSimpleFunction",
+          "DefiningSimpleFunction",
+          "IfChecking",
+          "IfCheckingInForLoop",
+          "IndexingString",
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/277/embed?act=PCRS&sub=py_valid_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Strings",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Strings",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Strings",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.979Z"
+}

@@ -1,0 +1,144 @@
+{
+  "id": "6954bccff9187b06cf8371bb",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-01-13T00:52:27.000Z",
+  "updated_at": "2026-01-17T05:29:13.956Z",
+  "tags": [],
+  "identity": {
+    "id": "py_unicode_value",
+    "title": "Find ASCII/Unicode value",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/187/embed?act=PCRS&sub=py_unicode_value"
+  },
+  "attribution": {
+    "created_at": "2020-01-13T00:52:27.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following program that prints the ASCII/Unicode value of the given character that is stored in variable char. Assume that char is already set to a character. The ASCII/Unicode value should be stored in unicode_valueHint: Use ord() built-in function.E.g.: If char is 'a', the Unicode value of a is 97Authors: Yana Kortsarts, Yulia Kempner, Leonid Kugel, Kamil Akhuseyinoglu",
+    "source_code": "[student_code]\r\n\r\n[/student_code]\r\n[blocked]\r\n[/blocked]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/187/embed?act=PCRS&sub=py_unicode_value"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=375",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=375",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course > Variables and Operations",
+      "used_at": "2019-07-03T11:34:57.000Z",
+      "used_by": "Michelle, Wang - University of Alberta"
+    },
+    {
+      "context_id": "cid=384",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=384",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Spring+PCRS) > Variables and Operations",
+      "used_at": "2020-01-12T17:36:15.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=390",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=390",
+      "context_name": "Python: PYTHON001 | Python Computational Thinking Workshop SCI Pitt > Variables",
+      "used_at": "2020-06-18T15:47:50.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=391",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=391",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2020 > Variables and Operations",
+      "used_at": "2020-07-03T01:07:51.000Z",
+      "used_by": "Carrie, Demmans - University of Alberta"
+    },
+    {
+      "context_id": "cid=396",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=396",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Fall 2020) > Variables and Operations",
+      "used_at": "2020-08-16T23:39:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=407",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=407",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Spring 2021) > Variables and Operations",
+      "used_at": "2021-01-26T22:51:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=429",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=429",
+      "context_name": "Python: INFO063-17 | INTRODUCCI\u00c3\u0093N A LA PROGRAMACI\u00c3\u0093N > Variables and Operations",
+      "used_at": "2023-05-30T22:07:20.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Variables and Operations",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > Variables and Operations",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Variables and Operations",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=465",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=465",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Fall 2025) > Variables and Operations",
+      "used_at": "2025-08-08T15:59:35.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.068Z"
+}

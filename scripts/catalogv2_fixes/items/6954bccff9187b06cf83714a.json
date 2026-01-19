@@ -1,0 +1,125 @@
+{
+  "id": "6954bccff9187b06cf83714a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-09T19:21:45.000Z",
+  "updated_at": "2026-01-17T12:41:46.824Z",
+  "tags": [],
+  "identity": {
+    "id": "py_point2",
+    "title": "The Class for Representing a Point in the Euclidean Plane",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=objects_classes_point&ch=py_point2"
+  },
+  "attribution": {
+    "created_at": "2020-08-09T19:21:45.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a class that represents a point in the Euclidean plane. The class should contain data that represents the point\u2019s integer coordinates (x,y). The point's coordinates could be accessed or changed only through the getter and setter methods. The class should also include a method to calculate and return the point's distance from the origin (0,0).",
+    "source_code": "#Step 1: Define the class\nclass Point2 :\n    #Step 1.1: Declare the method to calculate and return the point's distance from the origin\n    def distance_from_origin(self) :\n        return (self.__x * self.__x + self.__y * self.__y) ** 0.5\n    #Step 1.2: Define the setter and getter methods for the x-coordinate of the point\n    def set_x(self, new_x) :\n        self.__x = new_x\n    def get_x(self) :\n        return self.__x\n    #Step 1.3: Define the setter and getter methods for the y-coordinate of the point\n    def set_y(self, new_y) :\n        self.__y = new_y\n    def get_y(self) :\n        return self.__y\n#Step 2: Test the class\np2 = Point2()\np2.set_x(7)\np2.set_y(2)\nprint(\"p2 coordinates: (\" + str(p2.get_x()) + \", \" + str(p2.get_y()) + \")\") \nprint(\"Distance of p2 from origin = \" + str(p2.distance_from_origin()))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "CallingObjectMethod",
+          "DefiningObjectMethod",
+          "Multiplication",
+          "DefiningClass",
+          "CreatingObject",
+          "AssigningValueVariable",
+          "Addition",
+          "CallingLibraryFunction",
+          "CreatingString",
+          "TransformingToStringType",
+          "Printing",
+          "Power",
+          "Concatenation",
+          "NestedFunctionCall"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "CallingObjectMethod",
+          "Concatenation",
+          "CreatingObject",
+          "CreatingString",
+          "DefiningClass",
+          "DefiningObjectMethod",
+          "Multiplication",
+          "NestedFunctionCall",
+          "Power",
+          "Printing",
+          "TransformingToStringType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=objects_classes_point&ch=py_point2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > Classes and objects",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > Classes and objects",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.056Z"
+}

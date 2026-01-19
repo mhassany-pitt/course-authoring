@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836dde",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:19:48.000Z",
+  "updated_at": "2026-01-17T05:27:30.187Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_find_and_square6_es",
+    "title": "Actualizar elementos necesarios en una nueva lista",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_find_and_square6_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:19:48.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que encuentre los numeros pares en la lista original, calcule el cuadrado de cada uno de esos numeros y agregue los cuadrados a una nueva lista. El programa debe imprimir la nueva lista.",
+    "source_code": "lista1 = [1, 2, 3, 4, 5]\n    nueva_lista = []\n    for i in lista1:\n        numero = i\n        if numero % 2 == 0:\n            nueva_lista.append(numero * numero)\n    print(nueva_lista)\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_find_and_square6_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.948Z"
+}

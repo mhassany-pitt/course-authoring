@@ -1,0 +1,192 @@
+{
+  "id": "6954bccff9187b06cf8371c7",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2019-09-14T22:59:41.000Z",
+  "updated_at": "2026-01-17T12:55:36.536Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "q_py_queue_num",
+    "title": "Queue Num",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_queue_num&sub=q_py_queue_num&act=q_py_stacks_queues"
+  },
+  "attribution": {
+    "created_at": "2019-09-14T22:59:41.000Z",
+    "provider": "QuizPET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Michelle Wang",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "class CircularQueue:\n    def __init__(self, capacity):\n        if type(capacity) != int or capacity &lt;=0:\n            raise Exception(\"Capacity Error\")\n        self.__items = []\n        self.__capacity = capacity\n        self.__count = 0\n        self.__head = 0\n        self.__tail = 0\n    def enqueue(self,item):\n        if self.__count == self.__capacity:\n            raise Exception(\"Error: Queue is full\")\n        if len(self.__items) &lt; self.__capacity:\n            self.__items.append(item)\n        else:\n            self.__items[self.__tail] = item\n        self.__count += 1\n        self.__tail = (self.__tail +1)%self.__capacity\n    def dequeue(self):\n        if self.__count == 0:\n            raise Exception(\"Error: Queue is empty\")\n        item = self.__items[self.__head]\n        self.__items[self.__head]=None\n        self.__count -=1\n        self.__head = (self.__head+1)%self.__capacity\n        return item\n    def peek(self):\n        if self.__count == 0:\n            raise Exception (\"Error: Queue is empty\")\n        return self.__items[self.__head]\n    def __str__(self):\n        str_exp = \"]\"\n        i = self.__head\n        for j in range(self.__count):\n            str_exp += str(self.__items[i]) + \"\"\n            i = (i+1)%self.__capacity\n        return str_exp + \"]\"\nqueue = CircularQueue(15)\nqueue.enqueue(3)\nqueue.enqueue(1)\nqueue.enqueue(5)\nprint(queue.peek())\nprint(queue.dequeue() == 15)\nprint(queue)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "Assign",
+          "For",
+          "List",
+          "LtE",
+          "Return",
+          "Add",
+          "Eq",
+          "Sub",
+          "ClassDef",
+          "Mod",
+          "NotEq",
+          "If",
+          "Attribute",
+          "Raise",
+          "Index",
+          "FunctionDef",
+          "arg",
+          "Or",
+          "Lt",
+          "AugAssign",
+          "Constant",
+          "Call"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "For",
+          "Call",
+          "Return",
+          "Index",
+          "LtE",
+          "Or",
+          "Raise",
+          "Attribute",
+          "Lt",
+          "AugAssign",
+          "Mod",
+          "arg",
+          "Constant",
+          "Add",
+          "If",
+          "Sub",
+          "Assign",
+          "List",
+          "ClassDef",
+          "Eq",
+          "FunctionDef",
+          "NotEq"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_queue_num&sub=q_py_queue_num&act=q_py_stacks_queues"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=375",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=375",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course > Stacks and Queues",
+      "used_at": "2019-07-03T11:34:57.000Z",
+      "used_by": "Michelle, Wang - University of Alberta"
+    },
+    {
+      "context_id": "cid=379",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=379",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Fall 2019 > Queues and Stacks",
+      "used_at": "2019-09-14T21:22:08.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=391",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=391",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2020 > Stacks and Queues",
+      "used_at": "2020-07-03T01:07:51.000Z",
+      "used_by": "Carrie, Demmans - University of Alberta"
+    },
+    {
+      "context_id": "cid=413",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Queues",
+      "used_at": "2021-08-11T18:22:22.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=414",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=414",
+      "context_name": "Python: PYTHON001 | TC1028 Tecnologico de Monterrey > Queues",
+      "used_at": "2021-08-22T10:25:40.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=422",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > Topic 6",
+      "used_at": "2022-05-23T22:24:04.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=423",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=423",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Fall 2022 (Python II) > Topic 5 - Queues",
+      "used_at": "2022-08-10T17:36:04.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=428",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=428",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2023 (Python II) > Halfweek 6 - Queues",
+      "used_at": "2023-05-02T00:12:59.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=431",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=431",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2024 (Python II) > Halfweek 6 - Queues",
+      "used_at": "2024-05-03T14:17:30.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.069Z"
+}

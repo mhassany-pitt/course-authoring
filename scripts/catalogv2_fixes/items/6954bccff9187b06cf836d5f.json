@@ -1,0 +1,149 @@
+{
+  "id": "6954bccff9187b06cf836d5f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-10T08:49:49.000Z",
+  "updated_at": "2026-01-17T05:27:04.283Z",
+  "tags": [],
+  "identity": {
+    "id": "py_divisor_es__68273d7266a8e1b992c81271",
+    "title": "Encontrar el Divisor Mas Pequeno de un Numero Positivo",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68273d7266a8e1b992c81271?_t=1750184380227&index=0&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-10T08:49:49.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Isaac Alpizar-Chacon",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "es",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construir un programa que encuentre el divisor m\u00e1s peque\u00f1o (distinto de 1) de un n\u00famero positivo. Por ejemplo, el divisor m\u00e1s peque\u00f1o de 4 es 2.",
+    "source_code": "#Paso 1: Asignar valores iniciales a las variables que necesitamos para este programa\nnum = 15\ndivisor = 2\n#Paso 2: Encontrar el divisor m\u00e1s peque\u00f1o del n\u00famero\nwhile num % divisor != 0 :\n    divisor += 1\nprint(\"El divisor m\u00e1s peque\u00f1o de\", num, \"es\", divisor)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "Arun parser v0.1": {
+        "concepts": [
+          "Mod",
+          "Assign",
+          "Str",
+          "Call",
+          "While",
+          "NotEq",
+          "Add",
+          "AugAssign",
+          "Int",
+          "Sub"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleWhileLoopIteration",
+          "FindRemainder",
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "ChangingValueVariable",
+          "Printing",
+          "WhileLoopWith",
+          "SingleWhileLoopIteration",
+          "FindRemainder",
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "ChangingValueVariable",
+          "Printing",
+          "WhileLoopWith"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Sub",
+          "Call",
+          "Assign",
+          "Int",
+          "While",
+          "Add",
+          "AugAssign",
+          "Mod",
+          "NotEq",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68273d7266a8e1b992c81271?_t=1750184380227&index=0&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Ciclos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Ciclos While",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Ciclos",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.936Z"
+}

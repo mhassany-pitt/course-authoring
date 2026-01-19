@@ -1,0 +1,83 @@
+{
+  "id": "6954bccff9187b06cf836e3b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-16T01:05:02.000Z",
+  "updated_at": "2026-01-17T12:54:19.711Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "q_java_q_py_slinkedlist1",
+    "title": "q_java_q_py_slinkedlist1",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_q_py_slinkedlist1&act=LinkedLists&sub=q_java_q_py_slinkedlist1"
+  },
+  "attribution": {
+    "created_at": "2025-04-16T01:05:02.000Z",
+    "provider": "QuizJET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class Tester {\n\n   public static void main(String[] args) {\n        SLinkedList location = new SLinkedList();\n        location.add(\"Denver\");\n        location.add(\"Austin\");\n        location.append(\"Seattle\");\n        System.out.println(location.pop());\n        location.add(\"Chicago\");\n        location.add(\"Miami\");\n        location.add(\"37\");\n        System.out.println(location.index(\"Austin\"));\n        location.remove(\"37\");\n        System.out.println(location);\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_q_py_slinkedlist1&act=LinkedLists&sub=q_java_q_py_slinkedlist1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Linked Lists",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Linked Lists (Feedback)",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.957Z"
+}

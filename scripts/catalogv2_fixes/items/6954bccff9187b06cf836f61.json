@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf836f61",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-03-12T10:55:02.000Z",
+  "updated_at": "2026-01-17T12:54:39.402Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "q_java_ArrayList6",
+    "title": "q_java_ArrayList 6",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_ArrayList6"
+  },
+  "attribution": {
+    "created_at": "2025-03-12T10:55:02.000Z",
+    "provider": "QuizJET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Sharon Hsiao",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "import java.util.ArrayList;\n\npublic class Tester {\n    public static void main(String[] args) {    \n\n        ArrayList&lt;Integer> numbers = new ArrayList&lt;Integer>();\n        int result = 0;\n\n        for (int i = 1; i &lt;= 5; i++)\n            numbers.add(i * 2);\n\n        numbers.remove(2);\n        numbers.set(2, 100);\n\n        result = numbers.get(0);\n    }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_ArrayList6"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.993Z"
+}

@@ -1,0 +1,166 @@
+{
+  "id": "6954bccff9187b06cf8375e6",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2014-09-01T15:34:20.000Z",
+  "updated_at": "2026-01-17T12:57:50.328Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "GradeBook",
+    "title": "Grade Book",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=GradeBook&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2014-09-01T15:34:20.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "import java.util.ArrayList;\n\npublic class GradeBook\n{\n\u00a0\u00a0\u00a0private ArrayList<Double> scores;\n\n\u00a0\u00a0\u00a0public GradeBook()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scores = new ArrayList<Double>();\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public void addScore(double score)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scores.add(score);\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public double sum()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double total = 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (double element : scores)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0total = total + element;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return total;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public double minimum()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (scores.size() == 0) return 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double smallest = scores.get(0);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = 1; i < scores.size(); i++)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (scores.get(i) < smallest)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0smallest = scores.get(i);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return smallest;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public double finalScore()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (scores.size() == 0)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if (scores.size() == 1)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return scores.get(0);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return sum() - minimum();\n\u00a0\u00a0\u00a0}\n}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "IfElseStatement",
+          "PostIncrementExpression",
+          "AddExpression",
+          "IfStatement",
+          "PrivateFieldSpecifier",
+          "ImportStatement",
+          "ConstructorDefinition",
+          "InstanceField",
+          "PublicConstructorSpecifier",
+          "DoubleDataType",
+          "IntDataType",
+          "EqualExpression",
+          "java.util.ArrayList",
+          "ReturnStatement",
+          "ForEachStatement",
+          "java.util.ArrayList.add",
+          "SimpleAssignmentExpression",
+          "java.util.ArrayList.get",
+          "SimpleVariable",
+          "ForStatement",
+          "java.util.ArrayList.size",
+          "SubtractExpression",
+          "GenericObjectCreationStatement",
+          "LessExpression",
+          "IfElseIfStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=GradeBook&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=11",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=11",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] > ArrayList",
+      "used_at": "2014-08-30T12:57:33.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=13",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=13",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] - Animated Examples > ArrayList",
+      "used_at": "2014-09-09T15:38:38.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=19",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=19",
+      "context_name": "Java: INFSCI 0017 | Test - (ISD) JAVA course [clone] > ArrayList",
+      "used_at": "2014-11-06T10:59:11.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=21",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=21",
+      "context_name": "Java: INFSCI 0017 2 | Demo Course 2 > ArrayList",
+      "used_at": "2015-04-15T13:10:54.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=29",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=29",
+      "context_name": "Java: INFSCI 0017 | mg-gs-demo > ArrayList",
+      "used_at": "2015-09-14T11:10:25.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=31",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_name": "Java: INFSCI 0017 | roya-clone-test-java > ArrayList",
+      "used_at": "2015-12-08T17:16:50.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=32",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=32",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 > ArrayList",
+      "used_at": "2016-01-15T10:31:22.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=339",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=339",
+      "context_name": "Java: INFSCI 0017 | Java Study 2016 A > ArrayList",
+      "used_at": "2016-11-02T14:34:05.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=382",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=382",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v3 > ArrayList",
+      "used_at": "2020-01-11T16:29:42.000Z",
+      "used_by": "Zak Risha, Zak Risha - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.170Z"
+}

@@ -1,0 +1,127 @@
+{
+  "id": "6954bccff9187b06cf837176",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-09T19:20:19.000Z",
+  "updated_at": "2026-01-17T12:41:53.098Z",
+  "tags": [],
+  "identity": {
+    "id": "py_fail_course3",
+    "title": "Pass-Fail Rule (Case 3)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_fail_course&ch=py_fail_course3"
+  },
+  "attribution": {
+    "created_at": "2020-08-09T19:20:19.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that determines whether a student fails the course based on the inputs that it receives from the instructor. The student fails the course if his/her score is not above the class average.",
+    "source_code": "#Step 1: Read the instructor inputs\ntext = input(\"Enter the student's score:\")\nstudent_score = int(text)\ntext = input(\"Enter the class average:\")\nclass_average = int(text)\n#Step 2: Write the boolean expression to determine whether the student fails the course\nis_failing = not ( student_score > class_average )\n#Step 3: Print the result\nif is_failing == True :\n    print(\"Yes! The student fails the course.\")\nelse:\n    print(\"No! The student does not fail the course.\")"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "TransformingToIntType",
+          "IfElseChecking",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "Printing",
+          "CreatingString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AssigningValueVariable",
+          "BooleanEvaluating",
+          "CallingLibraryFunction",
+          "CreatingString",
+          "HandlingInput",
+          "IfElseChecking",
+          "Printing",
+          "TransformingToIntType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_fail_course&ch=py_fail_course3"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > Boolean Expressions",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > Boolean Expressions",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > If-Else",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > If-Else",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.061Z"
+}

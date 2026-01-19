@@ -1,0 +1,185 @@
+{
+  "id": "6954bccff9187b06cf837148",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-09T19:21:45.000Z",
+  "updated_at": "2026-01-17T12:41:46.532Z",
+  "tags": [],
+  "identity": {
+    "id": "py_input_stat2",
+    "title": "Reporting File Information",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_file_input_stat&ch=py_input_stat2"
+  },
+  "attribution": {
+    "created_at": "2020-08-09T19:21:45.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": " Construct a program that receives the full path to an input file from the user, reads that file and reports the number of lines, the longest line, the number of words on each line, and the length of the longest word on each line. Make sure that the program handles each specific exception that could occur. Also, the program must ask the user for a valid file path until the user enters a file path that could be accessed without any exception.",
+    "source_code": "#Step 1: Define the function that gets the valid file path\ndef get_file():\n    valid = False\n    while not valid : \n        try:\n            file_name = input(\"Enter the full path of a file: \")\n            myfile = open( file_name, \"r\") \n            myfile.close()\n            valid = True\n        except FileNotFoundError:\n            print(\"File not found.\")\n        except IOError:\n            print(\"Problem with the file!\")\n    return file_name\n#Step 2: Define the function that processes the file\ndef get_stat(file_name):\n    #Step 2.1: Assign initial value to variable that we need for reporting the file information\n    num_lines = 0\n    longest_line = \"\"\n    #Step 2.2: Enclose the code that might throw an exception within the try block\n    try :\n        #Step 2.2.1: Open the file and process each line in the file\n        myfile = open( file_name, \"r\")\n        for line in myfile:\n            num_lines += 1\n            num_words = len(line.split())\n            #Determine if the line is the longest line so far\n            if (len(line) > len(longest_line)) :\n                longest_line = line\n            #Find the length of the longest word in the line\n            longest_word = 0\n            for w in line.split() :\n                if len(w) > longest_word :\n                    longest_word = len(w)\n            #Print the line information\n            print(\"Line \" + str(num_lines) + \" has \" + str(num_words) + \" tokens (longest = \" + str(longest_word) + \")\")\n        print(\"Longest line:\" + longest_line)\n        #Step 2.2.2: Close the file\n        myfile.close()\n    #Step 2.3: Handle all possible exceptions that may be thrown in the try block \n    except FileNotFoundError:\n        print(\"File not found.\")\n    except IOError:\n        print(\"Problem with the file!\")\n#Step 3: Call the functions\nget_stat( get_file() )"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "TransformingToStringType",
+          "ClosingFile",
+          "SingleWhileLoopIteration",
+          "NestedFunctionCall",
+          "FindingLength",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "NestedForLoopIteration",
+          "IfCheckingInForLoop",
+          "CreatingString",
+          "Addition",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "HandlingSpecificError",
+          "SplittingString",
+          "Printing",
+          "DefiningSimpleFunction",
+          "OpeningFile",
+          "ForLoopWith",
+          "ChangingValueVariable",
+          "SingleForLoopIteration",
+          "ReadingLine",
+          "Concatenation"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "AssigningValueVariable",
+          "BooleanEvaluating",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "ClosingFile",
+          "Concatenation",
+          "CreatingString",
+          "DefiningSimpleFunction",
+          "FindingLength",
+          "ForLoopWith",
+          "HandlingInput",
+          "HandlingSpecificError",
+          "IfCheckingInForLoop",
+          "NestedForLoopIteration",
+          "NestedFunctionCall",
+          "OpeningFile",
+          "Printing",
+          "ReadingLine",
+          "SingleForLoopIteration",
+          "SingleWhileLoopIteration",
+          "SplittingString",
+          "TransformingToStringType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_file_input_stat&ch=py_input_stat2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > File processing",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > File processing",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=423",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=423",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Fall 2022 (Python II) > Topic 4 - Exceptions & Exception Handling",
+      "used_at": "2022-08-10T17:36:04.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=428",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=428",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2023 (Python II) > Halfweek 5 - Exception Handling",
+      "used_at": "2023-05-02T00:12:59.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=431",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=431",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2024 (Python II) > Halfweek 5 - Exception Handling",
+      "used_at": "2024-05-03T14:17:30.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > File Handling",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > File Handling",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > File Handling",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.056Z"
+}

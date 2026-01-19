@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf837626",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:00.090Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fahr_input.c",
+    "title": "IS12:: fahr_input.c (3.4)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fahr_input.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Example: Temperature Converter with input\n\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky\n*/\n#include <stdio.h>\n\nvoid main()  {\n\u00a0\u00a0\u00a0\u00a0float fahr; /* the temperature to be converted */\n\n\u00a0\u00a0\u00a0\u00a0/* Data input */\n\u00a0\u00a0\u00a0\u00a0printf(\"Enter temperature in Fahrenheit: \"); /* prompt */\n\u00a0\u00a0\u00a0\u00a0scanf(\"%f\",&fahr); /* input */\n\n\u00a0\u00a0\u00a0\u00a0/* Calculation and printing */\n\u00a0\u00a0\u00a0\u00a0printf(\"%6.2f Fahrenheit = %6.2f Celsius\n\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fahr, (5.0 / 9.0) * (fahr - 32));\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "void",
+          "div",
+          "reference",
+          "sub",
+          "include",
+          "variable_declaration",
+          "mul",
+          "main_function",
+          "float",
+          "printf",
+          "scanf"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fahr_input.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.175Z"
+}

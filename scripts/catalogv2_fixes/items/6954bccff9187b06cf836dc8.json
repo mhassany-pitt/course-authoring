@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836dc8",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:19:48.000Z",
+  "updated_at": "2026-01-17T05:27:27.651Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_freq_of_char2_es",
+    "title": "Frecuencia de letras",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_freq_of_char2_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:19:48.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que cuente la frecuencia de cada caracter en la cadena 'Summer' y la almacene en un diccionario. Finalmente, el programa debe imprimir el diccionario.",
+    "source_code": "cadena = \"Summer\"\nnum_de_caracter = {}\nfor letra in cadena:\n    if letra in num_de_caracter:\n        num_de_caracter[letra] += 1\n    else:\n        num_de_caracter[letra] = 1\n\nprint(num_de_caracter)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_freq_of_char2_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.946Z"
+}

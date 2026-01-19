@@ -1,0 +1,128 @@
+{
+  "id": "6954bccff9187b06cf8371aa",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-02-03T23:31:18.000Z",
+  "updated_at": "2026-01-17T05:29:12.152Z",
+  "tags": [],
+  "identity": {
+    "id": "print_one_to_n",
+    "title": "print_one_to_n",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/431/embed?act=PCRS&sub=print_one_to_n"
+  },
+  "attribution": {
+    "created_at": "2020-02-03T23:31:18.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following program in order to print to the console the numbers from 1 to n, separating each of them by using a single white space. Assume that n is an integer number, greater or equal than 1, that is given by the user through keyboard input (please note that this part of the code is already provided).",
+    "source_code": "[file Lab3.java]\n[blocked]\nimport java.util.Scanner;\n\npublic class Lab3 {\n    public static void main(String[] args){\n        // Create a scanner to read from keyboard\n        Scanner kbd = new Scanner (System.in);\n        \n        // Prompt user for typing a numeric input\n        System.out.print(\"Enter value of n: \");\n        \n        //Stores the integer value from keyboard in the variable n\n        int n = kbd.nextInt();\n        \n        //YOU MUST NOT WRITE ANY CODE ABOVE THIS LINE\n[/blocked]   \n[student_code]\n        \n        // Type your code here:\n        \n        \n        \n[/student_code]\n[blocked]\n        //YOU MUST NOT WRITE ANY CODE BELOW THIS LINE\n  }\n}\n[/blocked] \n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "ForStatement",
+          "System.out.print"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ForStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/431/embed?act=PCRS&sub=print_one_to_n"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Loops",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Loops / Arrays / Exceptions",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Loops",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Loops",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Loops",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Loops",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.066Z"
+}

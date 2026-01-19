@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837719",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:36.046Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "insertsort",
+    "title": "InsertSortAlgo",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=insertsort&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 16.2: fig16_02.c\n\u00a0\u00a0\u00a0The insertion sort algorithm. */\n#define SIZE 10\n#include <stdio.h>\n#include <stdlib.h>\n#include <time.h>\n\n/* function prototypes */\nvoid insertionSort( int array[], int length );\nvoid printPass( int array[], int length, int pass, int index );\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int array[ SIZE ]; /* declare the array of ints to be sorted */\n\u00a0\u00a0\u00a0int i; /* int used in for loop */\n\n\u00a0\u00a0\u00a0srand( time( NULL ) ); /* seed the rand function */\n\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0array[ i ] = rand() % 90 + 10; /* give each element a value */\n\n\u00a0\u00a0\u00a0printf( \"Unsorted array:\\n\" );\n\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ ) /* print the array */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%d  \", array[ i ] );\n\n\u00a0\u00a0\u00a0printf( \"\\n\\n\" );\n\u00a0\u00a0\u00a0insertionSort( array, SIZE );\n\u00a0\u00a0\u00a0printf( \"Sorted array:\\n\" );\n\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ ) /* print the array */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%d  \", array[ i ] );\n\n\u00a0\u00a0\u00a0return 0;\n} /* end function main */\n\n/* function that insertion sorts the array */\nvoid insertionSort( int array[], int length )\n{\n\u00a0\u00a0\u00a0int insert; /* temporary variable to hold element to insert */\n\u00a0\u00a0\u00a0int i; /* int used in for loop */\n\n\u00a0\u00a0\u00a0/* loop over length - 1 elements */\n\u00a0\u00a0\u00a0for ( i = 1; i < length; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int moveItem = i; /* initialize location to place element */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0insert = array[ i ];\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* search for place to put current element */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0while ( moveItem > 0 && array[ moveItem - 1 ] > insert ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* shift element right one slot */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0array[ moveItem ] = array[ moveItem - 1 ];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0--moveItem;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} /* end while */\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0array[ moveItem ] = insert; /* place inserted element */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printPass( array, length, i, moveItem );\n\u00a0\u00a0\u00a0} /* end for */\n} /* end function insertionSort */\n\n/* function that prints a pass of the algorithm */\nvoid printPass( int array[], int length, int pass, int index )\n{\n\u00a0\u00a0\u00a0int i; /* int used in for loop */\n\n\u00a0\u00a0\u00a0printf( \"After pass %2d: \", pass );\n\n\u00a0\u00a0\u00a0/* output elements till selected item */\n\u00a0\u00a0\u00a0for ( i = 0; i < index; i++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%d  \", array[ i ] );\n\n\u00a0\u00a0\u00a0printf( \"%d* \", array[ index ] ); /* indicate swap */\n\n\u00a0\u00a0\u00a0/* finish outputting array */\n\u00a0\u00a0\u00a0for ( i = index + 1; i < length; i++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%d  \", array[ i ] );\n\n\u00a0\u00a0\u00a0\u00a0printf( \"\\n               \" ); /* for alignment */\n\n\u00a0\u00a0\u00a0\u00a0/* indicate amount of array that is sorted */\n\u00a0\u00a0\u00a0\u00a0for ( i = 0; i <= pass; i++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"--  \" );\n\n\u00a0\u00a0\u00a0\u00a0printf( \"\\n\" ); /* add newline */\n} /* end function printPass */\n} /* end function printPass */"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=insertsort&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.190Z"
+}

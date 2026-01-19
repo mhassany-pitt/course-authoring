@@ -1,0 +1,229 @@
+{
+  "id": "6954bccff9187b06cf8377c0",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:59:01.589Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "jFor4",
+    "title": "Loop For 4",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jfor4&act=Loops_for&sub=jFor4&svc=progvis"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "QuizJET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Sharon Hsiao",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class Tester {\n  public static void main(String[] args) {\n      double result = 0;\n      BankAccount account = new BankAccount (1000.0);\n      for (int i = 0; i &lt; 2 ; i++) {\n           account.withdraw(50.0);\n           result = account.getBalance();\n      }     \n  }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "ClassDefinition",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "DoubleDataType",
+          "ExpressionStatement",
+          "For-Loop",
+          "FormalMethodParameter",
+          "ForStatement",
+          "InstanceField",
+          "InstanceFieldDefinitionStatement",
+          "IntDataType",
+          "java.lang.System.out.println",
+          "LessExpression",
+          "MethodDefinition",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "ObjectVariable",
+          "PostIncrementExpression",
+          "PrivateAccessSpecifier",
+          "PublicAccessSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StatementBlock",
+          "SubtractExpression",
+          "VariableInitializationStatement",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "For-Loop"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "ClassDefinition",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "DoubleDataType",
+          "ExpressionStatement",
+          "FormalMethodParameter",
+          "ForStatement",
+          "InstanceField",
+          "InstanceFieldDefinitionStatement",
+          "IntDataType",
+          "java.lang.System.out.println",
+          "LessExpression",
+          "MethodDefinition",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "ObjectVariable",
+          "PostIncrementExpression",
+          "PrivateAccessSpecifier",
+          "PublicAccessSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StatementBlock",
+          "SubtractExpression",
+          "VariableInitializationStatement",
+          "VoidDataType",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "VoidDataType",
+          "DoubleDataType",
+          "SimpleAssignmentExpression",
+          "ActualMethodParameter",
+          "ConstructorCall",
+          "ObjectCreationStatement",
+          "SimpleAssignmentExpression",
+          "ForStatement",
+          "IntDataType",
+          "LessExpression",
+          "PostIncrementExpression",
+          "SimpleAssignmentExpression",
+          "ActualMethodParameter",
+          "ObjectMethodInvocation",
+          "ObjectMethodInvocation",
+          "SimpleAssignmentExpression",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "ConstructorDefinition",
+          "PublicConstructorSpecifier",
+          "SimpleAssignmentExpression",
+          "ConstructorDefinition",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "PublicConstructorSpecifier",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "VoidDataType",
+          "AddExpression",
+          "DoubleDataType",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "VoidDataType",
+          "DoubleDataType",
+          "SimpleAssignmentExpression",
+          "SubtractExpression",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "ReturnStatement",
+          "DoubleDataType",
+          "InstanceField",
+          "PrivateFieldSpecifier",
+          "SimpleVariable"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jfor4&act=Loops_for&sub=jFor4&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=1",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=1",
+      "context_name": "Java: INFSCI 0017 | Introduction to Java Programming > Loops For",
+      "used_at": "2013-05-23T12:19:44.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=17",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=17",
+      "context_name": "Java: INFSCI 0017 | Introduction to Java Programming (Fall 2014-ae) > Loops For",
+      "used_at": "2014-09-11T11:50:18.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=439",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=439",
+      "context_name": "Java: CMIS 1200 | Application Programming I > Module 4b- For loops",
+      "used_at": "2024-08-21T17:05:02.000Z",
+      "used_by": "Pratibha Menon - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.202Z"
+}

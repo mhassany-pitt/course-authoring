@@ -1,0 +1,124 @@
+{
+  "id": "6954bccff9187b06cf836daa",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:19:48.000Z",
+  "updated_at": "2026-01-17T05:27:24.135Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_class_person_es",
+    "title": "Crear una clase y utilizarla",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_class_person_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:19:48.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Escribe un programa que imprima \"Safiira. Encantado de conocerte!\"",
+    "source_code": "class Person:\n  def __init__(self, nombre, profesion):\n    self.__nombre = nombre\n  def saludar(self):\n    return self.__nombre + \". Encantado de conocerte!\"\nsafiira = Person(\"Safiira\", \"biologa\")\nprint(safiira.saludar())"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "CallingObjectMethod",
+          "DefiningObjectMethod",
+          "DefiningClass",
+          "AssigningValueVariable",
+          "CreatingObject",
+          "CallingLibraryFunction",
+          "Printing",
+          "Concatenation",
+          "NestedFunctionCall"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "parser": {
+        "concepts": [
+          "Return",
+          "Attribute",
+          "ClassDef",
+          "Add",
+          "Call",
+          "Str",
+          "arg",
+          "Assign",
+          "FunctionDef"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "CallingObjectMethod",
+          "Concatenation",
+          "CreatingObject",
+          "DefiningClass",
+          "DefiningObjectMethod",
+          "NestedFunctionCall",
+          "Printing"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_class_person_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Clases y Objetos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.943Z"
+}

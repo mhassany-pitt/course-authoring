@@ -1,0 +1,96 @@
+{
+  "id": "6954bccff9187b06cf836ec4",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:57.491Z",
+  "tags": [],
+  "identity": {
+    "id": "py_user_class1_es",
+    "title": "PCRS C3-PL  User Class1",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/269/embed?act=PCRS&sub=py_user_class1_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "La clase Usuario representa un usuario con un nombre de usuario, contrasena e informacion de cuenta.Completa el metodo actualizar_cuenta en el codigo a continuacion segun la descripcion de su docstring. Llama al metodo iniciar_sesion en tu solucion.",
+    "source_code": "[student_code]\nclass Usuario:\n    \n    def __init__(self, nombre_usuario, contrasena, info_cuenta):\n        \"\"\" (Usuario, str, str, str) -> NoneType\n        \n        Inicializa el usuario con nombre_usuario, contrasena e info_cuenta.\n        \n        >>> nuevo_usuario = Usuario('xyz', 'contrasena1', \"Banco en Linea de Bob\")\n        >>> nuevo_usuario.nombre_usuario\n        'xyz'\n        >>> nuevo_usuario.contrasena\n        'contrasena1'\n        >>> nuevo_usuario.info_cuenta\n        \"Banco en Linea de Bob\"\n        \"\"\"\n        self.nombre_usuario = nombre_usuario\n        self.contrasena = contrasena\n        self.info_cuenta = info_cuenta\n        \n    def iniciar_sesion(self, contrasena_ingresada):\n        \"\"\" (Usuario, str) -> bool\n        \n        Devuelve True si y solo si la contrasena del usuario coincide con contrasena_ingresada.\n        \n        >>> nuevo_usuario = Usuario('xyz', 'contrasena1', \"Banco en Linea de Bob\")\n        >>> nuevo_usuario.iniciar_sesion('contrasena1')\n        True\n        >>> nuevo_usuario.iniciar_sesion('1234')\n        False\n        \"\"\"\n        return self.contrasena == contrasena_ingresada\n\n    def actualizar_cuenta(self, contrasena_ingresada, nueva_info):\n        \"\"\" (Usuario, str, str) -> NoneType\n        \n        Modifica la info_cuenta del usuario para ser nueva_info si la contrasena del usuario\n        coincide con contrasena_ingresada.\n        \n        >>> nuevo_usuario = Usuario('xyz', 'contrasena1', \"Banco en Linea de Bob\")\n        >>> nuevo_usuario.actualizar_cuenta('1234', 'B.O.B.')\n        >>> nuevo_usuario.info_cuenta\n        \"Banco en Linea de Bob\"\n        >>> nuevo_usuario.actualizar_cuenta('contrasena1', 'B.O.B.')\n        >>> nuevo_usuario.info_cuenta\n        'B.O.B.'\n        \"\"\"\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "DefiningClass",
+          "DefiningObjectMethod",
+          "DefiningFunctionCallingFunction",
+          "ChangingValueVariable",
+          "IfElifElseChecking",
+          "IfChecking",
+          "CallingObjectMethod"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "CallingObjectMethod",
+          "ChangingValueVariable",
+          "DefiningClass",
+          "DefiningFunctionCallingFunction",
+          "DefiningObjectMethod",
+          "IfChecking",
+          "IfElifElseChecking"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/269/embed?act=PCRS&sub=py_user_class1_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.971Z"
+}

@@ -1,0 +1,134 @@
+{
+  "id": "6954bccff9187b06cf837139",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-09-07T03:47:36.000Z",
+  "updated_at": "2026-01-17T05:28:59.859Z",
+  "tags": [],
+  "identity": {
+    "id": "java_is_tautonym",
+    "title": "Determining if a word is tautonym",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/450/embed?act=PCRS&sub=java_is_tautonym"
+  },
+  "attribution": {
+    "created_at": "2020-09-07T03:47:36.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following code in order to determine if a word if a given word can be considered as a \"tautonym\". A tautonym is a word that is formed by the repetition of a subword, e.g. tartar (tar and tar). Thus, its first half is exactly the same as the second half (so a word with an odd number of characters cannot be tautonym). The empty word is not considered as a tautonym.Assume that the word to be analyzed is stored in a String variable called word, which has already been initialized. Use the boolean variable isTautonym and define a boolean expression to decide if word is a tautonym.",
+    "source_code": "[file SCode.java]\n[blocked]\n// TODO: Write your code here\n[/blocked]\n[student_code]\n\n        \n\nboolean isTautonym = ();\n\n \n        \n        \n[/student_code]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "manual_expert": {
+        "concepts": [
+          "AndExpression",
+          "java.lang.String.substring",
+          "ModulusExpression",
+          "AndExpression",
+          "java.lang.String.substring",
+          "ModulusExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "AndExpression",
+          "java.lang.String.substring",
+          "ModulusExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/450/embed?act=PCRS&sub=java_is_tautonym"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Decision Structures",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Decision Structures",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Decision Structures",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Decision Structures",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Decision Structures",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Decision Structures",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.055Z"
+}

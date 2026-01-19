@@ -1,0 +1,76 @@
+{
+  "id": "6954bccff9187b06cf836fef",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-01-21T16:44:51.000Z",
+  "updated_at": "2026-01-17T12:54:55.642Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "q_java_booleanGreaterEqual2",
+    "title": "q_java_Boolean Operation (Greater equal 2)",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_booleanGreaterEqual2"
+  },
+  "attribution": {
+    "created_at": "2025-01-21T16:44:51.000Z",
+    "provider": "QuizJET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Sharon Hsiao",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "//Entry class of the quiz, please Do not change class name \n public class Tester{\n  public static void main(String[] args) {\n        int accountBalance = 43;\n        int price = 35;\n        \n        if (accountBalance >= price)\n            accountBalance -= price;\n\n        System.out.println(accountBalance);\n  }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_booleanGreaterEqual2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=449",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=449",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 (Peter B) > Boolean Expressions",
+      "used_at": "2025-01-15T05:27:01.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.015Z"
+}

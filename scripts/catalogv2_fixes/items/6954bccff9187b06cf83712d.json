@@ -1,0 +1,140 @@
+{
+  "id": "6954bccff9187b06cf83712d",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-09-28T08:13:21.000Z",
+  "updated_at": "2026-01-17T05:28:58.568Z",
+  "tags": [],
+  "identity": {
+    "id": "overload_grade",
+    "title": "Grade class",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/459/embed?act=PCRS&sub=overload_grade"
+  },
+  "attribution": {
+    "created_at": "2020-09-28T08:13:21.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following code for overloading the constructors of the class Grade. Additionally, you need to implement the missing getters/setters for the three attributes of the class. For this task, you need to consider the following grade conversion table:Letter grade | Percent gradeA+: 97-100A: 93-96A-: 90-92B+: 87-89B: 83-86B-: 80-82C+: 77-79C: 73-76C-: 70-72D+: 67-69D: 63-66D-: 60-62F: Below 60Constructors definition:+ Grade(studentID: String) -> this one will set the percentGrade as 0 and letterGrade as F+ Grade(studentID: String, percent: int) + Grade(studentID: String, letter: char, sign: char) -> this one will set letterGrade as the concatenation of letter and sign, and the percent score as the upper limit of the corresponding range (e.g. if letter score is B+, percent will be equals to 89). If second parameter is ' ', do not concatenate (keep the single letter given as first parameter as it is).Important: you need to control that the Grade objects created (as well as getters/setters) accept grades only within the specified range (percentScore from 0 to 100,  letterGrade with first character from 'A' to 'F' and the second character has to be either '+', '-' or ' ' - the last one represents when the letter grade has no sign associated). In case the constructor is passed with a parameter outside the feasible range, you need to set the percentGrade as 0 and letterGrade as F.More instructions on how to implement the missing parts of this class are provided in the code below.",
+    "source_code": "[file Grade.java]\n[blocked]\npublic class Grade {\n    private String studentID;\n    private String letter;\n    private int percent;\n[/blocked]\n[student_code]\n    // TODO: add the 3 getters and 3 setters\n    \n    \n    // TODO: add the 3 overloaded constructors.\n    \n    \n[/student_code]\n[blocked]\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "IfStatement",
+          "ThisReference",
+          "ConstructorName",
+          "ConstructorDefinition",
+          "ConstructorSignature",
+          "Constructor",
+          "ConstructorCall",
+          "MethodSignature",
+          "FormalMethodParameter",
+          "PublicConstructorSpecifier",
+          "PublicMethodSpecifier"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "Constructor",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "ConstructorName",
+          "ConstructorSignature",
+          "FormalMethodParameter",
+          "IfStatement",
+          "MethodSignature",
+          "PublicConstructorSpecifier",
+          "PublicMethodSpecifier",
+          "ThisReference"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/459/embed?act=PCRS&sub=overload_grade"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Overload/Arrays",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Constructors/Overloading",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Constructors/Overload/Inheritance",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Overload/Arrays",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 2- Objects and Classes",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.053Z"
+}

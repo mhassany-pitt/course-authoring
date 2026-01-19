@@ -1,0 +1,97 @@
+{
+  "id": "6954bccff9187b06cf83721b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2018-12-05T19:25:05.000Z",
+  "updated_at": "2026-01-17T12:55:47.983Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "memphis_scanner_input1",
+    "title": "Scanner input (Memphis)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=memphis_scanner_input1&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2018-12-05T19:25:05.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Daniel Guerra",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "import java.util.Scanner;\u00a0\u00a0\u00a0\u00a0// To use Scanner, this import statement must be included before the \"public class\"\n\n// This is a program named \"HelloWorld\"\npublic class HelloWorld {\n\u00a0\u00a0\u00a0\u00a0// This is a main method.  Program execution always starts from the main method.\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Create a Scanner object named input.  You can name this object anything you want,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  but you have to be consistent when using it later in the program.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Scanner input = new Scanner(System.in);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Get user input for the number of cents\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many cents would you like to make change for?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int cents = input.nextInt();\u00a0\u00a0\u00a0\u00a0// This line pauses the program, allows the user to enter some int input, and stores that input value into the variable cents\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Figure out how many quarters, dimes, nickels, and pennies will add up to that amount of cents\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(cents/25 + \" quarter(s)\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(cents%25/10 + \" dime(s)\");\u00a0\u00a0\u00a0\u00a0// cents%25 is the amount left over after taking out the quarters\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(cents%25%10/5 + \" nickel(s)\");\u00a0\u00a0\u00a0\u00a0// cents%25%10 is the amount left over after taking out the quarters and dimes\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(cents%25%10%5/1 + \" penny/pennies\");\u00a0\u00a0\u00a0\u00a0// cents%25%10%5 is the amount left over after taking out the quarters, dimes, and nickels\n\u00a0\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "ClassDefinition",
+          "ConstructorCall",
+          "DivideExpression",
+          "FormalMethodParameter",
+          "ImportStatement",
+          "IntDataType",
+          "java.lang.System.out.println",
+          "MethodDefinition",
+          "ModulusExpression",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=memphis_scanner_input1&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.081Z"
+}

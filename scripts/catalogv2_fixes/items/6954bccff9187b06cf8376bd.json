@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8376bd",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:22.304Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "Coin_Values",
+    "title": "Coin_Values",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Coin_Values&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\nint main(void)\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0char first, middle, last;\n\u00a0\u00a0\u00a0\u00a0\u00a0int pennies, nickels;\n\u00a0\u00a0\u00a0\u00a0\u00a0int dimes, quarters;\n\u00a0\u00a0\u00a0\u00a0\u00a0int change; \u00a0\u00a0\u00a0\u00a0\n\u00a0\u00a0\u00a0\u00a0\u00a0int dollars;\n\u00a0\u00a0\u00a0\u00a0\u00a0int total_cents;\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Type in 3 initials and press return> \");\n\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%c%c%c\", &first, &middle, &last);\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Hello %c%c%c, let's see what your coins are worth.\\n\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0first, middle, last);\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Number of quarters> \");\n\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &quarters);\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Number of dimes   > \");\n\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &dimes);\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Number of nickels > \");\n\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &nickels);\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Number of pennies > \");\n\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &pennies);\n\u00a0\u00a0\u00a0\u00a0\u00a0total_cents = 25 * quarters + 10 * dimes + 5 * nickels + pennies;\n\u00a0\u00a0\u00a0\u00a0\u00a0dollars = total_cents / 100;\n\u00a0\u00a0\u00a0\u00a0\u00a0change = total_cents % 100;\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nYour coins are worth %d dollars and %d cents.\\n\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0dollars, change);\n\u00a0\u00a0\u00a0\u00a0\u00a0return (0);\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Coin_Values&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.183Z"
+}

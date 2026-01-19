@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836ce7",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:20:02.000Z",
+  "updated_at": "2026-01-17T05:26:49.559Z",
+  "tags": [],
+  "identity": {
+    "id": "Warning the User about the Changes in the Temperature and Humidity__68bdb308f6cc3d7a9cc09736-68bdb308f6cc3d7a9cc09734-1",
+    "title": "Warning the User about the Changes in the Temperature and Humidity",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc09736?_t=1757557202087&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:20:02.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that receives the temperature and humidity for today and yesterday and warns the user when it is getting colder or warmer or neither. When it is getting warmer, the program should also warn the user about the changes in humidity. In particular, it should warn the user when today's humidity is more, less, or has not changed compared to yesterday's humidity. Note that the temperature and humidity values could have a decimal point.",
+    "source_code": "import java.util.Scanner;\npublic class JNestedIfTemperature2 {\n\tpublic static void main(String[] args) {\n\t\t//Step 1: Read the temperature for today and yesterday\n\t\tScanner scan = new Scanner (System.in);\n\t\tSystem.out.println(\"Enter the yesterday's temperature: \");\n\t\tdouble yesterday = scan.nextDouble();\n\t\tSystem.out.println(\"Enter the today's temperature: \");\n\t\tdouble today = scan.nextDouble();\t\t\n\t\t//Step 2: Read the humidity for today and yesterday\n\t\tSystem.out.println(\"Enter yesterday's humidity: \");\n\t\tdouble humidityYesterday = scan.nextDouble();\n\t\tSystem.out.println(\"Enter today's humidity: \");\n\t\tdouble humidityToday = scan.nextDouble();\n\t\tscan.close();\n\t\t//Step 3: Warn the user about the changes in the temperature\n\t\tif ( today < yesterday ) {\n\t\t\tSystem.out.println(\"It is getting colder!\");\n\t\t} else {\n\t\t\tif ( today > yesterday) {\n\t\t\t\t//Step 3.1: Determine and warn the user about the changes in humidity when it is getting warmer\n\t\t\t\tif ( humidityToday < humidityYesterday ) {\n\t\t\t\t\tSystem.out.println(\"It is getting warmer but less humid!\");\n\t\t\t\t} else if ( humidityToday > humidityYesterday ) {\n\t\t\t\t\tSystem.out.println(\"It is getting warmer and more humid!\");\n\t\t\t\t} else {\n\t\t\t\t\tSystem.out.println(\"It is getting warmer but humidity has not changed!\");\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tSystem.out.println(\"Temperature is the same as yesterday!\");\n\t\t\t}\n\t\t}\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc09736?_t=1757557202087&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > If-Else and Switch",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > If-Else",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > If-Else",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.918Z"
+}

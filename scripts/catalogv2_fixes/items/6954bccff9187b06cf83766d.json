@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf83766d",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:09.860Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fig05_08.c",
+    "title": "fig05_08.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig05_08.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 5.8: fig05_08.c\n\u00a0\u00a0\u00a0Roll a six-sided die 6000 times */\n#include <stdio.h>\n#include <stdlib.h>\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int frequency1 = 0;\n\u00a0\u00a0\u00a0int frequency2 = 0;\n\u00a0\u00a0\u00a0int frequency3 = 0;\n\u00a0\u00a0\u00a0int frequency4 = 0;\n\u00a0\u00a0\u00a0int frequency5 = 0;\n\u00a0\u00a0\u00a0int frequency6 = 0;\n\n\u00a0\u00a0\u00a0int roll;\n\u00a0\u00a0\u00a0int face;\n\n\u00a0\u00a0\u00a0for ( roll = 1; roll <= 6000; roll++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0face = 1 + rand() % 6;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0switch ( face ) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0case 1:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++frequency1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0case 2:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++frequency2;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0case 3:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++frequency3;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0case 4:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++frequency4;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0case 5:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++frequency5;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0case 6:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++frequency6;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0printf( \"%s%13s\\n\", \"Face\", \"Frequency\" );\n\u00a0\u00a0\u00a0printf( \"   1%13d\\n\", frequency1 );\n\u00a0\u00a0\u00a0printf( \"   2%13d\\n\", frequency2 );\n\u00a0\u00a0\u00a0printf( \"   3%13d\\n\", frequency3 );\n\u00a0\u00a0\u00a0printf( \"   4%13d\\n\", frequency4 );\n\u00a0\u00a0\u00a0printf( \"   5%13d\\n\", frequency5 );\n\u00a0\u00a0\u00a0printf( \"   6%13d\\n\", frequency6 );\n\n\u00a0\u00a0\u00a0return 0;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig05_08.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.179Z"
+}

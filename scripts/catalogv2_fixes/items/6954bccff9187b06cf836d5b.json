@@ -1,0 +1,147 @@
+{
+  "id": "6954bccff9187b06cf836d5b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-10T08:51:47.000Z",
+  "updated_at": "2026-01-17T05:27:03.843Z",
+  "tags": [],
+  "identity": {
+    "id": "py_vending_machine_es__682dc89766a8e1b992c82aaf",
+    "title": "Maquina Expendedora Con Dolares y Monedas de Veinticinco",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dc89766a8e1b992c82aaf?_t=1750184385233&index=0&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-10T08:51:47.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Isaac Alpizar-Chacon",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "es",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Supongamos que tenemos una m\u00e1quina expendedora que da cambio. Un cliente selecciona un art\u00edculo para comprar e inserta un billete en la m\u00e1quina expendedora. La m\u00e1quina expendedora dispensa el art\u00edculo comprado y da cambio. Supondremos que todos los precios de los art\u00edculos son m\u00faltiplos de 25 centavos, y la m\u00e1quina da todo el cambio en d\u00f3lares y monedas de veinticinco. Construya un programa que calcule cu\u00e1ntos d\u00f3lares y monedas de veinticinco devolver al cliente.",
+    "source_code": "#Paso 1: Asignar valores iniciales a las variables que necesitamos para este programa\ncentavos_por_dolar = 100\ncentavos_por_moneda = 25\n#Paso 2: Leer el valor del billete y el precio del art\u00edculo\ntexto = input(\"Ingrese el valor del billete en d\u00f3lares (1 = billete de $1, 5 = billete de $5, etc.): \")\nvalor_billete = int(texto)\ntexto = input(\"Ingrese el precio del art\u00edculo en centavos: \")\nprecio_articulo = int(texto)\n#Paso 3: Calcular el cambio debido\ncambio_debido = centavos_por_dolar * valor_billete - precio_articulo\n#Paso 4: Calcular el n\u00famero de d\u00f3lares y actualizar el cambio debido despu\u00e9s de quitar los d\u00f3lares\ndolares = cambio_debido // centavos_por_dolar\ncambio_debido = cambio_debido % centavos_por_dolar\n#Paso 5: Calcular el n\u00famero de monedas en el cambio restante\nmonedas = cambio_debido // centavos_por_moneda\n#Paso 6: Mostrar el resultado\nprint(\"Su cambio consiste en:\") \nprint(dolares, \"d\u00f3lares\")\nprint(monedas, \"monedas de veinticinco\")"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "Arun parser v0.1": {
+        "concepts": [
+          "Mod",
+          "Mult",
+          "Assign",
+          "Str",
+          "Call",
+          "FloorDiv",
+          "Int",
+          "Sub"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "TransformingToIntType",
+          "FindRemainder",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "Printing",
+          "Division",
+          "Subtraction",
+          "Multiplication",
+          "TransformingToIntType",
+          "FindRemainder",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "Printing",
+          "Division",
+          "Subtraction",
+          "Multiplication"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Sub",
+          "Call",
+          "Assign",
+          "Int",
+          "FloorDiv",
+          "Mult",
+          "Mod",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dc89766a8e1b992c82aaf?_t=1750184385233&index=0&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Variables y Operaciones",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Variables y Operaciones",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Variables y Operaciones",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.935Z"
+}

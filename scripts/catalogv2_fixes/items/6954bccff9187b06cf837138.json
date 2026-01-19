@@ -1,0 +1,134 @@
+{
+  "id": "6954bccff9187b06cf837138",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-09-07T03:50:40.000Z",
+  "updated_at": "2026-01-17T05:28:59.748Z",
+  "tags": [],
+  "identity": {
+    "id": "java_if_else_hurrican_scale",
+    "title": "Saffir-Simpson Hurricane Wind Scale Calculator",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/483/embed?act=PCRS&sub=java_if_else_hurrican_scale"
+  },
+  "attribution": {
+    "created_at": "2020-09-07T03:50:40.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The Saffir-Simpson Hurricane Wind Scale is a 1 to 5 rating based on a hurricane's sustained wind speed. This scale estimates potential property damage. Hurricanes reaching Category 3 and higher are considered major hurricanes because of their potential for significant loss of life and damage. Category 1 and 2 storms are still dangerous, however, and require preventative measures. The Saffir-Simpson Scale is defined in the following table:Category | Sustained Winds     1         |     74 \u2264 windSpeed < 96 mph     2         |     96 \u2264 windSpeed < 111 mph     3         |   111 \u2264 windSpeed < 130 mph     4         |   130 \u2264 windSpeed < 157 mph     5         |   windSpeed of 157 mph or higherYour program must calculate the scale of the hurricane described by the user's input, which will be given in km/h and not in mph. Thus, you must transform it to mph before assigning the scale (1 km/h corresponds to .62 mph). Finally, your code needs to print in console the following message: \" __ mph is classified as __ in the Saffir-Simpson Hurricane Wind Scale\" (completing the missing blank with the respective speed in mph and the scale), and the message \"__ mph does not qualify as hurricane\" in case the sustained wind speed specified by the user is lower than 74 mph (completing the missing blank with the respective speed in mph).Examples of input/output:E.g. Enter hurricane's sustained wind speed (in km/hr): 30 | Output in console: \"18.6 mph does not qualify as hurricane\"E.g. Enter hurricane's sustained wind speed (in km/hr): 199  | Output in console: \"123.38 mph is classified as 3 in the Saffir-Simpson Hurricane Wind Scale\"",
+    "source_code": "[file Lab3.java]\n[blocked]\nimport java.util.Scanner;\n\npublic class Lab3 {\n    public static void main(String[] args){\n        // Create a scanner to read from keyboard\n        Scanner kbd = new Scanner (System.in);\n        \n        System.out.print(\"Enter hurricane's sustained wind speed (in km/h): \");\n        \n        int windSpeedInKmh = kbd.nextInt();\n      \n        //Definition of the variable that will store the scale of the hurricane\n    \tint scale;\n               \n        //YOU MUST NOT WRITE ANY CODE ABOVE THIS LINE\n[/blocked]\n[student_code]\n        \n    \t// TODO: add your code here\n        \n    \n[/student_code]\n[blocked]\n    }\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "manual_expert": {
+        "concepts": [
+          "MultiplicativeExpression",
+          "IfElseIfStatement",
+          "IfElseStatement",
+          "MultiplicativeExpression",
+          "IfElseIfStatement",
+          "IfElseStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "IfElseIfStatement",
+          "IfElseStatement",
+          "MultiplicativeExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/483/embed?act=PCRS&sub=java_if_else_hurrican_scale"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Decision Structures",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Decision Structures",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Decision Structures",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Decision Structures",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Decision Structures",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Decision Structures",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.055Z"
+}

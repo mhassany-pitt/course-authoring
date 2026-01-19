@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf83767e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:12.111Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fig06_14.c",
+    "title": "fig06_14.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig06_14.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 6.14: fig06_14.c\n\u00a0\u00a0\u00a0Demonstrating the const type qualifier with arrays */\n#include <stdio.h>\n\nvoid tryToModifyArray( const int b[] );\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int a[] = { 10, 20, 30 };\n\u00a0\u00a0\u00a0tryToModifyArray( a );\n\u00a0\u00a0\u00a0printf(\"%d %d %d\\n\", a[ 0 ], a[ 1 ], a[ 2 ] );\n\u00a0\u00a0\u00a0return 0;\n}\n\nvoid tryToModifyArray( const int b[] )\n{\n\u00a0\u00a0\u00a0b[ 0 ] /= 2;\n\u00a0\u00a0\u00a0b[ 1 ] /= 2;\n\u00a0\u00a0\u00a0b[ 2 ] /= 2;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig06_14.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.179Z"
+}

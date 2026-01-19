@@ -1,0 +1,123 @@
+{
+  "id": "6954bccff9187b06cf836eb3",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:55.271Z",
+  "tags": [],
+  "identity": {
+    "id": "py_list_insert_es",
+    "title": "PCRS C3-PL  List Insert",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/248/embed?act=PCRS&sub=py_list_insert_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa el siguiente codigo.",
+    "source_code": "[student_code]\ndef insertar(lista, v):\n    \"\"\" (lista de int, int) -> NoneType\n\n    Insertar v en lista justo antes del ultimo elemento mayor que v, o en\n    el indice 0 si ningun elemento es mayor que v.\n\n    >>> mi_lista = [3, 10, 4, 2]\n    >>> insertar(mi_lista, 5)\n    >>> mi_lista\n    [3, 5, 10, 4, 2]\n    >>> mi_lista = [5, 4, 2, 10]\n    >>> insertar(mi_lista, 20)\n    >>> mi_lista\n    [20, 5, 4, 2, 10]\n    \"\"\"\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "list()",
+          "ForLoopWithListIndexing",
+          "ChangingValueVariable",
+          "Subtraction",
+          "FindingLength",
+          "AddingListElementWithInsert",
+          "DefiningSimpleFunction",
+          "ListReferencing",
+          "IfCheckingInForLoop",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "CallingObjectMethod",
+          "CallingSimpleFunction",
+          "IndexingList"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "AddingListElementWithInsert",
+          "ComparisonExpression",
+          "IntegerLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "CallingObjectMethod",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "FindingLength",
+          "ForLoopWithListIndexing",
+          "IfCheckingInForLoop",
+          "IndexingList",
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/248/embed?act=PCRS&sub=py_list_insert_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.969Z"
+}

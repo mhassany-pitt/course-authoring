@@ -1,0 +1,113 @@
+{
+  "id": "6954bccff9187b06cf8374b2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2015-11-24T10:40:17.000Z",
+  "updated_at": "2026-01-17T12:57:02.782Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "pytt10.24",
+    "title": "References with Lists",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pytt10.24&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2015-11-24T10:40:17.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Hardik Vasa",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "def try_to_change_list_contents(the_list):\n\u00a0\u00a0\u00a0\u00a0print('got', the_list)\n\u00a0\u00a0\u00a0\u00a0the_list.append('four')\n\u00a0\u00a0\u00a0\u00a0print('changed to', the_list)\n\nouter_list = ['one', 'two', 'three']\n\nprint('before, outer_list =', outer_list)\ntry_to_change_list_contents(outer_list)\nprint('after, outer_list =', outer_list)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "parser": {
+        "concepts": [
+          "Attribute",
+          "List",
+          "Call",
+          "Str",
+          "arg",
+          "Assign",
+          "FunctionDef"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "Call",
+          "Assign",
+          "List",
+          "FunctionDef",
+          "Attribute",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pytt10.24&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=23",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=23",
+      "context_name": "Python: PYTHON001 | Python Course (v1) > Values and references",
+      "used_at": "2015-05-11T10:25:58.000Z",
+      "used_by": "Python Admin - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=344",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
+      "context_name": "Python: PYTHON001 | PythonCourseV1Clones > Values and references",
+      "used_at": "2017-05-22T17:58:24.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.138Z"
+}

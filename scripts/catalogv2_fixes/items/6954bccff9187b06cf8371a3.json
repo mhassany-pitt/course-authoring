@@ -1,0 +1,116 @@
+{
+  "id": "6954bccff9187b06cf8371a3",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-02-18T11:21:01.000Z",
+  "updated_at": "2026-01-17T05:29:11.367Z",
+  "tags": [],
+  "identity": {
+    "id": "num_inversions_array",
+    "title": "Find Num Inversions Array",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/438/embed?act=PCRS&sub=num_inversions_array"
+  },
+  "attribution": {
+    "created_at": "2020-02-18T11:21:01.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Write a program that given an array of integers variable called array prints in the console the the number of inversions happening in the array. An inversion occurs every time two neighboring elements are out of sorted order. For example, is array[3]=5 and array[4]=1 then those two elements are not in sorted order, because a smaller number comes after a larger number, this is called an inversion.Please note that you have to complete the method numOfInversions(int [] input).",
+    "source_code": "[file Lab5.java]\n[blocked]\nimport java.util.*;\nimport java.io.*;\n\npublic class Lab5{\n    \n   static int array[] = { 26, 52, 96, 84, 87, 31, 37, 30, 95, 35, 75, 34, 91, 27, 78, 60, 29, 65, 57, 70 };\n    \n   public static void main( String args[] ){\n       \n        System.out.println(\"number of inversions in the array: \" + numOfInversions( array ) );\n   \n   }\n    \n    static int numOfInversions( int [] input ){\n    \t// RETURN THE NUMBER OF NEIGHBORING ARRAY ELEMENTS THAT ARE OUT OF ORDER\n[/blocked]\n[student_code]\n\n            \n            \n[/student_code] \n[blocked]\n    }\n}\n[/blocked] \n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "ForStatement",
+          "ArrayElement",
+          "ArrayLength",
+          "IfStatement",
+          "ReturnStatement",
+          "AddExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "AddExpression",
+          "ArrayElement",
+          "ArrayLength",
+          "ForStatement",
+          "IfStatement",
+          "ReturnStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/438/embed?act=PCRS&sub=num_inversions_array"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Arrays/ArrayLists/LinkedLists",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Loops / Arrays / Exceptions",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Arrays/ArrayLists/LinkedLists",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.065Z"
+}

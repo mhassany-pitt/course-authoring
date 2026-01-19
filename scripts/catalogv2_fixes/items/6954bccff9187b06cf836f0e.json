@@ -1,0 +1,115 @@
+{
+  "id": "6954bccff9187b06cf836f0e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:05.803Z",
+  "tags": [],
+  "identity": {
+    "id": "py_quotient_remainder_es",
+    "title": "Calculo: Cuociente y Resto (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/359/embed?act=PCRS&sub=py_quotient_remainder_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Dado dos numeros enteros, num1 y num2, completa el siguiente codigo que calcula el cuociente (resultado de la division de num1 por num2), el cuociente entero (division entera de num1 por num2), y el resto (residuo de la division de num1 por num2).Asume que los valores iniciales de num1 y num2 ya estan establecidos.El cuociente, cuociente entero y resto (o residuo) deben almacenarse en las variables cuociente, cuociente_entero, y residuo respectivamente.Ej. 1: Si el valor de num1 es 25 y num2 es 5, el codigo imprime \"\"El cociente es 5.0 el cociente entero es 5 y el residuo es 0.0\"\"Ej. 2: Si el valor de num1 es 14 y num2 es 4, el codigo imprime \"\"El cociente es 3.5 el cociente entero es 3 y el residuo es 2.0\"\"Autores: Yana Kortsarts, Yulia Kempner, Leonid Kugel, Kamil Akhuseyinoglu",
+    "source_code": "[student_code]\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "TransformingToFloatType",
+          "FloatLiteral",
+          "Division",
+          "FindRemainder",
+          "Division",
+          "ChangingValueVariable",
+          "IntegerLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "FloatLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Division",
+          "FindRemainder",
+          "TransformingToFloatType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/359/embed?act=PCRS&sub=py_quotient_remainder_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Variables y Operaciones",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Variables y Operaciones",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.982Z"
+}

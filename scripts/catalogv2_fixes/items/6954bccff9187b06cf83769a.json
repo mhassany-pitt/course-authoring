@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf83769a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:16.517Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fig07_26.c",
+    "title": "fig07_26.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig07_26.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 7.26: fig07_26.c\n\u00a0\u00a0\u00a0Multipurpose sorting program using function pointers */\n#include <stdio.h>\n#define SIZE 10\n\nvoid bubble( int work[], const int size,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int (*compare)( int a, int b ) );\nint ascending( int a, int b );\nint descending( int a, int b );\nint main( void )\n{\n\u00a0\u00a0\u00a0int order;\n\u00a0\u00a0\u00a0int counter;\n\u00a0\u00a0\u00a0int a[ SIZE ] = { 2, 6, 4, 8, 10, 12, 89, 68, 45, 37 };\n\u00a0\u00a0\u00a0printf( \"Enter 1 to sort in ascending order,\\n\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"Enter 2 to sort in descending order: \" );\n\u00a0\u00a0\u00a0scanf( \"%d\",  &order );\n\u00a0\u00a0\u00a0printf( \"\\nData items in original order\\n\" );\n\n\u00a0\u00a0\u00a0for ( counter = 0; counter < SIZE; counter++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%5d\", a[ counter ] );\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0if ( order == 1 ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0bubble( a, SIZE, ascending );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"\\nData items in ascending order\\n\" );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0else {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0bubble( a, SIZE, descending );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"\\nData items in descending order\\n\" );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0for ( counter = 0; counter < SIZE; counter++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%5d\", a[ counter ] );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0printf( \"\\n\" );\n\u00a0\u00a0\u00a0return 0;\n}\n\nvoid bubble( int work[], const int size,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int (*compare)( int a, int b ) )\n{\n\u00a0\u00a0\u00a0int pass;\n\u00a0\u00a0\u00a0int count;\n\u00a0\u00a0\u00a0void swap( int *element1Ptr, int *element2ptr );\n\n\u00a0\u00a0\u00a0for ( pass = 1; pass < size; pass++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( count = 0; count < size - 1; count++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( (*compare)( work[ count ], work[ count + 1 ] ) ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0swap( &work[ count ], &work[ count + 1 ] );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0}\n}\n\nvoid swap( int *element1Ptr, int *element2Ptr )\n{\n\u00a0\u00a0\u00a0int hold;\n\u00a0\u00a0\u00a0hold = *element1Ptr;\n\u00a0\u00a0\u00a0*element1Ptr = *element2Ptr;\n\u00a0\u00a0\u00a0*element2Ptr = hold;\n}\n\nint ascending( int a, int b )\n{\n\u00a0\u00a0\u00a0return b < a;\n}\nint descending( int a, int b )\n{\n\u00a0\u00a0\u00a0return b > a;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig07_26.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.181Z"
+}

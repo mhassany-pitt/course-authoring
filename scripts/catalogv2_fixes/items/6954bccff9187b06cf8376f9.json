@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8376f9",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:31.271Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "call_by_reference2",
+    "title": "Call By Reference2",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=call_by_reference2&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*\u00a0\u00a0\u00a0\u00a0Calculate the tax due or the refund for a family based\n\u00a0\u00a0\u00a0\u00a0on the following imaginary formula.\n\u00a0\u00a0\u00a0\u00a01. For each dependent deduct $1,000 from income.\n\u00a0\u00a0\u00a0\u00a02. Determine tax rate from the following brackets:\n\u00a0\u00a0\u00a0\u00a0       bracket    taxable income       tax rate\n\u00a0\u00a0\u00a0\u00a0          1             <= 10000           2%\n\u00a0\u00a0\u00a0\u00a0          2        10001 - 20000           5%\n\u00a0\u00a0\u00a0\u00a0          3        20001 - 30000           7%\n\u00a0\u00a0\u00a0\u00a0          4        30001 - 50000          10%\n\u00a0\u00a0\u00a0\u00a0          5        50001 and up           15%\n\u00a0\u00a0\u00a0\u00a0Then print the amount of tax or the refund.\n\n\u00a0\u00a0\u00a0\u00a0   Written by:\n\u00a0\u00a0\u00a0\u00a0   Date:\n*/\n#include <stdio.h>\n\n#define LOWEST  0000000.00\n#define HIGHEST 1000000.00\n\n#define LIMIT1    10000.00\n#define LIMIT2    20000.00\n#define LIMIT3    30000.00\n#define LIMIT4    50000.00\n\n#define RATE1 02\n#define RATE2 05\n#define RATE3 07\n#define RATE4 10\n#define RATE5 15\n\n#define DEDN_PER_DPNDNT 1000\n\n//\u00a0\u00a0\u00a0\u00a0Function Declarations\nvoid getData   (double* totalIncome, double* taxPaid,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int*    numOfDpndnts);\n\nvoid calcTaxes (double  totalIncome,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double  taxPaid,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int     numOfDpndnts,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double* taxableIncome,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double* totalTax,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double* taxDue);\n\nvoid printInformation (double totalIncome,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double taxPaid,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int    numOfDpndnts,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double totalTax,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double paidTax,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double taxDue);\n\n\n\ndouble bracketTax (double income,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double startLimit,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double stopLimit,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int    rate);\n\nint main (void)\n{\n//\u00a0\u00a0\u00a0\u00a0Local Declarations\n\u00a0\u00a0\u00a0\u00a0int    numOfDpndnts;\n\u00a0\u00a0\u00a0\u00a0double taxDue;\n\u00a0\u00a0\u00a0\u00a0double taxPaid;\n\u00a0\u00a0\u00a0\u00a0double totalIncome;\n\u00a0\u00a0\u00a0\u00a0double taxableIncome;\n\u00a0\u00a0\u00a0\u00a0double totalTax;\n\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0getData   (&totalIncome,  &taxPaid, &numOfDpndnts);\n\u00a0\u00a0\u00a0\u00a0calcTaxes (totalIncome,    taxPaid,  numOfDpndnts,\n\u00a0\u00a0\u00a0\u00a0           &taxableIncome, &totalTax, &taxDue);\n\u00a0\u00a0\u00a0\u00a0printInformation (totalIncome,  taxableIncome,\n\u00a0\u00a0\u00a0\u00a0                  numOfDpndnts, totalTax,\n\u00a0\u00a0\u00a0\u00a0                  taxPaid,      taxDue);\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\u00a0\u00a0\u00a0\u00a0// main\n\n/*\u00a0\u00a0\u00a0\u00a0=================== getData ==================\n\u00a0\u00a0\u00a0\u00a0This function reads tax data from the keyboard.\n\u00a0\u00a0\u00a0\u00a0   Pre  Nothing\n\u00a0\u00a0\u00a0\u00a0   Post Reads totalIncome, taxPaid, & numOfDpndnts\n*/\nvoid getData ( double* totalIncome, double* taxPaid,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int*    numOfDpndnts)\n{\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0printf(\"Enter your total income for last year: \");\n\u00a0\u00a0\u00a0\u00a0scanf (\"%lf\", totalIncome);\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Enter total of payroll deductions    : \");\n\u00a0\u00a0\u00a0\u00a0scanf (\"%lf\", taxPaid);\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Enter the number of dependents       : \");\n\u00a0\u00a0\u00a0\u00a0scanf (\"%d\", numOfDpndnts);\n\u00a0\u00a0\u00a0\u00a0return;\n}\u00a0\u00a0\u00a0\u00a0// getData\n\n/*\u00a0\u00a0\u00a0\u00a0================= calcTaxes =================\n\u00a0\u00a0\u00a0\u00a0This function calculates the taxes due.\n\u00a0\u00a0\u00a0\u00a0   Pre  Given-income, numOfDpndnts, & taxPaid\n\u00a0\u00a0\u00a0\u00a0   Post Tax income, total tax, and tax due\n\u00a0\u00a0\u00a0\u00a0        calculated\n*/\n\nvoid calcTaxes (double  totInc,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double  taxPaid,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int     numOfDpndnts,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double* taxableInc,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double* totTax,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double* taxDue)\n{\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0*taxableInc = totInc -\n\u00a0\u00a0\u00a0\u00a0                (numOfDpndnts* DEDN_PER_DPNDNT);\n\u00a0\u00a0\u00a0\u00a0*totTax =\n\u00a0\u00a0\u00a0\u00a0    bracketTax(*taxableInc, LOWEST, LIMIT1,  RATE1)\n\u00a0\u00a0\u00a0\u00a0  + bracketTax(*taxableInc, LIMIT1, LIMIT2,  RATE2)\n\u00a0\u00a0\u00a0\u00a0  + bracketTax(*taxableInc, LIMIT2, LIMIT3,  RATE3)\n\u00a0\u00a0\u00a0\u00a0  + bracketTax(*taxableInc, LIMIT3, LIMIT4,  RATE4)\n\u00a0\u00a0\u00a0\u00a0  + bracketTax(*taxableInc, LIMIT4, HIGHEST, RATE5);\n\n\u00a0\u00a0\u00a0\u00a0*taxDue = *totTax - taxPaid;\n\u00a0\u00a0\u00a0\u00a0return;\n}\u00a0\u00a0\u00a0\u00a0// calcTaxes\n\n/*\u00a0\u00a0\u00a0\u00a0================= printInformation =================\n\u00a0\u00a0\u00a0\u00a0This function prints a table showing all information.\n\u00a0\u00a0\u00a0\u00a0   Pre  The parameter list\n\u00a0\u00a0\u00a0\u00a0   Post Prints the table\n*/\nvoid printInformation (double totalIncome,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double income,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int    numDpndnts,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double totalTax,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double paidTax,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double dueTax)\n{\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0printf(\"\\nTotal income          :%10.2f\\n\",\n\u00a0\u00a0\u00a0\u00a0       totalIncome);\n\u00a0\u00a0\u00a0\u00a0printf(\"Number of dependents  :%7d\\n\",    numDpndnts);\n\u00a0\u00a0\u00a0\u00a0printf(\"Taxable income        :%10.2f\\n\", income);\n\u00a0\u00a0\u00a0\u00a0printf(\"Total tax             :%10.2f\\n\", totalTax);\n\u00a0\u00a0\u00a0\u00a0printf(\"Tax already paid      :%10.2f\\n\", paidTax);\n\n\u00a0\u00a0\u00a0\u00a0if (dueTax >= 0.0)\n\u00a0\u00a0\u00a0\u00a0    printf(\"Tax due               :%10.2f\\n\", dueTax);\n\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0    printf(\"Refund                :%10.2f\\n\", -dueTax);\n\u00a0\u00a0\u00a0\u00a0return;\n}\u00a0\u00a0\u00a0\u00a0// printInformation\n\n/*\u00a0\u00a0\u00a0\u00a0================== bracketTax ==================\n\u00a0\u00a0\u00a0\u00a0Calculates the tax for a particular bracket.\n\u00a0\u00a0\u00a0\u00a0   Pre    The taxableIncome\n\u00a0\u00a0\u00a0\u00a0   Post   Returns the tax for a particular bracket\n*/\n\n\n\n\ndouble bracketTax (double income,    double startLimit,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double stopLimit, int    rate)\n{\n//\u00a0\u00a0\u00a0\u00a0Local Declarations\n\u00a0\u00a0\u00a0\u00a0double tax;\n\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0if (income <= startLimit)\n\u00a0\u00a0\u00a0\u00a0    tax = 0.0;\n\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0    if (income > startLimit && income <= stopLimit)\n\u00a0\u00a0\u00a0\u00a0        tax = (income - startLimit) * rate / 100.00;\n\u00a0\u00a0\u00a0\u00a0    else\n\u00a0\u00a0\u00a0\u00a0        tax = (stopLimit - startLimit) * rate / 100.00;\n\n\u00a0\u00a0\u00a0\u00a0return tax;\n}\u00a0\u00a0\u00a0\u00a0// bracketTax"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=call_by_reference2&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.187Z"
+}

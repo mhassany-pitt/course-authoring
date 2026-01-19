@@ -1,0 +1,145 @@
+{
+  "id": "6954bccff9187b06cf837060",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-09-16T11:36:31.000Z",
+  "updated_at": "2026-01-17T05:28:36.565Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_quick_sorting",
+    "title": "Practicing quick sort algorithm",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_quick_sorting&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2021-09-16T11:36:31.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a function that implements quick sort algorithm. The partition() function has been pre defined and displayed below.<br/>Consider data is a list, first is the first element's index and last is the last element's index",
+    "source_code": "def quick_sort(data, first, last):\n\tif first < last:\n\t\tpivot = partition(data, first, last)\n\t\tquick_sort(data, first, pivot-1)\n\t\tquick_sort(data, pivot+1, last)\n\treturn data"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "Lt",
+          "Sub",
+          "Return",
+          "arg",
+          "If",
+          "FunctionDef",
+          "Assign",
+          "Constant",
+          "Add",
+          "Call"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "Sub",
+          "Constant",
+          "Call",
+          "Assign",
+          "Return",
+          "FunctionDef",
+          "Lt",
+          "Add",
+          "If"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_quick_sorting"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=413",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Sorting",
+      "used_at": "2021-08-11T18:22:22.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=422",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > Topic 8",
+      "used_at": "2022-05-23T22:24:04.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=423",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=423",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Fall 2022 (Python II) > Topic 8 - Search, Recursion, Sorting",
+      "used_at": "2022-08-10T17:36:04.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=424",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=424",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 174 Fall 2022 (Python I) > Sorting",
+      "used_at": "2022-08-10T17:36:39.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=428",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=428",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2023 (Python II) > Halfweek 9 - Sorting",
+      "used_at": "2023-05-02T00:12:59.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=431",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=431",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2024 (Python II) > Halfweek 9 - Sorting",
+      "used_at": "2024-05-03T14:17:30.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.028Z"
+}

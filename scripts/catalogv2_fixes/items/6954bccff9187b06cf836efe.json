@@ -1,0 +1,161 @@
+{
+  "id": "6954bccff9187b06cf836efe",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:04.048Z",
+  "tags": [],
+  "identity": {
+    "id": "py_find_word_in_wordsearch",
+    "title": "Encontrar palabra en sopa de letras simple (lista 2D) (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/344/embed?act=PCRS&sub=py_find_word_in_wordsearch"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Se te entrega una matriz de caracteres (strings de una sola letra) que representa una sopa de letras muy simple. Tu tarea es completar la funci\u00f3n encontrar_palabra que determine si una palabra dada aparece en alguna fila de la matriz (de izquierda a derecha).No es necesario buscar en columnas, ni al rev\u00e9s, ni en diagonal. Solo en las filas, y solo de izquierda a derecha.Ejemplos entrada/salida:sopa=[  ['a','s','o','l'],  ['x','y','z','w'],  ['p','u','d','u'],  ['r','o','m','a']]encontrar_palabra(sopa,'sol') -> Trueencontrar_palabra(sopa,'amor') -> Falseencontrar_palabra(sopa,'pudu') -> Falseencontrar_palabra(sopa,'semaforo') -> False",
+    "source_code": "[student_code]\r\ndef encontrar_palabra(sopa_de_letras,palabra):\r\n\t#Escribir aqui tu codigo\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "Indexing2DArray"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "Addition",
+          "list()",
+          "TransformingToStringType",
+          "IfElifElseCheckingInForLoop",
+          "StringLiteral",
+          "ListLiteral",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "CheckingForItem",
+          "Concatenation",
+          "FindingLength",
+          "DefiningSimpleFunction",
+          "MixedNestedLoopIteration",
+          "NestedForLoopIteration",
+          "ForLoopWithListIndexing",
+          "ForLoopWith+=",
+          "ListReferencing",
+          "AugmentedAssignmentStatement",
+          "ChangingValueVariable",
+          "IfCheckingInForLoop",
+          "BooleanLiteral",
+          "CallingSimpleFunction",
+          "IndexingList"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "AugmentedAssignmentStatement",
+          "ComparisonExpression",
+          "ForLoopWith+=",
+          "IntegerLiteral",
+          "ListLiteral",
+          "MixedNestedLoopIteration",
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "BooleanLiteral",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "Concatenation",
+          "DefiningSimpleFunction",
+          "FindingLength",
+          "ForLoopWithListIndexing",
+          "IfCheckingInForLoop",
+          "Indexing2DArray",
+          "IndexingList",
+          "ListReferencing",
+          "NestedForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/344/embed?act=PCRS&sub=py_find_word_in_wordsearch"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Listas en 2D",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Listas en 2D",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Listas en 2D",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.979Z"
+}

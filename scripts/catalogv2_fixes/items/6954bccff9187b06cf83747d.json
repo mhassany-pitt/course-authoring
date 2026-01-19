@@ -1,0 +1,76 @@
+{
+  "id": "6954bccff9187b06cf83747d",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2016-03-24T11:03:22.000Z",
+  "updated_at": "2026-01-17T12:56:55.638Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "DataSelection10_version_1_pt",
+    "title": "Multiple Table Selection (1) pt",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=DataSelection10_version_1_pt&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2016-03-24T11:03:22.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Rafael Araujo",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "SQL"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "SELECT S.name, E.cid\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0FROM Student S, Enrolled E\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0WHERE S.sid = E.sid AND E.grade = \"A\";"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=DataSelection10_version_1_pt&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=335",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=335",
+      "context_name": "SQL: IS 1022-2710 | Database Management (PT) > Multiple Table Queries",
+      "used_at": "2016-03-29T14:24:29.000Z",
+      "used_by": "Rafael Araujo - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.134Z"
+}

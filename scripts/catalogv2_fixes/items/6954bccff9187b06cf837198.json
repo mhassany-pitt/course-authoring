@@ -1,0 +1,128 @@
+{
+  "id": "6954bccff9187b06cf837198",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-05-12T00:48:26.000Z",
+  "updated_at": "2026-01-17T12:55:32.566Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "csedpad_preliminary_averagespeedinmarathon",
+    "title": "(Preliminary)AverageSpeedInMarathon-CSEdPad",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_preliminary_averagespeedinmarathon&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2020-05-12T00:48:26.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class AverageSpeedInMarathon {\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//Declare multiple constant variables\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// i.e 26 miles 285 yards\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0final double MILES_PER_MARATHON = 26.21875;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0final int SEC_PER_HR = 3600;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0final int SEC_PER_MIN = 60;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//Declare multiple variables to hold marathon run time.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double runtimeHrs = 2.0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double runtimeMins = 8.0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double runtimeSecs = 44.0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//Calculate average miles per hour speed using the constant variables.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double totalSecs = runtimeHrs*SEC_PER_HR + runtimeMins*SEC_PER_MIN + runtimeSecs;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double aveMPH = MILES_PER_MARATHON/(totalSecs/SEC_PER_HR);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//Print the value of aveMPH to console using format method.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.format(\"Average MPH was: %.2f mph\\n\", aveMPH);\n\u00a0\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "MethodDefinition",
+          "SimpleAssignmentExpression",
+          "ClassDefinition",
+          "Constant",
+          "VoidDataType",
+          "ConstantInitializationStatement",
+          "DoubleDataType",
+          "MultiplyExpression",
+          "IntDataType",
+          "StringLiteral",
+          "DivideExpression",
+          "AddExpression",
+          "FormalMethodParameter",
+          "ActualMethodParameter",
+          "StringDataType",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "ClassDefinition",
+          "Constant",
+          "ConstantInitializationStatement",
+          "DivideExpression",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "IntDataType",
+          "MethodDefinition",
+          "MultiplyExpression",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StringDataType",
+          "StringLiteral",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_preliminary_averagespeedinmarathon&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=389",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
+      "context_name": "Java: CSEdPad | CSEdPad Examples > Preliminary Topics",
+      "used_at": "2020-05-10T20:11:07.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.064Z"
+}

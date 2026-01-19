@@ -1,0 +1,160 @@
+{
+  "id": "6954bccff9187b06cf836db2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:19:48.000Z",
+  "updated_at": "2026-01-17T05:27:25.018Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_dict_filter_es",
+    "title": "Iterar sobre elementos (items) de un diccionario",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_dict_filter_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:19:48.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que imprima todos los circulos que son mayores que 5.",
+    "source_code": "circulos = {\"azul\": 8, \"rojo\": 5, \"gris\": 7}\nfor circulo in circulos.items():\n  if(circulo[1] > 5):\n    print(\"Circulo \",circulo[0], \" es mayor que\", 5)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleForLoopIteration",
+          "AccessingDictionary",
+          "IfCheckingInForLoop",
+          "CallingLibraryFunction",
+          "Printing",
+          "CreatingDictionary",
+          "IndexingTuple",
+          "ForLoopWithListIndexing",
+          "CreatingString",
+          "BooleanEvaluating",
+          "AssigningValueVariable"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "parser": {
+        "concepts": [
+          "Index",
+          "Gt",
+          "For",
+          "Int",
+          "Attribute",
+          "Call",
+          "Str",
+          "Dict",
+          "Assign",
+          "If"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Gt",
+          "For",
+          "Call",
+          "Assign",
+          "Int",
+          "Attribute",
+          "Dict",
+          "If",
+          "Index",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AccessingDictionary",
+          "AssigningValueVariable",
+          "BooleanEvaluating",
+          "CallingLibraryFunction",
+          "CreatingDictionary",
+          "CreatingString",
+          "ForLoopWithListIndexing",
+          "IfCheckingInForLoop",
+          "IndexingTuple",
+          "Printing",
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_dict_filter_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Diccionarios",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Diccionarios",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=464",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=464",
+      "context_name": "Python: UTFSM-Progra | Test Jordan Thesis Python ES > Diccionarios",
+      "used_at": "2025-07-10T18:56:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.944Z"
+}

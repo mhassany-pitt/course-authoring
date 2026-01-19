@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837615",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:57:57.688Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "create_seq_file",
+    "title": "create_seq_file",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=create_seq_file&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int account;    \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 /* account number */\n\u00a0\u00a0\u00a0char name[ 30 ]; \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/*  account name */\n\u00a0\u00a0\u00a0double balance;  \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/*  account balance */\n\n\u00a0\u00a0\u00a0FILE *cfPtr;     \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* cfPtr = clients.dat file pointer */\n\n\u00a0\u00a0\u00a0/* fopen opens file. Exit program if unable to create file  */\n\n\u00a0\u00a0\u00a0if ( ( cfPtr = fopen( \"clients.dat\", \"w\" ) ) == NULL ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"File could not be opened\n\" );\n\u00a0\u00a0\u00a0} /* end if */\n\u00a0\u00a0\u00a0else {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"Enter the account, name, and balance.\\n\" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"Enter EOF to end input.\\n\" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"? \" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf( \"%d%s%lf\", &account, name, &balance );\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* write account, name and balance into file with fprintf */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0while ( !feof( stdin ) ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fprintf( cfPtr, \"%d %s %.2f\\n\", account, name, balance );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"? \" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf( \"%d%s%lf\", &account, name, &balance );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} /* end while */\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fclose( cfPtr ); \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* fclose closes file */\n\u00a0\u00a0\u00a0} /* end else */\n\n\u00a0\u00a0\u00a0return 0; /* indicates successful termination */\n\n} /* end main */\n} /* end main */"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=create_seq_file&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.174Z"
+}

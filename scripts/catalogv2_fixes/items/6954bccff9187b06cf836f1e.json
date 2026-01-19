@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836f1e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:07.413Z",
+  "tags": [],
+  "identity": {
+    "id": "py_ascii_isoceles_es",
+    "title": "PCRS C3-PL  Ascii Isoceles",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/228/embed?act=PCRS&sub=py_ascii_isoceles_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa la siguiente funcion.",
+    "source_code": "[student_code]\ndef escribir_triangulo_ascii(triangulo_doc, bloque, longitud_lado):\n    \"\"\" (Archivo abierto para escribir, str, int) -> NoneType\n    \n    Precondicion: len(bloque) == 1\n    \n    Escribe un triangulo rectangulo isosceles de caracteres bloque que es\n    longitud_lado caracteres de ancho y alto en triangulo_doc. El angulo recto\n    debe estar en la esquina superior izquierda. Por ejemplo, dado\n    bloque=\"@\" y longitud_lado=4, lo siguiente debe escribirse en triangulo_doc:\n    \n    @@@@\n    @@@\n    @@\n    @\n    \"\"\"\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/228/embed?act=PCRS&sub=py_ascii_isoceles_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.984Z"
+}

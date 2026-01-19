@@ -1,0 +1,79 @@
+{
+  "id": "6954bccff9187b06cf836eea",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:01.922Z",
+  "tags": [],
+  "identity": {
+    "id": "py_hidden_es",
+    "title": "PCRS C3-PL  Hidden",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/215/embed?act=PCRS&sub=py_hidden_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa la funcion segun lo descrito en su docstring.",
+    "source_code": "[student_code]\r\ndef triple(numero):\r\n    \"\"\"\r\n    Multiplica el numero dado por tres.\r\n\r\n    :param numero: El numero a multiplicar\r\n    :return: El resultado de multiplicar el numero por tres\r\n    \"\"\"\r\n    return numero * 3\r\n\r\n# Ejemplo de uso\r\nresultado = triple(4)\r\nprint('El resultado es:', resultado)  # Salida: El resultado es: 12\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "IntegerLiteral",
+          "Multiplication",
+          "DefiningSimpleFunction",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/215/embed?act=PCRS&sub=py_hidden_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.976Z"
+}

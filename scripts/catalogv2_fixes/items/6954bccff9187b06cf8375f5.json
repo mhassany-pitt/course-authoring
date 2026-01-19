@@ -1,0 +1,223 @@
+{
+  "id": "6954bccff9187b06cf8375f5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2014-08-31T17:42:08.000Z",
+  "updated_at": "2026-01-17T12:57:52.566Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "jtestNull",
+    "title": "Test Null",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jtestNull&act=Boolean_Expressions&sub=jtestNull&svc=progvis"
+  },
+  "attribution": {
+    "created_at": "2014-08-31T17:42:08.000Z",
+    "provider": "QuizJET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class Tester\n{\n\tpublic static void main(String[] args)\n\t{\n\t\tString str1 = \"Hello World!\";\n\t\tint x = 5;\n\t\tif (x &lt; 8)\n\t\t\tstr1 = null;\n\t\tSystem.out.println(str1 == \"\");\n\t\tSystem.out.println(str1 == null);\t\t\n    }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "StringDataType",
+          "IfStatement",
+          "StringInitializationStatement",
+          "IntDataType",
+          "StringLiteral",
+          "java.lang.System.out.println",
+          "StringVariable",
+          "LessExpression",
+          "null",
+          "SimpleAssignmentExpression",
+          "EqualExpression",
+          "BooleanDataType",
+          "BooleanDataType~java.lang.System.out.println",
+          "EqualExpression~StringDataType",
+          "EqualExpression~null",
+          "IfStatement~LessExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "EqualExpression",
+          "IfStatement",
+          "IntDataType",
+          "java.lang.System.out.println",
+          "LessExpression",
+          "null",
+          "SimpleAssignmentExpression",
+          "StringDataType",
+          "StringInitializationStatement",
+          "StringLiteral",
+          "StringVariable",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "VoidDataType",
+          "SimpleAssignmentExpression",
+          "StringDataType",
+          "StringInitializationStatement",
+          "StringLiteral",
+          "StringVariable",
+          "IntDataType",
+          "SimpleAssignmentExpression",
+          "IfStatement",
+          "LessExpression",
+          "IfStatement",
+          "SimpleAssignmentExpression",
+          "ActualMethodParameter",
+          "EqualExpression",
+          "java.lang.System.out.println",
+          "StringDataType",
+          "StringLiteral",
+          "ActualMethodParameter",
+          "EqualExpression",
+          "java.lang.System.out.println",
+          "null"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jtestNull&act=Boolean_Expressions&sub=jtestNull&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=11",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=11",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] > Boolean Expressions",
+      "used_at": "2014-08-30T12:57:33.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=13",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=13",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] - Animated Examples > Boolean Expressions",
+      "used_at": "2014-09-09T15:38:38.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=19",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=19",
+      "context_name": "Java: INFSCI 0017 | Test - (ISD) JAVA course [clone] > Boolean Expressions",
+      "used_at": "2014-11-06T10:59:11.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=21",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=21",
+      "context_name": "Java: INFSCI 0017 2 | Demo Course 2 > Boolean Expressions",
+      "used_at": "2015-04-15T13:10:54.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=29",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=29",
+      "context_name": "Java: INFSCI 0017 | mg-gs-demo > Boolean Expressions",
+      "used_at": "2015-09-14T11:10:25.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=31",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_name": "Java: INFSCI 0017 | roya-clone-test-java > Boolean Expressions",
+      "used_at": "2015-12-08T17:16:50.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=32",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=32",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 > Boolean Expressions",
+      "used_at": "2016-01-15T10:31:22.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=339",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=339",
+      "context_name": "Java: INFSCI 0017 | Java Study 2016 A > Boolean Expressions",
+      "used_at": "2016-11-02T14:34:05.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=361",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=361",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 (QJ-AE-PCEX-PCRS) > Boolean Expressions",
+      "used_at": "2018-09-11T14:14:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=366",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=366",
+      "context_name": "Java: INFSCI 0017 | CSEdPad course v1 (all Java content) > Boolean Expressions",
+      "used_at": "2018-10-18T16:24:57.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=374",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=374",
+      "context_name": "Java: INFSCI 0017 | Java Course (AE-QP-PCEX-CodeWorkout) > Boolean Expressions",
+      "used_at": "2019-05-31T05:04:44.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=382",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=382",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v3 > Boolean Expressions",
+      "used_at": "2020-01-11T16:29:42.000Z",
+      "used_by": "Zak Risha, Zak Risha - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.171Z"
+}

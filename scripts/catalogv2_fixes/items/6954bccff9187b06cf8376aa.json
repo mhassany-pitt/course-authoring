@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8376aa",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:19.005Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "casting_num",
+    "title": "casting_num",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=casting_num&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*\u00a0\u00a0\u00a0\u00a0Demonstrate casting of numeric types.\n\u00a0\u00a0\u00a0\u00a0   Written by:\n\u00a0\u00a0\u00a0\u00a0   Date:\n*/\n#include <stdio.h>\n\nint main (void)\n{\n//\u00a0\u00a0\u00a0\u00a0Local Declarations\n\u00a0\u00a0\u00a0\u00a0int    intNum1  = 100;\n\u00a0\u00a0\u00a0\u00a0int    intNum2  =  45;\n\u00a0\u00a0\u00a0\u00a0double fltNum1  = 100.0;\n\u00a0\u00a0\u00a0\u00a0double fltNum2  =  45.0;\n\u00a0\u00a0\u00a0\u00a0double fltNum3;\n\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0printf(\"intNum1 contains:  %3d\\n\",   intNum1);\n\u00a0\u00a0\u00a0\u00a0printf(\"intNum2 contains:  %3d\\n\",   intNum2);\n\u00a0\u00a0\u00a0\u00a0printf(\"fltNum1 contains:  %6.2f\\n\", fltNum1);\n\u00a0\u00a0\u00a0\u00a0printf(\"fltNum2 contains:  %6.2f\\n\", fltNum2);\n\n\u00a0\u00a0\u00a0\u00a0fltNum3 = (double)(intNum1 / intNum2);\n\u00a0\u00a0\u00a0\u00a0printf\n\u00a0\u00a0\u00a0\u00a0   (\"\\n(double)(intNum1 / intNum2): %6.2f\\n\",\n\u00a0\u00a0\u00a0\u00a0    fltNum3);\n\n\u00a0\u00a0\u00a0\u00a0fltNum3 = (double)intNum1 / intNum2;\n\u00a0\u00a0\u00a0\u00a0printf(\"(double) intNum1 / intNum2 : %6.2f\\n\",\n\u00a0\u00a0\u00a0\u00a0       fltNum3);\n\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\u00a0\u00a0\u00a0\u00a0// main"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=casting_num&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.182Z"
+}

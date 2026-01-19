@@ -1,0 +1,174 @@
+{
+  "id": "6954bccff9187b06cf837114",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-02-15T01:59:36.000Z",
+  "updated_at": "2026-01-17T05:28:55.873Z",
+  "tags": [],
+  "identity": {
+    "id": "ifelse_grading_system",
+    "title": "ifelse_grading_system",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/479/embed?act=PCRS&sub=ifelse_grading_system"
+  },
+  "attribution": {
+    "created_at": "2021-02-15T01:59:36.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "You will be coding a function that will take in an input of a percentage and will output the letter grade and the GPA equivalent.In this learning activity, you will be tested on your knowledge of if-else statements and how to implement it. You will be modifying 2 variables: double gpa (which houses your gpa equivalent in decimal form), and String letter (which houses your letter grade equivalent in String form)Note: Make sure you do not have any spaces in your String letter variable and that your double variable always only holds 2 digits or less after the decimal point.Below is the chart for the range of each letter grade/GPA: Assume your input will always be an int value and within the range [0, 100]     A+  |    4.0     |     97% \u2264 percentage \u2264 100%     A    |    4.0     |     93% \u2264 percentage < 97%     A-   |   3.75   |     90% \u2264 percentage < 93%     B+  |   3.25   |     87% \u2264 percentage < 90%     B    |    3.0    |     83% \u2264 percentage < 87%     B-   |  2.75    |     80% \u2264 percentage < 83%     C+  |  2.25    |     77% \u2264 percentage < 80%     C    |   2.0     |     73% \u2264 percentage < 77%     C-   |  1.75    |     70% \u2264 percentage < 73%     D+  |  1.25    |     67% \u2264 percentage < 70%     D    |   1.0     |     63% \u2264 percentage < 67%     D-   |  0.75    |     60% \u2264 percentage < 63%     F     |   0.0     |     0% \u2264 percentage < 60%Note: YOU DO NOT HAVE TO HAVE A SYSTEM.OUT.PRINTLN IN YOUR CODE. AS LONG AS YOU MODIFY THE 2 VARIABLES GIVEN, YOU WILL SUCCEED.Examples of input/output:E.g. Enter percentage received in class: 96 | Output in console: \"Letter Grade Received: A : GPA Received: 4.0\"E.g. Enter percentage received in class: 88 | Output in console: \"Letter Grade Received: B+ : GPA Received: 3.25\"E.g. Enter percentage received in class: 85 | Output in console: \"Letter Grade Received: B : GPA Received: 3.0\"E.g. Enter percentage received in class: 60 | Output in console: \"Letter Grade Received: D- : GPA Received: 0.75\"E.g. Enter percentage received in class: 59 | Output in console: \"Letter Grade Received: F : GPA Received: 0.0\"",
+    "source_code": "[file Lab3.java]\n[blocked]\nimport java.util.Scanner;\n\npublic class Lab3 {\n    public static void main(String[] args){\n        // Create a scanner to read from keyboard\n        Scanner kbd = new Scanner (System.in);\n        \n        System.out.print(\"Enter percentage received in class: \");\n        \n        final int percentage = kbd.nextInt();\n      \n        //Definition of the variable that will store the grade percentage\n    \tString letter = \"N/A\";\n        double gpa = 0.0;\n               \n        //YOU MUST NOT WRITE ANY CODE ABOVE THIS LINE\n[/blocked]\n[student_code]\n        \n    \t// TODO: add your code here\n        \n    \n[/student_code]\n[blocked]\n    }\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "IfElseIfStatement",
+          "IfElseStatement",
+          "BooleanExpression",
+          "GreaterEqualExpression",
+          "IfElseIfStatement",
+          "IfElseStatement",
+          "BooleanExpression",
+          "GreaterEqualExpression",
+          "IfElseIfStatement",
+          "IfElseStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "BooleanExpression",
+          "GreaterEqualExpression",
+          "IfElseIfStatement",
+          "IfElseStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/479/embed?act=PCRS&sub=ifelse_grading_system"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=397",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=397",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming > If-Else",
+      "used_at": "2020-08-18T15:45:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=417",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=417",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming (2022 version) > If-Else",
+      "used_at": "2022-01-18T22:56:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=439",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=439",
+      "context_name": "Java: CMIS 1200 | Application Programming I > Module 3b- If Else Conditions",
+      "used_at": "2024-08-21T17:05:02.000Z",
+      "used_by": "Pratibha Menon - "
+    },
+    {
+      "context_id": "cid=444",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=444",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming (2022 version - alternate order) > If-Else",
+      "used_at": "2024-09-12T01:36:40.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=449",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=449",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 (Peter B) > If-Else",
+      "used_at": "2025-01-15T05:27:01.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=450",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=450",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 - Fully reversed > If-Else",
+      "used_at": "2025-01-21T13:45:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > If-Else",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=477",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=477",
+      "context_name": "Java: CMPINF0401 | WIT COMP1050 - Computer Science II > If-Else",
+      "used_at": "2025-09-19T03:00:59.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > If-Else",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=488",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=488",
+      "context_name": "Java: CMPINF0401 | WIT COMP1050 - Computer Science II > If-Else",
+      "used_at": "2025-10-07T14:15:48.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=489",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=489",
+      "context_name": "Java: 002 | Data Structures (Intermediate Java) - Fall 2025 > If-Else",
+      "used_at": "2025-10-08T04:59:33.000Z",
+      "used_by": "Rafaella Sampaio de Alencar - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.050Z"
+}

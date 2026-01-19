@@ -1,0 +1,144 @@
+{
+  "id": "6954bccff9187b06cf837209",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2019-02-15T09:18:02.000Z",
+  "updated_at": "2026-01-17T12:55:45.544Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "3-19_PizzaPrices",
+    "title": "3-19_PizzaPrices",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=3-19_PizzaPrices&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2019-02-15T09:18:02.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*\n\u00a0* Demo of how to define your own methods.\n\u00a0*/\nimport java.util.Scanner;\n\npublic class PizzaPrices {\n\n\u00a0\u00a0\u00a0\u00a0// The first line of a method definition is called the header.\n\u00a0\u00a0\u00a0\u00a0// The header includes \"public static\" (more on what this means later),\n\u00a0\u00a0\u00a0\u00a0//  followed by the method's return type, followed by the method's name,\n\u00a0\u00a0\u00a0\u00a0//  followed by a list of the method's parameters.\n\u00a0\u00a0\u00a0\u00a0public static double pizzaCost(int toppings) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// The method body indicates what to do with the parameters.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double cost = 5.46 + 1*toppings;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return cost;\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0// This is an overloaded version of the pizzaCost method.  Method\n\u00a0\u00a0\u00a0\u00a0//  overloading means defining more than one version of the same method that\n\u00a0\u00a0\u00a0\u00a0//  differ in their parameter quantity and/or type.  Java determines\n\u00a0\u00a0\u00a0\u00a0//  which version to use based on the arguments provided when you call\n\u00a0\u00a0\u00a0\u00a0//  the method.\n\u00a0\u00a0\u00a0\u00a0public static double pizzaCost(int toppings, String size) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double basePrice, toppingPrice;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (size.equalsIgnoreCase(\"S\")) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0basePrice = 5.46;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0toppingPrice = 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} else if (size.equalsIgnoreCase(\"M\")) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0basePrice = 8;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0toppingPrice = 1.5;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} else if (size.equalsIgnoreCase(\"L\")) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0basePrice = 10;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0toppingPrice = 2;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} else {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0basePrice = 30;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0toppingPrice = 7.5;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double cost = basePrice + toppingPrice*toppings;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return cost;\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Scanner yum = new Scanner(System.in);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"What size of pizza do you want? (S, M, L, USA)\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0String size = yum.nextLine();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many toppings?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int numSloths = yum.nextInt();\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// This is an example of a method call.  To call a method, just type its\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  name followed by the inputs you want to use.  The inputs here are known\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  as arguments.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double cost = pizzaCost(numSloths, size);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(cost);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double bigOrderPrice = 7*pizzaCost(5, \"L\") + 40*pizzaCost(10, \"USA\") + pizzaCost(1, \"S\");\n\u00a0\u00a0\u00a0\u00a0}\n}\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "parser": {
+        "concepts": [
+          "ImportStatement",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "DoubleDataType",
+          "IntDataType",
+          "SimpleAssignmentExpression",
+          "AddExpression",
+          "MultiplyExpression",
+          "ReturnStatement",
+          "SimpleVariable",
+          "IfElseIfStatement",
+          "java.lang.String.equalsIgnoreCase",
+          "ObjectMethodInvocation",
+          "ActualMethodParameter",
+          "StringLiteral",
+          "StringDataType",
+          "IfElseStatement",
+          "VoidDataType",
+          "ObjectCreationStatement",
+          "ConstructorCall",
+          "java.lang.System.out.println",
+          "StringVariable"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "ClassDefinition",
+          "ConstructorCall",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "IfElseIfStatement",
+          "IfElseStatement",
+          "ImportStatement",
+          "IntDataType",
+          "java.lang.String.equalsIgnoreCase",
+          "java.lang.System.out.println",
+          "MethodDefinition",
+          "MultiplyExpression",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StaticMethodSpecifier",
+          "StringDataType",
+          "StringLiteral",
+          "StringVariable",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=3-19_PizzaPrices&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=367",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
+      "context_name": "Java: INFSCI 0017 | CSEdPad test course (CS1 Memphis) > Methods",
+      "used_at": "2018-11-30T09:02:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.079Z"
+}

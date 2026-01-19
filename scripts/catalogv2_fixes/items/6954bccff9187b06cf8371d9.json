@@ -1,0 +1,192 @@
+{
+  "id": "6954bccff9187b06cf8371d9",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2019-09-11T12:44:20.000Z",
+  "updated_at": "2026-01-17T12:55:39.015Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "q_py_recursion_pascal",
+    "title": "Recursing Pascal",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_recursion_pascal&sub=q_py_recursion_pascal&act=q_py_recursion"
+  },
+  "attribution": {
+    "created_at": "2019-09-11T12:44:20.000Z",
+    "provider": "QuizPET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Michelle Wang",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "def pascal(n):\n    if n == 1:\n        return [1]\n    else:\n        count = 0\n        line = [1]\n        previous_line = pascal(n-1)\n        for i in range(len(previous_line)-1):\n            count+=1\n            line.append(previous_line[i] + previous_line[i+1])\n        line += [1]\n        if count == 5:\n            print(line)\n    return line\npascal(8)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "Eq",
+          "Sub",
+          "For",
+          "Add",
+          "Attribute",
+          "Index",
+          "Return",
+          "AugAssign",
+          "FunctionDef",
+          "arg",
+          "Constant",
+          "List",
+          "If",
+          "Assign",
+          "Call"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "Sub",
+          "For",
+          "Call",
+          "Assign",
+          "Constant",
+          "List",
+          "Return",
+          "Eq",
+          "FunctionDef",
+          "Attribute",
+          "Add",
+          "AugAssign",
+          "If",
+          "Index"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_recursion_pascal&sub=q_py_recursion_pascal&act=q_py_recursion"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=375",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=375",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course > Recursion",
+      "used_at": "2019-07-03T11:34:57.000Z",
+      "used_by": "Michelle, Wang - University of Alberta"
+    },
+    {
+      "context_id": "cid=391",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=391",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2020 > Recursion",
+      "used_at": "2020-07-03T01:07:51.000Z",
+      "used_by": "Carrie, Demmans - University of Alberta"
+    },
+    {
+      "context_id": "cid=413",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Recursion",
+      "used_at": "2021-08-11T18:22:22.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=414",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=414",
+      "context_name": "Python: PYTHON001 | TC1028 Tecnologico de Monterrey > Recursion",
+      "used_at": "2021-08-22T10:25:40.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=422",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > Topic 8",
+      "used_at": "2022-05-23T22:24:04.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=423",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=423",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Fall 2022 (Python II) > Topic 8 - Search, Recursion, Sorting",
+      "used_at": "2022-08-10T17:36:04.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=428",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=428",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2023 (Python II) > Halfweek 8 - Search-Recursion-Sorting",
+      "used_at": "2023-05-02T00:12:59.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=431",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=431",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2024 (Python II) > Halfweek 8 - Search-Recursion-Sorting",
+      "used_at": "2024-05-03T14:17:30.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Recursion",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > Recursion",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Recursion",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.075Z"
+}

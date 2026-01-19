@@ -1,0 +1,132 @@
+{
+  "id": "6954bccff9187b06cf8370e2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-09-06T00:34:42.000Z",
+  "updated_at": "2026-01-17T12:55:16.663Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "recursion_greatest_divisor2",
+    "title": "Recursion Greatest Divisor2",
+    "type": "Animated Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=recursion_greatest_divisor2&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2021-09-06T00:34:42.000Z",
+    "provider": "JSVEE",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "def greatest_greatest_divisor(a, b):\n    low = min(a, b)\n    high = max(a, b)\n\n    if low == 0:\n        return high\n    elif low == 1:\n        return 1\n    else:\n        return greatest_greatest_divisor(low, high - low)\n\nprint(greatest_greatest_divisor(25, 15))\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=recursion_greatest_divisor2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=413",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Recursion",
+      "used_at": "2021-08-11T18:22:22.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=421",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=421",
+      "context_name": "Python: PYTHON001 | Australia Spring 2022 > Functions",
+      "used_at": "2022-05-09T01:08:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=422",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > Topic 8",
+      "used_at": "2022-05-23T22:24:04.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=426",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=426",
+      "context_name": "Python: PYTHON001 | Novi Sad Python Fall 2022 > Functions",
+      "used_at": "2022-10-03T23:23:00.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=429",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=429",
+      "context_name": "Python: INFO063-17 | INTRODUCCI\u00c3\u0093N A LA PROGRAMACI\u00c3\u0093N > Functions",
+      "used_at": "2023-05-30T22:07:20.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=448",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=448",
+      "context_name": "Python: Temple-MIS2502-2025-Spring-2Python | Temple MIS2502 2025-Spring 2-Python > Functions",
+      "used_at": "2024-12-12T15:41:33.000Z",
+      "used_by": "Rully Agus Hendrawan, Rully Agus Hendrawan - "
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Recursion",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=460",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Worked Examples > Recursion",
+      "used_at": "2025-04-09T10:48:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Recursion",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.044Z"
+}

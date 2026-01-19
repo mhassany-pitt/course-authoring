@@ -1,0 +1,136 @@
+{
+  "id": "6954bccff9187b06cf837180",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-09T19:20:19.000Z",
+  "updated_at": "2026-01-17T12:41:54.473Z",
+  "tags": [],
+  "identity": {
+    "id": "py_adjacent_consecutive",
+    "title": "Comparing Adjacent Numbers in a Sequence of Numbers (Case 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_check_adjacent&ch=py_adjacent_consecutive"
+  },
+  "attribution": {
+    "created_at": "2020-08-09T19:20:19.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that checks whether a sequence of integers, entered one at a time, contains adjacent integers that are consecutive. The user enters -1 to indicate the end of the input.\\nNote that integers which follow each other in order, without gaps, from smallest to largest are consecutive numbers. For example, 12, 13, 14 and 15 are consecutive numbers.",
+    "source_code": "#Step 1: Read the first integer that the user enters\ntext = input(\"Enter an integer: \")\nnum = int(text)\n#Step 2: Read the rest of the integers that the user enters and check for adjacent consecutive numbers\nwhile num != -1 :\n    previous = num\n    text = input(\"Enter an integer: \")\n    num = int(text)\n    if num != -1 and num - previous == 1 :\n        print(previous, \"and\", num, \"are consecutive.\") "
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleWhileLoopIteration",
+          "TransformingToIntType",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "BooleanEvaluating",
+          "Printing",
+          "IfCheckingInWhileLoop",
+          "Subtraction",
+          "CallingLibraryFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AssigningValueVariable",
+          "BooleanEvaluating",
+          "CallingLibraryFunction",
+          "HandlingInput",
+          "IfCheckingInWhileLoop",
+          "Printing",
+          "SingleWhileLoopIteration",
+          "Subtraction",
+          "TransformingToIntType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_check_adjacent&ch=py_adjacent_consecutive"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > While Loops",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > While Loops",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > While Loops",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > While Loops",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > While Loops",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.062Z"
+}

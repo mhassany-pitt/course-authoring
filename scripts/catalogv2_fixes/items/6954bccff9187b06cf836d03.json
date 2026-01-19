@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf836d03",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:14:41.000Z",
+  "updated_at": "2026-01-17T05:26:53.076Z",
+  "tags": [],
+  "identity": {
+    "id": "Point Class Hierarchy (Case 2) __68bdb309f6cc3d7a9cc097a4-68bdb309f6cc3d7a9cc097a2-1",
+    "title": "Point Class Hierarchy (Case 2) ",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097a4?_t=1757556881349&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:14:41.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Suppose we have a class Point and we want to extend it to produce class Point3D. The class Point has two data members, x and y that represent the point's integer coordinates in the two-dimensional space. A Point3D has three data members, x, y, and z that represent the point's integer coordinates in the three-dimensional space. For each class, write the class declaration, the constructor, the toString method, and a method to move (translate) the point, i.e., shift the point's location by the specified amount.\\n\\nThe class InheritancePointTester2 tests these classes and their methods.",
+    "source_code": "public class InheritancePointTester2 {\n\tpublic static void main(String[] args) {\n\t\tPoint p = new Point(1, 2);\n\t\tp.translate(5, 1);\n\t    System.out.println(p);\n\t    Point3D p3d = new Point3D(11, 12, 13);\n\t    p3d.translate(5, 1, 3);\n\t    System.out.println(p3d);  \n\t}\n}\n//Step 1: Define the class Point\nclass Point {\n\t//Step 1.1: Declare the instance variables\n\tprivate int x;\n\tprivate int y;\n\t//Step 1.2: Define the constructor to create a point with the specified xy-coordinate\n\tpublic Point(int x, int y) {\n\t\tthis.x = x;\n\t    this.y = y;\n\t}\n\t//Step 1.3: Declare the method to shift the point's location by the given amount\n\tpublic void translate(int dx, int dy) {\n\t\tx += dx;\n\t\ty += dy;\n\t}\n\t//Step 1.4: Define the toString method to get the string representation of the Point instance\n\tpublic String toString() {\n\t    return \"(\" + x + \", \" + y + \")\";\n\t}\n\t//Step 1.5: Define the methods for getting the xy-coordinate of the point\n\tpublic int getX() {\n\t\treturn x;\n\t}\n\tpublic int getY() {\n\t\treturn y;\n\t}\t\t\n}\n//Step 2: Extend the class Point to define the class Point3D\nclass Point3D extends Point {\n\t//Step 2.1: Declare the instance variable\n\tprivate int z;\n\t//Step 2.2: Define the constructor to create a 3D point with the specified xyz-coordinates\n\tpublic Point3D(int x, int y, int z) {\n\t\tsuper(x, y);\n\t    this.z = z;\n\t}\n\t//Step 1.3: Declare the method to shift the point's location in the 3D space by the specified amount\n\tpublic void translate(int dx, int dy, int dz) {\n\t    super.translate(dx, dy);\n\t    z += dz;\n\t}\n\t//Step 1.4: Define the method to get the z-coordinate of the 3D point\n\tpublic int getZ() {\n\t\treturn z;\n\t}\t\n\t//Step 1.5: Override the toString method of class Point to get the string representation of the Point3D instance\n\tpublic String toString() {\n\t    return \"(\" + super.getX() + \",\" + super.getY() + \",\" + this.z + \")\";\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097a4?_t=1757556881349&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Inheritance",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.921Z"
+}

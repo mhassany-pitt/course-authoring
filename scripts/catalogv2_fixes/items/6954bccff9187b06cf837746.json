@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837746",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:42.378Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "bubblesortpf",
+    "title": "BubbleSortPF",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=bubblesortpf&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\n#define SIZE 5\nvoid bubbleSort( int *, const int );\nint main()\n{\n\u00a0\u00a0\u00a0int a[ SIZE ] = {6, 2, 10, 12, 8 };\n\u00a0\u00a0\u00a0int i;\n\u00a0\u00a0\u00a0printf( \"Data items in original order\\n\" );\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%4d\", a[ i ] );\n\u00a0\u00a0\u00a0bubbleSort( a, SIZE );          /* sort the array */\n\u00a0\u00a0\u00a0printf( \"\\nData items in ascending order\\n\" );\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%4d\", a[ i ] );\n\u00a0\u00a0\u00a0printf( \"\\n\" );\n\u00a0\u00a0\u00a0return 0;\n}\nvoid bubbleSort( int *array, const int size )\n{\n\u00a0\u00a0\u00a0void swap( int *, int * );\n\u00a0\u00a0\u00a0int pass, j;\n\u00a0\u00a0\u00a0for ( pass = 0; pass < size - 1; pass++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( j = 0; j < size - 1; j++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( array[ j ] > array[ j + 1 ] )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0swap( &array[ j ], &array[ j + 1 ] );\n}\nvoid swap( int *element1Ptr, int *element2Ptr )\n{\n\u00a0\u00a0\u00a0int hold = *element1Ptr;\n\u00a0\u00a0\u00a0*element1Ptr = *element2Ptr;\n\u00a0\u00a0\u00a0*element2Ptr = hold;\n}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=bubblesortpf&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.192Z"
+}

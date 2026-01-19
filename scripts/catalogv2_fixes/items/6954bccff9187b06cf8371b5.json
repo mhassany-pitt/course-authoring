@@ -1,0 +1,158 @@
+{
+  "id": "6954bccff9187b06cf8371b5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-01-13T10:12:45.000Z",
+  "updated_at": "2026-01-17T05:29:13.321Z",
+  "tags": [],
+  "identity": {
+    "id": "py_leap_year",
+    "title": "Leap Year",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/193/embed?act=PCRS&sub=py_leap_year"
+  },
+  "attribution": {
+    "created_at": "2020-01-13T10:12:45.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "In the Gregorian calendar, a year is a leap year when the number representing that year is divisible by 4, but not by 100, unless it is divisible by 400. Thus years such as 1996, 1992, 1988 and so on are leap years because they are divisible by 4 but not by 100. For century years, the 400 rule is important. Thus, century years 1900, 1800 and 1700, while all still divisible by 4, are also divisible by 100. As they are not further divisible by 400, they ARE NOT leap years. On the other hand, the year 2000 is a leap year since it is divisible by 4 and 100 but also by 400. Also, you can assume that there were no leap years before 1582. Write a program that checks whether or not a given year is a leap year and returns True or False accordingly.Assume that the value of the year is already set to a variable year.E.g. 1: If the year is 1980, then leap_year is TrueE.g. 2: If the year is 1900, then leap_year is FalseE.g. 3: If the year is 1200, then leap_year is FalseE.g. 4: If the year is 2000, then leap_year is TrueE.g. 5: If the year is 3000, then leap_year is FalseAuthors: Yana Kortsarts, Yulia Kempner, Leonid Kugel, Kamil Akhuseyinoglu",
+    "source_code": "[student_code]\r\nleap_year = True\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/193/embed?act=PCRS&sub=py_leap_year"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=375",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=375",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course > If-Else",
+      "used_at": "2019-07-03T11:34:57.000Z",
+      "used_by": "Michelle, Wang - University of Alberta"
+    },
+    {
+      "context_id": "cid=384",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=384",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Spring+PCRS) > If-Else",
+      "used_at": "2020-01-12T17:36:15.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=390",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=390",
+      "context_name": "Python: PYTHON001 | Python Computational Thinking Workshop SCI Pitt > Control Structures",
+      "used_at": "2020-06-18T15:47:50.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=391",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=391",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2020 > If-Else",
+      "used_at": "2020-07-03T01:07:51.000Z",
+      "used_by": "Carrie, Demmans - University of Alberta"
+    },
+    {
+      "context_id": "cid=396",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=396",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Fall 2020) > If-Else",
+      "used_at": "2020-08-16T23:39:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=407",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=407",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Spring 2021) > If-Else",
+      "used_at": "2021-01-26T22:51:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=429",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=429",
+      "context_name": "Python: INFO063-17 | INTRODUCCI\u00c3\u0093N A LA PROGRAMACI\u00c3\u0093N > If-Else",
+      "used_at": "2023-05-30T22:07:20.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > If-Else",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Boolean Expressions",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > If-Else",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > If-Else",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Boolean Expressions",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=465",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=465",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Fall 2025) > If-Else",
+      "used_at": "2025-08-08T15:59:35.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.067Z"
+}

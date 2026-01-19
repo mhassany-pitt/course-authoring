@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8376b0",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:20.174Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "input_print",
+    "title": "input_print",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=input_print&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*\u00a0\u00a0\u00a0\u00a0This program calculates and prints the sum of\n\u00a0\u00a0\u00a0\u00a0three numbers input by the user at the keyboard.\n\u00a0\u00a0\u00a0\u00a0   Written by:\n\u00a0\u00a0\u00a0\u00a0   Date:\n*/\n#include <stdio.h>\n\nint main (void)\n{\n//\u00a0\u00a0\u00a0\u00a0Local Declarations\n\u00a0\u00a0\u00a0\u00a0int a;\n\u00a0\u00a0\u00a0\u00a0int b;\n\u00a0\u00a0\u00a0\u00a0int c;\n\u00a0\u00a0\u00a0\u00a0int sum;\n\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0printf(\"\\nWelcome. This program adds\\n\");\n\u00a0\u00a0\u00a0\u00a0printf(\"three numbers. Enter three numbers\\n\");\n\u00a0\u00a0\u00a0\u00a0printf(\"in the form: nnn nnn nnn <return>\\n\");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%d %d %d\", &a, &b, &c);\n\n\u00a0\u00a0\u00a0\u00a0// Numbers are now in a, b, and c. Add them.\n\u00a0\u00a0\u00a0\u00a0sum = a + b + c;\n\n\u00a0\u00a0\u00a0\u00a0printf(\"The total is: %d\\n\\n\", sum);\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Thank you. Have a good day.\\n\");\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\u00a0\u00a0\u00a0\u00a0//  main"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=input_print&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.182Z"
+}

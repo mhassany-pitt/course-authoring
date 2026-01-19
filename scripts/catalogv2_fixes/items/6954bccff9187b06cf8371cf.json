@@ -1,0 +1,90 @@
+{
+  "id": "6954bccff9187b06cf8371cf",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2019-09-14T22:14:53.000Z",
+  "updated_at": "2026-01-17T12:55:37.647Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "q_py_dlinkedlist3",
+    "title": "Doouble linked list 3",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_dlinkedlist3&sub=q_py_dlinkedlist3&act=q_py_linked_lists"
+  },
+  "attribution": {
+    "created_at": "2019-09-14T22:14:53.000Z",
+    "provider": "QuizPET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Michelle Wang",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "class Node:\n    def __init__(self, data):\n        self.item = data\n        self.nref = None\n        self.pref = None\n\nclass DoublyLinkedList:\n    def __init__(self):\n        self.start_node = None\n        self.count1 = 0\n        self.count2 = 0\n        self.count3 = 0\n        self.count4 = 0\n    def __str__(self):\n        current = self.start_node\n        s = \"[\"\n        i = 0\n        while current is not None:\n            if i != 0:\n                s = s + \", \" + str(current.item)\n            else:\n                s = s + str(current.item)\n            current = current.nref\n            i += 1\n        return s + \"]\"\n    def insert_at_start(self, data):\n        if self.start_node is None:\n            new_node = Node(data)\n            self.start_node = new_node\n            return\n        new_node = Node(data)\n        new_node.nref = self.start_node\n        self.start_node.pref = new_node\n        self.start_node = new_node\n    def delete_at_start(self):\n        if self.start_node is None:\n            print(\"The list has no element to delete\")\n            return\n        if self.start_node.nref is None:\n            self.start_node = None\n            return\n        self.start_node = self.start_node.nref\n        self.start_node.pref = None\n    \n    def getCount(self):\n        return [self.count1,self.count2,self.count3,self.count4]\n    \n    def delete_element_by_value(self, x):\n        if self.start_node is None:\n            print(\"The list has no element to delete\")\n            self.count1 += 1\n            return\n        if self.start_node.nref is None:\n            if self.start_node.item == x:\n                self.start_node = None\n            else:\n                self.count2 += 1\n                print(\"Item not found\")\n            return\n        if self.start_node.item == x:\n            self.start_node = self.start_node.nref\n            self.start_node.pref = None\n            return\n        n = self.start_node\n        while n.nref is not None:\n            self.count3 += 1\n            if n.item == x:\n                break\n            n = n.nref\n        if n.nref is not None:\n            n.pref.nref = n.nref\n            n.nref.pref = n.pref\n        else:\n            if n.item == x:\n                n.pref.nref = None\n            else:\n                self.count4 += 1\n                print(\"Element not found\")\nlist = DoublyLinkedList()\nlist.insert_at_start(2)\nlist.insert_at_start(2)\nlist.insert_at_start(3)\nlist.insert_at_start(4)\nlist.delete_element_by_value(3)\nprint(list)\nprint(list.getCount())"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_dlinkedlist3&sub=q_py_dlinkedlist3&act=q_py_linked_lists"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=379",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=379",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Fall 2019 > Lists",
+      "used_at": "2019-09-14T21:22:08.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=428",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=428",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2023 (Python II) > Halfweek 7 - Linked Lists",
+      "used_at": "2023-05-02T00:12:59.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=431",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=431",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2024 (Python II) > Halfweek 7 - Linked Lists",
+      "used_at": "2024-05-03T14:17:30.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.074Z"
+}

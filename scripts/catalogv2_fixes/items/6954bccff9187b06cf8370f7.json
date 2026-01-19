@@ -1,0 +1,159 @@
+{
+  "id": "6954bccff9187b06cf8370f7",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-04-06T20:39:47.000Z",
+  "updated_at": "2026-01-17T05:28:52.535Z",
+  "tags": [],
+  "identity": {
+    "id": "index_array_exception",
+    "title": "Index Array Exception",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/517/embed?act=PCRS&sub=index_array_exception"
+  },
+  "attribution": {
+    "created_at": "2021-04-06T20:39:47.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the method given below: You must check to see if the index exists in the array:1. If the index is in range, then you will print out \"The user's choice is: __\", but fill in the blank with the element at the index2. If the index provided is \"out of bounds\" of the array arr, then you will print out \"The user has no preferences\"3. You will print out all the elements in the array in the output after checking the index. The numbers should be separated with a comma (the last element in the array does not include a comma).Example:if arr={3,7,90} and index=3 you must print:The user has no preferences3,7,90",
+    "source_code": "[file Lab8.java]\n[blocked]\nstatic void inputIndex(int[] arr, int index){\n\ttry{\n[/blocked]\n[student_code]\n    \n          \n    }  \n    catch(/* input exception */){\n    \n    \n          \n[/student_code]\n[blocked]\n    }  \n    finally{\n[/blocked]\n[student_code]\n\n      \n[/student_code]\n[blocked]\n}  \n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "TryCatchStatement",
+          "TryCatchFinallyStatement",
+          "ArrayElement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ArrayElement",
+          "TryCatchFinallyStatement",
+          "TryCatchStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/517/embed?act=PCRS&sub=index_array_exception"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=397",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=397",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming > Exception handling",
+      "used_at": "2020-08-18T15:45:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=417",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=417",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming (2022 version) > Exception handling",
+      "used_at": "2022-01-18T22:56:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 3a- Exception Handling",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    },
+    {
+      "context_id": "cid=444",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=444",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming (2022 version - alternate order) > Exception handling",
+      "used_at": "2024-09-12T01:36:40.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=449",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=449",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 (Peter B) > Exception handling",
+      "used_at": "2025-01-15T05:27:01.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=450",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=450",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 - Fully reversed > Exception handling",
+      "used_at": "2025-01-21T13:45:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Exception handling",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=477",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=477",
+      "context_name": "Java: CMPINF0401 | WIT COMP1050 - Computer Science II > Exception handling",
+      "used_at": "2025-09-19T03:00:59.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=488",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=488",
+      "context_name": "Java: CMPINF0401 | WIT COMP1050 - Computer Science II > Exception handling",
+      "used_at": "2025-10-07T14:15:48.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=489",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=489",
+      "context_name": "Java: 002 | Data Structures (Intermediate Java) - Fall 2025 > Exception handling",
+      "used_at": "2025-10-08T04:59:33.000Z",
+      "used_by": "Rafaella Sampaio de Alencar - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.047Z"
+}

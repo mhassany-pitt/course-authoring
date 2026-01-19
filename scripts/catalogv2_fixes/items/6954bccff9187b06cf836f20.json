@@ -1,0 +1,129 @@
+{
+  "id": "6954bccff9187b06cf836f20",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:07.619Z",
+  "tags": [],
+  "identity": {
+    "id": "py_first_mismatch_es",
+    "title": "Primera no coincidencia en lista (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/231/embed?act=PCRS&sub=py_first_mismatch_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa la siguiente funcion segun su docstring.",
+    "source_code": "[student_code]\r\ndef primera_diferencia(lista1, lista2):\r\n    \"\"\" (list, list) -> int\r\n    \r\n    Devuelve el primer indice en el que los valores de lista1 y lista2 difieren. \r\n    Devuelve -1 si no se encuentran diferencias.\r\n       \r\n    >>> primera_diferencia(['a', 'b', 'c'], ['a', 'd', 'c'])\r\n    1\r\n    >>> primera_diferencia(['a', 'b', 'c'], ['a', 'b', 'c', 'd'])\r\n    3\r\n    >>> primera_diferencia(['a', 'b', [1]], ['a', 'b', [1]])\r\n    -1\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "IfElifElseCheckingInForLoop",
+          "FindingLength",
+          "DefiningSimpleFunction",
+          "ForLoopWithListIndexing",
+          "ListReferencing",
+          "ChangingValueVariable",
+          "IfChecking",
+          "IfCheckingInForLoop",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "CallingSimpleFunction",
+          "IndexingList"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm mod": {
+        "concepts": [
+          "IfElseChecking"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "IntegerLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "FindingLength",
+          "ForLoopWithListIndexing",
+          "IfChecking",
+          "IfCheckingInForLoop",
+          "IfElseChecking",
+          "IndexingList",
+          "ListReferencing"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/231/embed?act=PCRS&sub=py_first_mismatch_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Listas",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.984Z"
+}

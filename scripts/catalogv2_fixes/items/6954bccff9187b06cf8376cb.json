@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8376cb",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:24.349Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "Cwhile_counter",
+    "title": "Cwhile_counter",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Cwhile_counter&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\nint main()\n{\n\u00a0\u00a0\u00a0int passes = 0, failures = 0, student = 1, result;\n\n\u00a0\u00a0\u00a0while ( student <= 10 ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"Enter result ( 1=pass,2=fail ): \" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf( \"%d\", &result );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( result == 1 )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0passes = passes + 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0failures = failures + 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0student = student + 1;\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0printf( \"Passed %d\\n\", passes );\n\u00a0\u00a0\u00a0printf( \"Failed %d\\n\", failures );\n\u00a0\u00a0\u00a0return 0;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Cwhile_counter&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.184Z"
+}

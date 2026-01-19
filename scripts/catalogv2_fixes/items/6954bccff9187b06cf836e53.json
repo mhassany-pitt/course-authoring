@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e53",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:43.940Z",
+  "tags": [],
+  "identity": {
+    "id": "py_special_list_class",
+    "title": "PCRS C3-PL  Special List Class",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/68/embed?act=PCRS&sub=py_special_list_class"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "SpecialList is a class that has two instance variables value_list and size.  value_list refers to a list, and size stores an integer representing the maximum number of items that can be stored in the list.Complete the following code.",
+    "source_code": "[student_code]\r\nclass SpecialList:\r\n    \"\"\"A list that can hold a limited number of items.\"\"\"\r\n\r\n    def __init__(self, size):\r\n        \"\"\" (SpecialList, int)\r\n\r\n        >>> L = SpecialList(10)\r\n        >>> L.size\r\n        10\r\n        >>> L.value_list\r\n        []\r\n        \"\"\"\r\n        # complete this code\r\n\r\n\r\n    def push_value(self, new_value):\r\n        \"\"\" (SpecialList, object) -> NoneType\r\n\r\n        Append new_value to this list, if there is enough space in the list according to its maximum size.  \r\n        If there is insufficient space, new_value should not be added to the list.\r\n\r\n        >>> L = SpecialList(10)\r\n        >>> L.push_value(3)\r\n        >>> L.value_list\r\n        [3]\r\n        \"\"\"\r\n        # complete this code\r\n\r\n\r\n    def pop_most_recent_value(self):\r\n        \"\"\" (SpecialList) -> object\r\n\r\n        Precondition: len(self.value_list) != 0\r\n\r\n        Return the value added most recently to value_list and remove it from the list.\r\n\r\n        >>> L = SpecialList(10)\r\n        >>> L.push_value(3)\r\n        >>> L.push_value(4)\r\n        >>> L.value_list\r\n        [3, 4]\r\n        >>> L.pop_most_recent_value()\r\n        4\r\n        \"\"\"\r\n        # complete this code\r\n\r\n    \r\n    def compare(self, other):\r\n        \"\"\" (SpecialList, SpecialList) -> int\r\n\r\n        Return 0 if both SpecialList objects have lists that contain the same number of items.\r\n        Return 1 if self's list contains more items than other's list.\r\n        Return -1 if self's list contains fewer items than other's list.\r\n        \"\"\"\r\n        # complete this code\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/68/embed?act=PCRS&sub=py_special_list_class"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.960Z"
+}

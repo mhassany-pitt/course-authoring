@@ -1,0 +1,133 @@
+{
+  "id": "6954bccff9187b06cf836d3c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-16T15:19:36.000Z",
+  "updated_at": "2026-01-17T05:27:00.144Z",
+  "tags": [],
+  "identity": {
+    "id": "Mostrando los Dias que Estan por Sobre 32 Grados Fahrenheit__684dd9f8a0cac2913443642b-684dd9cda0cac29134436428-1",
+    "title": "Mostrando los Dias que Estan por Sobre 32 Grados Fahrenheit",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684dd9f8a0cac2913443642b?_t=1750198422693&index=1&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-16T15:19:36.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que lea una serie de temperaturas y reporte los d\u00edas que est\u00e1n por sobre 32 grados Fahrenheit (0 grados Celsius). Sup\u00f3n que los valores de temperatura est\u00e1n en Fahrenheit. Tambi\u00e9n sup\u00f3n que los valores de entrada podr\u00edan tener un punto decimal.",
+    "source_code": "#Paso 1: Leer el n\u00famero de d\u00edas para los cuales tenemos que ingresar sus datos de temperatura\nnum_dias = int(input(\"Ingresa el n\u00famero de valores de temperatura diaria que se ingresar\u00e1n: \"))\n#Paso 2: Leer los valores de temperatura\ntemperaturas = []\nfor i in range(num_dias):\n    val = float(input(\"Ingresa la temperatura: \"))\n    temperaturas.append(val)\n#Paso 3: Crear una lista que contenga los d\u00edas que est\u00e1n por encima de 32 grados Fahrenheit\ndias_sobre_32 = []\nfor i in range(len(temperaturas)) :\n    if temperaturas[i] > 32:\n        dias_sobre_32.append(\"D\u00eda \" + str(i+1))\n#Paso 4: Imprimir el resultado\nprint(\"D\u00edas por sobre 32 grados Fahrenheit:\", dias_sobre_32)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleForLoopIteration",
+          "TransformingToFloatType",
+          "AddingListElementWithAppend",
+          "TransformingToIntType",
+          "FindingLength",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "IfCheckingInForLoop",
+          "Addition",
+          "CallingLibraryFunction",
+          "TransformingToStringType",
+          "BooleanEvaluating",
+          "Printing",
+          "CreatingList",
+          "Concatenation",
+          "IndexingList",
+          "ForLoopWithListIndexing",
+          "NestedFunctionCall",
+          "SingleForLoopIteration",
+          "TransformingToFloatType",
+          "AddingListElementWithAppend",
+          "TransformingToIntType",
+          "FindingLength",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "IfCheckingInForLoop",
+          "Addition",
+          "CallingLibraryFunction",
+          "TransformingToStringType",
+          "BooleanEvaluating",
+          "Printing",
+          "CreatingList",
+          "Concatenation",
+          "IndexingList",
+          "ForLoopWithListIndexing",
+          "NestedFunctionCall"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684dd9f8a0cac2913443642b?_t=1750198422693&index=1&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Listas",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Listas",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Listas",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.930Z"
+}

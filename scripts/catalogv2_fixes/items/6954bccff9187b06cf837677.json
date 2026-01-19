@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837677",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:11.179Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fig06_07.c",
+    "title": "fig06_07.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig06_07.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 6.7: fig06_07.c\n\u00a0\u00a0\u00a0Student poll program */\n#include <stdio.h>\n#define RESPONSE_SIZE 40\n#define FREQUENCY_SIZE 11\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int answer;\n\u00a0\u00a0\u00a0int rating;\n\n\u00a0\u00a0\u00a0int frequency[ FREQUENCY_SIZE ] = { 0 };\n\u00a0\u00a0\u00a0int responses[ RESPONSE_SIZE ] = { 1, 2, 6, 4, 8, 5, 9, 7, 8, 10,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a01, 6, 3, 8, 6, 10, 3, 8, 2, 7, 6, 5, 7, 6, 8, 6, 7, 5, 6, 6,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a05, 6, 7, 5, 6, 4, 8, 6, 8, 10 };\n\n\u00a0\u00a0\u00a0for ( answer = 0; answer < RESPONSE_SIZE; answer++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++frequency[ responses [ answer ] ];\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0printf( \"%s%17s\\n\", \"Rating\", \"Frequency\" );\n\n\u00a0\u00a0\u00a0for ( rating = 1; rating < FREQUENCY_SIZE; rating++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%6d%17d\\n\", rating, frequency[ rating ] );\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0return 0;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig06_07.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.179Z"
+}

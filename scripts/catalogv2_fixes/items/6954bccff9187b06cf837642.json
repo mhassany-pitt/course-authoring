@@ -1,0 +1,105 @@
+{
+  "id": "6954bccff9187b06cf837642",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:04.076Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "yearday.c",
+    "title": "IS12:: yearday.c (15.2)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=yearday.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Example 15.2: Day of Year\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Source: K&R2, p. 111\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Modification: Peter Brusilovsky */\n\n\n#include <stdio.h>\nstatic char daytab[2][13] = {\n\u00a0{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},\n\u00a0{0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},\n};\n\nvoid month_day(int year, int yday, int *pmonth, int *pday);\n\nmain()\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int year, yday; /* input data */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int month, mday; /* output data */\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* reads and process data until 0 is entered */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0do{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Enter Year and Day (yyyy dd): \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d %d\", &year, &yday);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(yday > 0) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0month_day(year, yday, &month, &mday);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Day %d of %d is simply %d/%d/%d\n\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0yday, year, month, mday, year);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Good Bye!\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} while(yday > 0);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return 0;\n}\n\nvoid month_day(int year, int yearday, int *pmonth, int *pday)\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int i, leap /* 1 for leap year, 0 for non-leap */;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0leap = ((year%4 == 0) && year%100 != 0) || year%400 == 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for(i = 1; yearday > daytab[leap][i]; i++)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0yearday -= daytab[leap][i];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0*pmonth = i;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0*pday = yearday ;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "multi_dimensional_array",
+          "variable_initialization",
+          "do",
+          "and",
+          "for",
+          "if_else",
+          "static",
+          "array_declaration",
+          "dereference",
+          "reference",
+          "char",
+          "mod",
+          "equal",
+          "post_increment",
+          "simple_assignment",
+          "int",
+          "or",
+          "pointer_declaration",
+          "main_function",
+          "not_equal",
+          "greater",
+          "void",
+          "sub_assignment",
+          "variable_declaration",
+          "include",
+          "function_declaration",
+          "printf",
+          "scanf"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=yearday.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.176Z"
+}

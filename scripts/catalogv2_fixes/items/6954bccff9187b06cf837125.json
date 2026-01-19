@@ -1,0 +1,152 @@
+{
+  "id": "6954bccff9187b06cf837125",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-10-19T10:00:06.000Z",
+  "updated_at": "2026-01-17T05:28:57.728Z",
+  "tags": [],
+  "identity": {
+    "id": "sort_array_descending",
+    "title": "(Sorting) Sort array descendingly with bubble sort",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/477/embed?act=PCRS&sub=sort_array_descending"
+  },
+  "attribution": {
+    "created_at": "2020-10-19T10:00:06.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the method sortArray in order to descendingly sort the elements of an array of integers (arr). arr is given as parameters of sortArrayDesc.Instructions on how to solve this problem:-  Inside the given for loop, you have to nest another loop (controlled by j) that will be responsible for moving the i-th smallest element to its respective position in the right part of the array, one by one.-  For moving the i-th smallest element in the array to the right side of the array on each i-th iteration, you have to repetitively swap contiguous elements (arr[j] and arr[j+1]) when needed.- If after a j-th iteration you realize that all the elements are in order, you can stop the execution of the sorting algorithm.",
+    "source_code": "[file Lab7.java]\n[student_code]\nstatic void sortArrayDesc(int arr[]){\n        //TODO: write your code here\n        //See the instructions for details on how to solve this problem\n    \n        \n        \n        \n    }\n}\n      \n[/student_code]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "IfStatement",
+          "ArrayElement",
+          "sorting"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ArrayElement",
+          "IfStatement",
+          "sorting"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/477/embed?act=PCRS&sub=sort_array_descending"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=397",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=397",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming > Sorting",
+      "used_at": "2020-08-18T15:45:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=405",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=405",
+      "context_name": "Java: CMPINF0401 | COMP1050 Wentworth Institute of Technology > Sorting",
+      "used_at": "2021-01-24T18:40:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=417",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=417",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming (2022 version) > Sorting",
+      "used_at": "2022-01-18T22:56:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=444",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=444",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming (2022 version - alternate order) > Sorting",
+      "used_at": "2024-09-12T01:36:40.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=449",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=449",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 (Peter B) > Sorting",
+      "used_at": "2025-01-15T05:27:01.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=450",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=450",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 - Fully reversed > Sorting",
+      "used_at": "2025-01-21T13:45:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Sorting",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=474",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=474",
+      "context_name": "Java: CMU15-121 | CMU 15-121 - Intro Data Structures - Fall 2025 > Sorting",
+      "used_at": "2025-09-16T16:41:24.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=489",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=489",
+      "context_name": "Java: 002 | Data Structures (Intermediate Java) - Fall 2025 > Sorting",
+      "used_at": "2025-10-08T04:59:33.000Z",
+      "used_by": "Rafaella Sampaio de Alencar - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.052Z"
+}

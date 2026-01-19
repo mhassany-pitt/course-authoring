@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e52",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:43.836Z",
+  "tags": [],
+  "identity": {
+    "id": "py_rectangle_class",
+    "title": "PCRS C3-PL  Rectangle Class",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/67/embed?act=PCRS&sub=py_rectangle_class"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "DO NOT USE THE WORD input ANYWHERE! We provide class Rectangle and starter code for class RectangleCollection. Complete class RectangleCollection, which has one list instance variable, rectangles, that should initially refer to an empty list.  Write a method add_rectangle that takes a Rectangle as a parameter and appends it to the rectangles list.  Write a method get_same_area_rects that takes a number as a parameter and returns a list of all Rectangles from the rectangles list that have that area.",
+    "source_code": "[student_code]\r\nclass Rectangle:\r\n    \"\"\" A rectangle with a width and height. \"\"\"\r\n\r\n    def __init__(self, w, h):\r\n        \"\"\" (Rectangle, number, number)\r\n\r\n        Create a new rectangle of width w and height h.\r\n\r\n        >>> r = Rectangle(1, 2)\r\n        >>> r.width\r\n        1\r\n        >>> r.height\r\n        2\r\n        \"\"\"\r\n\r\n        self.width = w\r\n        self.height = h\r\n\r\n    def get_area(self):\r\n        \"\"\" (Rectangle) -> number\r\n\r\n        Return the area of this rectangle.\r\n\r\n        >>> r = Rectangle(10, 20)\r\n        >>> r.get_area()\r\n        200\r\n        \"\"\"\r\n\r\n        return self.width * self.height\r\n\r\n\r\nclass RectangleCollection:\r\n\r\n    def __init__(self):\r\n        \"\"\" (RectangleCollection) -> NoneType\r\n\r\n        >>> rc = RectangleCollection()\r\n        >>> rc.rectangles\r\n        []\r\n        \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/67/embed?act=PCRS&sub=py_rectangle_class"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.960Z"
+}

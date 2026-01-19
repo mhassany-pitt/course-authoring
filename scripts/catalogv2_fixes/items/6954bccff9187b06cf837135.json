@@ -1,0 +1,135 @@
+{
+  "id": "6954bccff9187b06cf837135",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-09-14T08:14:29.000Z",
+  "updated_at": "2026-01-17T05:28:59.419Z",
+  "tags": [],
+  "identity": {
+    "id": "java_loop_max_power_three",
+    "title": "(Loops) Maximum power of three",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/454/embed?act=PCRS&sub=java_loop_max_power_three"
+  },
+  "attribution": {
+    "created_at": "2020-09-14T08:14:29.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Given an integer variable n entered by the user from keyboard, complete the following code in order to figure what is the maximum power of 3 that is lower or equal than n. Store the result in an integer variable called maxPower. E.g. 1: if the value of n entered by the user is 2, the value of maxPower will be 1. E.g. 2: if the value of n entered by the user is 500, the value of maxPower will be 243. E.g. 3: if the value of n entered by the user is 27, the value of maxPower will be 27.",
+    "source_code": "[file Lab4.java]\n[blocked]\nimport java.util.Scanner;\n\npublic class Lab4 {\n    public static void main(String[] args){\n[/blocked]\n[blocked]\n        // Create a scanner to read from keyboard\n        Scanner kbd = new Scanner (System.in);\n        \n        // Prompt user for typing a numeric input\n        System.out.print(\"Enter value of n: \");\n        \n        //Stores the integer value from keyboard in the variable n\n        int n = kbd.nextInt();\n        \n\t\tint maxPower;\n        \n        //YOU MUST NOT WRITE ANY CODE ABOVE THIS LINE\n[/blocked]\n[student_code]\n\t\t// TODO: add your code here\n\n \n        \n        \n[/student_code]\n[blocked]\n        //YOU MUST NOT WRITE ANY CODE BELOW THIS LINE\n    \tSystem.out.println(maxPower);\n\t}\n}\n[/blocked] \n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "manual_expert": {
+        "concepts": [
+          "BooleanExpression",
+          "GreaterExpression",
+          "MultiplicativeExpression",
+          "java.lang.Math.pow",
+          "WhileStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "BooleanExpression",
+          "GreaterExpression",
+          "java.lang.Math.pow",
+          "MultiplicativeExpression",
+          "WhileStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/454/embed?act=PCRS&sub=java_loop_max_power_three"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Loops",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Loops / Arrays / Exceptions",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Loops",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Loops",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Loops",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Loops",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.054Z"
+}

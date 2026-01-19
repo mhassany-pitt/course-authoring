@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf836f62",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-03-12T10:54:07.000Z",
+  "updated_at": "2026-01-17T12:54:39.545Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "q_java_Array6_v1",
+    "title": "q_java_Array 6",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_Array6_v1"
+  },
+  "attribution": {
+    "created_at": "2025-03-12T10:54:07.000Z",
+    "provider": "QuizJET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Sharon Hsiao",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class Tester {\n   \n   public static int[] shiftAndPlaceMax(int[] arr) {\n       int max = arr[0];\n       int maxIndex = 0;\n       \n       for (int i = 1; i &lt; arr.length; i++) {\n           if (arr[i] > max) {\n               max = arr[i];\n               maxIndex = i;\n           }\n       }\n\n       for (int i = arr.length - 1; i > 0; i--) {\n           arr[i] = arr[i - 1];\n       }\n\n       arr[0] = max;\n       return arr;\n   }\n\n   public static void print(int[] array) {\n       for (int x : array) {\n           System.out.print(x + \" \");\n       }\n       System.out.println();\n   }\n\n   public static void main(String[] args) {\n       int[] values = { 7, 2, 9, 1, 8 };\n       System.out.println(\"Modified Array:\");\n       print(shiftAndPlaceMax(values));\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_Array6_v1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.993Z"
+}

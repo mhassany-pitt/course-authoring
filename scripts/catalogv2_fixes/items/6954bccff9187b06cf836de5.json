@@ -1,0 +1,144 @@
+{
+  "id": "6954bccff9187b06cf836de5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:19:48.000Z",
+  "updated_at": "2026-01-17T05:27:30.983Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_remove_dublicates_es",
+    "title": "Eliminar duplicados de una lista",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_remove_dublicates_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:19:48.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye una funcion que cree una nueva lista donde se almacenen todos los elementos excepto los duplicados de la lista dada como parametro. Finalmente, la funcion debe devolver la nueva lista.",
+    "source_code": "def eliminar_duplicados(lista_de_num):\n    nueva_lista = []\n    for elemento in lista_de_num:\n        if elemento not in nueva_lista:\n            nueva_lista.append(elemento)\n    return nueva_lista\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm_rully": {
+        "concepts": [
+          "list()",
+          "ListLiteral",
+          "LogicalExpression",
+          "SimpleAssignmentStatement",
+          "CheckingForItem",
+          "BooleanEvaluating",
+          "IfCheckingInForLoop",
+          "DeletingListElement",
+          "CreatingList",
+          "AddingListElementWithAppend",
+          "SingleForLoopIteration",
+          "CallingStandardFunction",
+          "DefiningFunctionCallingFunction",
+          "CallingFunctionCallingFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "CallingStandardFunction",
+          "ListLiteral",
+          "LogicalExpression",
+          "SimpleAssignmentStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AddingListElementWithAppend",
+          "BooleanEvaluating",
+          "CallingFunctionCallingFunction",
+          "CheckingForItem",
+          "CreatingList",
+          "DefiningFunctionCallingFunction",
+          "IfCheckingInForLoop",
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_remove_dublicates_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Listas",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Listas",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Listas",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=464",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=464",
+      "context_name": "Python: UTFSM-Progra | Test Jordan Thesis Python ES > Listas",
+      "used_at": "2025-07-10T18:56:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.949Z"
+}

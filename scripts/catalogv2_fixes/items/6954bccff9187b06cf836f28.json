@@ -1,0 +1,89 @@
+{
+  "id": "6954bccff9187b06cf836f28",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:08.422Z",
+  "tags": [],
+  "identity": {
+    "id": "py_total_slices_es",
+    "title": "Calculo total rebanadas (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/243/embed?act=PCRS&sub=py_total_slices_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Follow these instructions: Click here to trace this program in the Python Visualizer. (It will open a new window or tab.) Click Forward once. Consider what will happend when you click Forward once more.  When you think you know, do it. Continue to step through the program, considering what will happen for each statement before you execute that statement.When you are done with the visualization, click the Submit button.  There are no test cases.",
+    "source_code": "[student_code]\r\ndef total_slices(num_pizzas, slices_per_pizza):\r\n    \"\"\" (int, int) -> int\r\n\r\n    Return the total number of slices in num_pizzas pizzas that each have\r\n    slices_per_pizza slices.\r\n    \r\n    >>> total_slices(2, 30)\r\n    60\r\n    >>> total_slices(1, 8)\r\n    8\r\n    \"\"\"\r\n    \r\n    return num_pizzas * slices_per_pizza\r\n\r\n\r\n# We ordered 2 medium pizzas.\r\nmedium_slices = total_slices(2, 8)\r\n\r\n# We also ordered 1 extra large pizza.\r\npieces_per_extra_large = 30\r\nextra_large_slices = total_slices(1, pieces_per_extra_large)\r\n\r\ngrand_total = medium_slices + extra_large_slices\r\n\r\nprint(\"With 2 mediums and 1 extra large, we will have\", grand_total, \"slices.\")\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "Addition",
+          "Multiplication",
+          "DefiningSimpleFunction",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "CallingSimpleFunction",
+          "DefiningSimpleFunction",
+          "Multiplication"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/243/embed?act=PCRS&sub=py_total_slices_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.986Z"
+}

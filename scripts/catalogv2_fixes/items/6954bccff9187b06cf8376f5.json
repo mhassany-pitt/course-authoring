@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8376f5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:30.672Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "call_by_value",
+    "title": "Function CallByValue",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=call_by_value&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\n#define DEMAND_CHG  35.00  /* basic water demand charge\u00a0\u00a0\u00a0\u00a0            */\n#define PER_1000_CHG 1.10     /* charge per thousand gallons used\u00a0\u00a0\u00a0\u00a0*/\n#define LATE_CHG     2.00        /* surcharge assessed on unpaid balance\u00a0\u00a0\u00a0\u00a0*/\n/* Function prototypes\u00a0\u00a0\u00a0\u00a0*/\nvoid instruct_water(void);\ndouble comp_use_charge(int previous, int current);\ndouble comp_late_charge(double unpaid);\nvoid display_bill(double late_charge, double bill, double unpaid);\nint main(void)\n{\n\u00a0\u00a0\u00a0\u00a0int    previous;\n\u00a0\u00a0\u00a0\u00a0int    current;\n\u00a0\u00a0\u00a0\u00a0double unpaid;\n\u00a0\u00a0\u00a0\u00a0double bill;\ndouble use_charge;\n\u00a0\u00a0\u00a0\u00a0double late_charge;\n\u00a0\u00a0\u00a0\u00a0instruct_water();\n\u00a0\u00a0\u00a0\u00a0printf(\"Enter unpaid balance> $\");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%lf\", &unpaid);\n\u00a0\u00a0\u00a0\u00a0printf(\"Enter previous meter reading> \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &previous);\n\u00a0\u00a0\u00a0\u00a0printf(\"Enter current meter reading> \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &current);\nuse_charge = comp_use_charge(previous, current);\n\u00a0\u00a0\u00a0\u00a0late_charge = comp_late_charge(unpaid);\n\u00a0\u00a0\u00a0\u00a0bill = DEMAND_CHG + use_charge + unpaid + late_charge;\n\u00a0\u00a0\u00a0\u00a0display_bill(late_charge, bill, unpaid);\n\u00a0\u00a0\u00a0\u00a0return (0);\n}\nvoid instruct_water(void)\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"This program figures a water bill \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"based on the demand charge\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"($%.2f) and a $%.2f per 1000 \", DEMAND_CHG, PER_1000_CHG);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"gallons use charge.\\n\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"A $%.2f surcharge is added to \", LATE_CHG);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"accounts with an unpaid balance.\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nEnter unpaid balance, previous \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"and current meter readings\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"on separate lines after the prompts.\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Press <return> or <enter> after \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"typing each number.\\n\\n\");\n}\ndouble comp_use_charge(int previous, int current)\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int used;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double use_charge;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0used = current - previous;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0use_charge = used * PER_1000_CHG;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return (use_charge);\n}\ndouble comp_late_charge(double unpaid)\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double late_charge;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (unpaid > 0)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0late_charge = LATE_CHG;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0late_charge = 0.0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return (late_charge);\n}\nvoid display_bill(double late_charge, double bill, double unpaid)\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (late_charge > 0.0) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nBill includes $%.2f late charge\", late_charge);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\" on unpaid balance of $%.2f\\n\", unpaid);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nTotal due = $%.2f\\n\", bill);\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=call_by_value&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.187Z"
+}

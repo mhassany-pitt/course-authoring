@@ -1,0 +1,132 @@
+{
+  "id": "6954bccff9187b06cf8370fa",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-03-30T10:47:21.000Z",
+  "updated_at": "2026-01-17T05:28:52.876Z",
+  "tags": [],
+  "identity": {
+    "id": "arithmetic_exception",
+    "title": "arithmetic_exception",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/516/embed?act=PCRS&sub=arithmetic_exception"
+  },
+  "attribution": {
+    "created_at": "2021-03-30T10:47:21.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the method avgHairballsPerCat(int numHairballs, int numCats) in order to get the average number of hairballs that each cat spits up (you need to use integer division here, as 1.7 hairballs do not make much sense, right?). You'll need to handle an erroneous situation where there are no cats. (Hint: if there are no cats, what happens to your average calculation?)Implement try/catch to handle this situation:1. If the number of cats specified in the parameter numCats is 0, the method needs to catch an arithmetic error and return 0.",
+    "source_code": "[file Lab8.java]\n[blocked]\nimport java.lang.ArithmeticException;\n[/blocked]\n[blocked]\n    \nstatic int avgHairballsPerCat(int numHairballs, int numCats){\n\ttry {\n[/blocked]\n[student_code]\n\n      \n[/student_code]\n[blocked]\n}  \n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "TryCatchStatement",
+          "ReturnStatement",
+          "TryCatchStatement",
+          "DivideExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "DivideExpression",
+          "ReturnStatement",
+          "TryCatchStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/516/embed?act=PCRS&sub=arithmetic_exception"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Exceptions/File Handling",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > LinkedLists/Exceptions/File Handling",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > LinkedLists/Exceptions",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > LinkedLists/IO/Exceptions",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > LinkedLists/Exceptions",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=474",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=474",
+      "context_name": "Java: CMU15-121 | CMU 15-121 - Intro Data Structures - Fall 2025 > Exception handling",
+      "used_at": "2025-09-16T16:41:24.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.047Z"
+}

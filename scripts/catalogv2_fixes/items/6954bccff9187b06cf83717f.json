@@ -1,0 +1,131 @@
+{
+  "id": "6954bccff9187b06cf83717f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-09T19:20:19.000Z",
+  "updated_at": "2026-01-17T12:41:54.328Z",
+  "tags": [],
+  "identity": {
+    "id": "py_vending_machine2",
+    "title": "Vending Machine",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_vending_machine&ch=py_vending_machine2"
+  },
+  "attribution": {
+    "created_at": "2020-08-09T19:20:19.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Suppose we have a vending machine that gives change. A customer selects an item for purchase and inserts a bill into the vending machine. The vending machine dispenses the purchased item and gives change. We will assume that all item prices are multiples of 5 cents, and the machine gives all change in quarters, dimes, and nickels. Construct a program that computes how many quarters, dimes, and nickels to return to the customer.",
+    "source_code": "#Step 1: Assign initial values to the variables which we need for this program\npennies_per_dollar = 100\npennies_per_quarter = 25\npennies_per_dime = 10\npennies_per_nickel = 5\n#Step 2: Read the bill value and item price\ntext = input(\"Enter bill value in dollars (1 = $1 bill, 5 = $5 bill, etc.): \")\nbill_value = int(text)\ntext = input(\"Enter item price in pennies: \")\nitemPrice = int(text)\n#Step 3: Compute the change due\nchange_due = pennies_per_dollar * bill_value - itemPrice\n#Step 4: Compute the number of quarters in the change due and update the change due after taking away the quarters\nquarters = change_due // pennies_per_quarter\nchange_due = change_due % pennies_per_quarter\n#Step 5: Compute the number of dimes in the remaining change due and update the change due after taking away the dimes\ndimes = change_due // pennies_per_dime\nchange_due = change_due % pennies_per_dime\n#Step 6: Compute the number of nickels in the remaining change due\nnickels = change_due // pennies_per_nickel\n#Step 7: Display the result\nprint(\"Your change consists of:\") \nprint(quarters, \"quarters\")\nprint(dimes, \"dimes\") \nprint(nickels, \"nickels\")"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "Multiplication",
+          "TransformingToIntType",
+          "FindRemainder",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "Printing",
+          "Division",
+          "Subtraction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "Division",
+          "FindRemainder",
+          "HandlingInput",
+          "Multiplication",
+          "Printing",
+          "Subtraction",
+          "TransformingToIntType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_vending_machine&ch=py_vending_machine2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > Variables and Operations",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > Variables and Operations",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Variables and Operations",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Variables and Operations",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.062Z"
+}

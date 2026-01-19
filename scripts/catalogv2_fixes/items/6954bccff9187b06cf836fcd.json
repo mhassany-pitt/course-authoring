@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836fcd",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-02-21T20:10:42.000Z",
+  "updated_at": "2026-01-17T12:41:43.243Z",
+  "tags": [],
+  "identity": {
+    "id": "py_json_conditionals_1_ch",
+    "title": "JSON Conditionals 1 Challenge",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_json_conditionals_1&ch=py_json_conditionals_1_ch"
+  },
+  "attribution": {
+    "created_at": "2025-02-21T20:10:42.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Rully Hendrawan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "A customer is looking for a restaurant that has at least 1 review and mexican cuisine, with spicy food.  I should have at least tables with 2 seating and has a number of maximum allowed reservation exactly at 30. Write a python code when you're assumed to be given a dataset of restaurants in json assigned to a variable",
+    "source_code": "\r\n\r\nimport json\r\n\r\n\r\nrestaurants_json = [\r\n    {\r\n        \"name\": \"Taco Fiesta\",\r\n        \"reviews\": 5,\r\n        \"cuisine\": \"Mexican\",\r\n        \"spicy_food\": True,\r\n        \"seating\": [2, 4, 6],\r\n        \"max_reservation\": 30\r\n    },\r\n    {\r\n        \"name\": \"Burrito King\",\r\n        \"reviews\": 10,\r\n        \"cuisine\": \"Mexican\",\r\n        \"spicy_food\": False,\r\n        \"seating\": [2, 4],\r\n        \"max_reservation\": 30\r\n    },\r\n    {\r\n        \"name\": \"Salsa Heaven\",\r\n        \"reviews\": 3,\r\n        \"cuisine\": \"Mexican\",\r\n        \"spicy_food\": True,\r\n        \"seating\": [2, 4, 8],\r\n        \"max_reservation\": 30\r\n    },\r\n    {\r\n        \"name\": \"Pasta Palace\",\r\n        \"reviews\": 8,\r\n        \"cuisine\": \"Italian\",\r\n        \"spicy_food\": False,\r\n        \"seating\": [2, 4],\r\n        \"max_reservation\": 20\r\n    }\r\n]\r\n\r\nfiltered_restaurants = []\r\n\r\nfor r in restaurants_json:\r\n    if r[\"reviews\"] >= 1:\r\n        if r[\"cuisine\"].lower() == \"mexican\":\r\n            if r[\"spicy_food\"]:\r\n                if 2 in r[\"seating\"]:\r\n                        if r[\"max_reservation\"] <= 30:\r\n                            filtered_restaurants.append(r)\r\n\r\n\r\n\r\n\r\nprint(filtered_restaurants)\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_conditionals_1&ch=py_json_conditionals_1_ch"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > JSON processing",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > JSON processing/Statistics",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > JSON processing",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.010Z"
+}

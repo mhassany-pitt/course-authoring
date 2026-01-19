@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836f5d",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-03-27T13:47:40.000Z",
+  "updated_at": "2026-01-17T05:28:14.499Z",
+  "tags": [],
+  "identity": {
+    "id": "py_search_list2",
+    "title": "Search List 2",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/45/embed?act=PCRS&sub=py_search_list2"
+  },
+  "attribution": {
+    "created_at": "2025-03-27T13:47:40.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following function according to its docstring using a for loop.  String method startswith may come in handy here.  The lists we test will not all be shown; instead, some will be described in English. If you fail any test cases, you will need to read the description and make your own test.",
+    "source_code": "[student_code]\r\ndef search_closet(items, colour):\r\n    \"\"\" (list of str, str) -> list of str\r\n    \r\n    items is a list containing descriptions of the contents of a closet where\r\n    every description has the form 'colour item', where each colour is one word\r\n    and each item is one or more word.  For example:\r\n\r\n        ['grey summer jacket', 'orange spring jacket', 'red shoes', 'green hat']\r\n\r\n    colour is a colour that is being searched for in items. \r\n    \r\n    Return a list containing only the items that match the colour.\r\n    \r\n    >>> search_closet(['red summer jacket', 'orange spring jacket', 'red shoes', 'green hat'], 'red')\r\n    ['red summer jacket', 'red shoes']\r\n    >>> search_closet(['red shirt', 'green pants'], 'blue')\r\n    []\r\n    >>> search_closet([], 'mauve')\r\n    []\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/45/embed?act=PCRS&sub=py_search_list2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Searching",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > Searching",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Searching",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.993Z"
+}

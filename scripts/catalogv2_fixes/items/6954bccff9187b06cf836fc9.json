@@ -1,0 +1,69 @@
+{
+  "id": "6954bccff9187b06cf836fc9",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-02-22T00:20:06.000Z",
+  "updated_at": "2026-01-17T13:18:43.190Z",
+  "tags": [
+    "TODO:add-prompt",
+    "TODO:add-source-code"
+  ],
+  "identity": {
+    "id": "q_py_fstring_format_2_es",
+    "title": "q_py_fstring_format_2_es",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_fstring_format_2_es&sub=q_py_fstring_format_2_es&act=q_py_spanish"
+  },
+  "attribution": {
+    "created_at": "2025-02-22T00:20:06.000Z",
+    "provider": "QuizPET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": null,
+    "source_code": null
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_fstring_format_2_es&sub=q_py_fstring_format_2_es&act=q_py_spanish"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.010Z"
+}

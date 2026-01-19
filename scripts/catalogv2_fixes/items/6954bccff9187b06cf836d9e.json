@@ -1,0 +1,101 @@
+{
+  "id": "6954bccff9187b06cf836d9e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:21:10.000Z",
+  "updated_at": "2026-01-17T05:27:22.915Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_quick_sorting_es",
+    "title": "Practicar el algoritmo de ordenaci\u00f3n r\u00e1pida (Quick Sort)",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_quick_sorting_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:21:10.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye una funcion que implemente el algoritmo de ordenamiento rapido. La funcion de particion() ha sido predefinida y se muestra a continuacion.<br/>Considera que datos es una lista, primero es el indice del primer elemento y ultimo es el indice del ultimo elemento.",
+    "source_code": "def ordenamiento_rapido(datos, primero, ultimo):\n\tif primero < ultimo:\n\t\tpivote = particion(datos, primero, ultimo)\n\t\tordenamiento_rapido(datos, primero, pivote-1)\n\t\tordenamiento_rapido(datos, pivote+1, ultimo)\n\treturn datos"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "Lt",
+          "Sub",
+          "Return",
+          "arg",
+          "If",
+          "FunctionDef",
+          "Assign",
+          "Add",
+          "Call"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "Sub",
+          "Constant",
+          "Call",
+          "Assign",
+          "Return",
+          "FunctionDef",
+          "Lt",
+          "Add",
+          "If"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_quick_sorting_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.942Z"
+}

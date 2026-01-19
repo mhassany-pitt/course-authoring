@@ -1,0 +1,135 @@
+{
+  "id": "6954bccff9187b06cf836d8a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-26T13:30:43.000Z",
+  "updated_at": "2026-01-17T05:27:20.864Z",
+  "tags": [],
+  "identity": {
+    "id": "py_value_between_es",
+    "title": "Condicion: es adolescente (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/223/embed?act=PCRS&sub=py_value_between_es"
+  },
+  "attribution": {
+    "created_at": "2025-05-26T13:30:43.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa la siguiente funcion segun las instrucciones",
+    "source_code": "[blocked]\r\ndef es_adolescente(edad):\r\n    \"\"\" (int) -> bool\r\n\r\n    Devuelve True si y solo si edad representa un adolescente entre 13 y 18 inclusive.\r\n\r\n    >>> es_adolescente(4)\r\n    False\r\n    >>> es_adolescente(16)\r\n    True\r\n    >>> es_adolescente(19)\r\n    False\r\n    \"\"\"\r\n    #TODO: completa el nuevo cuerpo de la funcion en una sola linea en el espacio de abajo:\r\n[/blocked]\r\n[student_code]\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "Addition",
+          "DefiningSimpleFunction",
+          "IfChecking",
+          "BooleanLiteral",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "LogicalExpression",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm mod": {
+        "concepts": [
+          "IfElseChecking"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "IntegerLiteral",
+          "LogicalExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "BooleanLiteral",
+          "CallingSimpleFunction",
+          "DefiningSimpleFunction",
+          "IfChecking",
+          "IfElseChecking"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/223/embed?act=PCRS&sub=py_value_between_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Condicionales",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Condicionales",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Condicionales",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.940Z"
+}

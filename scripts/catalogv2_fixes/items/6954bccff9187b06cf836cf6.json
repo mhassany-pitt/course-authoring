@@ -1,0 +1,81 @@
+{
+  "id": "6954bccff9187b06cf836cf6",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:17:54.000Z",
+  "updated_at": "2026-01-17T05:26:51.619Z",
+  "tags": [],
+  "identity": {
+    "id": "The Class for Representing a Point in the Euclidean Plane (Case 2)__68bdb309f6cc3d7a9cc09771-68bdb309f6cc3d7a9cc0976f-1",
+    "title": "The Class for Representing a Point in the Euclidean Plane (Case 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09771?_t=1757557074510&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:17:54.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a class that represents a point in the Euclidean plane. The class should contain data that represents the point\u2019s integer coordinates (x,y). The class should also include getter and setter methods for accessing and changing the point's coordinates and a method to calculate and return the point's distance from the origin (0,0).\\n\\nThe class PointTester2 instantiates an object from this class, sets the (x,y) coordinates of the point, and calculates the distance between this point and origin.",
+    "source_code": "public class PointTester2 {\n\tpublic static void main(String[] args) {\n\t\tPoint2 point = new Point2();\n\t\tpoint.setX(7);\n\t\tpoint.setY(2);\n\t\tSystem.out.println(\"The point's coordinates: (\" + point.getX() + \", \" + point.getY() + \")\") ;\n\t\tSystem.out.println(\"Distance of the point from origin = \" + point.distanceFromOrigin());\n\t}\n}\nclass Point2 {\n\t//Step 1: Declare the instance variables\n\tprivate int x;\n\tprivate int y;\n\t//Step 2: Declare the method to calculate and return the point's distance from the origin\n\tpublic double distanceFromOrigin() {\n\t\treturn Math.sqrt(x * x + y * y);\n\t}\n\t//Step 3: Define the setter and getter methods for the x-coordinate of the point\n\tpublic void setX(int newX) {\n\t\tx = newX;\n\t}\n\tpublic int getX() {\n\t\treturn x;\n\t}\n\t//Step 4: Define the setter and getter methods for the y-coordinate of the point\n\tpublic void setY(int newY) {\n\t\ty = newY;\n\t}\n\tpublic int getY() {\n\t\treturn y;\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09771?_t=1757557074510&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Objects and Classes",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > Objects and Classes",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.920Z"
+}

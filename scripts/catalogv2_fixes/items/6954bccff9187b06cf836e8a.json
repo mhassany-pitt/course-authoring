@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e8a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:50.406Z",
+  "tags": [],
+  "identity": {
+    "id": "py_is_in",
+    "title": "PCRS C3-PL  Is In",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/131/embed?act=PCRS&sub=py_is_in"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Return True if s2 is in s1 and False if it is not.isIn(\"cats and dogs\", \"t\") -> TrueisIn(\"cats and dogs\", \"dog\") -> TrueisIn(\"cats and dogs\", \"pet\") -> FalseisIn(\"cats and dogs\", \"ts and\") -> True",
+    "source_code": "[student_code]\ndef isIn (s1, s2):\n    #code\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/131/embed?act=PCRS&sub=py_is_in"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.965Z"
+}

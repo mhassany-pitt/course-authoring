@@ -1,0 +1,126 @@
+{
+  "id": "6954bccff9187b06cf836ee5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:01.378Z",
+  "tags": [],
+  "identity": {
+    "id": "py_count_NM_es",
+    "title": "PCRS C3-PL  Count Nm",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/307/embed?act=PCRS&sub=py_count_NM_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Escribe una funcion que tome una lista de enteros y dos enteros, N y M, y devuelva el numero de veces que NM ocurre en orden en la lista dada. Por ejemplo:    contarNM([1,2,3,4,5], 2, 1) => 0    contarNM([1,2,3,4,5], 1, 2) => 1    contarNM([1,2,1,2,1], 1, 2) => 2    contarNM([-3, 8, 9, 12, 8, 12, 9], 12, 8) => 1",
+    "source_code": "[student_code]\ndef contarNM(elementos, n, m):\n    # codigo\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "ListLiteral",
+          "Subtraction",
+          "FindingLength",
+          "Addition",
+          "DefiningSimpleFunction",
+          "SingleForLoopIteration",
+          "ForLoopWith+=",
+          "ForLoopWithListIndexing",
+          "ListReferencing",
+          "AugmentedAssignmentStatement",
+          "ChangingValueVariable",
+          "IfElifElseCheckingInForLoop",
+          "IfCheckingInForLoop",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "LogicalExpression",
+          "CallingSimpleFunction",
+          "IndexingTuple",
+          "IndexingList"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "AugmentedAssignmentStatement",
+          "ComparisonExpression",
+          "ForLoopWith+=",
+          "IfElifElseCheckingInForLoop",
+          "IntegerLiteral",
+          "ListLiteral",
+          "LogicalExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "FindingLength",
+          "ForLoopWithListIndexing",
+          "IfCheckingInForLoop",
+          "IndexingList",
+          "IndexingTuple",
+          "ListReferencing",
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/307/embed?act=PCRS&sub=py_count_NM_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.975Z"
+}

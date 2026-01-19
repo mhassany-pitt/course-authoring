@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf8371a8",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-02-04T01:07:51.000Z",
+  "updated_at": "2026-01-17T05:29:11.948Z",
+  "tags": [],
+  "identity": {
+    "id": "while2_coding_main",
+    "title": "while2_coding_main",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/433/embed?act=PCRS&sub=while2_coding_main"
+  },
+  "attribution": {
+    "created_at": "2020-02-04T01:07:51.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Given an integer variable n entered by the user from keyboard, complete the following code in order to figure out how many times can we divide n by 2 to get down to 1. Store the result in an integer variable called count. E.g. 1: if the value of n entered by the user is 2, the value of count will be 1. E.g. 2: if the value of n entered by the user is 4, the value of count will be 2. E.g. 3: if the value of n entered by the user is 8, the value of count will be 3.",
+    "source_code": "[file Lab3.java]\n[blocked]\nimport java.util.Scanner;\n\npublic class Lab3 {\n    public static void main(String[] args){\n[/blocked]\n[blocked]\n        // Create a scanner to read from keyboard\n        Scanner kbd = new Scanner (System.in);\n        \n        // Prompt user for typing a numeric input\n        System.out.print(\"Enter value of n: \");\n        \n        //Stores the integer value from keyboard in the variable n\n        int n = kbd.nextInt();\n        \n        //Definition of the variable that it will be used for storing the number of times that n can be divided by 2 to get down to 1\n\t\tint count;\n        \n        //YOU MUST NOT WRITE ANY CODE ABOVE THIS LINE\n[/blocked]\n[student_code]\n        \n\t\t// TODO: add your code here\n\n \n        \n        \n[/student_code]\n[blocked]\n        //YOU MUST NOT WRITE ANY CODE BELOW THIS LINE\n    \tSystem.out.println(count);\n\t}\n}\n[/blocked] \n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "DivideExpression",
+          "WhileStatement",
+          "AddExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "AddExpression",
+          "DivideExpression",
+          "WhileStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/433/embed?act=PCRS&sub=while2_coding_main"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.066Z"
+}

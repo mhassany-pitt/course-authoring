@@ -1,0 +1,91 @@
+{
+  "id": "6954bccff9187b06cf836ed9",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:00.021Z",
+  "tags": [],
+  "identity": {
+    "id": "py_is_in_es",
+    "title": "PCRS C3-PL  Is In",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/293/embed?act=PCRS&sub=py_is_in_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Devuelve True si s2 esta en s1 y False si no lo esta.estaEn(\"gatos y perros\", \"t\") -> TrueestaEn(\"gatos y perros\", \"perro\") -> TrueestaEn(\"gatos y perros\", \"mascota\") -> FalseestaEn(\"gatos y perros\", \"tos y\") -> True",
+    "source_code": "[student_code]\ndef estaEn (c1, c2):\n    # codigo\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "TransformingToStringType",
+          "StringLiteral",
+          "CheckingForItem",
+          "DefiningSimpleFunction",
+          "BooleanLiteral",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "BooleanLiteral",
+          "CallingSimpleFunction",
+          "DefiningSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/293/embed?act=PCRS&sub=py_is_in_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.973Z"
+}

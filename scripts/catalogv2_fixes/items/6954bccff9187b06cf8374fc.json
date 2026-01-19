@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8374fc",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2015-09-15T00:05:11.000Z",
+  "updated_at": "2026-01-17T12:57:13.434Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "pyt4.10",
+    "title": "Continue Statement",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt4.10&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2015-09-15T00:05:11.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Hardik Vasa",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "for letter in 'Python':\n\u00a0\u00a0\u00a0\u00a0if letter == 'h':\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0continue\n\u00a0\u00a0\u00a0\u00a0print('Current Letter :', letter)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt4.10&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.144Z"
+}

@@ -1,0 +1,115 @@
+{
+  "id": "6954bccff9187b06cf836d3e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-13T13:40:59.000Z",
+  "updated_at": "2026-01-17T05:27:00.451Z",
+  "tags": [],
+  "identity": {
+    "id": "Concatenando Caracteres de Dos Strings (Caso 2).__684c61c3a0cac29134435e3c-684c61c0a0cac29134435e3a-1",
+    "title": "Concatenando Caracteres de Dos Strings (Caso 2).",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684c61c3a0cac29134435e3c?_t=1749844183272&index=1&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-13T13:40:59.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que tenga una funci\u00f3n que reciba dos strings y devuelva un string formado a partir de las cadenas dadas separadas por un car\u00e1cter de espacio, de tal manera que los primeros dos caracteres de los strings dados sean intercambiados.\\nPor ejemplo, el nuevo string que se formar\u00e1 a partir de los strings 'sol' y 'luna' es 'lul sona'.\\nAsume que ambos strings tienen al menos dos caracteres.",
+    "source_code": "#Paso 1: Definir la funci\u00f3n\ndef concatenar_caracteres(a, b):\n    nuevo_a = b[:2] + a[2:]\n    nuevo_b = a[:2] + b[2:]\n    return (nuevo_a + \" \" + nuevo_b)\n#Paso 2: Llamar a la funci\u00f3n\nprint(concatenar_caracteres(\"Hola\", \"Ah\u00ed\"))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "CreatingString",
+          "Printing",
+          "DefiningSimpleFunction",
+          "Concatenation",
+          "SlicingString",
+          "NestedFunctionCall",
+          "CallingSimpleFunction",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "CreatingString",
+          "Printing",
+          "DefiningSimpleFunction",
+          "Concatenation",
+          "SlicingString",
+          "NestedFunctionCall",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684c61c3a0cac29134435e3c?_t=1749844183272&index=1&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Strings",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Strings",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Strings",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.931Z"
+}

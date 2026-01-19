@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e8d",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:50.743Z",
+  "tags": [],
+  "identity": {
+    "id": "py_dna_base_pairs",
+    "title": "PCRS C3-PL  Dna Base Pairs",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/134/embed?act=PCRS&sub=py_dna_base_pairs"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write a function that takes a string as a parameter,and returns True if the string is a DNA string (i.e.only contains the capital letters A, C, G, T), and False otherwise. A DNA string must be at least1 character in length, so the empty string is nota DNA string. For example:isDNAString('GATTACA') => TrueisDNAString('GATTACA 2: The Return of Ethan Hawke') => FalseisDNAString('') => False",
+    "source_code": "[student_code]\ndef isDNAString(seq):\n    # code goes here\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/134/embed?act=PCRS&sub=py_dna_base_pairs"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.965Z"
+}

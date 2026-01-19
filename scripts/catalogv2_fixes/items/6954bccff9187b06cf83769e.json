@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf83769e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:17.282Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "binary_expressions",
+    "title": "Binary_Expressions",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=binary_expressions&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*\u00a0\u00a0\u00a0\u00a0This program demonstrates binary expressions.\n\u00a0\u00a0\u00a0\u00a0   Written by:\n\u00a0\u00a0\u00a0\u00a0   Date:\n*/\n#include <stdio.h>\nint main (void)\n{\n//\u00a0\u00a0\u00a0\u00a0Local Declarations\n\u00a0\u00a0\u00a0\u00a0int   a = 17;\n\u00a0\u00a0\u00a0\u00a0int   b = 5;\n\u00a0\u00a0\u00a0\u00a0float x = 17.67;\n\u00a0\u00a0\u00a0\u00a0float y = 5.1;\n\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0printf(\"Integral calculations\\n\");\n\u00a0\u00a0\u00a0\u00a0printf(\"%d + %d  = %d\\n\", a, b, a + b);\n\u00a0\u00a0\u00a0\u00a0printf(\"%d - %d  = %d\\n\", a, b, a - b);\n\u00a0\u00a0\u00a0\u00a0printf(\"%d * %d  = %d\\n\", a, b, a * b);\n\u00a0\u00a0\u00a0\u00a0printf(\"%d / %d  = %d\\n\", a, b, a / b);\n\u00a0\u00a0\u00a0\u00a0printf(\"%d %% %d  = %d\\n\", a, b, a % b);\n\u00a0\u00a0\u00a0\u00a0printf(\"\\n\");\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Floating-point calculations\\n\");\n\u00a0\u00a0\u00a0\u00a0printf(\"%f + %f  = %f\\n\", x, y, x + y);\n\u00a0\u00a0\u00a0\u00a0printf(\"%f - %f  = %f\\n\", x, y, x - y);\n\u00a0\u00a0\u00a0\u00a0printf(\"%f * %f  = %f\\n\", x, y, x * y);\n\u00a0\u00a0\u00a0\u00a0printf(\"%f / %f  = %f\\n\", x, y, x / y);\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\u00a0\u00a0\u00a0\u00a0// main"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=binary_expressions&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.181Z"
+}

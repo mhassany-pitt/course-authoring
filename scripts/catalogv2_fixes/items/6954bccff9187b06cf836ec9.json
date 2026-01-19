@@ -1,0 +1,124 @@
+{
+  "id": "6954bccff9187b06cf836ec9",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:58.036Z",
+  "tags": [],
+  "identity": {
+    "id": "py_non_intersecting_es",
+    "title": "PCRS C3-PL  Non Intersecting",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/274/embed?act=PCRS&sub=py_non_intersecting_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Escribe una funcion listas_sin_interseccion que tome dos listas como parametros. La primera lista L1 tiene elementos que son listas de strings de texto. La segunda L2, es una lista de strings de texto.listas_sin_interseccion debe devolver una nueva lista que contiene las listas originales dentro de L1 que no contienen ninguna de las strings en L2. Tu funcion no debe cambiar las listas originales pasadas como parametros.Ejemplo entrada/salida:listas_sin_interseccion([ ['alpha', 'beta', 'charlie'], ['delta', 'echo'], ['alpha', 'beta', 'sierra'] ], ['delta']) -> [ ['alpha', 'beta', 'charlie'], ['alpha', 'beta', 'sierra'] ]",
+    "source_code": "[student_code]\r\ndef listas_sin_interseccion(lista1, lista2):\r\n    \"\"\"\r\n    (lista de lista de str, lista de str) -> lista de lista de str\r\n\r\n    Devuelve una nueva lista que contiene las listas originales dentro de lista1\r\n    que no contienen ninguno de los strings en lista2.\r\n    \"\"\"\r\n    \r\n    \r\n    \r\n    \r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "TransformingToStringType",
+          "IfElifElseChecking",
+          "IndexingList",
+          "CheckingForItem",
+          "AddingListElementWithAppend",
+          "DefiningSimpleFunction",
+          "NestedForLoopIteration",
+          "ListReferencing",
+          "ChangingValueVariable",
+          "IfElifElseCheckingInForLoop",
+          "IfChecking",
+          "IfCheckingInForLoop",
+          "BooleanLiteral",
+          "ListLiteral",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm mod": {
+        "concepts": [
+          "CreatingList"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ListLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AddingListElementWithAppend",
+          "BooleanLiteral",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "CreatingList",
+          "DefiningSimpleFunction",
+          "IfChecking",
+          "IfCheckingInForLoop",
+          "IndexingList",
+          "ListReferencing",
+          "NestedForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/274/embed?act=PCRS&sub=py_non_intersecting_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.971Z"
+}

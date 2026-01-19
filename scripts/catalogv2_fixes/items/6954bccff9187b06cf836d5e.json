@@ -1,0 +1,123 @@
+{
+  "id": "6954bccff9187b06cf836d5e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-10T08:51:32.000Z",
+  "updated_at": "2026-01-17T05:27:04.179Z",
+  "tags": [],
+  "identity": {
+    "id": "Imprimir un Patron de Estrellas en Forma de Triangulo Rectangulo Invertido__682dc48e66a8e1b992c82a8a-682dc48c66a8e1b992c82a88-1",
+    "title": "Imprimir un Patron de Estrellas en Forma de Triangulo Rectangulo Invertido",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dc48e66a8e1b992c82a8a?_t=1750184382590&index=1&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-10T08:51:32.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Isaac Alpizar-Chacon",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Un patr\u00f3n de estrellas en forma de tri\u00e1ngulo rect\u00e1ngulo invertido de N filas contiene N-i+1 asteriscos en la i-\u00e9sima fila. Construya un programa que reciba el n\u00famero de filas en el patr\u00f3n de estrellas en forma de tri\u00e1ngulo invertido y lo imprima. Por ejemplo, cuando el n\u00famero de filas en el patr\u00f3n de estrellas en forma de tri\u00e1ngulo invertido es 5, el programa imprime la siguiente salida:\\n*****\\n****\\n***\\n**\\n*",
+    "source_code": "#Paso 1: Leer el n\u00famero de filas en el patr\u00f3n de estrellas en forma de tri\u00e1ngulo invertido\nN = int(input(\"Ingrese el n\u00famero de filas en el patr\u00f3n de estrellas en forma de tri\u00e1ngulo invertido:\"))\n#Paso 2: Imprimir las filas en el patr\u00f3n de estrellas, una por una\nfor i in range(1, N+1):  \n    #Paso 2.1: Generar los asteriscos en la i-\u00e9sima fila \n    fila = \"\"\n    for j in range(1, N-i+2):  \n        fila = fila + \"*\"\n    #Paso 2.2: Imprimir los asteriscos en la i-\u00e9sima fila\n    print(fila)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleForLoopIteration",
+          "TransformingToIntType",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "NestedForLoopIteration",
+          "Addition",
+          "CallingLibraryFunction",
+          "Printing",
+          "Concatenation",
+          "ForLoopWith",
+          "CreatingString",
+          "Subtraction",
+          "NestedFunctionCall",
+          "SingleForLoopIteration",
+          "TransformingToIntType",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "NestedForLoopIteration",
+          "Addition",
+          "CallingLibraryFunction",
+          "Printing",
+          "Concatenation",
+          "ForLoopWith",
+          "CreatingString",
+          "Subtraction",
+          "NestedFunctionCall"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dc48e66a8e1b992c82a8a?_t=1750184382590&index=1&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Ciclos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Ciclos For",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Ciclos",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.935Z"
+}

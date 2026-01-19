@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf83708c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-09-16T11:35:08.000Z",
+  "updated_at": "2026-01-17T05:28:41.092Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_divisible_by2",
+    "title": "Construct a program with multiple if-elif statements",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_divisible_by2&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2021-09-16T11:35:08.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program which checks whether each of the integers in interval from 1 to 100 is divisible by 2, 5, or both.",
+    "source_code": "\nnum = 100\nfor i in range(1, num + 1):\n    if i % 2 == 0 and i % 5 == 0:\n        print(i, \"is divisible by 2 & 5\")\n    elif i % 5 == 0:\n        print(i, \"is only divisible by 5\")\n    elif i % 2 == 0:\n        print(i, \"is only divisible by 2\")\n    else:           \n        print(i, \"is not divisible by 2 nor 5\")\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_divisible_by2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.033Z"
+}

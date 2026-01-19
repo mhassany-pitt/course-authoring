@@ -1,0 +1,365 @@
+{
+  "id": "6954bccff9187b06cf8374b6",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2015-11-17T13:09:00.000Z",
+  "updated_at": "2026-01-17T12:57:03.326Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "q_py_while_loop2",
+    "title": "while loop with summation",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_while_loop2&sub=q_py_while_loop2&act=q_py_topic_loops"
+  },
+  "attribution": {
+    "created_at": "2015-11-17T13:09:00.000Z",
+    "provider": "QuizPET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "n = 2\ni = 1\na = 0\nb = 1\nprint(b)\nwhile i &lt; n:\n    c = a + b\n    print(c)\n    a = b\n    b = c\n    i = i + 1"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleWhileLoopIteration",
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "BooleanEvaluating",
+          "Printing",
+          "WhileLoopWith"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "parser": {
+        "concepts": [
+          "Int",
+          "Add",
+          "Lt",
+          "While",
+          "Call",
+          "Assign"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Call",
+          "Assign",
+          "Int",
+          "Lt",
+          "Add",
+          "While"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "AssigningValueVariable",
+          "BooleanEvaluating",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "Printing",
+          "SingleWhileLoopIteration",
+          "WhileLoopWith"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_while_loop2&sub=q_py_while_loop2&act=q_py_topic_loops"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=365",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=365",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX-Parsons) > While Loops",
+      "used_at": "2018-09-25T15:11:21.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=372",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=372",
+      "context_name": "Python: PYTHON001 | Python Course (CTAT-T3-AE-QP-PCEX-Parsons) > While Loops",
+      "used_at": "2019-05-07T02:44:53.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=373",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=373",
+      "context_name": "Python: INFSCI 0019 | Python for Data Management & Analytics > While Loops",
+      "used_at": "2019-05-12T00:16:14.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=375",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=375",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course > For Loops and While Loops",
+      "used_at": "2019-07-03T11:34:57.000Z",
+      "used_by": "Michelle, Wang - University of Alberta"
+    },
+    {
+      "context_id": "cid=376",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=376",
+      "context_name": "Python: PYTHON001 | University of Toronto Python Course > While Loops",
+      "used_at": "2019-08-22T20:50:26.000Z",
+      "used_by": "Andrew Petersen, Andrew Petersen - University of Toronto"
+    },
+    {
+      "context_id": "cid=378",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=378",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Fall) > While Loops",
+      "used_at": "2019-09-11T00:15:37.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=379",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=379",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Fall 2019 > For Loops and While Loops",
+      "used_at": "2019-09-14T21:22:08.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=384",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=384",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Spring+PCRS) > While Loops",
+      "used_at": "2020-01-12T17:36:15.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=388",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=388",
+      "context_name": "Python: PYTHON001 | Python Course - NTNU > While Loops",
+      "used_at": "2020-02-19T07:48:12.000Z",
+      "used_by": "Boban Vesin, Boban Vesin - NTNU"
+    },
+    {
+      "context_id": "cid=390",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=390",
+      "context_name": "Python: PYTHON001 | Python Computational Thinking Workshop SCI Pitt > While Loops",
+      "used_at": "2020-06-18T15:47:50.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=391",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=391",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2020 > For Loops and While Loops",
+      "used_at": "2020-07-03T01:07:51.000Z",
+      "used_by": "Carrie, Demmans - University of Alberta"
+    },
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > While Loops",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=396",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=396",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Fall 2020) > While Loops",
+      "used_at": "2020-08-16T23:39:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=403",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=403",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 > While Loops",
+      "used_at": "2020-09-04T17:46:26.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > While Loops",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=407",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=407",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Spring 2021) > While Loops",
+      "used_at": "2021-01-26T22:51:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=410",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=410",
+      "context_name": "Python: PYTHON001 | Utrecht Python Spring 2021 > While Loops",
+      "used_at": "2021-02-16T21:53:05.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=411",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=411",
+      "context_name": "Python: PYTHON001 | Intelligent Textbooks Utrecht Python > While Loops",
+      "used_at": "2021-05-07T09:41:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=413",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Loops (For & While)",
+      "used_at": "2021-08-11T18:22:22.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=414",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=414",
+      "context_name": "Python: PYTHON001 | TC1028 Tecnologico de Monterrey > For Loops and While Loops",
+      "used_at": "2021-08-22T10:25:40.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=419",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=419",
+      "context_name": "Python: PYTHON001 | Test Python course > While Loops",
+      "used_at": "2022-01-26T11:33:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=420",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=420",
+      "context_name": "Python: PYTHON001 | Utrecht-Python-Textbook > Lecture 5",
+      "used_at": "2022-02-01T14:15:04.000Z",
+      "used_by": "Alireza, Sabet - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=421",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=421",
+      "context_name": "Python: PYTHON001 | Australia Spring 2022 > While Loops",
+      "used_at": "2022-05-09T01:08:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=422",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > OPTIONAL (Loops (For & While))",
+      "used_at": "2022-05-23T22:24:04.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=424",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=424",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 174 Fall 2022 (Python I) > Loops (For & While)",
+      "used_at": "2022-08-10T17:36:39.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=426",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=426",
+      "context_name": "Python: PYTHON001 | Novi Sad Python Fall 2022 > While Loops",
+      "used_at": "2022-10-03T23:23:00.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=429",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=429",
+      "context_name": "Python: INFO063-17 | INTRODUCCI\u00c3\u0093N A LA PROGRAMACI\u00c3\u0093N > While Loops",
+      "used_at": "2023-05-30T22:07:20.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=430",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=430",
+      "context_name": "Python: PYTHON001 | Preference Study Course > While Loops",
+      "used_at": "2024-04-30T00:00:17.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > While Loops",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > While Loops",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > While Loops",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=465",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=465",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Fall 2025) > While Loops",
+      "used_at": "2025-08-08T15:59:35.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=466",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=466",
+      "context_name": "Python: PYTHON001 | CMU Fall 25 - Principles of Computing (Python) > While Loops",
+      "used_at": "2025-08-27T16:49:41.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=490",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=490",
+      "context_name": "Python: KAU001 | Intro to Python - Fall 2025 > While Loops",
+      "used_at": "2025-10-08T19:58:50.000Z",
+      "used_by": "Rafaella Sampaio de Alencar - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.138Z"
+}

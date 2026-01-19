@@ -1,0 +1,81 @@
+{
+  "id": "6954bccff9187b06cf836cc6",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:26:08.000Z",
+  "updated_at": "2026-01-17T05:26:45.676Z",
+  "tags": [],
+  "identity": {
+    "id": "The Class for Representing a TV (Case 2)__68bdb308f6cc3d7a9cc096b7-68bdb308f6cc3d7a9cc096b5-1",
+    "title": "The Class for Representing a TV (Case 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096b7?_t=1757557568035&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:26:08.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a class that represents a TV. The class should contain data that represents the TV's state (power on or off, current volume level). The class should include methods to access the state of the TV and also methods to change the state of the TV (turn on/off, change volume level). Assume that the volume level is an integer and ranges from 1 to 7 (both inclusive). \\n\\nThe class TVTester2 instantiates two objects from this class and invokes the methods on those objects to turn on the TV and change the volume level.",
+    "source_code": "public class TVTester2 {  \n\tpublic static void main(String[] args) {\n\t\tTV2 tv1 = new TV2();\n\t\ttv1.turnOn();\n\t\ttv1.setVolume(4);\n\t\ttv1.setVolume(-1);\n\t\ttv1.volumeDown();\n\t\tTV2 tv2 = new TV2();\n\t\ttv2.turnOn();\n\t\ttv2.volumeUp();\n\t\tSystem.out.println(\"tv1's volume level is \" + tv1.getVolumeLevel());\n\t\tSystem.out.println(\"tv2's volume level is \" + tv2.getVolumeLevel());\n\t}\n}\nclass TV2 {\n\t//Step 1: Declare the instance variables \n\tprivate boolean on = false; \n\tprivate int volumeLevel = 1; \n\t//Step 2: Define the methods to change the on/off state of the TV \n\tpublic void turnOn() {\n\t\ton = true;\n\t}\n\tpublic void turnOff() {\n\t\ton = false;\n\t}\n\t//Step 3: Define the methods to change the volume level of the TV \n\tpublic void setVolume(int newVolumeLevel) {\n\t\tif (on && newVolumeLevel >= 1 && newVolumeLevel <= 7)\n\t\t\tvolumeLevel = newVolumeLevel;\n\t}\n\tpublic void volumeUp() {\n\t\tif (on && volumeLevel < 7)\n\t\t\tvolumeLevel++;\n\t}\n\tpublic void volumeDown() {\n\t\tif (on && volumeLevel > 1)\n\t\t\tvolumeLevel--;\n\t}\n\t//Step 4: Define the methods to get the current state of the TV \n\tpublic int getVolumeLevel() {\n\t\treturn volumeLevel;\n\t}\n\tpublic boolean isOn() {\n\t\treturn on;\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096b7?_t=1757557568035&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Objects and Classes",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > Objects and Classes",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.915Z"
+}

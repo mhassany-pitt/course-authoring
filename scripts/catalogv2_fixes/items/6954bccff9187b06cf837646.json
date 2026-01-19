@@ -1,0 +1,93 @@
+{
+  "id": "6954bccff9187b06cf837646",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:04.687Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "recpower.c",
+    "title": "IS12:: recpower.c (24.2)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=recpower.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*  Example 24.2\n\u00a0\u00a0\u00a0\u00a0Recursive calculation of Power\n\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky\n\u00a0\u00a0\u00a0\u00a0The program requests two integers a and b and calculates a power b\n\u00a0\u00a0\u00a0\u00a0If b is negative, the program does nothing\n*/\n#include <stdio.h>\n\nint power(int, int);\n\nvoid main(){\n\u00a0\u00a0\u00a0\u00a0int a, b;\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Enter a and b: \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%d %d\", &a, &b);\n\n\u00a0\u00a0\u00a0\u00a0if(b >= 0)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%d power %d = %d\n\", a, b, power(a, b));\n}\n\nint power(int base, int exp) {\n\u00a0\u00a0\u00a0\u00a0if(exp == 0)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return 1;\n\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return (base * power(base, exp - 1));\n}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "int",
+          "greater_equal",
+          "void",
+          "reference",
+          "if",
+          "sub",
+          "function_declaration",
+          "include",
+          "variable_declaration",
+          "return",
+          "mul",
+          "equal",
+          "main_function",
+          "if_else",
+          "printf",
+          "scanf"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=recpower.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.176Z"
+}

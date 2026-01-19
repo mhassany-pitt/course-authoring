@@ -1,0 +1,125 @@
+{
+  "id": "6954bccff9187b06cf836ec5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:57.603Z",
+  "tags": [],
+  "identity": {
+    "id": "py_user_day_es",
+    "title": "PCRS C3-PL  User Day",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/270/embed?act=PCRS&sub=py_user_day_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "A continuaci\u201a\u00e0\u00f6\u201a\u00e2\u2022n, hay c\u201a\u00e0\u00f6\u201a\u00e2\u2022digo para las clases Evento y Dia.Completa la funci\u201a\u00e0\u00f6\u201a\u00e2\u2022n programar_multiples_eventos seg\u201a\u00e0\u00f6\u201a\u00e0\u00b4n la descripci\u201a\u00e0\u00f6\u201a\u00e2\u2022n de su docstring. Llama alm\u201a\u00e0\u00f6\u00ac\u00a9todo programar_evento como parte de tu soluci\u201a\u00e0\u00f6\u201a\u00e2\u2022n.",
+    "source_code": "[student_code]\nclass Evento:    \n    \"\"\"Un nuevo evento de calendario.\"\"\"\n\n    def __init__(self, hora_inicio, hora_fin, nombre_evento):\n        \"\"\" (Evento, int, int, str) -> NoneType\n\n        Precondicion: 0 <= hora_inicio < hora_fin <= 23\n        \n        Inicializa un nuevo evento que comienza en hora_inicio, termina en hora_fin,\n        y se llama nombre.\n\n        >>> e = Evento(12, 13, 'Almuerzo')\n        >>> e.hora_inicio\n        12\n        >>> e.hora_fin\n        13\n        >>> e.nombre\n        'Almuerzo'\n        \"\"\"\n        \n        self.hora_inicio = hora_inicio\n        self.hora_fin = hora_fin\n        self.nombre = nombre_evento\n    \n    def __str__(self):\n            \"\"\" (Evento) -> str\n    \n            Devuelve una representacion en string de este evento.\n    \n            >>> e = Evento(6, 7, 'Correr')\n            >>> str(e)\n            'Correr: de 6 a 7'\n            \"\"\"\n            \n            return '{0}: de {1} a {2}'.format(self.nombre, self.hora_inicio,\n                                                 self.hora_fin)\n\n    def se_superpone(self, otro):\n        \"\"\" (Evento, Evento) -> bool\n\n        Devuelve True si y solo si este evento se superpone con el evento otro.\n\n        >>> e1 = Evento(6, 7, 'Correr')\n        >>> e2 = Evento(0, 7, 'Dormir')\n        >>> e1.se_superpone(e2)\n        True\n        \"\"\"\n\n        return not (otro.hora_fin <= self.hora_inicio \\\\\n                    or otro.hora_inicio >= self.hora_fin)\n\nclass Dia:\n    \"\"\"Un dia de calendario y sus eventos.\"\"\"\n\n    def __init__(self, dia=1, mes='Enero', ano=2014):\n        \"\"\" (Dia, int, str, int) -> NoneType\n\n        Inicializa un dia en el calendario con dia, mes y ano,\n        y sin eventos. \n        \n\n        >>> d = Dia(5, 'Abril', 2014)\n        >>> d.dia\n        5\n        >>> d.mes\n        'Abril'\n        >>> d.ano\n        2014\n        >>> d.eventos\n        []\n        \"\"\"\n\n        self.dia = dia\n        self.mes = mes\n        self.ano = ano\n        self.eventos = []\n\n\n    def programar_evento(self, nuevo_evento):\n        \"\"\" (Dia, Evento) -> bool\n\n        Programa nuevo_evento en este dia si y solo si no se superpone con\n        eventos existentes. Devuelve True si y solo si nuevo_evento es programado.\n\n\n        >>> d = Dia(3, 'Diciembre', 2014)\n        >>> e = Evento(17, 23, 'Celebrar fin de clases')\n        >>> d.programar_evento(e)\n        True\n        >>> d.eventos[0] == e\n        True        \n        \"\"\"\n\n        for evento_existente in self.eventos:\n            if evento_existente.se_superpone(nuevo_evento):\n                return False\n\n        self.eventos.append(nuevo_evento)\n        return True\n    \n    \n    def programar_multiples_eventos(self, lista_eventos):\n        \"\"\" (Dia, lista de Evento) -> int\n        \n        Devuelve el numero de eventos en lista_eventos que fueron programados \n        exitosamente en este dia, sin superponerse con eventos existentes.\n        \n        >>> d = Dia(5, 'Diciembre', 2015)\n        >>> e1 = Evento(12, 16, 'Estudiar')\n        >>> d.programar_evento(e1)\n        True\n        >>> e2 = Evento(17, 19, 'Cena con A')\n        >>> e3 = Evento(11, 13, 'Almuerzo con B')\n        >>> e4 = Evento(9, 10, 'Gimnasio')\n        >>> d.programar_multiples_eventos([e2, e3, e4])\n        2\n        \"\"\"\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "DefiningClass",
+          "ListReferencing",
+          "BooleanLiteral",
+          "IndexingList",
+          "CheckingForItem",
+          "DefiningObjectMethod",
+          "DefiningFunctionCallingFunction",
+          "ForLoopWith+=",
+          "ChangingValueVariable",
+          "IfCheckingInForLoop",
+          "StringLiteral",
+          "ListLiteral",
+          "IntegerLiteral",
+          "CallingObjectMethod"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ForLoopWith+=",
+          "IntegerLiteral",
+          "ListLiteral",
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "BooleanLiteral",
+          "CallingObjectMethod",
+          "ChangingValueVariable",
+          "DefiningClass",
+          "DefiningFunctionCallingFunction",
+          "DefiningObjectMethod",
+          "IfCheckingInForLoop",
+          "IndexingList",
+          "ListReferencing",
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/270/embed?act=PCRS&sub=py_user_day_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.971Z"
+}

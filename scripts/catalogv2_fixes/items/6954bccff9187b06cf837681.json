@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837681",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:12.551Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fig06_18.c",
+    "title": "fig06_18.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig06_18.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 6.18: fig06_18.c\n\u00a0\u00a0\u00a0Linear search of an array */\n#include <stdio.h>\n#define SIZE 100\n\nint linearSearch( const int array[], int key, int size );\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int a[ SIZE ];\n\u00a0\u00a0\u00a0int x;\n\u00a0\u00a0\u00a0int searchKey;\n\u00a0\u00a0\u00a0int element;\n\n\u00a0\u00a0\u00a0for ( x = 0; x < SIZE; x++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0a[ x ] = 2 * x;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0printf( \"Enter integer search key:\" );\n\u00a0\u00a0\u00a0scanf( \"%d\", &searchKey );\n\n\u00a0\u00a0\u00a0element = linearSearch( a, searchKey, SIZE );\n\n\u00a0\u00a0\u00a0if ( element != -1 ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"Found value in element %d\", element );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0else {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"Value not found\" );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0return 0;\n}\n\nint linearSearch( const int array[], int key, int size )\n{\n\u00a0\u00a0\u00a0int n;\n\u00a0\u00a0\u00a0for ( n = 0; n < size; ++n ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( array[ n ] == key ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return n;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0return -1;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig06_18.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.180Z"
+}

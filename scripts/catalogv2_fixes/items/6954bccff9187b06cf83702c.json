@@ -1,0 +1,77 @@
+{
+  "id": "6954bccff9187b06cf83702c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-01-08T00:00:00.000Z",
+  "updated_at": "2026-01-17T13:18:43.678Z",
+  "tags": [
+    "TODO:add-prompt",
+    "TODO:add-source-code"
+  ],
+  "identity": {
+    "id": "LeftJoin_question2",
+    "title": "LEFT-JOIN question2",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/sqlknot/index.html?cid=22&tid=2&svc=progvis"
+  },
+  "attribution": {
+    "created_at": "2025-01-08T00:00:00.000Z",
+    "provider": "SQL-KnoT",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Rully Hendrawan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "SQL"
+    ]
+  },
+  "content": {
+    "prompt": null,
+    "source_code": null
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/sqlknot/index.html?cid=22&tid=2&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=447",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=447",
+      "context_name": "SQL: Temple-MIS2502-2025-Spring-1SQL | Temple MIS2502 2025-Spring 1-SQL > Left Join",
+      "used_at": "2024-12-11T10:46:15.000Z",
+      "used_by": "Rully Agus Hendrawan, Rully Agus Hendrawan - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.021Z"
+}

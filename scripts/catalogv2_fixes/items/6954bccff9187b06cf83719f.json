@@ -1,0 +1,102 @@
+{
+  "id": "6954bccff9187b06cf83719f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-03-23T21:35:01.000Z",
+  "updated_at": "2026-01-17T05:29:10.911Z",
+  "tags": [],
+  "identity": {
+    "id": "first_app_array",
+    "title": "First appearance in array",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/440/embed?act=PCRS&sub=first_app_array"
+  },
+  "attribution": {
+    "created_at": "2020-03-23T21:35:01.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following method which takes the following parameters (in this order):- an array of integers arr,- an integer count,- and an integer key,the method has to return the index where the integer key appears for the first time starting to count from the first element and considering only the count next elements in the array. In case the integer key does not appear in the fixed range of the array, the method must return -1. For example:indOfFirst( {1,2,3,4,5,6} , 4 , 3 ) => 2indOfFirst( {1,2,4,4,5,7} , 6 , 3 ) => -1indOfFirst( {3,2} , 1 , 3 ) => 0",
+    "source_code": "[file Lab6.java]\n[student_code]\nstatic int indOfFirst( int arr[], int count, int key ){\n\t//TODO: Write your code here\n}\n    \n[/student_code]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "ArrayLength",
+          "IfStatement",
+          "ReturnStatement",
+          "ArrayElement",
+          "FormalMethodParameter",
+          "EqualExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ArrayElement",
+          "ArrayLength",
+          "EqualExpression",
+          "FormalMethodParameter",
+          "IfStatement",
+          "ReturnStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/440/embed?act=PCRS&sub=first_app_array"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Loops / Arrays / Exceptions",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.065Z"
+}

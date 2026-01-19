@@ -1,0 +1,264 @@
+{
+  "id": "6954bccff9187b06cf8377e9",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:59:08.841Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "jConstants5",
+    "title": "Constants in CashRegister class 2",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jConstants5&act=Constants&sub=jConstants5&svc=progvis"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "QuizJET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Sharon Hsiao",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class Tester {\n  public static void main(String[] args) {   \n\n      CashRegister register = new CashRegister();\n\n      register.recordPurchase(2.4);\n      register.enterPayment(5, 4, 0, 0, 0);\n\n      double result = register.giveChange();   \n       \n  }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "ClassConstantInitializationStatement",
+          "ClassDefinition",
+          "ClassField",
+          "Constants",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "DoubleDataType",
+          "ExpressionStatement",
+          "FinalModifier",
+          "FormalMethodParameter",
+          "InstanceField",
+          "MethodDefinition",
+          "MultiplyExpression",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "ObjectVariable",
+          "PrivateAccessSpecifier",
+          "PublicAccessSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StaticModifier",
+          "SubtractExpression",
+          "VariableInitializationStatement",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Constants"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "ClassConstantInitializationStatement",
+          "ClassDefinition",
+          "ClassField",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "DoubleDataType",
+          "ExpressionStatement",
+          "FinalModifier",
+          "FormalMethodParameter",
+          "InstanceField",
+          "MethodDefinition",
+          "MultiplyExpression",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "ObjectVariable",
+          "PrivateAccessSpecifier",
+          "PublicAccessSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StaticModifier",
+          "SubtractExpression",
+          "VariableInitializationStatement",
+          "VoidDataType",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "VoidDataType",
+          "ConstructorCall",
+          "ObjectCreationStatement",
+          "SimpleAssignmentExpression",
+          "ActualMethodParameter",
+          "ObjectMethodInvocation",
+          "ActualMethodParameter",
+          "ObjectMethodInvocation",
+          "DoubleDataType",
+          "ObjectMethodInvocation",
+          "SimpleAssignmentExpression",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "ConstructorDefinition",
+          "PublicConstructorSpecifier",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "VoidDataType",
+          "AddExpression",
+          "DoubleDataType",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "VoidDataType",
+          "SimpleAssignmentExpression",
+          "FormalMethodParameter",
+          "IntDataType",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "VoidDataType",
+          "FormalMethodParameter",
+          "IntDataType",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "AddExpression",
+          "MultiplyExpression",
+          "SimpleAssignmentExpression",
+          "AddExpression",
+          "MultiplyExpression",
+          "DoubleDataType",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "DoubleDataType",
+          "SimpleAssignmentExpression",
+          "SubtractExpression",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "ReturnStatement",
+          "ClassConstantInitializationStatement",
+          "ClassField",
+          "DoubleDataType",
+          "FinalFieldSpecifier",
+          "PublicFieldSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticFieldSpecifier",
+          "ClassConstantInitializationStatement",
+          "ClassField",
+          "DoubleDataType",
+          "FinalFieldSpecifier",
+          "PublicFieldSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticFieldSpecifier",
+          "ClassConstantInitializationStatement",
+          "ClassField",
+          "DoubleDataType",
+          "FinalFieldSpecifier",
+          "PublicFieldSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticFieldSpecifier",
+          "ClassConstantInitializationStatement",
+          "ClassField",
+          "DoubleDataType",
+          "FinalFieldSpecifier",
+          "PublicFieldSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticFieldSpecifier",
+          "DoubleDataType",
+          "InstanceField",
+          "PrivateFieldSpecifier",
+          "SimpleVariable",
+          "DoubleDataType",
+          "InstanceField",
+          "PrivateFieldSpecifier",
+          "SimpleVariable"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jConstants5&act=Constants&sub=jConstants5&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=1",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=1",
+      "context_name": "Java: INFSCI 0017 | Introduction to Java Programming > Constants",
+      "used_at": "2013-05-23T12:19:44.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=17",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=17",
+      "context_name": "Java: INFSCI 0017 | Introduction to Java Programming (Fall 2014-ae) > Constants",
+      "used_at": "2014-09-11T11:50:18.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=28",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=28",
+      "context_name": "Java: pretestJava | Pretest Course > Constants",
+      "used_at": "2015-09-08T18:10:42.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.206Z"
+}

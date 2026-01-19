@@ -1,0 +1,136 @@
+{
+  "id": "6954bccff9187b06cf836d44",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-12T17:14:59.000Z",
+  "updated_at": "2026-01-17T05:27:01.147Z",
+  "tags": [],
+  "identity": {
+    "id": "Creando un Diccionario de Pares Estudiante-Puntajes (Caso 2)__6849c51bdf5ea13f28e43e9c-6849c510df5ea13f28e43e9a-1",
+    "title": "Creando un Diccionario de Pares Estudiante-Puntajes (Caso 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6849c51bdf5ea13f28e43e9c?_t=1749763088533&index=1&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-12T17:14:59.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Supongamos que tenemos una lista de estudiantes y una lista de sus correspondientes puntajes de ex\u00e1menes. Construya un programa que tenga dos funciones:\\n- una funci\u00f3n que recibe estas dos listas y devuelve un diccionario que mapea cada estudiante a las puntuaciones de ese estudiante, y \\n- una funci\u00f3n que recibe el diccionario creado por la funci\u00f3n anterior y calcula el puntaje promedio de cada estudiante",
+    "source_code": "#Paso 1: Definir la funci\u00f3n que crea el diccionario\ndef crear_diccionario(lista_estudiantes, lista_puntajes):\n    #Paso 1.1: Crear un diccionario vac\u00edo \n    dicc_estudiante_ptjes={}\n    #Paso 1.2: Actualizar las entradas del diccionario mientras iteramos a trav\u00e9s de los \u00edndices en las listas dadas\n    for i in range(len(lista_estudiantes)):\n        if lista_estudiantes[i] in dicc_estudiante_ptjes:\n            dicc_estudiante_ptjes[lista_estudiantes[i]].append(lista_puntajes[i])\n        else:\n            dicc_estudiante_ptjes[lista_estudiantes[i]] = [lista_puntajes[i]]\n    return dicc_estudiante_ptjes\n#Paso 2: Definir la funci\u00f3n que calcula el promedio de las puntajes de cada estudiante\ndef promedio(nuevo_dicc):\n    #Paso 2.1: Iterar a trav\u00e9s de los estudiantes en el diccionario\n    for nombre_est in nuevo_dicc:\n        #Paso 2.1.1: Iterar a trav\u00e9s de la lista de puntajes del estudiante, sumar cada puntuaci\u00f3n al total acumulado\n        total = 0;\n        for puntaje in nuevo_dicc[nombre_est]:\n            total += puntaje\n        #Paso 2.1.2: Calcular e imprimir el promedio de los puntajes del estudiante\n        promedio = total / len(nuevo_dicc[nombre_est])\n        print(nombre_est, promedio)\n#Paso 3: Llamar a las funciones\nnombres = ['Jordan', 'Tom', 'Barbara', 'Susana', 'Sandra', 'Jordan', 'Sandra']\npuntajes = [10, 23, 13, 18, 12, 9, 15]\npromedio(crear_diccionario(nombres, puntajes))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleForLoopIteration",
+          "NestedFunctionCall",
+          "FindingLength",
+          "AccessingDictionary",
+          "AssigningValueVariable",
+          "Addition",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "ChangingValueVariable",
+          "Printing",
+          "CheckingForItem",
+          "DefiningSimpleFunction",
+          "CreatingDictionary",
+          "CreatingList",
+          "Division",
+          "AddingItemToDictionary",
+          "IndexingDictionary",
+          "IndexingList",
+          "ForLoopWithListIndexing",
+          "ForLoopWith",
+          "ChangingValueDictionaryElement",
+          "AddingListElementWithAppend",
+          "IfElseCheckingInForLoop",
+          "SingleForLoopIteration",
+          "NestedFunctionCall",
+          "FindingLength",
+          "AccessingDictionary",
+          "AssigningValueVariable",
+          "Addition",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "ChangingValueVariable",
+          "Printing",
+          "CheckingForItem",
+          "DefiningSimpleFunction",
+          "CreatingDictionary",
+          "CreatingList",
+          "Division",
+          "AddingItemToDictionary",
+          "IndexingDictionary",
+          "IndexingList",
+          "ForLoopWithListIndexing",
+          "ForLoopWith",
+          "ChangingValueDictionaryElement",
+          "AddingListElementWithAppend",
+          "IfElseCheckingInForLoop"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6849c51bdf5ea13f28e43e9c?_t=1749763088533&index=1&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Diccionarios",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Diccionarios",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.932Z"
+}

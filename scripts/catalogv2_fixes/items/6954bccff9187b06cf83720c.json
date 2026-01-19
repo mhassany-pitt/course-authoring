@@ -1,0 +1,149 @@
+{
+  "id": "6954bccff9187b06cf83720c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2019-02-01T11:15:10.000Z",
+  "updated_at": "2026-01-17T12:55:45.941Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "3-19_ShowBackwards",
+    "title": "3-19_ShowBackwards",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=3-19_ShowBackwards&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2019-02-01T11:15:10.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*\n\u00a0* Gets user input for 4 numbers and stores them into an array.\n\u00a0* The program then displays those 4 numbers backwards.\n\u00a0*\n\u00a0*/\nimport java.util.Scanner;\n\npublic class ShowBackwards {\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Scanner s = new Scanner(System.in);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int[] x = new int[4];\u00a0\u00a0\u00a0\u00a0\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Get user input for each number and store it into the array\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = 0; i < x.length; i++) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Enter the next integer:\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0x[i] = s.nextInt();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Print the array backwards\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = x.length - 1; i >= 0; i--)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(x[i]);\n\u00a0\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "parser": {
+        "concepts": [
+          "ImportStatement",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "VoidDataType",
+          "SimpleAssignmentExpression",
+          "ObjectCreationStatement",
+          "ConstructorCall",
+          "ActualMethodParameter",
+          "ArrayCreationStatement",
+          "ArrayVariable",
+          "ArrayDataType",
+          "IntDataType",
+          "ForStatement",
+          "LessExpression",
+          "ArrayLength",
+          "PostIncrementExpression",
+          "java.lang.System.out.println",
+          "StringLiteral",
+          "StringDataType",
+          "ArrayElement",
+          "ObjectMethodInvocation",
+          "SubtractExpression",
+          "GreaterEqualExpression",
+          "PostDecrementExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "ArrayCreationStatement",
+          "ArrayDataType",
+          "ArrayDataType",
+          "ArrayElement",
+          "ArrayLength",
+          "ArrayVariable",
+          "ClassDefinition",
+          "ConstructorCall",
+          "FormalMethodParameter",
+          "ForStatement",
+          "GreaterEqualExpression",
+          "ImportStatement",
+          "IntDataType",
+          "java.lang.System.out.println",
+          "LessExpression",
+          "MethodDefinition",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "PostDecrementExpression",
+          "PostIncrementExpression",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StringDataType",
+          "StringLiteral",
+          "SubtractExpression",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=3-19_ShowBackwards&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=367",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
+      "context_name": "Java: INFSCI 0017 | CSEdPad test course (CS1 Memphis) > Arrays",
+      "used_at": "2018-11-30T09:02:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.080Z"
+}

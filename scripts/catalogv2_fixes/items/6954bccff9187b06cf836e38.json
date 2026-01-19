@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e38",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-16T17:23:40.000Z",
+  "updated_at": "2026-01-17T05:27:41.071Z",
+  "tags": [],
+  "identity": {
+    "id": "recursion.recursion_power",
+    "title": " Recursively calculate the power of a number",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=recursion.recursion_power"
+  },
+  "attribution": {
+    "created_at": "2025-04-16T17:23:40.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Rully Hendrawan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Using recursion, complete the power method so that it returns the value of a to the power of b.\nExamples:\n\n    power(3,4) => 81\n\n    power(2,8) => 256\n\n    power(1,1) => 1\n\n    power(9,0) => 1",
+    "source_code": "public class JRecursionPower1{\n    static int power(int a, int b) {\n        if(b > 0){\n            return a * power(a, b-1);\n        }\n        return 1;\n    }\n    public static void main(String args[]){\n        JRecursionPower1 rp = new JRecursionPower1();\n        int a = 2, b=8;\n        System.out.println(\"The 8th power of 2 is: \" + rp.power(a,b));\n    }\n    \n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=recursion.recursion_power"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.957Z"
+}

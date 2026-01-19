@@ -1,0 +1,138 @@
+{
+  "id": "6954bccff9187b06cf837173",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-09T19:20:19.000Z",
+  "updated_at": "2026-01-17T12:41:52.687Z",
+  "tags": [],
+  "identity": {
+    "id": "py_bmi_calculator2",
+    "title": "BMI Calculator",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_bmi_calculator&ch=py_bmi_calculator2"
+  },
+  "attribution": {
+    "created_at": "2020-08-09T19:20:19.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "BMI is a measure of body fat based on height and weight that applies to adult men and women. BMI Categories are as follows: \\nUnderweight = <18.5\\nNormal weight = 18.5\u201324.9\\nOverweight = 25\u201329.9\\nObesity = BMI of 30 or greater.\\nEnglish BMI Formula (Imperial) is: BMI = (Weight in Pounds / (Height in inches x Height in inches)) x 703.\\n BMI results are usually displayed as integers (values without decimal points). Construct a program to round the BMI result to the nearest integer.",
+    "source_code": "#Step 1: Receive the weight and height from the user\ntext = input(\"Enter the weight in pounds:\")\nweight = float(text)\ntext = input(\"Enter the height in inches:\")\nheight = float(text)\n#Step 2: Calculate BMI\nbmi = weight / height ** 2 * 703    \n#Step 3: Round up BMI\nbmi = round(bmi)\n#Step 4: Print results\nprint(\"The BMI rounded to the nearest integer is:\", bmi)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "TransformingToFloatType",
+          "Multiplication",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "Printing",
+          "Power",
+          "Division",
+          "Round"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "Division",
+          "HandlingInput",
+          "Multiplication",
+          "Power",
+          "Printing",
+          "Round",
+          "TransformingToFloatType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_bmi_calculator&ch=py_bmi_calculator2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > Variables and Operations",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > Variables and Operations",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Variables and Operations",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > Variables and Operations",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Variables and Operations",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.061Z"
+}

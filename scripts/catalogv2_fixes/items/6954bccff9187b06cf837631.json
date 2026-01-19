@@ -1,0 +1,87 @@
+{
+  "id": "6954bccff9187b06cf837631",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:01.640Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "max3.c",
+    "title": "IS12:: max3.c (5.5)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=max3.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*  Example max3 - maximum of three values\n\u00a0\u00a0\u00a0\u00a0Goal: demonstrate the use of nested if\n\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky\n*/\n\n#include <stdio.h>\n\nvoid main() {\n\u00a0\u00a0\u00a0\u00a0int a, b, c;\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Enter three integers: \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%d %d %d\", &a, &b, &c);\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Maximum of %d, %d and %d is \", a, b, c);\n\n\u00a0\u00a0\u00a0\u00a0if(a > b)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(a > c)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%d\n\", a);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%d\n\", c);\n\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(b > c)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%d\n\", b);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%d\n\", c);\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "int",
+          "greater",
+          "void",
+          "reference",
+          "variable_declaration",
+          "include",
+          "main_function",
+          "if_else",
+          "printf",
+          "scanf"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=max3.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.175Z"
+}

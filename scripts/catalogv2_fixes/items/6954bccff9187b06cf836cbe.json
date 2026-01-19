@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf836cbe",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:27:29.000Z",
+  "updated_at": "2026-01-17T05:26:44.711Z",
+  "tags": [],
+  "identity": {
+    "id": "Pythagorean Theorem (Case 2)__68bdb308f6cc3d7a9cc09697-68bdb308f6cc3d7a9cc09695-1",
+    "title": "Pythagorean Theorem (Case 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc09697?_t=1757557649318&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:27:29.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Suppose that the user provides two input values for a right-angle triangle. The first input is for the length of an adjacent side in the triangle and the second input is for the hypotenuse of that triangle. The program calculates the second adjacent side of the triangle using these two input values. Use the Pythagorean theorem (c^2 = a^2 + b^2) to find the length of the second adjacent side.",
+    "source_code": "import java.util.Scanner;\npublic class PythagoreanTheorem2 {\n\tpublic static void main(String[] args) {\n\t\t//Step 1: Receive the values for the first side of a right-angle triangle and the hypotenuse\n\t\tScanner scan = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter the length of side A:\");\n\t\tdouble sideA = scan.nextDouble();\n\t\tSystem.out.println(\"Enter the length of the hypotenuse:\");\n\t\tdouble hypotenuse = scan.nextDouble();\n\t\tscan.close();\n\t\t//Step 2: Calculate square of side A\n\t\tdouble squareSideA = Math.pow(sideA, 2);\n\t\t//Step 3: Calculate square of hypotenuse\n\t\tdouble squareHypotenuse = Math.pow(hypotenuse, 2);\n\t\t//Step 4: Use Pythagorean theorem to calculate the length of the triangle's other adjacent side\n\t\tdouble sideB = Math.sqrt(squareHypotenuse - squareSideA);\n\t\t//Step 4: Print the result\n\t\tSystem.out.println(\"Given that side A is \" + sideA + \" and the hypotenuse is \" + hypotenuse + \", side B is \" + sideB);\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc09697?_t=1757557649318&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Arithmetic Operations",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.915Z"
+}

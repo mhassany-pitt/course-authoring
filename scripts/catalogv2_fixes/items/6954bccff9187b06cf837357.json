@@ -1,0 +1,92 @@
+{
+  "id": "6954bccff9187b06cf837357",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2016-11-21T23:33:05.000Z",
+  "updated_at": "2026-01-17T12:56:16.302Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "variable_print_println_annoexp",
+    "title": "VariablePrintPrintln",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=variable_print_println_annoexp&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2016-11-21T23:33:05.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Yun Huang",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class VariablePrintPrintln\n{\n\u00a0\u00a0\u00a0public static void main(String[] args)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int width = 10;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(\"width: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(width);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0width = 20;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(\"width: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(width);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int height = 20;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0width = height + 10;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(\"width: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(width);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0width = width + 10;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(\"width: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(width);\n\u00a0\u00a0\u00a0}\n}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "ClassDefinition",
+          "FormalMethodParameter",
+          "IntDataType",
+          "java.lang.System.out.print",
+          "java.lang.System.out.println",
+          "MethodDefinition",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StringDataType",
+          "StringLiteral",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=variable_print_println_annoexp&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.116Z"
+}

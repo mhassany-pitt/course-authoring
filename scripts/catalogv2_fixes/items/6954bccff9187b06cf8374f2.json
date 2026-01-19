@@ -1,0 +1,133 @@
+{
+  "id": "6954bccff9187b06cf8374f2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2015-09-26T22:24:40.000Z",
+  "updated_at": "2026-01-17T12:57:12.087Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "pyt10.7",
+    "title": "Functions Example 1",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.7&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2015-09-26T22:24:40.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Hardik Vasa",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "def attendance(number):\n\u00a0\u00a0\u00a0\u00a0if number == 0:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0print(\"None of the Student came for the lecture\")\n\u00a0\u00a0\u00a0\u00a0elif number < 0:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0print(\"Invalid number\")\n\u00a0\u00a0\u00a0\u00a0else:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if number > 100:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0print(\"Out of range\")\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0elif number >70:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0print(\"High Attendance\")\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0print(\"Low Attendance\")\n\nattendance(-1)\nattendance(20)\nattendance(80)\nattendance(1000)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "parser": {
+        "concepts": [
+          "Gt",
+          "Int",
+          "Lt",
+          "Call",
+          "USub",
+          "Str",
+          "arg",
+          "Eq",
+          "FunctionDef",
+          "If"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Gt",
+          "arg",
+          "Call",
+          "Eq",
+          "FunctionDef",
+          "Int",
+          "Lt",
+          "If",
+          "USub",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.7&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=23",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=23",
+      "context_name": "Python: PYTHON001 | Python Course (v1) > Functions",
+      "used_at": "2015-05-11T10:25:58.000Z",
+      "used_by": "Python Admin - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=344",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
+      "context_name": "Python: PYTHON001 | PythonCourseV1Clones > Functions",
+      "used_at": "2017-05-22T17:58:24.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > If-Else",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=460",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Worked Examples > If-Else",
+      "used_at": "2025-04-09T10:48:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.143Z"
+}

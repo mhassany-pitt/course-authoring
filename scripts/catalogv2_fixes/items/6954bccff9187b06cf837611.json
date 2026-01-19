@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837611",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:57:57.104Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "check_file2",
+    "title": "check_file2",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=check_file2&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\n#include <stdlib.h>      \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* needed for exit() */\n\nint main()\n{\n\u00a0\u00a0FILE *inFile;\n\u00a0\u00a0char fileName[13];\n\n\u00a0\u00a0printf(\"\\nEnter a file name: \");\n\u00a0\u00a0gets(fileName);\n\u00a0\u00a0inFile = fopen(fileName,\"r\"); \u00a0\u00a0\u00a0\u00a0/* open the file */\n\u00a0\u00a0if (inFile == NULL)\n\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0printf(\"\\nThe file %s was not successfully opened.\", fileName);\n\u00a0\u00a0\u00a0\u00a0printf(\"\\nPlease check that the file currently exists.\\n\");\n\u00a0\u00a0\u00a0\u00a0exit(1);\n\u00a0\u00a0}\n\u00a0\u00a0printf(\"\\nThe file has been successfully opened for reading.\\n\");\n\n\u00a0\u00a0return 0;\n}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=check_file2&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.174Z"
+}

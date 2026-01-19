@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e47",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-09T20:42:27.000Z",
+  "updated_at": "2026-01-17T05:27:42.647Z",
+  "tags": [],
+  "identity": {
+    "id": "JRecursionSum1",
+    "title": "Use Recursion to calculate total sum of all numbers from 1 to N.",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=JAVA&set=recursion.recursion_sum&ch=JRecursionSum1&v=201803162257"
+  },
+  "attribution": {
+    "created_at": "2025-04-09T20:42:27.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Using recursion, complete the sum1toN method so that it returns the total sum of all numbers from 1 to N.\nExamples:\n\n\n    sum1toN(3) => 6\n\n    sum1toN(5) => 15",
+    "source_code": "public class JRecursionSum1{\n    int sum1toN(int n){\n        if(n > 0){\n            return n + sum1toN(n-1);\n        }\n        return 0;  \n    }\n    \n    public static void main(String[] args) {\n        JRecursionSum1 rs = new JRecursionSum1();\n        int n = 10;\n        System.out.println(\"Sum of 10 Numbers is: \"+rs.sum1toN(n));\n    }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=JAVA&set=recursion.recursion_sum&ch=JRecursionSum1&v=201803162257"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.958Z"
+}

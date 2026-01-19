@@ -1,0 +1,222 @@
+{
+  "id": "6954bccff9187b06cf83729e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2017-12-18T23:35:25.000Z",
+  "updated_at": "2026-01-17T12:42:04.338Z",
+  "tags": [],
+  "identity": {
+    "id": "JWorkHours2",
+    "title": "Reporting the Total Hours Each Employee Worked (Case 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=JAVA&set=files.j_work_hours&ch=JWorkHours2"
+  },
+  "attribution": {
+    "created_at": "2017-12-18T23:35:25.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Suppose we have an input file that contains information about how many hours each employee of a company has worked. The file looks like the following (Employee's identification number, Employee's name, Hours):\\n101 Erica 7.5 8.5 10.25 8 8.5\\n783 Erin 10.5 11.5 12 11 10.75\\n114 Simone 8 8 8\\n...\\nConstruct a program that reads this file and calculates the total number of hours worked by each individual. Make sure that the program handles each specific exception that could occur.",
+    "source_code": "import java.io.*;\nimport java.util.Scanner;\npublic class JWorkHours2 {\n\tpublic static void main(String[] args) {\n\t\tScanner scan = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter the name of the file:\");\n\t\tString name = scan.next();\n\t\tJWorkHours2 jwh = new JWorkHours2();\n\t\tjwh.reportWorkHours(name);\n\t}\n\t//Step 1: Define the method that processes the employees file\n\tpublic void reportWorkHours(String fileName) {\n\t\t//Step 1.1: Enclose the code that might throw an exception within the try block\n\t\ttry {\n\t\t\t//Step 1.1.1: Wrap a BufferedReader around a FileReader\n\t\t\tFileReader fr = new FileReader(fileName); \n\t\t\tBufferedReader br = new BufferedReader(fr); \n\t\t\t//Step 1.1.2: Use the BufferedReader object to read one line at a time\n\t\t\tString line = null;\n\t\t\twhile ( ( line = br.readLine() ) != null) {\n\t\t\t\tString[] tokens = line.split(\" \");\n\t\t\t\t//Try to get the id of the employee as a number\n\t\t\t\ttry {\n\t\t\t\t\tint eid =  Integer.parseInt(tokens[0]);\n\t\t\t\t} catch ( NumberFormatException ex) {\n\t\t\t\t\tSystem.out.println(\"Error in the employee's id.\");\n\t\t\t\t}\n\t\t\t\tString name = tokens[1];\n\t\t\t\tdouble total = 0.0;\n\t\t\t\tfor (int i = 2; i < tokens.length; i++ ) {\n\t\t\t\t\ttry {\n\t\t\t\t\t\ttotal += Double.parseDouble(tokens[i]);\n\t\t\t\t\t} catch (  NumberFormatException ex ) {\n\t\t\t\t\t\tSystem.out.println(\"Error in the hour.\");\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\tSystem.out.println(\"Total hours worked by \" + name + \" = \" + total);\n\t\t\t} \t\n\t\t\t//Step 1.1.3: Close the BufferedReader object attached to the file\n\t\t\tbr.close();\n\t\t}\n\t\t//Step 1.2: Handle all possible exceptions that may be thrown in the try block \n\t\tcatch (FileNotFoundException ex) {\n\t\t\tSystem.out.println(\"File not found\");\n\t\t}  catch (IOException ex ) {\n\t\t\tSystem.out.println(\"Problem with the file!\");\n\t\t}\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "TryCatchStatement",
+          "java.lang.Double.parseDouble",
+          "java.lang.Integer.parseInt",
+          "StringVariable",
+          "ArrayElement",
+          "nullInitialization",
+          "null"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ArrayElement",
+          "java.lang.Double.parseDouble",
+          "java.lang.Integer.parseInt",
+          "null",
+          "StringVariable",
+          "TryCatchStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=files.j_work_hours&ch=JWorkHours2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=351",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=351",
+      "context_name": "Java: INFSCI 0017 | CS 0401 - Intermediate Java Programming (Spring 2018) > File processing",
+      "used_at": "2017-12-17T19:07:09.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=352",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=352",
+      "context_name": "Java: INFSCI 0017 | Norway-Spring2018 Java Course > File processing",
+      "used_at": "2018-01-15T17:35:55.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=381",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=381",
+      "context_name": "Java: INFSCI 0017 | CS 0007 - Java Programming (Fall 2019) > File processing",
+      "used_at": "2019-12-02T23:01:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=397",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=397",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming > File processing",
+      "used_at": "2020-08-18T15:45:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=402",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=402",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming (No Labs - Extra content) > File processing",
+      "used_at": "2020-09-04T14:53:50.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=405",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=405",
+      "context_name": "Java: CMPINF0401 | COMP1050 Wentworth Institute of Technology > File processing",
+      "used_at": "2021-01-24T18:40:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=416",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=416",
+      "context_name": "Java: INFSCI 0017 | Novi Sad Java Fall 2021 > File processing",
+      "used_at": "2021-10-18T14:55:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=417",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=417",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming (2022 version) > File processing",
+      "used_at": "2022-01-18T22:56:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=425",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=425",
+      "context_name": "Java: CMPINF0401 | Wentworth Institute of Technology > File processing",
+      "used_at": "2022-09-14T03:07:18.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=432",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=432",
+      "context_name": "Java: CMPINF0401 | Preference Study Java Course > File processing",
+      "used_at": "2024-06-27T11:56:00.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 3b- File Processing",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    },
+    {
+      "context_id": "cid=444",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=444",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming (2022 version - alternate order) > File processing",
+      "used_at": "2024-09-12T01:36:40.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=449",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=449",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 (Peter B) > File processing",
+      "used_at": "2025-01-15T05:27:01.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=450",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=450",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 - Fully reversed > File processing",
+      "used_at": "2025-01-21T13:45:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=474",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=474",
+      "context_name": "Java: CMU15-121 | CMU 15-121 - Intro Data Structures - Fall 2025 > File processing",
+      "used_at": "2025-09-16T16:41:24.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=477",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=477",
+      "context_name": "Java: CMPINF0401 | WIT COMP1050 - Computer Science II > File processing",
+      "used_at": "2025-09-19T03:00:59.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=488",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=488",
+      "context_name": "Java: CMPINF0401 | WIT COMP1050 - Computer Science II > File processing",
+      "used_at": "2025-10-07T14:15:48.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=489",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=489",
+      "context_name": "Java: 002 | Data Structures (Intermediate Java) - Fall 2025 > File processing",
+      "used_at": "2025-10-08T04:59:33.000Z",
+      "used_by": "Rafaella Sampaio de Alencar - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.095Z"
+}

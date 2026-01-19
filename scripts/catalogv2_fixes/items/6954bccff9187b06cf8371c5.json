@@ -1,0 +1,93 @@
+{
+  "id": "6954bccff9187b06cf8371c5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2019-10-22T14:04:38.000Z",
+  "updated_at": "2026-01-17T12:55:36.261Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "CONS002",
+    "title": "Constants_Memphis_02",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=CONS002&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2019-10-22T14:04:38.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Hasan Mashrique",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class Constant2 {\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String args[]) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0final double PI = 3.1416;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int radius = 5;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double Area_of_Circle = PI * Math.pow(radius, 2);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(Area_of_Circle);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n}\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "ClassDefinition",
+          "Constant",
+          "ConstantInitializationStatement",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "IntDataType",
+          "java.lang.Math.pow",
+          "java.lang.System.out.println",
+          "MethodDefinition",
+          "MultiplyExpression",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=CONS002&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.069Z"
+}

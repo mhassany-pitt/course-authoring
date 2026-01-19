@@ -12,16 +12,16 @@ export class CatalogV2Service {
     @InjectModel('catalog_items_v2') private catalogItems: Model<CatalogItem>,
     @InjectModel('catalog_item_reports_v2')
     private catalogItemReports: Model<CatalogItemReport>,
-  ) {}
+  ) { }
 
   async list() {
     const items = await this.catalogItems
-      .find({ status: { $in: ['public', 'deprecated'] } })
+      .find({ status: { $in: ['public', 'deprecated', 'broken:pending-fix'] } })
       .sort({ listed_at: 'desc' })
       .select(
         'identity.id identity.title identity.type status listed_at links.demo_url ' +
-          'content.prompt tags attribution.authors languages.programming_languages ' +
-          'attribution.provider rights.license',
+        'content.prompt tags attribution.authors languages.programming_languages ' +
+        'attribution.provider rights.license',
       );
     return items.map((i) => useId(toObject(i)));
   }

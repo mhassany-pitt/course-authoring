@@ -1,0 +1,107 @@
+{
+  "id": "6954bccff9187b06cf836f2a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:08.658Z",
+  "tags": [],
+  "identity": {
+    "id": "py_new_rectangle_es",
+    "title": "PCRS C3-PL  New Rectangle",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/245/embed?act=PCRS&sub=py_new_rectangle_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa el metodo area en la siguiente clase. Todo lo que necesita es una declaracion return.",
+    "source_code": "[student_code]\nclass Rectangulo:\n    \"\"\" Un rectangulo con un ancho y altura. \"\"\"\n\n    def __init__(self, an, al):\n        \"\"\" (Rectangulo, numero, numero)\n\n        Crea un nuevo rectangulo de ancho a y altura h.\n\n        >>> r = Rectangulo(1, 2)\n        >>> r.ancho\n        1\n        >>> r.altura\n        2\n        \"\"\"\n\n        self.ancho = an\n        self.altura = al\n\n    def area(self):\n        \"\"\" (Rectangulo) -> numero\n\n        Devuelve el area de este rectangulo.\n\n        >>> r = Rectangulo(10, 20)\n        >>> r.area()\n        200\n        \"\"\"\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "Addition",
+          "DefiningSimpleFunction",
+          "Multiplication",
+          "__init()__",
+          "DefiningClass",
+          "DefiningObjectMethod",
+          "ChangingValueVariable",
+          "CallingSimpleFunction",
+          "CallingObjectMethod"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "__init()__"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "CallingObjectMethod",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningClass",
+          "DefiningObjectMethod",
+          "DefiningSimpleFunction",
+          "Multiplication"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/245/embed?act=PCRS&sub=py_new_rectangle_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.986Z"
+}

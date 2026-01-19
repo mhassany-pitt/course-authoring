@@ -1,0 +1,138 @@
+{
+  "id": "6954bccff9187b06cf8374fe",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2015-09-14T22:57:52.000Z",
+  "updated_at": "2026-01-17T12:57:13.704Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "pyt4.8",
+    "title": "5.2. The while statement",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt4.8&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2015-09-14T22:57:52.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Hardik Vasa",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "temperature = 0\n\nwhile (temperature < 60):\n\u00a0\u00a0\u00a0\u00a0if temperature < 30:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0print(\"It is Cold!\")\n\u00a0\u00a0\u00a0\u00a0else:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0print(\"It is Hot!\")\n\u00a0\u00a0\u00a0\u00a0temperature += 10"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "parser": {
+        "concepts": [
+          "Int",
+          "AugAssign",
+          "Lt",
+          "While",
+          "Call",
+          "Str",
+          "Add",
+          "Assign",
+          "If"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Call",
+          "Assign",
+          "Int",
+          "While",
+          "Lt",
+          "Add",
+          "AugAssign",
+          "If",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt4.8&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=23",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=23",
+      "context_name": "Python: PYTHON001 | Python Course (v1) > Loops",
+      "used_at": "2015-05-11T10:25:58.000Z",
+      "used_by": "Python Admin - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=344",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
+      "context_name": "Python: PYTHON001 | PythonCourseV1Clones > Loops",
+      "used_at": "2017-05-22T17:58:24.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=411",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=411",
+      "context_name": "Python: PYTHON001 | Intelligent Textbooks Utrecht Python > While Loops",
+      "used_at": "2021-05-07T09:41:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > While Loops",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=460",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Worked Examples > While Loops",
+      "used_at": "2025-04-09T10:48:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.144Z"
+}

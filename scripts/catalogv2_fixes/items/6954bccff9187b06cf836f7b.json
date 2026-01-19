@@ -1,0 +1,156 @@
+{
+  "id": "6954bccff9187b06cf836f7b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-02-22T00:20:06.000Z",
+  "updated_at": "2026-01-17T12:54:42.199Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "q_py_obj_point1_es",
+    "title": "q_py_obj_point1_es",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_obj_point1_es&sub=q_py_obj_point1_es&act=q_py_spanish"
+  },
+  "attribution": {
+    "created_at": "2025-02-22T00:20:06.000Z",
+    "provider": "QuizPET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "class Punto:\n    def __init__(self, x=0, y=0):\n        self.x = x\n        self.y = y\n    def establecer_punto(self, x, y):\n        self.x = x\n        self.y = y\n    def sobre(pt1, pt2):\n        if pt1.y > pt2.y:\n            return \"Arriba!\"\n        elif pt2.y &lt; pt1.y:\n            return \"Abajo!\"\n        else:\n            return \"Iguales!\"\ndef main():\n    p1 = Punto(2, 5)\n    p2 = Punto()\n    p2.establecer_punto(3-2, 3)\n    print(sobre(p1, p2))\nmain()"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "DefiningObjectMethod",
+          "DefiningClass",
+          "CreatingObject",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "Printing",
+          "DefiningSimpleFunction",
+          "IfElifElseChecking",
+          "CallingObjectMethod",
+          "Subtraction",
+          "CallingFunctionCallingFunction",
+          "DefiningFunctionCallingFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "parser": {
+        "concepts": [
+          "Gt",
+          "Return",
+          "Sub",
+          "Int",
+          "Attribute",
+          "ClassDef",
+          "Call",
+          "Str",
+          "arg",
+          "Assign",
+          "FunctionDef",
+          "If"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Gt",
+          "arg",
+          "Sub",
+          "Call",
+          "Assign",
+          "Return",
+          "ClassDef",
+          "FunctionDef",
+          "Int",
+          "Attribute",
+          "If",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AssigningValueVariable",
+          "BooleanEvaluating",
+          "CallingFunctionCallingFunction",
+          "CallingLibraryFunction",
+          "CallingObjectMethod",
+          "CreatingObject",
+          "DefiningClass",
+          "DefiningFunctionCallingFunction",
+          "DefiningObjectMethod",
+          "DefiningSimpleFunction",
+          "IfElifElseChecking",
+          "Printing",
+          "Subtraction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_obj_point1_es&sub=q_py_obj_point1_es&act=q_py_spanish"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Clases y Objetos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.997Z"
+}

@@ -1,0 +1,122 @@
+{
+  "id": "6954bccff9187b06cf836d78",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-28T11:06:18.000Z",
+  "updated_at": "2026-01-17T05:27:18.758Z",
+  "tags": [],
+  "identity": {
+    "id": "py_count_non_digits_es",
+    "title": "Contar no digitos (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/238/embed?act=PCRS&sub=py_count_non_digits_es"
+  },
+  "attribution": {
+    "created_at": "2025-05-28T11:06:18.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa la siguiente funcion segun su docstring.",
+    "source_code": "[student_code]\r\ndef contar_no_digitos(string):\r\n    \"\"\" (str) -> int\r\n\r\n    Devuelve el numero de no digitos en string.\r\n\r\n    >>> contar_no_digitos('abc12d')\r\n    4\r\n    >>> contar_no_digitos('135')\r\n    0\r\n    >>> contar_no_digitos('A.4')\r\n    2\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "CheckingForItem",
+          "IfElifElseChecking",
+          "Addition",
+          "DefiningSimpleFunction",
+          "ForLoopWith+=",
+          "AugmentedAssignmentStatement",
+          "ChangingValueVariable",
+          "IfElifElseCheckingInForLoop",
+          "IfCheckingInForLoop",
+          "StringLiteral",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "LogicalExpression",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "AugmentedAssignmentStatement",
+          "ComparisonExpression",
+          "ForLoopWith+=",
+          "IntegerLiteral",
+          "LogicalExpression",
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "IfCheckingInForLoop"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/238/embed?act=PCRS&sub=py_count_non_digits_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Strings",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.938Z"
+}

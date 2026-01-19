@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf83777f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:50.413Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "tokenize1",
+    "title": "tokenize1",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=tokenize1&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\n#include <string.h>\n\nvoid reverseTokens( char * );\n\nint main()\n{\n\u00a0\u00a0\u00a0char text[ 80 ];\n\n\u00a0\u00a0\u00a0printf( \"Enter a line of text:\\n\" );\n\u00a0\u00a0\u00a0gets( text );\n\u00a0\u00a0\u00a0reverseTokens( text );\n\n\u00a0\u00a0\u00a0return 0;\n}\n\nvoid reverseTokens( char *sentence )\n{\n\u00a0\u00a0\u00a0char *pointers[ 50 ], *temp;\n\u00a0\u00a0\u00a0int count = 0, i;\n\n\u00a0\u00a0\u00a0temp = strtok( sentence, \" \" );\n\n\u00a0\u00a0\u00a0while ( temp ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0pointers[ count++ ] = temp;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0temp = strtok( NULL, \" \" );\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0printf( \"The tokens in reverse order are:\\n\" );\n\n\u00a0\u00a0\u00a0for ( i = count - 1; i >= 0; i-- )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%s \", pointers[ i ] );\n}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=tokenize1&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.196Z"
+}

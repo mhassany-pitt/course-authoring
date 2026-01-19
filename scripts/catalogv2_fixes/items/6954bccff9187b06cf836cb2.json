@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836cb2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-15T23:57:41.000Z",
+  "updated_at": "2026-01-17T05:26:43.111Z",
+  "tags": [],
+  "identity": {
+    "id": "py_vending_machine__664e24f091363872f0ba3330",
+    "title": "Vending Machine With Dollars and Quarters",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e24f091363872f0ba3330?_t=1757995061858&index=0"
+  },
+  "attribution": {
+    "created_at": "2025-09-15T23:57:41.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Suppose we have a vending machine that gives change. A customer selects an item for purchase and inserts a bill into the vending machine. The vending machine dispenses the purchased item and gives change. We will assume that all item prices are multiples of 25 cents, and the machine gives all change in dollar and quarters. Construct a program that computes how many dollars and quarters to return to the customer.",
+    "source_code": "#Step 1: Assign initial values to the variables which we need for this program\npennies_per_dollar = 100\npennies_per_quarter = 25\n#Step 2: Read the bill value and item price\ntext = input(\"Enter bill value in dollars (1 = $1 bill, 5 = $5 bill, etc.): \")\nbill_value = int(text)\ntext = input(\"Enter item price in pennies: \")\nitem_price = int(text)\n#Step 3: Compute the change due\nchange_due = pennies_per_dollar * bill_value - item_price\n#Step 4: Compute the number of dollars and update the change due after taking away the dollars\ndollars = change_due // pennies_per_dollar\nchange_due = change_due % pennies_per_dollar\n#Step 5: Compute the number of quarters in the remaining change due\nquarters = change_due // pennies_per_quarter\n#Step 6: Display the result\nprint(\"Your change consists of:\") \nprint(dollars, \"dollars\")\nprint(quarters, \"quarters\")"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e24f091363872f0ba3330?_t=1757995061858&index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.913Z"
+}

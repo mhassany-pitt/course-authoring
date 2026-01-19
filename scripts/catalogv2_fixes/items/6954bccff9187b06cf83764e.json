@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf83764e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:05.832Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "qpa_and.c",
+    "title": "IS12:: qpa_and.c (117.5)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=qpa_and.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Example qpa_and.c\n\u00a0\u00a0\u00a0\u00a0Admission to BSIS program\n\u00a0\u00a0\u00a0\u00a0Goal: The use of and operator (&&) and else-if\n\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky\n\u00a0\u00a0\u00a0\u00a0You are admitted only if your general and IS QPAs\n\u00a0\u00a0\u00a0\u00a0are above the specified thresholds\n*/\n\n#define MINQPA 2.5\n#define MINISQPA 2.75\n\n#include <stdio.h>\n\nmain() {\n\u00a0\u00a0\u00a0\u00a0float qpa1, qpa2;\n\n\u00a0\u00a0\u00a0\u00a0/* read data */\n\u00a0\u00a0\u00a0\u00a0printf(\"Your general QPA?: \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%f\", &qpa1);\n\u00a0\u00a0\u00a0\u00a0printf(\"Your IS QPA?: \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%f\", &qpa2);\n\n\u00a0\u00a0\u00a0\u00a0/* make the decision using and operator connecting two conditions */\n\u00a0\u00a0\u00a0\u00a0if (qpa1 >= MINQPA && qpa2 >= MINISQPA)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"You are admitted to BSIS program!\n\");\n\u00a0\u00a0\u00a0\u00a0else /* here either qpa1 < MINQPA or qpa2 < MINISQPA or both */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Your QPA is too low for BSIS\n\");\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "greater_equal",
+          "define",
+          "reference",
+          "variable_declaration",
+          "include",
+          "and",
+          "main_function",
+          "float",
+          "if_else",
+          "printf",
+          "scanf"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=qpa_and.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.177Z"
+}

@@ -1,0 +1,139 @@
+{
+  "id": "6954bccff9187b06cf83719e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-03-31T09:35:01.000Z",
+  "updated_at": "2026-01-17T05:29:10.807Z",
+  "tags": [],
+  "identity": {
+    "id": "sort_array_swap_contiguous",
+    "title": "Sort array by swapping contigous elements",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/446/embed?act=PCRS&sub=sort_array_swap_contiguous"
+  },
+  "attribution": {
+    "created_at": "2020-03-31T09:35:01.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the method sortArray in order to ascendingly sort the first count elements of an array of integers (arr). count and arr are given as parameters of sortArray (in that order).Instructions on how to solve this problem:-  Inside the given for loop, you have to nest another loop (controlled by j) that will be responsible for moving the i-th largest element to its respective position in the right part of the array, one by one.-  For moving the i-th largest element in the array to the right side of the array on each i-th iteration, you have to repetitively swap contiguous elements (arr[j] and arr[j+1]) when needed (if arr[j] > arr[j+1]).",
+    "source_code": "[file Lab7.java]\n[student_code]\nstatic void sortArray(int arr[], int count){\n    for(int i=0;i<count-1;i++){\n        //TODO: write your code here\n        //See the instructions for details on how to solve this problem\n    \n        \n        \n        \n    }\n}\n      \n[/student_code]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "ActualMethodParameter",
+          "ArrayElement",
+          "FormalMethodParameter",
+          "GreaterExpression",
+          "SimpleAssignmentExpression",
+          "ForStatement",
+          "NestedForLoops"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "ArrayElement",
+          "FormalMethodParameter",
+          "ForStatement",
+          "GreaterExpression",
+          "NestedForLoops",
+          "SimpleAssignmentExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/446/embed?act=PCRS&sub=sort_array_swap_contiguous"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Searching/Sorting",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Searching/Sorting",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Recursion/Searching/Sorting",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Recursion/Searching/Sorting",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Recursion/Searching/Sorting",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=474",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=474",
+      "context_name": "Java: CMU15-121 | CMU 15-121 - Intro Data Structures - Fall 2025 > Sorting",
+      "used_at": "2025-09-16T16:41:24.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.065Z"
+}

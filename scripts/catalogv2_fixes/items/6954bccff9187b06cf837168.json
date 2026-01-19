@@ -1,0 +1,127 @@
+{
+  "id": "6954bccff9187b06cf837168",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-09T19:21:44.000Z",
+  "updated_at": "2026-01-17T12:41:51.143Z",
+  "tags": [],
+  "identity": {
+    "id": "py_boolean_dry_hot4",
+    "title": "Hot-Dry Weather (Case 4)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_hot_dry&ch=py_boolean_dry_hot4"
+  },
+  "attribution": {
+    "created_at": "2020-08-09T19:21:44.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that determines whether it is either too hot or too dry but not both based on the inputs that it receives from the user.",
+    "source_code": "#Step 1: Read the user input for determining whether it is too hot\ntext = input(\"Enter 1 if it is too hot, otherwise enter 0:\")\ninput_num = int(text)\n#Step 2: Determine whether it is too hot\nif input_num == 1 :\n    too_hot = True\nelse:\n    too_hot = False\n#Step 3: Read the user input for determining whether it is too dry\ntext = input(\"Enter 1 if it is too dry, otherwise enter 0:\")\ninput_num = int(text)\n#Step 4: Determine whether it is too dry\nif input_num == 1 :\n    too_dry = True\nelse:\n    too_dry = False\n#Step 5: Write the boolean expression to determine whether it is either too hot or too dry but not both.\nresult1 = ( too_hot or too_dry ) and not ( too_hot and too_dry )\nresult2 = too_hot ^ too_dry\n#Step 6: Print the result\nif result1 == True :\n    print(\"Yes! it is either too hot or too dry but not both.\")\nelse:\n    print(\"No! the weather condition 'too hot or too dry but not both' is not met.\")"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "TransformingToIntType",
+          "IfElseChecking",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "Printing",
+          "CreatingString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AssigningValueVariable",
+          "BooleanEvaluating",
+          "CallingLibraryFunction",
+          "CreatingString",
+          "HandlingInput",
+          "IfElseChecking",
+          "Printing",
+          "TransformingToIntType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_hot_dry&ch=py_boolean_dry_hot4"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > Boolean Expressions",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > Boolean Expressions",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > If-Else",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > If-Else",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.059Z"
+}

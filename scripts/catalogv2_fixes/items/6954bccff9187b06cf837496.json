@@ -1,0 +1,76 @@
+{
+  "id": "6954bccff9187b06cf837496",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2016-03-23T11:24:25.000Z",
+  "updated_at": "2026-01-17T12:56:58.946Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "DataInsertion2_version_1_pt",
+    "title": "Inserting Data (2) pt",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=DataInsertion2_version_1_pt&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2016-03-23T11:24:25.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Rafael Araujo",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "SQL"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "INSERT INTO Students(sid, name, login, age, gpa)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0VALUES('53688', 'Smith', 'smith@ee', 18, 3.2);"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=DataInsertion2_version_1_pt&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=335",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=335",
+      "context_name": "SQL: IS 1022-2710 | Database Management (PT) > Tuple Insertion",
+      "used_at": "2016-03-29T14:24:29.000Z",
+      "used_by": "Rafael Araujo - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.136Z"
+}

@@ -1,0 +1,126 @@
+{
+  "id": "6954bccff9187b06cf836dcd",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:19:48.000Z",
+  "updated_at": "2026-01-17T05:27:28.268Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_list_of_remainders1_es",
+    "title": "Construir una funci\u00f3n que devuelva una lista de restos (m\u00f3dulos) del valor de entrada",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_of_remainders1_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:19:48.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye una funcion que calcule el residuo de cada elemento de la primera lista con el elemento del mismo indice en la segunda lista. Los residuos se almacenan en una nueva lista. Si el numero en la segunda lista es 0, la funcion debe agregar directamente el numero 2 a la nueva lista en lugar del residuo.",
+    "source_code": "def lista_de_residuos(lista1, lista2):\n    nueva_lista = []\n    if len(lista1) == len(lista2):\n        for i in range(len(lista1)):\n            if lista2[i] == 0:\n                nueva_lista.append(2)\n            else:\n                resultado = lista1[i] % lista2[i]\n                nueva_lista.append(resultado)\n    return nueva_lista\n\nlista1 = [19, 3, 4, 2]\nlista2 = [4, 2, 1, 0]\nprint(lista_de_residuos(lista1, lista2))\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "ListLiteral",
+          "IfElseCheckingInForLoop",
+          "ComparisonExpression",
+          "BooleanLiteral",
+          "ForLoopWithListIndexing",
+          "IndexingList",
+          "SimpleAssignmentStatement",
+          "FindingLength",
+          "CreatingList",
+          "FindRemainder",
+          "Printing",
+          "AddingListElementWithAppend",
+          "CallingFunctionCallingFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "IntegerLiteral",
+          "ListLiteral",
+          "SimpleAssignmentStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AddingListElementWithAppend",
+          "BooleanLiteral",
+          "CallingFunctionCallingFunction",
+          "CreatingList",
+          "FindingLength",
+          "FindRemainder",
+          "ForLoopWithListIndexing",
+          "IfElseCheckingInForLoop",
+          "IndexingList",
+          "Printing"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_of_remainders1_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Listas",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.946Z"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836edb",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:00.259Z",
+  "tags": [],
+  "identity": {
+    "id": "py_dna_pairs_es",
+    "title": "PCRS C3-PL  Dna Pairs",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/295/embed?act=PCRS&sub=py_dna_pairs_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Escribe una funcion que tome un string que consiste solo en las letras mayusculas A, C, G y T, y devuelva el numero de veces que ocurre cada letra. Puedes devolver multiples valores poniendolos entre parentesis, asi:return (1, 2, 8, 4)Asegurate de devolver los conteos en el orden ACGT.Por ejemplo:contarParesDeBases('GATTACA') => (3, 1, 1, 2)contarParesDeBases('') => (0, 0, 0, 0)contarParesDeBases('GGTCAGGCCCCT') => (1, 5, 4, 2)",
+    "source_code": "[student_code]\ndef contarParesDeBases(secuencia):\n    # codigo aqui\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/295/embed?act=PCRS&sub=py_dna_pairs_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.974Z"
+}

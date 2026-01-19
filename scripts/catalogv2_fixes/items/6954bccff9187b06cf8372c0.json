@@ -1,0 +1,336 @@
+{
+  "id": "6954bccff9187b06cf8372c0",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2017-11-05T12:33:22.000Z",
+  "updated_at": "2026-01-17T05:29:48.111Z",
+  "tags": [],
+  "identity": {
+    "id": "objects_classes_loan",
+    "title": "The Class for Representing a Loan",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=objects_classes_loan"
+  },
+  "attribution": {
+    "created_at": "2017-11-05T12:33:22.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a class that represents a loan. This class should contain data representing the interest rate, loan amount, and the length of loan period (in years); all of which could be accessed or changed only through the getter and setter methods. An instance of the class should be created by specifying annual interest rate, length of loan period, and loan amount.\\nThe other method of the this class should calculate the amount of monthly payments on the loan.",
+    "source_code": "#Step 1: Define the class\nclass Loan1 :\n    #Step 1.1: Initialize the loan with the specified values \n    def __init__(self, annual_interest_rate, number_of_years, loan_amount) :\n        self.__annual_interest_rate = annual_interest_rate\n        self.__number_of_years = number_of_years\n        self.__loan_amount = loan_amount\n    #Step 1.2: Define the method that calculates the amount of monthly payments on the loan\n    def get_monthly_payment(self) :\n        monthly_interest_rate = self.__annual_interest_rate / 12\n        monthly_payment = self.__loan_amount * monthly_interest_rate / (1 -\n                (1 / (1 + monthly_interest_rate) ** (self.__number_of_years * 12) ))\n        return monthly_payment    \n    #Step 1.3: Define the methods to get/set the properties of the loan\n    def get_annual_interest_rate(self) :\n        return self.__annual_interest_rate\n    def set_annual_interest_rate(self, annual_interest_rate) :\n        self.__annual_interest_rate = annual_interest_rate\n    def get_number_of_years(self) :\n        return self.__number_of_years\n    def set_number_of_years(self, number_of_years) :\n        self.__number_of_years = number_of_years\n    def get_loan_amount(self) :\n        return self.__loan_amount\n    def set_loan_amount(self, loan_amount) :\n        self.__loan_amount = loan_amount\n#Step 2: Test the class\nannual_interest_rate = float(input(\"Enter the annual interest rate: \"))\nnumber_of_years = int(input(\"Enter the number of years for the loan period: \"))\nloan_amount = (float(input(\"Enter the loan amount: \")))\nloan1 = Loan1(annual_interest_rate, number_of_years, loan_amount)\nprint(\"The monthly payment for the loan is: {:.2f} \".format(loan1.get_monthly_payment()))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "DefiningObjectMethod",
+          "TransformingToFloatType",
+          "DefiningClass",
+          "TransformingToIntType",
+          "Multiplication",
+          "Addition",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "FormattingString",
+          "CreatingObject",
+          "CallingLibraryFunction",
+          "Printing",
+          "Power",
+          "Division",
+          "CallingObjectMethod",
+          "Subtraction",
+          "NestedFunctionCall",
+          "CreatingString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "parser": {
+        "concepts": [
+          "Return",
+          "Sub",
+          "Int",
+          "Attribute",
+          "ClassDef",
+          "Add",
+          "Pow",
+          "Call",
+          "FunctionDef",
+          "Str",
+          "arg",
+          "Div",
+          "Assign",
+          "Mult"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "Sub",
+          "Call",
+          "Assign",
+          "Return",
+          "ClassDef",
+          "FunctionDef",
+          "Int",
+          "Attribute",
+          "Div",
+          "Str",
+          "Add",
+          "Mult",
+          "Pow"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "CallingObjectMethod",
+          "CreatingObject",
+          "CreatingString",
+          "DefiningClass",
+          "DefiningObjectMethod",
+          "Division",
+          "FormattingString",
+          "HandlingInput",
+          "Multiplication",
+          "NestedFunctionCall",
+          "Power",
+          "Printing",
+          "Subtraction",
+          "TransformingToFloatType",
+          "TransformingToIntType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=objects_classes_loan"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=344",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
+      "context_name": "Python: PYTHON001 | PythonCourseV1Clones > Classes and objects",
+      "used_at": "2017-05-22T17:58:24.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=346",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=346",
+      "context_name": "Python: PYTHON001 | Python Course (Program Construction) > Classes and objects",
+      "used_at": "2017-09-10T13:11:43.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=365",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=365",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX-Parsons) > Classes and objects",
+      "used_at": "2018-09-25T15:11:21.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=372",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=372",
+      "context_name": "Python: PYTHON001 | Python Course (CTAT-T3-AE-QP-PCEX-Parsons) > Classes and objects",
+      "used_at": "2019-05-07T02:44:53.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=375",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=375",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course > Classes and objects",
+      "used_at": "2019-07-03T11:34:57.000Z",
+      "used_by": "Michelle, Wang - University of Alberta"
+    },
+    {
+      "context_id": "cid=376",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=376",
+      "context_name": "Python: PYTHON001 | University of Toronto Python Course > Classes and objects",
+      "used_at": "2019-08-22T20:50:26.000Z",
+      "used_by": "Andrew Petersen, Andrew Petersen - University of Toronto"
+    },
+    {
+      "context_id": "cid=379",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=379",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Fall 2019 > Classes and objects",
+      "used_at": "2019-09-14T21:22:08.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=388",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=388",
+      "context_name": "Python: PYTHON001 | Python Course - NTNU > Classes and objects",
+      "used_at": "2020-02-19T07:48:12.000Z",
+      "used_by": "Boban Vesin, Boban Vesin - NTNU"
+    },
+    {
+      "context_id": "cid=391",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=391",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2020 > Classes and objects",
+      "used_at": "2020-07-03T01:07:51.000Z",
+      "used_by": "Carrie, Demmans - University of Alberta"
+    },
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > Classes and objects",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=403",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=403",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 > Classes and objects",
+      "used_at": "2020-09-04T17:46:26.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > Classes and objects",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=407",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=407",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Spring 2021) > Classes and Objects",
+      "used_at": "2021-01-26T22:51:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=410",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=410",
+      "context_name": "Python: PYTHON001 | Utrecht Python Spring 2021 > Classes and objects",
+      "used_at": "2021-02-16T21:53:05.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=411",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=411",
+      "context_name": "Python: PYTHON001 | Intelligent Textbooks Utrecht Python > Classes and objects",
+      "used_at": "2021-05-07T09:41:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=413",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Classes & Objects",
+      "used_at": "2021-08-11T18:22:22.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=419",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=419",
+      "context_name": "Python: PYTHON001 | Test Python course > Classes and objects",
+      "used_at": "2022-01-26T11:33:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=420",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=420",
+      "context_name": "Python: PYTHON001 | Utrecht-Python-Textbook > Lecture 12",
+      "used_at": "2022-02-01T14:15:04.000Z",
+      "used_by": "Alireza, Sabet - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=421",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=421",
+      "context_name": "Python: PYTHON001 | Australia Spring 2022 > Classes and objects",
+      "used_at": "2022-05-09T01:08:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=422",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > OPTIONAL (Classes & Objects)",
+      "used_at": "2022-05-23T22:24:04.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=424",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=424",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 174 Fall 2022 (Python I) > Classes & Objects",
+      "used_at": "2022-08-10T17:36:39.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=426",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=426",
+      "context_name": "Python: PYTHON001 | Novi Sad Python Fall 2022 > Classes and objects",
+      "used_at": "2022-10-03T23:23:00.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=429",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=429",
+      "context_name": "Python: INFO063-17 | INTRODUCCI\u00c3\u0093N A LA PROGRAMACI\u00c3\u0093N > Classes and objects",
+      "used_at": "2023-05-30T22:07:20.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=466",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=466",
+      "context_name": "Python: PYTHON001 | CMU Fall 25 - Principles of Computing (Python) > Classes and objects",
+      "used_at": "2025-08-27T16:49:41.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=490",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=490",
+      "context_name": "Python: KAU001 | Intro to Python - Fall 2025 > Classes and Objects",
+      "used_at": "2025-10-08T19:58:50.000Z",
+      "used_by": "Rafaella Sampaio de Alencar - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.099Z"
+}

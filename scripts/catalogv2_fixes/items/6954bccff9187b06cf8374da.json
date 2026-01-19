@@ -1,0 +1,76 @@
+{
+  "id": "6954bccff9187b06cf8374da",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2015-10-18T15:52:40.000Z",
+  "updated_at": "2026-01-17T12:57:08.706Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "pytt4.2",
+    "title": "Table of Squares",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pytt4.2&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2015-10-18T15:52:40.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "# Table of Squares Program\n\nnumbers_to_print = 10\ni = 1\n\nwhile i <= numbers_to_print:\n\u00a0\u00a0\u00a0\u00a0square = i * i\n\u00a0\u00a0\u00a0\u00a0print(i, \"squared =\", square)\n\u00a0\u00a0\u00a0\u00a0i += 1\n\nprint(\"Done!\")"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pytt4.2&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=460",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Worked Examples > While Loops",
+      "used_at": "2025-04-09T10:48:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.141Z"
+}

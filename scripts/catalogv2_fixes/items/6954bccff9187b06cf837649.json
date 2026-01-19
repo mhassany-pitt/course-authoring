@@ -1,0 +1,100 @@
+{
+  "id": "6954bccff9187b06cf837649",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:05.138Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "palindrome.c",
+    "title": "IS12:: palindrome.c (111.3)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=palindrome.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*  Example; palindrome\n\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky\n*/\n\n#include <stdio.h>\n\nint palindrome(char[]);\nint strlen (char[]);\n\nvoid main() {\n\u00a0\u00a0\u00a0\u00a0char p[] = \"ABBA\";\n\n\u00a0\u00a0\u00a0\u00a0if(palindrome(p))\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%s is a palindrome\n\", p);\n\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%s is not a palindrome\n\", p);\n}\n\n\n/* returns 1 if s is a palindrome, 0 otherwise */\n\nint palindrome(char s[]) {\n\u00a0\u00a0\u00a0\u00a0int bottom, top;\n\n\u00a0\u00a0\u00a0\u00a0bottom = 0;\n\u00a0\u00a0\u00a0\u00a0top = strlen(s) - 1;\n\u00a0\u00a0\u00a0\u00a0while(bottom < top && s[bottom] == s[top]) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++bottom;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0--top;\n\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0if(bottom >= top)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return 1;\n\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return 0;\n}\n\n\n/* return length of the sting s */\n\nint strlen (char s[]) {\n\u00a0\u00a0\u00a0\u00a0int i;\n\n\u00a0\u00a0\u00a0\u00a0for (i = 0; s[i] != '\u0000'; ++i)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0;\n\u00a0\u00a0\u00a0\u00a0return i;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "variable_initialization",
+          "pre_decrement",
+          "pre_increment",
+          "return",
+          "and",
+          "for",
+          "if_else",
+          "while",
+          "array_declaration",
+          "char",
+          "equal",
+          "simple_assignment",
+          "int",
+          "greater_equal",
+          "main_function",
+          "not_equal",
+          "less",
+          "void",
+          "variable_declaration",
+          "include",
+          "function_declaration",
+          "printf",
+          "sub"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=palindrome.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.177Z"
+}

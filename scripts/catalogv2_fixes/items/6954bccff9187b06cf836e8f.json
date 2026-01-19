@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e8f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:50.959Z",
+  "tags": [],
+  "identity": {
+    "id": "py_between_two_genes",
+    "title": "PCRS C3-PL  Between Two Genes",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/136/embed?act=PCRS&sub=py_between_two_genes"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write a function that takes three parameters:a sequence of DNA called seq, a genecalled g1, and a gene called g2.Return all of the strings that occur between anoccurrence of g1 and the nearest occurrence ofg2 that comes after it. If g1 occurs without g2,return the empty string. If there are extra occurrences of g2,use the first one. If there are extra occurrences of g1, usethe last one.For example:betweenGenes('ATAATCGTGGCCA', 'AAT', 'GCCA') => 'CGTG'betweenGenes('CGTGATCGCAATGGGGCAGTC', 'AT', 'CA') => 'CGGGGG'betweenGenes('ATAATCGTGGCCA', 'AAT', 'GCCA') => 'CGTG'",
+    "source_code": "[student_code]\ndef betweenGenes(seq, g1, g2):\n    # code here\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/136/embed?act=PCRS&sub=py_between_two_genes"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.966Z"
+}

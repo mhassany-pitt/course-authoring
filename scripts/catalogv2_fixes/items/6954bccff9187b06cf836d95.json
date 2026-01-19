@@ -1,0 +1,175 @@
+{
+  "id": "6954bccff9187b06cf836d95",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:21:10.000Z",
+  "updated_at": "2026-01-17T05:27:21.987Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_calculation_in_dictionary_es",
+    "title": "C\u00e1lculos con diccionarios",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_calculation_in_dictionary_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:21:10.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que calcule el promedio de calificaciones de cada estudiante usando el diccionario `dicc_estudiantes` que ya esta definido como sigue:",
+    "source_code": "for item in dicc_estudiantes.items():\n\tnombre=item[0]\n\tnotas=item[1]\n\ttotal=0\n\tfor nota in notas:\n\t\ttotal+=nota\n\tpromedio = total/len(notas)\n\tprint(\"El promedio de\",nombre, \"es\",promedio)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "Call",
+          "Attribute",
+          "Div",
+          "Add",
+          "AugAssign",
+          "Index",
+          "Assign",
+          "For"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm_rully": {
+        "concepts": [
+          "dict()",
+          "StringLiteral",
+          "IntegerLiteral",
+          "FloatLiteral",
+          "ListLiteral",
+          "TupleLiteral",
+          "DictLiteral",
+          "AugmentedAssignmentStatement",
+          "SimpleAssignmentStatement",
+          "CheckingForItem",
+          "FindingLength",
+          "Printing",
+          "TransformingToIntType",
+          "TransformingToFloatType",
+          "IndexingString",
+          "IndexingTuple",
+          "AccessingDictionary",
+          "IndexingList",
+          "Addition",
+          "Division",
+          "ForLoopWith+=",
+          "NestedForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "For",
+          "Call",
+          "Assign",
+          "Constant",
+          "Attribute",
+          "Div",
+          "Add",
+          "AugAssign",
+          "Index"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "AugmentedAssignmentStatement",
+          "DictLiteral",
+          "FloatLiteral",
+          "ForLoopWith+=",
+          "IntegerLiteral",
+          "ListLiteral",
+          "SimpleAssignmentStatement",
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AccessingDictionary",
+          "Addition",
+          "CheckingForItem",
+          "Division",
+          "FindingLength",
+          "IndexingString",
+          "IndexingTuple",
+          "NestedForLoopIteration",
+          "Printing",
+          "TransformingToFloatType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_calculation_in_dictionary_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Diccionarios",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=464",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=464",
+      "context_name": "Python: UTFSM-Progra | Test Jordan Thesis Python ES > Diccionarios",
+      "used_at": "2025-07-10T18:56:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.941Z"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836ce4",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:20:19.000Z",
+  "updated_at": "2026-01-17T05:26:49.191Z",
+  "tags": [],
+  "identity": {
+    "id": "Printing Full Name with Middle Initial__68bdb308f6cc3d7a9cc0972e-68bdb308f6cc3d7a9cc09729-1",
+    "title": "Printing Full Name with Middle Initial",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0972e?_t=1757557219672&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:20:19.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that prints the full name with middle initial for the name \"John Phillip Smith\".",
+    "source_code": "public class Initials2\n{\n\tpublic static void main(String[] args)\n\t{\n\t\t//Step 1: Define the name\n\t\tString fullName = \"John Phillip Smith\";\n\t\t//Step 2: Extract the first name\n\t\tString first = fullName.substring(0, 4);\n\t\t//Step 3: Extract the middle initial\n\t\tString middleInitial = fullName.substring(5, 6);\n\t\t//Step 4: Extract the last name\n\t\tString last = fullName.substring(13, fullName.length());\n\t\t//Step 5: Create the name from the first name, middle initial, and last name\n\t\tString name = first + \" \" + middleInitial + \". \" + last;\n\t\tSystem.out.println(name);\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0972e?_t=1757557219672&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.918Z"
+}

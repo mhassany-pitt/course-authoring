@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836cee",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:18:53.000Z",
+  "updated_at": "2026-01-17T05:26:50.715Z",
+  "tags": [],
+  "identity": {
+    "id": "arithmetic.f_to_c_conversion__68bdb308f6cc3d7a9cc09756",
+    "title": "Celsius To Fahrenheit Conversion",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc09756?_t=1757557133369&index=0"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:18:53.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that computes the Fahrenheit equivalent of an input Celsius value using the formula F = (9/5)C + 32. The input Celsius value is an integer.",
+    "source_code": "import java.util.Scanner;\npublic class CelsiusToFahrenheit\n{\n\tpublic static void main (String[] args)\n\t{\n\t\t//Step 1: Define the data that we need for this program\n\t\tfinal int BASE = 32;\n\t\tfinal double CONVERSION_FACTOR = 9.0 / 5;\n\t\t//Step 2: Read the input Celsius value\n\t\tScanner scan = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter the Celsius value: \");\n\t\tint celsiusTemp = scan.nextInt();\n\t\tscan.close();\n\t\t//Step 3: Compute the  Fahrenheit equivalent of the Celsius value\n\t\tdouble fahrenheitTemp = celsiusTemp * CONVERSION_FACTOR + BASE;\n\t\tSystem.out.println(\"Celsius Temperature: \" + celsiusTemp);\n\t\tSystem.out.println(\"Fahrenheit Equivalent: \" + fahrenheitTemp);\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc09756?_t=1757557133369&index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Variables and Primitive Data Types",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Variables and Operations",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > Variables and Operations",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.919Z"
+}

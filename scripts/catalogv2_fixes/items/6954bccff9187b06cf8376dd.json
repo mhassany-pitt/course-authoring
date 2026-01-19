@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8376dd",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:27.095Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "SwitchStatement",
+    "title": "SwitchStatement",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=SwitchStatement&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\nint main()\n{\n\u00a0\u00a0int opselect;\n\u00a0\u00a0float fnum, snum;\n\n\u00a0\u00a0printf(\"Please type in two numbers: \");\n\u00a0\u00a0scanf(\"%f %f\", &fnum, &snum);\n\u00a0\u00a0printf(\"Enter a select code:\");\n\u00a0\u00a0printf(\"\\n1 for addition\");\n\u00a0\u00a0printf(\"\\n2 for multiplication\");\n\u00a0\u00a0printf(\"\\n3 for division : \");\n\u00a0\u00a0scanf(\"%d\", &opselect);\n\n\u00a0\u00a0switch (opselect)\n\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0case 1:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"The sum of the numbers entered is %6.3f\\n\", fnum+snum);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0\u00a0case 2:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"The product of the numbers entered is %6.3f\\n\", fnum*snum);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0\u00a0case 3:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (snum != 0.0)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"The first number divided by the second is %6.3f\\n\",fnum/snum);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Division by zero is not allowed\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break; /* this break is optional */\n\u00a0\u00a0} /* end of switch statement */\n\n\u00a0\u00a0return 0;\n} /* end of main() */"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=SwitchStatement&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.185Z"
+}

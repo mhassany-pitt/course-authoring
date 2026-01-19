@@ -1,0 +1,164 @@
+{
+  "id": "6954bccff9187b06cf8375d7",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2014-09-06T11:36:18.000Z",
+  "updated_at": "2026-01-17T12:57:47.942Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "CashRegisterConstantField",
+    "title": "Cash Register Tester (Constant Field)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=CashRegisterConstantField&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2014-09-06T11:36:18.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class Tester\n{\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0CashRegister register = new CashRegister();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0register.recordPurchase(0.75);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0register.recordPurchase(1.50);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0register.enterPayment(2, 0, 5, 0, 0);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double expected = register.giveChange();\n\u00a0\u00a0\u00a0\u00a0}\n}\n\npublic class CashRegister\n{\n\u00a0\u00a0\u00a0public static final double QUARTER_VALUE = 0.25;\n\u00a0\u00a0\u00a0public static final double DIME_VALUE = 0.1;\n\u00a0\u00a0\u00a0public static final double NICKEL_VALUE = 0.05;\n\u00a0\u00a0\u00a0public static final double PENNY_VALUE = 0.01;\n\n\u00a0\u00a0\u00a0private double purchase;\n\u00a0\u00a0\u00a0private double payment;\n\n\u00a0\u00a0\u00a0public CashRegister()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0purchase = 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0payment = 0;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public void recordPurchase(double amount)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0purchase = purchase + amount;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Logger.getGlobal().info(\"amount=\" + amount);\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public void enterPayment(int dollars, int quarters, int dimes, int nickels, int pennies)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0payment = dollars + quarters * QUARTER_VALUE + dimes * DIME_VALUE\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0+ nickels * NICKEL_VALUE + pennies * PENNY_VALUE;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public double giveChange()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double change = payment - purchase;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0purchase = 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0payment = 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return change;\n\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "SimpleVariable",
+          "ClassConstantInitializationStatement",
+          "MultiplyExpression",
+          "StaticFieldSpecifier",
+          "ObjectCreationStatement",
+          "ClassField",
+          "ObjectMethodInvocation",
+          "StringAddition",
+          "ConstructorCall",
+          "PrivateFieldSpecifier",
+          "StringDataType",
+          "ConstructorDefinition",
+          "StringLiteral",
+          "DoubleDataType",
+          "PublicConstructorSpecifier",
+          "SubtractExpression",
+          "FinalFieldSpecifier",
+          "PublicFieldSpecifier",
+          "InstanceField",
+          "ReturnStatement",
+          "IntDataType",
+          "SimpleAssignmentExpression",
+          "AddExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=CashRegisterConstantField&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=11",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=11",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] > Classes",
+      "used_at": "2014-08-30T12:57:33.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=13",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=13",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] - Animated Examples > Classes",
+      "used_at": "2014-09-09T15:38:38.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=19",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=19",
+      "context_name": "Java: INFSCI 0017 | Test - (ISD) JAVA course [clone] > Classes",
+      "used_at": "2014-11-06T10:59:11.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=21",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=21",
+      "context_name": "Java: INFSCI 0017 2 | Demo Course 2 > Classes",
+      "used_at": "2015-04-15T13:10:54.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=29",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=29",
+      "context_name": "Java: INFSCI 0017 | mg-gs-demo > Classes",
+      "used_at": "2015-09-14T11:10:25.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=31",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_name": "Java: INFSCI 0017 | roya-clone-test-java > Classes",
+      "used_at": "2015-12-08T17:16:50.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=32",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=32",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 > Classes",
+      "used_at": "2016-01-15T10:31:22.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=339",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=339",
+      "context_name": "Java: INFSCI 0017 | Java Study 2016 A > Objects and Classes",
+      "used_at": "2016-11-02T14:34:05.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=382",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=382",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v3 > Classes",
+      "used_at": "2020-01-11T16:29:42.000Z",
+      "used_by": "Zak Risha, Zak Risha - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.169Z"
+}

@@ -1,0 +1,92 @@
+{
+  "id": "6954bccff9187b06cf83762f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:01.357Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "rate2.c",
+    "title": "IS12:: rate2.c (5.3)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=rate2.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Example rate2.c\n\u00a0\u00a0\u00a0\u00a0Interest with variable rate\n\u00a0\u00a0\u00a0\u00a0Goal: The use of if-else for conditional calculations\n\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky\n\u00a0*/\n\n#define THRESHOLD 5000\n\n#include <stdio.h>\n\nvoid main() {\n\u00a0\u00a0\u00a0\u00a0float rate1, rate2, interest_rate; /* interest rates in percents */\n\u00a0\u00a0\u00a0\u00a0float capital; /* capital in dollars */\n\u00a0\u00a0\u00a0\u00a0float annual_interest; /* annual interest in dollars */\n\n\u00a0\u00a0\u00a0\u00a0/* read data */\n\u00a0\u00a0\u00a0\u00a0printf(\"Interest rates (%%xx.xx): \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%f %f\", &rate1, &rate2);\n\u00a0\u00a0\u00a0\u00a0printf(\"Capital ($$.cc): \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%f\",&capital);\n\n\u00a0\u00a0\u00a0\u00a0/* calculate the rate */\n\u00a0\u00a0\u00a0\u00a0if (capital < THRESHOLD)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0interest_rate = rate1;\n\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0interest_rate = rate2;\n\u00a0\u00a0\u00a0\u00a0printf(\"The rate for $%.2f is %.2f%%\n\", capital, interest_rate);\n\n\u00a0\u00a0\u00a0\u00a0/* calculate capital */\n\u00a0\u00a0\u00a0\u00a0annual_interest = capital * interest_rate / 100;\n\u00a0\u00a0\u00a0\u00a0printf(\"Interest %6.2f; New capital %9.2f\n\", annual_interest, capital + annual_interest);\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "scanf",
+          "less",
+          "define",
+          "void",
+          "div",
+          "reference",
+          "include",
+          "variable_declaration",
+          "add",
+          "mul",
+          "main_function",
+          "float",
+          "if_else",
+          "printf",
+          "simple_assignment"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=rate2.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.175Z"
+}

@@ -1,0 +1,138 @@
+{
+  "id": "6954bccff9187b06cf836d4f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-10T12:35:45.000Z",
+  "updated_at": "2026-01-17T05:27:02.463Z",
+  "tags": [],
+  "identity": {
+    "id": "py_phone_age_es__682dca1966a8e1b992c82ad0",
+    "title": "Determinando Cuando Comprar un Nuevo Telefono (Caso 1)",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dca1966a8e1b992c82ad0?_t=1750184389188&index=0&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-10T12:35:45.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Isaac Alpizar-Chacon",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "es",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construir un programa que determine si es el momento de comprar un nuevo tel\u00e9fono basado en las entradas que recibe del usuario. Se debe comprar un nuevo tel\u00e9fono si el tel\u00e9fono se rompe o si el tel\u00e9fono tiene al menos 3 a\u00f1os.",
+    "source_code": "#Paso 1: Leer las entradas del usuario\ntexto = input(\"Ingresa la edad del tel\u00e9fono en a\u00f1os:\")\nedad_telefono = int(texto)\ntexto = input(\"Ingresa 1 si el tel\u00e9fono est\u00e1 roto, de lo contrario ingresa 0:\")\nnumero_entrada = int(texto)\n#Paso 2: Determinar si el tel\u00e9fono est\u00e1 roto\nif numero_entrada == 1 :\n    esta_roto = True\nelse:\n    esta_roto = False\n#Paso 3: Escribir la expresi\u00f3n booleana para determinar si es el momento de comprar un nuevo tel\u00e9fono\nnecesita_telefono = esta_roto or edad_telefono >= 3\n#Paso 4: Imprimir el resultado\nif necesita_telefono == True :\n    print(\"\u00a1S\u00ed! Es el momento de comprar un nuevo tel\u00e9fono.\")\nelse:\n    print(\"\u00a1No! A\u00fan no es el momento de comprar un nuevo tel\u00e9fono.\")"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "TransformingToIntType",
+          "IfElseChecking",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "Printing",
+          "CreatingString",
+          "TransformingToIntType",
+          "IfElseChecking",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "Printing",
+          "CreatingString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Call",
+          "Assign",
+          "GtE",
+          "Not",
+          "If",
+          "Or",
+          "Eq",
+          "Int",
+          "TRUE",
+          "FALSE",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dca1966a8e1b992c82ad0?_t=1750184389188&index=0&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Condicionales",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Condicionales",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Condicionales",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=464",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=464",
+      "context_name": "Python: UTFSM-Progra | Test Jordan Thesis Python ES > Condicionales",
+      "used_at": "2025-07-10T18:56:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.933Z"
+}

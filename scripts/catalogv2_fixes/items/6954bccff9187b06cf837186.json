@@ -1,0 +1,164 @@
+{
+  "id": "6954bccff9187b06cf837186",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-06-09T13:28:17.000Z",
+  "updated_at": "2026-01-17T12:55:30.129Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "csedpad_searching_binarysearch",
+    "title": "(Searching) Binary search - CSEdPad",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_searching_binarysearch&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2020-06-09T13:28:17.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "import java.util.Scanner;\n\npublic class BinarySearch {\n\n\u00a0\u00a0\u00a0public static int binarySearch(int arr[], int first, int last, int lotNumber){\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int mid = (first + last)/2;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0while( first <= last ){\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( arr[mid] < lotNumber ){\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0first = mid + 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if ( arr[mid] == lotNumber ){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return mid;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else{\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0last = mid - 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0mid = (first + last)/2;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return -1;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public static void main(String a[]) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Scanner luckyNumber = new Scanner(System.in);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int[] array = { 10, 20, 30, 40, 50, 60 };\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Enter your two digit lottery number: \");\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int lotNumber = luckyNumber.nextInt();\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int last=array.length-1;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int index = binarySearch(array,0,last,lotNumber);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (index != -1) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0index = index + 1;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(lotNumber + \" is present at rank: \" + index + \" and the highest prize pull starts from '1' and then 2, 3 and so on.\");\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} else {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Sorry, Please Try Again!!!\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "ReturnStatement",
+          "ImportStatement",
+          "ArrayInitializer",
+          "EqualExpression",
+          "StringAddition",
+          "MethodDefinition",
+          "ArrayVariable",
+          "java.lang.System.out.println",
+          "SimpleAssignmentExpression",
+          "LessEqualExpression",
+          "ClassDefinition",
+          "VoidDataType",
+          "WhileStatement",
+          "ObjectCreationStatement",
+          "LessExpression",
+          "IntDataType",
+          "NotEqualExpression",
+          "ConstructorCall",
+          "StringLiteral",
+          "DivideExpression",
+          "IfElseIfStatement",
+          "ObjectMethodInvocation",
+          "AddExpression",
+          "SubtractExpression",
+          "IfElseStatement",
+          "ArrayDataType",
+          "ArrayLength",
+          "FormalMethodParameter",
+          "ActualMethodParameter",
+          "ArrayInitializationStatement",
+          "ArrayElement",
+          "StringDataType",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "ArrayDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "ArrayDataType",
+          "ArrayDataType",
+          "ArrayElement",
+          "ArrayInitializationStatement",
+          "ArrayInitializer",
+          "ArrayLength",
+          "ArrayVariable",
+          "ClassDefinition",
+          "ConstructorCall",
+          "DivideExpression",
+          "EqualExpression",
+          "FormalMethodParameter",
+          "IfElseIfStatement",
+          "IfElseStatement",
+          "ImportStatement",
+          "IntDataType",
+          "java.lang.System.out.println",
+          "LessEqualExpression",
+          "LessExpression",
+          "MethodDefinition",
+          "NotEqualExpression",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "SubtractExpression",
+          "VoidDataType",
+          "WhileStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_searching_binarysearch&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=389",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
+      "context_name": "Java: CSEdPad | CSEdPad Examples > Searching",
+      "used_at": "2020-05-10T20:11:07.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.063Z"
+}

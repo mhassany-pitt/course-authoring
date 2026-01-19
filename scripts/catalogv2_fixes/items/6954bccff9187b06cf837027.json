@@ -1,0 +1,76 @@
+{
+  "id": "6954bccff9187b06cf837027",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-01-17T15:49:23.000Z",
+  "updated_at": "2026-01-17T12:54:55.770Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "LeftJoin25_1_version_1",
+    "title": "LeftJoin1_version_1",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=LeftJoin25_1_version_1&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2025-01-17T15:49:23.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Rully Hendrawan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "SQL"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "SELECT Customers.CustomerName, Orders.OrderID\nFROM Customers\nLEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=LeftJoin25_1_version_1&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=447",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=447",
+      "context_name": "SQL: Temple-MIS2502-2025-Spring-1SQL | Temple MIS2502 2025-Spring 1-SQL > Left Join",
+      "used_at": "2024-12-11T10:46:15.000Z",
+      "used_by": "Rully Agus Hendrawan, Rully Agus Hendrawan - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.021Z"
+}

@@ -1,0 +1,142 @@
+{
+  "id": "6954bccff9187b06cf837102",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-03-02T10:32:54.000Z",
+  "updated_at": "2026-01-17T05:28:53.820Z",
+  "tags": [],
+  "identity": {
+    "id": "class_truck_setters",
+    "title": "class_truck_setters",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/496/embed?act=PCRS&sub=class_truck_setters"
+  },
+  "attribution": {
+    "created_at": "2021-03-02T10:32:54.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the code for the class Truck. You have to implement all the mutator/setter methods for each of these 5 attributes. Assume that the accessor/getter methods are already implemented.Make sure that currentLoad will never exceed maxCapacity. If it does, set currentLoad to maxCapacity. Also, make sure that the maxCapacity and currentLoad cannot be set as negative, it that happens set the value to 0.More instructions on how to implement the missing parts of this class are provided in the code below.",
+    "source_code": "[file Truck.java]\n[blocked]\npublic class Truck { \n    private String model;\n    private int year;\n    private String color;\n \tprivate double maxCapacity;\n    //If currentLoad is 0.0 the truck is empty, if equals to maxCapacity the truck is full\n    private double currentLoad;\n    \n    public Truck(){\n        this.model = \"default model\";\n        this.year = 2000;\n        this.color= \"default color\";\n        this.maxCapacity = 1800.0;\n        this.currentLoad = 0.0;     \n    }\n    \n    public Truck(String truckModel, int truckYear, String truckColor, double truckMaxCapacity, double truckCurrentLoad){\n    \tmodel = truckModel;\n        year = truckYear;\n        color = truckColor;\n        maxCapacity = truckMaxCapacity;\n        currentLoad = truckCurrentLoad;   \n    }\n[/blocked]\n     [student_code]\n    // TODO: add set methods for model, year, color, maxCapacity and currentLoad\n    // There has to be 5 methods in total here (setModel, setYear, setColor, setMaxCapacity, setCurrentLoad).\n    \n    \n    \n    \n\t[/student_code]\n    [blocked]\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "MethodImplementation",
+          "MethodSignature",
+          "FormalMethodParameter",
+          "Method",
+          "PublicMethodSpecifier"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "FormalMethodParameter",
+          "Method",
+          "MethodImplementation",
+          "MethodSignature",
+          "PublicMethodSpecifier"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/496/embed?act=PCRS&sub=class_truck_setters"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Constructors/Overload/Inheritance",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Classes/Objects",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Classes/Objects",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Classes/Objects",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 2- Objects and Classes",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Classes/Objects",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=474",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=474",
+      "context_name": "Java: CMU15-121 | CMU 15-121 - Intro Data Structures - Fall 2025 > Objects and Classes",
+      "used_at": "2025-09-16T16:41:24.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.048Z"
+}

@@ -1,0 +1,236 @@
+{
+  "id": "6954bccff9187b06cf837597",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2015-02-15T14:55:45.000Z",
+  "updated_at": "2026-01-17T12:57:37.697Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "ae_Measure",
+    "title": "Measure ",
+    "type": "Animated Example"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-java/ae?example-id=ae_Measure&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2015-02-15T14:55:45.000Z",
+    "provider": "JSVEE",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "interface Measurable {\n  int getMeasure();\n}\n\nclass BankAccount {\n  private double balance;\n\n  public BankAccount(int initialBalance) {\n    balance = initialBalance;\n  }\n\n  public int getMeasure() {\n    return balance;\n  }\n}\n\nclass DataSet {\n  private int sum;\n  private Measure maximum;\n  private int count;\n  public DataSet() {\n    sum = 0;\n    count = 0;\n    maximum = null;\n  }\n\n  public void add(Measurable x) {\n    sum = sum + x.getMeasure();\n    if (count == 0 || maximum.getMeasure() < x.getMeasure())\n        maximum = x;\n    count++;\n  }\n  public Measurable getMaximum() {\n    return maximum;\n  }\n}\n\npublic class DataSetTester {\n  public static void main(String[] args) {\n    DataSet bankData = new DataSet();\n    bankData.add(new BankAccount(0));\n    bankData.add(new BankAccount(10000));\n    bankData.add(new BankAccount(2000));\n    Measurable max = bankData.getMaximum();\n    System.out.println(\"Highest balance: \" + max.getMeasure());\n  }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "parser": {
+        "concepts": [
+          "MethodDefinition",
+          "MethodDefinition",
+          "ObjectCreationStatement",
+          "ObjectCreationStatement",
+          "ObjectCreationStatement",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "ObjectMethodInvocation",
+          "ObjectMethodInvocation",
+          "ObjectMethodInvocation",
+          "ObjectMethodInvocation",
+          "ObjectMethodInvocation",
+          "ObjectMethodInvocation",
+          "OrExpression",
+          "PolymorphicObjectCreationStatement",
+          "PolymorphicObjectCreationStatement",
+          "PolymorphicObjectCreationStatement",
+          "PostIncrementExpression",
+          "PrivateFieldSpecifier",
+          "PrivateFieldSpecifier",
+          "PrivateFieldSpecifier",
+          "PrivateFieldSpecifier",
+          "PublicClassSpecifier",
+          "PublicConstructorSpecifier",
+          "PublicConstructorSpecifier",
+          "PublicMethodSpecifier",
+          "PublicMethodSpecifier",
+          "PublicMethodSpecifier",
+          "PublicMethodSpecifier",
+          "ReturnStatement",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "SimpleVariable",
+          "SimpleVariable",
+          "SimpleVariable",
+          "StaticMethodSpecifier",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "VoidDataType",
+          "VoidDataType",
+          "AbstractMethodDefinition",
+          "ActualMethodParameter",
+          "ActualMethodParameter",
+          "ActualMethodParameter",
+          "ActualMethodParameter",
+          "AddExpression",
+          "ClassDefinition",
+          "ClassDefinition",
+          "ClassDefinition",
+          "ClassDefinition",
+          "ConstructorCall",
+          "ConstructorCall",
+          "ConstructorCall",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "ConstructorDefinition",
+          "DoubleDataType",
+          "EqualExpression",
+          "FormalMethodParameter",
+          "FormalMethodParameter",
+          "FormalMethodParameter",
+          "IfStatement",
+          "InstanceField",
+          "InstanceField",
+          "InstanceField",
+          "InstanceField",
+          "IntDataType",
+          "IntDataType",
+          "IntDataType",
+          "IntDataType",
+          "IntDataType",
+          "InterfaceBasedPolymorphism",
+          "InterfaceBasedPolymorphism",
+          "InterfaceBasedPolymorphism",
+          "InterfaceDefinition",
+          "java.lang.System.out.println",
+          "LessExpression",
+          "MethodDefinition",
+          "MethodDefinition"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-java/ae?example-id=ae_Measure"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=13",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=13",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] - Animated Examples > Interfaces",
+      "used_at": "2014-09-09T15:38:38.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=21",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=21",
+      "context_name": "Java: INFSCI 0017 2 | Demo Course 2 > Interfaces",
+      "used_at": "2015-04-15T13:10:54.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=29",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=29",
+      "context_name": "Java: INFSCI 0017 | mg-gs-demo > Interfaces",
+      "used_at": "2015-09-14T11:10:25.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=31",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_name": "Java: INFSCI 0017 | roya-clone-test-java > Interfaces",
+      "used_at": "2015-12-08T17:16:50.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=32",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=32",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 > Interfaces",
+      "used_at": "2016-01-15T10:31:22.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=339",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=339",
+      "context_name": "Java: INFSCI 0017 | Java Study 2016 A > Interfaces",
+      "used_at": "2016-11-02T14:34:05.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=361",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=361",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 (QJ-AE-PCEX-PCRS) > Interfaces",
+      "used_at": "2018-09-11T14:14:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=366",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=366",
+      "context_name": "Java: INFSCI 0017 | CSEdPad course v1 (all Java content) > Interfaces",
+      "used_at": "2018-10-18T16:24:57.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=374",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=374",
+      "context_name": "Java: INFSCI 0017 | Java Course (AE-QP-PCEX-CodeWorkout) > Interfaces",
+      "used_at": "2019-05-31T05:04:44.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=382",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=382",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v3 > Interfaces",
+      "used_at": "2020-01-11T16:29:42.000Z",
+      "used_by": "Zak Risha, Zak Risha - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.163Z"
+}

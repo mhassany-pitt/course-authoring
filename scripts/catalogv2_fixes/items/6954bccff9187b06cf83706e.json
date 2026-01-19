@@ -1,0 +1,81 @@
+{
+  "id": "6954bccff9187b06cf83706e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-09-16T11:35:08.000Z",
+  "updated_at": "2026-01-17T05:28:37.985Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_list_of_remainders1",
+    "title": "Construct a function that returns a list of remainders from the input.",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_of_remainders1&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2021-09-16T11:35:08.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a function which calculates the remainder of each element of the first list and the element with the same index in the second list. The remainders are stored in a new list. If the number in the second list is 0, the function should directly add number 2 to the new list instead of the remainder.",
+    "source_code": "def list_of_remainders(list1, list2):\n    new_list = []\n    if len(list1) == len(list2):\n        for i in range(len(list1)):\n            if list2[i] == 0:\n                new_list.append(2)\n            else:\n                result = list1[i] % list2[i]\n                new_list.append(result)\n    return new_list\n\nlist1 = [19, 3, 4, 2]\nlist2 = [4, 2, 1, 0]\nprint(list_of_remainders(list1, list2))\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_of_remainders1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=428",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=428",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2023 (Python II) > Halfweek 2 - Hands-On Python",
+      "used_at": "2023-05-02T00:12:59.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=431",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=431",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2024 (Python II) > Halfweek 2 - Hands-On Python",
+      "used_at": "2024-05-03T14:17:30.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.029Z"
+}

@@ -1,0 +1,136 @@
+{
+  "id": "6954bccff9187b06cf836d46",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-11T13:58:04.000Z",
+  "updated_at": "2026-01-17T05:27:01.395Z",
+  "tags": [],
+  "identity": {
+    "id": "Informar Informacion del Archivo (Caso 2)__6848b40edf5ea13f28e43a71-6848b40adf5ea13f28e43a6f-1",
+    "title": "Informar Informacion del Archivo (Caso 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6848b40edf5ea13f28e43a71?_t=1750131418247&index=1&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-11T13:58:04.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construir un programa que reciba la ruta completa a un archivo de entrada del usuario, lea ese archivo e informe el n\u00famero de l\u00edneas, la l\u00ednea m\u00e1s larga, el n\u00famero de palabras en cada l\u00ednea y la longitud de la palabra m\u00e1s larga en cada l\u00ednea. Aseg\u00farate de que el programa maneje cada excepci\u00f3n espec\u00edfica que podr\u00eda ocurrir. Adem\u00e1s, el programa debe pedir al usuario una ruta de archivo v\u00e1lida hasta que el usuario ingrese una ruta de archivo que se pueda acceder sin ninguna excepci\u00f3n.",
+    "source_code": "#Paso 1: Definir la funci\u00f3n que obtiene la ruta de archivo v\u00e1lida\ndef obtener_archivo():\n    valido = False\n    while not valido : \n        try:\n            nombre_archivo = input(\"Ingresa la ruta completa de un archivo: \")\n            mi_archivo = open( nombre_archivo, \"r\") \n            mi_archivo.close()\n            valido = True\n        except FileNotFoundError:\n            print(\"Archivo no encontrado.\")\n        except IOError:\n            print(\"\u00a1Problema con el archivo!\")\n    return nombre_archivo\n#Paso 2: Definir la funci\u00f3n que procesa el archivo\ndef obtener_estadisticas(nombre_archivo):\n    #Paso 2.1: Asignar valor inicial a la variable que necesitamos para informar la informaci\u00f3n del archivo\n    num_lineas = 0\n    linea_mas_larga = \"\"\n    #Paso 2.2: Encerrar el c\u00f3digo que podr\u00eda lanzar una excepci\u00f3n dentro del bloque try\n    try :\n        #Paso 2.2.1: Abrir el archivo y procesar cada l\u00ednea en el archivo\n        mi_archivo = open( nombre_archivo, \"r\")\n        for linea in mi_archivo:\n            num_lineas += 1\n            num_palabras = len(linea.split())\n            #Determinar si la l\u00ednea es la l\u00ednea m\u00e1s larga hasta ahora\n            if (len(linea) > len(linea_mas_larga)) :\n                linea_mas_larga = linea\n            #Encontrar la longitud de la palabra m\u00e1s larga en la l\u00ednea\n            palabra_mas_larga = 0\n            for p in linea.split() :\n                if len(p) > palabra_mas_larga :\n                    palabra_mas_larga = len(p)\n            #Imprimir la informaci\u00f3n de la l\u00ednea\n            print(\"L\u00ednea \" + str(num_lineas) + \" tiene \" + str(num_palabras) + \" tokens (m\u00e1s larga = \" + str(palabra_mas_larga) + \")\")\n        print(\"L\u00ednea m\u00e1s larga:\" + linea_mas_larga)\n        #Paso 2.2.2: Cerrar el archivo\n        mi_archivo.close()\n    #Paso 2.3: Manejar todas las posibles excepciones que pueden ser lanzadas en el bloque try \n    except FileNotFoundError:\n        print(\"Archivo no encontrado.\")\n    except IOError:\n        print(\"\u00a1Problema con el archivo!\")\n#Paso 3: Llamar a las funciones\nobtener_estadisticas( obtener_archivo() )"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "TransformingToStringType",
+          "ClosingFile",
+          "SingleWhileLoopIteration",
+          "NestedFunctionCall",
+          "FindingLength",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "NestedForLoopIteration",
+          "IfCheckingInForLoop",
+          "CreatingString",
+          "Addition",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "HandlingSpecificError",
+          "SplittingString",
+          "Printing",
+          "DefiningSimpleFunction",
+          "OpeningFile",
+          "ForLoopWith",
+          "ChangingValueVariable",
+          "SingleForLoopIteration",
+          "ReadingLine",
+          "Concatenation",
+          "TransformingToStringType",
+          "ClosingFile",
+          "SingleWhileLoopIteration",
+          "NestedFunctionCall",
+          "FindingLength",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "NestedForLoopIteration",
+          "IfCheckingInForLoop",
+          "CreatingString",
+          "Addition",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "HandlingSpecificError",
+          "SplittingString",
+          "Printing",
+          "DefiningSimpleFunction",
+          "OpeningFile",
+          "ForLoopWith",
+          "ChangingValueVariable",
+          "SingleForLoopIteration",
+          "ReadingLine",
+          "Concatenation"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6848b40edf5ea13f28e43a71?_t=1750131418247&index=1&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Procesamiento de texto y archivos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Manejo de archivos/texto",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.932Z"
+}

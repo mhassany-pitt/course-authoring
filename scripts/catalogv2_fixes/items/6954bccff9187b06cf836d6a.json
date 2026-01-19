@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836d6a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-04T17:19:17.000Z",
+  "updated_at": "2026-01-17T05:27:05.847Z",
+  "tags": [],
+  "identity": {
+    "id": "py_pythagorean_theorem__664e23fd91363872f0ba32ea",
+    "title": "Pythagorean Theorem (Case 1)",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e23fd91363872f0ba32ea?_t=1749071975286&index=0"
+  },
+  "attribution": {
+    "created_at": "2025-06-04T17:19:17.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that accepts two input values from the user, one for each side of a right-angle triangle. The program uses the Pythagorean theorem (c^2 = a^2 + b^2) to calculate the length of the triangle's hypotenuse.",
+    "source_code": "#Step 1: Receive the values for each side of a right-angle triangle\ntext = input(\"Enter the length of side A:\")\nside_A = float(text)\ntext = input(\"Enter the length of side B:\")\nside_B = float(text)\n#Step 2: Calculate square of side A\nsquareside_A = side_A ** 2\n#Step 3: Calculate square of side B\nsquareside_B = side_B ** 2\n#Step 4: Use Pythagorean theorem to calculate the length of the triangle's hypotenuse\nhypotenuse = ( squareside_A + squareside_B ) ** 0.5\n#Step 5: Print the result\nprint(\"Given that side A is\", side_A, \"and side B is\", side_B, \", the hypotenuse is\", hypotenuse)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e23fd91363872f0ba32ea?_t=1749071975286&index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.937Z"
+}

@@ -1,0 +1,117 @@
+{
+  "id": "6954bccff9187b06cf837181",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-09T19:20:19.000Z",
+  "updated_at": "2026-01-17T12:41:54.608Z",
+  "tags": [],
+  "identity": {
+    "id": "py_adjacent_greater",
+    "title": "Comparing Adjacent Numbers in a Sequence of Numbers (Case 3)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_check_adjacent&ch=py_adjacent_greater"
+  },
+  "attribution": {
+    "created_at": "2020-08-09T19:20:19.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that checks whether a sequence of non-zero numbers, entered one at a time, contains adjacent numbers in ascending order. Numbers are said to be in ascending order when they are arranged from the smallest to the largest number. For example, 5, 9, 13, 17 and 21 are arranged in ascending order.\\nNote that you need to think what value should the program use to indicate the end of the input.",
+    "source_code": "#Step 1: Read the first number that the user enters\ntext = input(\"Enter a number: \")\nnum = float(text)\n#Step 2: Read the rest of the numbers that the user enters and check for adjacent numbers in ascending order\nwhile num != 0 :\n    previous = num\n    text = input(\"Enter a number: \")\n    num = float(text)     \n    if num != 0 and num > previous :\n        print(previous,\"and\", num, \"are in ascending order.\") "
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleWhileLoopIteration",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "Printing",
+          "IfCheckingInWhileLoop",
+          "ChangingValueVariable",
+          "CreatingString",
+          "TransformingToFloatType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AssigningValueVariable",
+          "BooleanEvaluating",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "CreatingString",
+          "HandlingInput",
+          "IfCheckingInWhileLoop",
+          "Printing",
+          "SingleWhileLoopIteration",
+          "TransformingToFloatType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_check_adjacent&ch=py_adjacent_greater"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > While Loops",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > While Loops",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.062Z"
+}

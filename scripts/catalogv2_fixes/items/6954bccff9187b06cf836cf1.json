@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836cf1",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:18:26.000Z",
+  "updated_at": "2026-01-17T05:26:51.055Z",
+  "tags": [],
+  "identity": {
+    "id": "Determining When at Least One of the Three Boolean Variables is False__68bdb309f6cc3d7a9cc09761-68bdb308f6cc3d7a9cc0975c-1",
+    "title": "Determining When at Least One of the Three Boolean Variables is False",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09761?_t=1757557106275&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:18:26.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that determines whether at least one of the three boolean variables is false based on the inputs that it receives from the user.",
+    "source_code": "import java.util.Scanner;\npublic class JThreeBoolean2 {\n\tpublic static void main(String[] args) {\n\t\t//Step 1: Read the user inputs\n\t\tScanner scan = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter the value of the 1st boolean variable (true or false):\");\n\t\tboolean a = scan.nextBoolean();\t\t\n\t\tSystem.out.println(\"Enter the value of the 2nd boolean variable (true or false):\");\n\t\tboolean b = scan.nextBoolean();\t\n\t\tSystem.out.println(\"Enter the value of the 3rd boolean variable (true or false):\");\n\t\tboolean c = scan.nextBoolean();\t\t\n\t\tscan.close();\n\t\t//Step 2: Write the boolean expression to determine whether at least one of the three boolean variables is false\n\t\tboolean value = !(a && b && c);\n\t\tSystem.out.println(value);\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09761?_t=1757557106275&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Boolean Expressions",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Boolean Expressions",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > Boolean Expressions",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.919Z"
+}

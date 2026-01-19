@@ -1,0 +1,96 @@
+{
+  "id": "6954bccff9187b06cf837639",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:02.732Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "digcount.c",
+    "title": "IS12:: digcount.c (10.1)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=digcount.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*  Example 8.4 Digit Counting\n\u00a0\u00a0\u00a0\u00a0Source: K&R2, p.22\n\u00a0*/\n\n#include <stdio.h>\n\n/* count digits, white space, others */\n\nmain () {\n\u00a0\u00a0\u00a0\u00a0int c, i, nwhite, nother;\n\u00a0\u00a0\u00a0\u00a0int ndigit[10];\n\n\u00a0\u00a0\u00a0\u00a0/* initialize */\n\u00a0\u00a0\u00a0\u00a0nwhite = nother = 0;\n\u00a0\u00a0\u00a0\u00a0for(i = 0; i < 10; ++i) ndigit[i] = 0;\n\n\u00a0\u00a0\u00a0\u00a0/* count */\n\u00a0\u00a0\u00a0\u00a0while ((c = getchar()) != EOF)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (c >= '0' && c <= '9')\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++ndigit[c - '0'];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if (c == ' ' || c == '\n' || c == '\u00a0\u00a0\u00a0\u00a0')\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++nwhite;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++nother;\n\n\u00a0\u00a0\u00a0\u00a0/* report */\n\u00a0\u00a0\u00a0\u00a0printf(\"digits =\");\n\u00a0\u00a0\u00a0\u00a0for(i = 0; i < 10; ++i)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\" %d\", ndigit[i]);\n\u00a0\u00a0\u00a0\u00a0printf(\", white space = %d, other = %d\n\", nwhite, nother);\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "pre_increment",
+          "and",
+          "for",
+          "if_else",
+          "while",
+          "array_declaration",
+          "equal",
+          "less_equal",
+          "simple_assignment",
+          "int",
+          "greater_equal",
+          "or",
+          "main_function",
+          "not_equal",
+          "less",
+          "variable_declaration",
+          "include",
+          "printf",
+          "sub"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=digcount.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.176Z"
+}

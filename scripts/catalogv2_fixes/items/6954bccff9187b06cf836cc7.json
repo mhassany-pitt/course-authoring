@@ -1,0 +1,81 @@
+{
+  "id": "6954bccff9187b06cf836cc7",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:25:57.000Z",
+  "updated_at": "2026-01-17T05:26:45.792Z",
+  "tags": [],
+  "identity": {
+    "id": "objects.classes.loan__68bdb308f6cc3d7a9cc096bf",
+    "title": "The Class for Representing a Loan (Case 1)",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096bf?_t=1757557557305&index=0"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:25:57.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a class that represents a loan. This class should contain data representing the interest rate, loan amount, and the length of loan period (in years). The class should have constructors that permits a loan to be created when:\n - annual interest rate, length of loan period, and loan amount are specified\\n - none of the properties of the loan are specified. In this, we create a loan with default values for the loan properties (3 % interest rate, 1-year loan period, and 1000 loan amount).\nThe other method of the this class should calculate the amount of monthly payments on the loan.\n\nThe LoanTester1 class instantiates an object from this class and invokes its method to determine the amount of monthly payments on the loan.",
+    "source_code": "import java.text.NumberFormat;\nimport java.util.Scanner;\npublic class LoanTester1 {\n\tpublic static void main(String[] args) {\n\t\tScanner input = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter the annual interest rate: \");\n\t\tdouble annualInterestRate = input.nextDouble();\n\t\tSystem.out.println(\"Enter the number of years for the loan period: \");\n\t\tint numberOfYears = input.nextInt();\n\t\tSystem.out.println(\"Enter the loan amount: \");\n\t\tdouble loanAmount =  input.nextDouble();\n\t\tLoan1 loan = new Loan1(annualInterestRate, numberOfYears, loanAmount);\n\t\tNumberFormat fmt = NumberFormat.getCurrencyInstance();\n\t\tSystem.out.println(\"The monthly paymenst for the loan is: \" + fmt.format(loan.getMonthlyPayment()));\n\t}\n}\nclass Loan1 {\n\t//Step 1: Declare the instance variables \n\tprivate double annualInterestRate;\n\tprivate int numberOfYears;\n\tprivate double loanAmount;\n\t//Step 2: Define the constructor to create a loan with the specified values \n\tpublic Loan1(double annualInterestRate, int numberOfYears, double loanAmount) {\n\t\tthis.annualInterestRate = annualInterestRate;\n\t\tthis.numberOfYears = numberOfYears;\n\t\tthis.loanAmount = loanAmount;\n\t}\n\t//Step 3: Define the constructor to create a loan without specifying any value \n\tpublic Loan1() {\n\t\tthis(0.03, 1, 1000);\n\t}\n\t//Step 4: Define the method that calculates the amount of monthly payments on the loan\n\tpublic double getMonthlyPayment() {\n\t\tdouble monthlyInterestRate = annualInterestRate / 12;\n\t\tdouble monthlyPayment = loanAmount * monthlyInterestRate / (1 -\n\t\t\t\t(1 / Math.pow(1 + monthlyInterestRate, numberOfYears * 12)));\n\t\treturn monthlyPayment;    \n\t}\n\t//Step 5: Define the methods to get/set the properties of the loan\n\tpublic double getAnnualInterestRate() {\n\t\treturn annualInterestRate;\n\t}\n\tpublic void setAnnualInterestRate(double annualInterestRate) {\n\t\tthis.annualInterestRate = annualInterestRate;\n\t}\n\tpublic int getNumberOfYears() {\n\t\treturn numberOfYears;\n\t}\n\tpublic void setNumberOfYears(int numberOfYears) {\n\t\tthis.numberOfYears = numberOfYears;\n\t}\n\tpublic double getLoanAmount() {\n\t\treturn loanAmount;\n\t}\n\tpublic void setLoanAmount(double loanAmount) {\n\t\tthis.loanAmount = loanAmount;\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096bf?_t=1757557557305&index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Objects and Classes",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > Objects and Classes",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.915Z"
+}

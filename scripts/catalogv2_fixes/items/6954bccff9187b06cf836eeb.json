@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836eeb",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:02.018Z",
+  "tags": [],
+  "identity": {
+    "id": "py_closed_interval_es",
+    "title": "PCRS C3-PL  Closed Interval",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/311/embed?act=PCRS&sub=py_closed_interval_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Agregar un Intervalo CerradoEscribe una funcion que tome como entrada una lista mil de intervalos cerrados disjuntos con puntos finales enteros,ordenados por orden creciente del punto final izquierdo, y un intervalo intervalo, y devuelva la union de intervalocon los intervalos en A, expresada como una union de intervalos disjuntos. Ejemplo[(1, 2)], (3, 4)-> [(1, 2), (3, 4)][(3, 4)], (1, 2)-> [(1, 2), (3, 4)][(0, 2), (3, 6), (7, 7), (9, 12)], (1, 8) -> [(0, 8), (9, 12)]",
+    "source_code": "[student_code]\ndef agregar_intervalo(mil, intervalo):\n    # Inicializar la lista de resultados\n    resultado = []\n    i = 0\n    n = len(mil)\n    \n    # Agregar todos los intervalos que vienen antes del nuevo intervalo\n    while i < n and mil[i][1] < intervalo[0]:\n        resultado.append(mil[i])\n        i += 1\n    \n    # Fusionar todos los intervalos que se superponen con el nuevo intervalo\n    while i < n and mil[i][0] <= intervalo[1]:\n        intervalo = (min(intervalo[0], mil[i][0]), max(intervalo[1], mil[i][1]))\n        i += 1\n    \n    # Agregar el nuevo intervalo fusionado\n    resultado.append(intervalo)\n    \n    # Agregar los intervalos restantes\n    while i < n:\n        resultado.append(mil[i])\n        i += 1\n    \n    return resultado\n\n# Ejemplo de uso\nmil = [(0, 2), (3, 6), (7, 7), (9, 12)]\nintervalo = (1, 8)\nprint(agregar_intervalo(mil, intervalo))  # Salida: [(0, 8), (9, 12)]\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/311/embed?act=PCRS&sub=py_closed_interval_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.976Z"
+}

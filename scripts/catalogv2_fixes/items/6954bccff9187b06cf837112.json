@@ -1,0 +1,127 @@
+{
+  "id": "6954bccff9187b06cf837112",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-02-16T03:28:36.000Z",
+  "updated_at": "2026-01-17T05:28:55.663Z",
+  "tags": [],
+  "identity": {
+    "id": "while_n_to_20",
+    "title": "while_n_to_20",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/488/embed?act=PCRS&sub=while_n_to_20"
+  },
+  "attribution": {
+    "created_at": "2021-02-16T03:28:36.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Write a program that increments an integer input, n, to m, but breaks away if the increment ever becomes a multiple of 7.  Assume an integer named n is already defined for you and use that to increment.  Additionally, assume an integer m is already defined for you, which will act as your limit to increment towards (note: you should be able to increment up to m, but not past it).  Store the number of times that you loop through into an integer variable called count, which is also already defined, but not initialized.Examples:- If n = 8 and m = 20, the total number of loops will be 6 (since we encounter 14 along the way).- If n = -6 and m = 12, the total number of loops will be 14 (since we encounter 7 along the way).- If n = 9 and m = 10, the total number of loops will be 1 (since we get to m without encountering any multiples of 7).Note that 0 should not be a valid multiple of 7 at any point in your iterations.",
+    "source_code": "[file SCode.java]\n[blocked]\nint count;\n[/blocked]            \n[student_code]\n// TO-DO: Add your code here (use a while loop).\n// Increment n for each loop that is not a multiple of 7 all the way to m.\n// Increment count for each time you loop through.\n        \n[/student_code]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "BooleanExpression",
+          "ModulusExpression",
+          "WhileStatement",
+          "AddExpression",
+          "BooleanExpression",
+          "ModulusExpression",
+          "WhileStatement",
+          "AddExpression",
+          "BooleanExpression",
+          "ModulusExpression",
+          "WhileStatement",
+          "AddExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "AddExpression",
+          "BooleanExpression",
+          "ModulusExpression",
+          "WhileStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/488/embed?act=PCRS&sub=while_n_to_20"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Loops",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Loops",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Loops",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Loops",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.050Z"
+}

@@ -1,0 +1,81 @@
+{
+  "id": "6954bccff9187b06cf836cfd",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:16:27.000Z",
+  "updated_at": "2026-01-17T05:26:52.431Z",
+  "tags": [],
+  "identity": {
+    "id": "Counting the Number of Valid and Banned Product Codes (Case 2) __68bdb309f6cc3d7a9cc0978c-68bdb309f6cc3d7a9cc0978a-1",
+    "title": "Counting the Number of Valid and Banned Product Codes (Case 2) ",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc0978c?_t=1757556987730&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:16:27.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Suppose a hypothetical company uses codes to represent its various products. A product code includes, among other information, a character in the tenth position that represents the zone from which that product was made, and a four-digit integer representing the district in which it will be sold. This four-digit integer begins at the 4th character and extends to the 7th character in the input code (inclusive). Due to some reorganization, products from zone R are banned from being sold in districts with a designation of 2000 or higher.\\nConstruct a program that reads product codes from the user and counts the number of valid and banned codes entered. Make sure that the program handles all possible exceptions.\\nThe program must ask the user for an input until the user enters STOP.",
+    "source_code": "import java.util.Scanner;\npublic class JCheckProductCode2 {\n\tpublic static void main(String[] args) {\n\t\tJCheckProductCode2 p2 = new JCheckProductCode2();\n\t\tp2.checkProductCode();\n\t}\n\t//Step 1: Define the method\n\tpublic void checkProductCode() {\n\t\t//Step 1.1: Define the variables that we need for counts\n\t    int valid = 0;\n\t    int banned = 0;\n\t    //Step 1.2: Ask for a valid input as long as the user does'nt enter STOP; otherwise stop\n\t\tScanner scan = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter product code:\");\n\t\tString code = scan.next();\t    \n\t    while ( ! code.equals(\"STOP\") ) {\n\t    \t //Step 1.2.1: Enclose the code that might throw an exception within the try block\n\t        try {\n\t            char zone = code.charAt(9);\n\t            int district = Integer.parseInt(code.substring(3, 7));\n\t            valid += 1;\n\t            if (zone == 'R' && district >= 2000) {\n\t                banned += 1;\n\t            }\n\t        }\n\t        //Step 1.2.2: Handle all possible exceptions that may be thrown in the try block \n\t       catch (IndexOutOfBoundsException ex ) {                    \n\t            System.out.println(\"Improper code length.\");\n\t       } \n\t\tcatch (NumberFormatException ex ) {                   \n\t\t\tSystem.out.println(\"Error! District is not numeric.\");\n\t\t}\n\t\t\tSystem.out.println(\"Enter product code:\");\n\t\t\tcode = scan.next();\n\t    }\n\t    //Step 1.3: Print the result    \n\t    System.out.println(\"# of valid codes entered: \" + valid);\n\t    System.out.println(\"# of banned codes entered: \"+ banned);\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc0978c?_t=1757556987730&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Exceptions",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Exception handling",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.920Z"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf837063",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-09-16T11:35:09.000Z",
+  "updated_at": "2026-01-17T05:28:36.864Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_even_first2",
+    "title": "Reorganize the list",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_even_first2&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2021-09-16T11:35:09.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a function which partition the original list of integers such that all even numbers come first and all odd numbers come after them.",
+    "source_code": "def even_first(num_list):\n    i = 0\n    j = len(num_list) - 1\n    while i < j:\n        while i < j and num_list[i] % 2 == 0:\n            i += 1\n        while i < j and num_list[j] % 2 != 0:\n            j -= 1\n        if i < j:\n            temp = num_list[i]\n            num_list[i] = num_list[j]\n            num_list[j] = temp\n    return num_list\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_even_first2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.028Z"
+}

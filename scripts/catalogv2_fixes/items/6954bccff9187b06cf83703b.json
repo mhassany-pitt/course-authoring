@@ -1,0 +1,77 @@
+{
+  "id": "6954bccff9187b06cf83703b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2022-01-26T11:59:06.000Z",
+  "updated_at": "2026-01-17T13:18:45.470Z",
+  "tags": [
+    "TODO:add-prompt",
+    "TODO:add-source-code"
+  ],
+  "identity": {
+    "id": "pfe-3-4",
+    "title": "pfe-3-4",
+    "type": "ReadingMirror"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/ereader/reader/7/pfe-3-4/"
+  },
+  "attribution": {
+    "created_at": "2022-01-26T11:59:06.000Z",
+    "provider": "ReadingMirror",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": null,
+    "source_code": null
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/ereader/reader/7/pfe-3-4/"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=420",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=420",
+      "context_name": "Python: PYTHON001 | Utrecht-Python-Textbook > Lecture 4",
+      "used_at": "2022-02-01T14:15:04.000Z",
+      "used_by": "Alireza, Sabet - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.023Z"
+}

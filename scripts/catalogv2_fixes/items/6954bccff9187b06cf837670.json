@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837670",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:10.261Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fig05_12.c",
+    "title": "fig05_12.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig05_12.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 5.12: fig05_12.c\n\u00a0\u00a0\u00a0A scoping example */\n#include <stdio.h>\n\nvoid useLocal( void );\nvoid useStaticLocal( void );\nvoid useGlobal( void );\nint x = 1;\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int x = 5;\n\u00a0\u00a0\u00a0printf(\"local x in outer scope of main is %d\\n\", x );\n\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int x = 7;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"local x in inner scope of main is %d\\n\", x );\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0printf( \"local x in outer scope of main is %d\\n\", x );\n\n\u00a0\u00a0\u00a0useLocal();\n\u00a0\u00a0\u00a0useStaticLocal();\n\u00a0\u00a0\u00a0useGlobal();\n\u00a0\u00a0\u00a0useLocal();\n\u00a0\u00a0\u00a0useStaticLocal();\n\u00a0\u00a0\u00a0useGlobal();\n\n\u00a0\u00a0\u00a0printf( \"\\nlocal x in main is %d\\n\", x );\n\u00a0\u00a0\u00a0return 0;\n}\n\nvoid useLocal( void )\n{\n\u00a0\u00a0\u00a0int x = 25;\n\u00a0\u00a0\u00a0printf( \"\\nlocal x in useLocal is %d after entering useLocal\\n\", x );\n\u00a0\u00a0\u00a0x++;\n\u00a0\u00a0\u00a0printf( \"local x in useLocal is %d before exiting useLocal\\n\", x );\n}\n\nvoid useStaticLocal( void )\n{\n\u00a0\u00a0\u00a0static int x = 50;\n\u00a0\u00a0\u00a0printf( \"\\nlocal static x is %d on entering useStaticLocal\\n\", x );\n\u00a0\u00a0\u00a0x++;\n\u00a0\u00a0\u00a0printf( \"local static x is %d on exiting useStaticLocal\\n\", x );\n}\n\nvoid useGlobal( void )\n{\n\u00a0\u00a0\u00a0printf( \"\\nglobal x is %d on entering useGlobal\\n\", x );\n\u00a0\u00a0\u00a0x *= 10;\n\u00a0\u00a0\u00a0printf( \"global x is %d on exiting useGlobal\\n\", x );\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig05_12.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.179Z"
+}

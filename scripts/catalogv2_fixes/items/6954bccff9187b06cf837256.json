@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf837256",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2018-01-22T00:59:22.000Z",
+  "updated_at": "2026-01-17T05:29:34.591Z",
+  "tags": [],
+  "identity": {
+    "id": "sum_square_difference",
+    "title": "Sum square difference",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/384/embed?act=PCRS&sub=sum_square_difference"
+  },
+  "attribution": {
+    "created_at": "2018-01-22T00:59:22.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The sum of the squares of the first ten natural numbers is,1^2 + 2^2 + ... + 10^2 = 385The square of the sum of the first ten natural numbers is,(1 + 2 + ... + 10)^2 = 552 = 3025Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 \u2212 385 = 2640.Write a method that finds the difference between the sum of the squares of the first n natural numbers and the square of the sum.",
+    "source_code": "[file SCode.java]\n[blocked]\npublic long differenceOfSquares(long n) {\n    long difference;\n[/blocked]\n[student_code]\n// TODO: Write your code here\n[/student_code]\n[blocked]\n\treturn difference;\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/384/embed?act=PCRS&sub=sum_square_difference"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=352",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=352",
+      "context_name": "Java: INFSCI 0017 | Norway-Spring2018 Java Course > For Loops",
+      "used_at": "2018-01-15T17:35:55.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.086Z"
+}

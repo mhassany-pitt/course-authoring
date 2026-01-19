@@ -1,0 +1,156 @@
+{
+  "id": "6954bccff9187b06cf8371b2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-01-21T11:13:21.000Z",
+  "updated_at": "2026-01-17T05:29:12.995Z",
+  "tags": [],
+  "identity": {
+    "id": "inches_to_feet",
+    "title": "inches_to_feet",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/420/embed?act=PCRS&sub=inches_to_feet"
+  },
+  "attribution": {
+    "created_at": "2020-01-21T11:13:21.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following code in order to calculate the height of a person in feet, given that his/her height is heightInInches inches. Assume that the initial value of variable heightInInches is already set to a positive integer.You need to convert the given heightInInches to feet. For example, 12 inches is 1 foot. Define a variable called heightInFeet and set the height in feet value to this variable. E.g. 1: If the value of heightInInches is 78, the code prints \"Height in feet: 6.5\" (without the quotations). Please pay attention to the white spaces!E.g. 2: If the value of heightInInches is 84, the code prints \"Height in feet: 7.0\" (without the quotations). Please pay attention to the white spaces!",
+    "source_code": "[file SCode.java]\n[student_code]\n// IMPORTANT: YOU DO NOT HAVE TO DEFINE THE MAIN CLASS. Directly write your answer here\n// Set the height in feet value to a variable called heightInFeet. \n        \n       \n[/student_code]\n[blocked]\nSystem.out.println(\"Height in feet: \" + heightInFeet);\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "SimpleVariable",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "DivideExpression",
+          "java.lang.System.out.println"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "DivideExpression",
+          "DoubleDataType",
+          "java.lang.System.out.println",
+          "SimpleAssignmentExpression",
+          "SimpleVariable"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/420/embed?act=PCRS&sub=inches_to_feet"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Variables and Datatypes",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Variables and Datatypes",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Variables and Datatypes",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Variables and Datatypes",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Variables and Datatypes",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=442",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=442",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2024) > Arithmetic Operations",
+      "used_at": "2024-09-10T16:51:32.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=443",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=443",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2024) Alternative Order > Arithmetic Operations",
+      "used_at": "2024-09-10T18:36:13.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Variables and Datatypes",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Arithmetic Operations",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.067Z"
+}

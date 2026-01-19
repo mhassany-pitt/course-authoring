@@ -1,0 +1,135 @@
+{
+  "id": "6954bccff9187b06cf83715d",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-09T19:21:44.000Z",
+  "updated_at": "2026-01-17T12:41:49.575Z",
+  "tags": [],
+  "identity": {
+    "id": "py_list_min",
+    "title": "Finding the Min/Max Value in a List",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_list_min_max&ch=py_list_min"
+  },
+  "attribution": {
+    "created_at": "2020-08-09T19:21:44.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write a program that finds the minimum value in a list.",
+    "source_code": "#Step 1: Define and initialize the list\nvalues = [5, 8, 4, 78, 95, 12, 1, 0, 6, 35, 46]\n#Step 2: Set the first value to be the minimum value so far.\nmin_value = values[0]\n#Step 3: Iterate through the remaining values in the list and decide which one is the minimum value \nfor i in range(1, len(values)): \n    # Step 3.1: Determine if the element at index i is the minimum value so far\n    if (values[i] < min_value):\n        min_value = values[i]\n#Step 4: Print the minimum value in the list\nprint(\"Minimum value:\", min_value)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleForLoopIteration",
+          "FindingLength",
+          "AssigningValueVariable",
+          "IfCheckingInForLoop",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "Printing",
+          "CreatingList",
+          "IndexingList",
+          "ForLoopWithListIndexing",
+          "NestedFunctionCall",
+          "ChangingValueVariable"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AssigningValueVariable",
+          "BooleanEvaluating",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "CreatingList",
+          "FindingLength",
+          "ForLoopWithListIndexing",
+          "IfCheckingInForLoop",
+          "IndexingList",
+          "NestedFunctionCall",
+          "Printing",
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_min_max&ch=py_list_min"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > Lists",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > Lists",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=413",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Search",
+      "used_at": "2021-08-11T18:22:22.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=424",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=424",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 174 Fall 2022 (Python I) > Search",
+      "used_at": "2022-08-10T17:36:39.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.058Z"
+}

@@ -1,0 +1,136 @@
+{
+  "id": "6954bccff9187b06cf836d4e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-10T13:28:09.000Z",
+  "updated_at": "2026-01-17T05:27:02.348Z",
+  "tags": [],
+  "identity": {
+    "id": "Informe de las Horas Totales Trabajadas por Cada Empleado (Caso 2)__682dcb6866a8e1b992c82b12-682dcb4266a8e1b992c82b10-1",
+    "title": "Informe de las Horas Totales Trabajadas por Cada Empleado (Caso 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dcb6866a8e1b992c82b12?_t=1750184407445&index=1&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-10T13:28:09.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Isaac Alpizar-Chacon",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Supongamos que tenemos un archivo de entrada que contiene informaci\u00f3n sobre cu\u00e1ntas horas ha trabajado cada empleado de una empresa. El archivo se ve de la siguiente manera (N\u00famero de identificaci\u00f3n del empleado, Nombre del empleado, Horas):\\n101 Erica 7.5 8.5 10.25 8 8.5\\n783 Erin 10.5 11.5 12 11 10.75\\n114 Simone 8 8 8\\n...\\nConstruya un programa que lea este archivo y calcule el n\u00famero total de horas trabajadas por cada individuo. Aseg\u00farese de que el programa maneje cada excepci\u00f3n espec\u00edfica que podr\u00eda ocurrir.",
+    "source_code": "#Paso 1: Definir la funci\u00f3n\ndef informar_horas_trabajadas(nombre_archivo):\n    #Paso 1.1: Encerrar el c\u00f3digo que podr\u00eda lanzar una excepci\u00f3n dentro del bloque try\n    try :\n        #Paso 1.1.1: Abrir el archivo y procesar cada l\u00ednea en el archivo\n        mi_archivo = open( nombre_archivo, \"r\")\n        for linea in mi_archivo:\n            tokens = linea.split()\n            #Intentar obtener el id del empleado como un n\u00famero\n            try :\n                ide = int(tokens[0])\n            except ValueError :\n                print(\"Error en el id del empleado.\")\n            nombre = tokens[1]\n            total = 0.0;\n            for i in range(2, len(tokens)) :\n                try :\n                    total += float(tokens[i])\n                except ValueError:\n                    print(\"Error en la hora del empleado.\")\n            print(\"Total de horas trabajadas por \" + nombre  + \" = \" + str(total))\n        #Paso 1.1.2: Cerrar el archivo\n        mi_archivo.close()\n    #Paso 1.2: Manejar todas las posibles excepciones que pueden ser lanzadas en el bloque try \n    except FileNotFoundError:\n        print(\"Archivo no encontrado\")\n    except IOError:\n        print(\"\u00a1Problema con el archivo!\")\n#Paso 2: Llamar a la funci\u00f3n\nnombre = input(\"Ingrese la ruta completa de un archivo: \")\ninformar_horas_trabajadas(nombre)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "ClosingFile",
+          "SingleForLoopIteration",
+          "TransformingToFloatType",
+          "FindingLength",
+          "TransformingToIntType",
+          "AssigningValueVariable",
+          "Addition",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "ReadingLine",
+          "TransformingToStringType",
+          "ChangingValueVariable",
+          "HandlingSpecificError",
+          "SplittingString",
+          "Printing",
+          "DefiningSimpleFunction",
+          "OpeningFile",
+          "Concatenation",
+          "ForLoopWithListIndexing",
+          "ForLoopWith",
+          "CreatingString",
+          "CallingSimpleFunction",
+          "NestedForLoopIteration",
+          "ClosingFile",
+          "SingleForLoopIteration",
+          "TransformingToFloatType",
+          "FindingLength",
+          "TransformingToIntType",
+          "AssigningValueVariable",
+          "Addition",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "ReadingLine",
+          "TransformingToStringType",
+          "ChangingValueVariable",
+          "HandlingSpecificError",
+          "SplittingString",
+          "Printing",
+          "DefiningSimpleFunction",
+          "OpeningFile",
+          "Concatenation",
+          "ForLoopWithListIndexing",
+          "ForLoopWith",
+          "CreatingString",
+          "CallingSimpleFunction",
+          "NestedForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dcb6866a8e1b992c82b12?_t=1750184407445&index=1&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Procesamiento de texto y archivos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Manejo de archivos/texto",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.933Z"
+}

@@ -1,0 +1,149 @@
+{
+  "id": "6954bccff9187b06cf836efc",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:03.835Z",
+  "tags": [],
+  "identity": {
+    "id": "py_table_of_foods_es",
+    "title": "Cantidades de comida en diccionario (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/342/embed?act=PCRS&sub=py_table_of_foods_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Eres un cocinero en un restaurante ocupado. Estas escribiendo un programa para ayudarte a organizar cuanto de cada tipo de comida necesitas cocinar. Naturalmente, decides tomar un descanso de cocinar y escribir una funcion para ayudar. Decides que tu funcion tomara un diccionario como parametro donde las claves son las mesas en el restaurante y los valores son listas de strings describiendo la comida que cada mesa ha ordenado. Tu funcion devuelve un diccionario con los totales de cuanta cantidad de cada articulo de comida necesitas cocinar.Por ejemplo, digamos que tienes 5 mesas y 3 platos:Mesas: m1, m2, m3, m4 y m5Platos: Estofado vegetariano, Pastel de carne, PoutineEntrada:Usaras los nombres de las mesas como las claves, y usaras una lista de las comidas ordenadas en cada mesa como valores.Por ejemplo, tu diccionario puede verse asi:{'m1': ['Estofado vegetariano', 'Poutine', 'Estofado vegetariano'],  'm3': ['Pastel de carne', 'Poutine', 'Estofado vegetariano'],  'm4': ['Pastel de carne', 'Pastel de carne']}Salida:Tu funcion debe devolver un diccionario con el plato como la llave, y el numero de veces que ese plato fue ordenado como el valor. Dada la entrada anterior, tu funcion crearia y devolveria un diccionario equivalente al siguiente:{'Estofado vegetariano': 3, 'Poutine': 2, 'Pastel de carne': 3}Aqui hemos comenzado el codigo para ti. Completalo:",
+    "source_code": "[student_code]\r\ndef obtener_cantidades(mesa_a_comidas):\r\n    \"\"\"\"\" (dict de {str: lista de str}) -> dict de {str: int}\r\n\t\r\n    El diccionario mesa_a_comidas tiene nombres de mesas como llaves (por ejemplo, 'm1', 'm2', etc.) y cada valor\r\n    es una lista de comidas ordenadas para esa mesa.\r\n\r\n    Devuelve un diccionario donde cada llave es una comida de mesa_a_comidas y cada\r\n    valor es la cantidad de esa comida que fue ordenada.\r\n\t\r\n    >>> obtener_cantidades({'m1': ['Estofado vegetariano', 'Poutine', 'Estofado vegetariano'], 'm3': ['Pastel de carne', 'Poutine', 'Estofado vegetariano'], 'm4': ['Pastel de carne', 'Pastel de carne']})\r\n    {'Estofado vegetariano': 3, 'Poutine': 2, 'Pastel de carne': 3}\t\r\n    \"\"\"\"\"\r\n\r\n    comida_a_cantidad = {}\r\n\r\n    # Acumula la informacion de la comida aqui.\r\n\r\n    return comida_a_cantidad\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "keys()",
+          "SimpleAssignmentStatement",
+          "IfElifElseChecking",
+          "IfElifElseCheckingInForLoop",
+          "StringLiteral",
+          "CheckingForItem",
+          "FindingLength",
+          "dict()",
+          "DefiningSimpleFunction",
+          "MixedNestedLoopIteration",
+          "NestedForLoopIteration",
+          "ForLoopWithListIndexing",
+          "ForLoopWith+=",
+          "ListReferencing",
+          "AugmentedAssignmentStatement",
+          "ChangingValueVariable",
+          "IfCheckingInForLoop",
+          "DictLiteral",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "CallingSimpleFunction",
+          "IndexingList",
+          "AddingItemToDictionary",
+          "ChangingValueDictionaryElement",
+          "IndexingDictionary"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "AugmentedAssignmentStatement",
+          "ComparisonExpression",
+          "DictLiteral",
+          "ForLoopWith+=",
+          "IntegerLiteral",
+          "MixedNestedLoopIteration",
+          "SimpleAssignmentStatement",
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AddingItemToDictionary",
+          "CallingSimpleFunction",
+          "ChangingValueDictionaryElement",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "FindingLength",
+          "ForLoopWithListIndexing",
+          "IfCheckingInForLoop",
+          "IndexingDictionary",
+          "IndexingList",
+          "ListReferencing",
+          "NestedForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/342/embed?act=PCRS&sub=py_table_of_foods_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Diccionarios",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Diccionarios",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.979Z"
+}

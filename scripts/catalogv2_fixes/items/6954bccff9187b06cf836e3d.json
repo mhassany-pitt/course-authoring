@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf836e3d",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-15T22:49:28.000Z",
+  "updated_at": "2026-01-17T05:27:41.567Z",
+  "tags": [],
+  "identity": {
+    "id": "linkedlist_merge_no_feedback",
+    "title": "Merge LinkList - NFB",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/565/embed?act=PCRS&sub=linkedlist_merge_no_feedback"
+  },
+  "attribution": {
+    "created_at": "2025-04-15T22:49:28.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Given the class LinkedListExample, complete its method mergeLists that takes in a LinkedListExample objects and returns a single LinkedListExample object that combines the LinkedListExample object that called the mergeLists method with the method's input parameter.For example, mergeLists should return a list that combines these two LinkedListExample objects --LinkedListExample list1: [\"hello\", \"there\"]LinkedListExample list2: [\"General\", \"Kenobi\"]-- as follows: list1.mergeLists(list2);LinkedListExample returnedList: [\"hello\", \"there\", \"General\", \"Kenobi\"]",
+    "source_code": "[file LinkedListExample.java]\n[blocked]\npublic class LinkedListExample {\n    // the LinkedListExample class' properties\n\tprivate Node head;\n\tprivate int size;\n\t\n\tprivate class Node {\n        // the Node class' properties\n\t\tNode next;\n\t\tString data;\n[/blocked]\n[blocked]\n\t}\n\t// Constructor! This initializes a new empty LinkedListExample:\n\tpublic LinkedListExample()\n\t{\n\t\thead = null;\n\t\tsize = 0;\n\t}\n\t\n    // This method adds a Node to the LinkedListExample by creating a new Node out of a String\n    // The String becomes the new Node's data, and then the Node gets attached to the end of the LinkedListExample\n\tpublic boolean add(String val){\n\t\tNode curr = head;\n        if (curr == null) {\n\t\t\thead = new Node(val);\n        }\n\t\telse {\n\t\t\twhile (curr.next != null){\n\t\t\t\tcurr = curr.next;\n\t\t\t}\n\t\t\tcurr.next = new Node(val);\n\t\t}\n\t\tsize++;\n\t\treturn true;\n\t}\n    \n    // This method returns the entire Node at a given \"index\" (loc)\n    private Node getNodeAt(int loc)\n\t{\n\t\tif (loc >= 0 && loc < size)\n\t\t{\n\t\t\tNode curr = head;\n\t\t\tfor (int i = 0; i < loc; i++)\n\t\t\t\tcurr = curr.next;\n\t\t\treturn curr;\n\t\t}\n\t\treturn null;\n\t}\n    \n\t// This method returns a Node's data from a given \"index\" (loc)\n\tpublic String get(int loc){\n\t\tNode curr = getNodeAt(loc);\n\t\tif (curr != null)\n\t\t\treturn curr.data;\n\t\telse\n\t\t\treturn null;\n\t}\n    \n\t// This method just returns the LinkedListExample's size\n\tpublic int size()\n\t{\n\t\treturn size;\n\t}\n    \n    // TODO: Complete this function to stitch together two LinkedListExample objects\n    // Parameters: two LinkedListExample objects\n    // Returns: one new LinkedListExample object made out of the two parameter objects\n\tpublic LinkedListExample mergeLists(LinkedListExample list2){\n        // mergedList is what this method eventually returns\n        // It's initialized here for you, and right now it's blank\n        LinkedListExample mergedList = new LinkedListExample();\n[/blocked]\n[student_code]\n\n\n        \n[/student_code]\n[blocked]\n        return mergedList;\n\t}   \n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/565/embed?act=PCRS&sub=linkedlist_merge_no_feedback"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Linked Lists",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.958Z"
+}

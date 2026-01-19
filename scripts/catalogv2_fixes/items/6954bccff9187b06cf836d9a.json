@@ -1,0 +1,111 @@
+{
+  "id": "6954bccff9187b06cf836d9a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:21:10.000Z",
+  "updated_at": "2026-01-17T05:27:22.499Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_queue_es",
+    "title": "Construir una funci\u00f3n que use una estructura de cola (Queue)",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_queue_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:21:10.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye una funcion que use la estructura de Cola para resolver el problema de Josephus que elimina el k-esimo elemento en una lista dada y devuelve el ultimo elemento restante. Todas las funciones de Cola estan predefinidas (is_empty(), enqueue() y dequeue()). Tu funcion tambien debe devolver un mensaje \"la lista esta vacia\" si la lista dada esta vacia.",
+    "source_code": "def circulo(k, lista_nombres):\n\tq = Cola()\n\tif not q.is_empty():\n\t\tfor i in range(len(lista_nombres)):\n\t\t\tq.enqueue(lista_nombres[i])\n\t\ti = 1\n\t\twhile q.size() != 1:\n\t\t\ttemp = q.dequeue()\n\t\t\tif i != k+1:\n\t\t\t\tq.enqueue(temp)\n\t\t\telse:\n\t\t\t\ti = 0\n\t\t\ti += 1\n\telse:\n\t\treturn ('la lista esta vacia!')\n\treturn q.dequeue()"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "Add",
+          "arg",
+          "Return",
+          "Call",
+          "Assign",
+          "If",
+          "For",
+          "Attribute",
+          "NotEq",
+          "AugAssign",
+          "While",
+          "FunctionDef",
+          "Not",
+          "Index"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "For",
+          "Call",
+          "Assign",
+          "Constant",
+          "Not",
+          "Return",
+          "FunctionDef",
+          "Attribute",
+          "While",
+          "NotEq",
+          "Add",
+          "AugAssign",
+          "If",
+          "Index"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_queue_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.941Z"
+}

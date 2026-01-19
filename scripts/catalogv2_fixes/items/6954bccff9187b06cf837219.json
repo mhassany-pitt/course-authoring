@@ -1,0 +1,108 @@
+{
+  "id": "6954bccff9187b06cf837219",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2018-12-06T17:49:16.000Z",
+  "updated_at": "2026-01-17T12:55:47.709Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "expressions_memphis",
+    "title": "Expressions (Memphis)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=expressions_memphis&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2018-12-06T17:49:16.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "import java.util.Scanner;\n\npublic class PetStore {\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Scanner fido = new Scanner(System.in);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0final double \u00a0\u00a0\u00a0\u00a0DOG_PRICE = 50,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0DRAGON_PRICE = 820381903,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0SLOTH_PRICE = 900018293028L,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0BABY_MONKEY_PRICE = 0.15,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0AMOEBA_PRICE = 16000000;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Welcome to the finest pet store in the land!\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Pet menu:\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"1. Dogs\\t\\t\\t$\" + DOG_PRICE);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"2. Dragons\\t\\t$\" + DRAGON_PRICE);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"3. Sloths\\t\\t$\" + SLOTH_PRICE);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"4. Baby monkeys\\t\\t$\" + BABY_MONKEY_PRICE);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"5. Amoebas\\t\\t$\" + AMOEBA_PRICE);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println();\u00a0\u00a0\u00a0\u00a0// This just skips a line\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many dogs would you like to buy?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int dogs = fido.nextInt();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many dragons would you like to buy?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int dragons = fido.nextInt();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many sloths would you like to buy?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int sloths = fido.nextInt();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many baby monkeys would you like to buy?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int babyMonkeys = fido.nextInt();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many amoebas would you like to buy?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int amoebas = fido.nextInt();\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double subtotal = dogs*DOG_PRICE + dragons*DRAGON_PRICE + sloths*SLOTH_PRICE + babyMonkeys*BABY_MONKEY_PRICE + amoebas*AMOEBA_PRICE;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double tax = subtotal*.0925;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double total = subtotal + tax;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Subtotal:\\t\\t$\" + subtotal);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Tax:\\t\\t\\t$\" + tax);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Total:\\t\\t\\t$\" + total);\n\u00a0\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "ClassDefinition",
+          "Constant",
+          "ConstantInitializationStatement",
+          "ConstructorCall",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "ImportStatement",
+          "IntDataType",
+          "java.lang.System.out.println",
+          "MethodDefinition",
+          "MultiplyExpression",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=expressions_memphis&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=367",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
+      "context_name": "Java: INFSCI 0017 | CSEdPad test course (CS1 Memphis) > Preliminary topics",
+      "used_at": "2018-11-30T09:02:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.081Z"
+}

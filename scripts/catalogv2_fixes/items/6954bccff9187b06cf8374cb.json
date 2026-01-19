@@ -1,0 +1,121 @@
+{
+  "id": "6954bccff9187b06cf8374cb",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2015-11-15T19:24:38.000Z",
+  "updated_at": "2026-01-17T12:57:06.655Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "pyt10.16",
+    "title": "Class Definition - Calculator",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.16&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2015-11-15T19:24:38.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Hardik Vasa",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "class calculator(object):\n\u00a0\u00a0\u00a0\u00a0def __init__ (self):\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0self.current = 0\n\u00a0\u00a0\u00a0\u00a0def add(self, amount):\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0self.current += amount\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return self.current\n\u00a0\u00a0\u00a0\u00a0def subtract(self, amount):\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0self.current -= amount\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return self.current\n\u00a0\u00a0\u00a0\u00a0def getCurrent(self):\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return self.current\n\na = calculator()\nprint(a.add(5))\nprint(a.subtract(2))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "parser": {
+        "concepts": [
+          "Return",
+          "Sub",
+          "Int",
+          "Attribute",
+          "AugAssign",
+          "ClassDef",
+          "Add",
+          "Call",
+          "arg",
+          "Assign",
+          "FunctionDef"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "Sub",
+          "Call",
+          "Assign",
+          "Return",
+          "ClassDef",
+          "FunctionDef",
+          "Int",
+          "Attribute",
+          "Add",
+          "AugAssign"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.16&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=23",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=23",
+      "context_name": "Python: PYTHON001 | Python Course (v1) > Classes and objects",
+      "used_at": "2015-05-11T10:25:58.000Z",
+      "used_by": "Python Admin - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=344",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
+      "context_name": "Python: PYTHON001 | PythonCourseV1Clones > Classes and objects",
+      "used_at": "2017-05-22T17:58:24.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.140Z"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf836f8b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-02-22T00:20:06.000Z",
+  "updated_at": "2026-01-17T12:54:44.354Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "q_py___eq__1_es",
+    "title": "q_py___eq__1_es",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py___eq__1_es&sub=q_py___eq__1_es&act=q_py_spanish"
+  },
+  "attribution": {
+    "created_at": "2025-02-22T00:20:06.000Z",
+    "provider": "QuizPET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "class A (object):\n    def __eq__ (self, other):\n        print (\"Llamada a A __eq__\")\n        return self.valor == otros\nclass B(object):\n    def __eq__(self, other):\n        print (\"Llamada a B __eq__\")\n        return self.valor == otros\nA.valor = 3\nB.valor = 3\nprint(A == B)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py___eq__1_es&sub=q_py___eq__1_es&act=q_py_spanish"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.000Z"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e59",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:44.580Z",
+  "tags": [],
+  "identity": {
+    "id": "py_max_of_min",
+    "title": "PCRS C3-PL  Max Of Min",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/80/embed?act=PCRS&sub=py_max_of_min"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Function max_of_min takes four numbers, num1, num2, value1, and value2, determines the minimum of num1 and num2 and the minimum of value1 and value2, and returns the maximum of those two minimums.Complete the function definition.",
+    "source_code": "[student_code]\r\ndef max_of_min(num1, num2, value1, value2):\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/80/embed?act=PCRS&sub=py_max_of_min"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.960Z"
+}

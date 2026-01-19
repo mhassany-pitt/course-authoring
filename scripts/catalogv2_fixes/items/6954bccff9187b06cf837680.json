@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837680",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:12.401Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fig06_16.c",
+    "title": "fig06_16.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig06_16.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 6.16: fig06_16.c\n\u00a0\u00a0\u00a0This program introduces the topic of survey data analysis.\n\u00a0\u00a0\u00a0It computes the mean, median and mode of the data */\n#include <stdio.h>\n#define SIZE 99\n\nvoid mean( const int answer[] );\nvoid median( int answer[] );\nvoid mode( int freq[], const int answer[] ) ;\nvoid bubbleSort( int a[] );\nvoid printArray( const int a[] );\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int frequency[ 10 ] = { 0 };\n\n\u00a0\u00a0\u00a0int response[ SIZE ] =\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{ 6, 7, 8, 9, 8, 7, 8, 9, 8, 9,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a07, 8, 9, 5, 9, 8, 7, 8, 7, 8,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a06, 7, 8, 9, 3, 9, 8, 7, 8, 7,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a07, 8, 9, 8, 9, 8, 9, 7, 8, 9,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a06, 7, 8, 7, 8, 7, 9, 8, 9, 2,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a07, 8, 9, 8, 9, 8, 9, 7, 5, 3,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a05, 6, 7, 2, 5, 3, 9, 4, 6, 4,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a07, 8, 9, 6, 8, 7, 8, 9, 7, 8,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a07, 4, 4, 2, 5, 3, 8, 7, 5, 6,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a04, 5, 6, 1, 6, 5, 7, 8, 7 };\n\n\u00a0\u00a0\u00a0mean( response );\n\u00a0\u00a0\u00a0median( response );\n\u00a0\u00a0\u00a0mode( frequency, response );\n\u00a0\u00a0\u00a0return 0;\n}\n\nvoid mean( const int answer[] )\n{\n\u00a0\u00a0\u00a0int j;\n\u00a0\u00a0\u00a0int total = 0;\n\u00a0\u00a0\u00a0printf( \"%s\\n%s\\n%s\\n\", \"********\", \"  Mean\", \"********\" );\n\n\u00a0\u00a0\u00a0for ( j = 0; j < SIZE; j++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0total += answer[ j ];\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0printf( \"The mean is the average value of the data\\n\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"items. The mean is equal to the total of\\n\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"all the data items divided by the number\\n\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"of data items ( %d ). The mean value for\\n\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"this run is: %d / %d = %.4f\\n\\n\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0SIZE, total, SIZE, (  double  ) total / SIZE );\n}\n\nvoid median( int answer[] )\n{\n\u00a0\u00a0\u00a0printf( \"\\n%s\\n%s\\n%s\\n%s\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"********\", \" Median\", \"********\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"The unsorted array of responses is\" );\n\n\u00a0\u00a0\u00a0printArray( answer );\n\u00a0\u00a0\u00a0bubbleSort( answer );\n\u00a0\u00a0\u00a0printf( \"\\n\\nThe sorted array is\" );\n\u00a0\u00a0\u00a0printArray( answer );\n\u00a0\u00a0\u00a0printf( \"\\n\\nThe median is element %d of\\n\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"the sorted %d element array.\\n\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"For this run the median is %d\\n\\n\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0SIZE / 2, SIZE, answer[ SIZE / 2 ] );\n}\n\nvoid mode( int freq[], const int answer[] )\n{\n\u00a0\u00a0\u00a0int rating;\n\u00a0\u00a0\u00a0int j;\n\u00a0\u00a0\u00a0int h;\n\u00a0\u00a0\u00a0int largest = 0;\n\u00a0\u00a0\u00a0int modeValue = 0;\n\n\u00a0\u00a0\u00a0printf( \"\\n%s\\n%s\\n%s\\n\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"********\", \"  Mode\", \"********\" );\n\n\u00a0\u00a0\u00a0for ( rating = 1; rating <= 9; rating++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0freq[ rating ] = 0;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0for ( j = 0; j < SIZE; j++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++freq[ answer[ j ] ];\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0printf( \"%s%11s%19s\\n\\n%54s\\n%54s\\n\\n\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"Response\", \"Frequency\", \"Histogram\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"1    1    2    2\", \"5    0    5    0    5\" );\n\n\u00a0\u00a0\u00a0for ( rating = 1; rating <= 9; rating++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%8d%11d          \", rating, freq[ rating ] );\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( freq[ rating ] > largest ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0largest = freq[ rating ];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0modeValue = rating;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( h = 1; h <= freq[ rating ]; h++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"*\" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"\\n\" );\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0printf( \"The mode is the most frequent value.\\n\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"For this run the mode is %d which occurred\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\" %d times.\\n\", modeValue, largest );\n}\n\nvoid bubbleSort( int a[] )\n{\n\u00a0\u00a0\u00a0int pass;\n\u00a0\u00a0\u00a0int j;\n\u00a0\u00a0\u00a0int hold;\n\n\u00a0\u00a0\u00a0for ( pass = 1; pass < SIZE; pass++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( j = 0; j < SIZE - 1; j++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( a[ j ] > a[ j + 1 ] ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0hold = a[ j ];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0a[ j ] = a[ j + 1 ];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0a[ j + 1 ] = hold;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0}\n}\n\nvoid printArray( const int a[] )\n{\n\u00a0\u00a0\u00a0int j;\n\u00a0\u00a0\u00a0for ( j = 0; j < SIZE; j++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( j % 20 == 0 ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"\\n\" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%2d\", a[ j ] );\n\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig06_16.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.179Z"
+}

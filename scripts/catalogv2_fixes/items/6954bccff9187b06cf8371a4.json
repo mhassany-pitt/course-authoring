@@ -1,0 +1,96 @@
+{
+  "id": "6954bccff9187b06cf8371a4",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-02-18T11:20:07.000Z",
+  "updated_at": "2026-01-17T05:29:11.475Z",
+  "tags": [],
+  "identity": {
+    "id": "array_min_odd",
+    "title": "Find Min Odd Array",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/439/embed?act=PCRS&sub=array_min_odd"
+  },
+  "attribution": {
+    "created_at": "2020-02-18T11:20:07.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Write a program that given an array of integers variable called array prints in the console the index of the smallest odd number in the array. Please note that you have to complete the methods isEven(int n),  isOdd(int n)  and indOfMaxEven(int[] input).",
+    "source_code": "[file Lab5.java]\n[blocked]\nimport java.util.*;\nimport java.io.*;\n\npublic class Lab5{\n    \n   static int array[] = { 26, 52, 96, 84, 87, 31, 37, 30, 95, 35, 75, 34, 91, 27, 78, 60, 29, 65, 57, 70 };\n    \n   public static void main( String args[] ){\n       \n         System.out.println(\"indexOf smallest odd number array is: \" + indOfMinOdd(array));\n   }\n    \n    static boolean isEven(int n){\n        // YOUR CODE HERE\n[/blocked]\n[student_code]\n        \n            \n[/student_code]\n[blocked]\n    }\n    \n    static boolean isOdd(int n){\n         // MUST USE isEven() method. No arithmetic operators allowed\n[/blocked]\n[student_code]\n        \n            \n[/student_code]\n[blocked]\n    }\n    \n    static int indOfMinOdd( int [] input ){\n    \t// RETURN INDEX OF SMALLEST ODD NUMBER IN ARRAY.\n        // YOU MUST USE THE isOdd() method\n[/blocked]\n[student_code]\n\n            \n            \n[/student_code] \n[blocked]\n    }\n}\n[/blocked] \n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "ForStatement",
+          "ArrayElement",
+          "ArrayLength",
+          "ModulusExpression",
+          "IfStatement",
+          "ReturnStatement",
+          "AddExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "AddExpression",
+          "ArrayElement",
+          "ArrayLength",
+          "ForStatement",
+          "IfStatement",
+          "ModulusExpression",
+          "ReturnStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/439/embed?act=PCRS&sub=array_min_odd"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.065Z"
+}

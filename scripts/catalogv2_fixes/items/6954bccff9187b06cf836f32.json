@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836f32",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-03-28T00:47:45.000Z",
+  "updated_at": "2026-01-17T05:28:09.563Z",
+  "tags": [],
+  "identity": {
+    "id": "py_mismatch_list",
+    "title": "Mismatch List",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/34/embed?act=PCRS&sub=py_first_mismatch"
+  },
+  "attribution": {
+    "created_at": "2025-03-28T00:47:45.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following function according to its docstring.",
+    "source_code": "[student_code]\r\ndef first_mismatch(lst1, lst2):\r\n    \"\"\" (list, list) -> int\r\n    \r\n    Return the first index at which the values of lst1 and lst2 differ. \r\n    Return -1 if no differences are found.\r\n       \r\n    >>> first_mismatch(['a', 'b', 'c'], ['a', 'd', 'c'])\r\n    1\r\n    >>> first_mismatch(['a', 'b', 'c'], ['a', 'b', 'c', 'd'])\r\n    3\r\n    >>> first_mismatch(['a', 'b', [1]], ['a', 'b', [1]])\r\n    -1\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/34/embed?act=PCRS&sub=py_first_mismatch"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.987Z"
+}

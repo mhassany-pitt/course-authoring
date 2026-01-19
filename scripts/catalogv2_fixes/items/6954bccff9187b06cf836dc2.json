@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836dc2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:19:48.000Z",
+  "updated_at": "2026-01-17T05:27:26.923Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_3digit_combinations_es",
+    "title": "Construir un programa que genere combinaciones \u00fanicas de 3 d\u00edgitos",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_3digit_combinations_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:19:48.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que cree e imprima todas las combinaciones de tres digitos de los numeros del 1 al 4 de forma que cada numero aparezca como maximo una vez y las combinaciones se impriman de menor a mayor. El programa tambien debe imprimir el numero total de combinaciones. Por ejemplo: salida 123, 124, 132 ... total: 24.",
+    "source_code": "cantidad = 0\ni = 0\nwhile i < 4:\n  i += 1\n  j = 0\n  while j < 4:\n    j += 1\n    k = 0\n    while k < 4:\n      k += 1\n      if k != i and k != j and i != j:\n          cantidad += 1\n          print(i, j, k)\n\nprint(\"El numero total de combinaciones de 3 digitos es\", cantidad)\n\n\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_3digit_combinations_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.945Z"
+}

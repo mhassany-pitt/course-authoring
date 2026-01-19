@@ -1,0 +1,145 @@
+{
+  "id": "6954bccff9187b06cf836f11",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:06.132Z",
+  "tags": [],
+  "identity": {
+    "id": "py_is_valid_2d_matrix_es",
+    "title": "Es sopa de letras (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/363/embed?act=PCRS&sub=py_is_valid_2d_matrix_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Una profesora de lenguaje quiere validar autom\u00e1ticamente si una estructura ingresada por sus estudiantes representa una sopa de letras v\u00e1lida. Una sopa de letras se define como una matriz 2D (lista de listas) en la que:- Todas las filas tienen el mismo n\u00famero de columnas.- Cada celda contiene solo una letra may\u00fascula del alfabeto (A a Z).Tu tarea es completar la funci\u00f3n es_sopa_letras(matriz) para que:- Devuelva True si la matriz (lista de 2D) cumple con las condiciones anteriores.- Devuelva False si hay al menos una fila con longitud distinta o un car\u00e1cter inv\u00e1lido (no letra o letra en min\u00fascula).Ejemplos entrada/salidasopa1 = [[\"A\",\"M\",\"O\"],[\"L\",\"A\",\"X\"],[\"T\",\"Y\",\"R\"]]sopa2 = [[\"A\",\"9\",\"O\"],[\"L\",\"A\",\"X\"],[\"9\",\"Y\",\"R\"]]sopa3 = [[\"A\",\"M\",\"O\"],[\"L\",\"a\",\"X\"],[\"T\",\"Y\",\"r\"],[\"A\",\"M\",\"O\"]]es_sopa_letras(sopa1) -> Truees_sopa_letras(sopa2) -> False (tiene caracteres numericos)es_sopa_letras(sopa3) -> False (no posee el mismo numero de filas (4) y de columnas (3). Ademas posee algunos de los elementos en minusculas.",
+    "source_code": "[student_code]\r\ndef es_sopa_letras(matriz):\r\n    #Escriba su codigo aqui\r\n    \r\n    \r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "TransformingToStringType",
+          "ListReferencing",
+          "ListLiteral",
+          "Indexing2DArray",
+          "IndexingDictionary",
+          "FindingLength",
+          "DefiningSimpleFunction",
+          "MixedNestedLoopIteration",
+          "NestedForLoopIteration",
+          "ChangingValueVariable",
+          "IfElifElseCheckingInForLoop",
+          "IfCheckingInForLoop",
+          "BooleanLiteral",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "LogicalExpression",
+          "CallingSimpleFunction",
+          "CallingObjectMethod",
+          "IndexingList"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "IntegerLiteral",
+          "LogicalExpression",
+          "MixedNestedLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "BooleanLiteral",
+          "CallingObjectMethod",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "FindingLength",
+          "IfCheckingInForLoop",
+          "Indexing2DArray",
+          "IndexingList",
+          "ListReferencing",
+          "NestedForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/363/embed?act=PCRS&sub=py_is_valid_2d_matrix_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Listas en 2D",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Listas en 2D",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Listas en 2D",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.982Z"
+}

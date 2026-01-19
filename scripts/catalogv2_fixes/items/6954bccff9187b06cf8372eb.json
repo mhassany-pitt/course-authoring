@@ -1,0 +1,310 @@
+{
+  "id": "6954bccff9187b06cf8372eb",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2017-10-06T16:01:14.000Z",
+  "updated_at": "2026-01-17T05:29:55.385Z",
+  "tags": [],
+  "identity": {
+    "id": "objects.classes.account",
+    "title": "The Class for Representing a Bank Account",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=objects.classes.account"
+  },
+  "attribution": {
+    "created_at": "2017-10-06T16:01:14.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a class that represents a basic bank account. This class should contain data representing the name of the account\u2019s owner, the account number, and the account\u2019s current balance. The interest rate for the account is stored as a constant. The constructor of the class should accept three parameters that are used to initialize the instance (i.e., object) data when an object is instantiated from this class. The other methods of this class should perform various services on the account (making deposits, withdrawals, adding interest to the account). These methods should examine the data passed into them to make sure the requested transaction is valid.\\n\\nThe Transactions1 class creates some bank accounts and requests various services.",
+    "source_code": "import java.text.NumberFormat;\npublic class Transactions1 {\n\tpublic static void main (String[] args) {\n\t\tAccount1 acct1 = new Account1(\"Tina Murphy\", 72354, 25.59);\n\t\tAccount1 acct2 = new Account1(\"Angelica Adams\", 69713, 500.00);\n\t\tAccount1 acct3 = new Account1(\"Edward Demsey\", 93757, 769.32);\n\t\tacct1.deposit (44.10);  \n\t\tdouble adamsBalance = acct2.deposit (75.25);\n\t\tSystem.out.println (acct2.getName() + \"'s balance after deposit: \" + adamsBalance);\n\t\tSystem.out.println (acct2.getName() + \"'s balance after withdrawal: \" + acct2.withdraw (480, 1.50));\n\t\tacct3.withdraw (-100.00, 1.50);  \n\t\tacct1.addInterest();\n\t\tacct2.addInterest();\n\t\tacct3.addInterest();\n\t\tSystem.out.println (acct1);\n\t\tSystem.out.println (acct2);\n\t\tSystem.out.println (acct3);\n\t}\n}\nclass Account1 {\n\t//Step 1: Declare the instance variables \n\tprivate final double RATE = 0.035;  \n\tprivate String acctName;\n\tprivate long acctNumber;\n\tprivate double balance;\n\t//Step 2: Define the constructor to set up an account with the specified account name, account number, and initial balance\n\tpublic Account1 (String owner, long account, double initial) {\n\t\tacctName = owner;\n\t\tacctNumber = account;\n\t\tbalance = initial;\n\t}\n\t//Step 3: Define the methods to perform various services on the account\n\tpublic double deposit (double amount) {\n\t\tif (amount > 0) {\n\t\t\tbalance = balance + amount;\n\t\t}\n\t\treturn balance;\n\t}\n\tpublic double withdraw (double amount, double fee) {\n\t\tif (amount > 0 && fee >= 0 && amount+fee < balance) {\n\t\t\tbalance = balance - amount - fee;\n\t\t}\n\t\treturn balance;\n\t}\n\tpublic double addInterest () {\n\t\tbalance += (balance * RATE);\n\t\treturn balance;\n\t}\n\t//Step 4: Define the methods to get the current state of the account \n\tpublic String getName() {\n\t\treturn acctName;\n\t}\n\tpublic double getBalance() {\n\t\treturn balance;\n\t}\n\tpublic long getAcctNumber() {\n\t\treturn acctNumber;\n\t}\n\tpublic String toString () {\n\t\tNumberFormat fmt = NumberFormat.getCurrencyInstance();\n\t\treturn (acctNumber + \"\\t\" + acctName + \"\\t\" + fmt.format(balance));\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "parser": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddAssignmentExpression",
+          "AddExpression",
+          "AndExpression",
+          "ClassDefinition",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "DoubleDataType",
+          "FinalFieldSpecifier",
+          "FormalMethodParameter",
+          "GreaterEqualExpression",
+          "GreaterExpression",
+          "IfStatement",
+          "ImportStatement",
+          "InstanceField",
+          "InstanceFieldInitializationStatement",
+          "java.lang.System.out.println",
+          "LessExpression",
+          "LongDataType",
+          "MethodDefinition",
+          "MultiplyExpression",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "OverridingToString",
+          "PrivateFieldSpecifier",
+          "PublicClassSpecifier",
+          "PublicConstructorSpecifier",
+          "PublicMethodSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StaticMethodSpecifier",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "StringVariable",
+          "SubtractExpression",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=objects.classes.account"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=31",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_name": "Java: INFSCI 0017 | roya-clone-test-java > Objects",
+      "used_at": "2015-12-08T17:16:50.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=345",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=345",
+      "context_name": "Java: INFSCI 0017 | Introduction to JAVA Programming - Program Construction > Objects & Classes",
+      "used_at": "2017-08-20T11:59:48.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=350",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=350",
+      "context_name": "Java: INFSCI 0017 | Java programming course - Norway > Objects & Classes",
+      "used_at": "2017-12-13T17:21:41.000Z",
+      "used_by": "Boban Vesin, Boban Vesin - NTNU"
+    },
+    {
+      "context_id": "cid=351",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=351",
+      "context_name": "Java: INFSCI 0017 | CS 0401 - Intermediate Java Programming (Spring 2018) > Objects and Classes",
+      "used_at": "2017-12-17T19:07:09.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=352",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=352",
+      "context_name": "Java: INFSCI 0017 | Norway-Spring2018 Java Course > Objects and Classes",
+      "used_at": "2018-01-15T17:35:55.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=361",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=361",
+      "context_name": "Java: INFSCI 0017 | Revised Java Course v2 (QJ-AE-PCEX-PCRS) > Classes",
+      "used_at": "2018-09-11T14:14:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=366",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=366",
+      "context_name": "Java: INFSCI 0017 | CSEdPad course v1 (all Java content) > Classes",
+      "used_at": "2018-10-18T16:24:57.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=368",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=368",
+      "context_name": "Java: INFSCI 0017 | LTI > Object",
+      "used_at": "2019-02-17T22:05:39.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=374",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=374",
+      "context_name": "Java: INFSCI 0017 | Java Course (AE-QP-PCEX-CodeWorkout) > Classes",
+      "used_at": "2019-05-31T05:04:44.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=381",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=381",
+      "context_name": "Java: INFSCI 0017 | CS 0007 - Java Programming (Fall 2019) > Objects and Classes",
+      "used_at": "2019-12-02T23:01:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=385",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=385",
+      "context_name": "Java: CS 007 | Revised Java Course v3 (QJ-AE-PCEX-PCRS) > Classes and Objects",
+      "used_at": "2020-01-27T00:06:20.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=397",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=397",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming > Objects and Classes",
+      "used_at": "2020-08-18T15:45:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=400",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=400",
+      "context_name": "Java: CIS 120 | CIS 120 - Java Programming CALU > Classes and Objects",
+      "used_at": "2020-08-30T15:14:13.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=401",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=401",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2020) > Classes and Objects",
+      "used_at": "2020-08-30T22:58:55.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=402",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=402",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming (No Labs - Extra content) > Objects and Classes",
+      "used_at": "2020-09-04T14:53:50.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=405",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=405",
+      "context_name": "Java: CMPINF0401 | COMP1050 Wentworth Institute of Technology > Objects and Classes",
+      "used_at": "2021-01-24T18:40:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=412",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=412",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Summer 2021) > Classes and Objects",
+      "used_at": "2021-05-20T10:36:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=416",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=416",
+      "context_name": "Java: INFSCI 0017 | Novi Sad Java Fall 2021 > Objects and Classes",
+      "used_at": "2021-10-18T14:55:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=417",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=417",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Java Programming (2022 version) > Objects and Classes",
+      "used_at": "2022-01-18T22:56:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=425",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=425",
+      "context_name": "Java: CMPINF0401 | Wentworth Institute of Technology > Objects and Classes",
+      "used_at": "2022-09-14T03:07:18.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 2- Objects and Classes",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    },
+    {
+      "context_id": "cid=444",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=444",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming (2022 version - alternate order) > Objects and Classes",
+      "used_at": "2024-09-12T01:36:40.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=449",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=449",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 (Peter B) > Objects and Classes",
+      "used_at": "2025-01-15T05:27:01.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=450",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=450",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 - Fully reversed > Objects and Classes",
+      "used_at": "2025-01-21T13:45:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=474",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=474",
+      "context_name": "Java: CMU15-121 | CMU 15-121 - Intro Data Structures - Fall 2025 > Objects and Classes",
+      "used_at": "2025-09-16T16:41:24.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=477",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=477",
+      "context_name": "Java: CMPINF0401 | WIT COMP1050 - Computer Science II > Objects and Classes",
+      "used_at": "2025-09-19T03:00:59.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=488",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=488",
+      "context_name": "Java: CMPINF0401 | WIT COMP1050 - Computer Science II > Objects and Classes",
+      "used_at": "2025-10-07T14:15:48.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=489",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=489",
+      "context_name": "Java: 002 | Data Structures (Intermediate Java) - Fall 2025 > Objects and Classes",
+      "used_at": "2025-10-08T04:59:33.000Z",
+      "used_by": "Rafaella Sampaio de Alencar - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.105Z"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf836d2b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T18:18:02.000Z",
+  "updated_at": "2026-01-17T05:26:57.992Z",
+  "tags": [],
+  "identity": {
+    "id": "Determining the Weather Condition (Case 4)__68bdb309f6cc3d7a9cc09838-68bdb309f6cc3d7a9cc09836-3",
+    "title": "Determining the Weather Condition (Case 4)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09838?_t=1757542682513&index=3"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T18:18:02.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that determines whether it is either too hot or too dry but not both based on the inputs that it receives from the user.",
+    "source_code": "import java.util.Scanner;\npublic class JBooleanDryHot4 {\n\tpublic static void main(String[] args) {\n\t\t//Step 1: Read the user inputs\n\t\tScanner scan = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter whether it is too hot (true or false):\");\n\t\tboolean tooHot = scan.nextBoolean();\t\n\t\tSystem.out.println(\"Enter whether it is too dry (true or false):\");\n\t\tboolean tooDry = scan.nextBoolean();\t\t\n\t\tscan.close();\n\t\t//Step 2: Write the boolean expression to determine whether it is either too hot or too dry but not both.\n\t\tboolean value1 = (tooHot || tooDry) && !(tooHot && tooDry);\n\t\tboolean value2 = tooHot ^ tooDry;\n\t\tSystem.out.println(value1);\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09838?_t=1757542682513&index=3"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Boolean Expressions",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.928Z"
+}

@@ -1,0 +1,93 @@
+{
+  "id": "6954bccff9187b06cf837655",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:06.741Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "nondigits.c",
+    "title": "IS12:: nondigits.c (118.7)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=nondigits.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Example: Counting non-digits in the stream of text */\n\n#include <stdio.h>\n\nvoid main() {\n\u00a0\u00a0\u00a0\u00a0int ch;\n\u00a0\u00a0\u00a0\u00a0int nondig = 0;\n\n\u00a0\u00a0\u00a0\u00a0/* Accumulating counters in the loop */\n\u00a0\u00a0\u00a0\u00a0while ((ch = getchar()) != EOF)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (! (ch >= '0' && ch <= '9'))\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0nondig++;\n\n\u00a0\u00a0\u00a0\u00a0/* Printing results */\n\u00a0\u00a0\u00a0\u00a0printf(\"Numbers of non-digits is %d:\n\", nondig);\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "variable_initialization",
+          "int",
+          "greater_equal",
+          "void",
+          "printf",
+          "if",
+          "include",
+          "variable_declaration",
+          "and",
+          "main_function",
+          "less_equal",
+          "while",
+          "not_equal",
+          "post_increment",
+          "simple_assignment",
+          "not"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=nondigits.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.177Z"
+}

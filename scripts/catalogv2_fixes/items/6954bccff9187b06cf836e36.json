@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e36",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-16T17:24:08.000Z",
+  "updated_at": "2026-01-17T05:27:40.870Z",
+  "tags": [],
+  "identity": {
+    "id": "linkedlist.remove_all_but_two",
+    "title": "JLinkedListUtil",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=linkedlist.remove_all_but_two"
+  },
+  "attribution": {
+    "created_at": "2025-04-16T17:24:08.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Rully Hendrawan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "This LinkedListUtil class tests various usages of the LinkedList class. The single param is  an array of string. You will create a linked list with the string elements and return the  linked list with all but the 1st two elements removed. (source: codecheck)",
+    "source_code": "import java.util.LinkedList;\nimport java.util.ListIterator;\n\npublic class JLinkedListUtil\n{\n   /**\n      Remove all but the first two elements.\n   */\n   public static void processList(LinkedList<String> list)\n   {\n      while(list.size() > 2) {\n        list.removeLast();\n      }\n   }\n   // this method is used to check your work\n   public static LinkedList<String> check(String[] values)\n   {\t  \n      LinkedList<String> list = new LinkedList<String>();\n      for (String s : values)\n         list.addLast(s);\n      processList(list);\n      return list;\n   }   \n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=linkedlist.remove_all_but_two"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.957Z"
+}

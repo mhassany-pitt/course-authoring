@@ -1,0 +1,163 @@
+{
+  "id": "6954bccff9187b06cf836d51",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-10T08:54:03.000Z",
+  "updated_at": "2026-01-17T05:27:02.687Z",
+  "tags": [],
+  "identity": {
+    "id": "py_check_product_code_es__682dcce666a8e1b992c82b33",
+    "title": "Contando el Numero de Codigos de Producto Validos y Prohibidos (Caso 1)",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dcce666a8e1b992c82b33?_t=1750184417221&index=0&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-10T08:54:03.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Isaac Alpizar-Chacon",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "es",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Supongamos que una empresa hipot\u00e9tica utiliza c\u00f3digos para representar sus diversos productos. Un c\u00f3digo de producto incluye, entre otra informaci\u00f3n, un car\u00e1cter en la d\u00e9cima posici\u00f3n que representa la zona de la que se fabric\u00f3 ese producto. Debido a una reorganizaci\u00f3n, los productos de la zona R est\u00e1n prohibidos para la venta.\\nConstruya un programa que lea c\u00f3digos de productos del usuario y cuente el n\u00famero de c\u00f3digos v\u00e1lidos y prohibidos ingresados. Aseg\u00farese de que el programa maneje todas las posibles excepciones.\\nEl programa debe pedir al usuario una entrada hasta que el usuario ingrese STOP.",
+    "source_code": "#Paso 1: Definir la funci\u00f3n\ndef verificar_codigo_producto():\n    #Paso 1.1: Asignar valores iniciales a las variables que necesitamos para los conteos \n    valido = 0\n    prohibido = 0\n    #Paso 1.2: Pedir una entrada v\u00e1lida mientras el usuario no ingrese STOP; de lo contrario, detener\n    codigo = input(\"Ingrese el c\u00f3digo del producto: \")\n    while ( codigo != \"STOP\") :\n        #Paso 1.2.1: Encerrar el c\u00f3digo que podr\u00eda lanzar una excepci\u00f3n dentro del bloque try\n        try : \n            zona = codigo[9]\n            valido += 1\n            if zona == \"R\" :\n                prohibido += 1\n        #Paso 1.2.2: Manejar todas las posibles excepciones que pueden ser lanzadas en el bloque try \n        except IndexError :                        \n            print(\"Longitud de c\u00f3digo inapropiada.\")\n        codigo = input(\"Ingrese el c\u00f3digo del producto: \")\n    #Paso 1.3: Imprimir el resultado    \n    print(\"# de c\u00f3digos v\u00e1lidos ingresados:\", valido)\n    print(\"# de c\u00f3digos prohibidos ingresados:\", prohibido)\n#Paso 2: Llamar a la funci\u00f3n\nverificar_codigo_producto()"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "Arun parser v0.1": {
+        "concepts": [
+          "If",
+          "FunctionDef",
+          "Assign",
+          "Eq",
+          "Try",
+          "Str",
+          "Call",
+          "While",
+          "NotEq",
+          "ExceptHandler",
+          "Add",
+          "AugAssign",
+          "Int",
+          "GtE",
+          "Slice",
+          "Index",
+          "And"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleWhileLoopIteration",
+          "Addition",
+          "HandlingInput",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "HandlingSpecificError",
+          "BooleanEvaluating",
+          "Printing",
+          "DefiningSimpleFunction",
+          "IfCheckingInWhileLoop",
+          "IndexingString",
+          "WhileLoopWithListIndexing",
+          "WhileLoopWith",
+          "IfChecking",
+          "CallingSimpleFunction",
+          "SingleWhileLoopIteration",
+          "Addition",
+          "HandlingInput",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "HandlingSpecificError",
+          "BooleanEvaluating",
+          "Printing",
+          "DefiningSimpleFunction",
+          "IfCheckingInWhileLoop",
+          "IndexingString",
+          "WhileLoopWithListIndexing",
+          "WhileLoopWith",
+          "IfChecking",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Slice",
+          "ExceptHandler",
+          "Call",
+          "Assign",
+          "GtE",
+          "Eq",
+          "FunctionDef",
+          "Int",
+          "Try",
+          "While",
+          "NotEq",
+          "Add",
+          "Index",
+          "AugAssign",
+          "If",
+          "And",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dcce666a8e1b992c82b33?_t=1750184417221&index=0&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Excepciones",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.934Z"
+}

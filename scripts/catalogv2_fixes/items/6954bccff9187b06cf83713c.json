@@ -1,0 +1,144 @@
+{
+  "id": "6954bccff9187b06cf83713c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-09T19:21:45.000Z",
+  "updated_at": "2026-01-17T12:41:44.807Z",
+  "tags": [],
+  "identity": {
+    "id": "py_search_list_total_count",
+    "title": "Searching Values of a List in Another List (Case 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_search_list&ch=py_search_list_total_count"
+  },
+  "attribution": {
+    "created_at": "2020-08-09T19:21:45.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that has a function that receives two lists and prints the total number of times the elements in the 2nd list appear in the 1st list. For example, if the 1st list is [1, 2, 3, 3, 4, 4, 5, 6] and the 2nd list is [3, 4, 5, 6, 7], then the total number of times that the elements in the 2nd list appear in the 1st list is 6.\\nNote that we need to count matches for all values in the 2nd list (including duplicate values, if any).",
+    "source_code": "#Step 1: Define the function\ndef search_lists(lst1, lst2):\n    #Step 1.1: Iterate through the values in the 2nd list\n    count = 0\n    for val2 in lst2:\n        #Step 1.1.1: Iterate through the values in the 1st list\n        for val1 in lst1:\n            #Step 1.1.1.1: Increment the number of matches if we find a match\n            if val2 == val1: \n                count += 1\n    print(\"Total number of times the elements in the 2nd list appear in the 1st list is\", count)\n#Step 2: Call the function\nvalues_1 = [2.0, 11, 11, 4, 5, 3, 3, 3.5, 4, 10, 16]\nvalues_2 =  [7, 11, 3]\nsearch_lists(values_1, values_2)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleForLoopIteration",
+          "AssigningValueVariable",
+          "NestedForLoopIteration",
+          "IfCheckingInForLoop",
+          "Addition",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "BooleanEvaluating",
+          "Printing",
+          "DefiningSimpleFunction",
+          "CreatingList",
+          "ForLoopWith",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "AssigningValueVariable",
+          "BooleanEvaluating",
+          "CallingLibraryFunction",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "CreatingList",
+          "DefiningSimpleFunction",
+          "ForLoopWith",
+          "IfCheckingInForLoop",
+          "NestedForLoopIteration",
+          "Printing",
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_list&ch=py_search_list_total_count"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > Lists",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > Lists",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=413",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Search",
+      "used_at": "2021-08-11T18:22:22.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=422",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > Topic 8",
+      "used_at": "2022-05-23T22:24:04.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=424",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=424",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 174 Fall 2022 (Python I) > Search",
+      "used_at": "2022-08-10T17:36:39.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.055Z"
+}

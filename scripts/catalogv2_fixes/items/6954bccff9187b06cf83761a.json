@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf83761a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:57:58.396Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "rand_access_file",
+    "title": "rand_access_file",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=rand_access_file&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Creating a random-access file sequentially */\n#include <stdio.h>\n\n/* clientData structure definition */\nstruct clientData {\n\u00a0\u00a0\u00a0int acctNum;          \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* account number */\n\u00a0\u00a0\u00a0char lastName[ 15 ];  \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* account last name */\n\u00a0\u00a0\u00a0char firstName[ 10 ]; \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* account first name */\n\u00a0\u00a0\u00a0double balance;       \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* account balance */\n}; /* end structure clientData */\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int i;\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 /* counter used to count from 1-100 */\n\n\u00a0\u00a0\u00a0/* create clientData with default information */\n\n\u00a0\u00a0\u00a0struct clientData blankClient = { 0, \"\", \"\", 0.0 };\n\n\u00a0\u00a0\u00a0FILE *cfPtr; /* credit.dat file pointer */\n\n\u00a0\u00a0\u00a0/* fopen opens the file; exits if file cannot be opened */\n\u00a0\u00a0\u00a0if ( ( cfPtr = fopen( \"credit.dat\", \"wb\" ) ) == NULL ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"File could not be opened.\\n\" );\n\u00a0\u00a0\u00a0} /* end if */\n\u00a0\u00a0\u00a0else {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* output 100 blank records to file */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( i = 1; i <= 100; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fwrite( &blankClient, sizeof( struct clientData ), 1, cfPtr );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} /* end for */\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fclose ( cfPtr );\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 /* fclose closes the file */\n\u00a0\u00a0\u00a0} /* end else */\n\n\u00a0\u00a0\u00a0return 0;\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 /* indicates successful termination */\n} /* end main */\n} /* end main */"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=rand_access_file&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.174Z"
+}

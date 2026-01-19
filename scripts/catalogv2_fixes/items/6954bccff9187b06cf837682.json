@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837682",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:12.703Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fig06_19.c",
+    "title": "fig06_19.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig06_19.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 6.19: fig06_19.c\n\u00a0\u00a0\u00a0Binary search of an array */\n#include <stdio.h>\n#define SIZE 15\n\nint binarySearch( const int b[], int searchKey, int low, int high );\nvoid printHeader( void );\nvoid printRow( const int b[], int low, int mid, int high );\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int a[ SIZE ];\n\u00a0\u00a0\u00a0int i;\n\u00a0\u00a0\u00a0int key;\n\u00a0\u00a0\u00a0int result;\n\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0a[ i ] = 2 * i;\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0printf( \"Enter a number between 0 and 28: \" );\n\u00a0\u00a0\u00a0scanf( \"%d\", &key );\n\u00a0\u00a0\u00a0printHeader();\n\n\u00a0\u00a0\u00a0result = binarySearch( a, key, 0, SIZE - 1 );\n\u00a0\u00a0\u00a0if ( result != -1 ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"\\n%d found in array element %d\\n\", key, result );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0else {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"\\n%d not found\\n\", key );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0return 0;\n}\n\nint binarySearch( const int b[], int searchKey, int low, int high )\n{\n\u00a0\u00a0\u00a0int middle;\n\u00a0\u00a0\u00a0while ( low <= high ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0middle = ( low + high ) / 2;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printRow( b, low, middle, high );\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( searchKey == b[ middle ] ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return middle;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if ( searchKey < b[ middle ] ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0high = middle - 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0low = middle + 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0return -1;\n}\n\nvoid printHeader( void )\n{\n\u00a0\u00a0\u00a0int i;\n\u00a0\u00a0\u00a0printf( \"\\nSubscripts:\\n\" );\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%3d \", i );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0printf( \"\\n\" );\n\u00a0\u00a0\u00a0for ( i = 1; i <= 4 * SIZE; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"-\" );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0printf( \"\" );\n}\n\nvoid printRow( const int b[], int low, int mid, int high )\n{\n\u00a0\u00a0\u00a0int i;\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( i < low || i > high ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"    \" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if ( i == mid ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%3d*\", b[ i ] );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%3d \", b[ i ] );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0printf( \"\\n\" );\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig06_19.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.180Z"
+}

@@ -30,6 +30,19 @@ export class CatalogV2ItemComponent implements OnInit, OnDestroy {
     error: '',
   };
 
+  _t: any = {
+    identity: true,
+    languages: true,
+    attribution: false,
+    rights: false,
+    content: true,
+    classification: false,
+    'knowledge-components': false,
+    pedagogy: false,
+    delivery: false,
+    uses: false,
+  }; // toggles
+
   private routeSub: Subscription | undefined;
 
   constructor(
@@ -37,7 +50,7 @@ export class CatalogV2ItemComponent implements OnInit, OnDestroy {
     private app: AppService,
     public router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.routeSub = this.route.paramMap.subscribe((params) => {

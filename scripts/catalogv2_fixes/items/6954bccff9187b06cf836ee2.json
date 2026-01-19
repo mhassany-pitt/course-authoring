@@ -1,0 +1,120 @@
+{
+  "id": "6954bccff9187b06cf836ee2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:01.047Z",
+  "tags": [],
+  "identity": {
+    "id": "py_return_max_index_es",
+    "title": "PCRS C3-PL  Return Max Index",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/302/embed?act=PCRS&sub=py_return_max_index_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Escribe una funcion que tome una lista de enteros y devuelva el indice (indice, no el valor) del elemento maximo. Si el valor maximo ocurre multiples veces, devuelve el indice de la primera ocurrencia. No uses la funcion max(). El maximo de una lista vacia no esta definido, por lo que tu funcion puede fallar si se le da una lista vacia.    indiceMaximo([5,5,5,5])=>0    indiceMaximo([5,15,10,20,25])=>4    indiceMaximo([-3,-2,-1,-6,-9,-11])=>2",
+    "source_code": "[student_code]\ndef indiceMaximo(elementos):\n    # codigo\n   \n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "FindingLength",
+          "list()",
+          "DefiningSimpleFunction",
+          "ForLoopWithListIndexing",
+          "ChangingValueVariable",
+          "IfElifElseCheckingInForLoop",
+          "IfCheckingInForLoop",
+          "ListLiteral",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "CallingSimpleFunction",
+          "IndexingList"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "IntegerLiteral",
+          "ListLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "FindingLength",
+          "ForLoopWithListIndexing",
+          "IfCheckingInForLoop",
+          "IndexingList",
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/302/embed?act=PCRS&sub=py_return_max_index_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.975Z"
+}

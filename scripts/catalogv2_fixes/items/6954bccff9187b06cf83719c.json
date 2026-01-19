@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf83719c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-04-06T09:35:01.000Z",
+  "updated_at": "2026-01-17T05:29:10.586Z",
+  "tags": [],
+  "identity": {
+    "id": "create_class",
+    "title": "Create class Truck",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/447/embed?act=PCRS&sub=create_class"
+  },
+  "attribution": {
+    "created_at": "2020-04-06T09:35:01.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the code for the class Truck. The class must be able to enable the creation of new objects of type Truck by means of:- passing no args (default constructor), so you have to define default values for the five defined attributes of the class (model, year, color, maxCapacity and currentLoad).- passing all the five attributes defined in the class as args (full constructor). You also have to implement all the accessor and mutator (get/set) methods for each of these 5 attributes. Finally, you have to implement the methods load and unload for modifying the currentLoad attribute as needed (validating that currentLoad cannot be lower than zero when unloading and cannot be greater than maxCapacity when loading). More instructions on how to implement the missing parts of this class are provided in the code below.",
+    "source_code": "[file Truck.java]\n[blocked]\npublic class Truck { \n    private String model;\n    private int year;\n    private String color;\n \tprivate double maxCapacity;\n    //If currentLoad is 0.0 the truck is empty, if equals to maxCapacity the truck is full\n    private double currentLoad;\n    \n[/blocked]\n     [student_code]\n    // TODO: complete the class constructors here\n    public Truck(){\n        \n        \n        \n        \n    }\n    \n    public Truck(String model, int year, String color, double maxCapacity, double currentLoad){\n    \n        \n        \n        \n    }\n    \n    // TODO: add get/set methods for model, year, color, maxCapacity and currentLoad\n    // There has to be 10 methods in total here (setModel, getModel, setYear, getYear, setColor, getColor, setMaxCapacity, getMaxCapacity, setCurrentLoad, getCurrentLoad).\n    \n    \n    \n    \n    \n    \n    \n    \n    //TODO: complete the load and unload methods by using the getCurrentLoad, \n    // setCurrentLoad and getMaxCapacity methods.\n    public void load(double weight){\n    //Important: validate that the updated currentLoad cannot be greater than maxCapacity\n    //if this happens, only load the part of the loaded weight that will make the truck full\n    \n        \n        \n    }\n    \n    public void unload(double weight){\n    //Important: validate that it cannot be unloaded more weight than the currentLoad\n    //if this happens, just unload the feasible part of the unloaded weight that will make the truck empty\n        \n        \n    \n    }\n    \n\t[/student_code]\n    [blocked]\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/447/embed?act=PCRS&sub=create_class"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 2- Objects and Classes",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.065Z"
+}

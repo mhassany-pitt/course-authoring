@@ -1,0 +1,121 @@
+{
+  "id": "6954bccff9187b06cf836ebb",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:56.344Z",
+  "tags": [],
+  "identity": {
+    "id": "py_class_day_calendar_es",
+    "title": "PCRS C3-PL  Class Day Calendar",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/259/embed?act=PCRS&sub=py_class_day_calendar_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Below there is code for classes Event and Day.Improve class Day's __init__ method.   Update Day's  __init__ method to add default parameter values, so that if the date isn\u2019t speci\ufb01ed by the caller, it is set to January 1, 2014.  Improve class Day's  schedule_event method.  Improve method schedule_event so that if we attempt to schedule an event that overlaps with an existing event, the event is not scheduled and the method returns False.  Iff the event is successfully scheduled, the method should return True  ",
+    "source_code": "[student_code]\r\nclass Event:    \r\n    \"\"\"A new calendar event.\"\"\"\r\n\r\n    def __init__(self, start_time, end_time, event_name):\r\n        \"\"\" (Event, int, int, str) -> NoneType\r\n\r\n        Precondition: 0 <= start_time < end_time <= 23\r\n        \r\n        Initialize a new event that starts at start_time, ends at end_time,\r\n        and is named name.\r\n\r\n        >>> e = Event(12, 13, 'Lunch')\r\n        >>> e.start_time\r\n        12\r\n        >>> e.end_time\r\n        13\r\n        >>> e.name\r\n        'Lunch'\r\n        \"\"\"\r\n        \r\n        self.start_time = start_time\r\n        self.end_time = end_time\r\n        self.name = event_name\r\n    \r\n    def __str__(self):\r\n            \"\"\" (Event) -> str\r\n    \r\n            Return a string representation of this event.\r\n    \r\n            >>> e = Event(6, 7, 'Run')\r\n            >>> str(e)\r\n            'Run: from 6 to 7'\r\n            \"\"\"\r\n            \r\n            return '{0}: from {1} to {2}'.format(self.name, self.start_time,\r\n                                                 self.end_time)\r\n\r\n    def overlaps(self, other):\r\n        \"\"\" (Event, Event) -> bool\r\n\r\n        Return True iff this event overlaps with event other.\r\n\r\n        >>> e1 = Event(6, 7, 'Run')\r\n        >>> e2 = Event(0, 7, 'Sleep')\r\n        >>> e1.overlaps(e2)\r\n        True\r\n        \"\"\"\r\n\r\n        return not (other.end_time <= self.start_time \\\r\n                    or other.start_time >= self.end_time)\r\n\r\nclass Day:\r\n    \"\"\"A calendar day and its events.\"\"\"\r\n\r\n    def __init__(self, day, month, year):\r\n        \"\"\" (Day, int, str, int) -> NoneType\r\n\r\n        Initialize a day on the calendar with day, month and year,\r\n        and no events.\r\n\r\n        >>> d = Day(5, 'April', 2014)\r\n        >>> d.day\r\n        5\r\n        >>> d.month\r\n        'April'\r\n        >>> d.year\r\n        2014\r\n        >>> d.events\r\n        []\r\n        \"\"\"\r\n\r\n        self.day = day\r\n        self.month = month\r\n        self.year = year\r\n        self.events = []\r\n\r\n\r\n    def schedule_event(self, new_event):\r\n        \"\"\" (Day, Event) ->\r\n    \r\n        Schedule new_event on this day.\r\n\r\n        >>> d = Day(26, 'March', 2013)\r\n        >>> e = event.Event(11, 12, 'Meeting')\r\n        >>> d.schedule_event(e)\r\n    \r\n        >>> d.events[0] == e\r\n        \"\"\"\r\n\r\n        self.events.append(new_event)\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "ListReferencing",
+          "IfCheckingInForLoop",
+          "CallingObjectMethod",
+          "CheckingForItem",
+          "list()",
+          "TransformingToStringType",
+          "__init()__",
+          "FormattingString",
+          "AddingListElementWithAppend",
+          "DefiningClass",
+          "DefiningObjectMethod",
+          "ChangingValueVariable",
+          "BooleanLiteral",
+          "StringLiteral",
+          "ListLiteral",
+          "IntegerLiteral",
+          "CreatingObject"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "IntegerLiteral",
+          "ListLiteral",
+          "StringLiteral",
+          "__init()__"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AddingListElementWithAppend",
+          "BooleanLiteral",
+          "CallingObjectMethod",
+          "ChangingValueVariable",
+          "CreatingObject",
+          "DefiningClass",
+          "DefiningObjectMethod",
+          "FormattingString",
+          "IfCheckingInForLoop",
+          "ListReferencing",
+          "TransformingToStringType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/259/embed?act=PCRS&sub=py_class_day_calendar_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.970Z"
+}

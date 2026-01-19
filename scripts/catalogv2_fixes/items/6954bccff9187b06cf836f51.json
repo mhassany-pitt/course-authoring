@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836f51",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-03-28T00:39:01.000Z",
+  "updated_at": "2026-01-17T05:28:13.131Z",
+  "tags": [],
+  "identity": {
+    "id": "py_greatest_absolute_difference",
+    "title": "Greatest Absolute Differemce",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/7/embed?act=PCRS&sub=py_greatest_absolute_difference"
+  },
+  "attribution": {
+    "created_at": "2025-03-28T00:39:01.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the examples in the docstring and then complete the function body.",
+    "source_code": "[student_code]\r\ndef greatest_difference(nums1, nums2):\r\n    \"\"\" (list of number, list of number) -> number\r\n\r\n    Precondition: len(nums1) == len(nums2) and nums1 != []\r\n\r\n    Return the greatest absolute difference between numbers at corresponding\r\n    positions in nums1 and nums2.\r\n\r\n    >>> greatest_difference([1, 2, 3], [6, 8, 10])\r\n    7\r\n    >>> greatest_difference([1, -2, 3], [-6, 8, 10])\r\n    # TODO Replace this comment with the return value for the above function call.\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/7/embed?act=PCRS&sub=py_greatest_absolute_difference"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.991Z"
+}

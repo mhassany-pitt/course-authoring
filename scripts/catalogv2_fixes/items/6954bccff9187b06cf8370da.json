@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8370da",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-09-06T00:34:42.000Z",
+  "updated_at": "2026-01-17T12:55:15.624Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "partition3",
+    "title": "Partition3",
+    "type": "Animated Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=partition3&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2021-09-06T00:34:42.000Z",
+    "provider": "JSVEE",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "\ndef partition(num_list, start, end):\n    k = start\n    for i in range(start + 1, end + 1):\n        if num_list[i] <= num_list[start]:\n            k += 1\n            temp = num_list[i]\n            num_list[i] = num_list[k]\n            num_list[k] = temp\n    temp = num_list[start]\n    num_list[start] = num_list[k]\n    num_list[k] = temp\n    return num_list\n\ndef main():\n    l = [13, 19, 9, 5, 12, 8, 7, 4, 11, 2, 6, 21]\n    new_list = partition(l, 0, len(l) - 1)\n    print(new_list)\n\nmain()\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=partition3"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.043Z"
+}

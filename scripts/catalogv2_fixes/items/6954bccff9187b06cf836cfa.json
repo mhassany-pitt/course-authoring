@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836cfa",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:16:52.000Z",
+  "updated_at": "2026-01-17T05:26:52.091Z",
+  "tags": [],
+  "identity": {
+    "id": "ifelse.if_else_wage__68bdb309f6cc3d7a9cc09784",
+    "title": "Calculating the Employees Wage Based on the Hours That the Employee Has Worked and an Hourly Pay Rate",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09784?_t=1758485059927&index=0"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:16:52.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program for the payment department of a company to calculate the wage of an employee based on the number of hours that the employee has worked. If an employee works over 40 hours in a week, the payment amount should take into account the overtime hours. The overtime hours are paid at a rate one and a half times the regular pay rate.",
+    "source_code": "import java.text.NumberFormat;\nimport java.util.Scanner;\npublic class JIfElseWages1\n{\n\tpublic static void main (String[] args)\n\t{\n\t\t//Step 1: Define the variables that we need for this program\n\t\tfinal double RATE = 8.25; \n\t\tfinal int STANDARD = 40; \n\t\tdouble wage = 0.0;\n\t\t//Step 2: Read the number of hours that the employee has worked\n\t\tScanner scan = new Scanner (System.in);\n\t\tSystem.out.println(\"Enter the number of hours that the employee has worked: \");\n\t\tint hours = scan.nextInt();\n\t\tscan.close();\n\t\t//Step 3: Pay overtime at \"time and a half\" of the regular rate of pay\n\t\tif (hours > STANDARD) {\n\t\t\twage = STANDARD * RATE + (hours-STANDARD) * (RATE * 1.5);\n\t\t} else {\n\t\t\twage = hours * RATE;\n\t\t}\n\t\t//Step 4: Print the calculated wage\n\t\tNumberFormat fmt = NumberFormat.getCurrencyInstance();\n\t\tSystem.out.println(\"Wage: \" + fmt.format(wage));\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09784?_t=1758485059927&index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > If-Else and Switch",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > If-Else",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > If-Else",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.920Z"
+}

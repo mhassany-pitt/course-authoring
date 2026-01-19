@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e6e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:47.011Z",
+  "tags": [],
+  "identity": {
+    "id": "py_reorder_by_hashtag",
+    "title": "PCRS C3-PL  Reorder By Hashtag",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/102/embed?act=PCRS&sub=py_reorder_by_hashtag"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "This function describes a potential helper function for detect_authors. In this question, we have a dictionary that connects candidates to the lists of the hashtags they use. The task is to write a function that produces a dictionary where the keys are hashtags and the values are the lists of candidates who use those hashtags.Complete the function below including writing a description.",
+    "source_code": "[student_code]\r\ndef reorder_by_hashtag(candidate_to_hashtags):\r\n    \"\"\"(dict of str to list of str) -> dict of str to list of str\r\n\r\n    >>> d = reorder_by_hashtag({'Trump':['MakeAmericaGreatAgain', '4Prez'], 'Stein':['4Prez']})\r\n    {'4Prez': ['Stein', 'Trump'], 'MakeAmericaGreatAgain': ['Trump']}\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/102/embed?act=PCRS&sub=py_reorder_by_hashtag"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.962Z"
+}

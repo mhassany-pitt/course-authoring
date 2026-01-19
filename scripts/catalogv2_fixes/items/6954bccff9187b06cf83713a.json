@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf83713a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-23T00:05:14.000Z",
+  "updated_at": "2026-01-17T05:28:59.960Z",
+  "tags": [],
+  "identity": {
+    "id": "py_sum_two_int",
+    "title": "Sum of two integer numbers",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/196/embed?act=PCRS&sub=py_sum_two_int"
+  },
+  "attribution": {
+    "created_at": "2020-08-23T00:05:14.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Given 2 integers, num1 and num2, calculate their sum and store it in variable called sum.E.g.: if the value of num1 is 3 and the value of num2 is 4, the program prints 7.Authors: Yana Kortsarts, Yulia Kempner, Leonid Kugel, Kamil Akhuseyinoglu",
+    "source_code": "[blocked]\r\n# Assume that both variables num1 and num2 are already set to an integer.\r\n# Assign the sum to a variable called sum.\r\n[/blocked]\r\n[student_code]\r\n\r\n[/student_code]\r\n[blocked]\r\nprint(sum)\r\n[/blocked]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/196/embed?act=PCRS&sub=py_sum_two_int"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=396",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=396",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Fall 2020) > Variables and Operations",
+      "used_at": "2020-08-16T23:39:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=407",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=407",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Spring 2021) > Variables and Operations",
+      "used_at": "2021-01-26T22:51:01.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=465",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=465",
+      "context_name": "Python: PYTHON001 | Widener University Python Course (Fall 2025) > Variables and Operations",
+      "used_at": "2025-08-08T15:59:35.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.055Z"
+}

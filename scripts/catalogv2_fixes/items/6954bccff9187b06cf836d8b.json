@@ -1,0 +1,128 @@
+{
+  "id": "6954bccff9187b06cf836d8b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-26T13:15:01.000Z",
+  "updated_at": "2026-01-17T05:27:20.968Z",
+  "tags": [],
+  "identity": {
+    "id": "py_if_next_day_date_es",
+    "title": "Dia siguiente",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/320/embed?act=PCRS&sub=py_if_next_day_date_es"
+  },
+  "attribution": {
+    "created_at": "2025-05-26T13:15:01.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa el siguiente programa que verifica tres enteros, que representan una fecha: mes, dia y ano, e imprime la fecha del dia siguiente.Los valores de mes, dia y ano ya estan asignados a las variables mes, dia y ano respectivamente. Puedes asumir que los valores de estas variables siempre son validos.La instruccion de impresion de la fecha ya esta proporcionada al final del programa. Para que el programa funcione correctamente, solo necesitas actualizar los valores actuales de las variables mes, dia y ano a la fecha del dia siguiente.Ejemplo 1: Si los tres enteros dados (mes dia ano) son 3 30 2015, que representa la fecha real 30 de marzo de 2015, el programa deberia encontrar la fecha del dia siguiente como 3 31 2015 (31 de marzo de 2015) e imprimirla en consecuencia.  Ejemplo 2: Si los tres enteros dados (mes dia ano) son 12 31 2016, que representa la fecha real 31 de diciembre de 2016, el programa deberia encontrar la fecha del dia siguiente como 1 1 2017 (1 de enero de 2017) e imprimirla en consecuencia.Pista 1: No olvides considerar el ano bisiesto. Si el ano actual es un ano bisiesto y la fecha actual dada es 02 28 1988, la fecha del dia siguiente se convierte en 02 29 1988 en lugar de 03 01 1988.En el calendario gregoriano, un ano es bisiesto cuando el numero que representa ese ano es divisible por 4, pero no por 100, a menos que sea divisible por 400.Pista 2: Asume que no hay anos bisiestos antes de 1582.Autores: Yana Kortsarts, Yulia Kempner, Leonid Kugel, Kamil Akhuseyinoglu",
+    "source_code": "[student_code]\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "Addition",
+          "SimpleAssignmentStatement",
+          "NestedIfChecking"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "FindRemainder",
+          "AugmentedAssignmentStatement",
+          "ChangingValueVariable",
+          "IfElifElseChecking",
+          "IfElifChecking",
+          "IfChecking",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "LogicalExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "AugmentedAssignmentStatement",
+          "ComparisonExpression",
+          "IntegerLiteral",
+          "LogicalExpression",
+          "SimpleAssignmentStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "ChangingValueVariable",
+          "FindRemainder",
+          "IfChecking",
+          "IfElifChecking",
+          "IfElifElseChecking",
+          "NestedIfChecking"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/320/embed?act=PCRS&sub=py_if_next_day_date_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Condicionales",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.940Z"
+}

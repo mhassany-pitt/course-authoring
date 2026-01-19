@@ -1,0 +1,76 @@
+{
+  "id": "6954bccff9187b06cf836d6e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-31T15:06:22.000Z",
+  "updated_at": "2026-01-17T12:54:01.296Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "testing_um2_arun_java_SLR_weat_ex__683b514227c37279d84e7db0-683a857a27c37279d84e7941-0",
+    "title": "testing_um2_arun_java_SLR_weat_ex",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/683b514227c37279d84e7db0?_t=1748718394194&index=0"
+  },
+  "attribution": {
+    "created_at": "2025-05-31T15:06:22.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class SimpleLinearRegression {\r\n\r\n    // Sample training data\r\n    static double[] x = {1, 2, 3, 4, 5};\r\n    static double[] y = {2, 4, 6, 8, 10};  // y = 2x\r\n\r\n    // Hypothesis function: y = mx + b\r\n    static double m = 0;  // slope\r\n    static double b = 0;  // intercept\r\n\r\n    public static void main(String[] args) {\r\n        double learningRate = 0.01;\r\n        int iterations = 1000;\r\n\r\n        for (int i = 0; i < iterations; i++) {\r\n            gradientDescentStep(learningRate);\r\n        }\r\n\r\n        System.out.println(\"Final model: y = \" + m + \"x + \" + b);\r\n        predict(6); // Predict y for x = 6\r\n    }\r\n\r\n    static void gradientDescentStep(double lr) {\r\n        double dm = 0;\r\n        double db = 0;\r\n        int n = x.length;\r\n\r\n        for (int i = 0; i < n; i++) {\r\n            double prediction = m * x[i] + b;\r\n            double error = prediction - y[i];\r\n            dm += error * x[i];\r\n            db += error;\r\n        }\r\n\r\n        // Update m and b\r\n        m -= lr * dm / n;\r\n        b -= lr * db / n;\r\n    }\r\n\r\n    static void predict(double input) {\r\n        double output = m * input + b;\r\n        System.out.println(\"Predicted value for x = \" + input + \" is y = \" + output);\r\n    }\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/683b514227c37279d84e7db0?_t=1748718394194&index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=436",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=436",
+      "context_name": "Java: moh70-DEMO4 | moh70-DEMO4 > 1",
+      "used_at": "2024-08-19T12:55:19.000Z",
+      "used_by": "Mohammad Hassany - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.937Z"
+}

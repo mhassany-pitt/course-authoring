@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836cb5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-15T23:57:30.000Z",
+  "updated_at": "2026-01-17T05:26:43.539Z",
+  "tags": [],
+  "identity": {
+    "id": "Vending Machine With Quarters-Dimes- and Nickels__664e3efd91363872f0ba35f8-664e3ef991363872f0ba35f6-1",
+    "title": "Vending Machine With Quarters-Dimes- and Nickels",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e3efd91363872f0ba35f8?_t=1757995050643&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-15T23:57:30.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Suppose we have a vending machine that gives change. A customer selects an item for purchase and inserts a bill into the vending machine. The vending machine dispenses the purchased item and gives change. We will assume that all item prices are multiples of 5 cents, and the machine gives all change in quarters, dimes, and nickels. Construct a program that computes how many quarters, dimes, and nickels to return to the customer.",
+    "source_code": "import java.util.Scanner;\npublic class VendingMachine2\n{\n\tpublic static void main(String[] args)\n\t{\n\t\t//Step 1: Define the constants that we need for this program\n\t\tfinal int PENNIES_PER_DOLLAR = 100;\n\t\tfinal int PENNIES_PER_QUARTER = 25;\n\t\tfinal int PENNIES_PER_DIME = 10;\n\t\tfinal int PENNIES_PER_NICKEL = 5;\n\t\t//Step 2: Read the bill value and item price\n\t\tScanner scan = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter bill value in dollars (1 = $1 bill, 5 = $5 bill, etc.): \");\n\t\tint billValue = scan.nextInt();\n\t\tSystem.out.println(\"Enter item price in pennies: \");\n\t\tint itemPrice = scan.nextInt();\n\t\tscan.close();\n\t\t//Step 3: Compute the change due\n\t\tint changeDue = PENNIES_PER_DOLLAR * billValue - itemPrice;\n\t\t//Step 4: Compute the number of quarters in the change due and update the change due after taking away the quarters\n\t\tint quarters = changeDue / PENNIES_PER_QUARTER;\n\t\tchangeDue = changeDue % PENNIES_PER_QUARTER;\n\t\t//Step 5: Compute the number of dimes in the remaining change due and update the change due after taking away the dimes\n\t\tint dimes = changeDue / PENNIES_PER_DIME;\n\t\tchangeDue = changeDue % PENNIES_PER_DIME;\n\t\t//Step 6: Compute the number of nickels in the remaining change due\n\t\tint nickels = changeDue / PENNIES_PER_NICKEL;\n\t\t//Step 7: Display the result\n\t\tSystem.out.println(\"Your change consists of:\"); \n\t\tSystem.out.println(quarters + \" quarters\");\n\t\tSystem.out.println(dimes + \" dimes\"); \n\t\tSystem.out.println(nickels + \" nickels\");\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e3efd91363872f0ba35f8?_t=1757995050643&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.914Z"
+}

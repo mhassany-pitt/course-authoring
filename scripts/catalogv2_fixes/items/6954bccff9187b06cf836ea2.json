@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836ea2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:53.207Z",
+  "tags": [],
+  "identity": {
+    "id": "py_recurse_converge",
+    "title": "PCRS C3-PL  Recurse Converge",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/160/embed?act=PCRS&sub=py_recurse_converge"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "self_convergeGoal: Given a number, return the number of iterations it takes to arrive at a derived number that converges on to itself, as per the following routine. Recursion is recommended. Initialize a counter to count the number of iterationsTake any four-digit number, using at least two different digits. (Leading zeros are allowed.)Arrange the digits in descending and then in ascending order to get two four-digit numbers, adding leading zeros if necessary.Subtract the smaller number from the bigger number. Let's call this a sequence_number.Check if the sequence_number (the remainder) from Step 3 equals the orginal number. If not, increment the iteration counter, and go back to step 2 and perform it on the sequence_number.If there is a match, then return the count of iterationsIf the sequence_number collapses to zero, then return -1 Converge valuesWhile 3-digit numbers converge to the same unique number k which is also 3 digits long, all 4-digit numbers also converge to the same unique value k1 which is 4 digits long. However, 5 digit numbers converge to any one of the following values: 53955, 59994, 61974, 62964, 63954, 71973, 74943, 75933, 82962, 83952.Example1234  ->   31. 4321 - 1234 =  3087 /   2. 8730 - 378  =  8352 /   3. 8532 - 2358 =  6174 /      7641 - 1467 =  6174 // same as previous414 -> 41. 441 - 144 =  297 /   2. 972 - 279 =  693 /   3. 963 - 369 =  594 /4. 954 - 459 =  495 /   954 - 459 =  495 // same as previous50000 -> 31. 50000 - 5      =  49995 /   2. 99954 - 45999  =  53955 /  # first 3. 95553 - 35559  =  59994 /   99954 - 45999  =  53955 /  # 2nd time",
+    "source_code": "[student_code]\n\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/160/embed?act=PCRS&sub=py_recurse_converge"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Recursion",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > Recursion",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Recursion",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.967Z"
+}

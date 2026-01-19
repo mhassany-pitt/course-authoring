@@ -1,0 +1,215 @@
+{
+  "id": "6954bccff9187b06cf8377fb",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T13:19:32.350Z",
+  "tags": [
+    "TODO:add-prompt",
+    "TODO:add-source-code"
+  ],
+  "identity": {
+    "id": "Arithmetic_Expressions_question5",
+    "title": "Arithmetic Expressions question5",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/sqlknot/index.html?cid=10&tid=5&svc=progvis"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "SQL-KnoT",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "SQL"
+    ]
+  },
+  "content": {
+    "prompt": null,
+    "source_code": null
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "Arithmetic Expressions",
+          "AttributeColumn",
+          "DomainType",
+          "TupleRow",
+          "MultipleAttributeSelection",
+          "RenamingAttribute",
+          "SingleTableSelection",
+          "Division",
+          "AttributeAlias",
+          "RenameClause",
+          "DivisionExpression",
+          "Tuple",
+          "NumericConstant",
+          "SelectStatement",
+          "FromClause",
+          "Instance",
+          "AttributeName"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/sqlknot/index.html?cid=10&tid=5&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=2",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=2",
+      "context_name": "SQL: IS 1022-2710  | Database Management  > Arithmetic Expressions",
+      "used_at": "2013-09-11T10:17:30.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=30",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=30",
+      "context_name": "SQL: IS 1022-2710  | Database Management (v2) > Arithmetic Expressions",
+      "used_at": "2015-10-08T11:05:34.000Z",
+      "used_by": "dguerra - Pitt"
+    },
+    {
+      "context_id": "cid=335",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=335",
+      "context_name": "SQL: IS 1022-2710 | Database Management (PT) > Arithmetic Expressions",
+      "used_at": "2016-03-29T14:24:29.000Z",
+      "used_by": "Rafael Araujo - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=337",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=337",
+      "context_name": "SQL: IS 1022-2710  | Database Management (v3) > Arithmetic Expressions",
+      "used_at": "2016-09-16T15:15:05.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=341",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=341",
+      "context_name": "SQL: IS 1022-2710 | Database Management (v4) > Arithmetic Expressions",
+      "used_at": "2017-01-16T18:26:16.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=347",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=347",
+      "context_name": "SQL: IS 1022-2710 | Database Management (SQL-KnoT only) > Arithmetic Expressions",
+      "used_at": "2017-09-15T00:29:55.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=353",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=353",
+      "context_name": "SQL: IS 1022-2710 | Database Management (v5) > Arithmetic Expressions",
+      "used_at": "2018-01-21T12:10:22.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=357",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=357",
+      "context_name": "SQL: IS 1022-2710 | Database Management (Aalto) > Arithmetic Expressions",
+      "used_at": "2018-03-02T09:58:39.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=358",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=358",
+      "context_name": "SQL: IS 1022-2710 | Database Management (ASU) > Arithmetic Expressions",
+      "used_at": "2018-03-13T00:41:16.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=359",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=359",
+      "context_name": "SQL: Demo | Database Management (All Smart Content) > Arithmetic Expressions",
+      "used_at": "2018-05-14T11:11:29.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=360",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=360",
+      "context_name": "SQL: Demo | Database Management (Summer) > Arithmetic Expressions",
+      "used_at": "2018-05-27T14:45:14.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=363",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=363",
+      "context_name": "SQL: IS2710 | Database Management (v7) > Arithmetic Expressions",
+      "used_at": "2018-09-14T08:35:48.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=380",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=380",
+      "context_name": "SQL: IS 1022-2710 | Database Management (Albany) > Arithmetic Expressions",
+      "used_at": "2019-10-13T19:39:44.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=386",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=386",
+      "context_name": "SQL: IS 1022-2710 | Database Management (Aalto+SQL-Tutor) > Arithmetic Expressions",
+      "used_at": "2020-02-01T18:08:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=392",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=392",
+      "context_name": "SQL: IS 1022-2710 | Database Management(LTI-DBQA) > Arithmetic Expressions",
+      "used_at": "2020-07-24T10:47:34.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=408",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=408",
+      "context_name": "SQL: IS 1022-2710 | Database Management (Aalto +SQL-Tutor+DBQA) > Arithmetic Expressions",
+      "used_at": "2021-01-29T20:23:45.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=451",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=451",
+      "context_name": "SQL: IS 1022-2710 | BINUS-SQL-2025 > Arithmetic Expressions",
+      "used_at": "2025-02-12T23:04:56.000Z",
+      "used_by": "Rully Agus Hendrawan, Rully Agus Hendrawan - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.208Z"
+}

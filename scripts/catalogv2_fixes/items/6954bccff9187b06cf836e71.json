@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e71",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:47.398Z",
+  "tags": [],
+  "identity": {
+    "id": "py_item_catalog_class",
+    "title": "PCRS C3-PL  Item Catalog Class",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/105/embed?act=PCRS&sub=py_item_catalog_class"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "For this problem, Item and Catalog classes have been defined in the editing space.The Item class creates objects consisting of attributes (e.g. \"style\") and values (e.g. \"flat\"). When a new Item object is created, an id attribute is automatically assigned. Here\u2019s an example of interacting with the class in a console:>>> obj = Item()>>> obj.id102>>> obj.style = \"flat\">>> obj.style\u2019flat\u2019Note that Python allows attributes to be assigned values with an assignment statement. In addition to id and style, possible attributes for the Itemclass include calories, color, label, name, shape, status and texture.The Catalog class produces objects that contain a collection of items. Here\u2019s an example of interacting with the Item and Catalog class:>>> listing = Catalog()>>> listing.add(obj)>>> listing.has_style(\"flat\")True>>> listing.has_style(\"twisted\")False>>> listing.size()1Write a method for the Catalog class called lookup. This method should take a string as an argument to find the first object that matchesits shape attribute. The method should then return the name of the matching Item object. For example, consider that listing is a Catalogobject that has an Item with shape of \u2019round\u2019 and name of \u2019apple\u2019:>>> listing.lookup('round')'apple'If there is no matching object, the method should return the Python keyword None. You may assume that every object in the Cataloghas both name and shape attributes.Using just the editing space below, write your definition of the lookup method so that it works as described above. ",
+    "source_code": "[blocked]\r\nclass Item:\r\n    'an Item class for the catalog'\r\n    internal_id = 100\r\n    def __init__(self):\r\n        Item.internal_id += 1\r\n        self.id = Item.internal_id\r\n        self.quantity = 0\r\n        # Other attributes may be defined below. This code is hidden. See the description for details.\r\n        # ...\r\n        \r\nclass Catalog:\r\n    'a simple Catalog class'\r\n    \r\n    def __init__(self):\r\n        'the constructor'\r\n        self.items=[]\r\n        \r\n    def add(self, item):\r\n        'add an item to the catalog'\r\n        return self.items.append(item)\r\n    \r\n    def has_style(self, desired_style):\r\n        '''returns true if catalog has an item of the given style'''\r\n        for obj in self.items:\r\n            if obj.style == desired_style:\r\n                return True\r\n        return False\r\n    \r\n    def size(self):\r\n        '''return the number of items in the catalog'''\r\n        return len(self.items)\r\n[/blocked]\r\n[student_code]\r\n\t# Write the lookup method here:\r\n    \r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/105/embed?act=PCRS&sub=py_item_catalog_class"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.963Z"
+}

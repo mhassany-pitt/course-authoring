@@ -1,0 +1,90 @@
+{
+  "id": "6954bccff9187b06cf83762c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:00.952Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "apples_kids.c",
+    "title": "IS12:: apples_kids.c (4.8)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=apples_kids.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*  Example -  Apples for kids: a demo of % operation\n\u00a0\u00a0\u00a0\u00a0Dividing m apples among n kids without a knife.\n\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky\n*/\n\n#include <stdio.h>\nvoid main () {\n\u00a0\u00a0\u00a0\u00a0int kids, apples, rounds = 0;\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Kids?: \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &kids);\n\u00a0\u00a0\u00a0\u00a0printf(\"Apples?: \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &apples);\n\n\u00a0\u00a0\u00a0\u00a0do {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0apples -= kids;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0rounds++;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%d apples left after round %d\n\", apples, rounds);\n\u00a0\u00a0\u00a0\u00a0} while (apples >= kids) ;\n\u00a0\u00a0\u00a0\u00a0printf (\"Each kid got %d apples. %d apples left.\n\", rounds, apples);\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "variable_initialization",
+          "int",
+          "greater_equal",
+          "void",
+          "sub_assignment",
+          "printf",
+          "reference",
+          "include",
+          "variable_declaration",
+          "do",
+          "main_function",
+          "post_increment",
+          "scanf"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=apples_kids.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.175Z"
+}

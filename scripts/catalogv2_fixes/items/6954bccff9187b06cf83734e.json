@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf83734e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2017-06-04T14:34:56.000Z",
+  "updated_at": "2026-01-17T05:30:09.593Z",
+  "tags": [],
+  "identity": {
+    "id": "pcrs_sample_problem4",
+    "title": "PCRS sample problem 4",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/4/embed?act=PCRS&sub=pcrs_sample_problem4"
+  },
+  "attribution": {
+    "created_at": "2017-06-04T14:34:56.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write the body of a loop that computes the sum of all of the integers at odd indices of the list L. The result should be stored in the variable sum.",
+    "source_code": "[blocked]\r\ndef sum_of_odd_indices(L):\r\n    sum = 0\r\n    for index in range(len(L)):\r\n[/blocked]\r\n[student_code]\r\n\r\n[/student_code]\r\n[blocked]\r\n    return sum\r\n[/blocked]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/4/embed?act=PCRS&sub=pcrs_sample_problem4"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=344",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
+      "context_name": "Python: PYTHON001 | PythonCourseV1Clones > Lists",
+      "used_at": "2017-05-22T17:58:24.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.116Z"
+}

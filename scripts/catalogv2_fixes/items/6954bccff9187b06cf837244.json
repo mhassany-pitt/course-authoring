@@ -1,0 +1,77 @@
+{
+  "id": "6954bccff9187b06cf837244",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2018-02-08T01:49:04.000Z",
+  "updated_at": "2026-01-17T13:19:01.990Z",
+  "tags": [
+    "TODO:add-prompt",
+    "TODO:add-source-code"
+  ],
+  "identity": {
+    "id": "Pattern_Matching_question1_TR",
+    "title": "Pattern Matching question1",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/sqlknot/index.html?cid=12&tid=1&lang=TR"
+  },
+  "attribution": {
+    "created_at": "2018-02-08T01:49:04.000Z",
+    "provider": "SQL-KnoT",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "SQL"
+    ]
+  },
+  "content": {
+    "prompt": null,
+    "source_code": null
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/sqlknot/index.html?cid=12&tid=1&lang=TR"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=354",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=354",
+      "context_name": "SQL: BL306A | Database Management[TR] > Metinsel \u0130\u015flemler",
+      "used_at": "2018-02-07T13:32:58.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.085Z"
+}

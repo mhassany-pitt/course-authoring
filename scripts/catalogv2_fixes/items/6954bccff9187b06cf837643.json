@@ -1,0 +1,105 @@
+{
+  "id": "6954bccff9187b06cf837643",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:04.233Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "printback.c",
+    "title": "IS12:: printback.c (15.3)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=printback.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*\n\u00a0\u00a0\u00a0\u00a0Example: backward printing of text with pointers\n\u00a0\u00a0\u00a0\u00a0Inspired by: K&R2, p108\n\u00a0\u00a0\u00a0\u00a0Modified by Peter Brusilovsky\n*/\n\n#include <stdio.h>\n#include <stdlib.h>\n\n#define MAXLINES 5000\n\nstatic char *lineptr[MAXLINES];\n\nvoid copy(char *, char *);\nint getline(char *, int);\nint readlines();\nvoid printbackwards(int);\n\nvoid main() {\n\u00a0\u00a0\u00a0\u00a0int nlines; /* counter of input lines read */\n\n\u00a0\u00a0\u00a0\u00a0nlines = readlines();\n\u00a0\u00a0\u00a0\u00a0printbackwards(nlines);\n}\n\n#define MAXLEN 1000\nint readlines()\n{\n\u00a0\u00a0\u00a0\u00a0int len, nlines;\n\u00a0\u00a0\u00a0\u00a0char *p, line [MAXLEN];\n\n\u00a0\u00a0\u00a0\u00a0nlines = 0;\n\u00a0\u00a0\u00a0\u00a0while((len = getline(line, MAXLEN)) > 0) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0p = (char *) malloc(len+1);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0copy(p, line);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0lineptr[nlines] = p;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++ nlines;\n\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0return nlines;\n}\n\nvoid printbackwards(int n)\n{\n\u00a0\u00a0\u00a0\u00a0while(n > 0) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%s\", lineptr[n-1]);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0--n;\n\u00a0\u00a0\u00a0\u00a0}\n}\n\n/* getline: read a line into s,  return length */\n\nint getline(char *s, int lim)\n{\n\u00a0\u00a0\u00a0\u00a0int c, i;\n\n\u00a0\u00a0\u00a0\u00a0for (i = 0; i < lim-1 &&(c=getchar())!= EOF && c != '\n'; ++i)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0s[i] = c;\n\u00a0\u00a0\u00a0\u00a0if (c == '\n') {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0s[i] = c;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++i;\n\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0s[i] = '\u0000';\n\u00a0\u00a0\u00a0\u00a0return i;\n}\n\n/* copy: copy 'from' into 'to'; assume to is big enough */\nvoid copy(char *to, char *from)\n{\n\u00a0\u00a0\u00a0\u00a0int i = 0;\n\n\u00a0\u00a0\u00a0\u00a0while((to[i] = from [i]) != '\u0000')\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++i;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "variable_initialization",
+          "pre_decrement",
+          "pre_increment",
+          "return",
+          "and",
+          "for",
+          "while",
+          "static",
+          "array_declaration",
+          "char",
+          "explicit_type_cast",
+          "equal",
+          "simple_assignment",
+          "int",
+          "if",
+          "add",
+          "pointer_declaration",
+          "main_function",
+          "not_equal",
+          "less",
+          "greater",
+          "define",
+          "void",
+          "variable_declaration",
+          "include",
+          "function_declaration",
+          "printf",
+          "sub"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=printback.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.176Z"
+}

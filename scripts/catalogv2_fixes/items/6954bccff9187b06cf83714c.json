@@ -1,0 +1,125 @@
+{
+  "id": "6954bccff9187b06cf83714c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-09T19:21:45.000Z",
+  "updated_at": "2026-01-17T12:41:47.116Z",
+  "tags": [],
+  "identity": {
+    "id": "py_account2",
+    "title": "The Class for Representing a Bank Account",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=objects_classes_account&ch=py_account2"
+  },
+  "attribution": {
+    "created_at": "2020-08-09T19:21:45.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a class that represents a basic bank account. This class should contain data representing the name of the account\u2019s owner, the account number, and the account\u2019s current balance; all of which could be accessed or changed only through the getter and setter methods. An instance of the class should be created by specifying three parameters that are used to initialize the instance (i.e., object) data. The other methods of this class should:\\n - provide a one-line description of the account, and\\n - perform various services on the account (making deposits, withdrawals, adding interest to the account). These methods should examine the data passed into them to make sure the requested transaction is valid.",
+    "source_code": "#Step 1: Define the class\nclass Account2 :\n    #Step 1.1: Initialize the account with the specified values\n    def __init__(self, owner, account, initial) :\n        self.__acct_name = owner\n        self.__acct_number = account\n        self.__balance = initial\n    #Step 1.2: Define a method to provide a one-line description of the account\n    def __str__(self) :\n        return \"{:d}{:>20s}{:>10.2f}\".format(self.__acct_number, self.__acct_name, self.__balance)\n    #Step 1.3: Define a method to perform the deposit transaction\n    def deposit(self, amount) :\n        if (amount > 0) :\n            self.__balance = self.__balance + amount\n        return self.__balance\n    #Step 1.4: Define a method to perform a withdraw transaction\n    def withdraw(self, amount, fee) :\n        if (amount > 0 and fee >= 0 and amount+fee < self.__balance) :\n            self.__balance = self.__balance - amount - fee\n        return self.__balance\n    #Step 1.5: Define a method to add interest to the account\n    def add_interest(self) :\n        self.__balance += (self.__balance * 0.035)\n        return self.__balance\n    #Step 1.6: Define the methods to get the  state of the account \n    def get_name(self) :\n        return self.__acct_name\n    def get_balance(self) :\n        return self.__balance\n    def get_acct_number(self) :\n        return self.__acct_number\n#Step 2: Test the class\nacct1 = Account2(\"Tina Murphy\", 72354, 25.59)\nacct2 = Account2(\"Angelica Adams\", 69713, 500.00)\nacct3 = Account2(\"Edward Demsey\", 93757, 769.32)\nprint(acct1)\nprint(acct2)\nprint(acct3)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "DefiningObjectMethod",
+          "Multiplication",
+          "DefiningClass",
+          "IfChecking",
+          "CreatingObject",
+          "AssigningValueVariable",
+          "Addition",
+          "FormattingString",
+          "CallingLibraryFunction",
+          "CreatingString",
+          "BooleanEvaluating",
+          "Printing",
+          "CallingObjectMethod",
+          "Subtraction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "AssigningValueVariable",
+          "BooleanEvaluating",
+          "CallingLibraryFunction",
+          "CallingObjectMethod",
+          "CreatingObject",
+          "CreatingString",
+          "DefiningClass",
+          "DefiningObjectMethod",
+          "FormattingString",
+          "IfChecking",
+          "Multiplication",
+          "Printing",
+          "Subtraction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=objects_classes_account&ch=py_account2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > Classes and objects",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > Classes and objects",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.057Z"
+}

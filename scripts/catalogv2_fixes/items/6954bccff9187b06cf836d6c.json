@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836d6c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-31T17:16:30.000Z",
+  "updated_at": "2026-01-17T05:27:06.075Z",
+  "tags": [],
+  "identity": {
+    "id": "testing_um2_student_average_arun_ch__683b6c02d426b6fa3bccce79-683b6ae0d426b6fa3bccce61-1",
+    "title": "testing_um2_student_average_arun_ch",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/683b6c02d426b6fa3bccce79?_t=1748726678763&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-05-31T17:16:30.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Calculate the student average grade (challenge)",
+    "source_code": "public class Student {\r\n    private String name;\r\n    private int[] grades;\r\n\r\n    // Constructor\r\n    public Student(String name, int[] grades) {\r\n        this.name = name;\r\n        this.grades = grades;\r\n    }\r\n\r\n    // Method to calculate average\r\n    public double calculateAverage() {\r\n        int sum = 0;\r\n        for (int grade : grades) {\r\n            sum += grade;\r\n        }\r\n        return grades.length > 0 ? (double) sum / grades.length : 0;\r\n    }\r\n\r\n    // Method to display student info\r\n    public void displayInfo() {\r\n        System.out.println(\"Name: \" + name);\r\n        System.out.println(\"Average Grade: \" + calculateAverage());\r\n    }\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/683b6c02d426b6fa3bccce79?_t=1748726678763&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.937Z"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "6954bccff9187b06cf83743c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2016-09-16T14:07:44.000Z",
+  "updated_at": "2026-01-17T13:19:24.805Z",
+  "tags": [
+    "TODO:add-prompt",
+    "TODO:add-source-code"
+  ],
+  "identity": {
+    "id": "checkbox_test",
+    "title": "ISD::CheckBoxTest.java",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=checkbox_test"
+  },
+  "attribution": {
+    "created_at": "2016-09-16T14:07:44.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Unknown",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": null,
+    "source_code": null
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=checkbox_test"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.130Z"
+}

@@ -1,0 +1,115 @@
+{
+  "id": "6954bccff9187b06cf836d84",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-27T00:15:50.000Z",
+  "updated_at": "2026-01-17T05:27:20.168Z",
+  "tags": [],
+  "identity": {
+    "id": "py_swap_first_last_es",
+    "title": "Intercambiar primero y ultimo",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/236/embed?act=PCRS&sub=py_swap_first_last_es"
+  },
+  "attribution": {
+    "created_at": "2025-05-27T00:15:50.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa la funcion intercambiar_extremos(L) para intercambiar los extremos de la lista L (primer y ultimo elemento)",
+    "source_code": "[student_code]\r\ndef intercambiar_extremos(L):\r\n    \"\"\" (lista) -> NoneType\r\n    \r\n    Intercambiar los elementos en L[0] y L[-1].\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "Subtraction",
+          "IfElifElseChecking",
+          "NoneLiteral",
+          "IndexingDictionary",
+          "FindingLength",
+          "list()",
+          "DefiningSimpleFunction",
+          "ListReferencing",
+          "SwappingValueVariables",
+          "ChangingValueVariable",
+          "IfChecking",
+          "ListLiteral",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "CallingSimpleFunction",
+          "IndexingTuple",
+          "IndexingList"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "IntegerLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "FindingLength",
+          "IfChecking",
+          "IndexingList",
+          "SwappingValueVariables"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/236/embed?act=PCRS&sub=py_swap_first_last_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.939Z"
+}

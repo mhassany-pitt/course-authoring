@@ -1,0 +1,144 @@
+{
+  "id": "6954bccff9187b06cf836dbf",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:19:48.000Z",
+  "updated_at": "2026-01-17T05:27:26.559Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_class_point_es",
+    "title": "Crear una clase y usar sus m\u00e9todos",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_class_point_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:19:48.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye una clase Punto que tenga un metodo para calcular la distancia desde otra instancia de Punto.",
+    "source_code": "from math import sqrt\nclass Punto:\n\tdef __init__(self, loc_x, loc_y):\n\t\tself.x = loc_x\n\t\tself.y = loc_y\n\tdef distancia_desde(self, otro_punto):\n\t\tdist_x = self.x - otro_punto.x\n\t\tdist_y = self.y - otro_punto.y\n\t\treturn sqrt(dist_x * dist_x + dist_y * dist_y)\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "Importing",
+          "DefiningObjectMethod",
+          "Multiplication",
+          "DefiningClass",
+          "Addition",
+          "AssigningValueVariable",
+          "Subtraction",
+          "CallingLibraryFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "parser": {
+        "concepts": [
+          "Return",
+          "Sub",
+          "Attribute",
+          "ClassDef",
+          "alias",
+          "Add",
+          "Call",
+          "ImportFrom",
+          "arg",
+          "Mult",
+          "Assign",
+          "FunctionDef"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "Sub",
+          "Call",
+          "Assign",
+          "Return",
+          "ClassDef",
+          "FunctionDef",
+          "Attribute",
+          "Add",
+          "Mult",
+          "ImportFrom",
+          "alias"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "DefiningClass",
+          "DefiningObjectMethod",
+          "Importing",
+          "Multiplication",
+          "Subtraction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_class_point_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Clases y Objetos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.945Z"
+}

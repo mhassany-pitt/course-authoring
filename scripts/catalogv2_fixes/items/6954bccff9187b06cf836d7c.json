@@ -1,0 +1,141 @@
+{
+  "id": "6954bccff9187b06cf836d7c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-27T23:08:10.000Z",
+  "updated_at": "2026-01-17T05:27:19.255Z",
+  "tags": [],
+  "identity": {
+    "id": "py_ascii_isoceles_str_es",
+    "title": "Triangulo Ascii (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/328/embed?act=PCRS&sub=py_ascii_isoceles_str_es"
+  },
+  "attribution": {
+    "created_at": "2025-05-27T23:08:10.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Escribe una funci\u00f3n triangulo_ascii(bloque, lado) que retorne una cadena de texto que represente un tri\u00e1ngulo rect\u00e1ngulo is\u00f3sceles en ASCII, utilizando el car\u00e1cter bloque, con una base y altura de lado caracteres. El \u00e1ngulo recto debe estar en la esquina superior izquierda.Precondici\u00f3n: len(bloque) == 1Por ejemplo, si bloque=\"@\" y lado=4, la funci\u00f3n debe retornar la siguiente cadena (con un salto de l\u00ednea al final de cada fila):@@@@@@@@@@",
+    "source_code": "[student_code]\r\ndef triangulo_ascii(bloque, lado):\r\n    \"\"\" (str, int) -> str\r\n\r\n    Precondici\u00f3n: len(bloque) == 1\r\n\r\n    Retorna una representaci\u00f3n en texto de un tri\u00e1ngulo rect\u00e1ngulo is\u00f3sceles en ASCII, \r\n    utilizando el car\u00e1cter bloque, con una base y altura de 'lado' caracteres. \r\n    El \u00e1ngulo recto debe estar en la esquina superior izquierda.\r\n    \"\"\"\r\n    # Escribe tu codigo aqui\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "CheckingForItem",
+          "Addition",
+          "StringLiteral",
+          "Subtraction",
+          "Concatenation",
+          "TransformingToStringType",
+          "DefiningSimpleFunction",
+          "MixedNestedLoopIteration",
+          "NestedForLoopIteration",
+          "ForLoopWith+=",
+          "ChangingValueVariable",
+          "IntegerLiteral",
+          "CallingObjectMethod",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ForLoopWith+=",
+          "IntegerLiteral",
+          "MixedNestedLoopIteration",
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "CallingObjectMethod",
+          "ChangingValueVariable",
+          "Concatenation",
+          "DefiningSimpleFunction",
+          "NestedForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/328/embed?act=PCRS&sub=py_ascii_isoceles_str_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Ciclos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Ciclos For",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Ciclos",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Manejo de archivos/texto",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.938Z"
+}

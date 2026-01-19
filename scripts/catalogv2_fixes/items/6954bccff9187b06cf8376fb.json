@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8376fb",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:31.589Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "block_scope",
+    "title": "Block Scope",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=block_scope&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\nvoid a( void );\nvoid b( void );\nvoid c( void );\nint x = 1;\nint main()\n{\n\u00a0\u00a0\u00a0int x = 5;\n\u00a0\u00a0\u00a0printf(\"local x in outer scope of main is %d\\n\", x );\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0int x = 7;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"local x in inner scope of main is %d\\n\", x );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0printf( \"local x in outer scope of main is %d\\n\", x );\n\u00a0\u00a0\u00a0a();\n\u00a0\u00a0\u00a0b();\n\u00a0\u00a0\u00a0c();\n\u00a0\u00a0\u00a0a();\n\u00a0\u00a0\u00a0b();\n\u00a0\u00a0\u00a0c();\n\u00a0\u00a0\u00a0printf( \"local x in main is %d\\n\", x );\n\u00a0\u00a0\u00a0return 0;\n}\n\nvoid a( void )\n{\n\u00a0\u00a0\u00a0int x = 25;\n\u00a0\u00a0\u00a0printf( \"\\nlocal x in a is %d after entering a\\n\", x );\n\u00a0\u00a0\u00a0++x;\n\u00a0\u00a0\u00a0printf( \"local x in a is %d before exiting a\\n\", x );\n}\nvoid b( void )\n{\n\u00a0\u00a0\u00a0\u00a0static int x = 50;  /* static initialization only */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* first time b is called */\n\u00a0\u00a0\u00a0\u00a0printf( \"\\nlocal static x is %d on entering b\\n\", x );\n\u00a0\u00a0\u00a0\u00a0++x;\n\u00a0\u00a0\u00a0\u00a0printf( \"local static x is %d on exiting b\\n\", x );\n}\nvoid c( void )\n{\n\u00a0\u00a0\u00a0printf( \"\\nglobal x is %d on entering c\\n\", x );\n\u00a0\u00a0\u00a0x *= 10;\n\u00a0\u00a0\u00a0printf( \"global x is %d on exiting c\\n\", x );\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=block_scope&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.187Z"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "6954bccff9187b06cf83702e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2023-04-27T22:55:32.000Z",
+  "updated_at": "2026-01-17T13:18:43.799Z",
+  "tags": [
+    "TODO:add-prompt",
+    "TODO:add-source-code"
+  ],
+  "identity": {
+    "id": "ebook-py-2-ch01-sec05-int1-1",
+    "title": "ebook-py-2-ch01-sec05-int1-1",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/lti/launch?tool=codecheck&sub=ebook-py-2-ch01-sec05-int1-1"
+  },
+  "attribution": {
+    "created_at": "2023-04-27T22:55:32.000Z",
+    "provider": "CodeCheck",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": null,
+    "source_code": null
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/lti/launch?tool=codecheck&sub=ebook-py-2-ch01-sec05-int1-1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=427",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=427",
+      "context_name": "Python:  | Python for Everyone > Section 1.5",
+      "used_at": "2023-04-28T10:31:45.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.022Z"
+}

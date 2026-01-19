@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf8373a6",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2016-11-02T16:06:58.000Z",
+  "updated_at": "2026-01-17T05:30:19.281Z",
+  "tags": [],
+  "identity": {
+    "id": "pcrs_sample_problem1",
+    "title": "PCRS sample problem 1",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/1/embed?act=PCRS&sub=pcrs_sample_problem1"
+  },
+  "attribution": {
+    "created_at": "2016-11-02T16:06:58.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write a statement that adds the variable x to 42 and stores the result in a variable named result.",
+    "source_code": "[student_code]\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/1/embed?act=PCRS&sub=pcrs_sample_problem1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=344",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
+      "context_name": "Python: PYTHON001 | PythonCourseV1Clones > Variables",
+      "used_at": "2017-05-22T17:58:24.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.121Z"
+}

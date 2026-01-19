@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836ecc",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:58.399Z",
+  "tags": [],
+  "identity": {
+    "id": "py_item_catalog_class_es",
+    "title": "PCRS C3-PL  Item Catalog Class",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/279/embed?act=PCRS&sub=py_item_catalog_class_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Para este problema, las clases Item y Catalog han sido definidas en el espacio de edicion.La clase Item crea objetos que consisten en atributos (por ejemplo, \"estilo\") y valores (por ejemplo, \"plano\"). Cuando se crea un nuevo objeto Item, se asigna automaticamente un atributo id. Aqui hay un ejemplo de interaccion con la clase en una consola:>>> obj = Item()>>> obj.id102>>> obj.estilo = \"plano\">>> obj.estilo'plano'Tenga en cuenta que Python permite que los atributos se les asignen valores con una declaracion de asignacion. Ademas de id y estilo, los posibles atributos para la clase Item incluyen calorias, color, etiqueta, nombre, forma, estado y textura.La clase Catalog produce objetos que contienen una coleccion de items. Aqui hay un ejemplo de interaccion con la clase Item y Catalog:>>> listado = Catalog()>>> listado.agregar(obj)>>> listado.tiene_estilo(\"plano\")True>>> listado.tiene_estilo(\"torcido\")False>>> listado.tamano()1Escriba un metodo para la clase Catalog llamado busqueda. Este metodo debe tomar un string como argumento para encontrar el primer objeto que coincida con su atributo forma. Luego, el metodo debe devolver el nombre del objeto Item que coincide. Por ejemplo, considere que listado es un objeto Catalog que tiene un Item con forma de 'redondo' y nombre de 'manzana':>>> listado.busqueda('redondo')'manzana'Si no hay ningun objeto que coincida, el metodo debe devolver la palabra clave de Python None. Puede asumir que cada objeto en el Catalog tiene tanto atributos de nombre como de forma.Usando solo el espacio de edicion a continuacion, escriba su definicion del metodo busqueda para que funcione como se describe arriba.",
+    "source_code": "[student_code]\r\nclass Item:\r\n    #'una clase Item para el catalogo'\r\n    internal_id = 100\r\n    def __init__(self):\r\n        Item.internal_id += 1\r\n        self.id = Item.internal_id\r\n        self.cantidad = 0\r\n        # Otros atributos pueden ser definidos a continuacion. Este codigo esta oculto. Vea la descripcion para detalles.\r\n        # ...\r\n        \r\nclass Catalog:\r\n    #'una clase Catalog simple'\r\n    \r\n    def __init__(self):\r\n        #'el constructor'\r\n        self.items=[]\r\n        \r\n    def agregar(self, item):\r\n        #'agregar un item al catalogo'\r\n        return self.items.append(item)\r\n    \r\n    def tiene_estilo(self, estilo_deseado):\r\n        #'''devuelve verdadero si el catalogo tiene un item del estilo dado'''\r\n        for obj in self.items:\r\n            if obj.estilo == estilo_deseado:\r\n                return True\r\n        return False\r\n    \r\n    def tamano(self):\r\n        #'''devuelve el numero de items en el catalogo'''\r\n        return len(self.items)\r\n\r\n    # Escriba el metodo busqueda aqui:\r\n    def busqueda(self, forma_deseada):\r\n        #'''devuelve el nombre del primer item que coincide con la forma dada'''\r\n        \r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/279/embed?act=PCRS&sub=py_item_catalog_class_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.971Z"
+}

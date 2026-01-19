@@ -1,0 +1,121 @@
+{
+  "id": "6954bccff9187b06cf836d58",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-10T08:53:01.000Z",
+  "updated_at": "2026-01-17T05:27:03.461Z",
+  "tags": [],
+  "identity": {
+    "id": "Desplazando los Valores de la Lista a la Derecha Dos Posiciones__682dcaab66a8e1b992c82af3-682dcaa866a8e1b992c82af0-3",
+    "title": "Desplazando los Valores de la Lista a la Derecha Dos Posiciones",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dcaab66a8e1b992c82af3?_t=1750184398685&index=3&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-10T08:53:01.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Isaac Alpizar-Chacon",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que tenga una funci\u00f3n que reciba una lista de valores y devuelva la lista desplazada a la derecha 2 posiciones, de modo que el valor que actualmente est\u00e1 al final de la lista se mueva a la segunda posici\u00f3n, el pen\u00faltimo valor de la lista se mueva al inicio de la lista, y los valores restantes se desplacen a la derecha. Por ejemplo, si la lista es [1, 2, 3, 4, 5, 6], el programa la cambiar\u00e1 a [5, 6, 1, 2, 3, 4].",
+    "source_code": "#Paso 1: Definir la funci\u00f3n\ndef desplazar_derecha_por_2(lst):\n    #Paso 1.1: Almacenar los \u00faltimos dos valores de la lista en variables locales\n    ultimo = lst[len(lst)-1]\n    penultimo = lst[len(lst)-2]\n    #Paso 1.2: Rotar los valores restantes de la lista a la derecha por 2 posiciones\n    for i in range(len(lst)-1, 1, -1):\n        lst[i] = lst[i - 2]\n    #Paso 1.3: Mover los \u00faltimos dos valores de la lista al frente de la lista\n    lst[0] = penultimo\n    lst[1] = ultimo\n    return lst\n#Paso 2: Llamar a la funci\u00f3n\nvalores = [3, 8, 9, 8, 7, 5]\nprint(\"Lista original:\", valores)\nprint(\"Lista rotada: \", desplazar_derecha_por_2(valores))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleForLoopIteration",
+          "FindingLength",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "Printing",
+          "DefiningSimpleFunction",
+          "CreatingList",
+          "ForLoopWithListIndexing",
+          "ChangingValueListElement",
+          "NestedFunctionCall",
+          "Subtraction",
+          "CallingSimpleFunction",
+          "SingleForLoopIteration",
+          "FindingLength",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "Printing",
+          "DefiningSimpleFunction",
+          "CreatingList",
+          "ForLoopWithListIndexing",
+          "ChangingValueListElement",
+          "NestedFunctionCall",
+          "Subtraction",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dcaab66a8e1b992c82af3?_t=1750184398685&index=3&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Listas",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Listas",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Listas",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.934Z"
+}

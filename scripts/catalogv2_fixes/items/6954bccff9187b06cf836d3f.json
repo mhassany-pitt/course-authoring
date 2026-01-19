@@ -1,0 +1,174 @@
+{
+  "id": "6954bccff9187b06cf836d3f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-13T13:34:46.000Z",
+  "updated_at": "2026-01-17T05:27:00.559Z",
+  "tags": [],
+  "identity": {
+    "id": "py_print_medals_es__684c3d3ca0cac29134435d81",
+    "title": "Imprimir Tabla de Conteo de Medallas con Totales por Fila",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684c3d3ca0cac29134435d81?_t=1750198426771&index=0&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-13T13:34:46.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "es",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Supongamos que tenemos una matriz de 7x4 que almacena el n\u00famero de medallas que siete pa\u00edses ganaron en las competencias de patinaje en los Juegos Ol\u00edmpicos de Invierno. Esta matriz se ve como sigue:\\n[[ \"Canada\", 1, 0, 1 ],\\n [ \"China\", 1, 1, 0 ],\\n ...]\\nCada fila de esta matriz corresponde a los conteos de medallas para el pa\u00eds en esa fila. Los segundo, tercero y cuarto n\u00fameros dentro de una fila representan el n\u00famero de medallas de Oro, Plata y Bronce ganadas por el pa\u00eds correspondiente en esa fila.\\nConstruya un programa que tome esta matriz e imprima una tabla de conteos de medallas con total por fila que muestre el n\u00famero de medallas de Oro, Plata, Bronce y Total para cada uno de los pa\u00edses que participaron en la competencia. La tabla de salida deber\u00eda verse como sigue:\\n    Pais    Oro  Plata  Bronce   Total\\n     Canada        1       0       1            2\\n        China        1       1       0            2\\n       ...\\n",
+    "source_code": "#Paso 1: Definir una matriz de 7x4 que almacena el n\u00famero de medallas ganadas por siete pa\u00edses\nconteos_medallas = [[ \"CAN\", 1, 0, 1 ],\n                    [ \"CHN\", 1, 1, 0 ],\n                    [ \"GER\", 0, 0, 1 ],\n                    [ \"KOR\", 1, 0, 0 ],\n                    [ \"JPN\", 0, 1, 1 ],\n                    [ \"RUS\", 0, 1, 1 ],\n                    [ \"USA\", 1, 1, 0 ]]\n#Paso 2: Imprimir el encabezado de la tabla de salida\nprint(\"{:>5s}{:>3s}{:>3s}{:>3s}{:>5s}\".format(\"Pa\u00eds\",\"O\",\"P\",\"B\",\"Total\"))\n#Paso 3: Iterar a trav\u00e9s de las filas en la matriz de conteos de medallas\nfor i in range(len(conteos_medallas)):\n    #Paso 3.1: Asignar valores iniciales a las variables que necesitamos para imprimir la fila i\n    linea = \"{:>5s}\".format(conteos_medallas[i][0])\n    total_fila = 0\n    #Paso 3.2: Iterar a trav\u00e9s de las columnas que tienen conteos de medallas\n    for j in range(1, len(conteos_medallas[0])):\n        #Paso 3.2.1: Agregar conteos de medallas al contenido de la fila i\n        linea += \"{:>3d}\".format(conteos_medallas[i][j])\n        #Paso 3.2.2: Actualizar el total de la fila para la fila i \n        total_fila += conteos_medallas[i][j]\n    #Paso 3.3: Agregar el total de la fila al contenido de la tabla de salida para la fila i\n    linea += \"{:>5d}\".format(total_fila)\n    #Paso 3.4: Imprimir el contenido de la tabla de salida para la fila i\n    print(linea)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "Arun parser v0.1": {
+        "concepts": [
+          "Mult",
+          "Assign",
+          "Str",
+          "Call",
+          "Add",
+          "List",
+          "AugAssign",
+          "Attribute",
+          "Int",
+          "For",
+          "Sub",
+          "Index"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleForLoopIteration",
+          "Indexing2DArray",
+          "FindingLength",
+          "AssigningValueVariable",
+          "Addition",
+          "Create2DArray",
+          "FormattingString",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "Printing",
+          "IndexingList",
+          "ForLoopWithListIndexing",
+          "ForLoopWith",
+          "NestedFunctionCall",
+          "NestedForLoopIteration",
+          "CreatingString",
+          "SingleForLoopIteration",
+          "Indexing2DArray",
+          "FindingLength",
+          "AssigningValueVariable",
+          "Addition",
+          "Create2DArray",
+          "FormattingString",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "Printing",
+          "IndexingList",
+          "ForLoopWithListIndexing",
+          "ForLoopWith",
+          "NestedFunctionCall",
+          "NestedForLoopIteration",
+          "CreatingString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Sub",
+          "For",
+          "Call",
+          "Assign",
+          "List",
+          "Int",
+          "Attribute",
+          "Mult",
+          "Add",
+          "AugAssign",
+          "Index",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684c3d3ca0cac29134435d81?_t=1750198426771&index=0&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Listas en 2D",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Listas en 2D",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Listas en 2D",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=464",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=464",
+      "context_name": "Python: UTFSM-Progra | Test Jordan Thesis Python ES > Listas en 2D",
+      "used_at": "2025-07-10T18:56:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.931Z"
+}

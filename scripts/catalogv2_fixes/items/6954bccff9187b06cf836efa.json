@@ -1,0 +1,132 @@
+{
+  "id": "6954bccff9187b06cf836efa",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:03.639Z",
+  "tags": [],
+  "identity": {
+    "id": "py_word_correctly_spelled_es",
+    "title": "Ortografia correcta (diccionario desde archivo) (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/340/embed?act=PCRS&sub=py_word_correctly_spelled_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Muchos sistemas similares a Unix (incluyendo CDF) tienen un diccionario de palabras correctamente escritas en un archivo. En CDF, aqui esta la ruta al archivo: /etc/dictionaries-common/words. A continuacion se muestran algunas de esas palabras (el archivo contiene palabras tanto en mayusculas como en minusculas); completa la funcion a continuacion, donde diccionario se refiere a un archivo que ha sido abierto para lectura:",
+    "source_code": "[student_code]\r\ndef es_correcta(archivo_diccionario, palabra):\r\n    \"\"\" (Archivo abierto para lectura, str) -> booleano\r\n    \r\n    Devuelve True si y solo si palabra es una palabra correctamente escrita en diccionario.\r\n    \r\n    >>> dict1 = open('dict.txt', 'r')\r\n    >>> es_correcto(dict1, \"\"Zyrtec\"\")\r\n    True\r\n    >>> dict1.close()\r\n\r\n    >>> dict1 = open('dict.txt', 'r')\r\n    >>> es_correcto(dict1, \"\"lolz\"\")\r\n    False\r\n    >>> dict1.close()\r\n    \"\"\"\r\n    #Escribe tu codigo aqui\r\n    \r\n    \r\n    \r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "Subtraction",
+          "OpeningFile",
+          "TransformingToStringType",
+          "ReadingLine",
+          "DefiningSimpleFunction",
+          "IfCheckingInForLoop",
+          "BooleanLiteral",
+          "StringLiteral",
+          "ComparisonExpression",
+          "CallingSimpleFunction",
+          "SlicingString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "BooleanLiteral",
+          "CallingSimpleFunction",
+          "DefiningSimpleFunction",
+          "IfCheckingInForLoop",
+          "OpeningFile",
+          "ReadingLine",
+          "SingleForLoopIteration",
+          "SlicingString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/340/embed?act=PCRS&sub=py_word_correctly_spelled_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Procesamiento de texto y archivos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Manejo de archivos/texto",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.978Z"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8375d2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2014-09-08T20:59:15.000Z",
+  "updated_at": "2026-01-17T12:57:47.294Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "c_ch2_change_variable",
+    "title": "Change the Value of a Variable",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=c_ch2_change_variable&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2014-09-08T20:59:15.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Natalya Goreva ",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n\u00a0\u00a0\u00a0\u00a0int apples;\n\n\u00a0\u00a0\u00a0\u00a0apples = 20;\n\u00a0\u00a0\u00a0\u00a0cout << \"On Sunday we sold \" << apples << \" bushels of apples. \";\n\n\u00a0\u00a0\u00a0\u00a0apples = 15;\n\u00a0\u00a0\u00a0\u00a0cout << \"On Monday we sold \" << apples << \" bushels of apples. \";\n\u00a0\u00a0\u00a0\u00a0return 0;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=c_ch2_change_variable&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.168Z"
+}

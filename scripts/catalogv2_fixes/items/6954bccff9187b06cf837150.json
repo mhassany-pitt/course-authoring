@@ -1,0 +1,156 @@
+{
+  "id": "6954bccff9187b06cf837150",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-09T19:21:45.000Z",
+  "updated_at": "2026-01-17T12:41:47.712Z",
+  "tags": [],
+  "identity": {
+    "id": "py_print_medals_row_column_total",
+    "title": "Printing Table of Medal Counts with Row/Column Total",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_print_medals&ch=py_print_medals_row_column_total"
+  },
+  "attribution": {
+    "created_at": "2020-08-09T19:21:45.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Assume that we have a 7x4 matrix that stores the number of medals that seven countries won in the skating competitions at the Winter Olympic. This matrix looks like as follows:\\n[[ \"Canada\", 1, 0, 1 ],\\n [ \"China\", 1, 1, 0 ],\\n ...]\\nEach row of this matrix corresponds to the medal counts for the country in that row. The second, third, and fourth numbers within a row represent the number of Gold, Silver, and Bronze medals won by the corresponding country in that row.\\nConstruct a program that takes this matrix and prints a table of medal counts with row and column totals. The column totals are the sum of the gold, silver, and bronze medals won in the competition. The output table should look like as follows:\\n      Country    Gold  Silver  Bronze   Total\\n         Canada        1       0       1          2\\n            China        1       1       0          2\\n           ...\\nColumn Total      4       4       4",
+    "source_code": "#Step 1: Define a 7x4 matrix that stores the number of medals won by seven countries\nmedal_counts = [[ \"CAN\", 1, 0, 1 ],\n                [ \"CHN\", 1, 1, 0 ],\n                [ \"GER\", 0, 0, 1 ],\n                [ \"KOR\", 1, 0, 0 ],\n                [ \"JPN\", 0, 1, 1 ],\n                [ \"RUS\", 0, 1, 1 ],\n                [ \"USA\", 1, 1, 0 ]]\n#Step 2: Create a list to store column totals\ncolumn_totals = [0] * ( len(medal_counts[0]) - 1 )\n#Step 3: Print the header of the output table\nprint(\"{:>4s}{:>3s}{:>3s}{:>3s}{:>4s}\".format(\"Name\",\"G\",\"S\",\"B\",\"All\"))\n#Step 4: Iterate through the rows in the medal counts matrix\nfor i in range(len(medal_counts)):\n    #Step 4.1: Assign initial values to variables we need for printing row i\n    line = \"{:>4s}\".format(medal_counts[i][0])\n    row_total = 0\n    #Step 4.2: Iterate through the columns that have medal counts  \n    for j in range(1, len(medal_counts[0])):\n        #Step 4.2.1: Append medal counts to the content of row i\n        line += \"{:>3d}\".format(medal_counts[i][j])\n        #Step 4.2.2: Update the row total for row i \n        row_total += medal_counts[i][j]\n        #Step 4.2.3: Update the column total for the column j \n        column_totals[j-1] += medal_counts[i][j]\n    #Step 4.3: Add the row total to the content of the output table for row i\n    line += \"{:>3d}\".format(row_total)\n    #Step 4.4: Print the content of the output table for row i\n    print(line)\n#Step 5: Print the column totals\nline = \"{:>4s}\".format(\"All\")\nfor j in range(len(column_totals)):\n    line += \"{:>3d}\".format(column_totals[j])\nprint(line)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleForLoopIteration",
+          "Indexing2DArray",
+          "FindingLength",
+          "AssigningValueVariable",
+          "Addition",
+          "Create2DArray",
+          "FormattingString",
+          "CallingLibraryFunction",
+          "CreatingString",
+          "ChangingValueVariable",
+          "Printing",
+          "CreatingList",
+          "ForLoopWithListIndexing",
+          "ForLoopWith",
+          "ChangingValueListElement",
+          "Subtraction",
+          "NestedFunctionCall",
+          "NestedForLoopIteration",
+          "Multiplication"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "ChangingValueListElement",
+          "ChangingValueVariable",
+          "Create2DArray",
+          "CreatingList",
+          "CreatingString",
+          "FindingLength",
+          "ForLoopWith",
+          "ForLoopWithListIndexing",
+          "FormattingString",
+          "Indexing2DArray",
+          "Multiplication",
+          "NestedForLoopIteration",
+          "NestedFunctionCall",
+          "Printing",
+          "SingleForLoopIteration",
+          "Subtraction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_print_medals&ch=py_print_medals_row_column_total"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > Two-Dimensional Lists",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > Two-Dimensional Lists",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > For Loops",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > For Loops",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > For Loops",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.057Z"
+}

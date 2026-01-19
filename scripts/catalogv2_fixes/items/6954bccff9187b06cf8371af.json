@@ -1,0 +1,112 @@
+{
+  "id": "6954bccff9187b06cf8371af",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-01-28T00:13:57.000Z",
+  "updated_at": "2026-01-17T05:29:12.698Z",
+  "tags": [],
+  "identity": {
+    "id": "string_length_pcrs",
+    "title": "string_length_pcrs",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/426/embed?act=PCRS&sub=string_length_pcrs"
+  },
+  "attribution": {
+    "created_at": "2020-01-28T00:13:57.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following program in order to print to the console what is the length of a string (i.e. total number of characters)  entered by a user from keyboard.",
+    "source_code": "[file Lab2.java]\n[blocked]\nimport java.util.Scanner;\n\npublic class Lab2 {\n    public static void main(String[] args){\n        // Create a scanner to read from keyboard\n        Scanner kbd = new Scanner (System.in);\n        \n        // Prompt user for typing text input\n        System.out.print(\"Enter any string ( e.g your name): \");\n[/blocked]   \n[blocked]\n        //Store user input in a String variable\n        String s = kbd.nextLine();\n        System.out.println(\"You entered \" + s);\n        \n        //YOU MUST NOT WRITE ANY CODE ABOVE THIS LINE\n[/blocked]\n[student_code]\n        \n        // Echo back to user the actual length of the String they typed in\n        // i.e. output something like:  Your string has length: 13  \n        \n             \n        \n[/student_code]\n[blocked]\n        //YOU MUST NOT WRITE ANY CODE BELOW THIS LINE\n  }\n}\n[/blocked] \n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "java.lang.String.length",
+          "SimpleVariable",
+          "SimpleAssignmentExpression",
+          "IntDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "IntDataType",
+          "java.lang.String.length",
+          "SimpleAssignmentExpression",
+          "SimpleVariable"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/426/embed?act=PCRS&sub=string_length_pcrs"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=442",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=442",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2024) > Strings",
+      "used_at": "2024-09-10T16:51:32.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=443",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=443",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2024) Alternative Order > Strings",
+      "used_at": "2024-09-10T18:36:13.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Strings",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.067Z"
+}

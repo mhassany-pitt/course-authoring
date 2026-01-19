@@ -1,0 +1,81 @@
+{
+  "id": "6954bccff9187b06cf836d5c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-10T08:51:47.000Z",
+  "updated_at": "2026-01-17T05:27:03.958Z",
+  "tags": [],
+  "identity": {
+    "id": "Maquina Expendedora Con Monedas de 25 10 y 5 centavos__682dc89766a8e1b992c82aaf-682dc89566a8e1b992c82aad-1",
+    "title": "Maquina Expendedora Con Monedas de diferentes centavos",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dc89766a8e1b992c82aaf?_t=1750184385233&index=1&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-10T08:51:47.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Isaac Alpizar-Chacon",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Supongamos que tenemos una m\u00e1quina expendedora que da cambio. Un cliente selecciona un art\u00edculo para comprar e inserta un billete en la m\u00e1quina expendedora. La m\u00e1quina expendedora dispensa el art\u00edculo comprado y da cambio. Supondremos que todos los precios de los art\u00edculos son m\u00faltiplos de 5 centavos, y la m\u00e1quina da todo el cambio en monedas de 25, 10 y 5 centavos. Construya un programa que calcule cu\u00e1ntas monedas de 25, 10, y 5 centavos debe devolver al cliente.",
+    "source_code": "#Paso 1: Asignar valores iniciales a las variables que necesitamos para este programa\ncentavos_por_dolar = 100\ncentavos_por_moneda_25 = 25\ncentavos_por_moneda_10 = 10\ncentavos_por_moneda_5 = 5\n#Paso 2: Leer el valor del billete y el precio del art\u00edculo\ntexto = input(\"Ingrese el valor del billete en d\u00f3lares (1 = $1 billete, 5 = $5 billete, etc.): \")\nvalor_billete = int(texto)\ntexto = input(\"Ingrese el precio del art\u00edculo en centavos: \")\nprecioArticulo = int(texto)\n#Paso 3: Calcular el cambio debido\ncambio_debido = centavos_por_dolar * valor_billete - precioArticulo\n#Paso 4: Calcular el n\u00famero de cuartos en el cambio debido y actualizar el cambio debido despu\u00e9s de quitar los cuartos\nmonedas_25 = cambio_debido // centavos_por_moneda_25\ncambio_debido = cambio_debido % centavos_por_moneda_25\n#Paso 5: Calcular el n\u00famero de dimes en el cambio restante y actualizar el cambio debido despu\u00e9s de quitar los dimes\nmonedas_10 = cambio_debido // centavos_por_moneda_10\ncambio_debido = cambio_debido % centavos_por_moneda_10\n#Paso 6: Calcular el n\u00famero de n\u00edqueles en el cambio restante\nmonedas_5 = cambio_debido // centavos_por_moneda_5\n#Paso 7: Mostrar el resultado\nprint(\"Su cambio consiste en:\") \nprint(monedas_25, \"monedas de 25\")\nprint(monedas_10, \"monedas de 10\") \nprint(monedas_5, \"monedas de 5\")"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dc89766a8e1b992c82aaf?_t=1750184385233&index=1&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Variables y Operaciones",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Variables y Operaciones",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.935Z"
+}

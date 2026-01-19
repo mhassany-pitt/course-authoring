@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf836cca",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:25:52.000Z",
+  "updated_at": "2026-01-17T05:26:46.131Z",
+  "tags": [],
+  "identity": {
+    "id": "Comparing the List of Words from Two Files__68bdb308f6cc3d7a9cc096c7-68bdb308f6cc3d7a9cc096c5-1",
+    "title": "Comparing the List of Words from Two Files",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096c7?_t=1757557552174&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:25:52.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that reads two text files and creates a list of the words that each of these files contains, ignoring the case of the letters. The program should determine which list is larger in size, i.e., which list has more words.\\nAssume that all of the words in these text files are separated by a single space characters.",
+    "source_code": "import java.util.*;\nimport java.io.*;\npublic class JVocabulary2 {\n\tpublic static void main(String[] args) throws FileNotFoundException {\n\t\tJVocabulary2 v2 = new JVocabulary2();\n\t\tArrayList<String> lst1 = v2.getWords(\"test1.txt\");\n\t\tSystem.out.println(\"list1 words = \" + lst1);\n\t\tArrayList<String> lst2 = v2.getWords(\"test2.txt\");\n\t\tSystem.out.println(\"list2 words = \" + lst2);\n\t\tv2.compareLists(lst1, lst2);\n\t}\n\t//Step 1: Define the method that compares two lists to find the largest one\n\tpublic void compareLists(ArrayList<String> list1, ArrayList<String> list2 ) {\n\t\tif ( list1.size() > list2.size() ) {\n\t\t\tSystem.out.println(\"list1 has more words.\");\n\t\t} else if ( list2.size() > list1.size() ) {\n\t\t\tSystem.out.println(\"list2 has more words\");\n\t\t} else {\n\t\t\tSystem.out.println(\"list1 and list2 have the same number of words.\");\n\t\t}\n\t}\n\t//Step 2: Define the method that creates a list of words from a file\n\tpublic ArrayList<String> getWords(String fileName) {\n\t\t//Step 2.1: Create an empty list to store the words\n\t\tArrayList<String> words = new ArrayList<String>();\n\t\t//Step 2.2: Enclose the code that might throw an exception within the try block\n\t\ttry {\n\t\t\t//Step 2.2.1: Wrap a BufferedReader around a FileReader\n\t\t\tFileReader fr = new FileReader(fileName); \n\t\t\tBufferedReader br = new BufferedReader(fr); \n\t\t\t//Step 2.2.2: Use the BufferedReader object to read one line at a time\n\t\t\tString line = null;\n\t\t\twhile ( ( line = br.readLine() ) != null) {\n\t\t\t\t//Split the line into words, ignoring the case of the letters\n\t\t\t\tString[] tokens = line.toLowerCase().split(\" \");\n\t\t\t\t//Add each word in the line to the list\n\t\t\t\tfor (String token : tokens) {\n\t\t\t\t\twords.add(token);\n\t\t\t\t}\n\t\t\t}\n\t\t\t//Step 2.2.3: Close the BufferedReader object attached to the file\n\t\t\tbr.close();\n\t\t//Step 2.3: Handle all possible exceptions that may be thrown in the try block \n\t\t} catch (FileNotFoundException ex) {\n\t\t\tSystem.out.println(\"File not found\");\n\t\t} catch (IOException ex ) {\n\t\t\tSystem.out.println(\"Problem with the file!\");\n\t\t}\n\t\t//Step 2.4: return the list\n\t\treturn words;\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096c7?_t=1757557552174&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > File processing",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.916Z"
+}

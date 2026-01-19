@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8376ed",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:29.428Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "assign_return",
+    "title": "Assign Return",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=assign_return&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*\u00a0\u00a0\u00a0\u00a0This program demonstrates function calls by calling\n\u00a0\u00a0\u00a0\u00a0a small function to multiply two numbers.\n\u00a0\u00a0\u00a0\u00a0   Written by:\n\u00a0\u00a0\u00a0\u00a0   Date:\n*/\n#include <stdio.h>\n\n//\u00a0\u00a0\u00a0\u00a0Function Declarations\nint multiply (int num1, int num2);\n\nint main (void)\n{\n//\u00a0\u00a0\u00a0\u00a0Local Declarations\n\u00a0\u00a0\u00a0\u00a0int multiplier;\n\u00a0\u00a0\u00a0\u00a0int multiplicand;\n\u00a0\u00a0\u00a0\u00a0int product;\n\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0printf(\"Enter two integers: \");\n\u00a0\u00a0\u00a0\u00a0scanf (\"%d%d\", &multiplier, &multiplicand);\n\n\u00a0\u00a0\u00a0\u00a0product = multiply (multiplier, multiplicand);\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Product of %d & %d is %d\\n\",\n\u00a0\u00a0\u00a0\u00a0          multiplier, multiplicand, product);\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\u00a0\u00a0\u00a0\u00a0// main\n\n/* =================== multiply ===================\n\u00a0\u00a0\u00a0\u00a0Multiples two numbers and returns product.\n\u00a0\u00a0\u00a0\u00a0   Pre   num1 & num2 are values to be multiplied\n\u00a0\u00a0\u00a0\u00a0   Post  product returned\n*/\nint multiply (int num1, int num2)\n{\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0return (num1 * num2);\n}\u00a0\u00a0\u00a0\u00a0// multiply"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=assign_return&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.186Z"
+}

@@ -1,0 +1,146 @@
+{
+  "id": "6954bccff9187b06cf837187",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-06-09T13:20:40.000Z",
+  "updated_at": "2026-01-17T12:55:30.296Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "csedpad_sorting_bubblesort",
+    "title": "(Sorting) Bubble sort - CSEdPad",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_sorting_bubblesort&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2020-06-09T13:20:40.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class BubbleSort {\n\n\u00a0\u00a0\u00a0\u00a0static void Sorting(int[] list) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int n = list.length;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int temp = 0;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = 0; i < n; i++) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int j = 1; j < (n - i); j++) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (list[j - 1] > list[j]) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0temp = list[j - 1];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0list[j - 1] = list[j];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0list[j] = temp;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int UnsortedList[] = {2, 5, -2, 6, -3, 8, 0, -7, -9, 4};\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Array Before Bubble Sort\");\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = 0; i < UnsortedList.length; i++) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(UnsortedList[i] + \" \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print('\\n' + \"Array after Bubble Sort\" + '\\n');\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Sorting(UnsortedList);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = 0; i < UnsortedList.length; i++) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(UnsortedList[i] + \" \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "java.lang.System.out.print",
+          "IfStatement",
+          "GreaterExpression",
+          "ArrayInitializer",
+          "PostIncrementExpression",
+          "StringAddition",
+          "MethodDefinition",
+          "ArrayVariable",
+          "java.lang.System.out.println",
+          "SimpleAssignmentExpression",
+          "ClassDefinition",
+          "VoidDataType",
+          "LessExpression",
+          "IntDataType",
+          "StringLiteral",
+          "SubtractExpression",
+          "ForStatement",
+          "ArrayLength",
+          "FormalMethodParameter",
+          "ActualMethodParameter",
+          "ArrayInitializationStatement",
+          "ArrayElement",
+          "StringDataType",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "NestedForLoops"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "ArrayElement",
+          "ArrayInitializationStatement",
+          "ArrayInitializer",
+          "ArrayLength",
+          "ArrayVariable",
+          "ClassDefinition",
+          "FormalMethodParameter",
+          "ForStatement",
+          "GreaterExpression",
+          "IfStatement",
+          "IntDataType",
+          "java.lang.System.out.print",
+          "java.lang.System.out.println",
+          "LessExpression",
+          "MethodDefinition",
+          "NestedForLoops",
+          "PostIncrementExpression",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "SubtractExpression",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_sorting_bubblesort&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=389",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
+      "context_name": "Java: CSEdPad | CSEdPad Examples > Sorting",
+      "used_at": "2020-05-10T20:11:07.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.063Z"
+}

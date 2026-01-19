@@ -1,0 +1,81 @@
+{
+  "id": "6954bccff9187b06cf836cc4",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:26:44.000Z",
+  "updated_at": "2026-01-17T05:26:45.435Z",
+  "tags": [],
+  "identity": {
+    "id": "The Class for Representing a Bank Account (Case 2)__68bdb308f6cc3d7a9cc096af-68bdb308f6cc3d7a9cc096ad-1",
+    "title": "The Class for Representing a Bank Account (Case 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096af?_t=1757557604568&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:26:44.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a class that represents a basic bank account. This class should contain data representing the name of the account\u2019s owner, the account number, and the account\u2019s current balance. The interest rate for the account is stored as a constant. The class should have constructors that permits an account to be opened when:\\n - the account name, account number, and initial balance are specified\\n - only the account name and the account number are specified. In this case, initial balance is assumed to be zero.\\nThe other methods of this class should perform various services on the account (making deposits, withdrawals, adding interest to the account). These methods should examine the data passed into them to make sure the requested transaction is valid.\\n\\nThe Transactions2 class creates some bank accounts and requests various services.",
+    "source_code": "import java.text.NumberFormat;\npublic class Transactions2 {\n\tpublic static void main (String[] args) {\n\t\tAccount2 acct1 = new Account2(\"Tina Murphy\", 72354, 25.59);\n\t\tAccount2 acct2 = new Account2(\"Angelica Adams\", 69713, 500.00);\n\t\tAccount2 acct3 = new Account2(\"Edward Demsey\", 93757, 769.32);\n\t\tAccount2 acct4 = new Account2(\"Samuel Williams\", 300301);\n\t\tacct1.deposit (44.10);  \n\t\tacct4.deposit (5.00);  \n\t\tdouble adamsBalance = acct2.deposit (75.25);\n\t\tSystem.out.println (acct2.getName() + \"'s balance after deposit: \" + adamsBalance);\n\t\tSystem.out.println (acct2.getName() + \"'s balance after withdrawal: \" + acct2.withdraw (480, 1.50));\n\t\tacct3.withdraw (-100.00, 1.50);  \n\t\tacct1.addInterest();\n\t\tacct2.addInterest();\n\t\tacct3.addInterest();\n\t\tSystem.out.println (acct1);\n\t\tSystem.out.println (acct2);\n\t\tSystem.out.println (acct3);\n\t\tSystem.out.println (acct4);\n\t}\n}\nclass Account2 {\n\t//Step 1: Declare the instance variables \n\tprivate final double RATE = 0.035;  \n\tprivate String acctName;\n\tprivate long acctNumber;\n\tprivate double balance;\n\t//Step 2: Define the constructor to set up an account with the specified account name, account number, and initial balance\n\tpublic Account2 (String owner, long account, double initial) {\n\t\tacctName = owner;\n\t\tacctNumber = account;\n\t\tbalance = initial;\n\t}\n\t//Step 3: Define the constructor to set up an account with the specified account name and account number\n\tpublic Account2 (String owner, long account) {\n\t\tthis(owner, account, 0);\n\t}\n\t//Step 4: Define the methods to perform various services on the account\n\tpublic double deposit (double amount) {\n\t\tif (amount > 0) {\n\t\t\tbalance = balance + amount;\n\t\t}\n\t\treturn balance;\n\t}\n\tpublic double withdraw (double amount, double fee) {\n\t\tif (amount > 0 && fee >= 0 && amount+fee < balance) {\n\t\t\tbalance = balance - amount - fee;\n\t\t}\n\t\treturn balance;\n\t}\n\tpublic double addInterest () {\n\t\tbalance += (balance * RATE);\n\t\treturn balance;\n\t}\n\t//Step 5: Define the methods to get the current state of the account \n\tpublic String getName() {\n\t\treturn acctName;\n\t}\n\tpublic double getBalance() {\n\t\treturn balance;\n\t}\n\tpublic long getAcctNumber() {\n\t\treturn acctNumber;\n\t}\n\tpublic String toString () {\n\t\tNumberFormat fmt = NumberFormat.getCurrencyInstance();\n\t\treturn (acctNumber + \"\\t\" + acctName + \"\\t\" + fmt.format(balance));\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096af?_t=1757557604568&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Objects and Classes",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > Objects and Classes",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.915Z"
+}

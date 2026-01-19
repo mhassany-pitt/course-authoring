@@ -1,0 +1,169 @@
+{
+  "id": "6954bccff9187b06cf836d65",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-09T10:31:38.000Z",
+  "updated_at": "2026-01-17T05:27:05.252Z",
+  "tags": [],
+  "identity": {
+    "id": "Calculando el Porcentaje de Victorias de un Equipo (Caso 3)__6834728366a8e1b992c843d6-6834728066a8e1b992c843d4-2",
+    "title": "Calculando el Porcentaje de Victorias de un Equipo (Caso 3)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6834728366a8e1b992c843d6?_t=1749534479778&index=2&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-09T10:31:38.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que reciba del usuario el n\u00famero de partidos que un equipo gan\u00f3 y empat\u00f3 en un torneo de 12 partidos y calcule su porcentaje de victorias, contando los empates como medio triunfo. El programa debe pedir al usuario cada una de las dos entradas hasta que el usuario ingrese un n\u00famero v\u00e1lido.",
+    "source_code": "#Paso 1: Asignar valores iniciales a las variables que necesitamos para este programa\ntotal_partidos = 12\n#Paso 2: Leer el n\u00famero de partidos que el equipo gan\u00f3 en el torneo\ntexto = input(\"Ingresa el n\u00famero de partidos que el equipo gan\u00f3 en el torneo: \")\nvictorias = int(texto)      \n#Paso 3: Validar la entrada del usuario para el n\u00famero de victorias, pedir una entrada v\u00e1lida mientras el usuario ingrese un n\u00famero inv\u00e1lido; de lo contrario, detenerse\nwhile victorias < 0 or victorias > total_partidos :\n    texto = input(\"Ingresa el n\u00famero de partidos que el equipo gan\u00f3 en el torneo: \")\n    victorias = int(texto)\n#Paso 4: Leer el n\u00famero de partidos que el equipo empat\u00f3 en el torneo\ntexto = input(\"Ingresa el n\u00famero de partidos empatados: \")\nempates = int(texto)\n#Paso 5: Validar la entrada del usuario para el n\u00famero de empates, pedir una entrada v\u00e1lida mientras el usuario ingrese un n\u00famero inv\u00e1lido; de lo contrario, detenerse\nwhile empates < 0 or total_partidos < (empates + victorias) :\n    texto = input(\"Ingresa el n\u00famero de partidos empatados: \")\n    empates = int(texto)\n#Paso 6: Calcular e imprimir el porcentaje de partidos ganados por un equipo, contando los empates como medio triunfo\nratio = ( victorias + empates // 2) / total_partidos\nprint(\"Porcentaje de victorias:\", ratio)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "Arun parser v0.1": {
+        "concepts": [
+          "Assign",
+          "Div",
+          "LtE",
+          "Call",
+          "While",
+          "Or",
+          "Add",
+          "Lt",
+          "Int",
+          "Str",
+          "Gt"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "SingleWhileLoopIteration",
+          "TransformingToIntType",
+          "Addition",
+          "HandlingInput",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "CreatingString",
+          "BooleanEvaluating",
+          "Printing",
+          "Division",
+          "SingleWhileLoopIteration",
+          "TransformingToIntType",
+          "Addition",
+          "HandlingInput",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "CreatingString",
+          "BooleanEvaluating",
+          "Printing",
+          "Division"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "parser": {
+        "concepts": [
+          "FloorDiv"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Gt",
+          "Call",
+          "Assign",
+          "Or",
+          "Int",
+          "Str",
+          "Div",
+          "FloorDiv",
+          "Lt",
+          "Add",
+          "While",
+          "LtE"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6834728366a8e1b992c843d6?_t=1749534479778&index=2&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Ciclos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Ciclos While",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Ciclos",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=464",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=464",
+      "context_name": "Python: UTFSM-Progra | Test Jordan Thesis Python ES > Condicionales",
+      "used_at": "2025-07-10T18:56:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.936Z"
+}

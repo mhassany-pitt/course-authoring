@@ -1,0 +1,157 @@
+{
+  "id": "6954bccff9187b06cf836f25",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:08.144Z",
+  "tags": [],
+  "identity": {
+    "id": "py_search_list2_es",
+    "title": "Buscar armario (lista de strings) (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/237/embed?act=PCRS&sub=py_search_list2_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa la siguiente funcion segun su docstring utilizando un ciclo for. El metodo de string startswith puede ser util aqui. Las listas que probamos no se mostraran todas; en su lugar, algunas se describiran en ingles. Si fallas en algun caso de prueba, deberas leer la descripcion y hacer tu propia prueba.",
+    "source_code": "[student_code]\r\ndef buscar_armario(elementos, color):\r\n    \"\"\" (lista de str, str) -> lista de str\r\n    \r\n    elementos es una lista que contiene descripciones del contenido de un armario donde\r\n    cada descripcion tiene la forma 'color articulo', donde cada color es una palabra\r\n    y cada articulo es una o mas palabras. Por ejemplo:\r\n\r\n        ['gris chaqueta de verano', 'naranja chaqueta de primavera', 'rojo zapatos', 'verde sombrero']\r\n\r\n    color es un color que se esta buscando en elementos. \r\n    \r\n    Devuelve una lista que contiene solo los articulos que coinciden con el color.\r\n    \r\n    >>> buscar_armario(['rojo chaqueta de verano', 'naranja chaqueta de primavera', 'rojo zapatos', 'verde sombrero'], 'rojo')\r\n    ['rojo chaqueta de verano', 'rojo zapatos']\r\n    >>> buscar_armario(['rojo camisa', 'verde pantalones'], 'azul')\r\n    []\r\n    >>> buscar_armario([], 'malva')\r\n    []\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "IfElifElseChecking",
+          "IntegerLiteral",
+          "list()",
+          "TransformingToStringType",
+          "AddingListElementWithAppend",
+          "DefiningSimpleFunction",
+          "ListReferencing",
+          "ChangingValueVariable",
+          "IfCheckingInForLoop",
+          "StringLiteral",
+          "ListLiteral",
+          "ComparisonExpression",
+          "CallingSimpleFunction",
+          "CallingObjectMethod",
+          "CreatingObject",
+          "IndexingList"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm mod": {
+        "concepts": [
+          "SplittingString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "IntegerLiteral",
+          "ListLiteral",
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AddingListElementWithAppend",
+          "CallingObjectMethod",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "IfCheckingInForLoop",
+          "IndexingList",
+          "ListReferencing",
+          "SingleForLoopIteration",
+          "SplittingString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/237/embed?act=PCRS&sub=py_search_list2_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Listas",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Listas",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Listas",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.985Z"
+}

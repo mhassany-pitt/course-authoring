@@ -1,0 +1,101 @@
+{
+  "id": "6954bccff9187b06cf836d9d",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:21:10.000Z",
+  "updated_at": "2026-01-17T05:27:22.812Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_merge_sort_es",
+    "title": "Construir una funci\u00f3n que ordene un arreglo num\u00e9rico usando Merge Sort",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_merge_sort_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:21:10.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye una funcion de mezcla que divida recursivamente un arreglo numerico y tome una lista como parametro llamada datos.<br/>Considera que la funcion mezcla_ordenada() ya esta definida y se muestra a continuacion.",
+    "source_code": "def mezcla(datos):\n\tif len(datos) <= 1:\n\t\treturn datos\n\tmitad = len(datos)//2\n\tizquierda = mezcla(datos[:mitad])\n\tderecha = mezcla(datos[mitad:])\n\treturn mezcla_ordenada(izquierda, derecha)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "LtE",
+          "Call",
+          "Return",
+          "Assign",
+          "FloorDiv",
+          "FunctionDef",
+          "If",
+          "arg",
+          "Slice"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "Constant",
+          "Call",
+          "Assign",
+          "Return",
+          "FunctionDef",
+          "FloorDiv",
+          "If",
+          "Slice",
+          "LtE"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_merge_sort_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.942Z"
+}

@@ -1,0 +1,148 @@
+{
+  "id": "6954bccff9187b06cf83718f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-05-19T13:29:02.000Z",
+  "updated_at": "2026-01-17T12:55:31.351Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "csedpad_twodimarrays_matrixmultiply",
+    "title": "(Two-dim arrays) Matrix multiply - CSEdPad",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_twodimarrays_matrixmultiply&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2020-05-19T13:29:02.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class MatrixMultiply {\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int r1 = 2, c1 = 2;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int r2 = 2, c2 = 2;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int[][] x = { {1,2},{3,4} };\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int[][] y = { {4,5}, {6,7} };\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int[][] xy = new int[r1][c2];\n\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for(int i = 0; i < r1; i++) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int j = 0; j < c2; j++) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int k = 0; k < c1; k++) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0xy[i][j] += x[i][k] * y[k][j];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for(int[] row : xy) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int column : row) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(column + \"    \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0}\n\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "java.lang.System.out.print",
+          "ArrayInitializer",
+          "PostIncrementExpression",
+          "StringAddition",
+          "MethodDefinition",
+          "ArrayVariable",
+          "java.lang.System.out.println",
+          "SimpleAssignmentExpression",
+          "ClassDefinition",
+          "VoidDataType",
+          "LessExpression",
+          "MultiplyExpression",
+          "IntDataType",
+          "ForEachStatement",
+          "StringLiteral",
+          "MultiDimensionalArrayDataType",
+          "AddAssignmentExpression",
+          "ForStatement",
+          "FormalMethodParameter",
+          "ActualMethodParameter",
+          "ArrayInitializationStatement",
+          "ArrayElement",
+          "StringDataType",
+          "ArrayCreationStatement",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "NestedForLoops"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddAssignmentExpression",
+          "ArrayCreationStatement",
+          "ArrayElement",
+          "ArrayInitializationStatement",
+          "ArrayInitializer",
+          "ArrayVariable",
+          "ClassDefinition",
+          "ForEachStatement",
+          "FormalMethodParameter",
+          "ForStatement",
+          "IntDataType",
+          "java.lang.System.out.print",
+          "java.lang.System.out.println",
+          "LessExpression",
+          "MethodDefinition",
+          "MultiDimensionalArrayDataType",
+          "MultiplyExpression",
+          "NestedForLoops",
+          "PostIncrementExpression",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_twodimarrays_matrixmultiply&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=389",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
+      "context_name": "Java: CSEdPad | CSEdPad Examples > Two-dimensional arrays",
+      "used_at": "2020-05-10T20:11:07.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.063Z"
+}

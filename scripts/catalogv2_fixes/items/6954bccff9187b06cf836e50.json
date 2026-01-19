@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e50",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:43.624Z",
+  "tags": [],
+  "identity": {
+    "id": "py_realestate_class",
+    "title": "PCRS C3-PL  Realestate Class",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/65/embed?act=PCRS&sub=py_realestate_class"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Below we have provided a class RealEstateSystem which contains a collection of homes for sale and a Home class which contains a price instance variable. Your task is to complete the extract_minimum_price function which will return the lowest price of all the homes in the RealEstateSystem. If there are no homes in the system, return -1.",
+    "source_code": "[student_code]\r\nclass RealEstateSystem:\r\n    def __init__(self):\r\n        \"\"\" (RealEstateSystem)\r\n        Initialize the homes list\r\n        \"\"\"\r\n        self.homes = []\r\n        \r\n    def add_home(self, home):\r\n        \"\"\" (RealEstateSystem, Home) -> NoneType\r\n        Adds a home to our system\r\n        \"\"\"\r\n        self.homes.append(home)\r\n    \r\n    def extract_minimum_price(self):\r\n        \"\"\" (RealEstateSystem) -> int\r\n        Return the lowest priced home in the system, or -1 if there are no houses in the system\r\n        \"\"\"\r\n        # complete this code\r\n\r\n\r\nclass Home:\r\n    \"\"\" An instance of a home \"\"\"\r\n    def __init__(self, price):\r\n        \"\"\" (Home, float)\r\n        Initialize a home\r\n        \"\"\"\r\n        self.price = price\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/65/embed?act=PCRS&sub=py_realestate_class"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.959Z"
+}

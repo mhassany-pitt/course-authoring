@@ -1,0 +1,91 @@
+{
+  "id": "6954bccff9187b06cf837648",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:04.993Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "parampass.c",
+    "title": "IS12:: parampass.c (111.2)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=parampass.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*     Example: Demo of parameter passing\n\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky\n*/\n\n#include <stdio.h>\n\nint testfunction(int[], int , int );\n\nvoid main() {\n\u00a0\u00a0\u00a0\u00a0int testarray[] = {1, 2, 3, 4, 5, 6, 7};\n\u00a0\u00a0\u00a0\u00a0int i, testscalar = 1;\n\n\u00a0\u00a0\u00a0\u00a0/* printing the starting values of actual parameters */\n\u00a0\u00a0\u00a0\u00a0printf(\"Outside testfunction: Scalar = %d, Array = \", testscalar);\n\u00a0\u00a0\u00a0\u00a0for(i=0; i < 7; ++i)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%d \", testarray[i]);\n\u00a0\u00a0\u00a0\u00a0printf(\"\n\");\n\n\u00a0\u00a0\u00a0\u00a0/* calling testfunction */\n\u00a0\u00a0\u00a0\u00a0testfunction(testarray, 7, testscalar);\n\n\u00a0\u00a0\u00a0\u00a0/* printing the values  of actual parameters  after call */\n\u00a0\u00a0\u00a0\u00a0printf(\"After call: Scalar = %d, Array = \", testscalar);\n\u00a0\u00a0\u00a0\u00a0for(i=0; i < 7; ++i)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%d \", testarray[i]);\n\u00a0\u00a0\u00a0\u00a0printf(\"\n\");\n}\n\nint testfunction(int arr[], int dim, int scal) {\n\u00a0\u00a0\u00a0\u00a0int i;\n\u00a0\u00a0\u00a0\u00a0/* printing the values of formal parameters */\n\u00a0\u00a0\u00a0\u00a0printf(\"Inside testfunction: Scalar = %d, Array = \", scal);\n\u00a0\u00a0\u00a0\u00a0for(i=0; i < dim; ++i)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%d \", arr[i]);\n\u00a0\u00a0\u00a0\u00a0printf(\"\n\");\n\n\u00a0\u00a0\u00a0\u00a0/* modifying formal parameters */\n\u00a0\u00a0\u00a0\u00a0for(i=0; i < dim; ++i)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0arr[i] = 99;\n\u00a0\u00a0\u00a0\u00a0scal = 99;\n\u00a0\u00a0\u00a0\u00a0return 1;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "variable_initialization",
+          "less",
+          "int",
+          "array_declaration",
+          "pre_increment",
+          "void",
+          "variable_declaration",
+          "include",
+          "function_declaration",
+          "return",
+          "main_function",
+          "for",
+          "printf",
+          "simple_assignment"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=parampass.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.177Z"
+}

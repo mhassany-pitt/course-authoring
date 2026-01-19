@@ -1,0 +1,251 @@
+{
+  "id": "6954bccff9187b06cf8377c4",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:59:02.173Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "jNested3",
+    "title": "Nested Loops 3",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jnested3&act=Nested_Loops&sub=jNested3&svc=progvis"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "QuizJET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Sharon Hsiao",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class Tester {\n  public static void main(String[] args) { \n       double result = 0;\n       double totalBalance = 0;\n       for(int i = 1; i &lt; 4; i++){\n          BankAccount account = new BankAccount();\n          for(int j = 0; j &lt; 3 ; j++){\n               account.deposit(i * 100.0);\n          }\n          totalBalance += account.getBalance();\n        }\n        result = totalBalance;         \n  } \n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddAssignmentExpression",
+          "AddExpression",
+          "ClassDefinition",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "DoubleDataType",
+          "ExpressionStatement",
+          "FormalMethodParameter",
+          "ForStatement",
+          "InstanceField",
+          "InstanceFieldDefinitionStatement",
+          "IntDataType",
+          "LessExpression",
+          "MethodDefinition",
+          "MultiplyExpression",
+          "NestedStatement",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "ObjectVariable",
+          "PostIncrementExpression",
+          "PrivateAccessSpecifier",
+          "PublicAccessSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StatementBlock",
+          "SubtractExpression",
+          "VariableInitializationStatement",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Nested Loops"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddAssignmentExpression",
+          "AddExpression",
+          "ClassDefinition",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "DoubleDataType",
+          "ExpressionStatement",
+          "FormalMethodParameter",
+          "ForStatement",
+          "InstanceField",
+          "InstanceFieldDefinitionStatement",
+          "IntDataType",
+          "LessExpression",
+          "MethodDefinition",
+          "MultiplyExpression",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "ObjectVariable",
+          "PostIncrementExpression",
+          "PrivateAccessSpecifier",
+          "PublicAccessSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StatementBlock",
+          "SubtractExpression",
+          "VariableInitializationStatement",
+          "VoidDataType",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "VoidDataType",
+          "DoubleDataType",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "SimpleAssignmentExpression",
+          "ForStatement",
+          "IntDataType",
+          "LessExpression",
+          "NestedForLoops",
+          "PostIncrementExpression",
+          "SimpleAssignmentExpression",
+          "ConstructorCall",
+          "NestedForLoops",
+          "ObjectCreationStatement",
+          "SimpleAssignmentExpression",
+          "ForStatement",
+          "IntDataType",
+          "LessExpression",
+          "NestedForLoops",
+          "PostIncrementExpression",
+          "SimpleAssignmentExpression",
+          "ActualMethodParameter",
+          "MultiplyExpression",
+          "NestedForLoops",
+          "ObjectMethodInvocation",
+          "AddAssignmentExpression",
+          "NestedForLoops",
+          "ObjectMethodInvocation",
+          "SimpleAssignmentExpression",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "ConstructorDefinition",
+          "PublicConstructorSpecifier",
+          "SimpleAssignmentExpression",
+          "ConstructorDefinition",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "PublicConstructorSpecifier",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "VoidDataType",
+          "AddExpression",
+          "DoubleDataType",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "VoidDataType",
+          "DoubleDataType",
+          "SimpleAssignmentExpression",
+          "SubtractExpression",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "ReturnStatement",
+          "DoubleDataType",
+          "InstanceField",
+          "PrivateFieldSpecifier",
+          "SimpleVariable"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jnested3&act=Nested_Loops&sub=jNested3&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=1",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=1",
+      "context_name": "Java: INFSCI 0017 | Introduction to Java Programming > Nested Loops",
+      "used_at": "2013-05-23T12:19:44.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=17",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=17",
+      "context_name": "Java: INFSCI 0017 | Introduction to Java Programming (Fall 2014-ae) > Nested Loops",
+      "used_at": "2014-09-11T11:50:18.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=28",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=28",
+      "context_name": "Java: pretestJava | Pretest Course > Nested Loops",
+      "used_at": "2015-09-08T18:10:42.000Z",
+      "used_by": "Roya Hosseini - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=439",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=439",
+      "context_name": "Java: CMIS 1200 | Application Programming I > Module 4c- Nested Loops",
+      "used_at": "2024-08-21T17:05:02.000Z",
+      "used_by": "Pratibha Menon - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.203Z"
+}

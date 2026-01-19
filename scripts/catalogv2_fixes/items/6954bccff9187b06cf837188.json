@@ -1,0 +1,124 @@
+{
+  "id": "6954bccff9187b06cf837188",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-06-09T13:13:15.000Z",
+  "updated_at": "2026-01-17T12:55:30.427Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "csedpad_methods_addingnumbers",
+    "title": "(Methods) Adding numbers - CSEdPad",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_methods_addingnumbers&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2020-06-09T13:13:15.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class AddingNumbers {\n\n\u00a0\u00a0\u00a0\u00a0public int sum(int value1, int value2) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return value1 + value2; // returns the addition of the two given integer values.\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0AddingNumbers addy = new AddingNumbers();\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int result = addy.sum(4, 9);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(result);\n\u00a0\u00a0\u00a0\u00a0}\n\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "ConstructorCall",
+          "ObjectMethodInvocation",
+          "AddExpression",
+          "FormalMethodParameter",
+          "ActualMethodParameter",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "ReturnStatement",
+          "MethodDefinition",
+          "java.lang.System.out.println",
+          "SimpleAssignmentExpression",
+          "ClassDefinition",
+          "VoidDataType",
+          "ObjectCreationStatement",
+          "IntDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "ClassDefinition",
+          "ConstructorCall",
+          "FormalMethodParameter",
+          "IntDataType",
+          "java.lang.System.out.println",
+          "MethodDefinition",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_methods_addingnumbers&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=389",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
+      "context_name": "Java: CSEdPad | CSEdPad Examples > Methods",
+      "used_at": "2020-05-10T20:11:07.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.063Z"
+}

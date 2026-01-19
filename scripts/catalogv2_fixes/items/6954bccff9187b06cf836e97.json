@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e97",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:51.955Z",
+  "tags": [],
+  "identity": {
+    "id": "py_count_longer",
+    "title": "PCRS C3-PL  Count Longer",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/145/embed?act=PCRS&sub=py_count_longer"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write a function that takes a list of stringsand a string, and returns the number of strings in the list that are longer than the given string.    countLongerStrings(['dog', 'cat', 'a', 'ab'], 'z')=>3    countLongerStrings(['', 'a', 'ab', 'abc'], 'abcd') => 0    countLongerStrings(['knox', 'college', 'flunk', 'day'], 'april')=>1",
+    "source_code": "[student_code]\ndef countLongerStrings(items, s):\n    #code\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/145/embed?act=PCRS&sub=py_count_longer"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.966Z"
+}

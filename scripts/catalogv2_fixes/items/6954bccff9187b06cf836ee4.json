@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836ee4",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:01.262Z",
+  "tags": [],
+  "identity": {
+    "id": "py_count_number_seven_es",
+    "title": "PCRS C3-PL  Count Number Seven",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/306/embed?act=PCRS&sub=py_count_number_seven_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Escribe una funcion que tome una lista de enteros como parametro y devuelva el numero de veces que 7 aparece directamente antes de 9 en la lista.Por ejemplo:    contar79([1,2,7,8,9]) => 0    contar79([1,2,7,9,8,9,7,9]) => 2    contar79([7,9,7,9,7,9,7]) => 3",
+    "source_code": "[student_code]\ndef contar79(elementos):\n    # codigo\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/306/embed?act=PCRS&sub=py_count_number_seven_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.975Z"
+}

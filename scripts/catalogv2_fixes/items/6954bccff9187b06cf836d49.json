@@ -1,0 +1,148 @@
+{
+  "id": "6954bccff9187b06cf836d49",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-10T18:16:57.000Z",
+  "updated_at": "2026-01-17T05:27:01.743Z",
+  "tags": [],
+  "identity": {
+    "id": "py_bmi_calculator_llm_es__684855dadf5ea13f28e43796",
+    "title": "Calculo del Indice de Masa Corporal (IMC)",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684855dadf5ea13f28e43796?_t=1750131410601&index=0&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-10T18:16:57.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "es",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "El IMC es una medida de la grasa corporal basada en la altura y el peso que se aplica a hombres y mujeres adultos. Las categor\u00edas de IMC son las siguientes:\\nBajo peso = <18.5\\nPeso normal = 18.5\u201324.9\\nSobrepeso = 25\u201329.9\\nObesidad = IMC de 30 o m\u00e1s.\\nLa f\u00f3rmula del IMC es: IMC = (Peso en kilogramos / (Altura en pulgadas x Altura en pulgadas)).\\nConstruya un programa que calcule el \u00cdndice de Masa Corporal (IMC) de acuerdo con esta f\u00f3rmula.",
+    "source_code": "#Paso 1: Recibir el peso y la altura del usuario\ntexto = input(\"Ingrese el peso en kilogramos:\")\npeso = float(texto)\ntexto = input(\"Ingrese la altura en metros:\")\naltura = float(texto)\n#Paso 2: Calcular el IMC\nimc = peso / altura ** 2\n#Paso 3: Imprimir el resultado\nprint(\"El IMC es:\", imc)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "Arun parser v0.1": {
+        "concepts": [
+          "Mult",
+          "Assign",
+          "Div",
+          "Str",
+          "Call",
+          "Pow",
+          "Int"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "TransformingToFloatType",
+          "Multiplication",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "Printing",
+          "Power",
+          "Division",
+          "TransformingToFloatType",
+          "Multiplication",
+          "AssigningValueVariable",
+          "HandlingInput",
+          "CallingLibraryFunction",
+          "Printing",
+          "Power",
+          "Division"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Call",
+          "Assign",
+          "Int",
+          "Str",
+          "Div",
+          "Mult",
+          "Pow"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684855dadf5ea13f28e43796?_t=1750131410601&index=0&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Variables y Operaciones",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Variables y Operaciones",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Variables y Operaciones",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=464",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=464",
+      "context_name": "Python: UTFSM-Progra | Test Jordan Thesis Python ES > Variables y Operaciones",
+      "used_at": "2025-07-10T18:56:02.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.932Z"
+}

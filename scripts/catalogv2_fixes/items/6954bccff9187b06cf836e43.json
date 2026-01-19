@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf836e43",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-15T18:22:32.000Z",
+  "updated_at": "2026-01-17T05:27:42.195Z",
+  "tags": [],
+  "identity": {
+    "id": "compare_linkedlist_no_feedback",
+    "title": "Compare Two LinkedList - NFB",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/561/embed?act=PCRS&sub=compare_linkedlist_no_feedback"
+  },
+  "attribution": {
+    "created_at": "2025-04-15T18:22:32.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Using the integer linked lists list1 and list2, compare the sum of the numbers contained within each list.If list1 and list2 have the same total sum, return 0.If list1 has a greater total sum than list2, return 1.If list1 has a smaller total sum than list2, return -1.list1: 1 \u2192 8 \u2192 7 \u2192 2   (sum = 18)list2: 7 \u2192 2 \u2192 1 \u2192 8   (sum = 18)Output: 0",
+    "source_code": "[file SCode.java]\n[student_code]\n\n[/student_code]\n[student_code]\npublic int compareVal(LinkedList<Integer> list1, LinkedList<Integer> list2) {\n    // TODO: Write your code here\n    \n    \n    \n    \n}\n\n[/student_code]\n[student_code]\n\n[/student_code]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/561/embed?act=PCRS&sub=compare_linkedlist_no_feedback"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Linked Lists",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.958Z"
+}

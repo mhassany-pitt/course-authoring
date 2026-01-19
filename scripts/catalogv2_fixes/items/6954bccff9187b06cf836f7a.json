@@ -1,0 +1,164 @@
+{
+  "id": "6954bccff9187b06cf836f7a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-02-22T00:20:06.000Z",
+  "updated_at": "2026-01-17T12:54:42.063Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "q_py_obj_account1_es",
+    "title": "q_py_obj_account1_es",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_obj_account1_es&sub=q_py_obj_account1_es&act=q_py_spanish"
+  },
+  "attribution": {
+    "created_at": "2025-02-22T00:20:06.000Z",
+    "provider": "QuizPET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "class Cuenta:\n    def __init__(self, deposito=0):\n        self.saldo = deposito\n    def depositar(self, suma):\n        self.saldo += suma\n    def retirar(self, suma):\n        self.saldo -= suma\n    def get_saldo(self):\n        return self.saldo\ndef main():\n    cuentas = {}\n    cuentas[0] = Cuenta()\n    cuentas[1] = Cuenta(148)\n    cuentas[0].depositar(148)\n    cuentas[1].depositar(148)\n    cuentas[0].retirar(148-50)\n    cuentas[1].retirar(148-100)\n    print(cuentas[0].get_saldo() + cuentas[1].get_saldo())\nmain()"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "DefiningClass",
+          "Addition",
+          "CreatingObject",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "Printing",
+          "DefiningSimpleFunction",
+          "CreatingDictionary",
+          "AddingItemToDictionary",
+          "CallingObjectMethod",
+          "IndexingDictionary",
+          "ChangingValueDictionaryElement",
+          "Subtraction",
+          "CallingSimpleFunction",
+          "AccessingDictionary",
+          "DefiningObjectMethod"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "parser": {
+        "concepts": [
+          "Index",
+          "Return",
+          "Sub",
+          "Int",
+          "Attribute",
+          "AugAssign",
+          "ClassDef",
+          "Add",
+          "Dict",
+          "arg",
+          "Call",
+          "Assign",
+          "FunctionDef"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "Sub",
+          "Call",
+          "Assign",
+          "Return",
+          "ClassDef",
+          "FunctionDef",
+          "Int",
+          "Attribute",
+          "Dict",
+          "Add",
+          "AugAssign",
+          "Index"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AccessingDictionary",
+          "AddingItemToDictionary",
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "CallingObjectMethod",
+          "CallingSimpleFunction",
+          "ChangingValueDictionaryElement",
+          "CreatingDictionary",
+          "CreatingObject",
+          "DefiningClass",
+          "DefiningObjectMethod",
+          "DefiningSimpleFunction",
+          "IndexingDictionary",
+          "Printing",
+          "Subtraction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_obj_account1_es&sub=q_py_obj_account1_es&act=q_py_spanish"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Clases y Objetos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.997Z"
+}

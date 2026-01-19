@@ -1,0 +1,100 @@
+{
+  "id": "6954bccff9187b06cf836f21",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:07.725Z",
+  "tags": [],
+  "identity": {
+    "id": "py_same_name_list_es",
+    "title": "PCRS C3-PL  Same Name List",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/232/embed?act=PCRS&sub=py_same_name_list_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa la siguiente funcion segun su docstring. Los argumentos que usamos para probar no se mostraran; en su lugar, se describiran en espanol. Si fallas en algun caso de prueba, deberas leer la descripcion y hacer tu propia prueba.",
+    "source_code": "[student_code]\ndef mismo_primer_nombre(nombre1, nombre2):\n    \"\"\" (lista de str, lista de str) -> bool\n    \n    Devuelve si el primer elemento de nombre1 y nombre2 son el mismo.\n    \n    >>> mismo_primer_nombre(['John', 'Smith'], ['John', 'Harkness'])\n    True\n    >>> mismo_primer_nombre(['John', 'Smith'], ['Matt', 'Smith'])\n    False\n    \"\"\"\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "TransformingToStringType",
+          "ListReferencing",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "ComparisonExpression",
+          "IndexingTuple",
+          "IndexingList",
+          "IndexingString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "DefiningSimpleFunction",
+          "IndexingList"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/232/embed?act=PCRS&sub=py_same_name_list_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.985Z"
+}

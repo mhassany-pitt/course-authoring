@@ -1,0 +1,127 @@
+{
+  "id": "6954bccff9187b06cf83705c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-09-16T11:36:31.000Z",
+  "updated_at": "2026-01-17T05:28:36.163Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_queue",
+    "title": "Construct a function that uses Queue Structure",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_queue&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2021-09-16T11:36:31.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a function that uses Queue Structure to solve a Josephus problem that removes the kth element in a given list and returns the last left element. All Queue's functions are predefined (is_empty(), enqueue() and dequeue()). Your function should also return a \"The list is empty\" message if the given list is empty.",
+    "source_code": "def circle(k,name_list):\n\tq = Queue()\n\tif not q.is_empty():\n\t\tfor i in range(len(name_list)):\n\t\t\tq.enqueue(name_list[i])\n\t\ti = 1\n\t\twhile q.size()!=1:\n\t\t\ttemp=q.dequeue()\n\t\t\tif i != k+1:\n\t\t\t\tq.enqueue(temp)\n\t\t\telse:\n\t\t\t\ti = 0\n\t\t\ti += 1\n\telse:\n\t\treturn (\\'the list is empty!\\')\n\treturn q.dequeue()"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "Attribute",
+          "NotEq",
+          "AugAssign",
+          "While",
+          "FunctionDef",
+          "Not",
+          "Index",
+          "Add",
+          "arg",
+          "Return",
+          "Call",
+          "Constant",
+          "Assign",
+          "If",
+          "For"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "For",
+          "Call",
+          "Assign",
+          "Constant",
+          "Not",
+          "Return",
+          "FunctionDef",
+          "Attribute",
+          "While",
+          "NotEq",
+          "Add",
+          "AugAssign",
+          "If",
+          "Index"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_queue"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=413",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Queues",
+      "used_at": "2021-08-11T18:22:22.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=422",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > Topic 6",
+      "used_at": "2022-05-23T22:24:04.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.027Z"
+}

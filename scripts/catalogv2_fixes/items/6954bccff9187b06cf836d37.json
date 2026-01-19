@@ -1,0 +1,81 @@
+{
+  "id": "6954bccff9187b06cf836d37",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T17:52:36.000Z",
+  "updated_at": "2026-01-17T05:26:59.395Z",
+  "tags": [],
+  "identity": {
+    "id": "files.j_work_hours__68bdb309f6cc3d7a9cc0986b",
+    "title": "Reporting the Total Hours Each Employee Worked (Case 1)",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc0986b?_t=1757542343776&index=0"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T17:52:36.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Suppose we have an input file that contains information about how many hours each employee of a company has worked. The file looks like the following (Employee's name, Hours):\nErica 7.5 8.5 10.25 8 8.5\nErin 10.5 11.5 12 11 10.75\nSimone 8 8 8\n...\nConstruct a program that reads this file and calculates the total number of hours worked by each individual. Make sure that the program handles each specific exception that could occur.",
+    "source_code": "import java.io.*;\nimport java.util.Scanner;\npublic class JWorkHours1 {\n    public static void main(String[] args) {\n        Scanner scan = new Scanner(System.in);\n        System.out.println(\"Enter the name of the file:\");\n        String name = scan.next();\n        JWorkHours1 jwh = new JWorkHours1();\n        jwh.reportWorkHours(name);\n    }\n    //Step 1: Define the method that processes the employees file\n    public void reportWorkHours(String fileName) {\n        //Step 1.1: Enclose the code that might throw an exception within the try block\n        try {\n            //Step 1.1.1: Wrap a BufferedReader around a FileReader\n            FileReader fr = new FileReader(fileName); \n            BufferedReader br = new BufferedReader(fr); \n            //Step 1.1.2: Use the BufferedReader object to read one line at a time\n            String line = null;\n            while ( ( line = br.readLine() ) != null) {\n                String[] tokens = line.split(\" \");\n                String name = tokens[0];\n                double total = 0.0;\n                for (int i = 1; i < tokens.length; i++ ) {\n                    try {\n                        total += Double.parseDouble(tokens[i]);\n                    } catch (  NumberFormatException ex ) {\n                        System.out.println(\"Error in the hour.\");\n                    }\n                }\n                System.out.println(\"Total hours worked by \" + name  + \" = \" + total);\n            }     \n            //Step 1.1.3: Close the BufferedReader object attached to the file\n            br.close();\n        }\n        //Step 1.2: Handle all possible exceptions that may be thrown in the try block \n        catch (FileNotFoundException ex) {\n            System.out.println(\"File not found\");\n        } catch (IOException ex ) {\n            System.out.println(\"Problem with the file!\");\n        }\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc0986b?_t=1757542343776&index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > File processing",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=470",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=470",
+      "context_name": "Java: TestWEATUM2Fall2025 | TestWEATUM2Fall2025 > WorkHours",
+      "used_at": "2025-09-11T15:04:14.000Z",
+      "used_by": "ABLN, ABLN - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.930Z"
+}

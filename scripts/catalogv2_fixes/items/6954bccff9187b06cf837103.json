@@ -1,0 +1,135 @@
+{
+  "id": "6954bccff9187b06cf837103",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-03-02T10:32:54.000Z",
+  "updated_at": "2026-01-17T05:28:53.934Z",
+  "tags": [],
+  "identity": {
+    "id": "class_sphere_methods",
+    "title": "class_sphere_methods",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/501/embed?act=PCRS&sub=class_sphere_methods"
+  },
+  "attribution": {
+    "created_at": "2021-03-02T10:32:54.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the code for the class Sphere. Assume that the getter/setter methods are already implemented. You have to implement the following methods (follow specifications as if they were written in UML class diagram):+ getArea(): double -> it calculates the area of the sphere (please use the constant PI defined in the class for this)+ getVolume(): double -> it calculates the volume of the sphere (please use the constant PI defined in the class for this)+ pointInSphere(xPoint: int, yPoint:int, zPoint: int): boolean -> it checks if the points with given coordinates xPoint, yPoint and zPoint is contained inside the sphere (Hint: get the Euclidean distance between the center of the sphere and the point and check if it is greater than the sphere's radius or not. Using sqrt and pow methods from Math class could be helpful here.) More instructions on how to implement the missing parts of this class are provided in the code below.",
+    "source_code": "[file Sphere.java]\n[blocked]\npublic class Sphere{ \n    //class attributes\n    private int x;\n    private int y;\n \tprivate int z;\n    private int radius;\n    \n    final double PI = 3.14;\n    \n    public Sphere(){\n        x=0;\n        y=0;\n        z=0;\n        radius=1;\n    }\n[/blocked]\n     [student_code]\n    //Define the methods getArea, getVolume, pointInSphere\n    \n\t[/student_code]\n    [blocked]\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "MethodImplementation",
+          "MethodSignature",
+          "FormalMethodParameter",
+          "Method",
+          "PublicMethodSpecifier"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "FormalMethodParameter",
+          "Method",
+          "MethodImplementation",
+          "MethodSignature",
+          "PublicMethodSpecifier"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/501/embed?act=PCRS&sub=class_sphere_methods"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Classes/Objects",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Classes/Objects",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Classes/Objects",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 2- Objects and Classes",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Classes/Objects",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=474",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=474",
+      "context_name": "Java: CMU15-121 | CMU 15-121 - Intro Data Structures - Fall 2025 > Objects and Classes",
+      "used_at": "2025-09-16T16:41:24.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.048Z"
+}

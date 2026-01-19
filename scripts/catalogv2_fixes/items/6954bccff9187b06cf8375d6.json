@@ -1,0 +1,76 @@
+{
+  "id": "6954bccff9187b06cf8375d6",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2014-09-08T20:23:44.000Z",
+  "updated_at": "2026-01-17T12:57:47.810Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "c_ch2_simple_cout",
+    "title": "Simple cout",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=c_ch2_simple_cout&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2014-09-08T20:23:44.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Natalya Goreva ",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n\u00a0\u00a0\u00a0\u00a0cout << \"Programming is great fun!\";\n\u00a0\u00a0\u00a0\u00a0return 0;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=c_ch2_simple_cout&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=14",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=14",
+      "context_name": "C++: ... | Introduction to C++ Programming > Lecture 1",
+      "used_at": "2014-09-10T08:54:12.000Z",
+      "used_by": "Natalya Goreva  - Robert Morris University"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.169Z"
+}

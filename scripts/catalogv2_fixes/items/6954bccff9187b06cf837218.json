@@ -1,0 +1,126 @@
+{
+  "id": "6954bccff9187b06cf837218",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2018-12-06T18:20:43.000Z",
+  "updated_at": "2026-01-17T12:55:47.563Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "casting_memphis",
+    "title": "Casting data types (Memphis)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=casting_memphis&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2018-12-06T18:20:43.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class VariableDemos {\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int x = 4, y = 10;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(x + \", \" + y);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0x = y;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(x + \", \" + y);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0y = 8;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(x + \", \" + y);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int temp = x;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0x = y;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0y = temp;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Some examples of casting\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Refer to this ordering of data types: double > float > long > int > short > byte\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// If storing a *smaller* value into a *larger* variable, an implicit cast is automatically done\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// If storing a *larger* value into a *smaller* variable, an explicit cast is needed to make the code compile\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double z = 2;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int z1 = (int)2.5;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0byte small = (byte)200;\n\u00a0\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "parser": {
+        "concepts": [
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "VoidDataType",
+          "IntDataType",
+          "SimpleAssignmentExpression",
+          "java.lang.System.out.println",
+          "ActualMethodParameter",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "DoubleDataType",
+          "ExplicitTypeCasting",
+          "ByteDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "ByteDataType",
+          "ClassDefinition",
+          "DoubleDataType",
+          "ExplicitTypeCasting",
+          "FormalMethodParameter",
+          "IntDataType",
+          "java.lang.System.out.println",
+          "MethodDefinition",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=casting_memphis&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=367",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
+      "context_name": "Java: INFSCI 0017 | CSEdPad test course (CS1 Memphis) > Preliminary topics",
+      "used_at": "2018-11-30T09:02:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.081Z"
+}

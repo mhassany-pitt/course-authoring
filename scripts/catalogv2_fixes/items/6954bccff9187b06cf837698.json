@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837698",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:16.008Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fig07_24.c",
+    "title": "fig07_24.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig07_24.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 7.24: fig07_24.c\n\u00a0\u00a0\u00a0Card shuffling dealing program */\n#include <stdio.h>\n#include <stdlib.h>\n#include <time.h>\n\nvoid shuffle( int wDeck[][ 13 ] );\nvoid deal( const int wDeck[][ 13 ], const char *wFace[],\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0const char *wSuit[] );\n\nint main( void )\n{\n\u00a0\u00a0\u00a0const char *suit[ 4 ] = { \"Hearts\", \"Diamonds\", \"Clubs\", \"Spades\" };\n\u00a0\u00a0\u00a0const char *face[ 13 ] =\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{ \"Ace\", \"Deuce\", \"Three\", \"Four\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"Five\", \"Six\", \"Seven\", \"Eight\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"Nine\", \"Ten\", \"Jack\", \"Queen\", \"King\" };\n\u00a0\u00a0\u00a0int deck[ 4 ][ 13 ] = { 0 };\n\u00a0\u00a0\u00a0srand( time( 0 ) );\n\u00a0\u00a0\u00a0shuffle( deck );\n\u00a0\u00a0\u00a0deal( deck, face, suit );\n\u00a0\u00a0\u00a0return 0;\n}\n\nvoid shuffle( int wDeck[][ 13 ] )\n{\n\u00a0\u00a0\u00a0int row;\n\u00a0\u00a0\u00a0int column;\n\u00a0\u00a0\u00a0int card;\n\u00a0\u00a0\u00a0for ( card = 1; card <= 52; card++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0do {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0row = rand() % 4;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0column = rand() % 13;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} while( wDeck[ row ][ column ] != 0 );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0wDeck[ row ][ column ] = card;\n\u00a0\u00a0\u00a0}\n}\n\nvoid deal( const int wDeck[][ 13 ], const char *wFace[],\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0const char *wSuit[] )\n{\n\u00a0\u00a0\u00a0int card;\n\u00a0\u00a0\u00a0int row;\n\u00a0\u00a0\u00a0int column;\n\u00a0\u00a0\u00a0for ( card = 1; card <= 52; card++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( row = 0; row <= 3; row++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( column = 0; column <= 12; column++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( wDeck[ row ][ column ] == card ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%5s of %-8s%c\", wFace[ column ], wSuit[ row ],\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0card % 2 == 0 ? '\\n' : '\\t' );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig07_24.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.181Z"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8375ec",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2014-09-01T11:26:17.000Z",
+  "updated_at": "2026-01-17T12:57:51.194Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "CashRegisterTester",
+    "title": "Cash Register Tester",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=CashRegisterTester&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2014-09-01T11:26:17.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Roya Hosseini",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class CashRegisterTester\n{\n\u00a0\u00a0\u00a0public static void main(String[] args)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0CashRegister register = new CashRegister();\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0register.recordPurchase(29.50);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0register.recordPurchase(9.25);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0register.receivePayment(50);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double change = register.giveChange();\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(change);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Expected: 11.25\");\n\u00a0\u00a0\u00a0}\n}\n\npublic class CashRegister\n{\n\u00a0\u00a0\u00a0private double taxRate;\n\u00a0\u00a0\u00a0private double purchase;\n\u00a0\u00a0\u00a0private double taxablePurchase;\n\u00a0\u00a0\u00a0private double payment;\n\n\u00a0\u00a0\u00a0public CashRegister(double rate)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0taxRate = rate;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0purchase = 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0payment = 0;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public void recordPurchase(double amount)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0purchase = purchase + amount;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public void recordTaxablePurchase(double amount)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0taxablePurchase = taxablePurchase + amount;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public void receivePayment(double amount)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0payment = payment + amount;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public double getSalesTax()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return taxablePurchase * taxRate / 100;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public double giveChange()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double change = payment - purchase ;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0purchase = 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0payment = 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return change;\n\u00a0\u00a0\u00a0}\n}\n\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=CashRegisterTester&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.170Z"
+}

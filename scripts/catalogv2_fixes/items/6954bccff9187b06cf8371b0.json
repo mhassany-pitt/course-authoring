@@ -1,0 +1,162 @@
+{
+  "id": "6954bccff9187b06cf8371b0",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-01-21T11:52:43.000Z",
+  "updated_at": "2026-01-17T05:29:12.799Z",
+  "tags": [],
+  "identity": {
+    "id": "height_conversion",
+    "title": "height_conversion",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/423/embed?act=PCRS&sub=height_conversion"
+  },
+  "attribution": {
+    "created_at": "2020-01-21T11:52:43.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following code in order to prompt the user for his/her full name (first name, middle name and last name separately) and then for his/her height in inches, then the code has to convert and display the height in inches to feet, then ft'' in', then meters.For the conversions, please consider that 12 inches is 1 foot. Also, use the conversion rate 0.0254 as your inches to meters conversion rate. For example, 1 inch is 0.0254 meters.Try to solve this problem by defining constant values (use keyword final) that will store the conversion rate specified above. Then, use these constant values in your calculations. (This is not a requirement but something that will make the code readability better) Note: The java.util.Scanner is already imported. In your submission, you do not have to import it again. If you import again, you will get an error in your submissions. E.g. For the input:First name: WilliamMiddle name: JeffersonLast name: ClintonHeight (in inches): 75For the output:Full Name: Clinton, William JeffersonHeight in inches: 75Height in feet & inches: 6 ft. 3 in.Height in feet:  6.0833 Height in meters:  1.854139",
+    "source_code": "[file SCode.java]\n[student_code]\n// IMPORTANT: YOU DO NOT HAVE TO DEFINE THE MAIN CLASS. Directly write your answer here\n// You Do not need to import java.util.Scanner, it is already imported.\n        \n       \n[/student_code]\n[blocked]\nSystem.out.println(\"Full Name: \" + lastName + \",\" + firstName + \" \" + middleName);\nSystem.out.println(\"Height in inches: \" + heightInInches);\nSystem.out.println(\"Height in feet: \"+ heightInFeet);\nSystem.out.println(\"Height in feet & inches: \"+ heightFeetPart +\" ft. \"+ heightInchesPart +\" in.\");\nSystem.out.println(\"Height in meters: \"+heightInMeters);\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "SimpleVariable",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "MultiplyExpression",
+          "java.lang.System.out.println",
+          "DivideExpression",
+          "ModulusExpression",
+          "StringAddition"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "DivideExpression",
+          "DoubleDataType",
+          "java.lang.System.out.println",
+          "ModulusExpression",
+          "MultiplyExpression",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StringAddition"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/423/embed?act=PCRS&sub=height_conversion"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Variables and Datatypes",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Variables and Datatypes",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Variables and Datatypes",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Variables and Datatypes",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Variables and Datatypes",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=442",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=442",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2024) > Arithmetic Operations",
+      "used_at": "2024-09-10T16:51:32.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=443",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=443",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2024) Alternative Order > Arithmetic Operations",
+      "used_at": "2024-09-10T18:36:13.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Variables and Datatypes",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Arithmetic Operations",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.067Z"
+}

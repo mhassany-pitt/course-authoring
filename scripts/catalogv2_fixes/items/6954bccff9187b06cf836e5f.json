@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e5f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:45.209Z",
+  "tags": [],
+  "identity": {
+    "id": "py_every_second_line",
+    "title": "PCRS C3-PL  Every Second Line",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/87/embed?act=PCRS&sub=py_every_second_line"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following function according to its docstring description.  Notes: report is a file open for reading, not a string representing the name of a file.the method str.strip() may come in handy!",
+    "source_code": "[student_code]\r\ndef every_second_line(report):\r\n    \"\"\" (Open File for reading) -> list of str\r\n    \r\n    Return a list containing every second line (with leading and trailing\r\n    whitespace removed) in report, starting with the first line.\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/87/embed?act=PCRS&sub=py_every_second_line"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.961Z"
+}

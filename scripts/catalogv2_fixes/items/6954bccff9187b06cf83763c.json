@@ -1,0 +1,100 @@
+{
+  "id": "6954bccff9187b06cf83763c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:03.201Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "longestline.c",
+    "title": "IS12:: longestline.c (12.2)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=longestline.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Example 12.2;    Longest line\n\u00a0\u00a0\u00a0Source: K&R2, p 29 (see also better version on p. 61)\n*/\n#include <stdio.h>\n#define MAXLINE 1000 /* maximum input line size */\nint getline(char line[ ], int maxline);\nvoid copy(char to[ ], char from[ ]);\n/* print longest input line */\nmain()\n{\n\u00a0\u00a0\u00a0\u00a0int len; /* current line length */\n\u00a0\u00a0\u00a0\u00a0int max; /* maximum length seen so far */\n\u00a0\u00a0\u00a0\u00a0char line[MAXLINE]; /* current input line */\n\u00a0\u00a0\u00a0\u00a0char longest [MAXLINE]; /*longest line saved here */\n\u00a0\u00a0\u00a0\u00a0max = 0;\n\u00a0\u00a0\u00a0\u00a0while ((len = getline(line, MAXLINE)) > 0)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (len > max) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0max = len;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0copy(longest, line);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (max > 0) /* there was a line */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%s\", longest);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return 0;\n}\n/* getline: read a line into s,  return length */\nint getline(char s[ ], int lim)\n{\n\u00a0\u00a0\u00a0\u00a0int c, i;\n\u00a0\u00a0\u00a0\u00a0for (i = 0; i < lim-1 &&(c=getchar())!= EOF && c != '\n'; ++i)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0s[i] = c;\n\u00a0\u00a0\u00a0\u00a0if (c == '\n') {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0s[i] = c;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++i;\n\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0s[i] = '\u0000';\n\u00a0\u00a0\u00a0\u00a0return i;\n}\n/* copy: copy 'from' into 'to'; assume to is big enough */\nvoid copy(char to[ ], char from[ ]) {\n\u00a0\u00a0\u00a0\u00a0int i = 0;\n\u00a0\u00a0\u00a0\u00a0while((to[i] = from [i]) != '\u0000')\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++i;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "variable_initialization",
+          "pre_increment",
+          "return",
+          "and",
+          "for",
+          "while",
+          "array_declaration",
+          "char",
+          "equal",
+          "simple_assignment",
+          "int",
+          "if",
+          "main_function",
+          "not_equal",
+          "less",
+          "greater",
+          "define",
+          "void",
+          "variable_declaration",
+          "include",
+          "function_declaration",
+          "printf",
+          "sub"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=longestline.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.176Z"
+}

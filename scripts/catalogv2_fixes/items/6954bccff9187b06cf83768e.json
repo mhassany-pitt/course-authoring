@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf83768e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:14.417Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fig07_15.c",
+    "title": "fig07_15.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig07_15.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 7.15: fig07_15.c\n\u00a0\u00a0\u00a0This program puts values into an array, sorts the values into\n\u00a0\u00a0\u00a0ascending order, and prints the resulting array. */\n#include <stdio.h>\n#define SIZE 10\n\nvoid bubbleSort( int * const array, const int size );\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int a[ SIZE ] = { 2, 6, 4, 8, 10, 12, 89, 68, 45, 37 };\n\u00a0\u00a0\u00a0int i;\n\u00a0\u00a0\u00a0printf( \"Data items in original order\\n\" );\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%4d\", a[ i ] );\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0bubbleSort( a, SIZE );\n\u00a0\u00a0\u00a0printf( \"\\nData items in ascending order\\n\" );\n\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%4d\", a[ i ] );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0printf( \"\\n\" );\n\u00a0\u00a0\u00a0return 0;\n}\n\nvoid bubbleSort( int * const array, const int size )\n{\n\u00a0\u00a0\u00a0void swap( int *element1Ptr, int *element2Ptr );\n\u00a0\u00a0\u00a0int pass;\n\u00a0\u00a0\u00a0int j;\n\u00a0\u00a0\u00a0for ( pass = 0; pass < size - 1; pass++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( j = 0; j < size - 1; j++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( array[ j ] > array[ j + 1 ] ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0swap( &array[ j ], &array[ j + 1 ] );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0}\n}\n\nvoid swap( int *element1Ptr, int *element2Ptr )\n{\n\u00a0\u00a0\u00a0int hold = *element1Ptr;\n\u00a0\u00a0\u00a0*element1Ptr = *element2Ptr;\n\u00a0\u00a0\u00a0*element2Ptr = hold;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig07_15.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.180Z"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836cdd",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:22:45.000Z",
+  "updated_at": "2026-01-17T05:26:48.359Z",
+  "tags": [],
+  "identity": {
+    "id": "Calculating the Winning Percentage of a Sports Team (Case 3)__68bdb308f6cc3d7a9cc09710-68bdb308f6cc3d7a9cc0970e-2",
+    "title": "Calculating the Winning Percentage of a Sports Team (Case 3)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc09710?_t=1757557365503&index=2"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:22:45.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that receives from the user the number of games that a sports team won and tied in a tournament of 12 games and calculates the winning percentage of the sports team, counting ties as half wins. The program must ask the user for each of the two inputs until the user enters a valid number.",
+    "source_code": "import java.text.DecimalFormat;\nimport java.util.Scanner;\npublic class JWinPercentageWonEqual {\n\tpublic static void main(String[] args) {\n\t\t//Step 1: Define and initialize the variable for storing the total number of games in the tournament\n\t\tint totalGames = 12;\n\t\t//Step 2: Read the number of games that the sports team won in the tournament\n\t\tScanner scan = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter the number of games that the sports team won in the tournament: \");\n\t\tint wins = scan.nextInt();\t\t\n\t\t//Step 3: Validate the user input for the number of wins, ask for a valid input as long as the user enters an invalid number; otherwise stop\n\t\twhile ( wins < 0 || wins > totalGames ) {\n\t\t\tSystem.out.println(\"Enter the number of games that the sports team won in the tournament: \");\n\t\t\twins = scan.nextInt();\n\t\t}\n\t\t//Step 4: Read the number of games that the sports team tied in the tournament\n\t\tSystem.out.println(\"Enter the number of games tied: \");\n\t\tint ties = scan.nextInt();\t\t\n\t\t//Step 5: Validate the user input for the number of ties, ask for a valid input as long as the user enters an invalid number; otherwise stop\n\t\twhile ( ties < 0 || totalGames < (ties + wins) ) {\n\t\t\tSystem.out.println(\"Enter the number of games tied: \");\n\t\t\tties = scan.nextInt();\n\t\t}\n\t\tscan.close();\n\t\t//Step 6: Calculate and print the percentage of games won by a team, counting ties as half wins\n\t\tdouble ratio = (double) ( wins + ties / 2) / totalGames;\n\t\tDecimalFormat fmt = new DecimalFormat(\"0.###\");\n\t\tSystem.out.println(\"Winning percentage:\" + fmt.format(ratio));\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc09710?_t=1757557365503&index=2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Loops while",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > While Loops",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > While Loops",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.918Z"
+}

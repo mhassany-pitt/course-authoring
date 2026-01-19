@@ -1,0 +1,93 @@
+{
+  "id": "6954bccff9187b06cf837650",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:06.106Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "av_line_for.c",
+    "title": "IS12:: av_line_for.c (118.2)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=av_line_for.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*  Example: Average line length\n\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky\n\u00a0*/\n\n#include <stdio.h>\n\nvoid main () {\n\u00a0\u00a0\u00a0\u00a0int c, nl;\n\u00a0\u00a0\u00a0\u00a0long nc;\n\n\u00a0\u00a0\u00a0\u00a0nl = 0;\n\u00a0\u00a0\u00a0\u00a0for (nc = 0; (c = getchar()) != EOF; ++nc)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(c == '\n')\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++nl;\n\n\u00a0\u00a0\u00a0\u00a0if(nl)\n\u00a0\u00a0\u00a0\u00a0printf(\"Average line length is %.2f\n\", nc / (float) nl);\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "int",
+          "void",
+          "pre_increment",
+          "div",
+          "printf",
+          "include",
+          "if",
+          "explicit_type_cast",
+          "variable_declaration",
+          "equal",
+          "main_function",
+          "for",
+          "long",
+          "float",
+          "not_equal",
+          "simple_assignment"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=av_line_for.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.177Z"
+}

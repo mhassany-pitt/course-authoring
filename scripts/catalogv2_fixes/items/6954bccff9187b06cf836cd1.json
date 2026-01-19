@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836cd1",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:24:41.000Z",
+  "updated_at": "2026-01-17T05:26:47.007Z",
+  "tags": [],
+  "identity": {
+    "id": "String Concatenation (Case 2)__68bdb308f6cc3d7a9cc096e2-68bdb308f6cc3d7a9cc096e0-1",
+    "title": "String Concatenation (Case 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096e2?_t=1757557481321&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:24:41.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that prints the text \"333\", \"63\", and \"36\".",
+    "source_code": "public class StringAddition2\n{\n\tpublic static void main (String[] args)\n\t{\n\t\t//Step 1:Print the text \"333\"\n\t\tSystem.out.println(\"3\" + 3 + 3);\n\t\t//Step 2: Print the text \"63\"\n\t\tSystem.out.println(3 + 3 + \"3\");\n\t\t//Step 3: Print the text \"36\"\n\t\tSystem.out.println(\"3\" + (3 + 3));\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096e2?_t=1757557481321&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.916Z"
+}

@@ -1,0 +1,276 @@
+{
+  "id": "6954bccff9187b06cf8377c1",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:59:01.729Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "jFor5",
+    "title": "Loop For 5",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jfor5&act=Loops_for&sub=jFor5&svc=progvis"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "QuizJET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Sharon Hsiao",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class Tester {\n  public static void main(String[] args) { \n\n       final double INITIAL_BALANCE = 100;\n       final double RATE = 10;\n       final int YEARS = 3;\n\n       Investment invest = new Investment(INITIAL_BALANCE, RATE);\n\n       invest.waitYears(YEARS);\n\n       double result = invest.getBalance();\n       \n  }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "ClassDefinition",
+          "Constant",
+          "ConstantInitializationStatement",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "DivideExpression",
+          "DoubleDataType",
+          "ExpressionStatement",
+          "For-Loop",
+          "FormalMethodParameter",
+          "ForStatement",
+          "InstanceField",
+          "IntDataType",
+          "LessEqualExpression",
+          "LessExpression",
+          "MethodDefinition",
+          "MultiplyExpression",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "ObjectVariable",
+          "PostIncrementExpression",
+          "PrivateAccessSpecifier",
+          "PublicAccessSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StatementBlock",
+          "VariableInitializationStatement",
+          "VoidDataType",
+          "WhileStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "For-Loop"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "ClassDefinition",
+          "Constant",
+          "ConstantInitializationStatement",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "DivideExpression",
+          "DoubleDataType",
+          "ExpressionStatement",
+          "FormalMethodParameter",
+          "ForStatement",
+          "InstanceField",
+          "IntDataType",
+          "LessEqualExpression",
+          "LessExpression",
+          "MethodDefinition",
+          "MultiplyExpression",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "ObjectVariable",
+          "PostIncrementExpression",
+          "PrivateAccessSpecifier",
+          "PublicAccessSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StatementBlock",
+          "VariableInitializationStatement",
+          "VoidDataType",
+          "WhileStatement",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "VoidDataType",
+          "Constant",
+          "ConstantInitializationStatement",
+          "DoubleDataType",
+          "SimpleAssignmentExpression",
+          "Constant",
+          "ConstantInitializationStatement",
+          "DoubleDataType",
+          "SimpleAssignmentExpression",
+          "Constant",
+          "ConstantInitializationStatement",
+          "IntDataType",
+          "SimpleAssignmentExpression",
+          "ActualMethodParameter",
+          "ConstructorCall",
+          "ObjectCreationStatement",
+          "SimpleAssignmentExpression",
+          "ActualMethodParameter",
+          "ObjectMethodInvocation",
+          "DoubleDataType",
+          "ObjectMethodInvocation",
+          "SimpleAssignmentExpression",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "ConstructorDefinition",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "PublicConstructorSpecifier",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "VoidDataType",
+          "LessExpression",
+          "WhileStatement",
+          "PostIncrementExpression",
+          "WhileStatement",
+          "DivideExpression",
+          "DoubleDataType",
+          "MultiplyExpression",
+          "SimpleAssignmentExpression",
+          "WhileStatement",
+          "AddExpression",
+          "SimpleAssignmentExpression",
+          "WhileStatement",
+          "FormalMethodParameter",
+          "IntDataType",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "VoidDataType",
+          "ForStatement",
+          "IntDataType",
+          "LessEqualExpression",
+          "PostIncrementExpression",
+          "SimpleAssignmentExpression",
+          "DivideExpression",
+          "DoubleDataType",
+          "MultiplyExpression",
+          "SimpleAssignmentExpression",
+          "AddExpression",
+          "SimpleAssignmentExpression",
+          "AddExpression",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "ReturnStatement",
+          "IntDataType",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "ReturnStatement",
+          "DoubleDataType",
+          "InstanceField",
+          "PrivateFieldSpecifier",
+          "SimpleVariable",
+          "DoubleDataType",
+          "InstanceField",
+          "PrivateFieldSpecifier",
+          "SimpleVariable",
+          "InstanceField",
+          "IntDataType",
+          "PrivateFieldSpecifier",
+          "SimpleVariable"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jfor5&act=Loops_for&sub=jFor5&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=1",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=1",
+      "context_name": "Java: INFSCI 0017 | Introduction to Java Programming > Loops For",
+      "used_at": "2013-05-23T12:19:44.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=17",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=17",
+      "context_name": "Java: INFSCI 0017 | Introduction to Java Programming (Fall 2014-ae) > Loops For",
+      "used_at": "2014-09-11T11:50:18.000Z",
+      "used_by": "Administrator - University of Pittsburgh"
+    },
+    {
+      "context_id": "cid=368",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=368",
+      "context_name": "Java: INFSCI 0017 | LTI > Loops",
+      "used_at": "2019-02-17T22:05:39.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=439",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=439",
+      "context_name": "Java: CMIS 1200 | Application Programming I > Module 4b- For loops",
+      "used_at": "2024-08-21T17:05:02.000Z",
+      "used_by": "Pratibha Menon - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.202Z"
+}

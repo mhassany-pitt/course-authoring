@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836f60",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-03-27T13:46:52.000Z",
+  "updated_at": "2026-01-17T05:28:14.827Z",
+  "tags": [],
+  "identity": {
+    "id": "py_find_index_in_list",
+    "title": "Find Index List",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/42/embed?act=PCRS&sub=py_find_index_in_list"
+  },
+  "attribution": {
+    "created_at": "2025-03-27T13:46:52.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following function.  Note that neither item_list nor index_list should be mutated.",
+    "source_code": "[student_code]\r\ndef find_value_indexes(item_list, index_list, v):\r\n    \"\"\" (list of object, list of int, object) -> list of int\r\n\r\n    Precondition: the values in index_list are valid indexes in item_list.\r\n\r\n    v may appear multiple times in item_list.  index_list contains zero or\r\n    more indexes.  Return a list of the indexes from index_list at which v\r\n    appears in item_list.\r\n\r\n    >>> find_value_indexes([6, 8, 8, 5, 8], [0, 2, 4], 8)\r\n    [2, 4]\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/42/embed?act=PCRS&sub=py_find_index_in_list"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.993Z"
+}

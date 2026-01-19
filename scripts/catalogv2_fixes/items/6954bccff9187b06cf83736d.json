@@ -1,0 +1,76 @@
+{
+  "id": "6954bccff9187b06cf83736d",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2016-11-17T19:00:00.000Z",
+  "updated_at": "2026-01-17T12:56:19.143Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "jDowhile3_Adda_MaxsubNoit",
+    "title": "subproblem 343",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jDowhile3_Adda_MaxsubNoit&act=Subproblems&sub=jDowhile3_Adda_MaxsubNoit&svc="
+  },
+  "attribution": {
+    "created_at": "2016-11-17T19:00:00.000Z",
+    "provider": "QuizJET",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class Tester {\n  public static void main(String[] args) {\n        int result = 15;\n        if ( 13 > result)\n            result += 3 ;\n        if (result > 13)\n            result = 13 - 3;\n  }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jDowhile3_Adda_MaxsubNoit&act=Subproblems&sub=jDowhile3_Adda_MaxsubNoit&svc="
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=340",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=340",
+      "context_name": "Java: INFSCI 0017 | Java Study 2016 Yun > Subproblems",
+      "used_at": "2016-11-16T07:46:02.000Z",
+      "used_by": "Yun Huang, Yun Huang - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.118Z"
+}

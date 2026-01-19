@@ -1,0 +1,106 @@
+{
+  "id": "6954bccff9187b06cf837644",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:04.388Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "betterbattle.c",
+    "title": "IS12:: betterbattle.c (15.4)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=betterbattle.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Example 15_4: Better Naval Battle\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky */\n\n#include <stdio.h>\n#define FSIZE 5\n#define SHIP 1\n#define EMPTY 0\n#define DESTROYED 2\n/* legend: 0 empty, 1 ship, 2 destroyed ship */\nstatic char battlefield[FSIZE][FSIZE] = {\n\u00a0{1, 0, 1, 0, 0}, /* row A */\n\u00a0{0, 0, 0, 0, 1}, /* row B */\n\u00a0{0, 0, 1, 0, 0}, /* row C */\n\u00a0{0, 0, 0, 0, 0}, /* row D */\n\u00a0{1, 0, 0, 0, 1}, /* row E */\n};\n\nstatic char *picture[3] = {\"  \", \"[ ]\", \"[X]\"};\nvoid printfield(char *c);\n\nint react(char, int);\n\n\nmain()\n{\n\u00a0\u00a0\u00a0\u00a0int col;\n\u00a0\u00a0\u00a0\u00a0char ch_row;\n\n\u00a0\u00a0\u00a0\u00a0printfield(\"Starting position\");\n\u00a0\u00a0\u00a0\u00a0printf(\"Enter your move like 5 A\n\");\n\u00a0\u00a0\u00a0\u00a0printf(\"Enter 0 X to exit\n\");\n\u00a0\u00a0\u00a0\u00a0/* reads and process hits */\n\u00a0\u00a0\u00a0\u00a0do{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"You move: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d %c\", &col, &ch_row);\n\u00a0\u00a0\u00a0\u00a0} while(react(ch_row, col) > 0);\n\u00a0\u00a0\u00a0\u00a0printfield(\"Ending position\");\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\n\nint react(char r, int col)\n{\n\u00a0\u00a0\u00a0\u00a0int row;\n\u00a0\u00a0\u00a0\u00a0if (col == 0){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Good Bye!\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return 0;\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0row = r - 'A';\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(row < 0 || row > 4)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Row %c is not possible!\n\", r);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if (col <1 || col >5)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Column %d is not possible!\n\", col);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if (battlefield[row][col-1] == SHIP)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Hit!\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0battlefield[row][col-1] = DESTROYED;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if (battlefield[row][col-1] == DESTROYED)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"This ship has been already destroyed!\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Misss...\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return 1;\n}\n\nvoid printfield(char *header)\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int i, j;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* print header */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%s\n \", header);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for(j = 0; j < FSIZE; ++j)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\" %d \", j+1);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* print field */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for(i = 0; i < FSIZE; ++i)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%c \", i + 'A');\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for(j = 0; j < FSIZE; ++j)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"%s \", picture[ battlefield[i][j] ]);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\n\");\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "multi_dimensional_array",
+          "variable_initialization",
+          "pre_increment",
+          "return",
+          "do",
+          "for",
+          "if_else",
+          "static",
+          "array_declaration",
+          "reference",
+          "char",
+          "equal",
+          "simple_assignment",
+          "int",
+          "if",
+          "or",
+          "add",
+          "pointer_declaration",
+          "main_function",
+          "less",
+          "greater",
+          "define",
+          "void",
+          "variable_declaration",
+          "sub",
+          "function_declaration",
+          "include",
+          "printf",
+          "scanf"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=betterbattle.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.176Z"
+}

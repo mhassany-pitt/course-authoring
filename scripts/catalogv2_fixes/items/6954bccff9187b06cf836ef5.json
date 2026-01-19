@@ -1,0 +1,114 @@
+{
+  "id": "6954bccff9187b06cf836ef5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:03.116Z",
+  "tags": [],
+  "identity": {
+    "id": "py_if_perishable_num_es",
+    "title": "PCRS C3-PL  If Perishable Num",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/319/embed?act=PCRS&sub=py_if_perishable_num_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Una tienda de comestibles vende alimentos perecederos y no perecederos. Cada articulo en la tienda tiene un codigo de barras, un numero entero positivo de 9 digitos. El codigo de barras de los articulos perecederos termina con 3, 4 o 7.Escriba un programa que verifique un numero entero, el codigo de barras de un solo articulo, si el articulo es perecedero o no. El programa imprime 'SI' si es perecedero, 'NO' de lo contrario. Si el numero entero dado no es un numero entero positivo de 9 digitos, el programa debe imprimir 'Invalido'.Suponga que el valor del codigo de barras ya esta almacenado en una variable llamada codigo_barras.Ej. 1: Si el codigo de barras es 342564643, el programa imprime 'SI' ya que el codigo de barras termina con 3.Ej. 2: Si el codigo de barras es 442554645, el programa imprime 'NO' ya que el codigo de barras termina con 5.Ej. 3: Si el codigo de barras es 325, el programa imprime 'Invalido' ya que el codigo de barras no es un entero de 9 digitos.Autores: Yana Kortsarts, Yulia Kempner, Leonid Kugel, Kamil Akhuseyinoglu",
+    "source_code": "[student_code]\n# Este programa verifica si un articulo es perecedero basado en su codigo de barras\ncodigo_barras = 342564643  # Ejemplo de codigo de barras\n\n# Verificar si el codigo de barras es un numero entero de 9 digitos\nif len(str(codigo_barras)) == 9:\n    # Obtener el ultimo digito del codigo de barras\n    ultimo_digito = int(str(codigo_barras)[-1])\n    \n    # Verificar si el ultimo digito indica que el articulo es perecedero\n    if ultimo_digito in [3, 4, 7]:\n        print('SI')  # El articulo es perecedero\n    else:\n        print('NO')  # El articulo no es perecedero\nelse:\n    print('Invalido')  # El codigo de barras no es valido\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "NestedIfChecking"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "FindRemainder",
+          "ChangingValueVariable",
+          "IfElseChecking",
+          "IfChecking",
+          "BooleanLiteral",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "LogicalExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "IntegerLiteral",
+          "LogicalExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "BooleanLiteral",
+          "ChangingValueVariable",
+          "FindRemainder",
+          "IfChecking",
+          "IfElseChecking",
+          "NestedIfChecking"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/319/embed?act=PCRS&sub=py_if_perishable_num_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.978Z"
+}

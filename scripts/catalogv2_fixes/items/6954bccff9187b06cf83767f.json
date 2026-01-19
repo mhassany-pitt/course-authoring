@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf83767f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:12.258Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fig06_15.c",
+    "title": "fig06_15.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig06_15.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 6.15: fig06_15.c\n\u00a0\u00a0\u00a0This program sorts an array's values into ascending order */\n#include <stdio.h>\n#define SIZE 10\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int a[ SIZE ] = { 2, 6, 4, 8, 10, 12, 89, 68, 45, 37 };\n\u00a0\u00a0\u00a0int pass;\n\u00a0\u00a0\u00a0int i;\n\u00a0\u00a0\u00a0int hold;\n\n\u00a0\u00a0\u00a0printf( \"\\nData items in original order\\n\" );\n\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%4d\", a[ i ] );\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0for ( pass = 1; pass < SIZE; pass++ ) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( i = 0; i < SIZE - 1; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( a[ i ] > a[ i + 1 ] ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0hold = a[ i ];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0a[ i ] = a[ i + 1 ];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0a[ i + 1 ] = hold;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0printf( \"Data items in ascending order\r\n\" );\n\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%4d\", a[ i ] );\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0printf( \"\\n\" );\n\u00a0\u00a0\u00a0return 0;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig06_15.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.179Z"
+}

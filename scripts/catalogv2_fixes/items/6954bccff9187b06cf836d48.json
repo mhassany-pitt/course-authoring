@@ -1,0 +1,133 @@
+{
+  "id": "6954bccff9187b06cf836d48",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-10T18:17:17.000Z",
+  "updated_at": "2026-01-17T05:27:01.623Z",
+  "tags": [],
+  "identity": {
+    "id": "Contando las Ocurrencias de un String en Otro (Caso 2).__6848670adf5ea13f28e43855-68486708df5ea13f28e43853-1",
+    "title": "Contando las Ocurrencias de un String en Otro (Caso 2).",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6848670adf5ea13f28e43855?_t=1749593850636&index=1&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-10T18:17:17.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que tenga una funci\u00f3n que reciba un string y devuelva el n\u00famero de veces que el string \"hi?a\" aparece en cualquier parte del string dado donde '?' podr\u00eda ser cualquier car\u00e1cter. Por ejemplo, \"hila\" e \"hija\" contar\u00edan como una coincidencia.\\nTodas las comparaciones de strings deben ser insensibles a may\u00fasculas y min\u00fasculas.",
+    "source_code": "#Paso 1: Definir la funci\u00f3n\ndef contar_hi_a(s):\n    #Paso 1.1: Asignar valor inicial a la variable que necesitamos para los conteos\n    conteo = 0\n    #Paso 1.2: Iterar a trav\u00e9s de los caracteres en el string dado \n    for i in range(len(s)-3):\n        #Paso 1.2.1: Incrementar los conteos en 1 si encontramos una coincidencia\n        if s[i:i+2].lower() == \"hi\" and s[i+3].lower() == \"a\":\n            conteo += 1\n    #Paso 1.3: Devolver los conteos\n    return conteo\n#Paso 2: Llamar a la funci\u00f3n\nprint(contar_hi_a(\"Hilanderas chilenas viajan a exposici\u00f3n internacional en CHINA\"))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "IndexingString",
+          "SlicingString",
+          "ForLoopWithListIndexing",
+          "ForLoopWith",
+          "NestedFunctionCall",
+          "CreatingString",
+          "CallingSimpleFunction",
+          "Printing",
+          "ConvertStringToLowerCase",
+          "SingleForLoopIteration",
+          "FindingLength",
+          "AssigningValueVariable",
+          "IfCheckingInForLoop",
+          "Addition",
+          "CallingLibraryFunction",
+          "BooleanEvaluating",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "IndexingString",
+          "SlicingString",
+          "ForLoopWithListIndexing",
+          "ForLoopWith",
+          "NestedFunctionCall",
+          "CreatingString",
+          "CallingSimpleFunction",
+          "Printing",
+          "ConvertStringToLowerCase",
+          "SingleForLoopIteration",
+          "FindingLength",
+          "AssigningValueVariable",
+          "IfCheckingInForLoop",
+          "Addition"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6848670adf5ea13f28e43855?_t=1749593850636&index=1&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Ciclos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Ciclos For",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Ciclos",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.932Z"
+}

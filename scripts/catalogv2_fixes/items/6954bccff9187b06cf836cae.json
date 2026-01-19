@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836cae",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-15T23:58:17.000Z",
+  "updated_at": "2026-01-17T05:26:42.504Z",
+  "tags": [],
+  "identity": {
+    "id": "arithmetic.time_conversion__664e505691363872f0ba38f8",
+    "title": "Seconds to Minutes Conversion",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e505691363872f0ba38f8?_t=1757995097577&index=0"
+  },
+  "attribution": {
+    "created_at": "2025-09-15T23:58:17.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that obtains minutes and remaining seconds from the input amount of time in seconds. For example, 500 seconds contains 8 minutes and 20 seconds.",
+    "source_code": "import java.util.Scanner;\npublic class DisplayTime1 {\n\tpublic static void main(String[] args) {\n\t\t//Step 1: Read the seconds\n\t\tScanner scan = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter an integer for seconds: \");\n\t\tint seconds = scan.nextInt();\n\t\tscan.close();\n\t\t//Step 2: Obtain minutes and remaining seconds from the input seconds\n\t\tint minutes = seconds / 60; \n\t\tint remainingSeconds = seconds % 60;\n\t\t//Step 3: Display the result\n\t\tSystem.out.println(seconds + \" seconds is \" + minutes +    \" minutes and \" + remainingSeconds + \" seconds.\");  \n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e505691363872f0ba38f8?_t=1757995097577&index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.913Z"
+}

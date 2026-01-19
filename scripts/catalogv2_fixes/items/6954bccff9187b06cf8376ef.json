@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8376ef",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:29.715Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "do_switch_function",
+    "title": "Do Switch Function",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=do_switch_function&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\n#include <time.h>\nint sportsQuestion(void);\nint geographyQuestion(void);\nvoid pause(int);\nint giResponse = 0;\nmain()\n{\n\u00a0\u00a0\u00a0do {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\n\\tTHE TRIVIA GAME\\n\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"1\\tSports\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"2\\tGeography\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"3\\tQuit\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\n\\nEnter your selection: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &giResponse);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0switch(giResponse) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0case 1:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (sportsQuestion() == 4)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nCorrect!\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nIncorrect\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0pause(2);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0case 2:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (geographyQuestion() == 2)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nCorrect!\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nIncorrect\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0pause(2);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0}  while ( giResponse != 3 );\n}\nint sportsQuestion(void)\n{\n\u00a0\u00a0\u00a0int iAnswer = 0;\n\u00a0\u00a0\u00a0printf(\"\\tSports Question\\n\");\n\u00a0\u00a0\u00a0printf(\"\\nWhat University did NFL star Deon Sanders attend? \");\n\u00a0\u00a0\u00a0printf(\"\\n\\n1\\tUniversity of Miami\\n\");\n\u00a0\u00a0\u00a0printf(\"2\\tCalifornia State University\\n\");\n\u00a0\u00a0\u00a0printf(\"3\\tIndiana University\\n\");\n\u00a0\u00a0\u00a0printf(\"4\\tFlorida State University\\n\");\n\u00a0\u00a0\u00a0printf(\"\\nEnter your selection: \");\n\u00a0\u00a0\u00a0scanf(\"%d\", &iAnswer);\n\u00a0\u00a0\u00a0return iAnswer;\n}\nint geographyQuestion(void)\n{\n\u00a0\u00a0\u00a0int iAnswer = 0;\n\u00a0\u00a0\u00a0printf(\"\\tGeography Question\\n\");\n\u00a0\u00a0\u00a0printf(\"\\nWhat is the state capitol of Florida? \");\n\u00a0\u00a0\u00a0printf(\"\\n\\n1\\tPensecola\\n\");\n\u00a0\u00a0\u00a0printf(\"2\\tTallahassee\\n\");\n\u00a0\u00a0\u00a0printf(\"3\\tJacksonville\\n\");\n\u00a0\u00a0\u00a0printf(\"4\\tMiami\\n\");\n\u00a0\u00a0\u00a0printf(\"\\nEnter your selection: \");\n\u00a0\u00a0\u00a0scanf(\"%d\", &iAnswer);\n\u00a0\u00a0\u00a0return iAnswer;\n}\nvoid pause(int inNum)\n{\n\u00a0\u00a0\u00a0int iCurrentTime = 0;\n\u00a0\u00a0\u00a0int iElapsedTime = 0;\n\u00a0\u00a0\u00a0iCurrentTime = time(NULL);\n\u00a0\u00a0\u00a0do {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0iElapsedTime = time(NULL);\n\u00a0\u00a0\u00a0} while ( (iElapsedTime - iCurrentTime) < inNum );\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=do_switch_function&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.187Z"
+}

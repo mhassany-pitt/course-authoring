@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf836eef",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:02.432Z",
+  "tags": [],
+  "identity": {
+    "id": "py_recurse_converge_es",
+    "title": "Convergencia recursiva (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/313/embed?act=PCRS&sub=py_recurse_converge_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "auto_convergerObjetivo: Dado un numero, devuelve el numero de iteraciones que toma para llegar a un numero derivado que converge en si mismo, segun la siguiente rutina. Se recomienda recursion. Inicializa un contador para contar el numero de iteracionesToma cualquier numero de cuatro digitos, usando al menos dos digitos diferentes. (Se permiten ceros a la izquierda.)Ordena los digitos en orden descendente y luego en orden ascendente para obtener dos numeros de cuatro digitos, agregando ceros a la izquierda si es necesario.Resta el numero mas pequeno del numero mas grande. Llamemos a esto un numero_secuencia.Comprueba si el numero_secuencia (el resto) del Paso 3 es igual al numero original. Si no, incrementa el contador de iteraciones, y vuelve al paso 2 y realiza la operacion en el numero_secuencia.Si hay una coincidencia, entonces devuelve el conteo de iteracionesSi el numero_secuencia colapsa a cero, entonces devuelve -1 Valores convergentesMientras que los numeros de 3 digitos convergen al mismo numero unico k que tambien tiene 3 digitos, todos los numeros de 4 digitos tambien convergen al mismo valor unico k1 que tiene 4 digitos. Sin embargo, los numeros de 5 digitos convergen a cualquiera de los siguientes valores: 53955, 59994, 61974, 62964, 63954, 71973, 74943, 75933, 82962, 83952.Ejemplo1234  ->   31. 4321 - 1234 =  3087 /   2. 8730 - 378  =  8352 /   3. 8532 - 2358 =  6174 /      7641 - 1467 =  6174 // igual que el anterior414 -> 41. 441 - 144 =  297 /   2. 972 - 279 =  693 /   3. 963 - 369 =  594 /4. 954 - 459 =  495 /   954 - 459 =  495 // igual que el anterior50000 -> 31. 50000 - 5      =  49995 /   2. 99954 - 45999  =  53955 /  # primero 3. 95553 - 35559  =  59994 /   99954 - 45999  =  53955 /  # 2da vez",
+    "source_code": "[student_code]\r\ndef auto_converger(numero):\r\n    \r\n    \r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/313/embed?act=PCRS&sub=py_recurse_converge_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Recursion",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.977Z"
+}

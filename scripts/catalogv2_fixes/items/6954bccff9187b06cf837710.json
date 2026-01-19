@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837710",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:34.705Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "2d_arrrays",
+    "title": "Using 2D Arrays",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=2d_arrrays&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\nvoid printArray( const int [][ 3 ] );\nint main()\n{\n\u00a0\u00a0\u00a0int array1[ 2 ][ 3 ] = { { 1, 2, 3 }, { 4, 5, 6 } },\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0array2[ 2 ][ 3 ] = { 1, 2, 3, 4, 5 },\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0array3[ 2 ][ 3 ] = { { 1, 2 }, { 4 } };\n\n\u00a0\u00a0\u00a0printf( \"Values in array1 by row are:\\n\" );\n\u00a0\u00a0\u00a0printArray( array1 );\n\u00a0\u00a0\u00a0printf( \"Values in array2 by row are:\\n\" );\n\u00a0\u00a0\u00a0printArray( array2 );\n\u00a0\u00a0\u00a0printf( \"Values in array3 by row are:\\n\" );\n\u00a0\u00a0\u00a0printArray( array3 );\n\u00a0\u00a0\u00a0return 0;\n}\nvoid printArray( const int a[][ 3 ] )\n{\n\u00a0\u00a0\u00a0int i, j;\n\u00a0\u00a0\u00a0for ( i = 0; i <= 1; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( j = 0; j <= 2; j++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%d \", a[ i ][ j ] );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"\\n\" );\n\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=2d_arrrays&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.189Z"
+}

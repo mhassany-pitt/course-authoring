@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf83706f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-09-16T11:35:08.000Z",
+  "updated_at": "2026-01-17T05:28:38.084Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_list_of_remainders2",
+    "title": "Construct a function that returns a list of remainders from the input.",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_of_remainders2&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2021-09-16T11:35:08.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program which calculates the remainder of each element of the first list and the element with the same index in the second list. The remainders are stored in a new list. If the number in the second list is 0, the program should directly add number 2 to the new list instead of the remainder. Finally, the program should print the new list.",
+    "source_code": "list1 = [19, 3, 4, 2]\nlist2 = [4, 2, 1, 9]\n\nnew_list = []\nif len(list1) == len(list2):\n    for i in range(len(list1)):\n        if list2[i] == 0:\n            new_list.append(2)\n        else:\n            result = list1[i] % list2[i]\n            new_list.append(result)\n\nprint(new_list)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_of_remainders2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.029Z"
+}

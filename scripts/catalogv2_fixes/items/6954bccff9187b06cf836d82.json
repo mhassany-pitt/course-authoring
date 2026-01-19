@@ -1,0 +1,155 @@
+{
+  "id": "6954bccff9187b06cf836d82",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-27T11:23:40.000Z",
+  "updated_at": "2026-01-17T05:27:19.922Z",
+  "tags": [],
+  "identity": {
+    "id": "py_return_list_of_list_even_es",
+    "title": "Listas de enteros pares (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/246/embed?act=PCRS&sub=py_return_list_of_list_even_es"
+  },
+  "attribution": {
+    "created_at": "2025-05-27T11:23:40.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Este problema te pide escribir un ciclo anidado para procesar una lista de lista de int, y acumular una lista de lista de int. El codigo inicial proporciona un acumulador para el resultado y un ciclo sobre las listas, y necesitas escribir el codigo que verifica si sublista contiene solo ints pares.Si hay un entero impar en la sublista, sublista no debe agregarse a la listas_pares",
+    "source_code": "[student_code]\r\ndef solo_pares(lista):\r\n    \"\"\" (lista de lista de int) -> lista de lista de int\r\n\r\n    Devuelve una lista de las listas en lista que contienen solo enteros pares. \r\n   \r\n    >>> solo_pares([[1, 2, 4], [4, 0, 6], [22, 4, 3], [2]])\r\n    [[4, 0, 6], [2]]\r\n    \"\"\"\r\n    \r\n    listas_pares = []\r\n\r\n    for sublista in lista:\r\n        # escribe tu codigo aqui\r\n        \r\n    return listas_pares\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "Indexing2DArray"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "IfElifElseChecking",
+          "IndexingList",
+          "CheckingForItem",
+          "FindRemainder",
+          "list()",
+          "AddingListElementWithAppend",
+          "DefiningSimpleFunction",
+          "MixedNestedLoopIteration",
+          "NestedForLoopIteration",
+          "ChangingValueVariable",
+          "IfElifElseCheckingInForLoop",
+          "IfElifCheckingInForLoop",
+          "IfChecking",
+          "IfCheckingInForLoop",
+          "BooleanLiteral",
+          "ListLiteral",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "CallingSimpleFunction",
+          "CallingObjectMethod"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "IntegerLiteral",
+          "ListLiteral",
+          "MixedNestedLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AddingListElementWithAppend",
+          "BooleanLiteral",
+          "CallingObjectMethod",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "FindRemainder",
+          "IfChecking",
+          "IfCheckingInForLoop",
+          "Indexing2DArray",
+          "IndexingList",
+          "NestedForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/246/embed?act=PCRS&sub=py_return_list_of_list_even_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Listas en 2D",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Listas en 2D",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Listas en 2D",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.939Z"
+}

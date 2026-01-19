@@ -1,0 +1,128 @@
+{
+  "id": "6954bccff9187b06cf837204",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2019-02-15T15:27:44.000Z",
+  "updated_at": "2026-01-17T12:55:44.826Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "2-21_StringDemos",
+    "title": "2-21_StringDemos",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=2-21_StringDemos&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2019-02-15T15:27:44.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*\n\u00a0* Some basic demos of string operations.\n\u00a0*\n\u00a0*/\npublic class StringDemos {\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0String sentence = \"sloths are soooo nice\";\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// charAt allows you to retrieve a single char from a string.  charAt\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  requires the index of the character to retrieve.  The index refers to\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  the location of the character within the string; the first index is 0,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  and the indices count up by 1 from there.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(sentence.charAt(3));\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(sentence.charAt(0));\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(sentence.charAt(6));\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// length gives you the number of characters in the string (spaces count\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  as characters too!)  Because indices start counting from 0, the index\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  of the last character is always one less than the length of the string.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(sentence.length());\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// substring allows you to get part of the original string.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// There are two versions:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  x.substring(i) gives you the substring from index i (inclusive) of string x,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//   all the way to the end\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  x.substring(i, j) gives you the substring from index i (inclusive) to index\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//   j (exclusive) of x.  The length of this substring is (j - i).\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(sentence.substring(1));\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(sentence.substring(7, 10));\n\u00a0\u00a0\u00a0\u00a0}\n\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "parser": {
+        "concepts": [
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "VoidDataType",
+          "StringInitializationStatement",
+          "StringVariable",
+          "StringDataType",
+          "SimpleAssignmentExpression",
+          "StringLiteral",
+          "java.lang.System.out.println",
+          "ActualMethodParameter",
+          "java.lang.String.charAt",
+          "ObjectMethodInvocation",
+          "java.lang.String.length",
+          "java.lang.String.substring"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "ClassDefinition",
+          "FormalMethodParameter",
+          "java.lang.String.charAt",
+          "java.lang.String.length",
+          "java.lang.String.substring",
+          "java.lang.System.out.println",
+          "MethodDefinition",
+          "ObjectMethodInvocation",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StringDataType",
+          "StringInitializationStatement",
+          "StringLiteral",
+          "StringVariable",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=2-21_StringDemos&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=367",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
+      "context_name": "Java: INFSCI 0017 | CSEdPad test course (CS1 Memphis) > Strings",
+      "used_at": "2018-11-30T09:02:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.079Z"
+}

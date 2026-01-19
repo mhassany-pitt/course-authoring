@@ -1,0 +1,100 @@
+{
+  "id": "6954bccff9187b06cf836f63",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-02-23T16:02:21.000Z",
+  "updated_at": "2026-01-17T05:28:15.155Z",
+  "tags": [],
+  "identity": {
+    "id": "py_pandas_groupby_1",
+    "title": "PANDAS GroupBy 1",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pandas_groupby_1"
+  },
+  "attribution": {
+    "created_at": "2025-02-23T16:02:21.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Rully Hendrawan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "From a class of 200 students, you have a dataset of students, their section, and grades. get the mean grade by section. Assume you're given the dataset file in a .csv file and you will read this into a dataframe object using pandas",
+    "source_code": "import pandas as pd\r\n\r\n\r\ndf = pd.read_csv('students_data.csv')\r\n\r\n\r\ngrouped_by_section_grade = df.groupby(['Section', 'Grade']).size()\r\n\r\n\r\nprint(\"Grouped by Section and Grade:\", grouped_by_section_grade)\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "Arun parser v0.1": {
+        "concepts": [
+          "alias",
+          "print",
+          "assign",
+          "import",
+          "list",
+          "str",
+          "GtE",
+          "tuple",
+          "gt",
+          "BitAnd"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pandas_groupby_1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=448",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=448",
+      "context_name": "Python: Temple-MIS2502-2025-Spring-2Python | Temple MIS2502 2025-Spring 2-Python > PANDAS - groupby",
+      "used_at": "2024-12-12T15:41:33.000Z",
+      "used_by": "Rully Agus Hendrawan, Rully Agus Hendrawan - "
+    },
+    {
+      "context_id": "cid=460",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Worked Examples > JSON processing/Statistics",
+      "used_at": "2025-04-09T10:48:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.993Z"
+}

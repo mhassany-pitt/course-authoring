@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837788",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:51.817Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fgetc_fputc",
+    "title": "fgetc_fputc",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fgetc_fputc&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\nenum {SUCCESS, FAIL};\nvoid CharReadWrite(FILE *fin, FILE *fout);\nmain (void)\n{\n\u00a0\u00a0\u00a0\u00a0FILE *fptr1, *fptr2;\n\u00a0\u00a0\u00a0\u00a0char filename1[]=\"outfile.txt\";\n\u00a0\u00a0\u00a0\u00a0char filename2[]=\"inputfile.txt\";\n\u00a0\u00a0\u00a0\u00a0int reval = SUCCESS;\n\u00a0\u00a0\u00a0\u00a0if ((fptr1 = fopen(filename1,\"w\")) == NULL){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Cannot open %s.\\n\", filename1);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0reval = FAIL;\n\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ((fptr2 = fopen(filename2, \"r\")) == NULL){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Cannot open %s.\\n\", filename2);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0reval = FAIL;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0CharReadWrite(fptr2, fptr1);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fclose(fptr1);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fclose(fptr2);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return reval;\n}\nvoid CharReadWrite(FILE *fin, FILE *fout)\n{\n\u00a0\u00a0\u00a0\u00a0int c;\n\u00a0\u00a0\u00a0\u00a0while ((c=fgetc(fin)) !=EOF){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fputc(c,fout);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0putchar (c);\n\u00a0\u00a0\u00a0\u00a0}\n}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fgetc_fputc&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.197Z"
+}

@@ -1,0 +1,120 @@
+{
+  "id": "6954bccff9187b06cf836d39",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-16T16:12:02.000Z",
+  "updated_at": "2026-01-17T05:26:59.639Z",
+  "tags": [],
+  "identity": {
+    "id": "py_classes_inheritance_es__685068eaa0cac29134436ebc",
+    "title": "Herencia de Persona y Empleado",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/685068eaa0cac29134436ebc?_t=1750184419936&index=0&locale=es"
+  },
+  "attribution": {
+    "created_at": "2025-06-16T16:12:02.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Isaac Alpizar-Chacon",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "es",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construir dos clases: una que represente a una Persona y otra que represente a un Empleado que debe definirse como una subclase de Persona. Las clases deben definir las funciones para verificar si la persona es un empleado y devolver el nombre de la persona.",
+    "source_code": "# Paso1: Definir la clase\nclass Persona():\n    # Paso 1.1: Inicializar los atributos de la clase Persona.\n    def __init__(self, nombre):\n        self.nombre = nombre\n    # Paso 1.2: Definir el m\u00e9todo para devolver el nombre de la persona\n    def obtener_nombre(self):\n        return self.nombre\n    # Paso 1.3: Definir el m\u00e9todo para devolver si la persona es un empleado\n    def es_empleado(self):\n        return False\n# Paso2: Definir una clase que es la subclase de Persona\nclass Empleado(Persona):\n    # Paso 2.1: Definir el m\u00e9todo para devolver si la persona es un empleado\n    def es_empleado(self):\n        return True\n# Paso3: Probar la clase\nemp = Persona(\"Melody\")\nprint(emp.obtener_nombre(), emp.es_empleado())\nemp = Empleado(\"Linda\")\nprint(emp.obtener_nombre(), emp.es_empleado())"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "Arun parser v0.1": {
+        "concepts": [
+          "print",
+          "ClassDef",
+          "Return",
+          "Assign",
+          "arg",
+          "Str",
+          "FunctionDef",
+          "Bool"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "Return",
+          "Assign",
+          "ClassDef",
+          "FunctionDef",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Arun added 08.12.2025 Arun Parser v0.1": {
+        "concepts": [
+          "print"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Arun added 08.15.2025 Arun Parser v0.1": {
+        "concepts": [
+          "Bool"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/685068eaa0cac29134436ebc?_t=1750184419936&index=0&locale=es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Clases y Objetos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.930Z"
+}

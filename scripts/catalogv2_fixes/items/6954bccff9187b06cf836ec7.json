@@ -1,0 +1,136 @@
+{
+  "id": "6954bccff9187b06cf836ec7",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:57.815Z",
+  "tags": [],
+  "identity": {
+    "id": "py_has_last_token_es",
+    "title": "PCRS C3-PL  Has Last Token",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/272/embed?act=PCRS&sub=py_has_last_token_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "En este problema escribiras la funcion tiene_ultimo_token que toma como su primer parametro una lista de strings que son cada una una secuencia separada por comas. Completa la funcion segun su docstring. No usar la funcion endswith()",
+    "source_code": "[student_code]\r\ndef tiene_ultimo_token(L, token)\r\n    \"\"\" (lista de str, str) -> lista de str\r\n\r\n    Devuelve una lista de los elementos de L que terminan con el token especificado en el orden en que aparecen en la lista original.\r\n\r\n    >>> tiene_ultimo_token(['uno,gordo,negro,gato', 'uno,pequeno,rojo,pez', 'dos,delgado,azul,pez'], 'pez')\r\n    ['uno,pequeno,rojo,pez', 'dos,delgado,azul,pez']\r\n    \"\"\"\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "CheckingForItem",
+          "MixedNestedLoopIteration",
+          "ListReferencing",
+          "StringLiteral",
+          "IndexingList",
+          "Subtraction",
+          "FindingLength",
+          "list()",
+          "TransformingToStringType",
+          "AddingListElementWithAppend",
+          "DefiningSimpleFunction",
+          "SingleWhileLoopIteration",
+          "WhileLoopWithListIndexing",
+          "ChangingValueVariable",
+          "IfElifElseChecking",
+          "IfElifElseCheckingInForLoop",
+          "IfCheckingInForLoop",
+          "ListLiteral",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "CallingSimpleFunction",
+          "CallingObjectMethod",
+          "CreatingObject",
+          "IndexingString",
+          "SlicingString"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "IfElifElseCheckingInForLoop",
+          "IntegerLiteral",
+          "ListLiteral",
+          "MixedNestedLoopIteration",
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AddingListElementWithAppend",
+          "CallingObjectMethod",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "CreatingObject",
+          "DefiningSimpleFunction",
+          "FindingLength",
+          "IfCheckingInForLoop",
+          "IfElifElseChecking",
+          "IndexingList",
+          "IndexingString",
+          "ListReferencing",
+          "SingleWhileLoopIteration",
+          "SlicingString",
+          "TransformingToStringType",
+          "WhileLoopWithListIndexing"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/272/embed?act=PCRS&sub=py_has_last_token_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.971Z"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "6954bccff9187b06cf836f1a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:07.015Z",
+  "tags": [],
+  "identity": {
+    "id": "py_name_sort_es",
+    "title": "PCRS C3-PL  Name Sort",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/224/embed?act=PCRS&sub=py_name_sort_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa la siguiente funcion segun la descripcion de su docstring.",
+    "source_code": "[student_code]\r\ndef primer_nombre(nombre1, nombre2):\r\n    \"\"\" (str, str) -> str\r\n\r\n    Devuelve el nombre, nombre1 o nombre2, que aparece primero alfabeticamente.\r\n\r\n    >>> primer_nombre('Jen', 'Paul')\r\n    'Jen'\r\n    >>> primer_nombre('Colin', 'Colin')\r\n    'Colin'\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "TransformingToStringType",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "IfElseChecking",
+          "IfChecking",
+          "StringLiteral",
+          "ComparisonExpression",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/224/embed?act=PCRS&sub=py_name_sort_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.984Z"
+}

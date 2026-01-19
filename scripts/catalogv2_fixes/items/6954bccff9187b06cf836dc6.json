@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836dc6",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:19:48.000Z",
+  "updated_at": "2026-01-17T05:27:27.411Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_divisible_by3_es",
+    "title": "Construir un programa con m\u00faltiples sentencias if-elif",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_divisible_by3_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:19:48.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que verifique cuales de los enteros en el intervalo del 1 al 50 son divisibles solo por 2, solo por 5 o por ambos. El programa debe almacenar cada grupo en su propia lista e imprimirlas en este orden.",
+    "source_code": "\nnum = 50\nlista1 = []\nlista2 = []\nlista3 = []\n    \nfor i in range(1, num + 1):\n    if i % 2 == 0 and i % 5 == 0:\n        lista1.append(i)\n    elif i % 2 == 0:\n        lista2.append(i)\n    elif i % 5 == 0:\n        lista3.append(i)\nprint(\"divisible solo por 2:\")\nprint(lista2)\nprint(\"divisible solo por 5:\")\nprint(lista3)\nprint(\"divisible por 2 y 5:\")\nprint(lista1)\n\n\n\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_divisible_by3_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.946Z"
+}

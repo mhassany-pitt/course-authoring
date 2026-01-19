@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e62",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:45.527Z",
+  "tags": [],
+  "identity": {
+    "id": "py_calendar_event3",
+    "title": "PCRS C3-PL  Calendar Event3",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/90/embed?act=PCRS&sub=py_calendar_event3"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Complete each method of class Event.",
+    "source_code": "[student_code]\r\nclass Event:    \r\n    \"\"\"A new calendar event.\"\"\"\r\n\r\n    def __init__(self, start_time, end_time, event_name):\r\n        \"\"\" (Event, int, int, str) -> NoneType\r\n\r\n        Precondition: 0 <= start_time < end_time <= 23\r\n        \r\n        Initialize a new event that starts at start_time, ends at end_time,\r\n        and is named name.\r\n\r\n        >>> e = Event(12, 13, 'Lunch')\r\n        >>> e.start_time\r\n        12\r\n        >>> e.end_time\r\n        13\r\n        >>> e.name\r\n        'Lunch'\r\n        \"\"\"\r\n    \r\n        # TODO: complete this method body.\r\n\r\n    def rename(self, new_name):\r\n        \"\"\" (Event, str) -> NoneType\r\n\r\n        Change the name of this event to new_name.\r\n        \r\n        >>> e = Event(12, 13, 'Lunch')\r\n        >>> e.rename('Office hours')\r\n        >>> e.name\r\n        'Office hours'\r\n        \"\"\"\r\n        \r\n        # TODO: complete this method body.\r\n\r\n\r\n    def duration(self):\r\n        \"\"\" (Event) -> int\r\n\r\n        Return the duration of this event.\r\n\r\n        >>> e = Event(10, 11, 'Lecture')\r\n        >>> e.duration()\r\n        1\r\n        \"\"\"\r\n        \r\n        # TODO: complete this method body.\r\n\r\n    \r\n    def __str__(self):\r\n        \"\"\" (Event) -> str\r\n\r\n        Return a string representation of this event.\r\n\r\n        >>> e = Event(6, 7, 'Run')\r\n        >>> str(e)\r\n        'Run: from 6 to 7'\r\n        \"\"\"\r\n        \r\n        # TODO: complete this method body.\r\n              \r\n\r\n    def __eq__(self, other):\r\n        \"\"\" (Event, Event) -> bool\r\n\r\n        Return True iff this event has the same start time, end time, \r\n        and name as other.\r\n\r\n        >>> e1 = Event(6, 7, 'Run')\r\n        >>> e2 = Event(6, 7, 'Run')\r\n        >>> e1 == e2\r\n        True\r\n        \"\"\"\r\n        \r\n        # TODO: complete this method body.\r\n\r\n\r\n    def overlaps(self, other):\r\n        \"\"\" (Event, Event) -> bool\r\n\r\n        Return True iff this event overlaps with event other.\r\n\r\n        >>> e1 = Event(6, 7, 'Run')\r\n        >>> e2 = Event(0, 7, 'Sleep')\r\n        >>> e1.overlaps(e2)\r\n        True\r\n        \"\"\"\r\n\r\n        # TODO: complete this method body.\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/90/embed?act=PCRS&sub=py_calendar_event3"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.961Z"
+}

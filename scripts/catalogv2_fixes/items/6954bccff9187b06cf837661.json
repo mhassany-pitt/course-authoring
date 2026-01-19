@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837661",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:08.289Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "fig03_10.c",
+    "title": "fig03_10.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig03_10.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* Fig. 3.10: fig03_10.c\n\u00a0\u00a0\u00a0Analysis of examination results */\n#include <stdio.h>\n\n/* function main begins program execution */\nint main( void )\n{\n\u00a0\u00a0\u00a0/* initialize variables in definitions */\n\u00a0\u00a0\u00a0int passes = 0;\n\u00a0\u00a0\u00a0int failures = 0;\n\u00a0\u00a0\u00a0int student = 1;\n\u00a0\u00a0\u00a0int result;\n\n\u00a0\u00a0\u00a0/* process 10 students using counter-controlled loop */\n\u00a0\u00a0\u00a0while ( student <= 10 ) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* prompt user for input and obtain value from user */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"Enter result ( 1=pass,2=fail ): \" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf( \"%d\", &result );\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* if result 1, increment passes */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( result == 1 ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0passes = passes + 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0failures = failures + 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0student = student + 1;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0/* termination phase; display number of passes and failures */\n\u00a0\u00a0\u00a0printf( \"Passed %d\\n\", passes );\n\u00a0\u00a0\u00a0printf( \"Failed %d\\n\", failures );\n\n\u00a0\u00a0\u00a0/* if more than eight students passed, print \"raise tuition\" */\n\u00a0\u00a0\u00a0if ( passes > 8 ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"Raise tuition\\n\" );\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0return 0;\n\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=fig03_10.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.178Z"
+}

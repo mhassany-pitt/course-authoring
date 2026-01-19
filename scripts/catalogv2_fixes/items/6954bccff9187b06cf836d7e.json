@@ -1,0 +1,132 @@
+{
+  "id": "6954bccff9187b06cf836d7e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-27T14:48:41.000Z",
+  "updated_at": "2026-01-17T05:27:19.491Z",
+  "tags": [],
+  "identity": {
+    "id": "py_smallest_factor_while_es",
+    "title": "Factor menor (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/326/embed?act=PCRS&sub=py_smallest_factor_while_es"
+  },
+  "attribution": {
+    "created_at": "2025-05-27T14:48:41.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Escribe una funci\u00f3n que reciba un n\u00famero entero positivo mayor que 1 y retorne su factor m\u00e1s peque\u00f1o mayor que 1.Instrucciones:- Un factor de un n\u00famero n es cualquier n\u00famero que lo divide exactamente (es decir, sin dejar residuo).- Debes retornar el factor m\u00e1s peque\u00f1o que sea mayor que 1.- Puedes asumir que la entrada siempre ser\u00e1 un n\u00famero mayor que 1.Usa un ciclo while en tu soluci\u00f3n.Ejemplos de entrada/salida:factor_menor(15) -> 3factor_menor(24) -> 2factor_menor(49) -> 7",
+    "source_code": "[blocked]\r\ndef factor_menor(n):\r\n[/blocked]\r\n[student_code]\r\n\t# Escribe tu codigo aqui\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "Addition",
+          "IfElifElseCheckingInWhileLoop",
+          "FindRemainder",
+          "DefiningSimpleFunction",
+          "SingleWhileLoopIteration",
+          "AugmentedAssignmentStatement",
+          "ChangingValueVariable",
+          "IfCheckingInWhileLoop",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "AugmentedAssignmentStatement",
+          "ComparisonExpression",
+          "IntegerLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "FindRemainder",
+          "IfCheckingInWhileLoop",
+          "SingleWhileLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/326/embed?act=PCRS&sub=py_smallest_factor_while_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Ciclos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Ciclos While",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Ciclos",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.939Z"
+}

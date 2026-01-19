@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836ce5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:20:19.000Z",
+  "updated_at": "2026-01-17T05:26:49.311Z",
+  "tags": [],
+  "identity": {
+    "id": "Printing Name in APA Style__68bdb308f6cc3d7a9cc0972e-68bdb308f6cc3d7a9cc0972c-2",
+    "title": "Printing Name in APA Style",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0972e?_t=1757557219672&index=2"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:20:19.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that prints the name \"Alice Ann Darcy\" following the APA style, i.e., last name first, followed by initials.",
+    "source_code": "public class Initials3\n{\n\tpublic static void main(String[] args)\n\t{\n\t\t//Step 1: Define the name\n\t\tString fullName = \"Alice Ann Darcy\";\n\t\t//Step 2: Extract the initial letter from the first name\n\t\tString firstInitial = fullName.substring(0, 1);\n\t\t//Step 3: Extract the middle initial\n\t\tString middleInitial = fullName.substring(6, 7);\n\t\t//Step 4: Extract the last name\n\t\tString last = fullName.substring(10, fullName.length());\n\t\t//Step 5: Create the APA style name, last name first, followed by initials.\n\t\tString name = last + \", \" + firstInitial + \". \" + middleInitial + \".\";\n\t\tSystem.out.println(name);\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0972e?_t=1757557219672&index=2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Strings",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Strings",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > Strings",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.918Z"
+}

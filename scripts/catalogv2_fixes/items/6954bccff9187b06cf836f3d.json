@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836f3d",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-03-28T00:42:50.000Z",
+  "updated_at": "2026-01-17T05:28:10.818Z",
+  "tags": [],
+  "identity": {
+    "id": "py_count_non_digits",
+    "title": "Count Non Digits",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/48/embed?act=PCRS&sub=py_count_non_digits"
+  },
+  "attribution": {
+    "created_at": "2025-03-28T00:42:50.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following function according to its docstring.",
+    "source_code": "[student_code]\r\ndef count_non_digits(s):\r\n    \"\"\" (str) -> int\r\n\r\n    Return the number of non-digits in s.\r\n\r\n    >>> count_non_digits('abc12d')\r\n    4\r\n    >>> count_non_digits('135')\r\n    0\r\n    >>> count_non_digits('A.4')\r\n    2\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/48/embed?act=PCRS&sub=py_count_non_digits"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.988Z"
+}

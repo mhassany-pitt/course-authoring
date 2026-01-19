@@ -1,0 +1,4210 @@
+{
+  "p1test": {
+    "name": "p1test",
+    "description": "p1test",
+    "language": "py",
+    "author": "r.hosseini",
+    "lines": [
+      {
+        "line": "this is p1 test{",
+        "comment": "jkjkj"
+      },
+      {
+        "line": "",
+        "comment": "jkjk"
+      },
+      {
+        "line": "}",
+        "comment": "kj"
+      }
+    ]
+  },
+  "py_1": {
+    "name": "HelloWorld",
+    "description": "Print the string Hello World",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "print \"Hello World\"",
+        "comment": "Prints 'Hello World' in the console"
+      }
+    ]
+  },
+  "py_1.2": {
+    "name": "DifferentWaystoPrint",
+    "description": "Printing a string in different ways",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "print 'Hello World!'",
+        "comment": "Printing with Single Quotes"
+      },
+      {
+        "line": "print \"Hello World!\"",
+        "comment": "Printing with Double Quotes"
+      },
+      {
+        "line": "print '''Hello World!'''",
+        "comment": "Printing with Three Single Quotes"
+      },
+      {
+        "line": "print \"\"\"Hello World!\"\"\"",
+        "comment": "Printing with Three Double Quotes"
+      }
+    ]
+  },
+  "py_1.3": {
+    "name": "VariableAssignment",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 10           ",
+        "comment": "An integer"
+      },
+      {
+        "line": "b = 10.20",
+        "comment": "A floating point"
+      },
+      {
+        "line": "c = \"Harry\"",
+        "comment": "A string"
+      },
+      {
+        "line": "d = True",
+        "comment": "A Boolean value"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print c",
+        "comment": ""
+      },
+      {
+        "line": "print d",
+        "comment": ""
+      }
+    ]
+  },
+  "py_1.4": {
+    "name": "MultipleVariableAssignments",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "x, y, z = 10, 'Harry', True",
+        "comment": ""
+      },
+      {
+        "line": "a = b = c = d = 10",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print z",
+        "comment": ""
+      },
+      {
+        "line": "print c",
+        "comment": ""
+      }
+    ]
+  },
+  "py_test": {
+    "name": "Test&Python",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "print 'This is test example'",
+        "comment": ""
+      }
+    ]
+  },
+  "py_test_test": {
+    "name": "python%20variables%20test",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "print 'test'",
+        "comment": ""
+      }
+    ]
+  },
+  "title_title": {
+    "name": "title_test",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "print 'title test'",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt1.1": {
+    "name": "Hello World",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "print (\"Hello World!\")",
+        "comment": "This is a simple statement which prints out the string 'Hello World!'. Python 3 syntax suggests that everything that needs to be printed out should be enclosed in the round parenthesis '()'."
+      }
+    ]
+  },
+  "pyt1.2": {
+    "name": "Different Ways to Print",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "print ('Hello World!')",
+        "comment": "One way to print a string is to enclose the string inside single quotation marks"
+      },
+      {
+        "line": "print (\"Hello World!\") ",
+        "comment": "Another way to print out a string is to enclose the string inside double quotation marks"
+      },
+      {
+        "line": "print ('''Hello World!''')",
+        "comment": "One more way to printing out strings is to put it between Three-Single Quotes. This is used to print out large strings that typically exceeds more than one line"
+      },
+      {
+        "line": "print (\"\"\"Hello World!\"\"\") ",
+        "comment": "Strings can also be printed with Three-Double Quotes. Similar to the previous example, this is also used to print out large strings that typically exceeds more than one line"
+      }
+    ]
+  },
+  "pyt1.3": {
+    "name": "Variable Assignment",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 10",
+        "comment": "An integer"
+      },
+      {
+        "line": "b = 10.20",
+        "comment": "A floating point number"
+      },
+      {
+        "line": "c = \"Harry\"",
+        "comment": "A string enclosed in quotation marks"
+      },
+      {
+        "line": "d = True",
+        "comment": "A Boolean value (True or False)"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (a,b,c,d)",
+        "comment": "Prints our the values of variables a, b, c and d separating the values by a blank. With the current value of variables it will print 10 10.2 Harry True"
+      }
+    ]
+  },
+  "pyt1.4": {
+    "name": "Multiple Variable Assignment",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "x, y, z = 10, 'Harry', True",
+        "comment": "Integer '10' is assigned to variable x, the string 'Harry' is assigned to variable y and the boolean value 'True' is assigned to variable z"
+      },
+      {
+        "line": "a = b = c = d = 10",
+        "comment": "Integer value '10' is assigned to variables a,b,c and d simultaneously in just one statement"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (z)",
+        "comment": ""
+      },
+      {
+        "line": "print (c)",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt1.5": {
+    "name": "Variable type: Numbers",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "num1 = 1",
+        "comment": "A positive integer '1' is assigned to the variable num1. After this statement, num1 variable is updated with the value '1'."
+      },
+      {
+        "line": "num2 = -100",
+        "comment": "A negative integer '-100' is assigned to the variable num2. After this statement, num2 variable is updated with the value '-100'."
+      },
+      {
+        "line": "num3 = 20.30",
+        "comment": "A positive float '20.30' is assigned to the variable num3. After this statement, num3 variable is updated with the value '20.30'."
+      },
+      {
+        "line": "num4 = -0.002",
+        "comment": "A negative float '-0.002' is assigned to the variable num4. After this statement, num4 variable is updated with the value '-0.002'."
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (num1)",
+        "comment": "Printing out the variable 'num1'. The resultant output as seen by you will be '1'."
+      }
+    ]
+  },
+  "pyt1.6": {
+    "name": "Variable type: Strings",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "string1 = \"This is an example Srting\"",
+        "comment": "Assigning string type to the variable 'string1'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (string1)",
+        "comment": "Prints out the complete string"
+      }
+    ]
+  },
+  "pyt1.7": {
+    "name": "Variable type: Lists",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "list1 = [ 123, 'test' , 0.200, -100, True ]    ",
+        "comment": "Defining a list containing 5 elements and assigning it to a variable named list1"
+      },
+      {
+        "line": "list2 = [ \"apples\", \"oranges\" , \"banana\"]",
+        "comment": "Defining a list containing 3 elements and assigning it to a variable named list2"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (list2)",
+        "comment": "Printing out the variable 'list2'"
+      }
+    ]
+  },
+  "pyt1.8": {
+    "name": "Variable type: Tuples",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "tuple1 = ('sample_text', 100 , 5.5, False)",
+        "comment": "Defining a tuple with 4 elements and assigning it to the variable 'tuple1'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (tuple1)",
+        "comment": "Printing the tuple"
+      }
+    ]
+  },
+  "pyt1.9": {
+    "name": "Variable type: Dictionary",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "dictionary1 = {'name': 'harry','age':14, 'gender': 'male'}",
+        "comment": "Creating a dictionary (key-value pairs) with 3 key-values and assigning it to the variable dictionary1"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (dictionary1)",
+        "comment": "printing out the dictionary"
+      }
+    ]
+  },
+  "pyt2.1": {
+    "name": "Arithmatic Operations",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 5",
+        "comment": ""
+      },
+      {
+        "line": "b = 3",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (a + b)",
+        "comment": "Adding a and b"
+      },
+      {
+        "line": "print (a - b)",
+        "comment": "Subtracting a and b"
+      },
+      {
+        "line": "print (a * b)",
+        "comment": "Multiplying a and b"
+      },
+      {
+        "line": "print (a / b)",
+        "comment": "Dividing a and b"
+      },
+      {
+        "line": "print (a ** b)",
+        "comment": "Performing a exponent b"
+      },
+      {
+        "line": "print (a % b)",
+        "comment": "a modulus b operation"
+      },
+      {
+        "line": "print (a//b)",
+        "comment": "Floor dividing a and b"
+      }
+    ]
+  },
+  "pyt2.2": {
+    "name": "Comparison Operators",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 5",
+        "comment": ""
+      },
+      {
+        "line": "b = 3",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (a == b)",
+        "comment": "Is a equal to b? Result is a boolean value True or False"
+      },
+      {
+        "line": "print (a != b)",
+        "comment": "Is a not equal to b? Result is a boolean value True or False"
+      },
+      {
+        "line": "print (a > b)",
+        "comment": "Is a greater than b? Result is a boolean value True or False"
+      },
+      {
+        "line": "print (a < b)",
+        "comment": "Is a less than b? Result is a boolean value True or False"
+      },
+      {
+        "line": "print (a >= b)",
+        "comment": "Is a greater than or equal to b? Result is a boolean value True or False"
+      },
+      {
+        "line": "print (a <= b)",
+        "comment": "Is a less than or equal to b? Result is a boolean value True or False"
+      }
+    ]
+  },
+  "pyt2.3": {
+    "name": "Assignment Operators",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 5",
+        "comment": ""
+      },
+      {
+        "line": "b = 3",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "a += b",
+        "comment": "This operation is equivalent to 'a = a + b'"
+      },
+      {
+        "line": "a -= b",
+        "comment": "This operation is equivalent to 'a = a - b'"
+      },
+      {
+        "line": "a *= b",
+        "comment": "This operation is equivalent to 'a = a * b'"
+      },
+      {
+        "line": "a /= b",
+        "comment": "This operation is equivalent to 'a = a / b'"
+      },
+      {
+        "line": "a %= b",
+        "comment": "This operation is equivalent to 'a = a % b'"
+      },
+      {
+        "line": "a **= b",
+        "comment": "This operation is equivalent to 'a = a ** b' (a exponent b)"
+      },
+      {
+        "line": "a //= b",
+        "comment": "This operation is equivalent to 'a = a // b'"
+      }
+    ]
+  },
+  "pyt2.4": {
+    "name": "Bitwise Operators",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 10101010",
+        "comment": ""
+      },
+      {
+        "line": "b = 00001111",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (a&b)",
+        "comment": "Performs Binary AND Operation"
+      },
+      {
+        "line": "print (a|b)",
+        "comment": "Performs Binary OR Operation"
+      },
+      {
+        "line": "print (a^b)",
+        "comment": "Performs Binary XOR Operation"
+      },
+      {
+        "line": "print (~a)",
+        "comment": "Performs Binary Ones Complement"
+      },
+      {
+        "line": "print (a>>1)",
+        "comment": "Performs Binary Right Shift"
+      },
+      {
+        "line": "print (a<<1)",
+        "comment": "Performs Binary Left Shift"
+      }
+    ]
+  },
+  "pyt2.5": {
+    "name": "Identity Operators",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 10",
+        "comment": ""
+      },
+      {
+        "line": "b = 5",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (a is b)",
+        "comment": "This will check if a is equal to b"
+      },
+      {
+        "line": "print (a is not b)",
+        "comment": "This will check if a is not equal to b"
+      },
+      {
+        "line": "",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt3.1": {
+    "name": "If statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 5",
+        "comment": "Assigning integer 5 to the variable 'a'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if a == 5:",
+        "comment": "Check if the value of a is 5"
+      },
+      {
+        "line": "    print True",
+        "comment": "if the condition is True, print 'True'"
+      }
+    ]
+  },
+  "pyt3.2": {
+    "name": "If..Else statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 5",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if a == 5:",
+        "comment": "Check if 'a' is equal to 5"
+      },
+      {
+        "line": "    print True",
+        "comment": "If yes, print 'True'"
+      },
+      {
+        "line": "else:",
+        "comment": ""
+      },
+      {
+        "line": "    print False",
+        "comment": "Else, print 'False'"
+      }
+    ]
+  },
+  "pyt3.3": {
+    "name": "Nested If Statements",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 5",
+        "comment": ""
+      },
+      {
+        "line": "b = 2",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if a == 5:",
+        "comment": "First condition: to check if a is equal to 5"
+      },
+      {
+        "line": "    if b == 2:",
+        "comment": "Second Condition: to check if b is equal to 2"
+      },
+      {
+        "line": "        print True",
+        "comment": "If both the conditions are true, then print 'True'"
+      },
+      {
+        "line": "    else:",
+        "comment": ""
+      },
+      {
+        "line": "        print False",
+        "comment": "Print False if the inner condition is False"
+      },
+      {
+        "line": "else:",
+        "comment": ""
+      },
+      {
+        "line": "    print False",
+        "comment": "Print False if the outer condition is False"
+      }
+    ]
+  },
+  "pyt3.4": {
+    "name": "Single Line If...Else Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 5",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print 'True' if a == 5 else 'False'",
+        "comment": "If a is equal to 5 then print 'True', else print 'False'. This entire logic can be written in one line if...ese statement."
+      }
+    ]
+  },
+  "pyt4.1": {
+    "name": "While Loop Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 0",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "while (a < 5):",
+        "comment": "Initial value of the variable 'a' is 0. This statement loops till a is less than 5 (till a is equal to 4)"
+      },
+      {
+        "line": "   print 'Number is:', a",
+        "comment": ""
+      },
+      {
+        "line": "   a = a + 1",
+        "comment": "Increment the value of a. This is important step in while loops to avoid infinite looping."
+      }
+    ]
+  },
+  "pyt4.2": {
+    "name": "For Loop Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 0",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "for a in range(0,5):",
+        "comment": "This statement loops for 5 times from the value of a = 0 to a = 4"
+      },
+      {
+        "line": "    print (a)",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt4.3": {
+    "name": "Nested Loops",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "i = 0",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "while i < 2:",
+        "comment": "Loops from i=0 to i=1 (Outer Loop)"
+      },
+      {
+        "line": "   j = 0",
+        "comment": ""
+      },
+      {
+        "line": "   while j < 2:",
+        "comment": "Loops from j=0 to j=1 (Inner Loop)"
+      },
+      {
+        "line": "      print (j)",
+        "comment": ""
+      },
+      {
+        "line": "      j = j + 1",
+        "comment": ""
+      },
+      {
+        "line": "   i = i + 1",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt4.4": {
+    "name": "Break Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "for letter in 'Python':",
+        "comment": "loops for each letter in the word 'Python'"
+      },
+      {
+        "line": "    if letter == 'h':",
+        "comment": "Checks if the current letter is 'h'"
+      },
+      {
+        "line": "        break",
+        "comment": "if yes, then the program breaks out of the loop"
+      },
+      {
+        "line": "    print 'Current Letter :', letter",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt4.5": {
+    "name": "Continue Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "for letter in 'Python':",
+        "comment": "Loops through each letter in the word Python"
+      },
+      {
+        "line": "    if letter == 'h':",
+        "comment": "Checks if the current letter is 'h'"
+      },
+      {
+        "line": "        continue",
+        "comment": "If yes, it continues. Here the 'continue' statement jumps out of the loop imediately and iterates through the next element"
+      },
+      {
+        "line": "    print 'Current Letter :', letter",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt4.6": {
+    "name": "Pass Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "for letter in 'Python': ",
+        "comment": "Loops through every letter in the word Python"
+      },
+      {
+        "line": "    if letter == 'h':",
+        "comment": "checks if the current letter is 'h'"
+      },
+      {
+        "line": "        pass",
+        "comment": "If yes, it will pass. Here pass does nothing.It can be used when a statement is required syntactically but the program requires no action."
+      },
+      {
+        "line": "        print 'This pass statement does nothing'",
+        "comment": ""
+      },
+      {
+        "line": "    print 'Current Letter :', letter",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt5.1": {
+    "name": "Number Basics",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "var1 = 20",
+        "comment": "positive integer"
+      },
+      {
+        "line": "var2 = -1000",
+        "comment": "negative integer"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print var1, var2",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt5.2": {
+    "name": "Variable to Integer",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = '20'",
+        "comment": "a string '20' is assigned to the variable 20"
+      },
+      {
+        "line": "b = int(a)",
+        "comment": "converting string into an integer"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (b + 10)",
+        "comment": "adding the integers and printing it out on the console"
+      }
+    ]
+  },
+  "pyt6.1": {
+    "name": "Strings Basics",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "var1 = 'Hello World!'",
+        "comment": "Assigning the string 'Hello World!' to the variable var1"
+      },
+      {
+        "line": "var2 = \"Python Programming\"",
+        "comment": "Assigning the string 'Python Programming' to the variable var2"
+      }
+    ]
+  },
+  "pyt6.2": {
+    "name": "Sub-Strings",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 'Hello World'",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (a[:3])",
+        "comment": "Prints the string 'Hello World' from beginning till the element number 3"
+      },
+      {
+        "line": "print (a[6:])",
+        "comment": "Prints the string 'Hello World' from element number 6 till the end"
+      },
+      {
+        "line": "print (a[2:4])",
+        "comment": "Prints the string 'Hello World' from element number 2 till the element number 4"
+      }
+    ]
+  },
+  "pyt6.3": {
+    "name": "Adding Strings",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 'Hello'",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (a + ' World!')",
+        "comment": "adding the strings 'Hello' and 'World!'"
+      }
+    ]
+  },
+  "pyt6.4": {
+    "name": "Escape Characters",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "print ('This Line \\n\\n New Line')",
+        "comment": "the characters '\\n' denotes a new line"
+      }
+    ]
+  },
+  "pyt7.1": {
+    "name": "List Basics",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "list1 = ['abc', 'def', 100, 50000, True]",
+        "comment": "Defining list1 with 5 elements"
+      },
+      {
+        "line": "list2 = [1, 2, 3, 4]",
+        "comment": "Defining list2 with 4 elements"
+      },
+      {
+        "line": "list3 = [\"a\", \"b\", \"c\", \"d\"]",
+        "comment": "Defining list3 with 4 elements"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (list1)",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt7.2": {
+    "name": "Accessing the List Index",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = ['a','b','c','d']",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (a[2])",
+        "comment": "Printing the element at index 2 of list a (Here, it is the 3rd element of the list since list index always starts from 0)"
+      },
+      {
+        "line": "print (a[3])",
+        "comment": "Printing the element at index 3 of list a (Here, it is the 4th element of the list since list index always starts from 0)"
+      }
+    ]
+  },
+  "pyt7.3": {
+    "name": "Replacing list elements",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = ['a','b','c','d']",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "a[1] = 'z'",
+        "comment": "Index 1 (element 2) currently contains the string 'b'. But after this command, it is replaced by the string 'z'"
+      },
+      {
+        "line": "print (a)",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt7.4": {
+    "name": "Appending Values to List",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = ['a','b','c','d']",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "a.append('e')",
+        "comment": "This command adds the string element 'e' to the end of the list"
+      },
+      {
+        "line": "print (a)",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt7.5": {
+    "name": "Removing list elements",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = ['a','b','c','d','e']",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "a.pop()",
+        "comment": "Since no argument is passed within the round paranthesis, it will by default remove the last element of the list"
+      },
+      {
+        "line": "a.pop(0)",
+        "comment": "This command will remove the first element fromt the list since '0' is passed as the argument in the paranthesis which satands for 0th index"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (a)",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt7.6": {
+    "name": "Addiing Lists",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = [1,2,3]",
+        "comment": ""
+      },
+      {
+        "line": "b = [4,5,6]",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "c = a+b",
+        "comment": "This command adds two lists and combines it into a single summed up list"
+      },
+      {
+        "line": "print (c)",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt8.1": {
+    "name": "Tuple Basics",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "tuple1 = ('physics', 'chemistry', 1997, 2000)",
+        "comment": "Defining a tuple with 4 elements"
+      },
+      {
+        "line": "tuple2 = (1, 2, 3, 4, 5)",
+        "comment": "Defining a tuple with 5 elements"
+      },
+      {
+        "line": "tuple3 = (\"a\", \"b\", \"c\")",
+        "comment": "Defining a tuple with 3 elements"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (tuple1)",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt8.2": {
+    "name": "Accessing Tuple Index",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = ('a','b','c','d')",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (a[2])",
+        "comment": "Accessing the index 2 element of the tuple (3rd element since the tuple index always starts from 0)"
+      },
+      {
+        "line": "print (a[3])",
+        "comment": "Accessing the index 3 element of the tuple (4th element since the tuple index always starts from 0)"
+      }
+    ]
+  },
+  "pyt8.3": {
+    "name": "Adding Tuples",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = (1,2,3)",
+        "comment": ""
+      },
+      {
+        "line": "b = (4,5,6)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "c = a+b",
+        "comment": "Adding Tuple a and Tuple b"
+      },
+      {
+        "line": "print (c)",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt9.2": {
+    "name": "Accessing Dictionary Elements",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "dict1 = {'Name': 'Zara', 'Age': 7, 'Class': 'First'};",
+        "comment": "defining a dictionary with 3 Key-Value pairs"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (dict1['Name'])",
+        "comment": "printing the value of the key 'Name'"
+      },
+      {
+        "line": "print (dict1['Age'])",
+        "comment": "printing the value of the key 'Age'"
+      }
+    ]
+  },
+  "pyt9.1": {
+    "name": "Dictionary Basics",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "dict1 = {'Name': 'Zara', 'Age': 7, 'Class': 'First'};",
+        "comment": "Defining the dictionary 'dict1' with 3 key-value pairs"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (dict1)",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt9.3": {
+    "name": "Updating Dictionary Elements",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "dict1 = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "dict1['Age'] = 8",
+        "comment": "Update existing entry for the key 'Age'"
+      },
+      {
+        "line": "print (dict1)",
+        "comment": ""
+      }
+    ]
+  },
+  "xx": {
+    "name": "xx",
+    "description": "",
+    "language": "py",
+    "author": "r.hosseini",
+    "lines": [
+      {
+        "line": "int",
+        "comment": ""
+      }
+    ]
+  },
+  "tt": {
+    "name": "tt",
+    "description": "",
+    "language": "py",
+    "author": "r.hosseini",
+    "lines": [
+      {
+        "line": "i",
+        "comment": ""
+      }
+    ]
+  },
+  "kk": {
+    "name": "kk",
+    "description": "",
+    "language": "py",
+    "author": "r.hosseini",
+    "lines": [
+      {
+        "line": "k",
+        "comment": ""
+      }
+    ]
+  },
+  "printing_py": {
+    "name": "printing.py",
+    "description": "Printing strings and numbers",
+    "language": "py",
+    "author": "peterb",
+    "lines": [
+      {
+        "line": "# Example: Printing primitive data with print",
+        "comment": "This is a comment. A string that starts with a hash symbol will be ignored by the interpreter and could be used for comments. In this case, it explains the nature of the file content"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(\"Hello, World!\")",
+        "comment": "To print a string of symbols, use print function and provide the string delimited by double quotes inside brackets. This line of code prints Hello, World! when interpreted"
+      },
+      {
+        "line": "print(\"Here are integers:\", 10, 99)",
+        "comment": "Print function can have several papameters separated by comas. It prints the values of all its parameters one by one, left to right, separating them by a space. This line will print Here are integers 10 99"
+      },
+      {
+        "line": "print(\"Here are floats: \", 3.1415, 0.001)",
+        "comment": "This print function has three parameters. First is string \"Here are floats\", second is a floating point literal 3.1414 and third is another floating point literal 0.001. It prints the values of these three parameters one by one, separating by a blank. The result will be Here are floats:  3.1415 0.001"
+      },
+      {
+        "line": "print(\"Here are strings: \", \"IS12\", \"hello!\")",
+        "comment": "This print function has three parameters, all are strings. It will print all of them left to right separating by a blank. The result will be Here are strings:  IS12 hello!"
+      },
+      {
+        "line": "",
+        "comment": ""
+      }
+    ]
+  },
+  "calculate.py": {
+    "name": "Simple Calculations",
+    "description": "Printing results of simple one operation calculations",
+    "language": "py",
+    "author": "peterb",
+    "lines": [
+      {
+        "line": "# Simple Calculations Example",
+        "comment": "This is a comment. It is ignored by the interpreter"
+      },
+      {
+        "line": "",
+        "comment": "This empty line makes the program more readable"
+      },
+      {
+        "line": "print(\"Let's calculate!\")",
+        "comment": ""
+      },
+      {
+        "line": "print(\"1234 + 4321 = \", 1234 + 4321)",
+        "comment": "This print function has two parameters. One is a string and one is an addition expression (1234+4321). The string is printed as is, the expression is evaluated to 5555 and printed. What you will see printed is 1234 + 4321 =  5555"
+      },
+      {
+        "line": "print(\"2 * 3.1415 = \", 2 * 3.1415)",
+        "comment": "This print function has two parameters. One is a string and one is a multiplication expression (2 * 3.1415). The string is printed as is, the expression is evaluated  and printed. What you will see printed is 2 * 3.1415 =   6.2830"
+      },
+      {
+        "line": "print(\"5 / 2 = \", 5 / 2) ",
+        "comment": "Single slash in a regular division. The result of evaluating a regular division is always a floating point value, even if it operates with integers. In this case the result is 2.5. What will be printed is 5 / 2 =  2.5"
+      },
+      {
+        "line": "print(\"5 // 2 = \", 5 // 2)\t\t\t\t",
+        "comment": "Double slash in an integer division that only can work with two integers. The result of evaluating an integer division is always integer. It ignores the remainder. In this case the result is 2. What will be printed is 5 // 2 =  2"
+      },
+      {
+        "line": "print(\"5 % 2 = \", 5 % 2)",
+        "comment": "Percent sign indicates the remainder operation that only can work with two integers. The result of evaluating a remainder is also integer. In this case the result is 1. What will be printed is 5 % 2 =  1"
+      },
+      {
+        "line": "",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt3.5": {
+    "name": "IF Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "number = 10",
+        "comment": "In this statement integer '10' is assigned to the variable 'number'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if number > 5:",
+        "comment": "This statement checks if the variable 'number' has a value greater than '5'. If this condition is true, it will go inside the loop to execute the statement. If the condition is not true it will skip the IF statement."
+      },
+      {
+        "line": "    print(True)",
+        "comment": "If the above condition is true, it will print out the boolean 'True'. In this case it will print out True.\nNote: A boolean value is not a string and hence it should not be inside quotation marks."
+      }
+    ]
+  },
+  "pyt3.6": {
+    "name": "IF...ELSE Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "# This is a simple IF...ELSE statement example",
+        "comment": "This is a comment line which simply explains the function of the code below"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "number = 5",
+        "comment": "This is a simple variable assignment statement. Here, integer '5' is assigned to the variable 'number'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if number < 0:",
+        "comment": "This statement checks if the value of 'number' is less than 0. If this condition is true, it will go inside the 'if' statement."
+      },
+      {
+        "line": "    print(number , 'is a negative integer')",
+        "comment": "If the condition of the above statement was true, it would execute this statement. But since the condition is not true (number is not less than 0), it will skip the IF statement.\nNote: In this statement a comma (,) is used to combine an integer variable with the string while printing. "
+      },
+      {
+        "line": "else:",
+        "comment": "Since it skiped the IF statement, it will by default execute the ELSE statement."
+      },
+      {
+        "line": "    print(number , 'is a positive integer')",
+        "comment": "In this statement a comma (,) is used to merge an integer variable with the string while printing. "
+      }
+    ]
+  },
+  "pyt3.7": {
+    "name": "IF...ELSE Statement (Multiple Conditions)",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "temperature = 20",
+        "comment": "Assigning the value 20 to the variable 'temperature'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if temperature < 0:",
+        "comment": "This statement checks if the condition (temperature is less than 0) is true. The value of temperature is 20 so this statement is not true."
+      },
+      {
+        "line": "    print(\"It is extremely cold\")",
+        "comment": "In case if the above if statement was true, it would execute this statement and print out the following string."
+      },
+      {
+        "line": "elif temperature >= 0 and temperature < 20:",
+        "comment": "'elif' is a short for 'Else If'. This code jumps to this condition if the above 'if' condition was not true. This statement checks if the condition (temperature is more than or equal to 0 but less than 20) is true or not. The value of temperature is 20 so this statement is not true."
+      },
+      {
+        "line": "    print(\"It is very cold\")",
+        "comment": "Since the above 'elif' condition was false, this print statement will not be executed"
+      },
+      {
+        "line": "elif temperature >= 20 and temperature < 30:",
+        "comment": "Since the above 'elif' statement was not true, the code jumps to this condition. This statement checks if the condition (temperature is more than or equal to 20 and less than 30) is true or not. The value of temperature is 20 so this statement is true."
+      },
+      {
+        "line": "    print(\"It is just about fine\")",
+        "comment": "Since the above 'elif' statement is true, this print statement will be executed and it will print out the string 'It is just about fine'"
+      },
+      {
+        "line": "else:",
+        "comment": "The above statement was true so it will not jump to 'else' statement. But just imagine if all the above conditions were not true then this 'else' statement would be executed"
+      },
+      {
+        "line": "    print(\"It is unpleasant\")",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt3.8": {
+    "name": "Nested IF...ELSE Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "dice_score = 5",
+        "comment": "Assigning the value 5 to the variable 'dice_score'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if dice_score < 6:",
+        "comment": "This is the outer 'If' condition. It checks if the value of 'dice_score' is less than 6. If this condition is true, the code will go the the inner 'If...else' conditions. In this case this condition is true since the value of dice_score is 5 which is less than 6."
+      },
+      {
+        "line": "    if dice_score == 1:",
+        "comment": "This inner 'If' statement checks if the value is 1. If it is not true, it will jump to the next condition. In this case it is not true since the value of dice_score is 5"
+      },
+      {
+        "line": "        print(\"Your score is 1. Please roll again.\")",
+        "comment": ""
+      },
+      {
+        "line": "    elif dice_score == 2:",
+        "comment": "This inner 'If' statement checks if the value is 2. If it is not true, it will jump to the next condition. In this case it is not true since the value of dice_score is 5"
+      },
+      {
+        "line": "        print(\"Your score is 2. Please roll again.\")",
+        "comment": ""
+      },
+      {
+        "line": "    elif dice_score == 3:",
+        "comment": "This inner 'If' statement checks if the value is 3. If it is not true, it will jump to the next condition. In this case it is not true since the value of dice_score is 5"
+      },
+      {
+        "line": "        print(\"Your score is 3. Please roll again.\")",
+        "comment": ""
+      },
+      {
+        "line": "    elif dice_score == 4:",
+        "comment": "This inner 'If' statement checks if the value is 4. If it is not true, it will jump to the next condition. In this case it is not true since the value of dice_score is 5"
+      },
+      {
+        "line": "        print(\"Your score is 4. Please roll again.\")",
+        "comment": ""
+      },
+      {
+        "line": "    else:",
+        "comment": "Since all the above conditions are not true it will execute this 'else' statement by default."
+      },
+      {
+        "line": "        print(\"Your score is 5. Please roll again.\")",
+        "comment": "Since the else statement is executed, it will print out this string."
+      },
+      {
+        "line": "elif dice_score == 6:",
+        "comment": "Imagine if the outer 'If' condition was not true, the code would have jumped to this 'elif' condition."
+      },
+      {
+        "line": "    print(\"It is a perfect dice score. Congratulations!\")",
+        "comment": ""
+      },
+      {
+        "line": "else:",
+        "comment": "Again Imagine if none of the above conditions were true, the code would jump to this 'else' condition. "
+      },
+      {
+        "line": "    print(\"It is an invalid dice score. The value should be between 1 and 6\")",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt3.10": {
+    "name": "Nested IF...ELSE Statement 2",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "number = 6",
+        "comment": "The variable 'number' is assigned a value '6'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if number < 10:",
+        "comment": "Condition 1: Check if the number is less than 10? In this case it is true so the code will execute inside this 'if' Statement"
+      },
+      {
+        "line": "    if number % 2 == 0:",
+        "comment": "Condition 2: Given that condition 1 is true, check if the number is perfectly divisible by 2? Yes, number 6 is perfectly divisibly by 2. So this condition is true aswel."
+      },
+      {
+        "line": "        if number % 3 == 0:",
+        "comment": "Condition 3: Given that the condition 1 and 2 ae true, check if the number is also perfectly divisible by 3? Yes, number 6 is perfectly divisibly by 3. So this condition is true aswel"
+      },
+      {
+        "line": "            print(\"The selected number is 6\")",
+        "comment": "Since all the above conditions were true, it will execute this print statement."
+      },
+      {
+        "line": "        else:",
+        "comment": "If condition 3 was not true, the code would have jumped to this 'else' statement"
+      },
+      {
+        "line": "            print(\"The selected number is not perfectly divisible by 3\")",
+        "comment": ""
+      },
+      {
+        "line": "    else:",
+        "comment": "If condition 2 was not true, the code would have jumped to this 'else' statement"
+      },
+      {
+        "line": "        print(\"The selected number is not perfectly divisible by 2\")",
+        "comment": ""
+      },
+      {
+        "line": "else:",
+        "comment": "If condition 1 was not true, the code would have jumped to this 'else' statement"
+      },
+      {
+        "line": "    print(\"The number is greater than 10\")",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt3.11": {
+    "name": "Single Line IF...ELSE Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#Single Line IF...ELSE Condition",
+        "comment": "In python, IF...ELSE Condition can be written in a single line statement for simplicity. This is called as the Pythonic way of programming"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "number = 100",
+        "comment": "Integer 100 is asigned to the variable 'number'"
+      },
+      {
+        "line": "print(\"Number less than 100\") if (number <= 100) else print(\"Number Greater than 100\")",
+        "comment": "This statement is read and understood in the following way: Print 'Number less than 100' if number is less than or equal to 100 or else print 'Number Greater than 100'."
+      }
+    ]
+  },
+  "pyt4.7": {
+    "name": "While Loop Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 0",
+        "comment": "A variable used inside a While Loop condition has to be defined by assigning it a base value. A base value is from where the While Loop will start iterating. In this case variable 'a' is assigned the integer '0'. Hence this While Loop will start from a = 0."
+      },
+      {
+        "line": "    ",
+        "comment": ""
+      },
+      {
+        "line": "while (a < 5):",
+        "comment": "As mentioned above, this loop will start from a =0 and will iterate till 'a' is less than 5 (a = 4)"
+      },
+      {
+        "line": "    print (\"Current Number is:\", a)",
+        "comment": "In each iteration, it will print the current number. For example, in the first iteration, it will print out the following:\n'Current Number is: 0'"
+      },
+      {
+        "line": "    a = a + 1",
+        "comment": "This is a very important step in a while loop. The variable that is iterated upon, should always be incremented. If the variable is not incremented, the value of 'a' will be same forever and the while loop condition will never be met and hence it will go into an infinite loop (keep looping forever)."
+      }
+    ]
+  },
+  "pyt4.8": {
+    "name": "While Loop Statement 2",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "temperature = 0",
+        "comment": "Temperature is set to 0 (Integer 0 is assigned to the variabe temperature)"
+      },
+      {
+        "line": "    ",
+        "comment": ""
+      },
+      {
+        "line": "while (temperature < 60):",
+        "comment": "This While Loop condition will iterate from temperature = 0 to temperature < 60"
+      },
+      {
+        "line": "    if temperature < 30:",
+        "comment": "Inside the while loop, there is an If condition. This If condition checks if the temperature is less than 30"
+      },
+      {
+        "line": "        print(\"It is Cold!\")",
+        "comment": "If the temperature is less than 30, it will print the following statement"
+      },
+      {
+        "line": "    else:",
+        "comment": "If the temperature is more than 30,then..."
+      },
+      {
+        "line": "        print(\"It is Hot!\")",
+        "comment": "If the temperature is more than 30,then it will print the following"
+      },
+      {
+        "line": "    temperature += 10",
+        "comment": "Here the temperature is incremented by 10"
+      }
+    ]
+  },
+  "pyt4.9": {
+    "name": "Break Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "for letter in 'Python':",
+        "comment": "This for loop statement is read in the following way: iterate through each letter in the string 'Python'"
+      },
+      {
+        "line": "    if letter == 'h':",
+        "comment": "it checks if the current letter is 'h'"
+      },
+      {
+        "line": "        break",
+        "comment": "if the current letter is 'h', it will break out of the for loop and execute statements outside of the loop"
+      },
+      {
+        "line": "    print('Current Letter :', letter)",
+        "comment": "If the current letter is not 'h' and hence if the loop did not break, it will print out the current letter"
+      }
+    ]
+  },
+  "pyt4.10": {
+    "name": "Continue Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "for letter in 'Python':",
+        "comment": "This for loop statement is read in the following way: iterate through each letter in the string 'Python'"
+      },
+      {
+        "line": "    if letter == 'h':",
+        "comment": "it checks if the current letter is 'h'"
+      },
+      {
+        "line": "        continue",
+        "comment": "if the current letter is 'h', it will skip the current iteration of the loop and continue with the next iteration"
+      },
+      {
+        "line": "    print('Current Letter :', letter)",
+        "comment": "This statement will print all the letters but the letter 'h' because it skipped the iteration where the current letter was 'h'."
+      }
+    ]
+  },
+  "pyt4.11": {
+    "name": "Pass Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "for letter in 'Python':",
+        "comment": "This for loop statement is read in the following way: iterate through each letter in the string 'Python'"
+      },
+      {
+        "line": "    if letter == 'h':",
+        "comment": "it checks if the current letter is 'h'"
+      },
+      {
+        "line": "        pass",
+        "comment": "This statement dones nothing...actually nothing. It is used when a statement is required syntactically but you do not want any command or code to execute."
+      },
+      {
+        "line": "        print('This pass statement does nothing')",
+        "comment": ""
+      },
+      {
+        "line": "    print('Current Letter :', letter)",
+        "comment": "This statement will print all the letters including 'h' because the 'pass' statement actually does nothing"
+      }
+    ]
+  },
+  "pyt4.13": {
+    "name": "Single Line Loop Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#This is a single line loop statement",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "for i in range (0,5): print('Current Number is:',i)",
+        "comment": "Entire Forloop can be written in a single line. This is called as the pythonic way of writing a loop. This loop is read as follows: Iterate 'i' from 0 to 4 (less than 5) and print the current number in each iteration"
+      }
+    ]
+  },
+  "pyt2.6": {
+    "name": "Arithmetic Operators",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 5 ",
+        "comment": "Assigning the integer '5' to the variable 'a'"
+      },
+      {
+        "line": "b = 3",
+        "comment": "Assigning the integer '3' to the variable 'b'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(a + b)",
+        "comment": "This is the addition operator. It arithmetically adds the two integers and prints out the value. In this case it will print out the value '8' (5+3=8)"
+      },
+      {
+        "line": "print(a - b)",
+        "comment": "This is the subtraction operator. It arithmetically subtracts the two integers and prints out the value. In this case it will print out the value '2' (5-3=2)"
+      },
+      {
+        "line": "print(a * b)",
+        "comment": "This is the multiplication operator. It arithmetically multiplies the two integers and prints out the value. In this case it will print out the value '15' (5*3=15)"
+      },
+      {
+        "line": "print(a / b)",
+        "comment": "This is the division operator. It arithmetically divides the two integers and prints out the value. In this case it will print out the value '1.667' (5/3=1.667)"
+      },
+      {
+        "line": "print(a ** b)",
+        "comment": "This is the exponent operator. It arithmetically exponents the two integers and prints out the value. In this case it will print out the value '125' (5 to the power 3 = 125)"
+      },
+      {
+        "line": "print(a % b)",
+        "comment": "This is the modulus operator. It arithmetically takes modulus of a variable with the other and prints out the value. In this case it will print out the value '2' (5 modulus 3 = 2)"
+      },
+      {
+        "line": "print(a//b)",
+        "comment": "This is the floor division operator. It arithmetically floor divides the two integers and prints out the value. Floor division is actually dividing without taking into consideration the remainder. In this case it will print out the value '1' (5 floor divided by 3 = 1)"
+      }
+    ]
+  },
+  "pyt10.1": {
+    "name": "IF...ELSE Statement 2",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#Calculating Weekly Wages of the employees",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "totalHours = 45",
+        "comment": "In this statement, integer '45' is assigned to the variable 'totalHours'. This variable represents the number of hours an employee has worked in a given week."
+      },
+      {
+        "line": "hourlyWage = 20",
+        "comment": "Here, integer '20' is assigned to the variable 'hourlyWage'. This is to take in the Hourly Wages of an employee as input"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if totalHours <= 40:",
+        "comment": "This statement checks if the value of 'totalHours' is less than or equal to 40. In other words, it checks if the employee has worked for 40 hours or less?"
+      },
+      {
+        "line": "    totalWages = hourlyWage*totalHours",
+        "comment": "If employee has worked for 40 hours or less, total wages would be a product of wages-per-hour and number of hours worked in that week"
+      },
+      {
+        "line": "else:",
+        "comment": "If the employee has worked for more than 40 hours in that week then this 'else' statement will be executed"
+      },
+      {
+        "line": "    overtime = totalHours - 40",
+        "comment": "First it needs to check how many hours above the standard 40 hours has employee worked. This is because the employee will be paid the normal hourly wages upto 40 hours and 1.5 times the hourly wages for hours above 40 hours. The number of hours worked above 40 hours will be stored in the variable 'overtime'"
+      },
+      {
+        "line": "    totalWages = hourlyWage*40 + (1.5*hourlyWage)*overtime",
+        "comment": "The total wages is calculated by adding the wages for upto 40 hours and the wages for overtime hours"
+      },
+      {
+        "line": "print(totalWages)",
+        "comment": "This statement simply prints the total wages of an employee as output"
+      }
+    ]
+  },
+  "pyt10.2": {
+    "name": "ELIF (ELSE IF) Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#ELIF (Else...If) Statement to find out the Letter Grade of a student from a score",
+        "comment": "In case of more than one conditions, repeatedly increasing indentation with an 'if' statement as the 'else' block can be annoying and distracting. One solution to this is to use 'elif' statement. It is a short version of Else...IF"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "score = 82",
+        "comment": "Assigning the integer '82' to the variable 'score'. In other words, taking in the student's score out of 100 as an input"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if score >= 90:",
+        "comment": "First condition is to check if the score is above 90"
+      },
+      {
+        "line": "    letter = 'A'",
+        "comment": "If the score is above 90, the letter grade 'A' is assigned to the student"
+      },
+      {
+        "line": "elif score >= 80:",
+        "comment": "else if the score is more than or equal to 80"
+      },
+      {
+        "line": "    letter = 'B'",
+        "comment": "the letter grade 'B' is assigned to the student"
+      },
+      {
+        "line": "elif score >= 70:",
+        "comment": "else if the score is more than or equal to 70"
+      },
+      {
+        "line": "    letter = 'C'",
+        "comment": "the letter grade 'C' is assigned to the student"
+      },
+      {
+        "line": "elif score >= 60:",
+        "comment": "else if the score is more than or equal to 60"
+      },
+      {
+        "line": "    letter = 'D'",
+        "comment": "the letter grade 'D' is assigned to the student"
+      },
+      {
+        "line": "else:",
+        "comment": "If none of the above conditions are true then the score of the student is less than 60"
+      },
+      {
+        "line": "    letter = 'F'",
+        "comment": "If the score is less than 60, then the letter grade 'F' is assigned to the student"
+      },
+      {
+        "line": "print(letter)",
+        "comment": "Print out the letter grade"
+      }
+    ]
+  },
+  "pyt10.3": {
+    "name": "Logical Operators",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "a = 1",
+        "comment": "Assigning integer '1' to the variable 'a'"
+      },
+      {
+        "line": "b = 2",
+        "comment": "Assigning integer '2' to the variable 'b'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if a == 1 and b == 2:",
+        "comment": "This statement checks if 'a' is equal to '1' as well as if 'b' i equal to '2'. Here the 'and' operator denotes that both the conditions should be true"
+      },
+      {
+        "line": "    print(True)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if a == 0 or b == 2:",
+        "comment": "This statement checks if 'a' is equal to '0' or if 'b' is equal to '2'. Here the 'or' operator denotes that any one condition should be true. It is fine if both the conditions are true. But it is not fine if none of the conditions are true"
+      },
+      {
+        "line": "    print(True)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if not (a == 1 and b == 3):",
+        "comment": "This is a slightly tricky operator usage. The condition inside the round parenthesis states that both a=1 and b=3 shoud be satisfied due to the use of 'and' operator. But since both the conditions are not satisfied, the condition inside the parenthesis is False. But then there is a 'not' operator outside of the parenthesis which reverses the case Hence the entire statement is summarized as \"Check if the conditions inside the parenthesis is not true\""
+      },
+      {
+        "line": "    print(True)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if a != 0 and b != 3:",
+        "comment": "This statement is read as follows:\nCheck if 'a' is not equal to '0' and 'b' is not equal to '3'. Here due to the use of 'and' operator, both the conditions should be satisfied"
+      },
+      {
+        "line": "    print(True)",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt10.4": {
+    "name": "Complex IF...ELSE Statement",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#Let user enter the number between 1 and 20, check if the number is valid, then check if the nunber is even or odd and give the square of the number as output to user",
+        "comment": ""
+      },
+      {
+        "line": "enter_number = int(input(\"Please enter a number between 1 and 20: \"))",
+        "comment": "This statement takes an input from the users. int() is added to ensure that the input is treated as a integer, not a string"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if enter_number >= 1:  ",
+        "comment": "This conditional statement ensures the input is more than or equal to '1'"
+      },
+      {
+        "line": "    if enter_number <= 20:",
+        "comment": "If the above condition is true, it will check for 2nd condition. This conditional statement ensures the input is less than or equal to '20'"
+      },
+      {
+        "line": "        print(\"You have entered a valid number\")",
+        "comment": "If the above 2 conditions are true, the user is notified that the entered number is valid"
+      },
+      {
+        "line": "        if enter_number % 2 == 0:",
+        "comment": "3rd condition checks if the number is even. This is done by checking if the remainder is '0' when the number is divided by 2"
+      },
+      {
+        "line": "            print(\"Your number is even\")",
+        "comment": "If the remainder is '0', then the number is even"
+      },
+      {
+        "line": "            print(enter_number , 'is completely divisible by 2')",
+        "comment": ""
+      },
+      {
+        "line": "        elif enter_number % 2 == 1:",
+        "comment": "If the number is divided by '0' and the remainder is '1' then the number is odd"
+      },
+      {
+        "line": "            print(\"Your number is odd\")",
+        "comment": ""
+      },
+      {
+        "line": "            print(enter_number , 'is not divisible by 2')",
+        "comment": ""
+      },
+      {
+        "line": "    else:",
+        "comment": "If the number is not less than or equal to 20, the code will jump to this 'else' statement"
+      },
+      {
+        "line": "        print(\"You've entered an invalid number\")",
+        "comment": "User will be notified that the entered number is not valid"
+      },
+      {
+        "line": "else:",
+        "comment": "If the number is not more than or equal to 1, the code will jump to this 'else' statement"
+      },
+      {
+        "line": "    print(\"You've entered an invalid number\")",
+        "comment": "User will be notified that the entered number is not valid"
+      }
+    ]
+  },
+  "pyt10.5": {
+    "name": "Functions Introduction",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#Bacis Function",
+        "comment": "A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing."
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "def test_function():",
+        "comment": "This is how a function is defined. Function begin with the keyword 'def'. Here the function 'test_function' is defined. It is followed by empty parenthesis '()' which denotes that no arguments were pased to this function"
+      },
+      {
+        "line": "    print('This is a test function')",
+        "comment": ""
+      },
+      {
+        "line": "    print('This function does not take in any argument')",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "test_function()",
+        "comment": "This is how a function is called. A function can be simply called by typing the name of the function and then the round parenthesis. Once a function is called, everything within the function is executed. In this case the 2 print statements will be executed"
+      }
+    ]
+  },
+  "pyt10.6": {
+    "name": "Functions with Arguments",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#Functions with Arguments",
+        "comment": "This example showcases the use of arguments "
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "def square(number):",
+        "comment": "A function named 'square' is defined which takes in the argument 'number'. Later in this example when '4' is passed as the argument, the value '4' is assigned to the variable 'number'"
+      },
+      {
+        "line": "    print('The entered number is ', number)",
+        "comment": ""
+      },
+      {
+        "line": "    print('Square of ', number , 'is', number*number)",
+        "comment": "This statement prints the square of the number"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "square(4)",
+        "comment": "Here, the function 'square' is called and the integer '4' is passed as the argument "
+      }
+    ]
+  },
+  "pyt10.7": {
+    "name": "Functions Example 1",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "def attendance(number):",
+        "comment": "Defining the function 'attendance' which takes in the argument 'number'. Here 'number' is the percent of students present in a class for example."
+      },
+      {
+        "line": "    if number == 0:",
+        "comment": "Checking for the condition number=0 (none of the student were present)"
+      },
+      {
+        "line": "        print(\"None of the Student came for the lecture\")",
+        "comment": ""
+      },
+      {
+        "line": "    elif number < 0:",
+        "comment": "Checking for another condition where the number is less than zero. This is an invalid input since the number of students cannot be less than 0"
+      },
+      {
+        "line": "        print(\"Invalid number\")",
+        "comment": ""
+      },
+      {
+        "line": "    else:",
+        "comment": "If none of the above conditions are true...check for the following..."
+      },
+      {
+        "line": "        if number > 100:",
+        "comment": "Is the number greater than 100? This number is out of range since a class cannot have more than 100% students."
+      },
+      {
+        "line": "            print(\"Out of range\")",
+        "comment": ""
+      },
+      {
+        "line": "        elif number >70:",
+        "comment": "If not, is he number greater than 70?"
+      },
+      {
+        "line": "            print(\"High Attendance\")",
+        "comment": ""
+      },
+      {
+        "line": "        else:",
+        "comment": "If none of the above conditions is true, then the number is between 1 to 70."
+      },
+      {
+        "line": "            print(\"Low Attendance\")",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "attendance(-1)",
+        "comment": "The function 'attendace' is called by passing the number '-1'"
+      },
+      {
+        "line": "attendance(20)",
+        "comment": "The function 'attendace' is called by passing the number '20'"
+      },
+      {
+        "line": "attendance(80)",
+        "comment": "The function 'attendace' is called by passing the number '80'"
+      },
+      {
+        "line": "attendance(1000)",
+        "comment": "The function 'attendace' is called by passing the number '1000'"
+      }
+    ]
+  },
+  "pyt10.8": {
+    "name": "Functions Example 2",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#Function to output the Fibonacci Sequence",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "def fib(n):",
+        "comment": "Defining the function 'fib' which takes an argument 'n'"
+      },
+      {
+        "line": "    a, b = 0, 1",
+        "comment": "In this statement, integer '0' is assigned to variable 'a' and integer '1' is assigned to variable 'b'"
+      },
+      {
+        "line": "    while a < n:",
+        "comment": "Loop till 'a' is less than the input number 'n'"
+      },
+      {
+        "line": "        print(a)",
+        "comment": ""
+      },
+      {
+        "line": "        a, b = b, a+b",
+        "comment": "Update the variable values to continue the sequence. Here the value of 'b' is assigned to the variable 'a' and the value of 'a+b' is assigned to the variable 'b'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "fib(50)",
+        "comment": "the function 'fib' is called by passing in the argument '50'. Hence the output will be a Fibonacci Sequence '0, 1, 1, 2, 3, 5, 8, 13, 21, 34'. The last number in the sequence will be less than 50"
+      }
+    ]
+  },
+  "pyt10.9": {
+    "name": "Simple Input",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "num1 = input('Enter a number: ')",
+        "comment": "This statement takes input from the user and then it stores it in the variable 'num1'"
+      },
+      {
+        "line": "num2 = input('Enter another number: ')",
+        "comment": "This statement takes another input from the user and then it stores it in the variable 'num2'"
+      },
+      {
+        "line": "sum = int(num1) + int(num2)",
+        "comment": "This statement first converts the input variables into integers and then adds the two integers"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print('Addition of the two numbers is ', sum)",
+        "comment": "This statement prints out the sum"
+      }
+    ]
+  },
+  "pyt10.10": {
+    "name": "Simple Input 2",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#Simple Input Program",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "applicant = input(\"Enter the applicant's name: \")",
+        "comment": "This statement takes applicant's name as input from the user"
+      },
+      {
+        "line": "interviewer = input(\"Enter the interviewer's name: \")",
+        "comment": "This statement takes interviewer's name as input from the user"
+      },
+      {
+        "line": "time = input(\"Enter the appointment time: \")",
+        "comment": "This statement takes time of the interview as input from the user"
+      },
+      {
+        "line": "print(interviewer, \"will interview\", applicant, \"at\", time)",
+        "comment": "This simply prints a one-line summary of the details taken from the user in the above statements. Note the text in double quotations is string where as the text without quotations is the variable that is called (printing a variable's value)"
+      }
+    ]
+  },
+  "pyt10.11": {
+    "name": "Output Formatting",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#Simple Output Formatting Example",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(\"User's Full Name is {} {}.\".format(\"John\", \"Adams\"))",
+        "comment": "This statement formats the output. The .format functions says that we are formatting the string so it will look for '{}' signs in the string. Then we have a tuple at the end which contans two string values - 'John' and 'Adams' which we are passing to it. So in the first '{}' sign, the string 'John' will be passed and in the second '{}' sign, the string 'Adams' will be passed. The output you will see on running this code is \"User's Full Name is John Adams.\""
+      }
+    ]
+  },
+  "pyt10.12": {
+    "name": "Output Formatting 2",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#Output formatting (String and Decimal Values)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(\"His name is {} and his age is {}.\".format(\"Terry\", 22))",
+        "comment": "This is similar to the previous example. Here the sign '{}' is used to pass a string and a decimal value. The output we get on running this code is \"His name is Terry and his age is 22.\""
+      }
+    ]
+  },
+  "pyt10.13": {
+    "name": "Dictionary Basics",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#Dictionary Basics",
+        "comment": "Dictionaries work on key-value pairs. Each key is separated from its value by a colon ':', the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: {}.\n\nKeys are unique within a dictionary while values may not be. The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples."
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "dictionary1 = {'name': 'harry','age':14, 'gender': 'male'}",
+        "comment": "Declaring a dictionary 'dictionary1' with 3 key-value pairs. The keys in this dictionary are 'name', 'age' and 'gender'"
+      },
+      {
+        "line": "dictionary2 = {'name': 'sal','age':20, 'gender': 'female'}",
+        "comment": "Similar to above, we declare a dictionary 'dictionary2' with 3 key-value pairs. The keys in this dictionary are 'name', 'age' and 'gender'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(dictionary1,dictionary2)",
+        "comment": "printing out both the dictionaries"
+      }
+    ]
+  },
+  "pyt10.14": {
+    "name": "Accessing Dictionary Elements",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#Accessing Dictionary Elements",
+        "comment": "This example teaches how to access dictionary elements"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "dictionary1 = {'name': 'harry','age':14, 'gender': 'male'}",
+        "comment": "Defining a dictionary with 3 key-value pairs"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(dictionary1[\"name\"])",
+        "comment": "Printing out the value of the key 'name' from the dictionary 'dictionary1'"
+      },
+      {
+        "line": "print(dictionary1[\"age\"])",
+        "comment": "Printing out the value of the key 'age' from the dictionary 'dictionary1'"
+      },
+      {
+        "line": "print(dictionary1[\"gender\"])",
+        "comment": "Printing out the value of the key 'gender' from the dictionary 'dictionary1'"
+      }
+    ]
+  },
+  "pyt10.15": {
+    "name": "Adding and Modifying Dictionary Elements",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "#Accessing and modifying Dictionary Elements",
+        "comment": "This example deals with adding elements as well as modifying elements of a dictionary"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "dict = {\"Name\": \"Terry\", \"score1\": 80}",
+        "comment": "Defining a dictionary with 3 key-value pairs"
+      },
+      {
+        "line": "dict[\"score1\"] = dict[\"score1\"] + 10",
+        "comment": "This statement deals with modifying the value of one of the element. The value of the key 'score1' was added by 10"
+      },
+      {
+        "line": "dict[\"score2\"] = 92",
+        "comment": "This statement adds a new element to the dictionary whose key is 'score2' and value is '92'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(dict[\"score2\"])",
+        "comment": "Print the value of the element 'score2'"
+      },
+      {
+        "line": "print(len(dict))",
+        "comment": "This statement prints the lendth of the dictionary. Length of a dictionary simply means number of key-value pairs present in a dictionary. In this case after adding one additional element in the above statement, we now have 3 elements. So the length of the dictionary is 3"
+      }
+    ]
+  },
+  "pytt2.1": {
+    "name": "Variables 1",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "count = 44; ",
+        "comment": "Assigning integer '44' to the variable 'count'"
+      },
+      {
+        "line": "half_count = count // 2",
+        "comment": "Dividing the value of 'count' by two and asigning the resultant value to the variable 'half_count'"
+      },
+      {
+        "line": "print(count, half_count)",
+        "comment": "Printing the value of both 'count' and 'half_count'. The result at this point will be '44 22'"
+      },
+      {
+        "line": "count = 99",
+        "comment": "This statement re-assigns (assigns again) new value to the variable 'count'. Note the new value of the variable 'count' is '99'"
+      },
+      {
+        "line": "print(count, half_count)\t",
+        "comment": "Printing the value of both 'count and 'half_count'. At this point the value of 'half_count' is still 22. Hence this statement will print out '99 22'"
+      },
+      {
+        "line": "half_count = count / 2",
+        "comment": "Now since the new value of the variable 'count' is '99', the variable 'half_count' will get the value '49.5'"
+      },
+      {
+        "line": "print(count, half_count)",
+        "comment": "Printing out the new value of 'count' and 'half_count'"
+      },
+      {
+        "line": "count = count + 100",
+        "comment": "This statement adds '100' to the current value of 'count' and assigns the sum back to the variable 'count'. In shour it updates the value of the 'count'"
+      },
+      {
+        "line": "print(count, half_count)",
+        "comment": "Now the value of 'count' and 'half_count' will be '199' and '49.5'"
+      },
+      {
+        "line": "count = \"100\"",
+        "comment": "This statement assigns a string '100' to the variable 'count'. Do note that the \"100\" is enclosed in the double quotes. Hence, it is not an integer value but a string."
+      },
+      {
+        "line": "half_count = \"count\"",
+        "comment": "This is again a tricky statement. Here a string 'count' is assigned to the variable 'half_count'. The value of 'half_count' will be updated with a string 'count' after this statement"
+      },
+      {
+        "line": "print(count, half_count)",
+        "comment": "Printing the new value of 'count' and 'half_count'"
+      }
+    ]
+  },
+  "pytt2.2": {
+    "name": "Variable Type Conversion",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "i = 20",
+        "comment": "This statement assigns the integer '20' to the variable 'i'"
+      },
+      {
+        "line": "j = 20.5",
+        "comment": "This statement assigns the floating point value '20.5' to the variable 'j'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(int(j))",
+        "comment": "This statement explicitly converts the float value of variable 'j' into an integer. Since it is now an integer, it will print out '20'. This conversion is dynamic and the original value of variable 'j' is not updated"
+      },
+      {
+        "line": "print(str(i))",
+        "comment": "This statement explicitly converts the integer value of variable 'i' into a string. It will print out the string \"20\""
+      },
+      {
+        "line": "print(hex(i))",
+        "comment": "This statement will convert the value of 'i' into its equivalent hexadecimal value. The resultant output will be '0x14'"
+      },
+      {
+        "line": "print(oct(i))",
+        "comment": "This statement will convert the value of 'i' into its equivalent octadecimal value. The resultant output will be '0o24'"
+      }
+    ]
+  },
+  "pytt2.3": {
+    "name": "Currency Conversion Kiosk",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "dollars_for_euro = 1.2",
+        "comment": "Assigning the float value '1.2' to the variable 'dollars_for_euros'. Ths specifies the ratio of rates of euros to the dollar."
+      },
+      {
+        "line": "commission = 3",
+        "comment": "Assigning the integer value '3' to the variable 'commission'. This specifies the commission charges."
+      },
+      {
+        "line": "euro = 100",
+        "comment": "Assigning the integer value '100' to the variable 'euros'. This specifies the number of euros to be converted."
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "dollars = euro * dollars_for_euro - commission",
+        "comment": "This is a simple Arithmetic operation to convert euros to dollar. It also considers the commission rate."
+      },
+      {
+        "line": "print(\"For\", euro, \"euros you will get\", dollars, \"dollars\")",
+        "comment": "This statement prints out the dollars you will receive in return when you give 100 euros."
+      }
+    ]
+  },
+  "pytt4.1": {
+    "name": "Countdown to Zero",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "# Simple countdown problem",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "counter = 10",
+        "comment": "The counter variable is set to the value '10'"
+      },
+      {
+        "line": "print(\"Start counting...\")",
+        "comment": "Inform the user that the counting has started"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "while counter > 0:",
+        "comment": "Initialize the While loop and set the condition to loop till the value of the counter is greater than zero"
+      },
+      {
+        "line": "\tprint(counter)",
+        "comment": "Print out the current counter value. This will print out the counter value in each iteration."
+      },
+      {
+        "line": "\tcounter = counter - 1",
+        "comment": "Decrement the counter value by one"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(\"Fire!\")",
+        "comment": "When the counter value is '0', the while loop condition is not met and the loop will exit. It will then print the string 'Fire!'"
+      }
+    ]
+  },
+  "pytt4.2": {
+    "name": "Table of Squares",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "# Table of Squares Program",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "numbers_to_print = 10",
+        "comment": "Setting up the numbers to printed as '10'. This means that squares of numbers from 1 to 10 will be printed in the program"
+      },
+      {
+        "line": "i = 1",
+        "comment": "Initializing the loop condition variable to '1'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "while i <= numbers_to_print:",
+        "comment": "Initializing the 'while' loop with the condition to iterate until 'i' is less than or equal to 'numbers_to_print' (that means iterate till 'i' is less than or equal to 10)"
+      },
+      {
+        "line": "\tsquare = i * i",
+        "comment": "This statement simply squares the number by multiplying the number with itself"
+      },
+      {
+        "line": "\tprint(i, \"squared =\", square)",
+        "comment": "This statement prints out the square of the number"
+      },
+      {
+        "line": "\ti += 1",
+        "comment": "Incrementing the value of 'i'. This is an important step in the 'while' loop. If the value of 'i' is not incremented, the 'while' loop will execute infinitely"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(\"Done!\")",
+        "comment": "When the condition is not True ('i' is greater than 'numbers_to_print'), it will exit the while loop and print the string 'Done!' to inform the user that the program is terminated."
+      }
+    ]
+  },
+  "pytt4.3": {
+    "name": "Conversion Table (Fahrenheit to Celsius)",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "lower = 0",
+        "comment": "Assigning the lower bound value to the variable 'lower'"
+      },
+      {
+        "line": "upper = 300",
+        "comment": "Assigning the upper bound value to the variable 'upper'"
+      },
+      {
+        "line": "step = 20",
+        "comment": "Defining the step size of the conversion table. The variable 'step' is used for this purpose. In this case we define the step size to be 20"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "fahr = lower\t",
+        "comment": "This statement basically assigns the value of variable 'lower' to the variable 'fahr'"
+      },
+      {
+        "line": "while fahr < upper: ",
+        "comment": "Initializing the 'while' loop and setting the condition so that it iterates till the value of 'fahr' is less than the value of 'upper' (less than 300)"
+      },
+      {
+        "line": "    celsius = (5.0 / 9.0) * (fahr - 32.0);",
+        "comment": "This is the conversion formula to convert the temperature from Fahrenheit to Celsius"
+      },
+      {
+        "line": "    print (fahr, \"F =\", celsius, \"C\")",
+        "comment": "Printing out the result"
+      },
+      {
+        "line": "    fahr += step",
+        "comment": "Incrementing the value of Fahrenheit by step size (20)"
+      }
+    ]
+  },
+  "pytt4.4": {
+    "name": "Calculating Interest Over Years",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "#Calculating Interest Over Years",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "capital = float(input(\"Startup capital ($$$.cc): \"))",
+        "comment": "Taking capital amount as user input and storing it in the variable 'capital'"
+      },
+      {
+        "line": "interest_rate = float(input(\"Interest rate in percents (xx.xx): \"))",
+        "comment": "Taking interest rate as input from the user and storing it in the variable 'interest_rate'"
+      },
+      {
+        "line": "years = int(input(\"How many years? \"))",
+        "comment": "Taking number of years as input from the user and storing it in the variable 'years'"
+      },
+      {
+        "line": "year = 1",
+        "comment": "Integer '1' is assigned to the variable 'year'. This variable will be used later as the condition for the 'while' loop"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "while year <= years:",
+        "comment": "Initializing 'while' loop. This loop is set to iterate until year is less than or equal to years that was given as input by the user"
+      },
+      {
+        "line": "    interest = capital * interest_rate / 100;",
+        "comment": "This is the formula to calculate the interest, when the capital and interest rate are known"
+      },
+      {
+        "line": "    print(\"Earned $\", interest, \"in year\", year)",
+        "comment": "Printing out the interest of each year"
+      },
+      {
+        "line": "    capital += interest",
+        "comment": "Updating the value of capital by adding the interest earned in that year"
+      },
+      {
+        "line": "    year += 1",
+        "comment": "Updating the value of 'year'. This value has to be updated for the loop to give correct results. If this value is not updated, the loop will run indefinitely"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(\"Capital afrer\", years, \"years in bank is $\", capital)",
+        "comment": "Once the condition is False, the program breaks out of the loop and prints out the total capital after certain amount of years"
+      }
+    ]
+  },
+  "pytt4.5": {
+    "name": "Sum and Average Using Loops",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "#Sum and Average using Loops",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "count = int(input(\"How many numbers: \"))",
+        "comment": "Count variable takes in the total number of numbers on which operation is to be performed"
+      },
+      {
+        "line": "round = 1",
+        "comment": "The variable 'round' is initiated with the value '1'"
+      },
+      {
+        "line": "sum = 0",
+        "comment": "The variable 'sum' is initiated to '0'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "while round <= count:",
+        "comment": "Initiating the 'while' loop with the condition to iterate until the value of round is less than or equal to count"
+      },
+      {
+        "line": "    number = float(input(\">\"))",
+        "comment": "Then the user is asked to input a number in each iteration"
+      },
+      {
+        "line": "    sum += number",
+        "comment": "The value of 'sum' is updated by adding it to the number that was given by the user"
+      },
+      {
+        "line": "    round += 1",
+        "comment": "The value of 'round' in each iteration"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if count > 0:",
+        "comment": "If the total numbers given by the users is atleast 1 or more than 1"
+      },
+      {
+        "line": "    print(\"Sum =\", sum, \"Average =\", sum / count)",
+        "comment": "then we calculate the sum and average of those numbers"
+      },
+      {
+        "line": "else:",
+        "comment": ""
+      },
+      {
+        "line": "    print(\"Can't calculate average of\", count, \"numbers\")",
+        "comment": "Else we notify the user that the operation cannot be performed"
+      }
+    ]
+  },
+  "pytt4.6": {
+    "name": "Sentinel Loop Control",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "#Sentinel Loop Control",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(\"Enter temperature observations, -300 to stop\")",
+        "comment": "This is a simple instruction given to the operator of this code"
+      },
+      {
+        "line": "count = 0",
+        "comment": "Count is initialised to '0'"
+      },
+      {
+        "line": "sum = 0.0",
+        "comment": "Sum is also initialised to '0'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "temp = float(input(\"First temperature: \"))",
+        "comment": "This takes in the first temperature reading as input from the user and stores it in the variable 'temp'"
+      },
+      {
+        "line": "while temp > -300.0:",
+        "comment": "Initializing the while loop and setting in the condition to continue iterating till the temperature is more than -300.0"
+      },
+      {
+        "line": "    sum += temp",
+        "comment": "updating the sum value in each iteration (adding the old value to the newly entered value)"
+      },
+      {
+        "line": "    count += 1",
+        "comment": "Incrementing the count value"
+      },
+      {
+        "line": "    temp = float(input(\"Next temperature: \"))",
+        "comment": "this statement asks for the next temperature reading. This will continue until the loop condition is false"
+      },
+      {
+        "line": "",
+        "comment": "Once the 'while' loop condition is False, the program will exit the loop. It will then start executing statements after of the loop"
+      },
+      {
+        "line": "if count > 0:",
+        "comment": "If the total number of temperatures entered by the user is more than '0'..."
+      },
+      {
+        "line": "    print(\"Average temperature =\", sum / count)",
+        "comment": "then print the average temperature of all the readings"
+      },
+      {
+        "line": "else:",
+        "comment": ""
+      },
+      {
+        "line": "    print(\"No valid data entered\")",
+        "comment": "else, give an error warning to the user"
+      }
+    ]
+  },
+  "pytt4.7": {
+    "name": "Table of Squares (For Loop)",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "# Table of Squares (For Loop)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "numbers_to_print = 10",
+        "comment": "The value '10' is assigned to the variable 'numbers_to_print'"
+      },
+      {
+        "line": "for i in range(1, numbers_to_print + 1):",
+        "comment": "Initializing the for loop. This loop will iterate from i=0 to i=numbers_to_print. When we use 'in range' keywords with the for loop, it starts with the first element in the parenthesis and ends with the value one less than the second value in the parenthesis. Hence here it starts with the value 1 and ends with the value numbers_to_print"
+      },
+      {
+        "line": "\tsquare = i * i",
+        "comment": "squaring the value of 'i'"
+      },
+      {
+        "line": "\tprint(i, \"squared =\", square)",
+        "comment": "Printing out square of 'i' in each iteration"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(\"Done!\")",
+        "comment": "Once the loop exits, it will print out the string 'Done!'"
+      }
+    ]
+  },
+  "pytt3.1": {
+    "name": "Maximum of 2 Numbers",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "a = float(input(\"First number?\"))",
+        "comment": "Taking First number as an input from the user and storing it in the variable 'a'"
+      },
+      {
+        "line": "b = float(input(\"Second number?\"))",
+        "comment": "Taking Second number as an input from the user and storing it in the variable 'b'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "max = a",
+        "comment": "Here, we assume that a is the maximum of two numbers"
+      },
+      {
+        "line": "if b > max:",
+        "comment": "But we check the condition, if 'b' is greater than max (i.e. 'a'), then..."
+      },
+      {
+        "line": "\tmax = b",
+        "comment": "then value of 'b' is assigned to 'max'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(max, \"is the maximum\")",
+        "comment": "Printing out the max number"
+      }
+    ]
+  },
+  "pytt3.2": {
+    "name": "Interest Capital and Interest",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "#Program to calculate Capital and Interest",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "rate1 = 5",
+        "comment": "Assigning value 5 to the variable 'rate1'"
+      },
+      {
+        "line": "threshold = 50",
+        "comment": "Similarly keeping the threshold value to '50'"
+      },
+      {
+        "line": "rate2 = 6",
+        "comment": "Assigning the value of 'rate2' to '6'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "capital = float(input(\"Enter your capital: \"))",
+        "comment": "Taking in the float value of capital from user"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "if capital < threshold:",
+        "comment": "If capital is less than threshold provided..."
+      },
+      {
+        "line": "    interest_rate = rate1",
+        "comment": "take 'rate1' as the interest rate"
+      },
+      {
+        "line": "else:",
+        "comment": ""
+      },
+      {
+        "line": "    interest_rate = rate2\t\t",
+        "comment": "else take 'rate2' as the interest rate"
+      },
+      {
+        "line": "print(\"Rate for\", capital, \"is\", interest_rate, \"%\")",
+        "comment": "Printing out the capital and the interest rate"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "annual_interest = capital * interest_rate / 100;",
+        "comment": "calculating and printing the interest and new capital"
+      },
+      {
+        "line": "print(\"Interest is $\", annual_interest)",
+        "comment": "Printing out the new interest rate"
+      },
+      {
+        "line": "print(\"New capital is $\", capital + annual_interest)",
+        "comment": "Printing out the new capital"
+      }
+    ]
+  },
+  "pytt5.1": {
+    "name": "Functions Basics",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "def main():",
+        "comment": "Main Function Declaration"
+      },
+      {
+        "line": "    kids = int(input(\"How many kids? \"))",
+        "comment": "Taking number of kids as an integer input from the user"
+      },
+      {
+        "line": "    apples = int(input(\"How many apples? \"))",
+        "comment": "Taking number of apples as an integer input from the user"
+      },
+      {
+        "line": "    rounds = 0",
+        "comment": "Initiating the variable 'rounds' (assigning the value '0'). This variable will be used as the counter for number of rounds"
+      },
+      {
+        "line": "    while apples >= kids:",
+        "comment": "This while loop will iterate till the condition 'apples is greater than or equal to kids' is true."
+      },
+      {
+        "line": "        apples -= kids",
+        "comment": "decrementing the value of apples by number of kids in each iteration (round)"
+      },
+      {
+        "line": "        rounds += 1",
+        "comment": "incrementing the value of 'rounds' by 1 to denote the 'number of rounds'"
+      },
+      {
+        "line": "    print(apples, \"apples left after round\", rounds)",
+        "comment": "This will print out 'x' number of apples left after 'y' rounds. Here x and y are integer values that are computed in the While loop"
+      },
+      {
+        "line": "    print(\"Each kid got {0} apples.\".format(rounds))",
+        "comment": "This print statement uses the concept of output formatting. Here the value of 'rounds' is passed within the print statement by using the 'format' method and passing the argument 'rounds'. Here '0' stands for the index number of the argument tuple. 'rounds' is passed as the first argument (index 0) so {0} would fetch the value of 'rounds'"
+      },
+      {
+        "line": "    print(\"{0} apples left.\".format(apples))",
+        "comment": "Here we print the number of apples left at the end. Again, here {0} represents the index number of the variable in the tuple. Index 0 has the variable apples. Hence the value of apples will be printed out within the print statement."
+      }
+    ]
+  },
+  "pytt5.2": {
+    "name": "Function - Repetitive Calling",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "def happy():",
+        "comment": "Defining the function 'happy'. Here empty parenthesis states that no extra argument is passed."
+      },
+      {
+        "line": "    print(\"Happy Birthday to you!\")",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "def bday(name):",
+        "comment": "Defining another function 'bday'. This function takes in the argument 'name'. Argument can be considered as input given to the function"
+      },
+      {
+        "line": "    happy()",
+        "comment": "This statement calls the function 'happy' inside of the function 'bday'. This will print out the contents of the 'happy' function"
+      },
+      {
+        "line": "    happy()",
+        "comment": "We can call a function multiple times"
+      },
+      {
+        "line": "    print(\"Happy Birthday, dear {0}!\".format(name))",
+        "comment": "Printing out the message by passing the 'name' within the print statement."
+      },
+      {
+        "line": "    happy()",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "def main():",
+        "comment": "Main function declaration"
+      },
+      {
+        "line": "    bday(\"Mary\")",
+        "comment": "calling the function 'bday' by passing the argument 'Mary' "
+      },
+      {
+        "line": "    bday(\"Josh\")",
+        "comment": "calling the function 'bday' by passing the argument 'Josh' "
+      },
+      {
+        "line": "    bday(\"Professor Flynn\")",
+        "comment": "calling the function 'bday' by passing the argument 'Flynn' "
+      },
+      {
+        "line": "main()",
+        "comment": "Calling the main function. So at a glance, the 'main' function is called, which then calls the 'bday' function by passing in the argument 'name' as a string. The bday function then in turn calls the 'happy' function"
+      }
+    ]
+  },
+  "pytt3.3": {
+    "name": "Conditionals basics",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "def main(x,y):",
+        "comment": "Function declaration which takes in 2 arguments 'x' and 'y'"
+      },
+      {
+        "line": "    if x - y > 0:",
+        "comment": "This statement checks if the expression 'x-y' is greater than 0"
+      },
+      {
+        "line": "        print(\"The distance is\", x - y)",
+        "comment": "If it is true, it will print out the distance (difference)"
+      },
+      {
+        "line": "    else:",
+        "comment": ""
+      },
+      {
+        "line": "        print(\"The distance is\", y - x)",
+        "comment": "If the condition is not true, it will print out the reverse difference to get the absolute value of the distance"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "main(3, 11)",
+        "comment": "This statement calls the main function by passing 2 integer as arguments"
+      }
+    ]
+  },
+  "pytt7.1": {
+    "name": "Finding elements in a list",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "def which_item(tlist, value):",
+        "comment": "Defining a function 'which_item' and passing the arguments 'tlist' as list type and 'value' as integer (for example)."
+      },
+      {
+        "line": "    for i in range (len (tlist)):",
+        "comment": "For loop checks for items in the list iteratively."
+      },
+      {
+        "line": "        if tlist [i] == value:",
+        "comment": "It checks if the current item matches the value."
+      },
+      {
+        "line": "            return i",
+        "comment": "If it does, then it returns the index of that item. Note that 'i' is the index of that value starting from '0'."
+      },
+      {
+        "line": "    return -1",
+        "comment": "If the item is not found, it will return -1."
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(which_item([1,2,3,4,5],3))",
+        "comment": "Instantiating the function by passing the 'list' and the 'value' to be found in the list as arguments"
+      }
+    ]
+  },
+  "pytt7.2": {
+    "name": "Creating list of items",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "def make_list():",
+        "comment": "Defining the function 'make_list'. Here we do not pass any arguments or parameters to the function"
+      },
+      {
+        "line": "    team_number = int (input (\"How many teams in a hackathlon?\"))",
+        "comment": "This statement takes in the user input and converts the input to 'int' type"
+      },
+      {
+        "line": "    teamlist = [0] * team_number",
+        "comment": ""
+      },
+      {
+        "line": "    for i in range(team_number):",
+        "comment": "this 'for loop' iterates from 0 to team number - 1, i.e., it iterates through each team"
+      },
+      {
+        "line": "        print(\"How many members in team\", i)",
+        "comment": ""
+      },
+      {
+        "line": "        teamlist[i] = int (input (\"? \"))",
+        "comment": "This statement takes in the user input to number of members in a team. Note that this is inside the for loop so it will ask for number of members in each team as it iterates through each team"
+      },
+      {
+        "line": "    return teamlist",
+        "comment": "It then returns the list with the numbers of members in each team"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print(make_list())",
+        "comment": ""
+      }
+    ]
+  },
+  "pytt8.1": {
+    "name": "Finding character in a string",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "def index_string (test_string, symbol_string):",
+        "comment": "Defining a function 'index_string' and passing the arguments 'test_string' which is the input string and 'symbol_string' which is the character to be found in the 'test_string'"
+      },
+      {
+        "line": "    for i in range (len (test_string)):",
+        "comment": "For loop iterates through each element(character) of the string"
+      },
+      {
+        "line": "        if test_string [i] == symbol_string:",
+        "comment": "It checks the condition whether the current character matches the symbol_string"
+      },
+      {
+        "line": "    \t    return i",
+        "comment": "If yes, then it returns the index of that element in the string."
+      },
+      {
+        "line": "    return -1",
+        "comment": "If the element is not found, then it returns -1."
+      },
+      {
+        "line": "    ",
+        "comment": ""
+      },
+      {
+        "line": "print(index_string('abcd','c'))",
+        "comment": ""
+      }
+    ]
+  },
+  "pytt8.2": {
+    "name": "String Index Search",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "def main ():",
+        "comment": "define main function"
+      },
+      {
+        "line": "    mystring = input (\"Enter string to search?\")",
+        "comment": "take a string input from the user and store it in the variable 'mystring'"
+      },
+      {
+        "line": "    mysym = input (\"Enter symbold to search for?\")",
+        "comment": "taking the symbol (character) as input and storing it in the variable 'mysym'"
+      },
+      {
+        "line": "    if mysym in mystring:",
+        "comment": "this statement checks if the symbol or the character given as input from user is in the string"
+      },
+      {
+        "line": "        print(mystring.index(mysym))",
+        "comment": "if yes, it will print out the index where that symbol appears in the string. Not the use of an inbuilt method index()"
+      },
+      {
+        "line": "    else:",
+        "comment": ""
+      },
+      {
+        "line": "        print(mysym + \" not in \" + mystring)",
+        "comment": "if the symbol is not found in the string, then it wil print out a nice error message saying that the symbols id not in the given string"
+      },
+      {
+        "line": "        ",
+        "comment": ""
+      },
+      {
+        "line": "main()",
+        "comment": "calling the main fuction"
+      }
+    ]
+  },
+  "pyt10.16": {
+    "name": "Class Definition - Calculator",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "class calculator(object):",
+        "comment": "This statement defines a class called 'calculator'. The object is a default argument passed to it to tell that the class can be instantiated"
+      },
+      {
+        "line": "    def __init__ (self):",
+        "comment": "this is the class constructor. A constructor always has a default argument 'self'. In fact, every function definition always has 'self' as the its default argument/parameter. The constructor contains all the basic statements that needs to be initiated when the class is called"
+      },
+      {
+        "line": "        self.current = 0",
+        "comment": "Here the variable 'current' is the local variable and is initiated with the value '0'"
+      },
+      {
+        "line": "    def add(self, amount):",
+        "comment": "We now define a class called 'add'. This class takes in an additional argument called 'amount' and we will pass an integer as amount while instantiating the class."
+      },
+      {
+        "line": "        self.current += amount",
+        "comment": "Adding the value of amount to the current value"
+      },
+      {
+        "line": "        return self.current",
+        "comment": "returning the current value"
+      },
+      {
+        "line": "    def subtract(self, amount):",
+        "comment": "Another function definition called 'subtract' which is meant to subtract the amount from the current value"
+      },
+      {
+        "line": "        self.current -= amount",
+        "comment": ""
+      },
+      {
+        "line": "        return self.current",
+        "comment": "returning the value of 'current' variable"
+      },
+      {
+        "line": "    def getCurrent(self):",
+        "comment": "defining a function called 'getCurrent'. The purpose of this function is to get the current value at any time in the program"
+      },
+      {
+        "line": "        return self.current",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "a = calculator()",
+        "comment": "The calculator class instance is passed on to the variable 'a'"
+      },
+      {
+        "line": "print(a.add(5))",
+        "comment": "Addiing the number '5' to the current value. Initially the value of current is '0' and hence this will return the value '5' (0+5 = 5) "
+      },
+      {
+        "line": "print(a.subtract(2))",
+        "comment": "Now the value of current is 5. Here we subtract 2 from the current value by calling the subtract function in the class 'calculator'. This will return the value 3 (5-2 = 3)"
+      }
+    ]
+  },
+  "pyt10.17": {
+    "name": "Class Definition - Bank Account",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "class Customer(object):",
+        "comment": "Defining a class 'Customer'"
+      },
+      {
+        "line": "    def __init__(self, name, balance=0.0):",
+        "comment": "Setting up a constructor taking in 'name' and 'balance'. Here balance is set to '0.0' as its default value"
+      },
+      {
+        "line": "        self.name = name",
+        "comment": "Defining a local variable 'name' and assigning the value of name that was passed in as the argument to the function"
+      },
+      {
+        "line": "        self.balance = balance",
+        "comment": "Defining a local variable 'balance' and assigning the value of balance. Here balance will be assigned the value '0.0' initially"
+      },
+      {
+        "line": "    def withdraw(self, amount):",
+        "comment": "Defining the function 'withdraw' which takes in the argument 'amount'"
+      },
+      {
+        "line": "        if amount > self.balance:",
+        "comment": "here we run a simple conditional statement to check if the amount to be withdrawn is more than the amount in the bank"
+      },
+      {
+        "line": "            raise RuntimeError('Amount greater than available balance.')",
+        "comment": "If yes, we will raise an exception with the custom message saying the amount you want to withdraw is greater than the amount available in your bank account"
+      },
+      {
+        "line": "        self.balance -= amount",
+        "comment": "if the amount to bewithdrawn is less than the amount available in bank, then we subtract the amount from his current balance"
+      },
+      {
+        "line": "        return self.name+' has '+ str(self.balance)",
+        "comment": "returning his updated balance"
+      },
+      {
+        "line": "    def deposit(self, amount):",
+        "comment": "another function called 'deposit' which takes in an additional argument called 'amount'"
+      },
+      {
+        "line": "        self.balance += amount",
+        "comment": "Adding the amount deposited to the current balance"
+      },
+      {
+        "line": "        return self.name+' has '+ str(self.balance)",
+        "comment": "returning his updated balance"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "a = Customer('Tom')",
+        "comment": "Instantiating the class by passing 'Tom' as the name"
+      },
+      {
+        "line": "print(a.deposit(5000))",
+        "comment": "depositing the amount '5000' into Tom'sbank account. This will return '5000.0'"
+      },
+      {
+        "line": "print(a.withdraw(1000))",
+        "comment": "Withdrawing the amount '1000' from Tom's bank account. This will return '4000.0' as his updated balance"
+      }
+    ]
+  },
+  "pyt10.18": {
+    "name": "Classes - Inheritance",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "class Parent:",
+        "comment": "define 'Parent' class"
+      },
+      {
+        "line": "   parentAttr = 100",
+        "comment": "assigning value '100' to the 'parent' variable"
+      },
+      {
+        "line": "   def __init__(self):",
+        "comment": "A constructor definition"
+      },
+      {
+        "line": "      print(\"Calling parent constructor\")",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "   def parentMethod(self):",
+        "comment": "defining a function called 'parentMethod'"
+      },
+      {
+        "line": "      print('Calling parent method')",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "   def setAttr(self, attr):",
+        "comment": "defining another function called 'setAttr'"
+      },
+      {
+        "line": "      Parent.parentAttr = attr",
+        "comment": "assigning the value of attr (which was passed as an argument) to the local variable parentAttr"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "   def getAttr(self):",
+        "comment": "defining another function 'getAttr'"
+      },
+      {
+        "line": "      print(\"Parent attribute :\", Parent.parentAttr)",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "class Child(Parent): # define child class",
+        "comment": "Now we define a 'Child' class. Here we pass 'Parent' as an argument. This is the core concept of inheritance. Instead of starting from scratch, you can create a class by deriving it from a preexisting class by listing the parent class in parentheses after the new class name.The child class inherits the attributes of its parent class, and you can use those attributes as if they were defined in the child class. A child class can also override data members and methods from the parent."
+      },
+      {
+        "line": "   def __init__(self):",
+        "comment": ""
+      },
+      {
+        "line": "      print(\"Calling child constructor\")",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "   def childMethod(self):",
+        "comment": ""
+      },
+      {
+        "line": "      print('Calling child method')",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "c = Child()",
+        "comment": "Instantiating the Child class"
+      },
+      {
+        "line": "c.childMethod()",
+        "comment": "child calls its method"
+      },
+      {
+        "line": "c.parentMethod()",
+        "comment": "calls parent's method"
+      },
+      {
+        "line": "c.setAttr(200)",
+        "comment": "again call parent's method"
+      },
+      {
+        "line": "c.getAttr()",
+        "comment": "once again call parent's method"
+      }
+    ]
+  },
+  "pyt10.19": {
+    "name": "References Basics",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "def modify(number):",
+        "comment": "defining a function called 'modify' which takes in an integer argument 'number'"
+      },
+      {
+        "line": "    number = 10",
+        "comment": "Assigning the value '10' to the variable 'number'. Note that th variabe 'number' is the local variable and its scope is only confined to this function. What we do here is modify the value of the variable 'number' instead of the using the one that is passed as the argument"
+      },
+      {
+        "line": "    print(\"Number in modify function is:\", number)",
+        "comment": "Printing out the number in the modify function"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "def main():",
+        "comment": "Defining the main function"
+      },
+      {
+        "line": "    number = 5",
+        "comment": "defining the variable 'number'. This is not same as the number variable defined above. Again this variable's scope is only confined to this function and hence it is an example of a local variable."
+      },
+      {
+        "line": "    modify(number)",
+        "comment": "now we cll the modify function within the main function and passing the value of number as '5'."
+      },
+      {
+        "line": "    print(\"In main function, number is still:\", number)",
+        "comment": "In the main function the value of variable 'number' is still '5'"
+      },
+      {
+        "line": " ",
+        "comment": ""
+      },
+      {
+        "line": "main()",
+        "comment": "calling the main function"
+      }
+    ]
+  },
+  "pyt10.20": {
+    "name": "Exceptions Basics",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "def str_to_int(var):",
+        "comment": "defining a function 'str_to_int' which converts an integer with the type string to an int type. Here we pass the argument that takes an integer with string type. For example \"123\". Here '123' is enclosed in doubl quotes which suggest that it is a string type"
+      },
+      {
+        "line": "   try:",
+        "comment": "The try blocks tries to execute the code within it"
+      },
+      {
+        "line": "      return int(var)",
+        "comment": "Here we return the converted value from str to int"
+      },
+      {
+        "line": "   except ValueError:",
+        "comment": "If the value passed in the argument 'var' does not contain numbers, then it will raise an exception (error)"
+      },
+      {
+        "line": "      print(\"The argument does not contain numbers\")",
+        "comment": "In python we have the facility to pass a custom message as an error"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "str_to_int(\"xyz\")",
+        "comment": "calling the function 'str_to_int'"
+      }
+    ]
+  },
+  "pyt10.21": {
+    "name": "Exceptions 2",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "def print_number(n):",
+        "comment": "Defining a function 'print_number' and passing in the interger argument 'n'"
+      },
+      {
+        "line": "    print(n)",
+        "comment": "printing out the value of 'n'"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "the_list = (1, 2, 3, 4, 5)",
+        "comment": "Creating a list containing 5 integer elements"
+      },
+      {
+        "line": "for i in range(10):",
+        "comment": "a for loop that iterates 10 times"
+      },
+      {
+        "line": "    try:",
+        "comment": "the try block tries to print elements of the lists if they exist at a given index in the list"
+      },
+      {
+        "line": "        print_number(the_list[i])",
+        "comment": ""
+      },
+      {
+        "line": "    except:",
+        "comment": "There are 5 elements in the list and the for loop runs for 10 iterations. So, from iteration numer 6 onwards the try block will not find elements at the given index. This statement means that if there are no elements at the index that we are searching then we manually pass an integer argument by calling the function definition. Here instead of raising an error, we customized the fail-safe."
+      },
+      {
+        "line": "        print_number(0)",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt10.22": {
+    "name": "Reading from a text file",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "f = open(\"test.txt\",\"r\") ",
+        "comment": "opens file with name of 'test.txt'"
+      },
+      {
+        "line": "print(f.read(1))",
+        "comment": "This statement reads specific number of characters from the mentioned file. Here '1' is passed as a parameter value into the read method. This means that it will read only one character from the mentioned file."
+      },
+      {
+        "line": "print(f.read())",
+        "comment": "As above, it will read the number of characters specified. Here, nothing is mentioned within the parenthesis, hence it will read all the characters from the mentioned file"
+      },
+      {
+        "line": "print(f.readline(2))",
+        "comment": "This is the statement which will read the number of lines from a given file. Here 2 is passed as a parameter to the 'readline' method hence it will read 2 lines from the mentioned text file"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "myList = []",
+        "comment": "Creating an empty list named 'myList'"
+      },
+      {
+        "line": "for line in f:",
+        "comment": "for loop iterates for each line in f (the mentioned text file)"
+      },
+      {
+        "line": "    myList.append(line)",
+        "comment": "and then it appends that line into the 'myList' as an element"
+      },
+      {
+        "line": "print(myList)",
+        "comment": "this statement simply prints out the entire list"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "f.close()",
+        "comment": "This statement closes the connection to the file"
+      }
+    ]
+  },
+  "pyt10.23": {
+    "name": "Writing to a text file",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "f = open(\"test.txt\",\"w\")",
+        "comment": "opens file with name of \"test.txt\" Here we give 2 arguments. The first as we know specifies the name of the text file. The second argument specifies the mode of writing. 'w' stands for write. When we open the text file using the mode 'w' it erases the existing data and writes the new data that we specify"
+      },
+      {
+        "line": "f.write(\"This is the first Line\")",
+        "comment": "This statement writes the following string into the text file"
+      },
+      {
+        "line": "f.write(\"This is the second line\")",
+        "comment": "Writing another line into the text file"
+      },
+      {
+        "line": "f.close()",
+        "comment": "Once we have written all the required lines into the text file, we close the connection to the text file"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "f = open(\"test.txt\",\"a\") ",
+        "comment": "opens file with name of \"test.txt\". Here the second argument we specified is 'a' which stands for append. This means that it does not delete the existing data when the new data is written but it appends the new data at the end of the file"
+      },
+      {
+        "line": "f.write(\"Yet another line\")",
+        "comment": ""
+      },
+      {
+        "line": "f.close()",
+        "comment": "Finally when we are done appending the new data, we close the connection to the file"
+      }
+    ]
+  },
+  "pyt10.24": {
+    "name": "Exceptions 3",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "loop = 1",
+        "comment": "Assigning value '1' to the variable 'loop'"
+      },
+      {
+        "line": "while loop == 1:",
+        "comment": "While loop will iterate till the condition 'loop = 1' is true"
+      },
+      {
+        "line": "    try:",
+        "comment": "try block tries to get input values from the user"
+      },
+      {
+        "line": "        a = input('Enter a number to subtract from > ')",
+        "comment": ""
+      },
+      {
+        "line": "        b = input('Enter the number to subtract > ')",
+        "comment": ""
+      },
+      {
+        "line": "        print(int(a) - int(b))",
+        "comment": "if the input are numbers, then the print block will print out the difference between the 2 numbers"
+      },
+      {
+        "line": "    except NameError:",
+        "comment": "If the input values are string values, the print function will nt be able to print the difference and hence this will raise an exception"
+      },
+      {
+        "line": "        print(\"\\nYou cannot subtract a letter\")",
+        "comment": ""
+      },
+      {
+        "line": "        continue",
+        "comment": ""
+      },
+      {
+        "line": "    try:",
+        "comment": "This try block tries to get another input from user to see if user wants to repeat the experiment"
+      },
+      {
+        "line": "        loop = input('Press 1 to try again > ')",
+        "comment": "If the user enters '1', it will repeat the experiment."
+      },
+      {
+        "line": "    except NameError:",
+        "comment": "Else it will raise a NameError exception"
+      },
+      {
+        "line": "        loop = 0",
+        "comment": "And then the loop variable is assigned the value '0'. This will stop the while loop from iterating"
+      }
+    ]
+  },
+  "pytt10.23": {
+    "name": "References with Lists",
+    "description": "",
+    "language": "py",
+    "author": "py.teacher",
+    "lines": [
+      {
+        "line": "def try_to_change_list_contents(the_list):",
+        "comment": "Defining the function 'try_to_change_list_contents' and passing in the argument 'the_list' which will of the type list"
+      },
+      {
+        "line": "    print('got', the_list)",
+        "comment": "printing out the list"
+      },
+      {
+        "line": "    the_list.append('four')",
+        "comment": "Here, we append the string value 'four' to the list"
+      },
+      {
+        "line": "    print('changed to', the_list)",
+        "comment": "printing out the updated list"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "outer_list = ['one', 'two', 'three']",
+        "comment": "Defining a list outside the function called 'outer_list' with 3 elements"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print('before, outer_list =', outer_list)",
+        "comment": "printing out the list which is the list before modification"
+      },
+      {
+        "line": "try_to_change_list_contents(outer_list)",
+        "comment": "then passing the above list as argument to the defined function 'try_to_change_list_contents'"
+      },
+      {
+        "line": "print('after, outer_list =', outer_list)",
+        "comment": "and then printing the list after modification from outside of the function to see if the original list contents are modified."
+      }
+    ]
+  },
+  "pytt10.24": {
+    "name": "References with Lists",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "def try_to_change_list_contents(the_list):",
+        "comment": "Defining the function 'try_to_change_list_contents' and passing in the argument 'the_list' which will of the type list"
+      },
+      {
+        "line": "    print('got', the_list)",
+        "comment": "printing out the list"
+      },
+      {
+        "line": "    the_list.append('four')",
+        "comment": "Here, we append the string value 'four' to the list"
+      },
+      {
+        "line": "    print('changed to', the_list)",
+        "comment": "printing out the updated list"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "outer_list = ['one', 'two', 'three']",
+        "comment": "Defining a list outside the function called 'outer_list' with 3 elements"
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print('before, outer_list =', outer_list)",
+        "comment": "printing out the list which is the list before modification"
+      },
+      {
+        "line": "try_to_change_list_contents(outer_list)",
+        "comment": "then passing the above list as argument to the defined function 'try_to_change_list_contents'"
+      },
+      {
+        "line": "print('after, outer_list =', outer_list)",
+        "comment": "and then printing the list after modification from outside of the function to see if the original list contents are modified."
+      }
+    ]
+  },
+  "pytt10.25": {
+    "name": "References - Values",
+    "description": "",
+    "language": "py",
+    "author": "hnvasa",
+    "lines": [
+      {
+        "line": "def modify(string1):",
+        "comment": "defining the function 'modify' and passing in a string parameter"
+      },
+      {
+        "line": "    string1 = string1.replace(\"2\", \"3\")",
+        "comment": "replacing one character in the string that was passed in the function"
+      },
+      {
+        "line": "    return string1",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "def main():",
+        "comment": "Main function definition"
+      },
+      {
+        "line": "    outer_string = \"I have visited 2 countries.\"",
+        "comment": "defining a variable 'outer_string' and assigning a string value to it"
+      },
+      {
+        "line": "    print(outer_string)",
+        "comment": "printing out the variable"
+      },
+      {
+        "line": "    modify(outer_string)",
+        "comment": "calling the function 'modify' and passing in the string 'outer_string'. Note that we pass the string to the function as a parameter (argument) but we do not save the value returned by the 'modify' function into the main function anywhere"
+      },
+      {
+        "line": "    print(outer_string)",
+        "comment": "printing out the 'out_string'. Here the value of the variable 'out_string' will be the same"
+      },
+      {
+        "line": "    outer_string = modify(outer_string)",
+        "comment": "Now we pass the same variable 'out_string' to the 'modify' function but we also save the return value into the same variable, thus updating its value"
+      },
+      {
+        "line": "    print(outer_string)",
+        "comment": "printing out the updated string value"
+      },
+      {
+        "line": "main()",
+        "comment": ""
+      }
+    ]
+  },
+  "pyt8.2_version_2": {
+    "name": "AccessingTupleIndex_version_1",
+    "description": "",
+    "language": "py",
+    "author": "guest",
+    "lines": [
+      {
+        "line": "a = ('a','b','c','d')",
+        "comment": ""
+      },
+      {
+        "line": "",
+        "comment": ""
+      },
+      {
+        "line": "print (a[2])",
+        "comment": "Accessing the index 2 element of the tuple (3rd element since the tuple index always starts from 0)"
+      },
+      {
+        "line": "print (a[3])",
+        "comment": "Accessing the index 3 element of the tuple (4th element since the tuple index always starts from 0)"
+      }
+    ]
+  }
+}

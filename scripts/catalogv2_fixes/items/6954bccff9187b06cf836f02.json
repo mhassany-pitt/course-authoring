@@ -1,0 +1,138 @@
+{
+  "id": "6954bccff9187b06cf836f02",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:04.476Z",
+  "tags": [],
+  "identity": {
+    "id": "py_string_repeated_nums_es",
+    "title": "Generar string de numeros repetidos con for (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/347/embed?act=PCRS&sub=py_string_repeated_nums_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Est\u00e1s desarrollando una funci\u00f3n para generar un patr\u00f3n de n\u00fameros repetidos. Tu tarea es escribir una funci\u00f3n que reciba dos n\u00fameros enteros, 'inicio' y 'fin', y que retorne un \u00fanico string que contenga cada n\u00famero del rango (inicio a fin, inclusive) repetido tantas veces como su valor, todo concatenado en una sola l\u00ednea.Crea una funci\u00f3n llamada generar_string_repetidos(inicio, fin) que:- Recorra todos los n\u00fameros desde inicio hasta fin (inclusive).- Para cada n\u00famero, lo repita tantas veces como su valor.- Devuelva un string \u00fanico con todos los n\u00fameros repetidos concatenados.- Asuma que inicio y fin seran ambos mayores o igual a 1- Si bien puede resolverlo usando ciclo while, use ciclo for para escribir su respuestaNota: No debe haber espacios ni saltos de l\u00ednea en el string final.",
+    "source_code": "[student_code]\r\ndef generar_string_repetidos(inicio,fin):\r\n    #PENDIENTE: escriba codigo aqui \r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "StringLiteral",
+          "CheckingForItem",
+          "Multiplication",
+          "Concatenation",
+          "Addition",
+          "TransformingToStringType",
+          "DefiningSimpleFunction",
+          "MixedNestedLoopIteration",
+          "NestedForLoopIteration",
+          "ForLoopWith+=",
+          "AugmentedAssignmentStatement",
+          "ChangingValueVariable",
+          "IntegerLiteral",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "AugmentedAssignmentStatement",
+          "ForLoopWith+=",
+          "IntegerLiteral",
+          "MixedNestedLoopIteration",
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "Concatenation",
+          "DefiningSimpleFunction",
+          "Multiplication",
+          "NestedForLoopIteration",
+          "TransformingToStringType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/347/embed?act=PCRS&sub=py_string_repeated_nums_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Ciclos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Ciclos For",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Ciclos",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.980Z"
+}

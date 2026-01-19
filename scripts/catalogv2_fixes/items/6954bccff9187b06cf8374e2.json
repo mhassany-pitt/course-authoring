@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8374e2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2015-10-13T01:22:23.000Z",
+  "updated_at": "2026-01-17T12:57:09.850Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "pytt2.3",
+    "title": "Currency Conversion Kiosk",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pytt2.3&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2015-10-13T01:22:23.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "dollars_for_euro = 1.2\ncommission = 3\neuro = 100\n\ndollars = euro * dollars_for_euro - commission\nprint(\"For\", euro, \"euros you will get\", dollars, \"dollars\")"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pytt2.3&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.142Z"
+}

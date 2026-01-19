@@ -1,0 +1,174 @@
+{
+  "id": "6954bccff9187b06cf83712c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-09-28T08:13:21.000Z",
+  "updated_at": "2026-01-17T05:28:58.461Z",
+  "tags": [],
+  "identity": {
+    "id": "overload_plane",
+    "title": "Plane class",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/458/embed?act=PCRS&sub=overload_plane"
+  },
+  "attribution": {
+    "created_at": "2020-09-28T08:13:21.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the code for the class Plane. The variable mileage refers to the accumulated number of miles that a plane has traveled and the variable hoursFlight refers to the accumulated number of hours that a plane has traveled.Here is the definition of the four variants of the method fly (speed of the plane is given in mph), written in UML notation:+ fly(hours: float)+ fly(miles: double)+ fly(hours: flight, speed: int)+ fly(miles: double, speed: int)Whenever a flight is taken by executing the method fly in any of its four variants, the mileage and the flightHours  need to be updated accordingly. When speed is not provided in the method fly, you need to use the constant AVG_SPEED. If the provided speed is greater that the MAX_SPEED, you need to use MAX_SPEED.You also need to complete the getters/setters for mileage and flightHours (Note: no negative or zero mileage,flightHours or speed are allowed, if that happens, current values of mileage and flightHours must be kept the same)More instructions on how to implement the missing parts of this class are provided in the code below.",
+    "source_code": "[file Plane.java]\n[blocked]\npublic class Plane {\n    private String airline;\n    private String model;\n    private double mileage;\n    private float flightHours;\n    \n    final int AVG_SPEED = 550;//average speed of the plane in mph\n    final int MAX_SPEED = 750;//max speed of the plane in mph\n    \n    public Plane(){\n        mileage = 0.0;\n        flightHours = 0.0f;\n        airline = \"LATAM\";\n        model = \"Boeing 787\";\n    }\n    \n    public Plane(String airline, String model, double mileage, float flightHours){\n\t\tthis.airline = airline;\n        this.model = model;\n        this.mileage = mileage;\n        this.flightHours = flightHours;\n    }\n    \n    public void setAirline(String airline){\n    \tthis.airline = airline;\n    }\n    \n    public String getAirline(){\n    \treturn airline;\n    }\n    \n    public void setModel(String model){\n    \tthis.model = model;\n    }\n    \n    public String getModel(){\n    \treturn model;\n    }\n    \n[/blocked]\n     [student_code]\n    // TODO: add the missing getters/setters for mileage and flightHours\n    \n    \n    \n    \n    // TODO: add the 4 overloaded fly methods\n    \n\n        \n        \n    \n    \n    \n\t[/student_code]\n    [blocked]\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "ThisReference",
+          "ConstructorName",
+          "ConstructorDefinition",
+          "ConstructorSignature",
+          "Constructor",
+          "ConstructorCall",
+          "PublicConstructorSpecifier"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "Constructor",
+          "ConstructorCall",
+          "ConstructorDefinition",
+          "ConstructorName",
+          "ConstructorSignature",
+          "PublicConstructorSpecifier",
+          "ThisReference"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/458/embed?act=PCRS&sub=overload_plane"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Overload/Arrays",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Constructors/Overloading",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Constructors/Overload/Inheritance",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Overload/Arrays",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Overload/Arrays",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Overload/Arrays",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Overload/Arrays",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Constructors/Overloading",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 2- Objects and Classes",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Overload/Arrays",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Constructors/Overloading",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.053Z"
+}

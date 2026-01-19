@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e9a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:52.286Z",
+  "tags": [],
+  "identity": {
+    "id": "py_count_NM",
+    "title": "PCRS C3-PL  Count Nm",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/148/embed?act=PCRS&sub=py_count_NM"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write a function that takes a list of ints and two ints,N and M, and returns the number of timesNM occurs in order in the given list.For example:    countNM([1,2,3,4,5], 2, 1) => 0    countNM([1,2,3,4,5], 1, 2) => 1    countNM([1,2,1,2,1], 1, 2) => 2    countNM([-3, 8, 9, 12, 8, 12, 9], 12, 8) => 1",
+    "source_code": "[student_code]\ndef countNM(items, n, m):\n    #code\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/148/embed?act=PCRS&sub=py_count_NM"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.967Z"
+}

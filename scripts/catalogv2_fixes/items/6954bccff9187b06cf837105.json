@@ -1,0 +1,135 @@
+{
+  "id": "6954bccff9187b06cf837105",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2021-03-02T10:32:54.000Z",
+  "updated_at": "2026-01-17T05:28:54.169Z",
+  "tags": [],
+  "identity": {
+    "id": "class_bank",
+    "title": "class_bank",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/497/embed?act=PCRS&sub=class_bank"
+  },
+  "attribution": {
+    "created_at": "2021-03-02T10:32:54.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "You have a class called Bank that keeps track of how much money you have in your \"Bank account\". You are provided with the constructor and the accessors, but you need to write the setter methods for this class. Write a method called addMoney to add money to the \"spending account\" (this is your spendings variable), and another method that \"transfers\" all of your money from your spending account into your savings account (this is your savings variable).E.g. 1: If I had a Bank object called myBank, myBank.addMoney(150.0) should add $150 to my spending accountE.g. 2: If I had a Bank object called myBank, myBank.moveToSavings() should transfer my original $150 from my spending account into my savings account and my spending account should be 0.Hint: Make sure both setter methods you write are void methodsHint: When transferring money from spending to savings, make sure you set spending back to 0.",
+    "source_code": "[file Bank.java]\n[blocked]\npublic class Bank {\n    private double spending;\n    private double savings;\n    \n    public Bank()\n    {\n     \t this.spending = 0.0;\n         this.savings = 0.0;\n    }\n    \n    public double getSpending()\n    {\n    \treturn this.spending;\n    }\n    public double getSavings()\n    {\n    \treturn this.savings;\n    }\n    \n    //Write a method called addMoney to add money to the spending account\n [/blocked]\n[student_code]\n\t//TODO: add the addMoney method here\n\t    \n    \n\t\n[/student_code]\n[blocked]\n    //Write a method called moveToSavings that transfers all the money in spending to savings\n[/blocked]\n[student_code]\n\t//TODO: add the moveToSavings method here\n\t    \n    \n\t\n[/student_code]\n[blocked]\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "MethodImplementation",
+          "MethodSignature",
+          "FormalMethodParameter",
+          "Method",
+          "PublicMethodSpecifier"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "FormalMethodParameter",
+          "Method",
+          "MethodImplementation",
+          "MethodSignature",
+          "PublicMethodSpecifier"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/497/embed?act=PCRS&sub=class_bank"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=409",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Classes/Objects",
+      "used_at": "2021-02-02T10:38:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=415",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Classes/Objects",
+      "used_at": "2021-09-07T10:17:36.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=418",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Classes/Objects",
+      "used_at": "2022-01-19T00:18:35.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 2- Objects and Classes",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    },
+    {
+      "context_id": "cid=458",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Classes/Objects",
+      "used_at": "2025-04-09T09:52:36.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=474",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=474",
+      "context_name": "Java: CMU15-121 | CMU 15-121 - Intro Data Structures - Fall 2025 > Objects and Classes",
+      "used_at": "2025-09-16T16:41:24.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.048Z"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e70",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:47.231Z",
+  "tags": [],
+  "identity": {
+    "id": "py_valid_DNA",
+    "title": "PCRS C3-PL  Valid Dna",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/104/embed?act=PCRS&sub=py_valid_DNA"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "DNA sequences have traditionally been represented as strings of the symbols A, C, G, and T which represent the nucleobases found in natural DNA.  Scientists have recently uncovered the importance of chemical modifications to numerous nucleobases. While many of these were previously known, they have recently been shown to likely have impacts on the regulation of genes (specific sequences of nucleobases that encode for various functional units in cells, often the class of large bio-molecules called proteins). Many other modifications have only recently been discovered and found to be involved in essential cellular processes, some necessary for the development of various organisms.In order to analyze these modifications computationally, researchers at U of T have proposed and made use of an additional set of symbols, in effect, defining an expanded DNA alphabet. For example, cytosine (C) is often modified, by the addition of a methyl group (a CH3) at its fifth carbon, forming 5-methylcytosine. These researchers assign the symbol m to this nucleobase, adding a fifth symbol to the DNA alphabet. They have already defined other symbols and there may be more to come.In this problem you will write a function valid_DNA_sequence that takes a sequence and a DNA nucleobase alphabet, and determines if all the symbols in the sequence are from those in the provided alphabet.Complete the function below.",
+    "source_code": "[student_code]\r\ndef valid_DNA_sequence(sequence, DNA_alphabet):\r\n    \"\"\" (str, str) -> bool\r\n    \r\n    Return True iff sequence is composed only of characters found in DNA_alphabet.\r\n\r\n    >>> valid_DNA_sequence('AmGTCA', 'ACGT')\r\n    False\r\n    >>> valid_DNA_sequence('AmGTCA', 'ACGTmh')\r\n    True\r\n    \"\"\"\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/104/embed?act=PCRS&sub=py_valid_DNA"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.962Z"
+}

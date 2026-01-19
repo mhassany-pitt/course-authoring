@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf836d08",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T18:23:49.000Z",
+  "updated_at": "2026-01-17T05:26:53.631Z",
+  "tags": [],
+  "identity": {
+    "id": "files.j_input_stat__68bdb309f6cc3d7a9cc097bc",
+    "title": "Reporting File Information (Case 1) ",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097bc?_t=1757543543425&index=0"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T18:23:49.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": " Construct a program that receives the full path to an input file from the user, reads that file and reports the number of lines, the longest line, and the number of words on each line. Make sure that the program handles each specific exception that could occur.",
+    "source_code": "import java.io.*;\nimport java.util.Scanner;\npublic class JInputStat1 {\n\tpublic static void main(String[] args) {\n\t\tScanner scan = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter the name of the file:\");\n\t\tString name = scan.next();\n\t\tJInputStat1 i1 = new JInputStat1();\n\t\ti1.getStat(name);\n\t}\n\t//Step 1: Define the method\n\tpublic void getStat(String file_name) {\n\t\t//Step 1.1: Define the variables that we need for reporting the file information\n\t\tint numLines = 0;\n\t\tString longestLine = \"\";\n\t\t//Step 1.2: Enclose the code that might throw an exception within the try block\n\t\ttry {\n\t\t\t//Step 1.2.1: Wrap a BufferedReader around a FileReader\n\t\t\tFileReader fr = new FileReader(file_name); \n\t\t\tBufferedReader br = new BufferedReader(fr); \n\t\t\t//Step 1.2.2: Use the BufferedReader object to read one line at a time\n\t\t\tString line = null;\n\t\t\twhile ( ( line = br.readLine() ) != null) {\n\t\t\t\tnumLines += 1;\n\t\t\t\tString[] tokens = line.split(\" \");\n\t\t\t\tint numWords = tokens.length;\n\t\t\t\t//Determine if the line is the longest line so far\n\t\t\t\tif (line.length() > longestLine.length()) {\n\t\t\t\t\tlongestLine = line;\n\t\t\t\t}\n\t\t\t\t//Print the line information\n\t\t\t\tSystem.out.println(\"Line \" + numLines + \" has \" + numWords + \" tokens \");\n\t\t\t}\n\t\t\tSystem.out.println(\"Longest line:\" + longestLine);\n\t\t\t//Step 1.2.3: Close the BufferedReader object attached to the file\n\t\t\tbr.close();\n\t\t}\n\t\t//Step 1.3: Handle all possible exceptions that may be thrown in the try block \n\t\tcatch (FileNotFoundException ex) {\n\t\t\tSystem.out.println(\"File not found\");\n\t\t} catch (IOException ex ) {\n\t\t\tSystem.out.println(\"Problem with the file!\");\n\t\t}\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097bc?_t=1757543543425&index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > File processing",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.921Z"
+}

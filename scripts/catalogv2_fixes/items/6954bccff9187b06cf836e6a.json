@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e6a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:46.539Z",
+  "tags": [],
+  "identity": {
+    "id": "py_non_intersecting",
+    "title": "PCRS C3-PL  Non Intersecting",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/98/embed?act=PCRS&sub=py_non_intersecting"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write a function non_intersecting that takes two lists as parameters. The first list L1 has elements that are themselves lists of strings. The second L2, is a list of strings.non_intersecting should return a new list that contains the original lists inside L1 that do not contain any of the strings in L2. Your function should not change the original lists passed as parameters.You should complete the docstring (for practice for the exam) although PCRS will not test it.",
+    "source_code": "[student_code]\r\n    \"\"\" (list of list of str, list of str) -> list of list of str\r\n\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/98/embed?act=PCRS&sub=py_non_intersecting"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.962Z"
+}

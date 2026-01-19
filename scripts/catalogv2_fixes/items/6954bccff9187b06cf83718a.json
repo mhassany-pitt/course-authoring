@@ -1,0 +1,140 @@
+{
+  "id": "6954bccff9187b06cf83718a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-06-09T10:57:07.000Z",
+  "updated_at": "2026-01-17T12:55:30.687Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "csedpad_arraylists_ex1",
+    "title": "(Arraylists) Ex1 - CsEdPad",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_arraylists_ex1&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2020-06-09T10:57:07.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "import java.util.ArrayList;\n\npublic class ArrayListEx1 {\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\n\u00a0\u00a0\u00a0\u00a0    ArrayList < String > travelList = new ArrayList < String > ();\n\n\u00a0\u00a0\u00a0\u00a0    travelList.add(\"Switzerland\");\n\u00a0\u00a0\u00a0\u00a0    travelList.add(\"Denmark\");\n\u00a0\u00a0\u00a0\u00a0    travelList.add(\"India\");\n\u00a0\u00a0\u00a0\u00a0    travelList.add(\"China\");\n\u00a0\u00a0\u00a0\u00a0    travelList.add(\"Thailand\");\n\u00a0\u00a0\u00a0\u00a0    travelList.add(\"Bhutan\");\n\n\u00a0\u00a0\u00a0\u00a0    ArrayList < String > newTravelList = new ArrayList <  > ();\n\n\u00a0\u00a0\u00a0\u00a0    for (int i = 0; i < 5; i++) {\n\u00a0\u00a0\u00a0\u00a0        newTravelList.add(i, travelList.get(i));\n\u00a0\u00a0\u00a0\u00a0    }\n\n\u00a0\u00a0\u00a0\u00a0    newTravelList.remove(\"China\");\n\n\u00a0\u00a0\u00a0\u00a0    newTravelList.remove(0);\n\u00a0\u00a0\u00a0\u00a0    System.out.print(newTravelList);\n\n\u00a0\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "java.lang.System.out.print",
+          "java.util.ArrayList.get",
+          "ImportStatement",
+          "PostIncrementExpression",
+          "MethodDefinition",
+          "SimpleAssignmentExpression",
+          "ClassDefinition",
+          "VoidDataType",
+          "java.util.ArrayList",
+          "ObjectCreationStatement",
+          "LessExpression",
+          "IntDataType",
+          "ConstructorCall",
+          "GenericObjectCreationStatement",
+          "StringLiteral",
+          "java.util.ArrayList.add",
+          "ForStatement",
+          "FormalMethodParameter",
+          "ActualMethodParameter",
+          "java.util.ArrayList.remove",
+          "StringDataType",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "ClassDefinition",
+          "ConstructorCall",
+          "FormalMethodParameter",
+          "ForStatement",
+          "GenericObjectCreationStatement",
+          "ImportStatement",
+          "IntDataType",
+          "java.lang.System.out.print",
+          "java.util.ArrayList",
+          "java.util.ArrayList.add",
+          "java.util.ArrayList.get",
+          "java.util.ArrayList.remove",
+          "LessExpression",
+          "MethodDefinition",
+          "ObjectCreationStatement",
+          "PostIncrementExpression",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StringDataType",
+          "StringLiteral",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_arraylists_ex1&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=389",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
+      "context_name": "Java: CSEdPad | CSEdPad Examples > Arraylists",
+      "used_at": "2020-05-10T20:11:07.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.063Z"
+}

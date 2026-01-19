@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8376f7",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:30.973Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "call_by_reference",
+    "title": "Call By Reference",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=call_by_reference&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\nvoid swap(int *i, int *j);\nint main(void)\n{\n\u00a0\u00a0\u00a0int num1, num2;\n\u00a0\u00a0\u00a0num1 = 100;\n\u00a0\u00a0\u00a0num2 = 800;\n\u00a0\u00a0\u00a0printf(\u00e2\u0080\u009cnum1: %d num2: %d\\n\u00e2\u0080\u009d,num1, num2);\n\u00a0\u00a0\u00a0swap(&num1, &num2);\n\u00a0\u00a0\u00a0printf(\u00e2\u0080\u009cnum1: %d num2: %d\\n\u00e2\u0080\u009d,num1, num2);\n\u00a0\u00a0\u00a0return 0;\n}\nvoid swap(int *i, int *j)\n{\n\u00a0\u00a0\u00a0int temp;\n\u00a0\u00a0\u00a0temp = *i;\n\u00a0\u00a0\u00a0*i = *j;\n\u00a0\u00a0\u00a0*j = temp;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=call_by_reference&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.187Z"
+}

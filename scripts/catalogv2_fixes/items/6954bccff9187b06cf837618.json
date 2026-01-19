@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837618",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:57:58.115Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "pass_file",
+    "title": "pass_file",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pass_file&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\n#define LINELEN 81\n#define NUMLINES 5\nchar *file_name = \"text.dat\";\nint main(void)\n{\n\u00a0\u00a0FILE *out_file;\n\u00a0\u00a0void in_out(FILE *);\n\u00a0\u00a0out_file = fopen(file_name,\"w\");\n\u00a0\u00a0if (out_file == (FILE *) NULL)\n\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0printf(\"\\nFailed to open the file %s\\n\", file_name);\n\u00a0\u00a0\u00a0\u00a0return -1;\n\u00a0\u00a0}\n\u00a0\u00a0in_out(out_file);\n\u00a0\u00a0fclose(out_file);\n\u00a0\u00a0return 0;\n}\nvoid in_out(FILE *fname)\n{\n\u00a0\u00a0int count;\n\u00a0\u00a0char line[LINELEN];  \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* enough storage for one line of text */\n\u00a0\u00a0printf(\"Please enter five lines of text:\\n\");\n\u00a0\u00a0for (count = 0; count < NUMLINES; count++)\n\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0gets(line);\n\u00a0\u00a0\u00a0\u00a0fprintf(fname,\"%s\\n\",line);\n\u00a0\u00a0}\n\u00a0\u00a0return;\n}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pass_file&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.174Z"
+}

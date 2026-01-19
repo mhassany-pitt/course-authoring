@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837658",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:07.138Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "IfElse_Structure",
+    "title": "IfElse_Structure",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=IfElse_Structure&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\n\nint main()\n{\n\u00a0\u00a0float monthlySales, income;\n\n\u00a0\u00a0printf(\"Enter the value of monthly sales: \");\n\u00a0\u00a0scanf(\"%f\", &monthlySales);\n\n\u00a0\u00a0if (monthlySales >= 50000.00f)\n\u00a0\u00a0\u00a0\u00a0income = 575.00f + .16f * monthlySales;\n\u00a0\u00a0else if (monthlySales >= 40000.00f)\n\u00a0\u00a0\u00a0\u00a0income = 550.00f + .14f * monthlySales;\n\u00a0\u00a0else if (monthlySales >= 30000.00f)\n\u00a0\u00a0\u00a0\u00a0income = 525.00f + .12f * monthlySales;\n\u00a0\u00a0else if (monthlySales >= 20000.00f)\n\u00a0\u00a0\u00a0\u00a0income = 500.00f + .09f * monthlySales;\n\u00a0\u00a0else if (monthlySales >= 10000.00f)\n\u00a0\u00a0\u00a0\u00a0income = 450.00f + .05f * monthlySales;\n\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0income = 400.00f + .03f * monthlySales;\n\n\u00a0\u00a0printf(\"The income is $%7.2f\\n\",income);\n\n\u00a0\u00a0return 0;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=IfElse_Structure&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.177Z"
+}

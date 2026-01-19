@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836d0a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T18:22:42.000Z",
+  "updated_at": "2026-01-17T05:26:53.858Z",
+  "tags": [],
+  "identity": {
+    "id": "while_loops.j_average__68bdb309f6cc3d7a9cc097c7",
+    "title": "Calculating the Average of Input Integers",
+    "type": "PCEX Set"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097c7?_t=1757543451055&index=0"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T18:22:42.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that reads a series of integers from the user, sums them up, and calculates their average. The user enters 0 to indicate the end of the input.",
+    "source_code": "import java.text.DecimalFormat;\nimport java.util.Scanner;\npublic class JAverage {\n\tpublic static void main(String[] args) {\n\t\t//Step 1: Define the variables that we need for this program\n\t\tint total = 0;\n\t\tint count = 0;\n\t\tdouble average;\n\t\t//Step 2: Read the first integer that the user enters\n\t\tScanner scan = new Scanner(System.in);\n\t\tSystem.out.println(\"Enter an integer (0 to quit): \");\n\t\tint num = scan.nextInt();\n\t\t//Step 3: Process the integer that the user has entered, then receive and process the next integers as long as the user enters a non-zero integer; otherwise stop\n\t\twhile (num != 0) {\n\t\t\tcount++;\n\t\t\ttotal += num;\n\t\t\tSystem.out.println(\"The sum so far is \" + total+\", count = \"+count);\n\t\t\tSystem.out.println(\"Enter an integer (0 to quit): \");\n\t\t\tnum = scan.nextInt();   \n\t\t}\n\t\tscan.close();\n\t\t//Step 4: Calculate and print the average of the integers entered by the user\n\t\tif (count == 0) {\n\t\t\tSystem.out.println(\"No integers were entered.\");\n\t\t} else {\n\t\t\taverage = (double) total / count;\n\t\t\tDecimalFormat fmt = new DecimalFormat(\"0.###\");\n\t\t\tSystem.out.println(\"The average is \" + fmt.format(average));\n\t\t}\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097c7?_t=1757543451055&index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Loops while",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > While Loops",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > While Loops",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.922Z"
+}

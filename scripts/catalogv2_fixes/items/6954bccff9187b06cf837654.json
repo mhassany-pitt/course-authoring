@@ -1,0 +1,92 @@
+{
+  "id": "6954bccff9187b06cf837654",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:06.610Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "wc.c",
+    "title": "IS12:: wc.c (118.6)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=wc.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*  Example: Word Counting\n\n\n\u00a0\u00a0\u00a0\u00a0Source: K&R2, p.20\n\u00a0*/\n\n#include <stdio.h>\n\n#define IN 1 /* inside a word */\n#define OUT 2 /* outside a word */\n\n/* count lines, words, and characters in input */\n\nvoid main () {\n\u00a0\u00a0\u00a0\u00a0int c, nl, nw, nc, state;\n\n\u00a0\u00a0\u00a0\u00a0state = OUT;\n\u00a0\u00a0\u00a0\u00a0nl = nw = nc = 0;\n\u00a0\u00a0\u00a0\u00a0while ((c = getchar()) != EOF) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++nc;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (c == '\n')\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++nl;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (c == ' ' || c == '\n' || c == '\u00a0\u00a0\u00a0\u00a0')\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0state = OUT;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if (state == OUT) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0state = IN;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++nw;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0printf(\"%d %d %d\n\", nl, nw, nc);\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "int",
+          "define",
+          "pre_increment",
+          "printf",
+          "if",
+          "or",
+          "include",
+          "void",
+          "variable_declaration",
+          "equal",
+          "main_function",
+          "if_else",
+          "while",
+          "not_equal",
+          "simple_assignment"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=wc.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.177Z"
+}

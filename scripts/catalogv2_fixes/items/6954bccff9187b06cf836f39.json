@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836f39",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-03-28T00:42:50.000Z",
+  "updated_at": "2026-01-17T05:28:10.374Z",
+  "tags": [],
+  "identity": {
+    "id": "py_reverse_dictionary",
+    "title": "Reverse Mapping",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/56/embed?act=PCRS&sub=py_reverse_dictionary"
+  },
+  "attribution": {
+    "created_at": "2025-03-28T00:42:50.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "You have been asked to write a function that supplies the \"reverse lookup\" name for the person associated with a phone number.  This means that given a phone number, you get the name of the person who is registered with that phone number. For this problem, you have been asked to write a solution using a dictionary",
+    "source_code": "[student_code]\r\ndef reverse_lookup_dictionary(phone_num, phone_to_name):\r\n    \"\"\" (str, dict of {str: str}) -> str\r\n\r\n    This function receives a phone number phone_num, and a dictionary\r\n    phone_to_name in which each key is a phone number and each value\r\n    is the name associated with that phone number.\r\n\t\r\n    Return the name associated with phone_num in phone_to_name, or\r\n    an empty string if there is no match.\r\n    \r\n    >>> reverse_lookup_dictionary(\"416-555-3498\", {\"416-555-3498\": \\\r\n        \"John A. Macdonald\", \"647-555-9812\": \"Louis Riel\", \"416-555-6543\": \\\r\n        \"Canoe Head\", \"905-555-6681\":\"Tim Horton\"})\r\n    'John A. Macdonald'        \r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/56/embed?act=PCRS&sub=py_reverse_dictionary"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.988Z"
+}

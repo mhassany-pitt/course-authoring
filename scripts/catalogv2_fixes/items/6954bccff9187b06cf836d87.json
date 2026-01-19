@@ -1,0 +1,107 @@
+{
+  "id": "6954bccff9187b06cf836d87",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-26T17:57:56.000Z",
+  "updated_at": "2026-01-17T05:27:20.548Z",
+  "tags": [],
+  "identity": {
+    "id": "py_hello_world_name_es",
+    "title": "Programa usual primero (CC)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/286/embed?act=PCRS&sub=py_hello_world_name_es"
+  },
+  "attribution": {
+    "created_at": "2025-05-26T17:57:56.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Escribe una funcion llamada hola_mundo quedevuelva un saludo adecuado usando el parametro 'nombre'.Ejemplos de llamadas: hola_mundo('KITE') => \"KITE dice hola mundo!\" hola_mundo('Python') => \"Python dice hola mundo!\"",
+    "source_code": "[blocked]\r\ndef hola_mundo(nombre):\r\n[/blocked]\r\n[student_code]\r\n    # Tu codigo va aqui...\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "StringLiteral",
+          "Concatenation",
+          "TransformingToStringType",
+          "DefiningSimpleFunction",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "CallingSimpleFunction",
+          "Concatenation",
+          "DefiningSimpleFunction",
+          "TransformingToStringType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/286/embed?act=PCRS&sub=py_hello_world_name_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Funciones",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.940Z"
+}

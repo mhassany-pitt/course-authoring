@@ -1,0 +1,127 @@
+{
+  "id": "6954bccff9187b06cf836ec8",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:57.922Z",
+  "tags": [],
+  "identity": {
+    "id": "py_context_not_unique_hashtags_es",
+    "title": "PCRS C3-PL  Context Not Unique Hashtags",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/273/embed?act=PCRS&sub=py_context_not_unique_hashtags_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "En este problema, escribiremos una funcion contiene_sin_hashtags_unicos que toma dos listas como parametros. La primera lista, hashtags_tweet, contiene listas de strings. Cada lista representa los hashtags encontrados en un solo tweet. La segunda lista, hashtags_unicos, es una lista de hashtags utilizados unicamente por un candidato especifico.contiene_sin_hashtags_unicos debe devolver una nueva lista de las listas de hashtags para aquellos tweets (de la lista original) que no pueden ser atribuidos al candidato. Un tweet no puede ser atribuido al candidato si no utiliza ninguno de los hashtags unicos utilizados por el candidato.Tu funcion no debe cambiar las listas originales pasadas como parametros.Ejemplo entrada/salida:contiene_sin_hashtags_unicos([['politica', 'eleccion'], ['futbol', 'deporte'], ['eleccion', 'voto']],['voto'])  -> [['politica', 'eleccion'], ['futbol', 'deporte']]",
+    "source_code": "[student_code]\r\ndef contiene_sin_hashtags_unicos(hashtags_tweet, hashtags_unicos):\r\n    \"\"\"\r\n    (lista de lista de str, lista de str) -> lista de lista de str\r\n\r\n    Devuelve una nueva lista de listas de hashtags para aquellos tweets que no pueden ser atribuidos al candidato.\r\n    Un tweet no puede ser atribuido al candidato si no utiliza ninguno de los hashtags unicos utilizados por el candidato.\r\n    Ejemplo entrada/salida:\r\n    contiene_sin_hashtags_unicos([['politica', 'eleccion'], ['futbol', 'deporte'], ['eleccion', 'voto']],['voto'])  -> [['politica', 'eleccion'], ['futbol', 'deporte']]\r\n    \r\n    \"\"\"\r\n\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology jordan": {
+        "concepts": [
+          "Create2DArray"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "CheckingForItem",
+          "list()",
+          "AddingListElementWithAppend",
+          "DefiningSimpleFunction",
+          "MixedNestedLoopIteration",
+          "NestedForLoopIteration",
+          "ListReferencing",
+          "ChangingValueVariable",
+          "IfChecking",
+          "IfCheckingInForLoop",
+          "BooleanLiteral",
+          "ListLiteral",
+          "ComparisonExpression",
+          "LogicalExpression",
+          "CallingSimpleFunction",
+          "IndexingList"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "ListLiteral",
+          "LogicalExpression",
+          "MixedNestedLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AddingListElementWithAppend",
+          "BooleanLiteral",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "IfChecking",
+          "IfCheckingInForLoop",
+          "IndexingList",
+          "ListReferencing",
+          "NestedForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/273/embed?act=PCRS&sub=py_context_not_unique_hashtags_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.971Z"
+}

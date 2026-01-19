@@ -1,0 +1,105 @@
+{
+  "id": "6954bccff9187b06cf836d93",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-05-12T15:21:10.000Z",
+  "updated_at": "2026-01-17T05:27:21.787Z",
+  "tags": [],
+  "identity": {
+    "id": "ps_python_class_inheritance_es",
+    "title": "Practicar herencia de clases",
+    "type": "Question"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_class_inheritance_es&grp=demo&usr=demo&sid=-1&cid=-1"
+  },
+  "attribution": {
+    "created_at": "2025-05-12T15:21:10.000Z",
+    "provider": "jsParsons",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construye un programa que use herencia de clases para mostrar el nombre y la nota de un estudiante. Considera que estudiante es una instancia de la clase Puntaje.",
+    "source_code": "class Estudiante():\n\tdef __init__(self, nombre):\n\t\tself.nombre=nombre\n\tdef obtenerNombre(self):\n\t\treturn self.nombre\nclass Puntaje(Estudiante):\n\tdef __init__(self, nombre, puntaje):\n\t\tself.puntaje=puntaje\n\t\tEstudiante.__init__(self,nombre)\n\tdef obtenerPuntaje(self):\n\t\treturn self.puntaje"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "acos parser": {
+        "concepts": [
+          "Attribute",
+          "FunctionDef",
+          "Return",
+          "arg",
+          "Call",
+          "ClassDef",
+          "Assign"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "arg",
+          "Call",
+          "Assign",
+          "Constant",
+          "Return",
+          "ClassDef",
+          "FunctionDef",
+          "Attribute"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_class_inheritance_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Clases y Objetos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.941Z"
+}

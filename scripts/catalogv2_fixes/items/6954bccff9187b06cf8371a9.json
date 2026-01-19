@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf8371a9",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-02-04T01:06:06.000Z",
+  "updated_at": "2026-01-17T05:29:12.051Z",
+  "tags": [],
+  "identity": {
+    "id": "in_order_main",
+    "title": "in_order_main",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/432/embed?act=PCRS&sub=in_order_main"
+  },
+  "attribution": {
+    "created_at": "2020-02-04T01:06:06.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Given three integer variables, a, b, and c, write a boolean expression to determine if b is greater than a, and c is greater than b. However, with the exception that if the boolean variable bOk is true, b does not need to be greater than a. Store the result of this expression in a variable called result. Assume that the initial value of the variables a, b, and c is already set to an integer and the initial value of the variable bOk is already set to a boolean value.E.g. 1: if the value of a is 1, the value of b is 2 , the value of c is 4, and the value of bOk is false, the value of result will be true. E.g. 2: if the value of a is 1, the value of b is 2 , the value of c is 1, and the value of bOk is false, the value of result will be false. E.g. 3: if the value of a is 1, the value of b is 1 , the value of c is 2, and the value of bOk is true, the value of result will be true.",
+    "source_code": "[file Lab3.java]\n[blocked]\nimport java.util.Scanner;\n\npublic class Lab3 {\n    public static void main(String[] args){\n        // Create a scanner to read from keyboard\n        Scanner kbd = new Scanner (System.in);\n        \n        System.out.print(\"Enter three integer numbers in order (a, b and c) and a boolean value (bOk): \");\n        \n        int a = kbd.nextInt();\n        int b = kbd.nextInt();\n        int c = kbd.nextInt();\n        boolean bOk = kbd.nextBoolean();\n        \n        //Definition of the variable that will store the value or result\n    \tboolean result;\n               \n        //YOU MUST NOT WRITE ANY CODE ABOVE THIS LINE\n[/blocked]\n[student_code]\n        \n    \t// TODO: add your code here\n        \n        \n    \n[/student_code]\n[blocked]\n        //YOU MUST NOT WRITE ANY CODE BELOW THIS LINE\n        \n \t\tSystem.out.println(result);       \n    }\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "IfElseStatement",
+          "EqualExpression",
+          "GreaterExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "EqualExpression",
+          "GreaterExpression",
+          "IfElseStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/432/embed?act=PCRS&sub=in_order_main"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.066Z"
+}

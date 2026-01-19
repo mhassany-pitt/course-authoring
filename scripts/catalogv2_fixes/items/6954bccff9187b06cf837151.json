@@ -1,0 +1,129 @@
+{
+  "id": "6954bccff9187b06cf837151",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-08-09T19:21:45.000Z",
+  "updated_at": "2026-01-17T12:41:47.864Z",
+  "tags": [],
+  "identity": {
+    "id": "py_soda_survey_soda_avg",
+    "title": "Processing the Results of a Soda Survey (Case 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_soda_survey&ch=py_soda_survey_soda_avg"
+  },
+  "attribution": {
+    "created_at": "2020-08-09T19:21:45.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Suppose a soda manufacturer held a taste test for four new flavors to determine if people liked them. The manufacturer got 10 people to try each new flavor and give it a score from 1 to 5, where 1 equals poor and 5 equals excellent. The results of that survey is stored in a matrix. Each row of the matrix holds the responses that all testers gave for one particular soda flavor, and each column holds the responses of one person for all sodas.\\nConstruct a program that determines the average ratings that respondents provided to four new flavors of soda.",
+    "source_code": "#Step 1: Define a 4x10 two-dimensional list\nratings_data = [[3, 4, 5, 2, 1, 4, 3, 2, 4, 4],\n                [2, 4, 3, 4, 3, 3, 2, 1, 2, 2],\n                [3, 5, 4, 5, 5, 3, 2, 5, 5, 5],\n                [1, 1, 1, 3, 1, 2, 1, 3, 2, 4]]\n#Step 2: Get the dimensions of the list that stores the ratings data\nnum_sodas = len(ratings_data)\nnum_respondents = len(ratings_data[0])\n#Step 3: Create a list to store the sum of rating of each soda flavor\nsoda_sum = [0] * num_sodas\n#Step 4: Iterate through the sodas \nfor i in range(num_sodas):\n    #Step 4.1: Calculate the sum of the ratings for the soda i+1    \n    for j in range(num_respondents):\n        soda_sum[i] += ratings_data[i][j]\n#Step 5: Calculate and print the average rating for each soda\nprint(\"Averages:\")   \nfor i in range(num_sodas):\n    print(\"Soda # {:d} : {:.2f}\".format((i+1), soda_sum[i]/num_respondents))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "Indexing2DArray",
+          "Multiplication",
+          "FindingLength",
+          "AssigningValueVariable",
+          "NestedForLoopIteration",
+          "Create2DArray",
+          "FormattingString",
+          "Addition",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "Printing",
+          "Division",
+          "ForLoopWithListIndexing",
+          "ForLoopWith",
+          "ChangingValueListElement",
+          "NestedFunctionCall"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "AssigningValueVariable",
+          "CallingLibraryFunction",
+          "ChangingValueListElement",
+          "ChangingValueVariable",
+          "Create2DArray",
+          "Division",
+          "FindingLength",
+          "ForLoopWith",
+          "ForLoopWithListIndexing",
+          "FormattingString",
+          "Indexing2DArray",
+          "Multiplication",
+          "NestedForLoopIteration",
+          "NestedFunctionCall",
+          "Printing"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_soda_survey&ch=py_soda_survey_soda_avg"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=394",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > Two-Dimensional Lists",
+      "used_at": "2020-08-09T17:56:50.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=404",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > Two-Dimensional Lists",
+      "used_at": "2020-09-07T18:36:47.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.057Z"
+}

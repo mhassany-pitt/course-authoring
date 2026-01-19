@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e4c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:43.229Z",
+  "tags": [],
+  "identity": {
+    "id": "py_event_class",
+    "title": "PCRS C3-PL  Event Class",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/24/embed?act=PCRS&sub=py_event_class"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Complete each method of the class Day.  The Day class depends class Event, so we have included the Event class definition below.",
+    "source_code": "[student_code]\r\nclass Event:    \r\n    \"\"\"A new calendar event.\"\"\"\r\n\r\n    def __init__(self, start_time, end_time, event_name):\r\n        \"\"\" (Event, int, int, str) -> NoneType\r\n\r\n        Precondition: 0 <= start_time < end_time <= 23\r\n        \r\n        Initialize a new event that starts at start_time, ends at end_time,\r\n        and is named name.\r\n\r\n        >>> e = Event(12, 13, 'Lunch')\r\n        >>> e.start_time\r\n        12\r\n        >>> e.end_time\r\n        13\r\n        >>> e.name\r\n        'Lunch'\r\n        \"\"\"\r\n        \r\n        self.start_time = start_time\r\n        self.end_time = end_time\r\n        self.name = event_name\r\n\r\n    def __str__(self):\r\n        \"\"\" (Event) -> str\r\n\r\n        Return a string representation of this event.\r\n\r\n        >>> e = Event(6, 7, 'Run')\r\n        >>> str(e)\r\n        'Run: from 6 to 7'\r\n        \"\"\"\r\n        \r\n        return '{0}: from {1} to {2}'.format(self.name, self.start_time,\r\n                                             self.end_time)\r\n\r\nclass Day:\r\n    \"\"\"A calendar day and its events.\"\"\"\r\n\r\n    def __init__(self, day, month, year):\r\n        \"\"\" (Day, int, str, int) -> NoneType\r\n\r\n        Initialize a day on the calendar with day, month and year,\r\n        and no events.\r\n\r\n        >>> d = Day(5, 'April', 2014)\r\n        >>> d.day\r\n        5\r\n        >>> d.month\r\n        'April'\r\n        >>> d.year\r\n        2014\r\n        >>> d.events\r\n        []\r\n        \"\"\"\r\n\r\n        # To do: Complete this method body.\r\n\r\n    def schedule_event(self, new_event):\r\n        \"\"\" (Day, Event) -> NoneType\r\n        \r\n        Schedule new_event on this day, even if it overlaps with\r\n        an existing event. Later we will improve this method.\r\n        \r\n        >>> d = Day(26, 'March', 2014)\r\n        >>> e = event.Event(11, 12, 'Meeting')\r\n        >>> d.schedule_event(e)\r\n        >>> d.events[0] == e\r\n        True\r\n        \"\"\"\r\n\r\n        # To do: Complete this method body.\r\n    \r\n    def __str__(self):\r\n        \"\"\" (Day) -> str\r\n    \r\n        Return a string representation of this day.\r\n        \r\n        >>> d = Day(4, 'April', 2014)\r\n        >>> d.schedule_event(event.Event(13, 14, 'Submit last exercise'))\r\n        >>> d.schedule_event(event.Event(19, 23, 'Celebrate end of classes'))\r\n        >>> print(d)\r\n        4 April 2014:\r\n        - Submit last exercise: from 13 to 14\r\n        - Celebrate end of classes: from 19 to 23\r\n        \"\"\"\r\n\r\n        # To do: Complete this method body.\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/24/embed?act=PCRS&sub=py_event_class"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.959Z"
+}

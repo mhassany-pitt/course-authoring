@@ -1,0 +1,88 @@
+{
+  "id": "6954bccff9187b06cf836ccc",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-09-10T22:25:49.000Z",
+  "updated_at": "2026-01-17T05:26:46.347Z",
+  "tags": [],
+  "identity": {
+    "id": "Creating an Array of User Inputs__68bdb308f6cc3d7a9cc096cf-68bdb308f6cc3d7a9cc096cd-1",
+    "title": "Creating an Array of User Inputs",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096cf?_t=1757557549591&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:25:49.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that creates an array of eight string values received from the user.",
+    "source_code": "import java.util.Scanner;\npublic class JArrayFillUserInput {\n\tpublic static void main(String[] args) {\n\t\t//Step 1: Create an array of eight elements of type string\n\t\tString[] lst = new String[8];\n\t\t//Step 2: Iterate over the indexes of the array\n\t\tScanner scan = new Scanner(System.in);\n\t\tfor (int i = 0; i < 8; i++) {\n\t\t\t//Step 2.1: Assign the user input to the index i of the array\n\t\t\tSystem.out.println(\"Enter a value: \");\t\t\n\t\t\tlst[i] = scan.next();\n\t\t}\n\t\tscan.close();\n\t\t//Step 3: Print the array elements\n\t   for (String x : lst) {\n\t\t   System.out.print(x + \"  \");\n\t   }\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096cf?_t=1757557549591&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=467",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Arrays",
+      "used_at": "2025-09-03T17:58:29.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=468",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Arrays",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > Arrays",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.916Z"
+}

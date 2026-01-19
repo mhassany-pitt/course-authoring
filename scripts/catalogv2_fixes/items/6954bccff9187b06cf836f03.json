@@ -1,0 +1,74 @@
+{
+  "id": "6954bccff9187b06cf836f03",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:04.576Z",
+  "tags": [],
+  "identity": {
+    "id": "py_playlist_exception_es",
+    "title": "Generar lista r\u00e1pida de reproduccion valida (excepciones) (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/348/embed?act=PCRS&sub=py_playlist_exception_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Est\u00e1s desarrollando un prototipo para una aplicaci\u00f3n de m\u00fasica. Cada usuario tiene una lista de canciones disponibles para reproducir (canciones). La app permite a los usuarios crear una lista de reproducci\u00f3n r\u00e1pida eligiendo canciones por su posici\u00f3n en esa lista.Sin embargo, algunos usuarios cometen errores al seleccionar canciones que no existen (\u00edndices inv\u00e1lidos). Para evitar que la app se detenga, debes manejar estos errores apropiadamente.Escribe una funci\u00f3n llamada generar_lista_reproduccion(canciones, selecciones) que reciba: - canciones: una lista de strings con los t\u00edtulos de las canciones disponibles.- selecciones: una lista de enteros con las posiciones que el usuario quiere reproducir.La funci\u00f3n debe devolver una lista cuyos elementos sean:- El nombre de la canci\u00f3n si el \u00edndice es v\u00e1lido.- El string \"random\" si el \u00edndice de la canci\u00f3n est\u00e1 fuera de rango (de modo que se reproduzca una canci\u00f3n aleatoria en ese caso).",
+    "source_code": "[student_code]\r\ndef generar_lista_reproduccion(canciones,selecciones):\r\n    \r\n[/student_code]  \r\n[blocked]\r\n\t\ttry:\r\n[/blocked]\r\n[student_code]\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/348/embed?act=PCRS&sub=py_playlist_exception_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Excepciones",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.980Z"
+}

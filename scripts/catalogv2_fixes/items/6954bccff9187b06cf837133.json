@@ -1,0 +1,124 @@
+{
+  "id": "6954bccff9187b06cf837133",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-09-21T08:13:21.000Z",
+  "updated_at": "2026-01-17T05:28:59.205Z",
+  "tags": [],
+  "identity": {
+    "id": "obj_sphere",
+    "title": "Sphere class",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/456/embed?act=PCRS&sub=obj_sphere"
+  },
+  "attribution": {
+    "created_at": "2020-09-21T08:13:21.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the code for the class Sphere. You have to implement all the accessor and mutator (getter/setter) methods for each of these 4 attributes:x is the x-coordinate of the sphere centery is the y-coordinate of the sphere centerz is the z-coordinate of the sphere centerradius is the sphere's radius (make sure that its setter/mutator only allows positive numbers for the sphere radius)You also have to implement the following methods (follow specifications as if they were written in UML class diagram):+ getArea(): double -> it calculates the area of the sphere (please use the constant PI defined in the class for this)+ getVolume(): double -> it calculates the volume of the sphere (please use the constant PI defined in the class for this)+ pointInSphere(xPoint: int, yPoint:int, zPoint: int): boolean -> it checks if the points with given coordinates xPoint, yPoint and zPoint is contained inside the sphereMore instructions on how to implement the missing parts of this class are provided in the code below.",
+    "source_code": "[file Sphere.java]\n[blocked]\npublic class Sphere{ \n    //class attributes\n    private int x;\n    private int y;\n \tprivate int z;\n    private int radius;\n    \n    final double PI = 3.14;\n    \n    public Sphere(){\n        x=0;\n        y=0;\n        z=0;\n        radius=1;\n    }\n    \n[/blocked]\n     [student_code]\n    // TODO: add getter/setter methods for all the properties of the class\n    // There has to be 8 methods in total here (setRadius, getRadius, setX, getX, setY, getY, setZ, getZ).\n    \n    \n    \n    \n    \n    //Define the methods getArea, getVolume, pointInSphere\n    \n\t[/student_code]\n    [blocked]\n}\n[/blocked]\n[/file]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert_manual": {
+        "concepts": [
+          "IfStatement",
+          "Constant",
+          "java.lang.Math.sqrt",
+          "MethodImplementation",
+          "java.lang.Math.pow",
+          "MultiplyExpression",
+          "IfElseIfStatement",
+          "MethodSignature",
+          "FormalMethodParameter",
+          "MethodBody"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "Constant",
+          "FormalMethodParameter",
+          "IfElseIfStatement",
+          "IfStatement",
+          "java.lang.Math.pow",
+          "java.lang.Math.sqrt",
+          "MethodBody",
+          "MethodImplementation",
+          "MethodSignature",
+          "MultiplyExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/456/embed?act=PCRS&sub=obj_sphere"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=393",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Classes/Objects",
+      "used_at": "2020-07-26T21:31:59.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=406",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Exceptions/File Handling/Methods/Classes-Objects",
+      "used_at": "2021-01-24T20:49:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=440",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_name": "Java: CMIS 2200 | Application Programming II > Module 2- Objects and Classes",
+      "used_at": "2024-08-27T03:21:22.000Z",
+      "used_by": "Pratibha Menon - "
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.054Z"
+}

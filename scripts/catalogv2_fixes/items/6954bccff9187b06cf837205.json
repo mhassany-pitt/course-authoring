@@ -1,0 +1,188 @@
+{
+  "id": "6954bccff9187b06cf837205",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2019-02-15T11:06:03.000Z",
+  "updated_at": "2026-01-17T12:55:44.966Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "4-02_TicTacToe",
+    "title": "4-02_TicTacToe",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=4-02_TicTacToe&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2019-02-15T11:06:03.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*\n\u00a0* A simple game of Tic Tac Toe!\n\u00a0*\n\u00a0*/\nimport java.util.Scanner;\n\npublic class TicTacToe {\n\n\u00a0\u00a0\u00a0\u00a0// This array stores the current state of the board.  Each element has\n\u00a0\u00a0\u00a0\u00a0//  one of three values:\n\u00a0\u00a0\u00a0\u00a0//  'X'\n\u00a0\u00a0\u00a0\u00a0//  'O'\n\u00a0\u00a0\u00a0\u00a0//  ' '  (for an empty spot)\n\u00a0\u00a0\u00a0\u00a0static char[][] theBoard = new char[3][3];\n\n\u00a0\u00a0\u00a0\u00a0// This method prints the current board on the screen.\n\u00a0\u00a0\u00a0\u00a0public static void printBoard() {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = 0; i < theBoard.length; i++) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int j = 0; j < theBoard[i].length; j++) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(theBoard[i][j] + \" \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0// This method determines whether the game is still going.  It returns\n\u00a0\u00a0\u00a0\u00a0//  true if the game is in progress, or false if the game is over.\n\u00a0\u00a0\u00a0\u00a0public static boolean isGameStillGoing() {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Check for victory by X\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (\u00a0\u00a0\u00a0\u00a0theBoard[0][0] == 'X' && theBoard[0][1] == 'X' && theBoard[0][2] == 'X'\u00a0\u00a0\u00a0\u00a0||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[1][0] == 'X' && theBoard[1][1] == 'X' && theBoard[1][2] == 'X' ||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[2][0] == 'X' && theBoard[2][1] == 'X' && theBoard[2][2] == 'X' ||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[0][0] == 'X' && theBoard[1][0] == 'X' && theBoard[2][0] == 'X' ||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[0][1] == 'X' && theBoard[1][1] == 'X' && theBoard[2][1] == 'X' ||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[0][2] == 'X' && theBoard[1][2] == 'X' && theBoard[2][2] == 'X' ||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[0][0] == 'X' && theBoard[1][1] == 'X' && theBoard[2][2] == 'X' ||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[0][2] == 'X' && theBoard[1][1] == 'X' && theBoard[2][0] == 'X' ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return false;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Check for victory by O\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (\u00a0\u00a0\u00a0\u00a0theBoard[0][0] == 'O' && theBoard[0][1] == 'O' && theBoard[0][2] == 'O'\u00a0\u00a0\u00a0\u00a0||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[1][0] == 'O' && theBoard[1][1] == 'O' && theBoard[1][2] == 'O' ||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[2][0] == 'O' && theBoard[2][1] == 'O' && theBoard[2][2] == 'O' ||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[0][0] == 'O' && theBoard[1][0] == 'O' && theBoard[2][0] == 'O' ||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[0][1] == 'O' && theBoard[1][1] == 'O' && theBoard[2][1] == 'O' ||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[0][2] == 'O' && theBoard[1][2] == 'O' && theBoard[2][2] == 'O' ||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[0][0] == 'O' && theBoard[1][1] == 'O' && theBoard[2][2] == 'O' ||\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[0][2] == 'O' && theBoard[1][1] == 'O' && theBoard[2][0] == 'O' ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return false;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Check for stalemate\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = 0; i < theBoard.length; i++) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int j = 0; j < theBoard[i].length; j++) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (theBoard[i][j] == 0)\u00a0\u00a0\u00a0\u00a0// Empty spaces left - game must still be going!\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return true;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// The only way for this point to be reached is if the method hasn't\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  returned anything yet.  This must mean that neither player has won,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  and there are no empty spaces left.  Must be a stalemate!\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return false;\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0// Run this method to play the game!\n\u00a0\u00a0\u00a0\u00a0public static void playGame() {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Scanner s = new Scanner(System.in);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0while (isGameStillGoing()) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Have player X move\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Player X's turn!\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Enter the row and column where you'd like to make your move!\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int row = s.nextInt(), col = s.nextInt();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[row][col] = 'X';\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printBoard();\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Player X's turn might have ended the game, so we need to check\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  this condition immediately here.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (!isGameStillGoing())\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Have player O move\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Player O's turn!\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Enter the row and column where you'd like to make your move!\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0row = s.nextInt();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0col = s.nextInt();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[row][col] = 'O';\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printBoard();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n//\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[0][0] = 'X';\n//\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[0][2] = 'O';\n//\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[1][1] = 'X';\n//\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[2][2] = 'O';\n//\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0theBoard[1][2] = 'O';\n//\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printBoard();\n//\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(isGameStillGoing());\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0playGame();\n\u00a0\u00a0\u00a0\u00a0}\n\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "parser": {
+        "concepts": [
+          "ImportStatement",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "MultiDimensionalArrayDataType",
+          "StaticFieldSpecifier",
+          "ClassField",
+          "InstanceFieldInitializationStatement",
+          "CharDataType",
+          "SimpleAssignmentExpression",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "VoidDataType",
+          "IntDataType",
+          "ForStatement",
+          "NestedForLoops",
+          "LessExpression",
+          "ArrayLength",
+          "PostIncrementExpression",
+          "InstanceFieldInvocation",
+          "ArrayElement",
+          "java.lang.System.out.print",
+          "ActualMethodParameter",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "java.lang.System.out.println",
+          "BooleanDataType",
+          "IfStatement",
+          "EqualExpression",
+          "AndExpression",
+          "OrExpression",
+          "ReturnStatement",
+          "FALSE",
+          "TRUE",
+          "ObjectCreationStatement",
+          "ConstructorCall",
+          "WhileStatement",
+          "ObjectMethodInvocation",
+          "NotExpression",
+          "FormalMethodParameter"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AndExpression",
+          "ArrayElement",
+          "ArrayLength",
+          "BooleanDataType",
+          "CharDataType",
+          "ClassDefinition",
+          "ClassField",
+          "ConstructorCall",
+          "EqualExpression",
+          "False",
+          "FormalMethodParameter",
+          "ForStatement",
+          "IfStatement",
+          "ImportStatement",
+          "InstanceFieldInitializationStatement",
+          "InstanceFieldInvocation",
+          "IntDataType",
+          "java.lang.System.out.print",
+          "java.lang.System.out.println",
+          "LessExpression",
+          "MethodDefinition",
+          "MultiDimensionalArrayDataType",
+          "NestedForLoops",
+          "NotExpression",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "OrExpression",
+          "PostIncrementExpression",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "ReturnStatement",
+          "SimpleAssignmentExpression",
+          "StaticFieldSpecifier",
+          "StaticMethodSpecifier",
+          "StringAddition",
+          "StringDataType",
+          "StringLiteral",
+          "True",
+          "VoidDataType",
+          "WhileStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=4-02_TicTacToe&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=367",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
+      "context_name": "Java: INFSCI 0017 | CSEdPad test course (CS1 Memphis) > Two-Dimensional Arrays",
+      "used_at": "2018-11-30T09:02:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=369",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=369",
+      "context_name": "Java: 00 | TestLA > Topic2",
+      "used_at": "2019-03-12T09:19:04.000Z",
+      "used_by": "Laia Albo - Universitat Pompeu Fabra"
+    },
+    {
+      "context_id": "cid=370",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=370",
+      "context_name": "Java: 01 | Test2LA > Unit1",
+      "used_at": "2019-03-15T10:28:37.000Z",
+      "used_by": "Laia Albo - Universitat Pompeu Fabra"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.079Z"
+}

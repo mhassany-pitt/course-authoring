@@ -1,0 +1,91 @@
+{
+  "id": "6954bccff9187b06cf837651",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:06.235Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "f2c_for.c",
+    "title": "IS12:: f2c_for.c (118.3)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=f2c_for.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*  Example: F2C conversion table using for loop\n\u00a0\u00a0\u00a0\u00a0Source: K&R2, p.12\n\u00a0\u00a0\u00a0\u00a0Print Fahrenheit-Celsius table\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for fahr = 0, 20, ..., 300; floating point version */\n\n#include <stdio.h>\n\nvoid main () {\n\u00a0\u00a0\u00a0\u00a0float fahr, celsius;\n\u00a0\u00a0\u00a0\u00a0int lower, upper, step;\n\n\u00a0\u00a0\u00a0\u00a0lower = 0;   /* lower limit of temperature table */\n\u00a0\u00a0\u00a0\u00a0upper = 300; /* upper limit */\n\u00a0\u00a0\u00a0\u00a0step = 20;   /* step size */\n\n\u00a0\u00a0\u00a0\u00a0for (fahr = lower; fahr <= upper; fahr = fahr + step) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0celsius = (5.0 / 9.0) * (fahr - 32.0);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf (\"%3.0f %6.1f\n\", fahr, celsius);\n\u00a0\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "int",
+          "void",
+          "div",
+          "variable_declaration",
+          "sub",
+          "include",
+          "add",
+          "mul",
+          "main_function",
+          "for",
+          "float",
+          "less_equal",
+          "printf",
+          "simple_assignment"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=f2c_for.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.177Z"
+}

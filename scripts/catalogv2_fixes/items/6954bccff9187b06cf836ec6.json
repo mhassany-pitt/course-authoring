@@ -1,0 +1,113 @@
+{
+  "id": "6954bccff9187b06cf836ec6",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:57.711Z",
+  "tags": [],
+  "identity": {
+    "id": "py_duplicate_cut_es",
+    "title": "PCRS C3-PL  Duplicate Cut",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/271/embed?act=PCRS&sub=py_duplicate_cut_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Supongamos que se nos han dado varias secuencias candidatas de enzimas que podemos aplicar a una hebra para corregir una mutacion. Nos gustaria filtrar las secuencias que son menos eficientes o efectivas. En particular, las secuencias que contienen la misma enzima en posiciones adyacentes son ineficientes, ya que la enzima cortara el mismo lugar dos veces.Completa la funcion corte_duplicado segun su docstring.",
+    "source_code": "[student_code]\ndef corte_duplicado(lista_enzimas):\n    \"\"\" (lista de str) -> booleano\n\n    Devuelve True si y solo si la misma enzima esta en la lista de enzimas en posiciones adyacentes.\n\n    >>> corte_duplicado(['EcoRI', 'Sau3A', 'Sau3A'])\n    True\n    >>> corte_duplicado(['EcoRI', 'Sau3A', 'EcoRI'])\n    False\n    \"\"\"\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "TransformingToStringType",
+          "ChangingValueVariable",
+          "Subtraction",
+          "FindingLength",
+          "list()",
+          "DefiningSimpleFunction",
+          "ForLoopWithListIndexing",
+          "ListReferencing",
+          "IfCheckingInForLoop",
+          "BooleanLiteral",
+          "ListLiteral",
+          "ComparisonExpression",
+          "CallingSimpleFunction",
+          "IndexingList"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "ListLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "BooleanLiteral",
+          "CallingSimpleFunction",
+          "DefiningSimpleFunction",
+          "FindingLength",
+          "ForLoopWithListIndexing",
+          "IfCheckingInForLoop",
+          "IndexingList",
+          "TransformingToStringType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/271/embed?act=PCRS&sub=py_duplicate_cut_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.971Z"
+}

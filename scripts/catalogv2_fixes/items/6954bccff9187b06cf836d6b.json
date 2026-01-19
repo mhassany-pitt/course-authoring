@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836d6b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-06-04T17:19:17.000Z",
+  "updated_at": "2026-01-17T05:27:05.963Z",
+  "tags": [],
+  "identity": {
+    "id": "Pythagorean Theorem (Case 2)__664e23fd91363872f0ba32ea-664e23fc91363872f0ba32e8-1",
+    "title": "Pythagorean Theorem (Case 2)",
+    "type": "PCEX Challenge"
+  },
+  "links": {
+    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e23fd91363872f0ba32ea?_t=1749071975286&index=1"
+  },
+  "attribution": {
+    "created_at": "2025-06-04T17:19:17.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Suppose that the user provides two input values for a right-angle triangle. The first input is for the length of an adjacent side in the triangle and the second input is for the hypotenuse of that triangle. The program calculates the second adjacent side of the triangle using these two input values. Use the Pythagorean theorem (c^2 = a^2 + b^2) to find the length of the second adjacent side.",
+    "source_code": "#Step 1: Receive the values for the first side of a right-angle triangle and the hypotenuse\ntext = input(\"Enter the length of side A:\")\nside_A = float(text)\ntext = input(\"Enter the length of the hypotenuse:\")\nhypotenuse = float(text)\n#Step 2: Calculate square of side A\nsquare_side_A = side_A ** 2\n#Step 3: Calculate square of hypotenuse\nsquare_hypotenuse = hypotenuse ** 2\n#Step 4: Use Pythagorean theorem to calculate the length of the triangle's other adjacent side\nside_B = (square_hypotenuse - square_side_A) ** 0.5\n#Step 5: Print the result\nprint(\"Given that side A is\", side_A, \"and the hypotenuse is\", hypotenuse, \", side B is\", side_B)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e23fd91363872f0ba32ea?_t=1749071975286&index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.937Z"
+}

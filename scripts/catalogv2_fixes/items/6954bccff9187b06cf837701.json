@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf837701",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:32.487Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "cal_Main.c",
+    "title": "calculate_Main.c",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=cal_Main.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "#include <stdio.h>\n#include \"calculate.h\"\nmain()\n{\n\u00a0\u00a0\u00a0int selection = 0;\n\u00a0\u00a0\u00a0float l,w,h;\n\n\u00a0\u00a0\u00a0printf(\"\\nThe Function Wizard\\n\");\n\u00a0\u00a0\u00a0printf(\"\\n1\\tDetermine perimeter of a rectangle\\n\");\n\u00a0\u00a0\u00a0printf(\"2\\tDetermine area of a rectangle\\n\");\n\u00a0\u00a0\u00a0printf(\"3\\tDetermine volume of rectangle\n\");\n\u00a0\u00a0\u00a0printf(\"\\nEnter selection: \");\n\u00a0\u00a0\u00a0scanf(\"%d\", &selection);\n\n\u00a0\u00a0\u00a0switch (selection) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0case 1:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nEnter length: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%f\", &l);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nEnter width: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%f\", &w);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0perimeter(l,w);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0case 2:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nEnter length: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%f\", &l);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nEnter width: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%f\", &w);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0area(l,w);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0case 3:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nEnter length: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%f\", &l);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nEnter width: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%f\", &w);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nEnter height: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%f\", &h);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0volume(l,w,h);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\n\u00a0\u00a0\u00a0}  // end switch\n}  // end main"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=cal_Main.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.188Z"
+}

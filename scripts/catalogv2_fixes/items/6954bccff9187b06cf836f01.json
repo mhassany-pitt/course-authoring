@@ -1,0 +1,148 @@
+{
+  "id": "6954bccff9187b06cf836f01",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:04.379Z",
+  "tags": [],
+  "identity": {
+    "id": "py_find_n_letters_es",
+    "title": "Encontrar letra n veces con while (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/346/embed?act=PCRS&sub=py_find_n_letters_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa el cuerpo de la siguiente funcion. Aunque esta funcion podria completarse con un ciclo for, para practicar, solicitamos que uses un ciclo while.",
+    "source_code": "[student_code]\r\ndef encontrar_letra_n_veces(string, letra, n):\r\n    \"\"\" (str, str, int) -> str\r\n\r\n    Precondicion: 'letra' ocurre al menos 'n' veces en 'string'\r\n\r\n    Devuelve el substring mas pequeno de 'string' comenzando desde el indice 0 que contiene\r\n    n ocurrencias de 'letra'.\r\n\r\n    >>> encontrar_letra_n_veces('Ciencias de la Computacion', 'e', 2)\r\n    'Ciencias de'\r\n    \"\"\"\r\n\r\n    i = 0\r\n    cuenta = 0\r\n    \r\n    #TODO completa el resto de la funcion abajo\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "IfCheckingInWhileLoop",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "IndexingList",
+          "IndexingString",
+          "SlicingString",
+          "AugmentedAssignmentStatement",
+          "IfElifElseCheckingInWhileLoop",
+          "StringLiteral",
+          "CallingSimpleFunction",
+          "Addition",
+          "TransformingToStringType",
+          "DefiningSimpleFunction",
+          "SingleWhileLoopIteration",
+          "WhileLoopWithListIndexing",
+          "ListReferencing",
+          "ChangingValueVariable"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "AugmentedAssignmentStatement",
+          "ComparisonExpression",
+          "IntegerLiteral",
+          "StringLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "Addition",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "IfCheckingInWhileLoop",
+          "IndexingString",
+          "SingleWhileLoopIteration",
+          "SlicingString",
+          "WhileLoopWithListIndexing"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/346/embed?act=PCRS&sub=py_find_n_letters_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Strings",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Ciclos While",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Strings",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Strings",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:03:59.980Z"
+}

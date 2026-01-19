@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf8376a8",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:18.719Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "compound_assign",
+    "title": "compound_assign",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=compound_assign&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*\u00a0\u00a0\u00a0\u00a0Demonstrate examples of compound assignments.  */\n#include <stdio.h>\n\nint main (void)\n{\n//\u00a0\u00a0\u00a0\u00a0Local Declarations\n\u00a0\u00a0\u00a0\u00a0int x;\n\u00a0\u00a0\u00a0\u00a0int y;\n\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0x = 10;\n\u00a0\u00a0\u00a0\u00a0y = 5;\n\n\u00a0\u00a0\u00a0\u00a0printf(\"x: %2d  |  y: %2d \",    x, y);\n\u00a0\u00a0\u00a0\u00a0printf(\"  |  x *= y + 2: %2d \", x *= y + 2);\n\u00a0\u00a0\u00a0\u00a0printf(\"  |  x is now: %2d\\n\",  x);\n\n\u00a0\u00a0\u00a0\u00a0x = 10;\n\u00a0\u00a0\u00a0\u00a0printf(\"x: %2d  |  y: %2d \",    x, y);\n\u00a0\u00a0\u00a0\u00a0printf(\"  |  x /= y + 1: %2d \", x /= y + 1);\n\u00a0\u00a0\u00a0\u00a0printf(\"  |  x is now: %2d\\n\",  x);\n\n\u00a0\u00a0\u00a0\u00a0x = 10;\n\u00a0\u00a0\u00a0\u00a0printf(\"x: %2d  |  y: %2d \",     x, y);\n\u00a0\u00a0\u00a0\u00a0printf(\"  |  x %%= y - 3: %2d \", x %= y - 3);\n\u00a0\u00a0\u00a0\u00a0printf(\"  |  x is now: %2d\\n\", x);\n\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\u00a0\u00a0\u00a0\u00a0// main"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=compound_assign&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.182Z"
+}

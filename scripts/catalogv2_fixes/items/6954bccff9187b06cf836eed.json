@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836eed",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:02.214Z",
+  "tags": [],
+  "identity": {
+    "id": "py_merge_sort_es",
+    "title": "PCRS C3-PL  Merge Sort",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/312/embed?act=PCRS&sub=py_merge_sort_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Fusion de arreglos ordenadosGTG 14.1Dado arreglos ordenados arr1 y arr2 de longitudes n y m respectivamente, devuelve un arreglo out que contiene la union de los elementos de ambos arreglos, sin ningun duplicado.Usa fuerza bruta para establecer rapidamente el paso de casos de pruebaUsa busqueda binaria para buscar en arr1 (el mayor de los dos) entre insertar el elemento en arr2 en outEjemplo[1, 1], [] -> [1][1], [2] -> [1, 2][1, 2], [2], -> [1, 2][3, 4], [1, 2] -> [1, 2, 3, 4][3, 4, 4], [1, 1, 2] -> [1, 2, 3, 4][1, 2, 3, 6, 7, 8], [4, 4] -> [1, 2, 3, 4, 6, 7, 8] ",
+    "source_code": "[student_code]\ndef fusionar_arreglos (a1, a2): \n    \n    pass\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/312/embed?act=PCRS&sub=py_merge_sort_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.976Z"
+}

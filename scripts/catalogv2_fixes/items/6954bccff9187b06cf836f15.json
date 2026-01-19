@@ -1,0 +1,119 @@
+{
+  "id": "6954bccff9187b06cf836f15",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:28:06.520Z",
+  "tags": [],
+  "identity": {
+    "id": "py_collect_underperformers_es",
+    "title": "Recolectar bajo rendimiento lista (ES)",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/218/embed?act=PCRS&sub=py_collect_underperformers_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa los ejemplos en el docstring y luego completa el cuerpo de la funcion.",
+    "source_code": "[student_code]\r\ndef recolectar_bajo_rendimiento(numeros, umbral):\r\n    \"\"\" (lista de numero, int) -> lista de numero\r\n\r\n    Devuelve una nueva lista que consiste en aquellos numeros en numeros que estan por debajo del umbral,\r\n    en el mismo orden que en numeros.\r\n\r\n    >>> recolectar_bajo_rendimiento([1, 2, 3, 4], 3)\r\n    [1, 2]\r\n    >>> recolectar_bajo_rendimiento([1, 2, 108, 3, 4], 50)\r\n    # TODO Reemplaza este comentario con el valor de retorno para la llamada de la funcion.\r\n    >>> recolectar_bajo_rendimiento([], 7)\r\n    # TODO Reemplaza este comentario con el valor de retorno para la llamada de la funcion.\r\n    \"\"\"\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "IfElifElseChecking",
+          "IfElifElseCheckingInForLoop",
+          "CreatingObject",
+          "FindingLength",
+          "list()",
+          "AddingListElementWithAppend",
+          "DefiningSimpleFunction",
+          "ForLoopWithListIndexing",
+          "ListReferencing",
+          "ChangingValueVariable",
+          "IfCheckingInForLoop",
+          "ListLiteral",
+          "IntegerLiteral",
+          "ComparisonExpression",
+          "CallingSimpleFunction",
+          "CallingObjectMethod",
+          "IndexingList"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "IntegerLiteral",
+          "ListLiteral"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "AddingListElementWithAppend",
+          "CallingObjectMethod",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningSimpleFunction",
+          "FindingLength",
+          "ForLoopWithListIndexing",
+          "IfCheckingInForLoop",
+          "IndexingList",
+          "ListReferencing"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/218/embed?act=PCRS&sub=py_collect_underperformers_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.983Z"
+}

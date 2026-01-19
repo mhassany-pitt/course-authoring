@@ -1,0 +1,68 @@
+{
+  "id": "6954bccff9187b06cf83771c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:36.492Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "bubblesortalgo",
+    "title": "BubbleSortAlgo",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=bubblesortalgo&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/* The Bubble Sort Algorithm.*/\n#define SIZE 10\n#include <stdio.h>\n#include <stdlib.h>\n#include <time.h>\n\n/* function prototypes */\nvoid bubbleSort( int array[], int length );\nvoid printPass( int array[], int length, int pass );\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int array[ SIZE ]; /* declare the array of ints to be sorted */\n\u00a0\u00a0\u00a0int i; /* int used in for loop */\n\n\u00a0\u00a0\u00a0srand( time( NULL ) ); /* seed the rand function */\n\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0array[ i ] = rand() % 90 + 10; /* give each element a value */\n\n\u00a0\u00a0\u00a0printf( \"Unsorted array:\\n\" );\n\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ ) /* print the array */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%d  \", array[ i ] );\n\n\u00a0\u00a0\u00a0printf( \"\\n\\n\" );\n\u00a0\u00a0\u00a0bubbleSort( array, SIZE );\n\u00a0\u00a0\u00a0printf( \"Sorted array:\\n\" );\n\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ ) /* print the array */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%d  \", array[ i ] );\n\n\u00a0\u00a0\u00a0return 0;\n} /* end function main */\n\n/* function that bubble sorts the array */\nvoid bubbleSort( int array[], int length )\n{\n\u00a0\u00a0\u00a0int pass; /* pass counter */\n\u00a0\u00a0\u00a0int j;    /* comparison counter */\n\u00a0\u00a0\u00a0int hold; /* temporary location used to swap elements */\n\u00a0\u00a0\u00a0/* loop to control number of passes */\n\u00a0\u00a0\u00a0for ( pass = 1; pass < length; pass++ ) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* loop to control number of comparisons per pass */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( j = 0; j < length - 1; j++ ) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* swap elements if out of order */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( array[ j ] > array[ j + 1 ] ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0hold = array[ j ];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0array[ j ] = array[ j + 1 ];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0array[ j + 1 ] = hold;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} /* end if */\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} /* end inner for */\n\u00a0\u00a0\u00a0\u00a0printPass ( array, SIZE, pass);\n\u00a0\u00a0\u00a0} /* end outer for */\n\n} /* end function bubbleSort */\n\n/* function that prints a pass of the algorithm */\nvoid printPass( int array[], int length, int pass )\n{\n\u00a0\u00a0\u00a0int j; /* counter */\n\n\u00a0\u00a0\u00a0printf( \"After pass %2d: \", pass );\n\n\u00a0\u00a0\u00a0/* output array elements */\n\n\u00a0\u00a0\u00a0/* output array contents */\n\u00a0\u00a0\u00a0for ( j = 0; j < length; j++ ) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( j % 10 == 0 ) { /* begin new line every 10 values */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"\\n\" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} /* end if */\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%2d \", array[ j ] );\n\u00a0\u00a0\u00a0} /* end for */\n\u00a0\u00a0\u00a0printf( \"\\n\" );\u00a0\u00a0\u00a0\u00a0\n} /* end function printArray */\n} /* end function printArray */"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=bubblesortalgo&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.190Z"
+}

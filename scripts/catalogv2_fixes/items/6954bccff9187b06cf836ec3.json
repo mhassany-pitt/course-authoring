@@ -1,0 +1,114 @@
+{
+  "id": "6954bccff9187b06cf836ec3",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:57.350Z",
+  "tags": [],
+  "identity": {
+    "id": "py_calendar_event3_es",
+    "title": "PCRS C3-PL  Calendar Event3",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/267/embed?act=PCRS&sub=py_calendar_event3_es"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Completa cada metodo de la clase Evento.",
+    "source_code": "[student_code]\nclass Evento:    \n    \"\"\"Un nuevo evento de calendario.\"\"\"\n\n    def __init__(self, hora_inicio, hora_fin, nombre_evento):\n        \"\"\" (Evento, int, int, str) -> NoneType\n\n        Precondicion: 0 <= hora_inicio < hora_fin <= 23\n        \n        Inicializa un nuevo evento que comienza a la hora_inicio, termina a la hora_fin,\n        y se llama nombre.\n\n        >>> e = Evento(12, 13, 'Almuerzo')\n        >>> e.hora_inicio\n        12\n        >>> e.hora_fin\n        13\n        >>> e.nombre\n        'Almuerzo'\n        \"\"\"\n    \n        # TODO: completar el cuerpo de este metodo.\n\n    def renombrar(self, nuevo_nombre):\n        \"\"\" (Evento, str) -> NoneType\n\n        Cambia el nombre de este evento a nuevo_nombre.\n        \n        >>> e = Evento(12, 13, 'Almuerzo')\n        >>> e.renombrar('Horas de oficina')\n        >>> e.nombre\n        'Horas de oficina'\n        \"\"\"\n        \n        # TODO: completar el cuerpo de este metodo.\n\n\n    def duracion(self):\n        \"\"\" (Evento) -> int\n\n        Devuelve la duracion de este evento.\n\n        >>> e = Evento(10, 11, 'Clase')\n        >>> e.duracion()\n        1\n        \"\"\"\n        \n        # TODO: completar el cuerpo de este metodo.\n\n    \n    def __str__(self):\n        \"\"\" (Evento) -> str\n\n        Devuelve una representacion en string de este evento.\n\n        >>> e = Evento(6, 7, 'Correr')\n        >>> str(e)\n        'Correr: de 6 a 7'\n        \"\"\"\n        \n        # TODO: completar el cuerpo de este metodo.\n              \n\n    def __eq__(self, otro):\n        \"\"\" (Evento, Evento) -> bool\n\n        Devuelve True si y solo si este evento tiene la misma hora de inicio, hora de fin, \n        y nombre que otro.\n\n        >>> e1 = Evento(6, 7, 'Correr')\n        >>> e2 = Evento(6, 7, 'Correr')\n        >>> e1 == e2\n        True\n        \"\"\"\n        \n        # TODO: completar el cuerpo de este metodo.\n\n\n    def se_superpone(self, otro):\n        \"\"\" (Evento, Evento) -> bool\n\n        Devuelve True si y solo si este evento se superpone con el evento otro.\n\n        >>> e1 = Evento(6, 7, 'Correr')\n        >>> e2 = Evento(0, 7, 'Dormir')\n        >>> e1.se_superpone(e2)\n        True\n        \"\"\"\n\n        # TODO: completar el cuerpo de este metodo.\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology llm": {
+        "concepts": [
+          "DefiningSimpleFunction",
+          "BooleanLiteral",
+          "CallingObjectMethod",
+          "Subtraction",
+          "TransformingToStringType",
+          "__init()__",
+          "DefiningClass",
+          "DefiningObjectMethod",
+          "ChangingValueVariable",
+          "StringLiteral",
+          "ComparisonExpression",
+          "LogicalExpression",
+          "CallingSimpleFunction"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Added by Jordan on 09-17-25 alice_py_edu_ontology": {
+        "concepts": [
+          "ComparisonExpression",
+          "LogicalExpression",
+          "StringLiteral",
+          "__init()__"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "Rafaella added 09.03.2025 alice_edu_py_ontology": {
+        "concepts": [
+          "BooleanLiteral",
+          "CallingObjectMethod",
+          "CallingSimpleFunction",
+          "ChangingValueVariable",
+          "DefiningClass",
+          "DefiningObjectMethod",
+          "DefiningSimpleFunction",
+          "TransformingToStringType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/267/embed?act=PCRS&sub=py_calendar_event3_es"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.971Z"
+}

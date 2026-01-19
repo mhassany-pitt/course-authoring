@@ -1,0 +1,134 @@
+{
+  "id": "6954bccff9187b06cf837199",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2020-05-10T20:48:54.000Z",
+  "updated_at": "2026-01-17T12:55:32.705Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "csedpad_ifelse_temperatureconversion",
+    "title": "(If else) Temperature Conversion - CSEdPad",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_ifelse_temperatureconversion&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2020-05-10T20:48:54.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Administrator",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "public class TemperatureCoversion\n{\n\u00a0\u00a0\u00a0\u00a0public static void main( String[] args )\n\u00a0\u00a0\u00a0\u00a0{\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0char scale='C';\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double temp=100;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double tempConverted=0.0;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.printf(\"temperature : %.2f %s %c\", temp,\" deg \",scale);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if(scale=='C'){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0tempConverted = ( temp + 40.0 ) * ( 9.0/5.0 ) - 40.0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scale='F';\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}else if(scale=='F'){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0tempConverted = ( temp + 40.0 ) * ( 5.0/9.0 ) - 40.0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scale='C';\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}else{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Now a valid temperature scale\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.printf(\"temperature : %.2f %s %c\", tempConverted,\" deg \",scale);\n\u00a0\u00a0\u00a0\u00a0}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "webex_parser": {
+        "concepts": [
+          "EqualExpression",
+          "MethodDefinition",
+          "java.lang.System.out.println",
+          "SimpleAssignmentExpression",
+          "ClassDefinition",
+          "VoidDataType",
+          "DoubleDataType",
+          "MultiplyExpression",
+          "CharDataType",
+          "StringLiteral",
+          "DivideExpression",
+          "IfElseIfStatement",
+          "AddExpression",
+          "SubtractExpression",
+          "IfElseStatement",
+          "FormalMethodParameter",
+          "ActualMethodParameter",
+          "StringDataType",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "CharDataType",
+          "ClassDefinition",
+          "DivideExpression",
+          "DoubleDataType",
+          "EqualExpression",
+          "FormalMethodParameter",
+          "IfElseIfStatement",
+          "IfElseStatement",
+          "java.lang.System.out.println",
+          "MethodDefinition",
+          "MultiplyExpression",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "StaticMethodSpecifier",
+          "StringDataType",
+          "StringLiteral",
+          "SubtractExpression",
+          "VoidDataType"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_ifelse_temperatureconversion&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=389",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
+      "context_name": "Java: CSEdPad | CSEdPad Examples > If else",
+      "used_at": "2020-05-10T20:11:07.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.064Z"
+}

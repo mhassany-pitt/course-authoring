@@ -1,0 +1,66 @@
+{
+  "id": "6954bccff9187b06cf836e64",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2025-04-03T08:00:00.000Z",
+  "updated_at": "2026-01-17T05:27:45.852Z",
+  "tags": [],
+  "identity": {
+    "id": "py_user_day",
+    "title": "PCRS C3-PL  User Day",
+    "type": "PCRS"
+  },
+  "links": {
+    "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/92/embed?act=PCRS&sub=py_user_day"
+  },
+  "attribution": {
+    "created_at": "2025-04-03T08:00:00.000Z",
+    "provider": "PCRS",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Below there is code for classes Event and Day.Complete the schedule_multiple_events function below according to its docstring description. Call theschedule_event method as part of your solution.",
+    "source_code": "[student_code]\r\nclass Event:    \r\n    \"\"\"A new calendar event.\"\"\"\r\n\r\n    def __init__(self, start_time, end_time, event_name):\r\n        \"\"\" (Event, int, int, str) -> NoneType\r\n\r\n        Precondition: 0 <= start_time < end_time <= 23\r\n        \r\n        Initialize a new event that starts at start_time, ends at end_time,\r\n        and is named name.\r\n\r\n        >>> e = Event(12, 13, 'Lunch')\r\n        >>> e.start_time\r\n        12\r\n        >>> e.end_time\r\n        13\r\n        >>> e.name\r\n        'Lunch'\r\n        \"\"\"\r\n        \r\n        self.start_time = start_time\r\n        self.end_time = end_time\r\n        self.name = event_name\r\n    \r\n    def __str__(self):\r\n            \"\"\" (Event) -> str\r\n    \r\n            Return a string representation of this event.\r\n    \r\n            >>> e = Event(6, 7, 'Run')\r\n            >>> str(e)\r\n            'Run: from 6 to 7'\r\n            \"\"\"\r\n            \r\n            return '{0}: from {1} to {2}'.format(self.name, self.start_time,\r\n                                                 self.end_time)\r\n\r\n    def overlaps(self, other):\r\n        \"\"\" (Event, Event) -> bool\r\n\r\n        Return True iff this event overlaps with event other.\r\n\r\n        >>> e1 = Event(6, 7, 'Run')\r\n        >>> e2 = Event(0, 7, 'Sleep')\r\n        >>> e1.overlaps(e2)\r\n        True\r\n        \"\"\"\r\n\r\n        return not (other.end_time <= self.start_time \\\r\n                    or other.start_time >= self.end_time)\r\n\r\nclass Day:\r\n    \"\"\"A calendar day and its events.\"\"\"\r\n\r\n    def __init__(self, day=1, month='January', year=2014):\r\n        \"\"\" (Day, int, str, int) -> NoneType\r\n\r\n        Initialize a day on the calendar with day, month and year,\r\n        and no events. \r\n        \r\n\r\n        >>> d = Day(5, 'April', 2014)\r\n        >>> d.day\r\n        5\r\n        >>> d.month\r\n        'April'\r\n        >>> d.year\r\n        2014\r\n        >>> d.events\r\n        []\r\n        \"\"\"\r\n\r\n        self.day = day\r\n        self.month = month\r\n        self.year = year\r\n        self.events = []\r\n\r\n\r\n    def schedule_event(self, new_event):\r\n        \"\"\" (Day, Event) -> bool\r\n\r\n        Schedule new_event on this day iff it does not overlap with\r\n        existing events.  Return True iff new_event is scheduled.\r\n\r\n\r\n        >>> d = Day(3, 'December', 2014)\r\n        >>> e = event.Event(17, 23, 'Celebrate end of classes')\r\n        >>> d.schedule_event(e)\r\n        True\r\n        >>> d.events[0] == e\r\n        True        \r\n        \"\"\"\r\n\r\n        for existing_event in self.events:\r\n            if existing_event.overlaps(new_event):\r\n                return False\r\n\r\n        self.events.append(new_event)\r\n        return True\r\n    \r\n    \r\n    def schedule_multiple_events(self, event_list):\r\n        \"\"\" (Day, list of Event) -> int\r\n        \r\n        Return the number of events in event_list that were successfully \r\n        scheduled on this day, without overlapping with existing events.\r\n        \r\n        >>> d = Day(5, 'December', 2015)\r\n        >>> e1 = Event(12, 16, 'Studying')\r\n        >>> d.schedule_event(e1)\r\n        True\r\n        >>> e2 = Event(17, 19, 'Dinner with A')\r\n        >>> e3 = Event(11, 13, 'Lunch with B')\r\n        >>> e4 = Event(9, 10, 'Gym')\r\n        >>> d.schedule_multiple_events([e2, e3, e4])\r\n        2\r\n        \"\"\"\r\n\r\n[/student_code]"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/92/embed?act=PCRS&sub=py_user_day"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:03:59.961Z"
+}

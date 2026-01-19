@@ -1,0 +1,148 @@
+{
+  "id": "6954bccff9187b06cf837202",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2019-02-15T16:02:09.000Z",
+  "updated_at": "2026-01-17T12:55:44.489Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "2-19_CompoundInterest",
+    "title": "2-19_CompoundInterest",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=2-19_CompoundInterest&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "2019-02-15T16:02:09.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*\n\u00a0* This program simulates how the money in an account grows over time,\n\u00a0* assuming that the interest is compounded annually.\n\u00a0*\n\u00a0* We've added some error checking (input validation) to ensure that the user enters\n\u00a0* a non-negative value for the starting balance.\n\u00a0*/\nimport java.util.Scanner;\n\npublic class CompoundInterest {\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Scanner s = new Scanner(System.in);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Here's a deluxe version that also keeps track of the number of invalid entries made by the user!\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// The user is given a maximum of 3 invalid tries before the program exits.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double balance;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int invalidTries = 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0do {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Enter starting amount of money:\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0balance = s.nextDouble();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (balance < 0) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"The balance must be a non-negative value!\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0invalidTries++;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (invalidTries >= 3) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"You have exceeded the limits of my patience for incompetence.\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.exit(1);\u00a0\u00a0\u00a0\u00a0\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} while (balance < 0);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Enter the annual rate of growth (as a decimal):\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double rate = s.nextDouble();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Enter how much extra to throw in at the end of each year:\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double extra = s.nextDouble();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many years would you like this to grow?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int years = s.nextInt();\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int y = 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0while (y <= years) {\u00a0\u00a0\u00a0\u00a0// This loop repeats \"years\" times\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double startingBalance = balance;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double interest = balance*rate;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0balance = startingBalance + interest + extra;\u00a0\u00a0\u00a0\u00a0\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.format(\"%3d  $%12.2f  $%12.2f  $%12.2f  $%12.2f\\n\", y, startingBalance, interest, extra, balance);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0y++;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0}\n}\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "parser": {
+        "concepts": [
+          "ImportStatement",
+          "ClassDefinition",
+          "PublicClassSpecifier",
+          "FormalMethodParameter",
+          "MethodDefinition",
+          "PublicMethodSpecifier",
+          "StaticMethodSpecifier",
+          "VoidDataType",
+          "SimpleAssignmentExpression",
+          "ObjectCreationStatement",
+          "ConstructorCall",
+          "ActualMethodParameter",
+          "DoubleDataType",
+          "SimpleVariable",
+          "IntDataType",
+          "DoStatement",
+          "WhileStatement",
+          "LessExpression",
+          "java.lang.System.out.println",
+          "StringLiteral",
+          "StringDataType",
+          "ObjectMethodInvocation",
+          "IfStatement",
+          "PostIncrementExpression",
+          "GreaterEqualExpression",
+          "LessEqualExpression",
+          "MultiplyExpression",
+          "AddExpression"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "java ontology v2": {
+        "concepts": [
+          "ActualMethodParameter",
+          "AddExpression",
+          "ClassDefinition",
+          "ConstructorCall",
+          "DoStatement",
+          "DoubleDataType",
+          "FormalMethodParameter",
+          "GreaterEqualExpression",
+          "IfStatement",
+          "ImportStatement",
+          "IntDataType",
+          "java.lang.System.out.println",
+          "LessEqualExpression",
+          "LessExpression",
+          "MethodDefinition",
+          "MultiplyExpression",
+          "ObjectCreationStatement",
+          "ObjectMethodInvocation",
+          "PostIncrementExpression",
+          "PublicClassSpecifier",
+          "PublicMethodSpecifier",
+          "SimpleAssignmentExpression",
+          "SimpleVariable",
+          "StaticMethodSpecifier",
+          "StringDataType",
+          "StringLiteral",
+          "VoidDataType",
+          "WhileStatement"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=2-19_CompoundInterest&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=367",
+      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
+      "context_name": "Java: INFSCI 0017 | CSEdPad test course (CS1 Memphis) > Do While",
+      "used_at": "2018-11-30T09:02:48.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ],
+  "created_at": "2025-12-31T06:04:00.079Z"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "6954bccff9187b06cf83762b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "1970-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-17T12:58:00.797Z",
+  "tags": [
+    "TODO:add-prompt"
+  ],
+  "identity": {
+    "id": "accumulator.c",
+    "title": "IS12:: accumulator.c (4.7)",
+    "type": "Example"
+  },
+  "links": {
+    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=accumulator.c&svc=progvis&sid=demo"
+  },
+  "attribution": {
+    "created_at": "1970-01-01T00:00:00.000Z",
+    "provider": "WebEx",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Peter Brusilovsky",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": "/*  Example: Simple Accumulator\n\u00a0\u00a0\u00a0\u00a0Author: Peter Brusilovsky\n\u00a0\u00a0\u00a0\u00a0Add numbers until 0 is entered. Prints the sum.\n\u00a0*/\n\n#include <stdio.h>\nvoid main () {\n\u00a0\u00a0\u00a0\u00a0int sum = 0, nextnumber;\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Number: \");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &nextnumber); /* read first number */\n\n\u00a0\u00a0\u00a0\u00a0while (nextnumber != 0) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0sum += nextnumber;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Number: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &nextnumber);\n\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0printf (\"Sum = %d\n\", sum);\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "unspecified": {
+        "concepts": [
+          "variable_initialization",
+          "int",
+          "void",
+          "printf",
+          "reference",
+          "include",
+          "variable_declaration",
+          "main_function",
+          "add_assignment",
+          "while",
+          "not_equal",
+          "scanf"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "html",
+      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=accumulator.c&svc=progvis"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2025-12-31T06:04:00.175Z"
+}
