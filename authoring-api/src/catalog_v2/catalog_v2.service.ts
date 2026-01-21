@@ -29,7 +29,7 @@ export class CatalogV2Service {
   async read(id: string) {
     const item = await this.catalogItems.findOne({
       _id: id,
-      status: { $in: ['public', 'deprecated'] },
+      status: { $in: ['public', 'deprecated', 'broken:pending-fix'] },
     });
     if (!item) throw new HttpException('catalog item not found', 404);
     return useId(toObject(item));
