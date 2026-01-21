@@ -224,14 +224,14 @@ export class SlcItemComponent implements OnInit, OnDestroy {
     const errors: string[] = [];
     const title = (this.model.identity?.title || '').trim();
     if (!title) errors.push('Title is required.');
-    if (title.length > 250) {
-      errors.push('Title must be under 250 characters.');
+    if (title.length > 512) {
+      errors.push('Title must be under 512 characters.');
     }
 
     const uniqueId = (this.model.identity?.id || '').trim();
     if (!uniqueId) errors.push('Unique ID is required.');
-    if (uniqueId.length > 250) {
-      errors.push('Unique ID must be under 250 characters.');
+    if (uniqueId.length > 512) {
+      errors.push('Unique ID must be under 512 characters.');
     }
 
     const type = (this.model.identity?.type || '').trim();
@@ -242,8 +242,8 @@ export class SlcItemComponent implements OnInit, OnDestroy {
 
     const demoUrl = (this.model.links?.demo_url || '').trim();
     if (!demoUrl) errors.push('Demo URL is required.');
-    if (demoUrl.length > 1000) {
-      errors.push('Demo URL must be under 1000 characters.');
+    if (demoUrl.length > 10240) {
+      errors.push('Demo URL must be under 10240 characters.');
     }
     if (demoUrl && !this.isValidUrl(demoUrl)) {
       errors.push('Demo URL must be a valid URL.');
@@ -253,31 +253,31 @@ export class SlcItemComponent implements OnInit, OnDestroy {
       this.model.languages?.content_language || ''
     ).trim();
     if (!contentLanguage) errors.push('Content language is required.');
-    if (contentLanguage.length > 20) {
-      errors.push('Content language must be under 20 characters.');
+    if (contentLanguage.length > 128) {
+      errors.push('Content language must be under 128 characters.');
     }
 
     const programmingLanguages = (this.programmingLanguageInput || '').trim();
     if (!programmingLanguages) {
       errors.push('Programming languages are required.');
     }
-    if (programmingLanguages.length > 250) {
-      errors.push('Programming languages must be under 250 characters.');
+    if (programmingLanguages.length > 1024) {
+      errors.push('Programming languages must be under 1024 characters.');
     }
 
     const prompt = (this.model.content?.prompt || '').trim();
-    if (prompt.length > 250) {
-      errors.push('Content prompt must be under 250 characters.');
+    if (prompt.length > 10240) {
+      errors.push('Content prompt must be under 10240 characters.');
     }
 
     const sourceCode = (this.model.content?.source_code || '').trim();
-    if (sourceCode.length > 1000) {
-      errors.push('Source snippet must be under 1000 characters.');
+    if (sourceCode.length > 10240) {
+      errors.push('Source snippet must be under 10240 characters.');
     }
 
     const topics = (this.topicsInput || '').trim();
-    if (topics.length > 1000) {
-      errors.push('Topics must be under 1000 characters.');
+    if (topics.length > 10240) {
+      errors.push('Topics must be under 10240 characters.');
     }
 
     const knowledgeComponents =
@@ -286,23 +286,23 @@ export class SlcItemComponent implements OnInit, OnDestroy {
       const label = key || `#${index + 1}`;
       if (!key.trim()) {
         errors.push('Knowledge component classifier is required.');
-      } else if (key.trim().length > 100) {
+      } else if (key.trim().length > 1024) {
         errors.push(
-          `Knowledge component classifier "${label}" must be under 100 characters.`
+          `Knowledge component classifier "${label}" must be under 1024 characters.`
         );
       }
 
       const note = (value?.note || '').trim();
-      if (note && note.length > 250) {
+      if (note && note.length > 10240) {
         errors.push(
-          `Knowledge component "${label}" note must be under 250 characters.`
+          `Knowledge component "${label}" note must be under 10240 characters.`
         );
       }
 
       const concepts = (value?.concepts || []).join(', ').trim();
-      if (concepts && concepts.length > 1000) {
+      if (concepts && concepts.length > 10240) {
         errors.push(
-          `Knowledge component "${label}" concepts must be under 1000 characters.`
+          `Knowledge component "${label}" concepts must be under 10240 characters.`
         );
       }
     });
@@ -312,24 +312,24 @@ export class SlcItemComponent implements OnInit, OnDestroy {
       .map((value) => value.trim())
       .filter(Boolean);
     learningObjectives.forEach((objective, index) => {
-      if (objective.length > 250) {
+      if (objective.length > 10240) {
         errors.push(
-          `Learning objective ${index + 1} must be under 250 characters.`
+          `Learning objective ${index + 1} must be under 10240 characters.`
         );
       }
     });
 
     const prereqTopics = (this.prereqTopicsInput || '').trim();
-    if (prereqTopics.length > 1000) {
-      errors.push('Prerequisite topics must be under 1000 characters.');
+    if (prereqTopics.length > 10240) {
+      errors.push('Prerequisite topics must be under 10240 characters.');
     }
     const prereqConcepts = (this.prereqConceptsInput || '').trim();
-    if (prereqConcepts.length > 1000) {
-      errors.push('Prerequisite concepts must be under 1000 characters.');
+    if (prereqConcepts.length > 10240) {
+      errors.push('Prerequisite concepts must be under 10240 characters.');
     }
     const prereqItemIds = (this.prereqItemIdsInput || '').trim();
-    if (prereqItemIds.length > 1000) {
-      errors.push('Prerequisite item IDs must be under 1000 characters.');
+    if (prereqItemIds.length > 10240) {
+      errors.push('Prerequisite item IDs must be under 10240 characters.');
     }
 
     const delivery = this.model.delivery || [];
@@ -348,27 +348,27 @@ export class SlcItemComponent implements OnInit, OnDestroy {
 
     const license = (this.model.rights?.license || '').trim();
     if (!license) errors.push('License is required.');
-    if (license.length > 50) {
-      errors.push('License must be under 50 characters.');
+    if (license.length > 128) {
+      errors.push('License must be under 128 characters.');
     }
     const licenseUrl = (this.model.rights?.license_url || '').trim();
     if (licenseUrl && !this.isValidUrl(licenseUrl)) {
       errors.push('License URL must be a valid URL.');
     }
     const usageNotes = (this.model.rights?.usage_notes || '').trim();
-    if (usageNotes && usageNotes.length > 250) {
-      errors.push('Usage notes must be under 250 characters.');
+    if (usageNotes && usageNotes.length > 10240) {
+      errors.push('Usage notes must be under 10240 characters.');
     }
 
     const publisher = (this.model.attribution?.publisher || '').trim();
-    if (publisher && publisher.length > 100) {
-      errors.push('Publisher must be under 100 characters.');
+    if (publisher && publisher.length > 1024) {
+      errors.push('Publisher must be under 1024 characters.');
     }
 
     const provider = (this.model.attribution?.provider || '').trim();
     if (!provider) errors.push('Provider is required.');
-    if (provider.length > 100) {
-      errors.push('Provider must be under 100 characters.');
+    if (provider.length > 1024) {
+      errors.push('Provider must be under 1024 characters.');
     }
 
     const authors = this.model.attribution?.authors || [];
@@ -377,13 +377,13 @@ export class SlcItemComponent implements OnInit, OnDestroy {
       const name = (author?.name || '').trim();
       if (!name) {
         errors.push(`Author ${index + 1} name is required.`);
-      } else if (name.length > 100) {
-        errors.push(`Author ${index + 1} name must be under 100 characters.`);
+      } else if (name.length > 1024) {
+        errors.push(`Author ${index + 1} name must be under 1024 characters.`);
       }
       const affiliation = (author?.affiliation || '').trim();
-      if (affiliation && affiliation.length > 100) {
+      if (affiliation && affiliation.length > 1024) {
         errors.push(
-          `Author ${index + 1} affiliation must be under 100 characters.`
+          `Author ${index + 1} affiliation must be under 1024 characters.`
         );
       }
     });
@@ -391,20 +391,20 @@ export class SlcItemComponent implements OnInit, OnDestroy {
     const uses = this.model.uses || [];
     uses.forEach((use, index) => {
       const contextUrl = (use?.context_url || '').trim();
-      if (contextUrl && contextUrl.length > 500) {
+      if (contextUrl && contextUrl.length > 1024) {
         errors.push(
-          `Use ${index + 1} context URL must be under 500 characters.`
+          `Use ${index + 1} context URL must be under 1024 characters.`
         );
       }
       const contextName = (use?.context_name || '').trim();
-      if (contextName && contextName.length > 250) {
+      if (contextName && contextName.length > 1024) {
         errors.push(
-          `Use ${index + 1} context name must be under 250 characters.`
+          `Use ${index + 1} context name must be under 1024 characters.`
         );
       }
       const usedBy = (use?.used_by || '').trim();
-      if (usedBy && usedBy.length > 100) {
-        errors.push(`Use ${index + 1} used by must be under 100 characters.`);
+      if (usedBy && usedBy.length > 1024) {
+        errors.push(`Use ${index + 1} used by must be under 1024 characters.`);
       }
     });
 
