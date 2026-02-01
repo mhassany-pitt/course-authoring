@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-12T23:26:27.000Z",
-  "updated_at": "2026-01-17T13:18:52.586Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:03:44.456Z",
+  "tags": [],
   "identity": {
     "id": "py_classes_inheritance",
     "title": "Person and Employee Inheritance",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct two classes: one represents a Person and another one represents an Employee that should be defined as Person's child class. The classes should define the functions to check if the person is an employee and return the person's name.",
+    "source_code": "# Step1: Define the class\nclass Person():\n    # Step 1.1: Initialize the attributes of the Person class.\n    def __init__(self, name):\n        self.name = name\n    # Step 1.2: Define the method to return the person\u2019s name\n    def get_name(self):\n        return self.name\n    # Step 1.3: Define the method to return if the person is an employee\n    def is_employee(self):\n        return False\n# Step2: Define a class that is Person\u2019s child class or subclass\nclass Employee(Person):\n    # Step 2.1: Define the method to return if the person is an employee\n    def is_employee(self):\n        return True\n# Step3: Test the class\nemp = Person(\"Melody\")\nprint(emp.get_name(), emp.is_employee())\nemp = Employee(\"Linda\")\nprint(emp.get_name(), emp.is_employee())"
   },
   "classification": {
     "topics": [],

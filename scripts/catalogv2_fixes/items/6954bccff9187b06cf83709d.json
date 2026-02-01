@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-14T01:34:54.000Z",
-  "updated_at": "2026-01-17T13:21:05.583Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:46:23.263Z",
+  "tags": [],
   "identity": {
     "id": "passing_lists_ch",
     "title": "Passing Lists Challenge",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct a program that convert Celsius temperature values in a list to Fahrenheit temperature values",
+    "source_code": "# Step 1: Define the function\ndef Fahrenheit(c_list):\n#Step 1.1 :Iterate through the list and compute each value\u2019s Fahrenheit value\n    for i in range(len(c_list)):\n        c_list[i] = (c_list[i]*1.8)+32\n# Step 2: Initiate the list\ncelsius_list = [25, 3, 40, -5]\n# Step 3: Call the function\nFahrenheit(celsius_list)\n# Step4: Print the Fahrenheit values\nprint('The converted Fahrenheit temperature is:',celsius_list)"
   },
   "classification": {
     "topics": [],

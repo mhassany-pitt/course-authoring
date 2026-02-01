@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:18.131Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:21.832Z",
+  "tags": [],
   "identity": {
     "id": "complex_expr",
     "title": "complex_expr",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=complex_expr&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/complex_expr"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/*\u00a0\u00a0\u00a0\u00a0Evaluate two complex expressions.\n\u00a0\u00a0\u00a0\u00a0   Written by:\n\u00a0\u00a0\u00a0\u00a0   Date:\n*/\n#include <stdio.h>\nint main (void)\n{\n//\u00a0\u00a0\u00a0\u00a0Local Declarations\n\u00a0\u00a0\u00a0\u00a0int a = 3;\n\u00a0\u00a0\u00a0\u00a0int b = 4;\n\u00a0\u00a0\u00a0\u00a0int c = 5;\n\u00a0\u00a0\u00a0\u00a0int x;\n\u00a0\u00a0\u00a0\u00a0int y;\n\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0printf(\"Initial values of the variables: \\n\");\n\u00a0\u00a0\u00a0\u00a0printf(\"a = %d\\tb = %d\\tc = %d\\n\\n\", a, b, c);\n\n\u00a0\u00a0\u00a0\u00a0x = a * 4 + b / 2 - c * b;\n\u00a0\u00a0\u00a0\u00a0printf\n\u00a0\u00a0\u00a0\u00a0   (\"Value of   a *  4 + b  / 2 - c   * b:  %d\\n\", x);\n\n\u00a0\u00a0\u00a0\u00a0y = --a * (3 + b) / 2 - c++ * b;\n\u00a0\u00a0\u00a0\u00a0printf\n\u00a0\u00a0\u00a0\u00a0   (\"Value of --a * (3 + b) / 2 - c++ * b: %d\\n\", y);\n\u00a0\u00a0\u00a0\u00a0printf(\"\\nValues of the variables are now: \\n\");\n\u00a0\u00a0\u00a0\u00a0printf(\"a = %d\\tb = %d\\tc = %d\\n\\n\", a, b, c);\n\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\u00a0\u00a0\u00a0\u00a0// main"
+    "source_code": "/*\tEvaluate two complex expressions.\r\n\t   Written by: \r\n\t   Date: \r\n*/\r\n#include <stdio.h>\r\nint main (void)\r\n{\r\n//\tLocal Declarations \r\n\tint a = 3;\r\n\tint b = 4;\r\n\tint c = 5;\r\n\tint x;\r\n\tint y;\r\n\r\n//\tStatements \r\n\tprintf(\"Initial values of the variables: \\n\");\r\n\tprintf(\"a = %d\\tb = %d\\tc = %d\\n\\n\", a, b, c);\r\n\r\n\tx = a * 4 + b / 2 - c * b;\r\n\tprintf\r\n\t   (\"Value of   a *  4 + b  / 2 - c   * b:  %d\\n\", x);\r\n\r\n\ty = --a * (3 + b) / 2 - c++ * b;\r\n\tprintf\r\n\t   (\"Value of --a * (3 + b) / 2 - c++ * b: %d\\n\", y); \r\n\tprintf(\"\\nValues of the variables are now: \\n\");\r\n\tprintf(\"a = %d\\tb = %d\\tc = %d\\n\\n\", a, b, c);\r\n\r\n\treturn 0;\r\n}\t// main"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=complex_expr&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/complex_expr"
     }
   ],
   "rights": {

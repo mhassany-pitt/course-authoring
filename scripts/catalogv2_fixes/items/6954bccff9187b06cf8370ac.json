@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-12T23:56:06.000Z",
-  "updated_at": "2026-01-17T13:18:52.333Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:04:12.298Z",
+  "tags": [],
   "identity": {
     "id": "py_nestedloops_print_a_right_square_star_pattern",
     "title": "Printing a square star pattern",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct a program that takes an input as the size of a solid square  and print the square.\nFor example, if a user\u2019s input is 4, the printed solid square should look like:\n****\n****\n****\n****",
+    "source_code": "# Step 1: Read the size of the square star pattern\nsize = int(input(\"Enter size of side of square :\"))\n# Step 2: Print the rows in the star pattern, one by one\nfor i in range(size):\n    # Step 2.1: Generate the asterisks in the corresponding row\n    for j in range(size):\n        # Step 2.2: Print the asterisks in each row\n        print(\"*\", end = \"\")\n    # Step 3: Print the next line\n    print()"
   },
   "classification": {
     "topics": [],

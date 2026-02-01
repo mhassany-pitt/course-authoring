@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T13:19:09.165Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:49.402Z",
+  "tags": [],
   "identity": {
     "id": "nested_loops2",
     "title": "DEPRECATED_Nested Loops2",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=nested_loops2"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/nested_loops2"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "         for ( int rowNumber = 1;  rowNumber <= 10;  rowNumber++ ) {\r\n            for ( int N = 1;  N <= 10;  N++ ) {\r\n               System.out.print( N * rowNumber);  \r\n            }\r\n               System.out.println();\r\n         }"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=nested_loops2"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/nested_loops2"
     }
   ],
   "rights": {

@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:48.661Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:45.144Z",
+  "tags": [],
   "identity": {
     "id": "strtok",
     "title": "strtok",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=strtok&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/strtok"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\n#include <string.h>\n\nint main()\n{\n\u00a0\u00a0\u00a0char string[] = \"This is a sentence with 7 tokens\";\n\u00a0\u00a0\u00a0char *tokenPtr;\n\n\u00a0\u00a0\u00a0printf( \"%s\\n%s\\n\\n%s\\n\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"The string to be tokenized is:\", string,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"The tokens are:\" );\n\n\u00a0\u00a0\u00a0tokenPtr = strtok( string, \" \" );\n\n\u00a0\u00a0\u00a0while ( tokenPtr != NULL ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%s\\n\", tokenPtr );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0tokenPtr = strtok( NULL, \" \" );\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0return 0;\n}\n}"
+    "source_code": "#include <stdio.h>\r\n#include <string.h>\r\n\r\nint main()\r\n{ \r\n   char string[] = \"This is a sentence with 7 tokens\";\r\n   char *tokenPtr;\r\n   \r\n   printf( \"%s\\n%s\\n\\n%s\\n\",\r\n           \"The string to be tokenized is:\", string, \r\n           \"The tokens are:\" );\r\n          \r\n   tokenPtr = strtok( string, \" \" );\r\n\r\n   while ( tokenPtr != NULL ) { \r\n      printf( \"%s\\n\", tokenPtr );\r\n      tokenPtr = strtok( NULL, \" \" );\r\n   }\r\n\r\n   return 0;\r\n}\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=strtok&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/strtok"
     }
   ],
   "rights": {

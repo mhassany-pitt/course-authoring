@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:07.265Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:20.049Z",
+  "tags": [],
   "identity": {
     "id": "testprivate",
     "title": "private",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=testprivate&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-c/testprivate"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "public test\n{\n}"
+    "source_code": "public test\r\n\n{\r\n\n}"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=testprivate&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-c/testprivate"
     }
   ],
   "rights": {

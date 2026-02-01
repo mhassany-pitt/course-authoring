@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:48.071Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:44.691Z",
+  "tags": [],
   "identity": {
     "id": "poly_v2",
     "title": "Polymorphism and Inheritance 1",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=poly_v2&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/poly_v2"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "class Employee {\n\u00a0\u00a0public void work() {\n\u00a0\u00a0\u00a0\u00a0System.out.println(\"I am an employee.\");\n\u00a0\u00a0}\n}\n\nclass Manager extends Employee {\n\u00a0\u00a0public void work() {\n\u00a0\u00a0\u00a0\u00a0System.out.println(\"I am a manager.\");\n\u00a0\u00a0}\n\n\u00a0\u00a0public void manage() {\n\u00a0\u00a0\u00a0\u00a0System.out.println(\"Managing ...\");\n\u00a0\u00a0}\n}\n\npublic class PolymorphismTest {\n\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0Employee employee = new Manager();\n\u00a0\u00a0\u00a0\u00a0System.out.println(employee.getClass().getName());\n\u00a0\u00a0\u00a0\u00a0employee.work();\n\u00a0\u00a0\u00a0\u00a0employee.manage();\n\u00a0\u00a0\u00a0\u00a0Manager manager = (Manager) employee;\n\u00a0\u00a0\u00a0\u00a0manager.work();\n\u00a0\u00a0\u00a0\u00a0manager.manage();\n\u00a0\u00a0}\n}"
+    "source_code": "class Employee {\n  public void work() {\n    System.out.println(\"I am an employee.\");\n  }\n}\n\nclass Manager extends Employee {\n  public void work() {\n    System.out.println(\"I am a manager.\");\n  }\n\n  public void manage() {\n    System.out.println(\"Managing ...\");\n  }\n}\n\npublic class PolymorphismTest {\n  public static void main(String[] args) {\n    Employee employee = new Manager();    \n    System.out.println(employee.getClass().getName());    \n    employee.work();\n    employee.manage();\n    Manager manager = (Manager) employee;\n    manager.work();\n    manager.manage();\n  }\n}"
   },
   "classification": {
     "topics": [],
@@ -80,7 +78,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=poly_v2&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/poly_v2"
     }
   ],
   "rights": {

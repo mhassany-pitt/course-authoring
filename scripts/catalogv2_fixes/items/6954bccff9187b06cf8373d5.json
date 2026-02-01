@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T13:19:09.035Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:46:32.548Z",
+  "tags": [],
   "identity": {
     "id": "nested_loops",
     "title": "DEPRECATED_Nested Loops",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=nested_loops"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/nested_loops"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "    for(int i=0;i<7;i++) {\r\n   \tfor(int j=7;j>i;j--) {\r\n   \t\tSystem.out.print(\"*\");\r\n   \t}\r\n   \tSystem.out.println();\r\n   }"
   },
   "classification": {
     "topics": [],
@@ -51,57 +48,38 @@
       },
       "java ontology v2": {
         "concepts": [
-          "ExpressionStatement",
-          "ForStatement",
-          "IntDataType",
-          "LessEqualExpression",
           "MultiplyExpression",
-          "NestedStatement",
-          "PostIncrementExpression",
-          "SimpleAssignmentExpression",
-          "SimpleVariable",
-          "StatementBlock",
-          "VariableInitializationStatement",
-          "AddAssignmentExpression",
-          "ExpressionStatement",
-          "ForStatement",
-          "IntDataType",
-          "java.lang.System.out.print",
-          "LessExpression",
-          "PostIncrementExpression",
-          "SimpleAssignmentExpression",
-          "SimpleVariable",
-          "StatementBlock",
-          "VariableInitializationStatement",
           "ActualMethodParameter",
-          "AddAssignmentExpression",
-          "AddExpression",
-          "ClassDefinition",
-          "ConstructorCall",
-          "ConstructorDefinition",
-          "DoubleDataType",
-          "ExpressionStatement",
-          "FormalMethodParameter",
           "ForStatement",
-          "InstanceField",
-          "InstanceFieldDefinitionStatement",
-          "IntDataType",
-          "LessExpression",
-          "MethodDefinition",
-          "MultiplyExpression",
-          "ObjectCreationStatement",
+          "java.lang.System.out.print",
           "ObjectMethodInvocation",
-          "ObjectVariable",
-          "PostIncrementExpression",
-          "PrivateAccessSpecifier",
           "PublicAccessSpecifier",
-          "ReturnStatement",
-          "SimpleAssignmentExpression",
-          "SimpleVariable",
-          "StatementBlock",
+          "VoidDataType",
+          "ObjectVariable",
+          "ConstructorCall",
+          "LessExpression",
           "SubtractExpression",
+          "PrivateAccessSpecifier",
+          "SimpleAssignmentExpression",
+          "DoubleDataType",
+          "StatementBlock",
+          "FormalMethodParameter",
+          "InstanceFieldDefinitionStatement",
+          "AddAssignmentExpression",
+          "PostIncrementExpression",
+          "MethodDefinition",
+          "LessEqualExpression",
           "VariableInitializationStatement",
-          "VoidDataType"
+          "ClassDefinition",
+          "ExpressionStatement",
+          "ConstructorDefinition",
+          "ObjectCreationStatement",
+          "AddExpression",
+          "SimpleVariable",
+          "IntDataType",
+          "NestedStatement",
+          "ReturnStatement",
+          "InstanceField"
         ],
         "note": "",
         "created_at": null,
@@ -124,7 +102,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=nested_loops"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/nested_loops"
     }
   ],
   "rights": {

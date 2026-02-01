@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:25.678Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:01.795Z",
+  "tags": [],
   "identity": {
     "id": "border_layout",
     "title": "ISD::BorderLayoutDemo.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=border_layout"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/border_layout"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 12.25: BorderLayoutDemo.java\r\n// Demonstrating BorderLayout.\r\nimport java.awt.*;\r\nimport java.awt.event.*;\r\nimport javax.swing.*;\r\n\r\npublic class BorderLayoutDemo extends JFrame\r\n                              implements ActionListener {\r\n   private JButton b[];\r\n   private String names[] =\r\n      { \"Hide North\", \"Hide South\", \"Hide East\",\r\n        \"Hide West\", \"Hide Center\" };\r\n   private BorderLayout layout;\r\n\r\n   public BorderLayoutDemo()\r\n   {\r\n      super( \"BorderLayout Demo\" );\r\n\r\n      layout = new BorderLayout( 5, 5 );\r\n\r\n      Container c = getContentPane();\r\n      c.setLayout( layout );\r\n\r\n      // instantiate button objects\r\n      b = new JButton[ names.length ];\r\n\r\n      for ( int i = 0; i < names.length; i++ ) {\r\n         b[ i ] = new JButton( names[ i ] );\r\n         b[ i ].addActionListener( this );\r\n      }\r\n\r\n      // order not important\r\n      c.add( b[ 0 ], BorderLayout.NORTH );  // North position\r\n      c.add( b[ 1 ], BorderLayout.SOUTH );  // South position\r\n      c.add( b[ 2 ], BorderLayout.EAST );   // East position\r\n      c.add( b[ 3 ], BorderLayout.WEST );   // West position\r\n      c.add( b[ 4 ], BorderLayout.CENTER ); // Center position\r\n\r\n      setSize( 300, 200 );\r\n      show();\r\n   }            \r\n\r\n   public void actionPerformed( ActionEvent e )\r\n   {\r\n      for ( int i = 0; i < b.length; i++ ) \r\n         if ( e.getSource() == b[ i ] )\r\n            b[ i ].setVisible( false );\r\n         else\r\n            b[ i ].setVisible( true );\r\n\r\n      // re-layout the content pane\r\n      layout.layoutContainer( getContentPane() );\r\n   }\r\n\r\n   public static void main( String args[] )\r\n   { \r\n      BorderLayoutDemo app = new BorderLayoutDemo();\r\n\r\n      app.addWindowListener(\r\n         new WindowAdapter() {\r\n            public void windowClosing( WindowEvent e )\r\n            {\r\n               System.exit( 0 );\r\n            }\r\n         }\r\n      );\r\n   }\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=border_layout"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/border_layout"
     }
   ],
   "rights": {

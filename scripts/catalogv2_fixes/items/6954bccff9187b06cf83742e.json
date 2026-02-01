@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:23.101Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:59.488Z",
+  "tags": [],
   "identity": {
     "id": "fonts",
     "title": "ISD::Fonts.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=fonts"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/fonts"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 11.9: Fonts.java\n\n// Using fonts\n\nimport java.awt.*;\n\nimport javax.swing.*;\n\nimport java.awt.event.*;\n\n\n\npublic class Fonts extends JFrame {\n   public Fonts()\n   {\n      super( \"Using fonts\" );\n\n\n      setSize( 420, 125 );\n      show();\n   }\n\n\n   public void paint( Graphics g )\n   {\n      // set current font to Serif (Times), bold, 12pt\n      // and draw a string\n      g.setFont( new Font( \"Serif\", Font.BOLD, 12 ) );\n      g.drawString( \"Serif 12 point bold.\", 20, 50 );\n\n\n      // set current font to Monospaced (Courier),\n      // italic, 24pt and draw a string\n      g.setFont( new Font( \"Monospaced\", Font.ITALIC, 24) );\n      g.drawString( \"Monospaced 24 point italic.\", 20, 70 );\n\n\n      // set current font to SansSerif (Helvetica),\n      // plain, 14pt and draw a string\n      g.setFont( new Font( \"SansSerif\", Font.PLAIN, 14 ) );\n      g.drawString( \"SansSerif 14 point plain.\", 20, 90 );\n\n\n      // set current font to Serif (times), bold/italic,\n      // 18pt and draw a string\n      g.setColor( Color.red );\n      g.setFont(\n         new Font( \"Serif\", Font.BOLD + Font.ITALIC, 18 ) );\n      g.drawString( g.getFont().getName() + \" \" +\n                    g.getFont().getSize() +\n                    \" point bold italic.\", 20, 110 );\n   }\n\n\n   public static void main( String args[] )\n   {\n      Fonts app = new Fonts();\n\n\n      app.addWindowListener(\n         new WindowAdapter() {\n            public void windowClosing( WindowEvent e )\n            {\n               System.exit( 0 );\n            }\n         }\n      );\n   }\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=fonts"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/fonts"
     }
   ],
   "rights": {

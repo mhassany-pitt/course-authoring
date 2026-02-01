@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2018-12-06T17:49:16.000Z",
-  "updated_at": "2026-01-17T12:55:47.709Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:46.238Z",
+  "tags": [],
   "identity": {
     "id": "expressions_memphis",
     "title": "Expressions (Memphis)",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=expressions_memphis&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/expressions_memphis"
   },
   "attribution": {
     "created_at": "2018-12-06T17:49:16.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "import java.util.Scanner;\n\npublic class PetStore {\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Scanner fido = new Scanner(System.in);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0final double \u00a0\u00a0\u00a0\u00a0DOG_PRICE = 50,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0DRAGON_PRICE = 820381903,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0SLOTH_PRICE = 900018293028L,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0BABY_MONKEY_PRICE = 0.15,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0AMOEBA_PRICE = 16000000;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Welcome to the finest pet store in the land!\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Pet menu:\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"1. Dogs\\t\\t\\t$\" + DOG_PRICE);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"2. Dragons\\t\\t$\" + DRAGON_PRICE);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"3. Sloths\\t\\t$\" + SLOTH_PRICE);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"4. Baby monkeys\\t\\t$\" + BABY_MONKEY_PRICE);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"5. Amoebas\\t\\t$\" + AMOEBA_PRICE);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println();\u00a0\u00a0\u00a0\u00a0// This just skips a line\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many dogs would you like to buy?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int dogs = fido.nextInt();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many dragons would you like to buy?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int dragons = fido.nextInt();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many sloths would you like to buy?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int sloths = fido.nextInt();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many baby monkeys would you like to buy?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int babyMonkeys = fido.nextInt();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many amoebas would you like to buy?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int amoebas = fido.nextInt();\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double subtotal = dogs*DOG_PRICE + dragons*DRAGON_PRICE + sloths*SLOTH_PRICE + babyMonkeys*BABY_MONKEY_PRICE + amoebas*AMOEBA_PRICE;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double tax = subtotal*.0925;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double total = subtotal + tax;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Subtotal:\\t\\t$\" + subtotal);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Tax:\\t\\t\\t$\" + tax);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Total:\\t\\t\\t$\" + total);\n\u00a0\u00a0\u00a0\u00a0}\n}"
+    "prompt": "Expressions with constants from Memphis.\n(1-29) Casting values, using Scanner (change making program, pet store checkout) PetStore.java\n\nProgram that demonstrates using Scanner to read user input -- simulates checkout from an online pet store.",
+    "source_code": "import java.util.Scanner;\n\npublic class PetStore {\n\tpublic static void main(String[] args) {\n\t\tScanner fido = new Scanner(System.in);\n\t\tfinal double \tDOG_PRICE = 50,\n\t\t\t\t\t\tDRAGON_PRICE = 820381903,\n\t\t\t\t\t\tSLOTH_PRICE = 900018293028L,\n\t\t\t\t\t\tBABY_MONKEY_PRICE = 0.15,\n\t\t\t\t\t\tAMOEBA_PRICE = 16000000;\n\t\t\n\t\tSystem.out.println(\"Welcome to the finest pet store in the land!\");\n\t\tSystem.out.println(\"Pet menu:\");\n\t\tSystem.out.println(\"1. Dogs\\t\\t\\t$\" + DOG_PRICE);\n\t\tSystem.out.println(\"2. Dragons\\t\\t$\" + DRAGON_PRICE);\n\t\tSystem.out.println(\"3. Sloths\\t\\t$\" + SLOTH_PRICE);\n\t\tSystem.out.println(\"4. Baby monkeys\\t\\t$\" + BABY_MONKEY_PRICE);\n\t\tSystem.out.println(\"5. Amoebas\\t\\t$\" + AMOEBA_PRICE);\n\t\tSystem.out.println();\t// This just skips a line\n\t\t\n\t\tSystem.out.println(\"How many dogs would you like to buy?\");\n\t\tint dogs = fido.nextInt();\n\t\tSystem.out.println(\"How many dragons would you like to buy?\");\n\t\tint dragons = fido.nextInt();\n\t\tSystem.out.println(\"How many sloths would you like to buy?\");\n\t\tint sloths = fido.nextInt();\n\t\tSystem.out.println(\"How many baby monkeys would you like to buy?\");\n\t\tint babyMonkeys = fido.nextInt();\n\t\tSystem.out.println(\"How many amoebas would you like to buy?\");\n\t\tint amoebas = fido.nextInt();\n\n\t\tdouble subtotal = dogs*DOG_PRICE + dragons*DRAGON_PRICE + sloths*SLOTH_PRICE + babyMonkeys*BABY_MONKEY_PRICE + amoebas*AMOEBA_PRICE;\n\t\t\n\t\tdouble tax = subtotal*.0925;\n\t\t\n\t\tdouble total = subtotal + tax;\n\n\t\tSystem.out.println(\"Subtotal:\\t\\t$\" + subtotal);\n\t\tSystem.out.println(\"Tax:\\t\\t\\t$\" + tax);\n\t\tSystem.out.println(\"Total:\\t\\t\\t$\" + total);\n\t}\n}"
   },
   "classification": {
     "topics": [],
@@ -87,7 +85,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=expressions_memphis&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/expressions_memphis"
     }
   ],
   "rights": {

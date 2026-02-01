@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-01T15:07:09.000Z",
-  "updated_at": "2026-01-17T12:57:50.463Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:16.171Z",
+  "tags": [],
   "identity": {
     "id": "ArrayListTester",
     "title": "ArrayList Tester",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=ArrayListTester&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/ArrayListTester"
   },
   "attribution": {
     "created_at": "2014-09-01T15:07:09.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "import java.util.ArrayList;\npublic class ArrayListTester\n{\n\u00a0\u00a0\u00a0public static void main(String[] args)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ArrayList<BankAccount> accounts = new ArrayList<BankAccount>();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0accounts.add(new BankAccount(1001));\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0accounts.add(new BankAccount(1015));\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0accounts.add(new BankAccount(1729));\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0accounts.add(1, new BankAccount(1008));\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0accounts.remove(0);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Size: \" + accounts.size());\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0BankAccount first = accounts.get(0);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"First account number: \"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0+ first.getAccountNumber());\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0BankAccount last = accounts.get(accounts.size() - 1);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Last account number: \"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0+ last.getAccountNumber());\n\u00a0\u00a0\u00a0}\n}\n}"
+    "source_code": "import java.util.ArrayList;\npublic class ArrayListTester\n{\n   public static void main(String[] args)\n   {\n      ArrayList<BankAccount> accounts = new ArrayList<BankAccount>();\n      accounts.add(new BankAccount(1001));\n      accounts.add(new BankAccount(1015));\n      accounts.add(new BankAccount(1729));\n      accounts.add(1, new BankAccount(1008));\n      accounts.remove(0);\n      System.out.println(\"Size: \" + accounts.size());\n      BankAccount first = accounts.get(0);\n      System.out.println(\"First account number: \" \n            + first.getAccountNumber());\n      BankAccount last = accounts.get(accounts.size() - 1);\n      System.out.println(\"Last account number: \" \n            + last.getAccountNumber());\n   }\n}\n}"
   },
   "classification": {
     "topics": [],
@@ -80,7 +78,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=ArrayListTester&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/ArrayListTester"
     }
   ],
   "rights": {

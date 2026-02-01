@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T13:19:37.653Z",
+  "updated_at": "2026-01-17T20:47:51.546Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -43,28 +43,22 @@
     "knowledge_components": {
       "expert": {
         "concepts": [
-          "Sub-Queries",
-          "SingleAttributeSelection",
-          "SingleTableSelection",
           "EqualComparison",
-          "LessThanComparison",
-          "AllResultsWithComparisonSelection",
-          "SimpleSubquery",
-          "WhereClause",
-          "SelectClause",
+          "NumericConstant",
+          "AllPredicate",
           "StringConstant",
           "SelectStatement",
-          "FromClause",
-          "SingleQuotationCharacter",
-          "AllPredicate",
-          "AllPredicate",
-          "EqualComparison",
-          "LessThanComparison",
           "SimpleSubQuery",
           "SingleAttributeSelection",
+          "LessThanComparison",
+          "SimpleSubquery",
           "SingleTableSelection",
-          "NumericConstant",
-          "WhereClause"
+          "FromClause",
+          "SingleQuotationCharacter",
+          "Sub-Queries",
+          "SelectClause",
+          "WhereClause",
+          "AllResultsWithComparisonSelection"
         ],
         "note": "",
         "created_at": null,

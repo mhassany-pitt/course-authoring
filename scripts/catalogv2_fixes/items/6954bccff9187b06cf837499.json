@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-03-23T11:12:10.000Z",
-  "updated_at": "2026-01-17T12:56:59.333Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:11.255Z",
+  "tags": [],
   "identity": {
     "id": "TableCreation5_version_1_pt",
     "title": "Check Constraint (1) pt",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=TableCreation5_version_1_pt&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/TableCreation5_version_1_pt"
   },
   "attribution": {
     "created_at": "2016-03-23T11:12:10.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "CREATE TABLE Reserves\n\u00a0\u00a0\u00a0\u00a0(sname CHAR(10),\n\u00a0\u00a0\u00a0\u00a0\u00a0bid INTEGER,\n\u00a0\u00a0\u00a0\u00a0\u00a0day DATE,\n\u00a0\u00a0\u00a0\u00a0\u00a0PRIMARY KEY(bid, day),\n\u00a0\u00a0\u00a0\u00a0\u00a0CONSTRAINT noInterlakeRes\n\u00a0\u00a0\u00a0\u00a0\u00a0CHECK\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0('Interlake' <>\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0(SELECT B.bname\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0FROM boats B\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0WHERE B.bid = bid)));"
+    "prompt": "This is the portuguese version.",
+    "source_code": "CREATE TABLE Reserves\n\n    (sname CHAR(10),\n\n     bid INTEGER,\n\n     day DATE,\n\n     PRIMARY KEY(bid, day),\n\n     CONSTRAINT noInterlakeRes\n\n     CHECK\n\n      ('Interlake' <>\n\n             (SELECT B.bname\n\n              FROM boats B\n\n              WHERE B.bid = bid)));\n"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=TableCreation5_version_1_pt&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/TableCreation5_version_1_pt"
     }
   ],
   "rights": {

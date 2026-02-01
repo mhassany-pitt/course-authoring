@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:28.429Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:04.091Z",
+  "tags": [],
   "identity": {
     "id": "Bicycle",
     "title": "DEPRECATED_Bicycle",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=Bicycle"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Bicycle"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "//Sun Java Tutorial, Learning the Java Language>> Classes and Objects\r\n\r\n\n\r\n\npublic class Bicycle {\r\n\r\n\n\t\r\n\r\n\n    // the Bicycle class has three fields\r\n\r\n\n    private int cadence;\r\n\r\n\n    private int gear;\r\n\r\n\n    private int speed;\r\n\r\n\n\t\r\n\r\n\n    // the Bicycle class has one constructor\r\n\r\n\n    public Bicycle(int startCadence, int startSpeed, int startGear) {\r\n\r\n\n        gear = startGear;\r\n\r\n\n        cadence = startCadence;\r\n\r\n\n        speed = startSpeed;\r\n\r\n\n    }\r\n\r\n\n\t\r\n\r\n\n    // the Bicycle class has four methods\r\n\r\n\n    public void setCadence(int newValue) {\r\n\r\n\n        cadence = newValue;\r\n\r\n\n    }\r\n\r\n\n\t\r\n\r\n\n    public void setGear(int newValue) {\r\n\r\n\n        gear = newValue;\r\n\r\n\n    }\r\n\r\n\n\t\r\n\r\n\n    public void applyBrake(int decrement) {\r\n\r\n\n        speed = speed - decrement;\r\n\r\n\n    }\r\n\r\n\n\t\r\n\r\n\n    public void speedUp(int increment) {\r\n\r\n\n        speed = speed + increment;\r\n\r\n\n    }\r\n\r\n\n\t\r\n\r\n\n}\r\n"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=Bicycle"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Bicycle"
     }
   ],
   "rights": {

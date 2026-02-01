@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T13:19:17.394Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:56.239Z",
+  "tags": [],
   "identity": {
     "id": "IS17_inheritance1_4",
     "title": "IS17_inheritance1_4",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=IS17_inheritance1_4"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance1_4"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "class Person{    \r\n   private String name;    \r\n   public void setName(String n) {    \r\n      name = n;    \r\n   }    \r\n     \r\n   public String getName(){    \r\n      return name;    \r\n   }    \r\n}    \r\n\r\nclass Student extends Person{    \r\n   private String stuNum;    \r\n     \r\n   public void setStuNum(String sn)   {    \r\n      stuNum = sn;    \r\n   }    \r\n     \r\n   public String getStuNum()   {    \r\n      return stuNum;    \r\n   }    \r\n}    \r\n\r\npublic class TestInheritance{    \r\n   public static void main(String[] args)   {      \r\n      Student stu = new Student();    \r\n      stu.setName(\"Sharon Hsiao\");    \r\n      stu.setStuNum(\"12345\");    \r\n      System.out.println(\"Student Name: \" + stu.getName());    \r\n      System.out.println(\"Student Number: \" + stu.getStuNum());    \r\n   }    \r\n}   \r\n}   \r"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=IS17_inheritance1_4"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance1_4"
     }
   ],
   "rights": {

@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:24.349Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:26.311Z",
+  "tags": [],
   "identity": {
     "id": "Cwhile_counter",
     "title": "Cwhile_counter",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Cwhile_counter&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Cwhile_counter"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\nint main()\n{\n\u00a0\u00a0\u00a0int passes = 0, failures = 0, student = 1, result;\n\n\u00a0\u00a0\u00a0while ( student <= 10 ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"Enter result ( 1=pass,2=fail ): \" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf( \"%d\", &result );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( result == 1 )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0passes = passes + 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0failures = failures + 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0student = student + 1;\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0printf( \"Passed %d\\n\", passes );\n\u00a0\u00a0\u00a0printf( \"Failed %d\\n\", failures );\n\u00a0\u00a0\u00a0return 0;\n}"
+    "source_code": "#include <stdio.h>\r\nint main()\r\n{\r\n   int passes = 0, failures = 0, student = 1, result;\r\n\r\n   while ( student <= 10 ) {\r\n      printf( \"Enter result ( 1=pass,2=fail ): \" );\r\n      scanf( \"%d\", &result );\r\n      if ( result == 1 )       \r\n         passes = passes + 1;\r\n      else\r\n         failures = failures + 1;\r\n      student = student + 1;\r\n   }\r\n   printf( \"Passed %d\\n\", passes );\r\n   printf( \"Failed %d\\n\", failures );\r\n   return 0;   \r\n}"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Cwhile_counter&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Cwhile_counter"
     }
   ],
   "rights": {

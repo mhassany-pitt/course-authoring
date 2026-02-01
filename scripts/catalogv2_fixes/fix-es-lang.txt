@@ -1,0 +1,195 @@
+es|6954bccff9187b06cf836f2f|Intercambiar elementos de una lista con diccionario (ES)
+es|6954bccff9187b06cf836f28|Calculo total rebanadas (ES)
+es|6954bccff9187b06cf836f25|Buscar armario (lista de strings) (ES)
+es|6954bccff9187b06cf836f20|Primera no coincidencia en lista (ES)
+es|6954bccff9187b06cf836f1f|Obtener lineas archivo (ES)
+es|6954bccff9187b06cf836f19|Condicion: puede votar (ES)
+es|6954bccff9187b06cf836f16|Escalar lista notas (ES)
+es|6954bccff9187b06cf836f15|Recolectar bajo rendimiento lista (ES)
+es|6954bccff9187b06cf836f14|Calculo diferencia absoluta mayor lista (ES)
+es|6954bccff9187b06cf836f13|Estirar String (ES)
+es|6954bccff9187b06cf836f11|Es sopa de letras (ES)
+es|6954bccff9187b06cf836f10|Suma segura de productos en pedido (excepciones) (ES)
+es|6954bccff9187b06cf836f0f|Caja rapida (diccionario) (ES)
+es|6954bccff9187b06cf836f0e|Calculo: Cuociente y Resto (ES)
+es|6954bccff9187b06cf836f0d|Obtener lista de palabras desde archivo (ES)
+es|6954bccff9187b06cf836f0c|Determinar si numero es primo (while) (ES)
+es|6954bccff9187b06cf836f0b|Condicion: al menos un numero positivo (ES)
+es|6954bccff9187b06cf836f0a|Condicion: pares que sumen 20 (ES)
+es|6954bccff9187b06cf836f09|Condicion: numero entre otros (ES)
+es|6954bccff9187b06cf836f08|Condicion: nota de aprobacion (ES)
+es|6954bccff9187b06cf836f07|Condicion: es dia de fin de semana (ES)
+es|6954bccff9187b06cf836f06|Condicion: es negativo (ES)
+es|6954bccff9187b06cf836f05|Calculo: containers y botellas en lecheria (ES)
+es|6954bccff9187b06cf836f04|Calculo: costo alojamiento (ES)
+es|6954bccff9187b06cf836f03|Generar lista rápida de reproduccion valida (excepciones) (ES)
+es|6954bccff9187b06cf836f02|Generar string de numeros repetidos con for (ES)
+es|6954bccff9187b06cf836f01|Encontrar letra n veces con while (ES)
+es|6954bccff9187b06cf836f00|Cada enesimo caracter con while (ES)
+es|6954bccff9187b06cf836eff|Solo caracteres de un cierto alfabeto (ES)
+es|6954bccff9187b06cf836efe|Encontrar palabra en sopa de letras simple (lista 2D) (ES)
+es|6954bccff9187b06cf836efd|Es matriz diagonal (lista 2D) (ES)
+es|6954bccff9187b06cf836efc|Cantidades de comida en diccionario (ES)
+es|6954bccff9187b06cf836efb|Busqueda inversa telefono diccionario (ES)
+es|6954bccff9187b06cf836efa|Ortografia correcta (diccionario desde archivo) (ES)
+es|6954bccff9187b06cf836ef9|Conteo votos en diccionario (ES)
+es|6954bccff9187b06cf836ef8|Revertir diccionario (ES)
+es|6954bccff9187b06cf836eef|Convergencia recursiva (ES)
+es|6954bccff9187b06cf836ee1|Maximo en lista (ES)
+es|6954bccff9187b06cf836ee0|Promedio en lista (ES)
+es|6954bccff9187b06cf836edf|Suma elementos lista (ES)
+es|6954bccff9187b06cf836ed7|Condicion: positivo menor que 10 (ES)
+es|6954bccff9187b06cf836ed6|Condicion: menor que 10 (ES)
+es|6954bccff9187b06cf836ed5|String A antes que String B (ES)
+es|6954bccff9187b06cf836ed4|Desplazar caracter hacia atras en string (ES)
+es|6954bccff9187b06cf836ed3|Desplazar caracter en string (ES)
+es|6954bccff9187b06cf836ecb|Reorganizar diccionario (ES)
+es|6954bccff9187b06cf836ec2|Cada segunda linea en archivo (ES)
+es|6954bccff9187b06cf836ebf|Funcion calculo impuesto (ES)
+es|6954bccff9187b06cf836ebe|Funcion maximo de los minimos valores (ES)
+es|6954bccff9187b06cf836eba|Agregar guiones bajos a string (ES)
+es|6954bccff9187b06cf836eb4|Busqueda Inversa de Telefono (ES)
+es|6954bccff9187b06cf836deb|Practicar la lectura de archivos e imprimir el tercer elemento de cada línea
+es|6954bccff9187b06cf836dea|Reorganizar la lista
+es|6954bccff9187b06cf836de9|Reorganizar la lista
+es|6954bccff9187b06cf836de8|Reorganizar la lista
+es|6954bccff9187b06cf836de7|Reorganizar la lista
+es|6954bccff9187b06cf836de6|Eliminar duplicados de una lista
+es|6954bccff9187b06cf836de5|Eliminar duplicados de una lista
+es|6954bccff9187b06cf836de4|Calcular una potencia
+es|6954bccff9187b06cf836de3|Calcular una potencia
+es|6954bccff9187b06cf836de2|Calcular una potencia
+es|6954bccff9187b06cf836de1|Calcular una potencia
+es|6954bccff9187b06cf836de0|Cálculo de potencias
+es|6954bccff9187b06cf836ddf|Cálculo de potencias
+es|6954bccff9187b06cf836dde|Actualizar elementos necesarios en una nueva lista
+es|6954bccff9187b06cf836ddd|Actualizar elementos necesarios en una nueva lista
+es|6954bccff9187b06cf836ddc|Actualizar los elementos en una nueva lista
+es|6954bccff9187b06cf836ddb|Actualizar los elementos en una nueva lista
+es|6954bccff9187b06cf836dda|Actualizar elementos necesarios en una nueva lista
+es|6954bccff9187b06cf836dd9|Actualizar elementos en una nueva lista
+es|6954bccff9187b06cf836dd8|Verificar si la suma de dos enteros es igual al tercer entero
+es|6954bccff9187b06cf836dd7|Verificar si la suma de dos enteros es igual al tercer entero
+es|6954bccff9187b06cf836dd6|Invertir la lista
+es|6954bccff9187b06cf836dd5|Invertir la lista
+es|6954bccff9187b06cf836dd4|Invertir la lista
+es|6954bccff9187b06cf836dd3|Invertir la lista
+es|6954bccff9187b06cf836dd2|Invertir la lista
+es|6954bccff9187b06cf836dd1|Invertir la lista
+es|6954bccff9187b06cf836dd0|Invertir la lista
+es|6954bccff9187b06cf836dcf|Invertir la lista
+es|6954bccff9187b06cf836dce|Construir una función que devuelva una lista de restos (módulos) del valor de entrada
+es|6954bccff9187b06cf836dcd|Construir una función que devuelva una lista de restos (módulos) del valor de entrada
+es|6954bccff9187b06cf836dcc|Construir una función que determine si una cadena dada como parámetro es un palíndromo
+es|6954bccff9187b06cf836dcb|Crear una función que verifique si una cadena es un palíndromo o no
+es|6954bccff9187b06cf836dca|Crear una función que verifique si una cadena es un palíndromo o no
+es|6954bccff9187b06cf836dc9|Crear una función que verifique si una cadena es un palíndromo o no
+es|6954bccff9187b06cf836dc8|Frecuencia de letras
+es|6954bccff9187b06cf836dc7|Frecuencia de letras
+es|6954bccff9187b06cf836dc6|Construir un programa con múltiples sentencias if-elif
+es|6954bccff9187b06cf836dc5|Construir un programa con múltiples sentencias if-elif
+es|6954bccff9187b06cf836dc4|Construir un programa con múltiples sentencias if-elif
+es|6954bccff9187b06cf836dc3|Construir un programa que genere combinaciones únicas de 3 dígitos
+es|6954bccff9187b06cf836dc2|Construir un programa que genere combinaciones únicas de 3 dígitos
+es|6954bccff9187b06cf836dc1|Construir un problema con ciclos anidados
+es|6954bccff9187b06cf836dc0|Construir un programa que trabaje con listas
+es|6954bccff9187b06cf836dbf|Crear una clase y usar sus métodos
+es|6954bccff9187b06cf836dbe|Practicar el manejo de excepciones
+es|6954bccff9187b06cf836dbd|Practicar métodos de cadenas
+es|6954bccff9187b06cf836dbc|Practicar iterar sobre una lista y usar módulo
+es|6954bccff9187b06cf836dbb|Crear una compuerta XOR usando sentencias if...elif
+es|6954bccff9187b06cf836dba|Practicar la asignación de variables
+es|6954bccff9187b06cf836db9|Practicar indexación y modificación de listas
+es|6954bccff9187b06cf836db8|Practicar el uso de comparaciones
+es|6954bccff9187b06cf836db7|Practicar sentencias if anidadas
+es|6954bccff9187b06cf836db6|Practicar el manejo de excepciones
+es|6954bccff9187b06cf836db5|Practicar leer un archivo e imprimir su contenido
+es|6954bccff9187b06cf836db4|Practicar sentencias if...elif...else
+es|6954bccff9187b06cf836db3|Usar expresiones booleanas como parámetros de una función
+es|6954bccff9187b06cf836db2|Iterar sobre elementos (items) de un diccionario
+es|6954bccff9187b06cf836db1|Convertir una lista de tuplas en un diccionario
+es|6954bccff9187b06cf836db0|Acceder a los valores de un diccionario
+es|6954bccff9187b06cf836daf|Iterar sobre un diccionario
+es|6954bccff9187b06cf836dae|Practicar el corte de cadenas (slicing)
+es|6954bccff9187b06cf836dad|Practicar indexación de listas
+es|6954bccff9187b06cf836dac|Iterar sobre una lista
+es|6954bccff9187b06cf836dab|Crear una función y usar el operador módulo
+es|6954bccff9187b06cf836daa|Crear una clase y utilizarla
+es|6954bccff9187b06cf836da9|Crear una función recursiva
+es|6954bccff9187b06cf836da8|Crear múltiples funciones y llamadas de función anidadas
+es|6954bccff9187b06cf836da7|Crear y llamar a una función
+es|6954bccff9187b06cf836da6|Crear un programa que compare un valor en un ciclo
+es|6954bccff9187b06cf836da5|Crear un programa con un ciclo while
+es|6954bccff9187b06cf836da4|Practicar el orden de líneas para obtener el número correcto
+es|6954bccff9187b06cf836da3|Crear una función que devuelva el mayor de dos números
+es|6954bccff9187b06cf836da2|Crear una función que reciba un número, le sume dos y lo devuelva
+es|6954bccff9187b06cf836da1|Crear una función que imprima hola mundo
+es|6954bccff9187b06cf836da0|Imprimir hola mundo
+es|6954bccff9187b06cf836d9f|Construir una función de recorrido inorder (inorden)
+es|6954bccff9187b06cf836d9e|Practicar el algoritmo de ordenación rápida (Quick Sort)
+es|6954bccff9187b06cf836d9d|Construir una función que ordene un arreglo numérico usando Merge Sort
+es|6954bccff9187b06cf836d9c|Construir una función que verifique el tamaño de una lista enlazada
+es|6954bccff9187b06cf836d9b|Construir una función que recorra una lista enlazada
+es|6954bccff9187b06cf836d9a|Construir una función que use una estructura de cola (Queue)
+es|6954bccff9187b06cf836d99|Construir un programa que cree una estructura de pila (Stack)
+es|6954bccff9187b06cf836d98|Practicar la búsqueda del índice de los elementos mínimo y máximo
+es|6954bccff9187b06cf836d97|Practicar la búsqueda del índice del elemento mínimo
+es|6954bccff9187b06cf836d96|Valores y referencias en listas
+es|6954bccff9187b06cf836d95|Cálculos con diccionarios
+es|6954bccff9187b06cf836d94|Manipulación de diccionarios
+es|6954bccff9187b06cf836d93|Practicar herencia de clases
+es|6954bccff9187b06cf836d92|Practicar el uso de ciclos while y for anidados
+es|6954bccff9187b06cf836d91|Practicar ciclos while anidados
+es|6954bccff9187b06cf836d90|Practicar la manipulación de variables y verificar sus tipos
+es|6954bccff9187b06cf836d8f|Practicar el uso de la biblioteca math y comprobar el tipo de una variable
+es|6954bccff9187b06cf836d8e|Calcular su suma y producto
+es|6954bccff9187b06cf836d8d|Calculo galletas necesarias (ES)
+es|6954bccff9187b06cf836d8c|Maximo de tres enteros (ES)
+es|6954bccff9187b06cf836d8b|Dia siguiente
+es|6954bccff9187b06cf836d8a|Condicion: es adolescente (ES)
+es|6954bccff9187b06cf836d89|Calculo rebanadas de pizza (ES)
+es|6954bccff9187b06cf836d87|Programa usual primero (CC)
+es|6954bccff9187b06cf836d86|Suma digital (ES)
+es|6954bccff9187b06cf836d85|Contar el numero de valores que estan por encima del promedio (ES)
+es|6954bccff9187b06cf836d84|Intercambiar primero y ultimo
+es|6954bccff9187b06cf836d83|Encontrar el indice de el string mas largo (ES)
+es|6954bccff9187b06cf836d82|Listas de enteros pares (ES)
+es|6954bccff9187b06cf836d81|Solo Uno Verdadero (p1-4-ES)
+es|6954bccff9187b06cf836d80|Solo Dos Verdaderos (p2-4-ES)
+es|6954bccff9187b06cf836d7f|Contar Pasos Collatz (ES)
+es|6954bccff9187b06cf836d7e|Factor menor (ES)
+es|6954bccff9187b06cf836d7d|Contar Digitos (ES)
+es|6954bccff9187b06cf836d7c|Triangulo Ascii (ES)
+es|6954bccff9187b06cf836d7b|Primer Par (ES)
+es|6954bccff9187b06cf836d7a|Indice Menor (ES)
+es|6954bccff9187b06cf836d79|Todo Esponjoso (ES)
+es|6954bccff9187b06cf836d78|Contar no digitos (ES)
+es|6954bccff9187b06cf836d77|Mayusculas o Minusculas (ES)
+es|6954bccff9187b06cf836d76|Contar Mayusculas (ES)
+es|6954bccff9187b06cf836d75|Condicion: es impar (ES)
+es|6954bccff9187b06cf836d74|Calcular los segundos en n dias (ES)
+es|6954bccff9187b06cf836d73|Calcular factura mensual (ES)
+es|6954bccff9187b06cf836d72|Calcular promedio de dos numeros enteros (ES)
+es|6954bccff9187b06cf836d69|Funcion con Multiples Parametros Llamando Otra
+es|6954bccff9187b06cf836d68|Funcion con Multiples Parametros
+es|6954bccff9187b06cf836d67|Advertir al Usuario sobre los Cambios en la Temperatura y Humedad.
+es|6954bccff9187b06cf836d66|Advertir al Usuario sobre los Cambios en la Temperatura
+es|6954bccff9187b06cf836d65|Calculando el Porcentaje de Victorias de un Equipo (Caso 3)
+es|6954bccff9187b06cf836d64|Calculando el Porcentaje de Victorias de un Equipo (Caso 2)
+es|6954bccff9187b06cf836d63|Calculando el Porcentaje de Victorias de un Equipo (Caso 1)
+es|6954bccff9187b06cf836d4a|Calculo y Redondeo del Indice de Masa Corporal (IMC) al Entero Mas Cercano.
+es|6954bccff9187b06cf836d49|Calculo del Indice de Masa Corporal (IMC)
+es|6954bccff9187b06cf836d48|Contando las Ocurrencias de un String en Otro (Caso 2).
+es|6954bccff9187b06cf836d47|Contando las Ocurrencias de un String en Otro (Caso 1)
+es|6954bccff9187b06cf836d46|Informar Informacion del Archivo (Caso 2)
+es|6954bccff9187b06cf836d45|Informe de Informacion del Archivo (Caso 1)
+es|6954bccff9187b06cf836d44|Creando un Diccionario de Pares Estudiante-Puntajes (Caso 2)
+es|6954bccff9187b06cf836d43|Creando un Diccionario de Pares Estudiante-Puntajes (Caso 1)
+es|6954bccff9187b06cf836d42|Determinando Si Uno Es Adolescente (Caso 2)
+es|6954bccff9187b06cf836d41|Determinando Si Uno Es Adolescente (Caso 1)
+es|6954bccff9187b06cf836d40|Imprimir Tabla de Conteo de Medallas con Totales por Fila y por Columna
+es|6954bccff9187b06cf836d3f|Imprimir Tabla de Conteo de Medallas con Totales por Fila
+es|6954bccff9187b06cf836d3e|Concatenando Caracteres de Dos Strings (Caso 2).
+es|6954bccff9187b06cf836d3d|Concatenando Caracteres de Dos Strings (Caso 1)
+es|6954bccff9187b06cf836d3c|Mostrando los Dias que Estan por Sobre 32 Grados Fahrenheit
+es|6954bccff9187b06cf836d3b|Mostrando los Dias que Estan por Sobre el Promedio de Temperatura

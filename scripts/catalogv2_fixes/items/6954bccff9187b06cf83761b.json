@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:57:58.550Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:19.800Z",
+  "tags": [],
   "identity": {
     "id": "write_info_rand_file",
     "title": "write_info_rand_file",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=write_info_rand_file&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/write_info_rand_file"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/* Writing to a random access file */\n#include <stdio.h>\n\n/* clientData structure definition */\nstruct clientData {\n\u00a0\u00a0\u00a0int acctNum;          \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* account number */\n\u00a0\u00a0\u00a0char lastName[ 15 ];  \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* account last name */\n\u00a0\u00a0\u00a0char firstName[ 10 ]; \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* account first name */\n\u00a0\u00a0\u00a0double balance;       \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* account balance */\n}; /* end structure clientData */\n\nint main( void )\n{\n\u00a0\u00a0\u00a0FILE *cfPtr; /* credit.dat file pointer */\n\n\u00a0\u00a0\u00a0/* create clientData with default information */\n\u00a0\u00a0\u00a0struct clientData client = { 0, \"\", \"\", 0.0 };\n\n\u00a0\u00a0\u00a0/* fopen opens the file; exits if file cannot be opened */\n\u00a0\u00a0\u00a0if ( ( cfPtr = fopen( \"credit.dat\", \"rb+\" ) ) == NULL ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"File could not be opened.\\n\" );\n\u00a0\u00a0\u00a0} /* end if */\n\u00a0\u00a0\u00a0else {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* require user to specify account number */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"Enter account number\"\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\" ( 1 to 100, 0 to end input )\n? \" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf( \"%d\", &client.acctNum );\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* user enters information, which is copied into file */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0while ( client.acctNum != 0 ) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* user enters last name, first name and balance */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"Enter lastname, firstname, balance\\n? \" );\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* set record lastName, firstName and balance value */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fscanf( stdin, \"%s%s%lf\", client.lastName,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0client.firstName, &client.balance );\n\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* seek position in file to user-specified record */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fseek( cfPtr, ( client.acctNum - 1 ) *\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0sizeof( struct clientData ), SEEK_SET );\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* write user-specified information in file */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fwrite( &client, sizeof( struct clientData ), 1, cfPtr );\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* enable user to input another account number */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"Enter account number\\n? \" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf( \"%d\", &client.acctNum );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} /* end while */\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fclose( cfPtr ); \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* fclose closes the file */\n\u00a0\u00a0\u00a0} /* end else */\n\n\u00a0\u00a0\u00a0return 0; \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* indicates successful termination */\n\n} /* end main */\n} /* end main */"
+    "source_code": "/* Writing to a random access file */\r\n#include <stdio.h>\r\n\r\n/* clientData structure definition */\r\nstruct clientData { \r\n   int acctNum;          \t\t\t/* account number */\r\n   char lastName[ 15 ];  \t\t/* account last name */\r\n   char firstName[ 10 ]; \t\t/* account first name */\r\n   double balance;       \t\t\t/* account balance */\r\n}; /* end structure clientData */\r\n \r\nint main( void ) \r\n{ \r\n   FILE *cfPtr; /* credit.dat file pointer */\r\n\r\n   /* create clientData with default information */\r\n   struct clientData client = { 0, \"\", \"\", 0.0 };\r\n\r\n   /* fopen opens the file; exits if file cannot be opened */\r\n   if ( ( cfPtr = fopen( \"credit.dat\", \"rb+\" ) ) == NULL ) {\r\n      printf( \"File could not be opened.\\n\" );\r\n   } /* end if */\r\n   else { \r\n\r\n      /* require user to specify account number */\r\n      printf( \"Enter account number\"\r\n         \" ( 1 to 100, 0 to end input )\n? \" );\r\n      scanf( \"%d\", &client.acctNum );\r\n\r\n      /* user enters information, which is copied into file */\r\n      while ( client.acctNum != 0 ) { \r\n\r\n         /* user enters last name, first name and balance */\r\n         printf( \"Enter lastname, firstname, balance\\n? \" );\r\n        \r\n         /* set record lastName, firstName and balance value */\r\n         fscanf( stdin, \"%s%s%lf\", client.lastName, \r\n            client.firstName, &client.balance );\r\n\r\n\r\n         /* seek position in file to user-specified record */\r\n         fseek( cfPtr, ( client.acctNum - 1 ) * \r\n            sizeof( struct clientData ), SEEK_SET );\r\n\r\n         /* write user-specified information in file */\r\n         fwrite( &client, sizeof( struct clientData ), 1, cfPtr );\r\n\r\n         /* enable user to input another account number */\r\n         printf( \"Enter account number\\n? \" );\r\n         scanf( \"%d\", &client.acctNum );\r\n      } /* end while */\r\n\r\n      fclose( cfPtr ); \t\t\t/* fclose closes the file */\r\n   } /* end else */\r\n\r\n   return 0; \t\t\t\t/* indicates successful termination */\r\n\r\n} /* end main */\r\n} /* end main */\r"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=write_info_rand_file&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/write_info_rand_file"
     }
   ],
   "rights": {

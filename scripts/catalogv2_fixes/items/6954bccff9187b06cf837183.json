@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-06-16T14:39:15.000Z",
-  "updated_at": "2026-01-17T13:18:53.739Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:40.488Z",
+  "tags": [],
   "identity": {
     "id": "csedpad_strings_changecase",
     "title": "(Strings) Change case - CSEdPad",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/webex/Dissection2?act=csedpad_strings_changecase&svc=progvis"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_strings_changecase"
   },
   "attribution": {
     "created_at": "2020-06-16T14:39:15.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Given a string, this program converts the string into uppercase and lowercase.\npresent on those variable to either uppercase or lowercase.",
+    "source_code": "public class ChangeCase {\n  public static void main(String[] args) {\n\n    String full_name = \"Cristiano Ronaldo\";\n\n    System.out.println(full_name.toUpperCase());\n\n    System.out.println(full_name.toLowerCase());\n  }\n}"
   },
   "classification": {
     "topics": [],
@@ -102,7 +99,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/webex/Dissection2?act=csedpad_strings_changecase&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_strings_changecase"
     }
   ],
   "rights": {

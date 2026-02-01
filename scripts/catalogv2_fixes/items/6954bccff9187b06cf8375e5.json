@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-01T15:37:29.000Z",
-  "updated_at": "2026-01-17T12:57:50.177Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:15.981Z",
+  "tags": [],
   "identity": {
     "id": "Bank",
     "title": "Bank",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Bank&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Bank"
   },
   "attribution": {
     "created_at": "2014-09-01T15:37:29.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "import java.util.ArrayList;\n\npublic class Bank\n{\n\u00a0\u00a0\u00a0private ArrayList<BankAccount> accounts;\n\n\u00a0\u00a0\u00a0public Bank()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0accounts = new ArrayList<BankAccount>();\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public void addAccount(BankAccount a)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0accounts.add(a);\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public double getTotalBalance()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double total = 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (BankAccount a : accounts)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0total = total + a.getBalance();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return total;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public int countBalancesAtLeast(double atLeast)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int matches = 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (BankAccount a : accounts)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (a.getBalance() >= atLeast) matches++;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return matches;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public BankAccount find(int accountNumber)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (BankAccount a : accounts)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (a.getAccountNumber() == accountNumber)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return a;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return null;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public BankAccount getMaximum()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (accounts.size() == 0) return null;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0BankAccount largestYet = accounts.get(0);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = 1; i < accounts.size(); i++)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0BankAccount a = accounts.get(i);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (a.getBalance() > largestYet.getBalance())\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0largestYet = a;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return largestYet;\n\u00a0\u00a0\u00a0}\n}\n}"
+    "source_code": "import java.util.ArrayList;\r\n\r\npublic class Bank\r\n{   \r\n   private ArrayList<BankAccount> accounts;\r\n\r\n   public Bank()\r\n   {\r\n      accounts = new ArrayList<BankAccount>();\r\n   }\r\n\r\n   public void addAccount(BankAccount a)\r\n   {\r\n      accounts.add(a);\r\n   }\r\n   \r\n   public double getTotalBalance()\r\n   {\r\n      double total = 0;\r\n      for (BankAccount a : accounts)\r\n      {\r\n         total = total + a.getBalance();\r\n      }\r\n      return total;\r\n   }\r\n\r\n   public int countBalancesAtLeast(double atLeast)\r\n   {\r\n      int matches = 0;\r\n      for (BankAccount a : accounts)\r\n      {\r\n         if (a.getBalance() >= atLeast) matches++; \r\n      }\r\n      return matches;\r\n   }\r\n\r\n   public BankAccount find(int accountNumber)\r\n   {\r\n      for (BankAccount a : accounts)\r\n      {\r\n         if (a.getAccountNumber() == accountNumber) \r\n            return a;\r\n      } \r\n      return null; \r\n   }\r\n\r\n   public BankAccount getMaximum()\r\n   {\r\n      if (accounts.size() == 0) return null;\r\n      BankAccount largestYet = accounts.get(0);\r\n      for (int i = 1; i < accounts.size(); i++) \r\n      {\r\n         BankAccount a = accounts.get(i);\r\n         if (a.getBalance() > largestYet.getBalance())\r\n            largestYet = a;\r\n      }\r\n      return largestYet;\r\n   }\r\n}\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -89,7 +87,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Bank&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Bank"
     }
   ],
   "rights": {

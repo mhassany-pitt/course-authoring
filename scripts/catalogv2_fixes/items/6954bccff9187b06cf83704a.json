@@ -1,13 +1,10 @@
 {
   "id": "6954bccff9187b06cf83704a",
   "user_email": "moh70@pitt.edu",
-  "status": "public",
+  "status": "broken:pending-fix",
   "listed_at": "2022-01-26T11:59:06.000Z",
-  "updated_at": "2026-01-17T13:18:47.402Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:59:37.981Z",
+  "tags": [],
   "identity": {
     "id": "pfe-13-2",
     "title": "pfe-13-2",

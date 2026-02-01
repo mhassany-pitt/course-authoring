@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-13T15:09:13.000Z",
-  "updated_at": "2026-01-17T13:21:05.842Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:46:23.424Z",
+  "tags": [],
   "identity": {
     "id": "recursion_gcf_challenge",
     "title": "Greatest Common Factor Challenge",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct a program that recursively finds and returns the great common factor between of two integers. This is a simple implementation--fill in the missing lines.",
+    "source_code": "# Step 1: Define the terminating condition\ndef gcd2(a, b):\n    if b == 0:\n        return a\n        # Step 3: Recursion\n    else:\n        return gcd2(b, a%b)\nprint(gcd2(12,14))"
   },
   "classification": {
     "topics": [],

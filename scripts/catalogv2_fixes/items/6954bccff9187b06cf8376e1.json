@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:27.711Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:28.716Z",
+  "tags": [],
   "identity": {
     "id": "IF2",
     "title": "IF2",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=IF2&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/IF2"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int grade;\n\u00a0\u00a0\u00a0int aCount = 0, bCount = 0, cCount = 0;\n\u00a0\u00a0\u00a0int dCount = 0, fCount = 0;\n\n\u00a0\u00a0\u00a0printf( \"Enter the letter grades.\" );\n\u00a0\u00a0\u00a0printf( \" Enter the EOF character to end input:\\n\" );\n\n\u00a0\u00a0\u00a0while ( ( grade = getchar() ) != EOF ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( grade == 'A' || grade == 'a' )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++aCount;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if ( grade == 'B' || grade == 'b' )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++bCount;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if ( grade == 'C' || grade == 'c' )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++cCount;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if ( grade == 'D' || grade == 'd' )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++dCount;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if ( grade == 'F' || grade == 'f' )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0++fCount;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if ( grade == '\\n' || grade == ' ' )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0;     /* empty body */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"Incorrect letter grade entered.\" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \" Enter a new grade.\\n\" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0printf( \"\\nTotals for each letter grade were:\\n\" );\n\u00a0\u00a0\u00a0printf( \"A: %d\\n\", aCount );\n\u00a0\u00a0\u00a0printf( \"B: %d\\n\", bCount );\n\u00a0\u00a0\u00a0printf( \"C: %d\\n\", cCount );\n\u00a0\u00a0\u00a0printf( \"D: %d\\n\", dCount );\n\u00a0\u00a0\u00a0printf( \"F: %d\\n\", fCount );\n\n\u00a0\u00a0\u00a0return 0;\n}"
+    "source_code": "#include <stdio.h>\r\n\r\nint main( void )\r\n{ \r\n   int grade;\r\n   int aCount = 0, bCount = 0, cCount = 0;\r\n   int dCount = 0, fCount = 0;\r\n\r\n   printf( \"Enter the letter grades.\" );\r\n   printf( \" Enter the EOF character to end input:\\n\" );\r\n\r\n   while ( ( grade = getchar() ) != EOF ) { \r\n      if ( grade == 'A' || grade == 'a' )\r\n         ++aCount;\r\n      else if ( grade == 'B' || grade == 'b' )\r\n         ++bCount;\r\n      else if ( grade == 'C' || grade == 'c' )\r\n         ++cCount;\r\n      else if ( grade == 'D' || grade == 'd' )\r\n         ++dCount;\r\n      else if ( grade == 'F' || grade == 'f' )\r\n         ++fCount;\r\n      else if ( grade == '\\n' || grade == ' ' )\r\n         ;     /* empty body */\r\n      else { \r\n         printf( \"Incorrect letter grade entered.\" );\r\n         printf( \" Enter a new grade.\\n\" );\r\n      }\r\n   }\r\n\r\n   printf( \"\\nTotals for each letter grade were:\\n\" );\r\n   printf( \"A: %d\\n\", aCount );\r\n   printf( \"B: %d\\n\", bCount );\r\n   printf( \"C: %d\\n\", cCount );\r\n   printf( \"D: %d\\n\", dCount );\r\n   printf( \"F: %d\\n\", fCount );\r\n\r\n   return 0;\r\n}"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=IF2&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/IF2"
     }
   ],
   "rights": {

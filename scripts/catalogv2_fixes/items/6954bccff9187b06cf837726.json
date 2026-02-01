@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:38.009Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:36.193Z",
+  "tags": [],
   "identity": {
     "id": "Constants_v2",
     "title": "Constants",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Constants_v2&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Constants_v2"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "public class ConstantExample{\n\u00a0\u00a0public static void main(String[] arg) {\n\u00a0\u00a0\u00a0\u00a0final int FEET_PER_YARD = 3;\n\u00a0\u00a0\u00a0\u00a0final double MM_PER_INCH = 25.4;\n\n\u00a0\u00a0\u00a0\u00a0System.out.println(FEET_PER_YARD);\n\u00a0\u00a0\u00a0\u00a0System.out.println(MM_PER_INCH);\n\n\u00a0\u00a0}\n}"
+    "prompt": "Constants",
+    "source_code": "public class ConstantExample{ \n  public static void main(String[] arg) { \n    final int FEET_PER_YARD = 3;          \n    final double MM_PER_INCH = 25.4;   \n \n    System.out.println(FEET_PER_YARD); \n    System.out.println(MM_PER_INCH); \n     \n  } \n}"
   },
   "classification": {
     "topics": [],
@@ -77,7 +75,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Constants_v2&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Constants_v2"
     }
   ],
   "rights": {

@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2017-10-14T13:00:28.000Z",
-  "updated_at": "2026-01-17T05:29:53.001Z",
+  "updated_at": "2026-01-17T20:46:17.349Z",
   "tags": [],
   "identity": {
     "id": "py_list_fill",
@@ -40,16 +40,15 @@
     "knowledge_components": {
       "alice_edu_py_ontology expert": {
         "concepts": [
-          "SingleForLoopIteration",
-          "AddingListElementWithAppend",
-          "Multiplication",
-          "Addition",
           "AssigningValueVariable",
-          "CallingLibraryFunction",
-          "Printing",
           "CreatingList",
           "ForLoopWith",
-          "ForLoopWith"
+          "Multiplication",
+          "Printing",
+          "CallingLibraryFunction",
+          "AddingListElementWithAppend",
+          "Addition",
+          "SingleForLoopIteration"
         ],
         "note": "",
         "created_at": null,

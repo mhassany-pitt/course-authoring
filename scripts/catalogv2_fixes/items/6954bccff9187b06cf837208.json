@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2019-02-15T09:30:58.000Z",
-  "updated_at": "2026-01-17T12:55:45.414Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:44.319Z",
+  "tags": [],
   "identity": {
     "id": "4-11_Animal",
     "title": "4-11_Animal",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=4-11_Animal&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/4-11_Animal"
   },
   "attribution": {
     "created_at": "2019-02-15T09:30:58.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/*\n\u00a0* This class represents an Animal.  A class consists of two main parts:\n\u00a0*  - Instance variables describe characteristics or qualities\n\u00a0*  - Methods describe behaviors\n\u00a0*\n\u00a0*  Once a class is defined, we can create objects (a.k.a. instances) of that\n\u00a0*  class.  Each object of a class has its own values for the instance\n\u00a0*  variables, and all objects of a class have access to that class' methods.\n\u00a0*/\n\npublic class Animal {\n\n\u00a0\u00a0\u00a0\u00a0// Instance variables - these are typically declared as private, meaning\n\u00a0\u00a0\u00a0\u00a0//  that they cannot be accessed directly from outside of this class.\n\u00a0\u00a0\u00a0\u00a0private String species;\n\u00a0\u00a0\u00a0\u00a0private boolean hasScales;\n\u00a0\u00a0\u00a0\u00a0private int numLegs;\n\n\u00a0\u00a0\u00a0\u00a0// Setter methods - these allow us to set values for instance variables.\n\u00a0\u00a0\u00a0\u00a0public void setSpecies(String s) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0species = s;\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public void setHasScales(boolean b) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0hasScales = b;\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public void setNumLegs(int n) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0numLegs = n;\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0// Getter methods - these allow us to get/retrieve values for instance variables.\n\u00a0\u00a0\u00a0\u00a0public String getSpecies() {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return species;\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public boolean getHasScales() {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return hasScales;\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public int getNumLegs() {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return numLegs;\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0// Constructor - this is called when first creating an object of this class.\n\u00a0\u00a0\u00a0\u00a0//  Constructors are often used to set values for instance variables, as\n\u00a0\u00a0\u00a0\u00a0//  shown here.\n\u00a0\u00a0\u00a0\u00a0public Animal(String s, boolean hs, int n) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0setSpecies(s);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0setHasScales(hs);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0setNumLegs(n);\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0// Some other methods that Animal objects can call\n\u00a0\u00a0\u00a0\u00a0public void move() {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"The \" + species + \" is moving!\");\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public void breathe() {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"The \" + species + \" is ensuring its continued existence.\");\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public void mate() {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"The \" + species + \" is ensuring its continued existence, but in a more fun way.\");\n\u00a0\u00a0\u00a0\u00a0}\n}"
+    "source_code": "/*\n * This class represents an Animal.  A class consists of two main parts:\n *  - Instance variables describe characteristics or qualities\n *  - Methods describe behaviors\n *  \n *  Once a class is defined, we can create objects (a.k.a. instances) of that\n *  class.  Each object of a class has its own values for the instance\n *  variables, and all objects of a class have access to that class' methods.\n */\n\npublic class Animal {\n\t\n\t// Instance variables - these are typically declared as private, meaning\n\t//  that they cannot be accessed directly from outside of this class.\n\tprivate String species;\n\tprivate boolean hasScales;\n\tprivate int numLegs;\n\t\n\t// Setter methods - these allow us to set values for instance variables.\n\tpublic void setSpecies(String s) {\n\t\tspecies = s;\n\t}\n\t\n\tpublic void setHasScales(boolean b) {\n\t\thasScales = b;\n\t}\n\t\n\tpublic void setNumLegs(int n) {\n\t\tnumLegs = n;\n\t}\n\t\n\t// Getter methods - these allow us to get/retrieve values for instance variables.\n\tpublic String getSpecies() {\n\t\treturn species;\n\t}\n\t\n\tpublic boolean getHasScales() {\n\t\treturn hasScales;\n\t}\n\t\n\tpublic int getNumLegs() {\n\t\treturn numLegs;\n\t}\n\n\t// Constructor - this is called when first creating an object of this class.\n\t//  Constructors are often used to set values for instance variables, as\n\t//  shown here.\n\tpublic Animal(String s, boolean hs, int n) {\n\t\tsetSpecies(s);\n\t\tsetHasScales(hs);\n\t\tsetNumLegs(n);\n\t}\n\n\t// Some other methods that Animal objects can call\n\tpublic void move() {\n\t\tSystem.out.println(\"The \" + species + \" is moving!\");\n\t}\n\t\n\tpublic void breathe() {\n\t\tSystem.out.println(\"The \" + species + \" is ensuring its continued existence.\");\n\t}\n\t\n\tpublic void mate() {\n\t\tSystem.out.println(\"The \" + species + \" is ensuring its continued existence, but in a more fun way.\");\n\t}\n}"
   },
   "classification": {
     "topics": [],
@@ -113,7 +111,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=4-11_Animal&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/4-11_Animal"
     }
   ],
   "rights": {

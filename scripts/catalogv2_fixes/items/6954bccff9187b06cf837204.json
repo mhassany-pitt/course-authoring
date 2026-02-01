@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2019-02-15T15:27:44.000Z",
-  "updated_at": "2026-01-17T12:55:44.826Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:43.880Z",
+  "tags": [],
   "identity": {
     "id": "2-21_StringDemos",
     "title": "2-21_StringDemos",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=2-21_StringDemos&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/2-21_StringDemos"
   },
   "attribution": {
     "created_at": "2019-02-15T15:27:44.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/*\n\u00a0* Some basic demos of string operations.\n\u00a0*\n\u00a0*/\npublic class StringDemos {\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0String sentence = \"sloths are soooo nice\";\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// charAt allows you to retrieve a single char from a string.  charAt\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  requires the index of the character to retrieve.  The index refers to\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  the location of the character within the string; the first index is 0,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  and the indices count up by 1 from there.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(sentence.charAt(3));\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(sentence.charAt(0));\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(sentence.charAt(6));\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// length gives you the number of characters in the string (spaces count\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  as characters too!)  Because indices start counting from 0, the index\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  of the last character is always one less than the length of the string.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(sentence.length());\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// substring allows you to get part of the original string.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// There are two versions:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  x.substring(i) gives you the substring from index i (inclusive) of string x,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//   all the way to the end\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  x.substring(i, j) gives you the substring from index i (inclusive) to index\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//   j (exclusive) of x.  The length of this substring is (j - i).\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(sentence.substring(1));\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(sentence.substring(7, 10));\n\u00a0\u00a0\u00a0\u00a0}\n\n}"
+    "source_code": "/* \n * Some basic demos of string operations.\n * \n */\npublic class StringDemos {\n\n\tpublic static void main(String[] args) {\n\t\t\n\t\tString sentence = \"sloths are soooo nice\";\n\t\t\n\t\t// charAt allows you to retrieve a single char from a string.  charAt\n\t\t//  requires the index of the character to retrieve.  The index refers to\n\t\t//  the location of the character within the string; the first index is 0,\n\t\t//  and the indices count up by 1 from there.\n\t\tSystem.out.println(sentence.charAt(3));\n\t\tSystem.out.println(sentence.charAt(0));\n\t\tSystem.out.println(sentence.charAt(6));\n\n\t\t// length gives you the number of characters in the string (spaces count\n\t\t//  as characters too!)  Because indices start counting from 0, the index\n\t\t//  of the last character is always one less than the length of the string.\n\t\tSystem.out.println(sentence.length());\n\n\t\t// substring allows you to get part of the original string.\n\t\t// There are two versions:\n\t\t//  x.substring(i) gives you the substring from index i (inclusive) of string x,\n\t\t//   all the way to the end\n\t\t//  x.substring(i, j) gives you the substring from index i (inclusive) to index\n\t\t//   j (exclusive) of x.  The length of this substring is (j - i).\n\t\tSystem.out.println(sentence.substring(1));\n\t\tSystem.out.println(sentence.substring(7, 10));\n\t}\n\n}"
   },
   "classification": {
     "topics": [],
@@ -107,7 +105,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=2-21_StringDemos&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/2-21_StringDemos"
     }
   ],
   "rights": {

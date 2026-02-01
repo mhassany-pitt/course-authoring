@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:26.457Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:02.451Z",
+  "tags": [],
   "identity": {
     "id": "get_request_example",
     "title": "ISD:: GetRequestExample.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=get_request_example"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/get_request_example"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Handling HTTP GET Requests by Servlets\r\n\nimport java.io.IOException;\r\n\nimport java.io.PrintWriter;\r\n\nimport javax.servlet.ServletException;\r\n\nimport javax.servlet.http.HttpServletRequest;\r\n\nimport javax.servlet.http.HttpServletResponse;\r\n\n\n public class GetServletExample extends javax.servlet.http.HttpServlet\n {\r\n\n\tprotected void doGet(HttpServletRequest request, HttpServletResponse response) \r\n\n\t\t\tthrows ServletException, IOException\r\n\n\t{\r\n\n\t\tString say_param = request.getParameter(\"say\");\r\n\n\t\tresponse.setContentType( \"text/html\" );  \r\n\n\t\tPrintWriter out = response.getWriter();\r\n\n\t\tout.println(\"<HTML><HEAD><TITLE>Get Servlet Example</TITLE></HEAD>\");\n\t\tout.println(\"<BODY>\");\n\t\tout.println(\"<H1>Welcome to example of doGet servlet method!</H1>\");\n\t\tout.println(((say_param != null && say_param.length() != 0)?\"<p>You say:\" + say_param + \"</p>\":\"\"));\n\t\tout.println(\"</BODY>\");\n\t\tout.println(\"</HTML>\");\n\t\tout.close();\r\n\n\t}  \t  \t  \t    \r\n\n}  \t  \t  \t    \r\n"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=get_request_example"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/get_request_example"
     }
   ],
   "rights": {

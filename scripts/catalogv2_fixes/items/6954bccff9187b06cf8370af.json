@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-12T20:46:11.000Z",
-  "updated_at": "2026-01-17T13:21:06.734Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:46:23.902Z",
+  "tags": [],
   "identity": {
     "id": "input_multiplication_ch",
     "title": "Input Manipulation Challenge",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct a program that takes a user's inputs and calculate the division of the inputs.Then convert the division result into an integer, check the current division result's type and print the original division result, converted result and the original division result's float absolute value.",
+    "source_code": "# Step 1: Import math library\nimport math\n# Step 2: Take the first input from the user\ninput_a = input(\"Enter the first integer:\")\na = int(input_a)\n# Step 3: Take the second input from the user\ninput_b = input(\"Enter the second integer:\")\nb = int(input_b)\n# Step 3: Division\nc = a/b\nd = int(c)\n# Check if d's type is integer and store the boolean result into the variable f\nf = isinstance(d,int)\nprint(d)\nprint(f)\nprint(math.fabs(c))"
   },
   "classification": {
     "topics": [],

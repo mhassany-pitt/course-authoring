@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-09-28T08:13:21.000Z",
-  "updated_at": "2026-01-17T12:55:23.901Z",
+  "updated_at": "2026-01-17T20:45:53.218Z",
   "tags": [
     "TODO:add-prompt"
   ],
@@ -42,12 +42,11 @@
     "knowledge_components": {
       "webex_parser": {
         "concepts": [
+          "ArrayInitializationStatement",
+          "ArrayCreationStatement",
           "ArrayVariable",
           "ArrayDataType",
-          "ArrayInitializationStatement",
-          "ArrayElement",
-          "ArrayCreationStatement",
-          "ArrayDataType"
+          "ArrayElement"
         ],
         "note": "",
         "created_at": null,
@@ -55,12 +54,11 @@
       },
       "java ontology v2": {
         "concepts": [
-          "ArrayCreationStatement",
-          "ArrayDataType",
-          "ArrayDataType",
-          "ArrayElement",
           "ArrayInitializationStatement",
-          "ArrayVariable"
+          "ArrayCreationStatement",
+          "ArrayVariable",
+          "ArrayDataType",
+          "ArrayElement"
         ],
         "note": "",
         "created_at": null,

@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-09T10:31:07.000Z",
-  "updated_at": "2026-01-17T13:21:03.389Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:46:22.506Z",
+  "tags": [],
   "identity": {
     "id": "multiple_parameters_es_ch",
     "title": "Funcion con Multiples Parametros Llamando Otra",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construir un programa que determine los ahorros actuales basado en su valor actual, el sueldo recibido y los gastos a deducir de ah\u00ed. En este caso se utiliza una funci\u00f3n adicional que calcula el sueldo pagado en base a el n\u00famero total de horas trabajadas.",
+    "source_code": "# Paso 1 : Definir la funci\u00f3n calcular_pago que devuelve el pago final.\ndef calcular_pago(horas_trabajadas):\n    # Paso 1.1: establecer la tarifa base de pago\n    tarifa_base = 10.0\n    # Paso 1.2 determinar el pago total basado en las horas trabajadas (incluyendo posible tiempo extra)\n    if horas_trabajadas <= 40:\n        pago = horas_trabajadas * tarifa_base\n    else:\n        horas_extra = horas_trabajadas - 40\n        pago_normal = 40 * tarifa_base\n        pago_extra = horas_extra * (tarifa_base * 1.5)\n        pago = pago_normal + pago_extra\n    return pago\n# Paso 2: Definir la funci\u00f3n presupuesto que devuelve el ahorro actual\ndef presupuesto(alquiler, servicios, comida, horas_trabajadas, ahorros_actuales):\n    # Paso 2.1: sumar todos los gastos del mes\n    gastos_totales = alquiler + servicios + comida\n    # Paso 2.2: calcular el monto total del cheque basado en las horas\n    cheque = calcular_pago(horas_trabajadas)\n    # Paso 2.3: encontrar el ahorro actual despu\u00e9s de recibir el pago\n    ahorros_actuales = ahorros_actuales + cheque\n    # Paso 2.4 encontrar el ahorro actual restante despu\u00e9s de los gastos\n    ahorros_actuales = ahorros_actuales - gastos_totales\n    return ahorros_actuales\nprint(\"Despu\u00e9s del d\u00eda de pago y los gastos, tendr\u00e1s: $\", presupuesto(900, 150, 300, 41, 1500))"
   },
   "classification": {
     "topics": [],

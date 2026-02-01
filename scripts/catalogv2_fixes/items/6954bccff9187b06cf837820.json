@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T13:19:38.035Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:47.606Z",
+  "tags": [],
   "identity": {
     "id": "Calculate_profit ",
     "title": "Calculate_profit",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Calculate_profit &svc=progvis"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Calculate_profit"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "#include <stdio.h>\r\n\r\n\nmain()\r\n\r\n\n{\r\n\r\n\nfloat revenue, cost;\r\n\r\n\nrevenue = 0;\r\n\r\n\ncost = 0;\r\n\r\n\n/* profit = revenue - cost */\r\n\r\n\nprintf(\"\\nEnter total revenue: \");\r\n\r\n\nscanf(\"%f\", &revenue);\r\n\r\n\nprintf(\"\\nEnter total cost: \");\r\n\r\n\nscanf(\"%f\", &cost);\r\n\r\n\nprintf(\"\\nYour profit is $%.2f\\n\", revenue - cost);\r\n\r\n\n}\r\n"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Calculate_profit &svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Calculate_profit"
     }
   ],
   "rights": {

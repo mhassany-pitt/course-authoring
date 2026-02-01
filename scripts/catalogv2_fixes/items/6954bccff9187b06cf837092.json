@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-14T22:30:25.000Z",
-  "updated_at": "2026-01-17T13:18:48.981Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:26:49.537Z",
+  "tags": [],
   "identity": {
     "id": "py_linkedlist_searching",
     "title": "Search in the linked list.",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "When using a LinkedList, it is possible that you may want to search through the list to see if a specific value is in it. To do so, each node must be checked individually. Construct a search function within the LinkedList class that traverses through all nodes in the list and returns True if a given target value is within the list.\n\n",
+    "source_code": "# Define a Node class\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n# Define a LinkedList class\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n    def push(self, new):\n        new_node = Node(new)\n        new_node.next = self.head\n        self.head = new_node\n    # Define the search function\n    def search(self, target):\n        current = self.head\n        while current is not None:\n            if current.data == target:\n                return True\n            current = current.next\n        return False\nlinked_list = LinkedList()\nlinked_list.push(1)\nlinked_list.push(3)\nlinked_list.push(3)\nlinked_list.push(7)\nlinked_list.push(9)\nlinked_list.push(11)\nlinked_list.push(11)\ntarget = 11\n# Calling the search function\nif (linked_list.search(target)):\n    print(\"Found\", target, \"in list\")\nelse:\n    print(\"Did not find\", target, \"in list\")"
   },
   "classification": {
     "topics": [],

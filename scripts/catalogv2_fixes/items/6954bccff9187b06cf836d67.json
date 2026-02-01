@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-09T10:31:21.000Z",
-  "updated_at": "2026-01-17T05:27:05.503Z",
+  "updated_at": "2026-01-17T20:45:05.060Z",
   "tags": [],
   "identity": {
     "id": "Advertir al Usuario sobre los Cambios en la Temperatura y Humedad.__6827373266a8e1b992c81241-6827373166a8e1b992c8123f-1",
@@ -40,24 +40,15 @@
     "knowledge_components": {
       "alice_edu_py_ontology expert": {
         "concepts": [
-          "TransformingToFloatType",
-          "IfElseChecking",
           "AssigningValueVariable",
-          "HandlingInput",
-          "CallingLibraryFunction",
+          "TransformingToFloatType",
           "BooleanEvaluating",
+          "IfElseChecking",
           "Printing",
-          "NestedIfChecking",
+          "CallingLibraryFunction",
           "CreatingString",
-          "TransformingToFloatType",
-          "IfElseChecking",
-          "AssigningValueVariable",
-          "HandlingInput",
-          "CallingLibraryFunction",
-          "BooleanEvaluating",
-          "Printing",
           "NestedIfChecking",
-          "CreatingString"
+          "HandlingInput"
         ],
         "note": "",
         "created_at": null,

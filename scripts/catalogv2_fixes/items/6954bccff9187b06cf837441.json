@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:25.433Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:01.592Z",
+  "tags": [],
   "identity": {
     "id": "textarea_demo",
     "title": "ISD::TextAreaDemo.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=textarea_demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/textarea_demo"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 13.1: TextAreaDemo.java\r\n// Copying selected text from one text area to another.\r\nimport java.awt.*;\r\nimport java.awt.event.*;\r\nimport javax.swing.*;\r\n\r\npublic class TextAreaDemo extends JFrame {\r\n   private JTextArea t1, t2;\r\n   private JButton copy;\r\n\r\n   public TextAreaDemo() \r\n   {\r\n      super( \"TextArea Demo\" );\r\n\r\n      Box b = Box.createHorizontalBox();\r\n\r\n      String s = \"This is a demo string to\n\" +\r\n                 \"illustrate copying text\n\" +\r\n                 \"from one TextArea to \n\" +\r\n                 \"another TextArea using an\n\"+\r\n                 \"external event\n\";\r\n\r\n      t1 = new JTextArea( s, 10, 15 );\r\n      b.add( new JScrollPane( t1 ) );\r\n\r\n      copy = new JButton( \"Copy >>>\" );\r\n      copy.addActionListener(\r\n         new ActionListener() {\r\n            public void actionPerformed( ActionEvent e )\r\n            {\r\n               t2.setText( t1.getSelectedText() );\r\n            }\r\n         }\r\n      );\r\n      b.add( copy );\r\n\r\n      t2 = new JTextArea( 10, 15 );\r\n      t2.setEditable( false );\r\n      b.add( new JScrollPane( t2 ) );\r\n\r\n      Container c = getContentPane();\r\n      c.add( b );    // Box placed in BorderLayout.CENTER\r\n      setSize( 425, 200 );\r\n      show();\r\n   }\r\n\r\n   public static void main( String args[] )\r\n   {\r\n      TextAreaDemo app = new TextAreaDemo();\r\n\r\n      app.addWindowListener(\r\n         new WindowAdapter() {\r\n            public void windowClosing( WindowEvent e )\r\n            {\r\n               System.exit( 0 );\r\n            }\r\n         }\r\n      );\r\n   }\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=textarea_demo"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/textarea_demo"
     }
   ],
   "rights": {

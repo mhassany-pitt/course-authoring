@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-14T22:01:25.000Z",
-  "updated_at": "2026-01-17T13:18:49.230Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:26:28.142Z",
+  "tags": [],
   "identity": {
     "id": "py_search_binary_search",
     "title": "Binary search",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Binary Search operates by dividing an array in half, and then determining whether or not the target value would be in the larger or smaller half. Then, this process repeats by dividing whichever half must contain the target in half again, over and over until the target is found.\nConstruct a function that performs binary search on a given array and returns the index of the target value if it is found in the array. Assume that the target will be in the array (in other words, do not handle the case where the target does not exist in the array).",
+    "source_code": "# Define a binary search function\ndef binary_search(data, key):\n    found = False\n    low = 0\n    high = len(data)-1\n    while not found:\n        guess = (high+low)//2\n        if (key == data[guess]):\n            found = True\n        else:\n            if (key<data[guess]):\n                high = guess-1\n            else:\n                low = guess+1\n    return guess\ndata = [1, 5, 7, 9, 11, 13]\nprint(binary_search(data, 13))"
   },
   "classification": {
     "topics": [],

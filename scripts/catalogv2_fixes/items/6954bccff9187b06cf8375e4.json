@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-01T16:14:39.000Z",
-  "updated_at": "2026-01-17T12:57:50.029Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:15.889Z",
+  "tags": [],
   "identity": {
     "id": "TicTacToe",
     "title": "Tic-Tac-Toe",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=TicTacToe&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/TicTacToe"
   },
   "attribution": {
     "created_at": "2014-09-01T16:14:39.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "public class TicTacToe\n{\n\u00a0\u00a0\u00a0private String[][] board;\n\u00a0\u00a0\u00a0private static final int ROWS = 3;\n\u00a0\u00a0\u00a0private static final int COLUMNS = 3;\n\n\u00a0\u00a0\u00a0public TicTacToe()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0board = new String[ROWS][COLUMNS];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = 0; i < ROWS; i++)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int j = 0; j < COLUMNS; j++)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0board[i][j] = \" \";\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public void set(int i, int j, String player)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (board[i][j].equals(\" \"))\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0board[i][j] = player;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public String toString()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0String r = \"\";\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = 0; i < ROWS; i++)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0r = r + \"|\";\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int j = 0; j < COLUMNS; j++)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0r = r + board[i][j];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0r = r + \"|\";\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return r;\n\u00a0\u00a0\u00a0}\n}\n}"
+    "source_code": "public class TicTacToe\n{\n   private String[][] board;\n   private static final int ROWS = 3;\n   private static final int COLUMNS = 3;\n\n   public TicTacToe()\n   {\n      board = new String[ROWS][COLUMNS];\n      for (int i = 0; i < ROWS; i++)\n         for (int j = 0; j < COLUMNS; j++)\n            board[i][j] = \" \";\n   }\n\n   public void set(int i, int j, String player)\n   {\n      if (board[i][j].equals(\" \"))\n         board[i][j] = player;\n   }\n\n   public String toString()\n   {\n      String r = \"\";\n      for (int i = 0; i < ROWS; i++)\n      {\n         r = r + \"|\";\n         for (int j = 0; j < COLUMNS; j++)         \n            r = r + board[i][j];\n         r = r + \"|\";\n      }\n      return r;\n   }\n}\n}"
   },
   "classification": {
     "topics": [],
@@ -92,7 +90,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=TicTacToe&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/TicTacToe"
     }
   ],
   "rights": {

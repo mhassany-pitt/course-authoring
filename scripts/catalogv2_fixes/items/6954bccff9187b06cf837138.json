@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-09-07T03:50:40.000Z",
-  "updated_at": "2026-01-17T05:28:59.748Z",
+  "updated_at": "2026-01-17T20:45:53.936Z",
   "tags": [],
   "identity": {
     "id": "java_if_else_hurrican_scale",
@@ -40,12 +40,9 @@
     "knowledge_components": {
       "manual_expert": {
         "concepts": [
-          "MultiplicativeExpression",
           "IfElseIfStatement",
           "IfElseStatement",
-          "MultiplicativeExpression",
-          "IfElseIfStatement",
-          "IfElseStatement"
+          "MultiplicativeExpression"
         ],
         "note": "",
         "created_at": null,

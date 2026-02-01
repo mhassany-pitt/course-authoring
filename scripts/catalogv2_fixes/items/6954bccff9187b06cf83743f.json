@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:25.170Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:01.374Z",
+  "tags": [],
   "identity": {
     "id": "list_test",
     "title": "ISD::ListTest.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=list_test"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/list_test"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 12.14: ListTest.java\n\n// Selecting colors from a JList.\n\nimport java.awt.*;\n\nimport java.awt.event.*;\n\nimport javax.swing.*;\n\nimport javax.swing.event.*;\n\n\n\npublic class ListTest extends JFrame {\n   private JList colorList;\n   private Container c;\n\n\n   private String colorNames[] =\n      { \"Black\", \"Blue\", \"Cyan\", \"Dark Gray\", \"Gray\", \"Green\",\n        \"Light Gray\", \"Magenta\", \"Orange\", \"Pink\", \"Red\",\n        \"White\", \"Yellow\" };\n\n\n   private Color colors[] =\n      { Color.black, Color.blue, Color.cyan, Color.darkGray,\n        Color.gray, Color.green, Color.lightGray,\n        Color.magenta, Color.orange, Color.pink, Color.red,\n        Color.white, Color.yellow };\n\n\n   public ListTest()\n   {\n      super( \"List Test\" );\n\n\n      c = getContentPane();\n      c.setLayout( new FlowLayout() );\n\n\n      // create a list with the items in the colorNames array\n      colorList = new JList( colorNames );\n      colorList.setVisibleRowCount( 5 );\n\n\n      // do not allow multiple selections\n      colorList.setSelectionMode(\n         ListSelectionModel.SINGLE_SELECTION );\n\n\n      // add a JScrollPane containing the JList\n      // to the content pane\n      c.add( new JScrollPane( colorList ) );\n\n\n      // set up event handler\n      colorList.addListSelectionListener(\n         new ListSelectionListener() {\n            public void valueChanged( ListSelectionEvent e )\n            {\n               c.setBackground(\n                  colors[ colorList.getSelectedIndex() ] );\n            }\n         }\n      );\n\n\n      setSize( 350, 150 );\n      show();\n   }\n\n\n   public static void main( String args[] )\n   {\n      ListTest app = new ListTest();\n\n\n      app.addWindowListener(\n         new WindowAdapter() {\n            public void windowClosing( WindowEvent e )\n            {\n               System.exit( 0 );\n            }\n         }\n      );\n   }\n\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=list_test"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/list_test"
     }
   ],
   "rights": {

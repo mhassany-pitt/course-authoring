@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-09T16:10:07.000Z",
-  "updated_at": "2026-01-17T12:55:11.830Z",
+  "updated_at": "2026-01-17T20:45:46.844Z",
   "tags": [
     "TODO:add-prompt"
   ],
@@ -42,18 +42,13 @@
     "knowledge_components": {
       "acos parser": {
         "concepts": [
+          "USub",
+          "Call",
+          "Assign",
+          "NestedForLoop",
           "Constant",
           "For",
-          "Call",
-          "Assign",
-          "USub",
-          "Sub",
-          "Assign",
-          "Call",
-          "For",
-          "Sub",
-          "USub",
-          "NestedForLoop"
+          "Sub"
         ],
         "note": "",
         "created_at": null,

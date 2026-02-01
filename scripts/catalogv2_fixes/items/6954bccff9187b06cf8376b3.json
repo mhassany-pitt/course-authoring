@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:20.658Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:47:19.603Z",
+  "tags": [],
   "identity": {
     "id": "DataSelecton11",
     "title": "Multiple Comparisons (1)",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=DataSelecton11&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/DataSelecton11"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "SELECT loan_number\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0FROM loan\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0WHERE branch_name = Perryridge AND amount > 1200;"
+    "prompt": "Multiple Comparisons (1)",
+    "source_code": "SELECT loan_number \r\n\n      FROM loan\r\n\n      WHERE branch_name = Perryridge AND amount > 1200;"
   },
   "classification": {
     "topics": [],
@@ -82,22 +80,17 @@
       },
       "sql_ontology": {
         "concepts": [
-          "WhereClause",
           "EqualComparison",
-          "GreaterThanComparison",
-          "WhereClause",
-          "NumericType",
-          "StringType",
-          "SingleTableSelection",
           "Assertion",
+          "StringType",
           "AndLogicalOperator",
-          "SingleAttributeSelection",
-          "WhereClause",
           "SetOperation",
+          "SingleAttributeSelection",
+          "NumericType",
           "WhereClause",
           "FixedLengthCharacterString",
-          "WhereClause",
-          "WhereClause"
+          "SingleTableSelection",
+          "GreaterThanComparison"
         ],
         "note": "",
         "created_at": null,
@@ -120,7 +113,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=DataSelecton11&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/DataSelecton11"
     }
   ],
   "rights": {

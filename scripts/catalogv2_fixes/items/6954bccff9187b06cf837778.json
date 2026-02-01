@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:49.410Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:45.670Z",
+  "tags": [],
   "identity": {
     "id": "inheritance_polymorphism_2",
     "title": "A Dog is also a Pet",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=inheritance_polymorphism_2&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/inheritance_polymorphism_2"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "public class Pet {\n\u00a0\u00a0\u00a0\u00a0public void speak(){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"\");\n\u00a0\u00a0\u00a0\u00a0}\n}\n\npublic class Dog extends Pet {\n\u00a0\u00a0\u00a0\u00a0public void speak(){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"woof! woof!\");\n\u00a0\u00a0\u00a0\u00a0}\n}\n\npublic class Cat extends Pet{\n\u00a0\u00a0\u00a0\u00a0public void speak(){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"meow!\");\n\u00a0\u00a0\u00a0\u00a0}\n}\n\npublic class InheritanceAndPolymorphism2 {\n\u00a0\u00a0\u00a0\u00a0public static void main(String args[]){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Pet[] myPets = new Pet[3];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0myPets[0] = new Dog();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0myPets[1] = new Cat();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0myPets[2] = new Dog();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0whoTheyAre(myPets);\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public static void whoTheyAre(Pet[] pets){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for(int i=0;i<pets.length;i++){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0pets[i].speak();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0}\n}"
+    "source_code": "public class Pet {\n    public void speak(){\n        System.out.println(\"\");\n    }\n}\n\npublic class Dog extends Pet {\n    public void speak(){\n        System.out.println(\"woof! woof!\");\n    }\n}\n\npublic class Cat extends Pet{\n    public void speak(){\n        System.out.println(\"meow!\");\n    }\n}\n\npublic class InheritanceAndPolymorphism2 {\n    public static void main(String args[]){\n        Pet[] myPets = new Pet[3];\n        myPets[0] = new Dog();\n        myPets[1] = new Cat();\n        myPets[2] = new Dog();\n        whoTheyAre(myPets);\n    }\n\t\n    public static void whoTheyAre(Pet[] pets){\n        for(int i=0;i<pets.length;i++){\n            pets[i].speak();\n        }\n    }\n}"
   },
   "classification": {
     "topics": [],
@@ -89,7 +87,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=inheritance_polymorphism_2&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/inheritance_polymorphism_2"
     }
   ],
   "rights": {

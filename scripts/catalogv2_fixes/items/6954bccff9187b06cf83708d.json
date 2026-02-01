@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-15T23:42:23.000Z",
-  "updated_at": "2026-01-17T13:21:04.587Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:46:22.731Z",
+  "tags": [],
   "identity": {
     "id": "insert_binarytree_ch",
     "title": "Inserting binary tree Challenge",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "In a BinaryTree, adding new nodes to the tree is an important capability to have.\\nConstruct a simple implementation of a BinaryTree consisting of an __init__ method and an insertRight method, which adds new nodes to the tree to the right of the root.",
+    "source_code": "# Define a binary tree class\nclass BinaryTree:\n    def __init__(self, root):\n        self.key = root\n        self.left = None\n        self.right = None\n    # Define a function to insert node from the right\n    def insert_right(self, new_node):\n        if self.right is None:\n            self.right = BinaryTree(new_node)\n        else:\n            node_tree = BinaryTree(new_node)\n            node_tree.right = self.right\n            self.right = node_tree\n    # Define a function to print the tree\n    def print_tree(self):\n        if self.left:\n            self.left.print_tree()\n        print(self.key, \" \", end=\"\")\n        if self.right:\n            self.right.print_tree()\n# Initializing a tree\nroot = BinaryTree(10)\nroot.insert_right(5)\nroot.insert_right(6)\nroot.insert_right(14)\nroot.print_tree()"
   },
   "classification": {
     "topics": [],

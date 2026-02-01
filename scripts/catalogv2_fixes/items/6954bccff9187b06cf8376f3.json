@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:30.357Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:30.703Z",
+  "tags": [],
   "identity": {
     "id": "no_argument_func",
     "title": "No Argument Functions",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=no_argument_func&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/no_argument_func"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\nvoid draw_circle(void);\u00a0\u00a0\u00a0\u00a0\nvoid draw_intersect(void);\u00a0\u00a0\u00a0\u00a0\nvoid draw_base(void);\nvoid draw_triangle(void);\nint main(void)\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0draw_circle();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0draw_triangle();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0draw_intersect();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return (0);\n}\nvoid draw_circle(void)\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"   *   \\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\" *   * \\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"  * *  \\n\");\n}\nvoid draw_triangle(void)\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0draw_intersect();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0draw_base();\n}\nvoid draw_intersect(void)\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"  / \\\\  \\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\" /   \\\\ \\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"/     \\\\ \\n\");\n}\nvoid draw_base(void)\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"-------\\n\");\n}"
+    "source_code": "#include <stdio.h>\r\n\r\n\nvoid draw_circle(void);\t\r\n\r\n\nvoid draw_intersect(void);\t\r\n\r\n\nvoid draw_base(void);\r\n\r\n\nvoid draw_triangle(void);\r\n\r\n\nint main(void)\r\n\r\n\n{\r\n\r\n\n      draw_circle();\r\n\r\n\n      draw_triangle();\r\n\r\n\n      draw_intersect();\r\n\r\n\n      return (0);\r\n\r\n\n}\r\n\r\n\nvoid draw_circle(void)\r\n\r\n\n{\r\n\r\n\n      printf(\"   *   \\n\");\r\n\r\n\n      printf(\" *   * \\n\");\r\n\r\n\n      printf(\"  * *  \\n\");\r\n\r\n\n}\r\n\r\n\nvoid draw_triangle(void)\r\n\r\n\n{\r\n\r\n\n      draw_intersect();\r\n\r\n\n      draw_base();\r\n\r\n\n}\r\n\r\n\nvoid draw_intersect(void)\r\n\r\n\n{\r\n\r\n\n      printf(\"  / \\\\  \\n\");\r\n\r\n\n      printf(\" /   \\\\ \\n\");\r\n\r\n\n      printf(\"/     \\\\ \\n\");\r\n\r\n\r\n\n}\r\n\r\n\nvoid draw_base(void)\r\n\r\n\n{\r\n\r\n\n      printf(\"-------\\n\");\r\n\r\n\n}\r\n"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=no_argument_func&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/no_argument_func"
     }
   ],
   "rights": {

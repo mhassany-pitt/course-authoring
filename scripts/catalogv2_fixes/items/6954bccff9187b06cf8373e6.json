@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T13:19:11.649Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:51.178Z",
+  "tags": [],
   "identity": {
     "id": "IS17_this_super",
     "title": "IS17_this_and_super",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=IS17_this_super"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_this_super"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "class  Parent  {\r\n\tString  name  =  \"Parent\";    }\r\n\r\nclass  Child  extends  Parent  {\r\n\tString  name  =  \"Child\";\r\n\r\n\tpublic  void  print()  {\r\n\t\tSystem.out.println(  name  );\r\n\t\tSystem.out.println(  this.name  );\r\n\t\tSystem.out.println(  super.name  );\r\n\t\tSystem.out.println(  Parent.name  );\r\n\t\tSystem.out.println(  ((Parent)this).name  );\r\n\t}\r\n}\r\n\r\nclass  SuperThis  {\r\n\tpublic static void main( String args[] ) {\r\n\t\tChild  whoAmI  =  new Child();\r\n\t\twhoAmI.print();\r\n\t}\r\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=IS17_this_super"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_this_super"
     }
   ],
   "rights": {

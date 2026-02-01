@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-08-30T15:49:18.000Z",
-  "updated_at": "2026-01-17T12:57:56.659Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:18.294Z",
+  "tags": [],
   "identity": {
     "id": "PrintTester",
     "title": "Print Tester",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=PrintTester&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/PrintTester"
   },
   "attribution": {
     "created_at": "2014-08-30T15:49:18.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "public class PrintTester\n{\n\u00a0\u00a0\u00a0public static void main(String[] args)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(3 + 4);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Hello\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"World!\");\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(\"00\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(3 + 4);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Goodbye\");\n\u00a0\u00a0\u00a0}\n}"
+    "source_code": "public class PrintTester\r\n\n{\r\n\n   public static void main(String[] args)\r\n\n   {\r\n\n      System.out.println(3 + 4); \r\n\n      \r\n\n      System.out.println(\"Hello\"); \r\n\n      System.out.println(\"World!\");\r\n\n\n      System.out.print(\"00\"); \r\n\n      System.out.println(3 + 4); \r\n\n\n      System.out.println(\"Goodbye\");\r\n\n   }\r\n\n}"
   },
   "classification": {
     "topics": [],
@@ -69,7 +67,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=PrintTester&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/PrintTester"
     }
   ],
   "rights": {

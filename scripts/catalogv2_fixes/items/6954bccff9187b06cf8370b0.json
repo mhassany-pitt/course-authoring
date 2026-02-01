@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-12T20:46:09.000Z",
-  "updated_at": "2026-01-17T13:18:52.837Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:03:21.521Z",
+  "tags": [],
   "identity": {
     "id": "py_datatype_input_manipulation",
     "title": "Input Manipulation",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct a program that takes a user's inputs and multiplies the inputs.Then print the type of the result, convert the result to float and print its float absolute value. ",
+    "source_code": "# Step 1: Import math library\nimport math\n# Step 2: Take the first input from the user\ninput_a = input(\"Enter the first integer:\")\na = int(input_a)\n# Step 3: Take the second input from the user\ninput_b = input(\"Enter the second integer:\")\nb = int(input_b)\n# Step 3: Multiply the two variables\nc = a*b\nprint(type(c))\nprint(float(c))\nprint(math.fabs(c))"
   },
   "classification": {
     "topics": [],

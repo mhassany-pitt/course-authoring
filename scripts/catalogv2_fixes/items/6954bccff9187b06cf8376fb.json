@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:31.589Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:31.632Z",
+  "tags": [],
   "identity": {
     "id": "block_scope",
     "title": "Block Scope",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=block_scope&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/block_scope"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\nvoid a( void );\nvoid b( void );\nvoid c( void );\nint x = 1;\nint main()\n{\n\u00a0\u00a0\u00a0int x = 5;\n\u00a0\u00a0\u00a0printf(\"local x in outer scope of main is %d\\n\", x );\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0int x = 7;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"local x in inner scope of main is %d\\n\", x );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0printf( \"local x in outer scope of main is %d\\n\", x );\n\u00a0\u00a0\u00a0a();\n\u00a0\u00a0\u00a0b();\n\u00a0\u00a0\u00a0c();\n\u00a0\u00a0\u00a0a();\n\u00a0\u00a0\u00a0b();\n\u00a0\u00a0\u00a0c();\n\u00a0\u00a0\u00a0printf( \"local x in main is %d\\n\", x );\n\u00a0\u00a0\u00a0return 0;\n}\n\nvoid a( void )\n{\n\u00a0\u00a0\u00a0int x = 25;\n\u00a0\u00a0\u00a0printf( \"\\nlocal x in a is %d after entering a\\n\", x );\n\u00a0\u00a0\u00a0++x;\n\u00a0\u00a0\u00a0printf( \"local x in a is %d before exiting a\\n\", x );\n}\nvoid b( void )\n{\n\u00a0\u00a0\u00a0\u00a0static int x = 50;  /* static initialization only */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* first time b is called */\n\u00a0\u00a0\u00a0\u00a0printf( \"\\nlocal static x is %d on entering b\\n\", x );\n\u00a0\u00a0\u00a0\u00a0++x;\n\u00a0\u00a0\u00a0\u00a0printf( \"local static x is %d on exiting b\\n\", x );\n}\nvoid c( void )\n{\n\u00a0\u00a0\u00a0printf( \"\\nglobal x is %d on entering c\\n\", x );\n\u00a0\u00a0\u00a0x *= 10;\n\u00a0\u00a0\u00a0printf( \"global x is %d on exiting c\\n\", x );\n}"
+    "source_code": "#include <stdio.h>\r\nvoid a( void );\r\nvoid b( void );\r\nvoid c( void );\r\nint x = 1;        \r\nint main()\r\n{\r\n   int x = 5;   \r\n   printf(\"local x in outer scope of main is %d\\n\", x );\r\n   {           \r\n     int x = 7;\r\n      printf( \"local x in inner scope of main is %d\\n\", x );\r\n   }           \r\n   printf( \"local x in outer scope of main is %d\\n\", x );\r\n   a();        \r\n   b();        \r\n   c();         \r\n   a();         \r\n   b();        \r\n   c();        \r\n   printf( \"local x in main is %d\\n\", x );\r\n   return 0;\r\n}\r\n\r\nvoid a( void )\r\n{\r\n   int x = 25;  \r\n   printf( \"\\nlocal x in a is %d after entering a\\n\", x );\r\n   ++x;\r\n   printf( \"local x in a is %d before exiting a\\n\", x );\r\n}\r\nvoid b( void )\r\n{\r\n    static int x = 50;  /* static initialization only */\r\n                        /* first time b is called */\r\n    printf( \"\\nlocal static x is %d on entering b\\n\", x );\r\n    ++x;\r\n    printf( \"local static x is %d on exiting b\\n\", x );\r\n}\r\nvoid c( void )\r\n{\r\n   printf( \"\\nglobal x is %d on entering c\\n\", x );\r\n   x *= 10;\r\n   printf( \"global x is %d on exiting c\\n\", x );\r\n}"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=block_scope&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/block_scope"
     }
   ],
   "rights": {

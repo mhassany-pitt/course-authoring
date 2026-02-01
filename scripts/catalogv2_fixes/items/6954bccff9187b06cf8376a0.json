@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:17.557Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:21.366Z",
+  "tags": [],
   "identity": {
     "id": "precedence_expression",
     "title": "precedence_expression",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=precedence_expression&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/precedence_expr"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -35,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": ""
+    "source_code": "/*\tExamine the effect of precedence on an expression.\r\n\t   Written by:\r\n\t   Date:\r\n*/\r\n#include <stdio.h>\r\n\r\nint main (void)\r\n{\r\n//\tLocal Declarations \r\n\tint a = 10;\r\n\tint b = 20;\r\n\tint c = 30;\r\n\r\n//\tStatements \r\n\tprintf (\"a *  b + c  is: %d\\n\", a *  b + c);\r\n\tprintf (\"a * (b + c) is: %d\\n\", a * (b + c));\r\n\treturn 0;\r\n}\t// main"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=precedence_expression&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/precedence_expr"
     }
   ],
   "rights": {

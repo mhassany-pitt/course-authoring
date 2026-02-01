@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T13:19:22.481Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:58.962Z",
+  "tags": [],
   "identity": {
     "id": "IS17_ArrayList1_7",
     "title": "IS17_ArrayList1_7",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=IS17_ArrayList1_7"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList1_7"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "import java.util.ArrayList; \r\n \r\nclass USport { String school; String name; \r\n  public USport (String s, String n) { school = s;  name = n; } \r\n  public String toString() { return school + \":\" + name; } \r\n} \r\n \r\npublic class ArrayList1 { \r\n public static void main(String a[]) { \r\n  ArrayList<USport> v = new ArrayList<USport>(); \r\n  v.add( new USport(\"LSU\", \"Tigers\")  ); \r\n  v.add( new USport(\"Georgia\", \"Bulldogs\") ); \r\n  v.add( new USport(\"UPitt\", \"Panthers\")  ); \r\n  System.out.println( v );  \r\n   \r\n  for( int i = v.size() - 1; i >= 0; i--) { \r\n   USport us = v.get( i ); \r\n   System.out.print( us.school + \" \" ); \r\n  }  \r\n   \r\n  System.out.println(); \r\n   \r\n  for(USport us: v )   \r\n   System.out.print( us.school + \" \" ); \r\n    \r\n  System.out.println(); \r\n   \r\n  while ( v.size() > 0 ) { \r\n   USport us = v.remove( 0 );  \r\n   System.out.print( us.name + \" \"); \r\n  }  \r\n  System.out.println(); \r\n } \r\n}\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=IS17_ArrayList1_7"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList1_7"
     }
   ],
   "rights": {

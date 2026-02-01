@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:23.830Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:00.127Z",
+  "tags": [],
   "identity": {
     "id": "draw_arcs",
     "title": "ISD::DrawArcs.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=draw_arcs"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/draw_arcs"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 11.19: DrawArcs.java\n\n// Drawing Arcs\n\nimport java.awt.*;\n\nimport java.applet.*;\n\n\n\npublic class DrawArcs extends Applet {\n    public void paint( Graphics g )\n    {\n       // start at 0 and sweep 360 degrees\n       g.setColor( Color.yellow );\n       g.drawRect( 15, 35, 80, 80 );\n       g.setColor( Color.black );\n       g.drawArc( 15, 35, 80, 80, 0, 360 );\n\n\n       // start at 0 and sweep 110 degrees\n       g.setColor( Color.yellow );\n       g.drawRect( 100, 35, 80, 80 );\n       g.setColor( Color.black );\n       g.drawArc( 100, 35, 80, 80, 0, 110 );\n\n\n       // start at 0 and sweep -270 degrees\n       g.setColor( Color.yellow );\n       g.drawRect( 185, 35, 80, 80 );\n       g.setColor( Color.black );\n       g.drawArc( 185, 35, 80, 80, 0, -270 );\n\n\n       // start at 0 and sweep 360 degrees\n       g.fillArc( 15, 120, 80, 40, 0, 360 );\n\n\n       // start at 270 and sweep -90 degrees\n       g.fillArc( 100, 120, 80, 40, 270, -90 );\n\n\n       // start at 0 and sweep -270 degrees\n       g.fillArc( 185, 120, 80, 40, 0, -270 );\n    }\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=draw_arcs"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/draw_arcs"
     }
   ],
   "rights": {

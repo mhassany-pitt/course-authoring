@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2019-02-01T11:11:08.000Z",
-  "updated_at": "2026-01-17T12:55:46.070Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:46:05.111Z",
+  "tags": [],
   "identity": {
     "id": "3-19_ArrayDemos",
     "title": "3-19_ArrayDemos",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=3-19_ArrayDemos&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-19_ArrayDemos"
   },
   "attribution": {
     "created_at": "2019-02-01T11:11:08.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/*\n\u00a0* Some basic examples of array syntax.\n\u00a0*/\npublic class ArrayDemos {\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int[] y = new int[10];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// At this point, all array elements are 0.\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Store values into specific array indices.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// (Be careful that the indices are always within the bounds of the array!)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0y[2] = 10;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0y[1] = 8;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0y[5] = 11;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Print out the individual array elements\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = 0; i < y.length; i++)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(y[i]);\n\u00a0\u00a0\u00a0\u00a0}\n}"
+    "source_code": "/*\n * Some basic examples of array syntax.\n */\npublic class ArrayDemos {\n\n\tpublic static void main(String[] args) {\n\t\tint[] y = new int[10];\n\t\t\t\t\t\t\t\t// At this point, all array elements are 0.\n\t\t\n\t\t// Store values into specific array indices.\n\t\t// (Be careful that the indices are always within the bounds of the array!)\n\t\ty[2] = 10;\n\t\ty[1] = 8;\n\t\ty[5] = 11;\n\n\t\t// Print out the individual array elements\n\t\tfor (int i = 0; i < y.length; i++)\n\t\t\tSystem.out.println(y[i]);\n\t}\n}"
   },
   "classification": {
     "topics": [],
@@ -69,25 +67,24 @@
       "java ontology v2": {
         "concepts": [
           "ActualMethodParameter",
-          "ArrayCreationStatement",
-          "ArrayDataType",
-          "ArrayDataType",
-          "ArrayElement",
-          "ArrayLength",
-          "ArrayVariable",
-          "ClassDefinition",
-          "FormalMethodParameter",
           "ForStatement",
-          "IntDataType",
-          "java.lang.System.out.println",
+          "ArrayDataType",
+          "VoidDataType",
           "LessExpression",
-          "MethodDefinition",
+          "SimpleAssignmentExpression",
+          "FormalMethodParameter",
+          "ArrayElement",
           "PostIncrementExpression",
+          "MethodDefinition",
+          "ClassDefinition",
+          "java.lang.System.out.println",
+          "StaticMethodSpecifier",
           "PublicClassSpecifier",
           "PublicMethodSpecifier",
-          "SimpleAssignmentExpression",
-          "StaticMethodSpecifier",
-          "VoidDataType"
+          "ArrayCreationStatement",
+          "ArrayLength",
+          "IntDataType",
+          "ArrayVariable"
         ],
         "note": "",
         "created_at": null,
@@ -110,7 +107,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=3-19_ArrayDemos&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-19_ArrayDemos"
     }
   ],
   "rights": {

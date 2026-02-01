@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:35.594Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:34.394Z",
+  "tags": [],
   "identity": {
     "id": "sortalgorithm",
     "title": "SortAlgorithm",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=sortalgorithm&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/sortalgorithm"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/* Fig. 16.1: fig16_01.c\n\u00a0\u00a0\u00a0The selection sort algorithm. */\n#define SIZE 10\n#include <stdio.h>\n#include <stdlib.h>\n#include <time.h>\n\n/* function prototypes */\nvoid selectionSort( int array[], int length );\nvoid swap( int array[], int first, int second );\nvoid printPass( int array[], int length, int pass, int index );\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int array[ SIZE ]; /* declare the array of ints to be sorted */\n\u00a0\u00a0\u00a0int i; /* int used in for loop */\n\n\u00a0\u00a0\u00a0srand( time( NULL ) ); /* seed the rand function */\n\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0array[ i ] = rand() % 90 + 10; /* give each element a value */\n\n\u00a0\u00a0\u00a0printf( \"Unsorted array:\\n\" );\n\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ ) /* print the array */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%d  \", array[ i ] );\n\n\u00a0\u00a0\u00a0printf( \"\\n\\n\" );\n\u00a0\u00a0\u00a0selectionSort( array, SIZE );\n\u00a0\u00a0\u00a0printf( \"Sorted array:\\n\" );\n\n\u00a0\u00a0\u00a0for ( i = 0; i < SIZE; i++ ) /* print the array */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%d  \", array[ i ] );\n\n\u00a0\u00a0\u00a0return 0;\n} /* end function main */\n\n\n/* function that selection sorts the array */\nvoid selectionSort( int array[], int length )\n{\n\u00a0\u00a0\u00a0int smallest; /* index of smallest element */\n\u00a0\u00a0\u00a0int i, j; /* ints used in for loops */\n\n\u00a0\u00a0\u00a0/* loop over length - 1 elements */\n\u00a0\u00a0\u00a0for ( i = 0; i < length - 1; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0smallest = i; /* first index of remaining array */\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* loop to find index of smallest element */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( j = i + 1; j < length; j++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if ( array[ j ] < array[ smallest ] )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0smallest = j;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0swap( array, i, smallest ); /* swap smallest element */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printPass( array, length, i + 1, smallest ); /* output pass */\n\u00a0\u00a0\u00a0} /* end for */\n} /* end function selectionSort */\n\n/* function that swaps two elements in the array */\nvoid swap( int array[], int first, int second )\n{\n\u00a0\u00a0\u00a0int temp; /* temporary integer */\n\u00a0\u00a0\u00a0temp = array[ first ];\n\u00a0\u00a0\u00a0array[ first ] = array[ second ];\n\u00a0\u00a0\u00a0array[ second ] = temp;\n} /* end function swap */\n\n/* function that prints a pass of the algorithm */\nvoid printPass( int array[], int length, int pass, int index )\n{\n\u00a0\u00a0\u00a0int i; /* int used in for loop */\n\n\u00a0\u00a0\u00a0printf( \"After pass %2d: \", pass );\n\n\u00a0\u00a0\u00a0/* output elements till selected item */\n\u00a0\u00a0\u00a0for ( i = 0; i < index; i++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%d  \", array[ i ] );\n\n\u00a0\u00a0\u00a0printf( \"%d* \", array[ index ] ); /* indicate swap */\n\n\u00a0\u00a0\u00a0/* finish outputting array */\n\u00a0\u00a0\u00a0for ( i = index + 1; i < length; i++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"%d  \", array[ i ] );\n\n\u00a0\u00a0\u00a0printf( \"\\n               \" ); /* for alignment */\n\n\u00a0\u00a0\u00a0/* indicate amount of array that is sorted */\n\u00a0\u00a0\u00a0for ( i = 0; i < pass; i++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"--  \" );\n\n\u00a0\u00a0\u00a0printf( \"\\n\" ); /* add newline */\n} /* end function printPass */\n} /* end function printPass */"
+    "source_code": "/* Fig. 16.1: fig16_01.c\r\n   The selection sort algorithm. */\r\n#define SIZE 10\r\n#include <stdio.h>\r\n#include <stdlib.h>\r\n#include <time.h>\r\n\r\n/* function prototypes */\r\nvoid selectionSort( int array[], int length );\r\nvoid swap( int array[], int first, int second );\r\nvoid printPass( int array[], int length, int pass, int index );\r\n\r\nint main( void )\r\n{\r\n   int array[ SIZE ]; /* declare the array of ints to be sorted */\r\n   int i; /* int used in for loop */\r\n    \r\n   srand( time( NULL ) ); /* seed the rand function */\r\n   \r\n   for ( i = 0; i < SIZE; i++ )\r\n      array[ i ] = rand() % 90 + 10; /* give each element a value */\r\n       \r\n   printf( \"Unsorted array:\\n\" );\r\n    \r\n   for ( i = 0; i < SIZE; i++ ) /* print the array */\r\n      printf( \"%d  \", array[ i ] );\r\n        \r\n   printf( \"\\n\\n\" );\r\n   selectionSort( array, SIZE );\r\n   printf( \"Sorted array:\\n\" );\r\n    \r\n   for ( i = 0; i < SIZE; i++ ) /* print the array */\r\n      printf( \"%d  \", array[ i ] );\r\n        \r\n   return 0;\r\n} /* end function main */\r\n\r\n\r\n/* function that selection sorts the array */\r\nvoid selectionSort( int array[], int length )\r\n{\r\n   int smallest; /* index of smallest element */\r\n   int i, j; /* ints used in for loops */\r\n    \r\n   /* loop over length - 1 elements */\r\n   for ( i = 0; i < length - 1; i++ ) {\r\n      smallest = i; /* first index of remaining array */\r\n        \r\n      /* loop to find index of smallest element */\r\n      for ( j = i + 1; j < length; j++ )\r\n         if ( array[ j ] < array[ smallest ] )\r\n            smallest = j;\r\n                \r\n      swap( array, i, smallest ); /* swap smallest element */\r\n      printPass( array, length, i + 1, smallest ); /* output pass */\r\n   } /* end for */\r\n} /* end function selectionSort */\r\n\r\n/* function that swaps two elements in the array */\r\nvoid swap( int array[], int first, int second )\r\n{\r\n   int temp; /* temporary integer */\r\n   temp = array[ first ];\r\n   array[ first ] = array[ second ];\r\n   array[ second ] = temp;\r\n} /* end function swap */\r\n\r\n/* function that prints a pass of the algorithm */\r\nvoid printPass( int array[], int length, int pass, int index )\r\n{\r\n   int i; /* int used in for loop */\r\n    \r\n   printf( \"After pass %2d: \", pass );\r\n    \r\n   /* output elements till selected item */\r\n   for ( i = 0; i < index; i++ )\r\n      printf( \"%d  \", array[ i ] );\r\n        \r\n   printf( \"%d* \", array[ index ] ); /* indicate swap */\r\n    \r\n   /* finish outputting array */\r\n   for ( i = index + 1; i < length; i++ )\r\n      printf( \"%d  \", array[ i ] );\r\n        \r\n   printf( \"\\n               \" ); /* for alignment */\r\n   \r\n   /* indicate amount of array that is sorted */\r\n   for ( i = 0; i < pass; i++ )\r\n      printf( \"--  \" );\r\n    \r\n   printf( \"\\n\" ); /* add newline */\r\n} /* end function printPass */\r\n} /* end function printPass */\r"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=sortalgorithm&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/sortalgorithm"
     }
   ],
   "rights": {

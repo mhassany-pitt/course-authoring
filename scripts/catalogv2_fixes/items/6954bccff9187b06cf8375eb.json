@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-01T11:35:08.000Z",
-  "updated_at": "2026-01-17T12:57:51.056Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:16.403Z",
+  "tags": [],
   "identity": {
     "id": "thisReference",
     "title": "This Reference",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=thisReference&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/thisReference"
   },
   "attribution": {
     "created_at": "2014-09-01T11:35:08.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "public class Counter\n{\n\u00a0\u00a0\u00a0private int value;\n\n\u00a0\u00a0\u00a0public Counter(int value)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0this.value = value;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public Counter()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0this(0);\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public void click()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0this.value = this.value + 1;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public int getPrevious()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return getValue() - 1;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public int getValue()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return value;\n\u00a0\u00a0\u00a0}\n}\n}"
+    "source_code": "public class Counter\r\n{\r\n   private int value; \r\n\r\n   public Counter(int value) \r\n   {\r\n      this.value = value;\r\n   }\r\n\r\n   public Counter()\r\n   {\r\n      this(0);\r\n   }\r\n\r\n   public void click() \r\n   {\r\n      this.value = this.value + 1;\r\n   }\r\n\r\n   public int getPrevious() \r\n   {\r\n      return getValue() - 1;\r\n   }\r\n\r\n   public int getValue()\r\n   {\r\n      return value;\r\n   }\r\n}\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -76,7 +74,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=thisReference&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/thisReference"
     }
   ],
   "rights": {

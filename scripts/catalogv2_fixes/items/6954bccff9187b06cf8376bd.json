@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:22.304Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:24.833Z",
+  "tags": [],
   "identity": {
     "id": "Coin_Values",
     "title": "Coin_Values",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Coin_Values&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Coin_Values"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\nint main(void)\n{\n\u00a0\u00a0\u00a0\u00a0\u00a0char first, middle, last;\n\u00a0\u00a0\u00a0\u00a0\u00a0int pennies, nickels;\n\u00a0\u00a0\u00a0\u00a0\u00a0int dimes, quarters;\n\u00a0\u00a0\u00a0\u00a0\u00a0int change; \u00a0\u00a0\u00a0\u00a0\n\u00a0\u00a0\u00a0\u00a0\u00a0int dollars;\n\u00a0\u00a0\u00a0\u00a0\u00a0int total_cents;\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Type in 3 initials and press return> \");\n\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%c%c%c\", &first, &middle, &last);\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Hello %c%c%c, let's see what your coins are worth.\\n\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0first, middle, last);\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Number of quarters> \");\n\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &quarters);\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Number of dimes   > \");\n\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &dimes);\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Number of nickels > \");\n\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &nickels);\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Number of pennies > \");\n\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &pennies);\n\u00a0\u00a0\u00a0\u00a0\u00a0total_cents = 25 * quarters + 10 * dimes + 5 * nickels + pennies;\n\u00a0\u00a0\u00a0\u00a0\u00a0dollars = total_cents / 100;\n\u00a0\u00a0\u00a0\u00a0\u00a0change = total_cents % 100;\n\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nYour coins are worth %d dollars and %d cents.\\n\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0dollars, change);\n\u00a0\u00a0\u00a0\u00a0\u00a0return (0);\n}"
+    "source_code": "#include <stdio.h>\r\nint main(void)\r\n{\r\n     char first, middle, last;\r\n     int pennies, nickels;  \r\n     int dimes, quarters;   \r\n     int change; \t\r\n     int dollars;   \r\n     int total_cents; \r\n     printf(\"Type in 3 initials and press return> \"); \r\n     scanf(\"%c%c%c\", &first, &middle, &last);\r\n     printf(\"Hello %c%c%c, let's see what your coins are worth.\\n\",\r\n            first, middle, last);\r\n     printf(\"Number of quarters> \"); \r\n     scanf(\"%d\", &quarters); \r\n     printf(\"Number of dimes   > \"); \r\n     scanf(\"%d\", &dimes); \r\n     printf(\"Number of nickels > \"); \r\n     scanf(\"%d\", &nickels); \r\n     printf(\"Number of pennies > \"); \r\n     scanf(\"%d\", &pennies); \r\n     total_cents = 25 * quarters + 10 * dimes + 5 * nickels + pennies;\r\n     dollars = total_cents / 100; \r\n     change = total_cents % 100; \r\n     printf(\"\\nYour coins are worth %d dollars and %d cents.\\n\",\r\n            dollars, change);\r\n     return (0);\r\n}"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Coin_Values&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Coin_Values"
     }
   ],
   "rights": {

@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T13:19:21.989Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:58.544Z",
+  "tags": [],
   "identity": {
     "id": "IS17_interface3_8",
     "title": "IS17_interface3_8",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=IS17_interface3_8"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface3_8"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "interface Fruit { \r\n   public boolean hasAPeel();           \r\n}         \r\n \r\n \r\ninterface Vegetable { \r\n   public boolean isARoot();         \r\n}   \r\n \r\n \r\nclass FandVUtility { \r\n   static String doesThisHaveAPeel(Fruit fruitIn){ \r\n        if (fruitIn.hasAPeel()) \r\n           return \"This has a peel\"; \r\n        else    \r\n           return \"This does not have a peel\"; \r\n   } \r\n   static String isThisARoot(Vegetable vegetableIn){ \r\n        if (vegetableIn.isARoot()) \r\n           return \"This is a root\"; \r\n        else    \r\n           return \"This is not a root\"; \r\n   }    \r\n   static String doesThisHaveAPeelOrIsThisRoot(Tomato tomatoIn){ \r\n        if (tomatoIn.hasAPeel() && tomatoIn.isARoot()) \r\n           return \"This both has a peel and is a root\"; \r\n        else if (tomatoIn.hasAPeel() || tomatoIn.isARoot()) \r\n           return \"This either has a peel or is a root\"; \r\n        else    \r\n           return \"This neither has a peel or is a root\";         \r\n   } \r\n} \r\n \r\nclass Tomato implements Fruit, Vegetable {  \r\n \r\n   boolean peel = false; \r\n   boolean root = false; \r\n \r\n   public Tomato() {}    \r\n \r\n   public boolean hasAPeel(){  \r\n      return peel;  \r\n   }     \r\n   public boolean isARoot() {  \r\n      return root;  \r\n   }       \r\n \r\n \r\n   public static void main(String[] args) { \r\n \r\n      Tomato tomato = new Tomato(); \r\n \r\n      System.out.println(FandVUtility.isThisARoot(tomato)); \r\n       \r\n      System.out.println(FandVUtility.doesThisHaveAPeel(tomato)); \r\n       \r\n      System.out.println(FandVUtility.doesThisHaveAPeelOrIsThisRoot(tomato)); \r\n \r\n      Fruit tomatoFruit = new Tomato();    \r\n \r\n      System.out.println(FandVUtility.doesThisHaveAPeel(tomatoFruit)); \r\n \r\n   } \r\n}\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=IS17_interface3_8"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface3_8"
     }
   ],
   "rights": {

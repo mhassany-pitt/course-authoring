@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T13:19:36.905Z",
+  "updated_at": "2026-01-17T20:47:50.963Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -43,26 +43,20 @@
     "knowledge_components": {
       "expert": {
         "concepts": [
-          "GROUP-BY and HAVING",
-          "SingleAttributeSelection",
-          "CountingNoInColumn",
-          "GreaterThanComparison",
-          "GroupBy",
-          "Having",
-          "SingleTableSelection",
-          "SingleAttributeGrouping",
-          "SelectClause",
-          "CountFunction",
-          "HavingClause",
-          "SelectStatement",
-          "FromClause",
           "SumFunction",
-          "CountFunction",
+          "Having",
+          "GROUP-BY and HAVING",
+          "SelectStatement",
+          "GroupBy",
+          "CountingNoInColumn",
+          "SingleAttributeSelection",
+          "HavingClause",
+          "SingleTableSelection",
+          "FromClause",
+          "SelectClause",
           "GreaterThanComparison",
           "SingleAttributeGrouping",
-          "HavingClause",
-          "SingleAttributeSelection",
-          "SingleTableSelection"
+          "CountFunction"
         ],
         "note": "",
         "created_at": null,

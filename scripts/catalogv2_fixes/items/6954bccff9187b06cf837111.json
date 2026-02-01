@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-02-16T03:28:37.000Z",
-  "updated_at": "2026-01-17T05:28:55.559Z",
+  "updated_at": "2026-01-17T20:45:51.490Z",
   "tags": [],
   "identity": {
     "id": "nested_loop_star_pattern",
@@ -40,20 +40,10 @@
     "knowledge_components": {
       "webex_parser": {
         "concepts": [
-          "java.lang.System.out.print",
           "java.lang.System.out.println",
-          "ModulusExpression",
           "ForStatement",
-          "NestedForLoops",
+          "ModulusExpression",
           "java.lang.System.out.print",
-          "java.lang.System.out.println",
-          "ModulusExpression",
-          "ForStatement",
-          "NestedForLoops",
-          "java.lang.System.out.print",
-          "java.lang.System.out.println",
-          "ModulusExpression",
-          "ForStatement",
           "NestedForLoops"
         ],
         "note": "",

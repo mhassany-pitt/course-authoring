@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T13:19:31.803Z",
+  "updated_at": "2026-01-17T20:47:47.651Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -43,24 +43,21 @@
     "knowledge_components": {
       "expert": {
         "concepts": [
-          "Instance",
-          "AttributeName",
-          "MultiplicationExpression",
-          "NumericConstant",
-          "SingleAttributeSelection",
-          "SingleTableSelection",
-          "Arithmetic Expressions",
-          "AttributeColumn",
           "DomainType",
-          "TupleRow",
+          "NumericConstant",
+          "AttributeName",
+          "SelectStatement",
+          "Arithmetic Expressions",
           "SingleAttributeSelection",
+          "NumericType",
           "SingleTableSelection",
+          "FromClause",
+          "TupleRow",
           "Multiplication",
           "Tuple",
-          "NumericType",
-          "SelectStatement",
-          "FromClause",
-          "MultiplicationExpression"
+          "Instance",
+          "MultiplicationExpression",
+          "AttributeColumn"
         ],
         "note": "",
         "created_at": null,

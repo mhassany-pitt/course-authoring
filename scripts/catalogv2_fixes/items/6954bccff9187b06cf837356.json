@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-11-21T23:48:09.000Z",
-  "updated_at": "2026-01-17T12:56:16.167Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:46.775Z",
+  "tags": [],
   "identity": {
     "id": "variable_print_annoexp",
     "title": "VariablePrint",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=variable_print_annoexp&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/variable_print_annoexp"
   },
   "attribution": {
     "created_at": "2016-11-21T23:48:09.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "public class VariablePrint\n{\n\u00a0\u00a0\u00a0public static void main(String[] args)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int width = 10;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(width);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0width = 20;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(width);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int height = 20;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0width = height + 10;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(width);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0width = width + 10;\n\n}\n}"
+    "source_code": "public class VariablePrint\n\n{\n\n   public static void main(String[] args)\n\n   {\n\n      int width = 10; \n\n      System.out.print(width);\n\n      width = 20;\n\n      System.out.println(width);\n\n\n      int height = 20;\n\n      width = height + 10; \n\n      System.out.println(width);\n\n      width = width + 10; \n\n  \n\n}\n\n}\n"
   },
   "classification": {
     "topics": [],
@@ -77,7 +75,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=variable_print_annoexp&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/variable_print_annoexp"
     }
   ],
   "rights": {

@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-14T22:30:27.000Z",
-  "updated_at": "2026-01-17T13:21:04.843Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:46:22.862Z",
+  "tags": [],
   "identity": {
     "id": "linklist_search_ch",
     "title": "Search in the linked list. Challenge",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "When using a LinkedList, it is possible that you may want to search through the list to see if a specific value is in it. To do so, each node must be checked individually. Construct a search function within the LinkedList class that traverses through all nodes in the list and keeps track of all instances of the target value (if any) are in the LinkedList, returning the final count at the end of the search.",
+    "source_code": "# Define a Node class\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n# Define a LinkedList class\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n    def push(self, new):\n        new_node = Node(new)\n        new_node.next = self.head\n        self.head = new_node\n    # Define the search function that count how many times the target appears.\n    def search(self, target):\n        current = self.head\n        count = 0\n        while current is not None:\n            if current.data == target:\n                count += 1\n            current = current.next\n        return count\nlinked_list = LinkedList()\nlinked_list.push(1)\nlinked_list.push(3)\nlinked_list.push(3)\nlinked_list.push(7)\nlinked_list.push(9)\nlinked_list.push(11)\nlinked_list.push(11)\ntarget = 11\nprint(\"There are\", linked_list.search(target), \"instances of\", target, \"in the list\")"
   },
   "classification": {
     "topics": [],

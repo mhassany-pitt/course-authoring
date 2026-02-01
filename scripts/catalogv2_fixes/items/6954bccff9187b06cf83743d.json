@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:24.926Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:01.160Z",
+  "tags": [],
   "identity": {
     "id": "radiobutton_test",
     "title": "ISD::RadioButtonTest.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=radiobutton_test"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/radiobutton_test"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 12.12: RadioButtonTest.java\n\n// Creating radio buttons using ButtonGroup and JRadioButton.\n\nimport java.awt.*;\n\nimport java.awt.event.*;\n\nimport javax.swing.*;\n\n\n\npublic class RadioButtonTest extends JFrame {\n   private JTextField t;\n   private Font plainFont, boldFont,\n                italicFont, boldItalicFont;\n   private JRadioButton plain, bold, italic, boldItalic;\n   private ButtonGroup radioGroup;\n\n\n   public RadioButtonTest()\n   {\n      super( \"RadioButton Test\" );\n\n\n      Container c = getContentPane();\n      c.setLayout( new FlowLayout() );\n\n\n      t = new JTextField( \"Watch the font style change\",  25);\n      c.add( t );\n\n\n      // Create radio buttons\n      plain = new JRadioButton( \"Plain\", true );\n      c.add( plain );\n      bold = new JRadioButton( \"Bold\", false);\n      c.add( bold );\n      italic = new JRadioButton( \"Italic\", false );\n      c.add( italic );\n      boldItalic = new JRadioButton( \"Bold/Italic\", false );\n      c.add( boldItalic );\n\n\n      // register events\n      RadioButtonHandler handler = new RadioButtonHandler();\n      plain.addItemListener( handler );\n      bold.addItemListener( handler );\n      italic.addItemListener( handler );\n      boldItalic.addItemListener( handler );\n\n\n      // create logical relationship between JRadioButtons\n      radioGroup = new ButtonGroup();\n      radioGroup.add( plain );\n      radioGroup.add( bold );\n      radioGroup.add( italic );\n      radioGroup.add( boldItalic );\n\n\n      plainFont = new Font( \"TimesRoman\", Font.PLAIN, 14 );\n      boldFont = new Font( \"TimesRoman\", Font.BOLD, 14 );\n      italicFont = new Font( \"TimesRoman\", Font.ITALIC, 14 );\n      boldItalicFont =\n         new Font( \"TimesRoman\", Font.BOLD + Font.ITALIC, 14 );\n      t.setFont( plainFont );\n\n\n      setSize( 300, 100 );\n      show();\n   }\n\n\n   public static void main( String args[] )\n   {\n      RadioButtonTest app = new RadioButtonTest();\n\n\n      app.addWindowListener(\n         new WindowAdapter() {\n            public void windowClosing( WindowEvent e )\n            {\n               System.exit( 0 );\n            }\n         }\n      );\n   }\n\n\n   private class RadioButtonHandler implements ItemListener {\n      public void itemStateChanged( ItemEvent e )\n      {\n         if ( e.getSource() == plain )\n            t.setFont( plainFont );\n         else if ( e.getSource() == bold )\n            t.setFont( boldFont );\n         else if ( e.getSource() == italic )\n            t.setFont( italicFont );\n         else if ( e.getSource() == boldItalic )\n            t.setFont( boldItalicFont );\n\n\n         t.repaint();\n      }\n   }\n\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=radiobutton_test"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/radiobutton_test"
     }
   ],
   "rights": {

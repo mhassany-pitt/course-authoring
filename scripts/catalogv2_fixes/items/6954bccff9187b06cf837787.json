@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:51.684Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:47.273Z",
+  "tags": [],
   "identity": {
     "id": "string_lib_func1",
     "title": "string_lib_func1",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=string_lib_func1&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/string_lib_func1"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include  <stdio.h>\n#include <string.h> /* required for the string function library */\n\nint main()\n{\n\u00a0\u00a0#define MAXELS 50\n\u00a0\u00a0char string1[MAXELS] = \"Hello\";\n\u00a0\u00a0char string2[MAXELS] = \"Hello there\";\n\u00a0\u00a0int n;\n\n\u00a0\u00a0n = strcmp(string1, string2);\n\n\u00a0\u00a0if (n < 0)\n\u00a0\u00a0\u00a0\u00a0printf(\"%s is less than %s\\n\\n\", string1, string2);\n\u00a0\u00a0else if (n == 0)\n\u00a0\u00a0\u00a0\u00a0printf(\"%s is equal to %s\\n\\n\", string1, string2);\n\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0printf(\"%s is greater than %s\\n\\n\", string1, string2);\n\n\u00a0\u00a0printf(\"The length of string1 is %d characters\\n\", strlen(string1));\n\u00a0\u00a0printf(\"The length of string2 is %d characters\\n\\n\", strlen(string2));\n\n\u00a0\u00a0strcat(string1,\" there World!\");\n\n\u00a0\u00a0printf(\"After concatenation, string1 contains the string value\\n\");\n\u00a0\u00a0printf(\"%s\\n\", string1);\n\u00a0\u00a0printf(\"The length of this string is %d characters\\n\\n\", strlen(string1));\n\n\u00a0\u00a0printf(\"Type in a sequence of characters for string2:\\n\");\n\u00a0\u00a0gets(string2);\n\n\u00a0\u00a0strcpy(string1, string2);\n\n\u00a0\u00a0printf(\"After copying string2 to string1\");\n\u00a0\u00a0printf(\" the string value in string1 is:\\n\");\n\u00a0\u00a0printf(\"%s\\n\", string1);\n\u00a0\u00a0printf(\"The length of this string is %d characters\n\", strlen(string1));\n\u00a0\u00a0return 0;\n}\n}"
+    "source_code": "#include  <stdio.h>\r\n#include <string.h> /* required for the string function library */\r\n\r\nint main()\r\n{\r\n  #define MAXELS 50\r\n  char string1[MAXELS] = \"Hello\";\r\n  char string2[MAXELS] = \"Hello there\";\r\n  int n;\r\n\r\n  n = strcmp(string1, string2);\r\n\r\n  if (n < 0)\r\n    printf(\"%s is less than %s\\n\\n\", string1, string2);\r\n  else if (n == 0)\r\n    printf(\"%s is equal to %s\\n\\n\", string1, string2);\r\n  else\r\n    printf(\"%s is greater than %s\\n\\n\", string1, string2);\r\n\r\n  printf(\"The length of string1 is %d characters\\n\", strlen(string1));\r\n  printf(\"The length of string2 is %d characters\\n\\n\", strlen(string2));\r\n\r\n  strcat(string1,\" there World!\");\r\n\r\n  printf(\"After concatenation, string1 contains the string value\\n\");\r\n  printf(\"%s\\n\", string1);\r\n  printf(\"The length of this string is %d characters\\n\\n\", strlen(string1));\r\n\r\n  printf(\"Type in a sequence of characters for string2:\\n\");\r\n  gets(string2);\r\n\r\n  strcpy(string1, string2);\r\n\r\n  printf(\"After copying string2 to string1\");\r\n  printf(\" the string value in string1 is:\\n\");\r\n  printf(\"%s\\n\", string1);\r\n  printf(\"The length of this string is %d characters\n\n\", strlen(string1));\r\n  return 0;\r\n}\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=string_lib_func1&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/string_lib_func1"
     }
   ],
   "rights": {

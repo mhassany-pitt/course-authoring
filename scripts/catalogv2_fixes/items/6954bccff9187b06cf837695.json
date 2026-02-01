@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:15.454Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:47:17.271Z",
+  "tags": [],
   "identity": {
     "id": "TableDrop1",
     "title": "Table Drop",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=TableDrop1&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/TableDrop1"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "DROP TABLE Students;"
+    "prompt": "Table Drop",
+    "source_code": "DROP TABLE Students;\r\n"
   },
   "classification": {
     "topics": [],
@@ -52,10 +50,9 @@
       },
       "sql_ontology": {
         "concepts": [
+          "DeleteTableStatement",
           "DeleteTableClause",
-          "DeleteTableClause",
-          "SimpleSubquery",
-          "DeleteTableStatement"
+          "SimpleSubquery"
         ],
         "note": "",
         "created_at": null,
@@ -78,7 +75,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=TableDrop1&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/TableDrop1"
     }
   ],
   "rights": {

@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-13T00:39:17.000Z",
-  "updated_at": "2026-01-17T13:21:06.371Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:46:23.684Z",
+  "tags": [],
   "identity": {
     "id": "multiple_parameters_ch",
     "title": "Multiple Parameters Challenge",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct a program that calculates the pay and current savings.",
+    "source_code": "# Step 1 : Define the calculatePay function that returns the final pay.\ndef calculate_pay(work_hours):\n    # Step 1.1: establish base pay rate\n    base_rate = 10.0\n    # Step 1.2 determine total pay based on hours worked (including possible overtime)\n    if work_hours <= 40:\n        pay = work_hours * base_rate\n    else:\n        overtime_hours = work_hours - 40\n        normal_pay = 40 * base_rate\n        overtime_pay = overtime_hours * (base_rate * 1.5)\n        pay = normal_pay + overtime_pay\n    return pay\n# Step 2: Define the budget function that returns the current saving\ndef budget(rent, utilities, food, work_hours, current_savings):\n    # Step 2.1:#add up all expenses for the month\n    total_expenses = rent + utilities + food\n    # Step 2.2:calculate total paycheck amount based on hours\n    paycheck = calculate_pay(work_hours)\n    # Step 2.3: find the current saving after getting paid\n    current_savings = current_savings + paycheck\n    # Step 2.4 find the current saving left after expenses\n    current_savings = current_savings - total_expenses\n    return current_savings\nprint(\"after payday and expenses, you will have: \", budget(900, 150, 300, 41, 1500))"
   },
   "classification": {
     "topics": [],

@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:47.353Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:44.170Z",
+  "tags": [],
   "identity": {
     "id": "strcmp_strncmp",
     "title": "strcmp_strncmp",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=strcmp_strncmp&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/strcmp_strncmp"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\n#include <string.h>\nint main()\n{\n\u00a0\u00a0\u00a0const char *s1 = \"Happy New Year\";\n\u00a0\u00a0\u00a0const char *s2 = \"Happy New Year\";\n\u00a0\u00a0\u00a0const char *s3 = \"Happy Holidays\";\n\u00a0\u00a0\u00a0\u00a0printf(\"%s%s\\n%s%s\\n%s%s\\n\\n%s%2d\\n%s%2d\\n%s%2d\\n\\n\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"s1 = \", s1, \"s2 = \", s2, \"s3 = \", s3,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"strcmp(s1, s2) = \", strcmp( s1, s2 ),\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"strcmp(s1, s3) = \", strcmp( s1, s3 ),\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"strcmp(s3, s1) = \", strcmp( s3, s1 ) );\n\n\u00a0\u00a0\u00a0printf(\"%s%2d\\n%s%2d\\n%s%2d\\n\",\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"strncmp(s1, s3, 6) = \", strncmp( s1, s3, 6 ),\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"strncmp(s1, s3, 7) = \", strncmp( s1, s3, 7 ),\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"strncmp(s3, s1, 7) = \", strncmp( s3, s1, 7 ) );\n\u00a0\u00a0\u00a0return 0;\n}\n}"
+    "source_code": "#include <stdio.h>\r\n#include <string.h>\r\nint main()\r\n{\r\n   const char *s1 = \"Happy New Year\";\r\n   const char *s2 = \"Happy New Year\";\r\n   const char *s3 = \"Happy Holidays\";\r\n    printf(\"%s%s\\n%s%s\\n%s%s\\n\\n%s%2d\\n%s%2d\\n%s%2d\\n\\n\",\r\n          \"s1 = \", s1, \"s2 = \", s2, \"s3 = \", s3,\r\n          \"strcmp(s1, s2) = \", strcmp( s1, s2 ),\r\n          \"strcmp(s1, s3) = \", strcmp( s1, s3 ),\r\n          \"strcmp(s3, s1) = \", strcmp( s3, s1 ) );\r\n\r\n   printf(\"%s%2d\\n%s%2d\\n%s%2d\\n\",\r\n          \"strncmp(s1, s3, 6) = \", strncmp( s1, s3, 6 ),\r\n          \"strncmp(s1, s3, 7) = \", strncmp( s1, s3, 7 ),\r\n          \"strncmp(s3, s1, 7) = \", strncmp( s3, s1, 7 ) );\r\n   return 0;\r\n}\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=strcmp_strncmp&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/strcmp_strncmp"
     }
   ],
   "rights": {

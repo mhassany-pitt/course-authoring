@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T13:19:31.664Z",
+  "updated_at": "2026-01-17T20:47:47.530Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -44,22 +44,19 @@
       "expert": {
         "concepts": [
           "DistinctClause",
-          "SingleAttributeSelection",
-          "SingleTableSelection",
           "SELECT-FROM",
-          "AttributeColumn",
-          "TupleRow",
+          "AttributeName",
+          "SelectStatement",
           "SingleAttributeSelection",
-          "MultipleAttributeSelection",
           "DuplicateHandling",
           "SingleTableSelection",
-          "Tuple",
-          "Column",
-          "SelectStatement",
           "FromClause",
-          "DistinctClause",
+          "TupleRow",
+          "Tuple",
           "Instance",
-          "AttributeName"
+          "MultipleAttributeSelection",
+          "Column",
+          "AttributeColumn"
         ],
         "note": "",
         "created_at": null,

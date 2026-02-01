@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-06-09T13:04:28.000Z",
-  "updated_at": "2026-01-17T12:55:30.562Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:41.144Z",
+  "tags": [],
   "identity": {
     "id": "csedpad_dowhile_findhighandlowscores",
     "title": "(Do while)  Find high & low scores - CSEdPad",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_dowhile_findhighandlowscores&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_dowhile_findhighandlowscores"
   },
   "attribution": {
     "created_at": "2020-06-09T13:04:28.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "public class FindHighAndLowScores {\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0final int SCORES[] = { 41, 80, 47, 38, 59, 74, 56, 37, 85, 27, 49, 61, 25, 81, 95 };\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int low_score = 100;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int high_score = 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int i = 0;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0do {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (SCORES[i] < low_score) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0low_score = SCORES[i];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (SCORES[i] > high_score) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0high_score = SCORES[i];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0i++;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} while (i < SCORES.length);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Low Score: \" + low_score);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"High Score: \" + high_score);\n\u00a0\u00a0\u00a0\u00a0}\n\n}"
+    "prompt": "Given an collection of test scores with values between 0 and 100, find and display the low and high scores on the test.",
+    "source_code": "public class FindHighAndLowScores {\n\n    public static void main(String[] args) {\n\n        final int SCORES[] = { 41, 80, 47, 38, 59, 74, 56, 37, 85, 27, 49, 61, 25, 81, 95 };\n\n        int low_score = 100;\n        int high_score = 0;\n        int i = 0;\n\n        do {\n            if (SCORES[i] < low_score) {\n                low_score = SCORES[i];\n            }\n            if (SCORES[i] > high_score) {\n                high_score = SCORES[i];\n            }\n            i++;\n\n        } while (i < SCORES.length);\n\n        System.out.println(\"\");\n        System.out.println(\"Low Score: \" + low_score);\n        System.out.println(\"High Score: \" + high_score);\n    }\n\n}"
   },
   "classification": {
     "topics": [],
@@ -125,7 +123,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_dowhile_findhighandlowscores&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_dowhile_findhighandlowscores"
     }
   ],
   "rights": {

@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:33.827Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:33.088Z",
+  "tags": [],
   "identity": {
     "id": "encryption",
     "title": "Encryption Program",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=encryption&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/encryption"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\n#include <stdlib.h>\n#include <time.h>\n//function prototypes\nvoid encrypt(char [], int);\nvoid decrypt(char [], int);\nmain()\n{\nchar myString[21] = {'\\0'};\nint iSelection = 0;\nint iRand;\nsrand(time(NULL));\niRand = 1 + rand() % 4; // random #, 1-4\n\nwhile ( iSelection != 4 ) {\n\u00a0\u00a0\u00a0printf(\"\\n\\n1\\tEncrypt Clear Text\\n\");\n\u00a0\u00a0\u00a0printf(\"2\\tDecrypt Cipher Text\\n\");\n\u00a0\u00a0\u00a0printf(\"3\\tGenerate New Key\\n\");\n\u00a0\u00a0\u00a0printf(\"4\\tQuit\\n\");\n\u00a0\u00a0\u00a0printf(\"\\nSelect a Cryptography Option: \");\n\u00a0\u00a0\u00a0scanf(\"%d\", &iSelection);\n\n\u00a0\u00a0\u00a0switch (iSelection) {\n\u00a0\u00a0\u00a0\u00a0case 1:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nEnter clear text: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%s\", myString);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0encrypt(myString, iRand);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0\u00a0case 2:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nEnter cipher text: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%s\", myString);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0decrypt(myString, iRand);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0\u00a0case 3:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0srand(time(NULL));\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0iRand = 1+ rand() % 4; // random #, 1-4\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nNew Key Generated\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0}  //end switch\n\n}  //end loop\n\n}  //end main\n\nvoid encrypt(char sMessage[], int random)\n{\n\u00a0\u00a0int x = 0;\n\n\u00a0\u00a0while ( sMessage[x] != '\\0' ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0sMessage[x] += random;\n\u00a0\u00a0\u00a0\u00a0\u00a0x++;\n} //end loop\n\n\u00a0\u00a0x = 0;\n\u00a0\u00a0printf(\"\\nEncrypted Message is: \");\n\u00a0\u00a0while ( sMessage[x] != '\\0' ) {\n\u00a0\u00a0\u00a0\u00a0printf(\"%c\", sMessage[x]);\n\u00a0\u00a0\u00a0\u00a0x++;\n} //end loop\n}  //end encrypt function\n\nvoid decrypt(char sMessage[], int random)\n{\n\u00a0\u00a0int x = 0;\n\u00a0\u00a0x = 0;\n\u00a0while ( sMessage[x] != '\\0' ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0sMessage[x] = sMessage[x] - random;\n\u00a0\u00a0\u00a0\u00a0\u00a0x++;\n} //end loop\n\nx = 0;\nprintf(\"\\nDecrypted Message is: \");\nwhile ( sMessage[x] != '\\0' ) {\n\u00a0\u00a0printf(\"%c\", sMessage[x]);\n\u00a0\u00a0x++;\n} //end loop\n\n}  //end decrypt function"
+    "source_code": "#include <stdio.h>\r\n#include <stdlib.h>\r\n#include <time.h>\r\n//function prototypes\r\nvoid encrypt(char [], int);\r\nvoid decrypt(char [], int);\r\nmain()\r\n{\r\nchar myString[21] = {'\\0'};\r\nint iSelection = 0;\r\nint iRand;\r\nsrand(time(NULL));\r\niRand = 1 + rand() % 4; // random #, 1-4\r\n\r\nwhile ( iSelection != 4 ) {\r\n   printf(\"\\n\\n1\\tEncrypt Clear Text\\n\");\r\n   printf(\"2\\tDecrypt Cipher Text\\n\");\r\n   printf(\"3\\tGenerate New Key\\n\");\r\n   printf(\"4\\tQuit\\n\");\r\n   printf(\"\\nSelect a Cryptography Option: \");\r\n   scanf(\"%d\", &iSelection);\r\n\r\n   switch (iSelection) {\r\n    case 1:\r\n      printf(\"\\nEnter clear text: \");\r\n      scanf(\"%s\", myString);\r\n      encrypt(myString, iRand);\r\n      break;\r\n    case 2:\r\n      printf(\"\\nEnter cipher text: \");\r\n      scanf(\"%s\", myString);\r\n      decrypt(myString, iRand);\r\n      break;\r\n    case 3:\r\n      srand(time(NULL));\r\n      iRand = 1+ rand() % 4; // random #, 1-4\r\n      printf(\"\\nNew Key Generated\n\");\r\n      break;\r\n   }  //end switch\r\n\r\n}  //end loop\r\n\r\n}  //end main\r\n\r\nvoid encrypt(char sMessage[], int random)\r\n{\r\n  int x = 0;\r\n\r\n  while ( sMessage[x] != '\\0' ) {   \r\n     sMessage[x] += random; \r\n     x++;\r\n} //end loop\r\n\r\n  x = 0;\r\n  printf(\"\\nEncrypted Message is: \");\r\n  while ( sMessage[x] != '\\0' ) {\r\n    printf(\"%c\", sMessage[x]);\r\n    x++;\r\n} //end loop\r\n}  //end encrypt function\r\n\r\nvoid decrypt(char sMessage[], int random)\r\n{\r\n  int x = 0;\r\n  x = 0;\r\n while ( sMessage[x] != '\\0' ) {\r\n     sMessage[x] = sMessage[x] - random;\r\n     x++;\r\n} //end loop\r\n\r\nx = 0;\r\nprintf(\"\\nDecrypted Message is: \");\r\nwhile ( sMessage[x] != '\\0' ) {\r\n  printf(\"%c\", sMessage[x]);\r\n  x++;\r\n} //end loop\r\n\r\n}  //end decrypt function"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=encryption&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/encryption"
     }
   ],
   "rights": {

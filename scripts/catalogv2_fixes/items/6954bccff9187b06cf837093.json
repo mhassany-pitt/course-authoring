@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-14T22:01:28.000Z",
-  "updated_at": "2026-01-17T13:21:04.975Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:46:22.921Z",
+  "tags": [],
   "identity": {
     "id": "binary_search_ch",
     "title": "Binary search Challenge",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Binary Search operates by dividing an array in half, and then determining whether or not the target value would be in the larger or smaller half. Then, this process repeats by dividing whichever half must contain the target in half again, over and over until the target is found.\nConstruct a function that performs binary search on a given array and returns the index of the target value if it is found, and -1 if it is not.",
+    "source_code": "# Define a binary search function that also detects if the key in the given list.\ndef binary_search(data, key):\n    found = False\n    low = 0\n    high = len(data)-1\n    # Using while to conduct a search iteration\n    while (not found and low <= high):\n        guess = (high + low) // 2\n        if (key == data[guess]):\n            found = True\n        else:\n            if (key<data[guess]):\n                high = guess-1\n            else:\n                low = guess+1\n    # After one of the while conditions is not satisfied anymore, we need to check if the key is found\n    if not found:\n        guess = -1\n    return guess\ndata = [1, 5, 7, 9, 11, 13]\nprint(binary_search(data, 14))"
   },
   "classification": {
     "topics": [],

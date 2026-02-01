@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-06-09T13:13:15.000Z",
-  "updated_at": "2026-01-17T12:55:30.427Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:41.024Z",
+  "tags": [],
   "identity": {
     "id": "csedpad_methods_addingnumbers",
     "title": "(Methods) Adding numbers - CSEdPad",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_methods_addingnumbers&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_methods_addingnumbers"
   },
   "attribution": {
     "created_at": "2020-06-09T13:13:15.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "public class AddingNumbers {\n\n\u00a0\u00a0\u00a0\u00a0public int sum(int value1, int value2) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return value1 + value2; // returns the addition of the two given integer values.\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0AddingNumbers addy = new AddingNumbers();\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int result = addy.sum(4, 9);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(result);\n\u00a0\u00a0\u00a0\u00a0}\n\n}"
+    "prompt": "The program will create a method that will add two given exam numbers of a student. The program will declare a method that will add those numbers, create object of the class, use that object to call the method and finally show the added exam numbers by p",
+    "source_code": "public class AddingNumbers {\n\n    public int sum(int value1, int value2) {\n        return value1 + value2; // returns the addition of the two given integer values.\n    }\n\n    public static void main(String[] args) {\n\n        AddingNumbers addy = new AddingNumbers();\n        \n        int result = addy.sum(4, 9); \n        \n        System.out.println(result); \n    }\n\n}"
   },
   "classification": {
     "topics": [],
@@ -103,7 +101,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_methods_addingnumbers&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_methods_addingnumbers"
     }
   ],
   "rights": {

@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T13:19:33.054Z",
+  "updated_at": "2026-01-17T20:47:48.457Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -43,26 +43,23 @@
     "knowledge_components": {
       "expert": {
         "concepts": [
-          "LessThanComparison",
-          "NumericConstant",
-          "SingleAttributeSelection",
-          "SingleTableSelection",
-          "WhereClause",
-          "SELECT-FROM-WHERE",
           "DomainType",
-          "SingleAttributeSelection",
-          "SingleTableSelection",
-          "NotEqualComparison",
-          "NotLogicalOperator",
           "EqualComparison",
-          "WhereClause",
+          "NumericConstant",
+          "AttributeName",
+          "NotEqualComparison",
           "StringConstant",
-          "Tuple",
           "SelectStatement",
-          "FromClause",
-          "SingleQuotationCharacter",
+          "SingleAttributeSelection",
+          "LessThanComparison",
           "Instance",
-          "AttributeName"
+          "SingleTableSelection",
+          "SELECT-FROM-WHERE",
+          "FromClause",
+          "Tuple",
+          "SingleQuotationCharacter",
+          "WhereClause",
+          "NotLogicalOperator"
         ],
         "note": "",
         "created_at": null,

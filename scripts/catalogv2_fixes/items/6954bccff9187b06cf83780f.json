@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T13:19:35.535Z",
+  "updated_at": "2026-01-17T20:47:49.955Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -43,25 +43,19 @@
     "knowledge_components": {
       "expert": {
         "concepts": [
+          "MultipleTableSelection",
+          "EqualComparison",
           "Set Operations",
-          "MultipleAttributeSelection",
-          "EqualComparison",
-          "MultipleTableSelection",
-          "MultipleAttributeSelection",
-          "EqualComparison",
-          "MultipleTableSelection",
-          "UnionOperation",
-          "SingleTableSelection",
-          "UnionOperation",
-          "StringConstant",
-          "UnionOperation",
-          "SelectClause",
+          "AttributeName",
           "StringConstant",
           "Column",
+          "UnionOperation",
           "SelectStatement",
+          "SingleTableSelection",
           "FromClause",
           "SingleQuotationCharacter",
-          "AttributeName"
+          "MultipleAttributeSelection",
+          "SelectClause"
         ],
         "note": "",
         "created_at": null,

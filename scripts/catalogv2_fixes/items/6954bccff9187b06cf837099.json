@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-14T02:07:03.000Z",
-  "updated_at": "2026-01-17T13:21:05.343Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:46:23.114Z",
+  "tags": [],
   "identity": {
     "id": "queue_ch",
     "title": "Solving Josephus Problem Challenge",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct a program by using Queue structure to solve a Josephus problem. Josephus problem is a counting-out game. N people are in a circle, labeled as 1, 2, 3, \u2026 ,n. Given a skip number k, counting from the person labeled as 1, in every round, after k number of people are skipped, the next person will be counted out of the circle. Repeat the process with the remaining people until only one person remains. Then free the last one person. The program should return the last freed  person.",
+    "source_code": "# Define a Queue Class\nclass Queue:\n    # Initializing the queue\n    def __init__(self):\n        self.items = []\n    # Adding elements to the queue\n    def enqueue(self,item):\n        self.items.insert(0,item)\n    # Removing elements from the queue\n    def dequeue(self):\n        return self.items.pop()\n    # Checking the size of the queue\n    def size(self):\n        return  len(self.items)\n# Define a function to solve Josephus problem\ndef circle(k,name_list):\n    q = Queue()\n    for i in range(len(name_list)):\n    # We are trying to store the elements from the name_list into the queue structure\n        q.enqueue(name_list[i])\n    i = 0\n    while q.size() != 1:\n    # We are trying to count each element till the kth element\n        temp = q.dequeue()\n        if i != k:\n        # We need to restore the non-kth elements so the Kth element is out of the queue.\n            q.enqueue(temp)\n        else:\n            i = 0\n        i += 1\n    return q.dequeue()\nname_list = [\"Lily\",\"David\",\"Susan\",\"Julia\",\"David\",\"Brad\"]\nprint(circle(7,name_list))"
   },
   "classification": {
     "topics": [],

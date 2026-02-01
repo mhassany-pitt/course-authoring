@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:27.095Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:28.218Z",
+  "tags": [],
   "identity": {
     "id": "SwitchStatement",
     "title": "SwitchStatement",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=SwitchStatement&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/SwitchStatement"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\nint main()\n{\n\u00a0\u00a0int opselect;\n\u00a0\u00a0float fnum, snum;\n\n\u00a0\u00a0printf(\"Please type in two numbers: \");\n\u00a0\u00a0scanf(\"%f %f\", &fnum, &snum);\n\u00a0\u00a0printf(\"Enter a select code:\");\n\u00a0\u00a0printf(\"\\n1 for addition\");\n\u00a0\u00a0printf(\"\\n2 for multiplication\");\n\u00a0\u00a0printf(\"\\n3 for division : \");\n\u00a0\u00a0scanf(\"%d\", &opselect);\n\n\u00a0\u00a0switch (opselect)\n\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0case 1:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"The sum of the numbers entered is %6.3f\\n\", fnum+snum);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0\u00a0case 2:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"The product of the numbers entered is %6.3f\\n\", fnum*snum);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0\u00a0case 3:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (snum != 0.0)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"The first number divided by the second is %6.3f\\n\",fnum/snum);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"Division by zero is not allowed\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break; /* this break is optional */\n\u00a0\u00a0} /* end of switch statement */\n\n\u00a0\u00a0return 0;\n} /* end of main() */"
+    "source_code": "#include <stdio.h>\r\n\r\n\nint main()\r\n\r\n\n{\r\n\r\n\n  int opselect;\r\n\r\n\n  float fnum, snum;\r\n\r\n\n\r\n\n  printf(\"Please type in two numbers: \");\r\n\r\n\n  scanf(\"%f %f\", &fnum, &snum);\r\n\r\n\n  printf(\"Enter a select code:\");\r\n\r\n\n  printf(\"\\n1 for addition\");\r\n\n  printf(\"\\n2 for multiplication\");\r\n\n  printf(\"\\n3 for division : \");\r\n\n  scanf(\"%d\", &opselect);\r\n\r\n\n\r\n\n  switch (opselect)\r\n\r\n\n  {\r\n\r\n\n    case 1:\r\n\r\n\n      printf(\"The sum of the numbers entered is %6.3f\\n\", fnum+snum);\r\n\r\n\n      break;\r\n\r\n\n    case 2:\r\n\r\n\n      printf(\"The product of the numbers entered is %6.3f\\n\", fnum*snum);\r\n\r\n\n      break;\r\n\r\n\n    case 3:\r\n\r\n\n      if (snum != 0.0)\r\n\r\n\n        printf(\"The first number divided by the second is %6.3f\\n\",fnum/snum);\r\n\r\n\n      else\r\n\r\n\n        printf(\"Division by zero is not allowed\\n\");\r\n\r\n\n      break; /* this break is optional */\r\n\r\n\n  } /* end of switch statement */\r\n\r\n\n\r\n\n  return 0;\r\n\r\n\n} /* end of main() */\r\n"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=SwitchStatement&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/SwitchStatement"
     }
   ],
   "rights": {

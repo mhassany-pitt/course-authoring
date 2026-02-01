@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-03T08:00:00.000Z",
-  "updated_at": "2026-01-17T05:28:03.938Z",
+  "updated_at": "2026-01-17T20:45:26.486Z",
   "tags": [],
   "identity": {
     "id": "py_is_diagonal_matrix_es",
@@ -40,15 +40,14 @@
     "knowledge_components": {
       "alice_edu_py_ontology jordan": {
         "concepts": [
-          "FindingLength",
-          "Indexing2DArray",
-          "ComparisonExpression",
-          "NestedForLoopIteration",
           "IfCheckingInForLoop",
           "ComparisonExpression",
-          "BooleanLiteral",
           "CheckingForItem",
-          "IntegerLiteral"
+          "NestedForLoopIteration",
+          "IntegerLiteral",
+          "BooleanLiteral",
+          "FindingLength",
+          "Indexing2DArray"
         ],
         "note": "",
         "created_at": null,

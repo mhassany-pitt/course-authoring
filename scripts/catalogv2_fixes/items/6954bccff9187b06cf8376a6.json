@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:18.422Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:22.067Z",
+  "tags": [],
   "identity": {
     "id": "incdec_oper",
     "title": "IncDec_Oper",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=incdec_oper&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/incdec_oper"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\nint main()\n{\n\u00a0\u00a0\u00a0int num = 25;\n\u00a0\u00a0\u00a0printf( \"%d\\n\",  num );\n\u00a0\u00a0\u00a0printf( \"%d\\n\",  num++ );    /* postincrement */\n\u00a0\u00a0\u00a0printf( \"%d\\n\\n\",num );\n\n\u00a0\u00a0\u00a0num = 25;\n\u00a0\u00a0\u00a0printf( \"%d\\n\", num );\n\u00a0\u00a0\u00a0printf( \"%d\\n\", ++num );    /* preincrement */\n\u00a0\u00a0\u00a0printf( \"%d\\n\", num );\n\n\u00a0\u00a0\u00a0return 0;\n}"
+    "source_code": "#include <stdio.h>\r\n\r\n\nint main()\r\n\r\n\n{\r\n\r\n\n   int num = 25;\r\n\r\n\n   printf( \"%d\\n\",  num );\r\n\n   printf( \"%d\\n\",  num++ );    /* postincrement */\r\n\n   printf( \"%d\\n\\n\",num );\r\n\n   \r\n\r\n\n   num = 25;\r\n\r\n\n   printf( \"%d\\n\", num );\r\n\n   printf( \"%d\\n\", ++num );    /* preincrement */\r\n\n   printf( \"%d\\n\", num );\r\n\n\r\n\n   return 0;  \r\n\r\n\n} \r\n"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=incdec_oper&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/incdec_oper"
     }
   ],
   "rights": {

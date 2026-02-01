@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T13:19:33.765Z",
+  "updated_at": "2026-01-17T20:47:49.014Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -43,29 +43,22 @@
     "knowledge_components": {
       "expert": {
         "concepts": [
-          "LikePredicate",
-          "MultipleAttributeSelection",
-          "OrLogicalOperator",
-          "PercentCharacter",
-          "SingleTableSelection",
-          "StringConstant",
-          "WhereClause",
-          "Pattern Matching",
           "DomainType",
-          "MultipleAttributeSelection",
-          "SingleTableSelection",
-          "OrLogicOperation",
           "StringPatternMatching",
-          "SubstringMatching",
-          "OrLogicalOperator",
-          "WhereClause",
+          "AttributeName",
           "PercentCharacter",
-          "StringConstant",
           "LikePredicate",
+          "StringConstant",
+          "OrLogicalOperator",
+          "SubstringMatching",
           "SelectStatement",
+          "SingleTableSelection",
           "FromClause",
+          "OrLogicOperation",
           "SingleQuotationCharacter",
-          "AttributeName"
+          "MultipleAttributeSelection",
+          "WhereClause",
+          "Pattern Matching"
         ],
         "note": "",
         "created_at": null,

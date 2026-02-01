@@ -1,9 +1,9 @@
 {
   "id": "6954bccff9187b06cf8373a5",
   "user_email": "moh70@pitt.edu",
-  "status": "public",
+  "status": "broken:pending-fix",
   "listed_at": "2016-11-17T19:00:00.000Z",
-  "updated_at": "2026-01-17T13:19:05.035Z",
+  "updated_at": "2026-01-17T20:51:19.973Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"

@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T13:19:09.662Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:49.818Z",
+  "tags": [],
   "identity": {
     "id": "arraylist1",
     "title": "DEPRECATED_Create ArrayList",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=arraylist1"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/arraylist1"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "    ArrayList<Integer> intlist = new ArrayList<Integer>();    \r\n\r\n\n\r\n\n    ArrayList<Number> numlist = new ArrayList<Number>();    \r\n\r\n\n    ArrayList AL = new ArrayList();"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=arraylist1"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/arraylist1"
     }
   ],
   "rights": {

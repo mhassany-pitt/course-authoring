@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:57:58.396Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:19.681Z",
+  "tags": [],
   "identity": {
     "id": "rand_access_file",
     "title": "rand_access_file",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=rand_access_file&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/rand_access_file"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/* Creating a random-access file sequentially */\n#include <stdio.h>\n\n/* clientData structure definition */\nstruct clientData {\n\u00a0\u00a0\u00a0int acctNum;          \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* account number */\n\u00a0\u00a0\u00a0char lastName[ 15 ];  \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* account last name */\n\u00a0\u00a0\u00a0char firstName[ 10 ]; \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* account first name */\n\u00a0\u00a0\u00a0double balance;       \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* account balance */\n}; /* end structure clientData */\n\nint main( void )\n{\n\u00a0\u00a0\u00a0int i;\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 /* counter used to count from 1-100 */\n\n\u00a0\u00a0\u00a0/* create clientData with default information */\n\n\u00a0\u00a0\u00a0struct clientData blankClient = { 0, \"\", \"\", 0.0 };\n\n\u00a0\u00a0\u00a0FILE *cfPtr; /* credit.dat file pointer */\n\n\u00a0\u00a0\u00a0/* fopen opens the file; exits if file cannot be opened */\n\u00a0\u00a0\u00a0if ( ( cfPtr = fopen( \"credit.dat\", \"wb\" ) ) == NULL ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"File could not be opened.\\n\" );\n\u00a0\u00a0\u00a0} /* end if */\n\u00a0\u00a0\u00a0else {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* output 100 blank records to file */\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( i = 1; i <= 100; i++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fwrite( &blankClient, sizeof( struct clientData ), 1, cfPtr );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} /* end for */\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0fclose ( cfPtr );\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 /* fclose closes the file */\n\u00a0\u00a0\u00a0} /* end else */\n\n\u00a0\u00a0\u00a0return 0;\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 /* indicates successful termination */\n} /* end main */\n} /* end main */"
+    "source_code": "/* Creating a random-access file sequentially */\r\n#include <stdio.h>\r\n\r\n/* clientData structure definition */\r\nstruct clientData { \r\n   int acctNum;          \t\t\t/* account number */\r\n   char lastName[ 15 ];  \t\t/* account last name */\r\n   char firstName[ 10 ]; \t\t/* account first name */\r\n   double balance;       \t\t\t/* account balance */\r\n}; /* end structure clientData */\r\n\r\nint main( void )\r\n{ \r\n   int i;\t\t\t\t\t /* counter used to count from 1-100 */\r\n\r\n   /* create clientData with default information */\r\n\r\n   struct clientData blankClient = { 0, \"\", \"\", 0.0 }; \r\n   \r\n   FILE *cfPtr; /* credit.dat file pointer */\r\n\r\n   /* fopen opens the file; exits if file cannot be opened */\r\n   if ( ( cfPtr = fopen( \"credit.dat\", \"wb\" ) ) == NULL ) {\r\n      printf( \"File could not be opened.\\n\" );\r\n   } /* end if */\r\n   else { \r\n \r\n      /* output 100 blank records to file */\r\n      for ( i = 1; i <= 100; i++ ) {\r\n         fwrite( &blankClient, sizeof( struct clientData ), 1, cfPtr );\r\n      } /* end for */\r\n\r\n      fclose ( cfPtr );\t\t\t /* fclose closes the file */\r\n   } /* end else */\r\n\r\n   return 0;\t\t\t\t /* indicates successful termination */\r\n} /* end main */\r\n} /* end main */\r"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=rand_access_file&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/rand_access_file"
     }
   ],
   "rights": {

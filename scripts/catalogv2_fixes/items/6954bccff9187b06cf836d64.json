@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-09T10:31:38.000Z",
-  "updated_at": "2026-01-17T05:27:05.116Z",
+  "updated_at": "2026-01-17T20:45:04.745Z",
   "tags": [],
   "identity": {
     "id": "Calculando el Porcentaje de Victorias de un Equipo (Caso 2)__6834728366a8e1b992c843d6-6834727f66a8e1b992c843d1-1",
@@ -40,22 +40,14 @@
     "knowledge_components": {
       "alice_edu_py_ontology expert": {
         "concepts": [
-          "SingleWhileLoopIteration",
-          "TransformingToIntType",
           "AssigningValueVariable",
-          "HandlingInput",
+          "TransformingToIntType",
           "BooleanEvaluating",
           "Printing",
-          "Division",
           "CallingLibraryFunction",
-          "SingleWhileLoopIteration",
-          "TransformingToIntType",
-          "AssigningValueVariable",
-          "HandlingInput",
-          "BooleanEvaluating",
-          "Printing",
           "Division",
-          "CallingLibraryFunction"
+          "HandlingInput",
+          "SingleWhileLoopIteration"
         ],
         "note": "",
         "created_at": null,

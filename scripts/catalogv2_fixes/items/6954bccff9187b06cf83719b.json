@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-05-10T12:41:54.000Z",
-  "updated_at": "2026-01-17T12:55:32.968Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:43.032Z",
+  "tags": [],
   "identity": {
     "id": "csedpad_forloops_sumoddnumbers",
     "title": "(For loops) Sum of odd numbers - CSEdPad",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_forloops_sumoddnumbers&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_forloops_sumoddnumbers"
   },
   "attribution": {
     "created_at": "2020-05-10T12:41:54.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "public class SumOddNumbers {\n\u00a0\u00a0\u00a0\u00a0public static void main(String args[]){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int sum=0;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for(int i=1;i<=50;i+=2){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0sum=sum+i;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\" the sum is:  \" + sum);\n\u00a0\u00a0\u00a0\u00a0}\n}"
+    "prompt": "This program sums up the odd number from 1 to 50",
+    "source_code": "public class SumOddNumbers {\n    public static void main(String args[]){\n        int sum=0;\n\n        for(int i=1;i<=50;i+=2){\n            sum=sum+i;\n        }\n\n        System.out.println(\" the sum is:  \" + sum);\n    }\n}"
   },
   "classification": {
     "topics": [],
@@ -107,7 +105,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_forloops_sumoddnumbers&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_forloops_sumoddnumbers"
     }
   ],
   "rights": {

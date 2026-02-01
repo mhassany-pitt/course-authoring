@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:29.295Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:47:24.251Z",
+  "tags": [],
   "identity": {
     "id": "DataSelection27",
     "title": "Checking Null Values",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=DataSelection27&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/DataSelection27"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "SELECT loan_no\n\u00a0\u00a0\u00a0\u00a0\u00a0FROM loan\n\u00a0\u00a0\u00a0\u00a0\u00a0WHERE amount IS NULL;"
+    "prompt": "Checking Null Values",
+    "source_code": "SELECT loan_no \r\n\n     FROM loan\r\n\n     WHERE amount IS NULL;\r\n"
   },
   "classification": {
     "topics": [],
@@ -58,27 +56,15 @@
       },
       "sql_ontology": {
         "concepts": [
-          "FromClause",
-          "SelectClause",
-          "WhereClause",
-          "WhereClause",
           "SelectStatement",
-          "SingleTableSelection",
-          "SelectClause",
-          "IsNullPredicate",
-          "AllAttributeSelection",
-          "SingleAttributeSelection",
-          "FromClause",
-          "SelectClause",
-          "WhereClause",
-          "FromClause",
-          "SelectClause",
           "SetOperation",
-          "WhereClause",
+          "SingleAttributeSelection",
+          "AllAttributeSelection",
+          "SingleTableSelection",
           "FromClause",
-          "SelectClause",
+          "IsNullPredicate",
           "WhereClause",
-          "WhereClause"
+          "SelectClause"
         ],
         "note": "",
         "created_at": null,
@@ -101,7 +87,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=DataSelection27&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/DataSelection27"
     }
   ],
   "rights": {

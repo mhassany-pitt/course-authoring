@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-13T13:40:59.000Z",
-  "updated_at": "2026-01-17T05:27:00.451Z",
+  "updated_at": "2026-01-17T20:45:00.812Z",
   "tags": [],
   "identity": {
     "id": "Concatenando Caracteres de Dos Strings (Caso 2).__684c61c3a0cac29134435e3c-684c61c0a0cac29134435e3a-1",
@@ -40,24 +40,15 @@
     "knowledge_components": {
       "alice_edu_py_ontology expert": {
         "concepts": [
+          "SlicingString",
           "AssigningValueVariable",
+          "Concatenation",
+          "DefiningSimpleFunction",
+          "Printing",
           "CallingLibraryFunction",
           "CreatingString",
-          "Printing",
-          "DefiningSimpleFunction",
-          "Concatenation",
-          "SlicingString",
-          "NestedFunctionCall",
           "CallingSimpleFunction",
-          "AssigningValueVariable",
-          "CallingLibraryFunction",
-          "CreatingString",
-          "Printing",
-          "DefiningSimpleFunction",
-          "Concatenation",
-          "SlicingString",
-          "NestedFunctionCall",
-          "CallingSimpleFunction"
+          "NestedFunctionCall"
         ],
         "note": "",
         "created_at": null,

@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:57:57.394Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:18.861Z",
+  "tags": [],
   "identity": {
     "id": "pointer_seq_file",
     "title": "pointer_seq_file",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pointer_seq_file&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pointer_seq_file"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\n#include <stdlib.h>  \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* needed for exit() */\nint main()\n{\n\u00a0\u00a0int i;\n\u00a0\u00a0FILE *outFile; \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* FILE declaration */\n\u00a0\u00a0double price[] = {39.25,3.22,1.03}; \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* a list of prices */\n\n\u00a0\u00a0char *descrip[] = { \"Batteries\",  \"Bulbs\", \"Fuses\"};\n\n\u00a0\u00a0outFile = fopen(\"prices.dat\",\"w\"); \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* open the file */\n\u00a0\u00a0if (outFile == NULL)\n\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0printf(\"\\nFailed to open the file.\\n\");\n\u00a0\u00a0\u00a0\u00a0exit(1);\n\u00a0\u00a0}\n\u00a0\u00a0for(i = 0; i < 3; i++)\n\u00a0\u00a0\u00a0\u00a0fprintf(outFile,\"%-9s %5.2f\\n\",descrip[i],price[i]); // -9s to left justify (see chapter 9)\n\u00a0\u00a0fclose(outFile);\n\u00a0\u00a0return 0;\n}\n}"
+    "source_code": "#include <stdio.h>\r\n#include <stdlib.h>  \t\t\t\t/* needed for exit() */\r\nint main()\r\n{\r\n  int i;\r\n  FILE *outFile; \t\t\t\t/* FILE declaration */\r\n  double price[] = {39.25,3.22,1.03}; \t\t/* a list of prices */\r\n\r\n  char *descrip[] = { \"Batteries\",  \"Bulbs\", \"Fuses\"};\r\n\r\n  outFile = fopen(\"prices.dat\",\"w\"); \t\t/* open the file */\r\n  if (outFile == NULL)\r\n  {\r\n    printf(\"\\nFailed to open the file.\\n\");\r\n    exit(1);\r\n  }\r\n  for(i = 0; i < 3; i++)\r\n    fprintf(outFile,\"%-9s %5.2f\\n\",descrip[i],price[i]); // -9s to left justify (see chapter 9)\r\n  fclose(outFile);\r\n  return 0;\r\n}\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pointer_seq_file&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pointer_seq_file"
     }
   ],
   "rights": {

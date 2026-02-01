@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:22.855Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:59.279Z",
+  "tags": [],
   "identity": {
     "id": "addition_applet",
     "title": "ISD:: AdditionApplet.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=addition_applet"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/addition_applet"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 3.12: AdditionApplet.java\n// Adding two floating-point numbers\nimport java.awt.Graphics;   // import class Graphics\nimport javax.swing.*;       // import package javax.swing\n\npublic class AdditionApplet extends JApplet {\n   double sum;  // sum of the values entered by the user\n\n   public void init()\n   {\n      String firstNumber,   // first string entered by user\n         secondNumber;  // second string entered by user\n      double number1,       // first number to add\n         number2;       // second number to add\n\n\n      // read in first number from user\n      firstNumber =\r\n\n         JOptionPane.showInputDialog(\r\n\n            \"Enter first floating-point value\" );\n\n\n      // read in second number from user\n      secondNumber =\n         JOptionPane.showInputDialog(\n            \"Enter second floating-point value\" );\n\n\n\n\n      // convert numbers from type String to type double\n      number1 = Double.parseDouble( firstNumber ); \r\n\n      number2 = Double.parseDouble( secondNumber );\n\n\n      // add the numbers\n      sum = number1 + number2;\n   }\n\n\n   public void paint( Graphics g )\n   {\n      // draw the results with g.drawString\n      g.drawRect( 15, 10, 270, 20 );\r\n\n      g.drawString( \"The sum is \" + sum, 25, 25 );\r\n\n   }\n\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=addition_applet"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/addition_applet"
     }
   ],
   "rights": {

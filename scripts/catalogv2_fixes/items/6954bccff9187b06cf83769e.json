@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:17.282Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:21.154Z",
+  "tags": [],
   "identity": {
     "id": "binary_expressions",
     "title": "Binary_Expressions",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=binary_expressions&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/binary_expressions"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/*\u00a0\u00a0\u00a0\u00a0This program demonstrates binary expressions.\n\u00a0\u00a0\u00a0\u00a0   Written by:\n\u00a0\u00a0\u00a0\u00a0   Date:\n*/\n#include <stdio.h>\nint main (void)\n{\n//\u00a0\u00a0\u00a0\u00a0Local Declarations\n\u00a0\u00a0\u00a0\u00a0int   a = 17;\n\u00a0\u00a0\u00a0\u00a0int   b = 5;\n\u00a0\u00a0\u00a0\u00a0float x = 17.67;\n\u00a0\u00a0\u00a0\u00a0float y = 5.1;\n\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0printf(\"Integral calculations\\n\");\n\u00a0\u00a0\u00a0\u00a0printf(\"%d + %d  = %d\\n\", a, b, a + b);\n\u00a0\u00a0\u00a0\u00a0printf(\"%d - %d  = %d\\n\", a, b, a - b);\n\u00a0\u00a0\u00a0\u00a0printf(\"%d * %d  = %d\\n\", a, b, a * b);\n\u00a0\u00a0\u00a0\u00a0printf(\"%d / %d  = %d\\n\", a, b, a / b);\n\u00a0\u00a0\u00a0\u00a0printf(\"%d %% %d  = %d\\n\", a, b, a % b);\n\u00a0\u00a0\u00a0\u00a0printf(\"\\n\");\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Floating-point calculations\\n\");\n\u00a0\u00a0\u00a0\u00a0printf(\"%f + %f  = %f\\n\", x, y, x + y);\n\u00a0\u00a0\u00a0\u00a0printf(\"%f - %f  = %f\\n\", x, y, x - y);\n\u00a0\u00a0\u00a0\u00a0printf(\"%f * %f  = %f\\n\", x, y, x * y);\n\u00a0\u00a0\u00a0\u00a0printf(\"%f / %f  = %f\\n\", x, y, x / y);\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\u00a0\u00a0\u00a0\u00a0// main"
+    "source_code": "/*\tThis program demonstrates binary expressions.\r\n\r\n\n\t   Written by:\r\n\r\n\n\t   Date: \r\n\r\n\n*/\r\n\r\n\n#include <stdio.h>\r\n\r\n\nint main (void)\r\n\r\n\n{\r\n\r\n\n//\tLocal Declarations \r\n\r\n\n\tint   a = 17;\r\n\r\n\n\tint   b = 5;\r\n\r\n\n\tfloat x = 17.67;\r\n\r\n\n\tfloat y = 5.1;\r\n\r\n\n\r\n\n//\tStatements \r\n\r\n\n\tprintf(\"Integral calculations\\n\");\r\n\n\tprintf(\"%d + %d  = %d\\n\", a, b, a + b);\r\n\n\tprintf(\"%d - %d  = %d\\n\", a, b, a - b);\r\n\n\tprintf(\"%d * %d  = %d\\n\", a, b, a * b);\r\n\n\tprintf(\"%d / %d  = %d\\n\", a, b, a / b);\r\n\n\tprintf(\"%d %% %d  = %d\\n\", a, b, a % b);\r\n\n\tprintf(\"\\n\");\r\n\n\r\n\n\tprintf(\"Floating-point calculations\\n\");\r\n\n\tprintf(\"%f + %f  = %f\\n\", x, y, x + y);\r\n\n\tprintf(\"%f - %f  = %f\\n\", x, y, x - y);\r\n\n\tprintf(\"%f * %f  = %f\\n\", x, y, x * y);\r\n\n\tprintf(\"%f / %f  = %f\\n\", x, y, x / y);\r\n\n\treturn 0;\r\n\r\n\n}\t// main \r\n"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=binary_expressions&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/binary_expressions"
     }
   ],
   "rights": {

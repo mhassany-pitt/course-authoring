@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T13:19:37.369Z",
+  "updated_at": "2026-01-17T20:47:51.321Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -43,26 +43,20 @@
     "knowledge_components": {
       "expert": {
         "concepts": [
-          "Sub-Queries",
-          "SingleAttributeSelection",
-          "DuplicateHandling",
-          "SingleTableSelection",
+          "DistinctClause",
           "AllResultsInSubQueryExclusion",
-          "SimpleSubquery",
-          "WhereClause",
-          "SelectClause",
-          "InPredicate",
+          "PredicateNegation",
           "SelectStatement",
-          "FromClause",
-          "DistinctClause",
-          "PredicateNegation",
-          "DistinctClause",
-          "InPredicate",
-          "PredicateNegation",
           "SimpleSubQuery",
           "SingleAttributeSelection",
+          "SimpleSubquery",
+          "DuplicateHandling",
+          "InPredicate",
           "SingleTableSelection",
-          "WhereClause"
+          "FromClause",
+          "Sub-Queries",
+          "WhereClause",
+          "SelectClause"
         ],
         "note": "",
         "created_at": null,

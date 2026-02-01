@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-08-30T18:37:55.000Z",
-  "updated_at": "2026-01-17T12:57:55.066Z",
+  "updated_at": "2026-01-17T20:47:08.851Z",
   "tags": [
     "TODO:add-prompt"
   ],
@@ -53,21 +53,16 @@
       },
       "java ontology v2": {
         "concepts": [
-          "IntDataType",
-          "PreDecrementExpression",
-          "SimpleAssignmentExpression",
-          "ClassDefinition",
-          "PublicClassSpecifier",
-          "FormalMethodParameter",
-          "MethodDefinition",
           "PublicMethodSpecifier",
-          "StaticMethodSpecifier",
-          "VoidDataType",
-          "IntDataType",
+          "ClassDefinition",
           "SimpleAssignmentExpression",
           "IntDataType",
-          "PreDecrementExpression",
-          "SimpleAssignmentExpression"
+          "FormalMethodParameter",
+          "StaticMethodSpecifier",
+          "PublicClassSpecifier",
+          "VoidDataType",
+          "MethodDefinition",
+          "PreDecrementExpression"
         ],
         "note": "",
         "created_at": null,

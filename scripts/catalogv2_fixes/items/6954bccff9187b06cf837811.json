@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T13:19:35.834Z",
+  "updated_at": "2026-01-17T20:47:50.179Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -43,18 +43,15 @@
     "knowledge_components": {
       "expert": {
         "concepts": [
-          "MinFunction",
-          "SingleAttributeSelection",
-          "SingleTableSelection",
+          "AttributeName",
           "Aggregate Functions",
-          "SingleAttributeSelection",
-          "Minimum",
-          "SingleTableSelection",
-          "SelectClause",
-          "MinFunction",
           "SelectStatement",
+          "SingleAttributeSelection",
+          "SingleTableSelection",
           "FromClause",
-          "AttributeName"
+          "MinFunction",
+          "Minimum",
+          "SelectClause"
         ],
         "note": "",
         "created_at": null,

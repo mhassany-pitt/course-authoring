@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:49.843Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:45.964Z",
+  "tags": [],
   "identity": {
     "id": "inheritance_constructors_1",
     "title": "Inheritance and Constructors 1",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=inheritance_constructors_1&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/inheritance_constructors_1"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "public class Container {\n\u00a0\u00a0\u00a0\u00a0private int capacity;\n\n\u00a0\u00a0\u00a0\u00a0public Container(int capacity){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0this.capacity = capacity;\n\u00a0\u00a0\u00a0\u00a0}\n}\n\npublic class PaperBox extends Container {\n\u00a0\u00a0\u00a0\u00a0public PaperBox(int capacity){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0super(capacity);\n\u00a0\u00a0\u00a0\u00a0}\n}\n\npublic class GallonPlasticBottle extends Container {\n\u00a0\u00a0\u00a0\u00a0public GallonPlasticBottle(){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0super(1);\n\u00a0\u00a0\u00a0\u00a0}\n}"
+    "source_code": "public class Container {\r\n\n\tprivate int capacity; \r\n\n\t\r\n\n\tpublic Container(int capacity){\r\n\n\t\tthis.capacity = capacity;\r\n\n\t}\r\n\n}\r\n\n\npublic class PaperBox extends Container {\r\n\n\tpublic PaperBox(int capacity){\r\n\n\t\tsuper(capacity);\r\n\n\t}\r\n\n}\r\n\n\npublic class GallonPlasticBottle extends Container {\r\n\n\tpublic GallonPlasticBottle(){\r\n\n\t\tsuper(1);\r\n\n\t}\r\n\n}"
   },
   "classification": {
     "topics": [],
@@ -78,7 +76,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=inheritance_constructors_1&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/inheritance_constructors_1"
     }
   ],
   "rights": {

@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-12T20:04:36.000Z",
-  "updated_at": "2026-01-17T13:21:06.855Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:46:23.969Z",
+  "tags": [],
   "identity": {
     "id": "rich_compare1_challenge",
     "title": "Greater Than Comparison Method Challenge",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct a program with two classes, where each class has a comparison method. Test whether the value of the first class is greater than the value of the second class using the comparison method.",
+    "source_code": "# Step 1: Define the first class containing the comparison method\nclass A:\n    def __init__(self, value):\n        self.value = value\n    def __gt__(self, other):\n        print (\"A __gt__ called\")\n        return self.value > other.value\n# Step 2: Define the second class containing the comparison method\nclass B:\n    def __init__(self, value):\n        self.value = value\n    def __gt__(self, other):\n        print (\"B __gt__ called\")\n        return self.value > other.value\n# Step 3: Test the comparison function\na = A(4)\nb = B(8)\nprint(a > b)\nprint(b > a)"
   },
   "classification": {
     "topics": [],

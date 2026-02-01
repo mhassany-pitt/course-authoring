@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T13:19:10.026Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:50.151Z",
+  "tags": [],
   "identity": {
     "id": "create_2d_array",
     "title": "DEPRECATED_Create 2D Array",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=create_2d_array"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/create_2d_array"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "public class Test2Darray2 {\r\n  public static void main(String args[]) {\r\n    int[][] multD = new int[9][];\r\n    multD[0] = new int[21];\r\n    multD[1] = new int[5000];\r\n  }\r\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=create_2d_array"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/create_2d_array"
     }
   ],
   "rights": {

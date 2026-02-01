@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-12-28T17:39:29.000Z",
-  "updated_at": "2026-01-17T12:56:15.487Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:46:24.835Z",
+  "tags": [],
   "identity": {
     "id": "hkcarraytesting1",
     "title": "HKC array testing 1",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=hkcarraytesting1&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/hkcarraytesting1"
   },
   "attribution": {
     "created_at": "2016-12-28T17:39:29.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "public class array_declaration\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0public static void main(String[] args)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double[] A =  new double[10];\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int B[] = {50,20,45,82,25,63};\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n}"
+    "prompt": "testing authoring tool and course authoring",
+    "source_code": "public class array_declaration\n   {\n          public static void main(String[] args)\n          {\n                     double[] A =  new double[10];    \n                   \n                     int B[] = {50,20,45,82,25,63};   \n          }\n}"
   },
   "classification": {
     "topics": [],
@@ -42,22 +40,21 @@
     "knowledge_components": {
       "java ontology v2": {
         "concepts": [
-          "ArrayCreationStatement",
-          "ArrayDataType",
-          "ArrayDataType",
           "ArrayInitializationStatement",
-          "ArrayInitializer",
-          "ArrayVariable",
+          "ArrayCreationStatement",
           "ClassDefinition",
-          "DoubleDataType",
-          "FormalMethodParameter",
-          "IntDataType",
-          "MethodDefinition",
-          "PublicClassSpecifier",
           "PublicMethodSpecifier",
+          "DoubleDataType",
           "SimpleAssignmentExpression",
+          "IntDataType",
+          "ArrayVariable",
+          "FormalMethodParameter",
           "StaticMethodSpecifier",
-          "VoidDataType"
+          "ArrayInitializer",
+          "ArrayDataType",
+          "PublicClassSpecifier",
+          "VoidDataType",
+          "MethodDefinition"
         ],
         "note": "",
         "created_at": null,
@@ -80,7 +77,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=hkcarraytesting1&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/hkcarraytesting1"
     }
   ],
   "rights": {

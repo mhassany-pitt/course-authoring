@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-13T13:54:59.000Z",
-  "updated_at": "2026-01-17T13:18:51.819Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:05:19.660Z",
+  "tags": [],
   "identity": {
     "id": "py_references_passing_values",
     "title": "Passing Values",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct a function that increases the original integer's value by 1 and return the increased value's memory address.",
+    "source_code": "# Step 1: Define the function\ndef increment(x):\n    # Step 1.1: Print x\u2019s original memory address\n    print(f\"Initial address of x: {id(x)}\")\n    # Step 1.2: Increase x by 1\n    x += 1\n    # Step 1.3: Print x\u2019s current memory address\n    print(f\"Final address of x: {id(x)}\")\n#Step2: Initiate n\nn = 9001\nprint(f\"Initial address of n: {id(n)}\")\n#Step2: Call the funtion\nincrement(n)\nprint(f\"Final address of n: {id(n)}\")"
   },
   "classification": {
     "topics": [],

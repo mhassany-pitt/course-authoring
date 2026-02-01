@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:26.690Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:02.670Z",
+  "tags": [],
   "identity": {
     "id": "variables1",
     "title": "DEPRECATED_variable declaration",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=variables1"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/variables1"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "int i, j;\r\n\r\n\nString sentence;\r\n\r\n\ndouble a, b;\r\n\r\n"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=variables1"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/variables1"
     }
   ],
   "rights": {

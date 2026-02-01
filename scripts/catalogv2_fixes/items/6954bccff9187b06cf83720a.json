@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2019-02-15T09:11:58.000Z",
-  "updated_at": "2026-01-17T12:55:45.678Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:44.512Z",
+  "tags": [],
   "identity": {
     "id": "3-19_MoreMethods",
     "title": "3-19_MoreMethods",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=3-19_MoreMethods&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-19_MoreMethods"
   },
   "attribution": {
     "created_at": "2019-02-15T09:11:58.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/*\n\u00a0* Some more examples of methods, including recursive methods.\n\u00a0*\n\u00a0* A recursive method is a method that calls itself in its own definition.\n\u00a0*\n\u00a0*/\npublic class MoreMethods {\n\n\u00a0\u00a0\u00a0\u00a0// This method returns a Pig Latin version of the parameter.  We use only\n\u00a0\u00a0\u00a0\u00a0//  one Pig Latin rule: move the first letter of the word to the end, and\n\u00a0\u00a0\u00a0\u00a0//  add \"ay\" after that.\n\u00a0\u00a0\u00a0\u00a0public static String pigLatinize(String something) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return something.substring(1) + \"-\" + something.charAt(0) + \"ay\";\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public static double max(double a, double b, double c) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (a >= b && a >= c)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return a;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if (b >= a && b >= c)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return b;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return c;\n\u00a0\u00a0\u00a0\u00a0}\n\n\n\u00a0\u00a0\u00a0\u00a0// Several overloaded versions of print - these methods don't return anything,\n\u00a0\u00a0\u00a0\u00a0//  so their return type is void.\n\u00a0\u00a0\u00a0\u00a0public static void print(String something) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(something);\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public static void print(int something) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(something);\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public static void print(char something) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(something);\n\u00a0\u00a0\u00a0\u00a0}\n\n\n\u00a0\u00a0\u00a0\u00a0public static int factorial(int n) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (n == 0)\u00a0\u00a0\u00a0\u00a0\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return n*factorial(n-1);\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0// Recursively computes the nth Fibonacci number.  The Fibonacci sequence\n\u00a0\u00a0\u00a0\u00a0//  starts with 0, 1, and each subsequent number is computed by adding the\n\u00a0\u00a0\u00a0\u00a0//  two previous numbers.\n\u00a0\u00a0\u00a0\u00a0// (The \"0th\" Fibonacci number is 0, and the \"1st\" Fibonacci number is 1.)\n\u00a0\u00a0\u00a0\u00a0public static int fibo(int n) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (n == 0)\u00a0\u00a0\u00a0\u00a0\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if (n == 1)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return fibo(n-1) + fibo(n-2);\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// The recursive Fibonacci method is very inefficient!\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = 0; i < 100; i++)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(fibo(i));\n\n\u00a0\u00a0\u00a0\u00a0}\n}"
+    "source_code": "/* \n * Some more examples of methods, including recursive methods.\n * \n * A recursive method is a method that calls itself in its own definition.\n * \n */\npublic class MoreMethods {\n\n\t// This method returns a Pig Latin version of the parameter.  We use only\n\t//  one Pig Latin rule: move the first letter of the word to the end, and\n\t//  add \"ay\" after that.\n\tpublic static String pigLatinize(String something) {\n\t\treturn something.substring(1) + \"-\" + something.charAt(0) + \"ay\";\n\t}\n\t\n\tpublic static double max(double a, double b, double c) {\n\t\tif (a >= b && a >= c)\n\t\t\treturn a;\n\t\telse if (b >= a && b >= c)\n\t\t\treturn b;\n\t\telse\n\t\t\treturn c;\n\t}\n\t\n\n\t// Several overloaded versions of print - these methods don't return anything,\n\t//  so their return type is void.\n\tpublic static void print(String something) {\n\t\tSystem.out.println(something);\n\t}\n\n\tpublic static void print(int something) {\n\t\tSystem.out.println(something);\n\t}\n\t\n\tpublic static void print(char something) {\n\t\tSystem.out.println(something);\n\t}\n\n\t\n\tpublic static int factorial(int n) {\n\t\tif (n == 0)\t\n\t\t\treturn 1;\n\t\telse\n\t\t\treturn n*factorial(n-1);\n\t}\n\t\n\t// Recursively computes the nth Fibonacci number.  The Fibonacci sequence\n\t//  starts with 0, 1, and each subsequent number is computed by adding the\n\t//  two previous numbers.\n\t// (The \"0th\" Fibonacci number is 0, and the \"1st\" Fibonacci number is 1.)\n\tpublic static int fibo(int n) {\n\t\tif (n == 0)\t\n\t\t\treturn 0;\n\t\telse if (n == 1)\n\t\t\treturn 1;\n\t\telse\n\t\t\treturn fibo(n-1) + fibo(n-2);\n\t}\n\t\n\tpublic static void main(String[] args) {\n\t\t// The recursive Fibonacci method is very inefficient!\n\t\tfor (int i = 0; i < 100; i++)\n\t\t\tSystem.out.println(fibo(i));\n\t\t\n\t}\n}"
   },
   "classification": {
     "topics": [],
@@ -133,7 +131,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=3-19_MoreMethods&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-19_MoreMethods"
     }
   ],
   "rights": {

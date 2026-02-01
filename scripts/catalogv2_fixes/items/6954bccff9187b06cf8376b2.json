@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:20.473Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:23.427Z",
+  "tags": [],
   "identity": {
     "id": "decimal_value",
     "title": "decimal_value",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=decimal_value&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/decimal_value"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/*\u00a0\u00a0\u00a0\u00a0Display the decimal value of selected characters,\n\u00a0\u00a0\u00a0\u00a0   Written by:\n\u00a0\u00a0\u00a0\u00a0   Date:\n*/\n#include <stdio.h>\n\nint main (void)\n{\n//\u00a0\u00a0\u00a0\u00a0Local Declarations\n\u00a0\u00a0\u00a0\u00a0char A         = 'A';\n\u00a0\u00a0\u00a0\u00a0char a         = 'a';\n\u00a0\u00a0\u00a0\u00a0char B         = 'B';\n\u00a0\u00a0\u00a0\u00a0char b         = 'b';\n\u00a0\u00a0\u00a0\u00a0char Zed       = 'Z';\n\u00a0\u00a0\u00a0\u00a0char zed       = 'z';\n\u00a0\u00a0\u00a0\u00a0char zero      = '0';\n\u00a0\u00a0\u00a0\u00a0char eight     = '8';\n\u00a0\u00a0\u00a0\u00a0char NL        = '\\n';       // newline\n\u00a0\u00a0\u00a0\u00a0char HT        = '\\t';       // horizontal tab\n\u00a0\u00a0\u00a0\u00a0char VT        = '\\v';       // vertical tab\n\u00a0\u00a0\u00a0\u00a0char SP        = ' ';        // blank or space\n\u00a0\u00a0\u00a0\u00a0char BEL       = '\\a';       // alert (bell)\n\u00a0\u00a0\u00a0\u00a0char dblQuote  = '\"';        // double quote\n\u00a0\u00a0\u00a0\u00a0char backSlash = '\\\\';       // backslash itself\n\u00a0\u00a0\u00a0\u00a0char oneQuote  = '\\'';       // single quote itself\n\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char 'A'  is: %d\\n\",  A);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char 'a'  is: %d\\n\",  a);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char 'B'  is: %d\\n\",  B);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char 'b'  is: %d\\n\",  b);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char 'Z'  is: %d\\n\",  Zed);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char 'z'  is: %d\\n\",  zed);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char '0'  is: %d\\n\",  zero);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char '8'  is: %d\\n\",  eight);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char '\\\\n' is: %d\\n\", NL);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char '\\\\t' is: %d\\n\", HT);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char '\\\\v' is: %d\\n\", VT);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char ' '  is: %d\\n\",  SP);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char '\\\\a' is: %d\\n\", BEL);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char '\\\"'  is: %d\\n\", dblQuote);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char '\\\\'  is: %d\\n\", backSlash);\n\u00a0\u00a0\u00a0\u00a0printf(\"ASCII for char '\\''  is: %d\\n\", oneQuote);\n\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\u00a0\u00a0\u00a0\u00a0// main"
+    "source_code": "/*\tDisplay the decimal value of selected characters,\r\n\t   Written by:\r\n\t   Date: \r\n*/\r\n#include <stdio.h>\r\n\r\nint main (void)\r\n{\r\n//\tLocal Declarations \r\n\tchar A         = 'A';\r\n\tchar a         = 'a';\r\n\tchar B         = 'B';\r\n\tchar b         = 'b';\r\n\tchar Zed       = 'Z';\r\n\tchar zed       = 'z';\r\n\tchar zero      = '0';\r\n\tchar eight     = '8';\r\n\tchar NL        = '\\n';       // newline \r\n\tchar HT        = '\\t';       // horizontal tab \r\n\tchar VT        = '\\v';       // vertical tab \r\n\tchar SP        = ' ';        // blank or space \r\n\tchar BEL       = '\\a';       // alert (bell)\r\n\tchar dblQuote  = '\"';        // double quote \r\n\tchar backSlash = '\\\\';       // backslash itself \r\n\tchar oneQuote  = '\\'';       // single quote itself\r\n\r\n//\tStatements \r\n\tprintf(\"ASCII for char 'A'  is: %d\\n\",  A);\r\n\tprintf(\"ASCII for char 'a'  is: %d\\n\",  a);\r\n\tprintf(\"ASCII for char 'B'  is: %d\\n\",  B);\r\n\tprintf(\"ASCII for char 'b'  is: %d\\n\",  b);\r\n\tprintf(\"ASCII for char 'Z'  is: %d\\n\",  Zed);\r\n\tprintf(\"ASCII for char 'z'  is: %d\\n\",  zed);\r\n\tprintf(\"ASCII for char '0'  is: %d\\n\",  zero);\r\n\tprintf(\"ASCII for char '8'  is: %d\\n\",  eight);\r\n\tprintf(\"ASCII for char '\\\\n' is: %d\\n\", NL);\r\n\tprintf(\"ASCII for char '\\\\t' is: %d\\n\", HT);\r\n\tprintf(\"ASCII for char '\\\\v' is: %d\\n\", VT);\r\n\tprintf(\"ASCII for char ' '  is: %d\\n\",  SP);\r\n\tprintf(\"ASCII for char '\\\\a' is: %d\\n\", BEL);\r\n\tprintf(\"ASCII for char '\\\"'  is: %d\\n\", dblQuote);\r\n\tprintf(\"ASCII for char '\\\\'  is: %d\\n\", backSlash);\r\n\tprintf(\"ASCII for char '\\''  is: %d\\n\", oneQuote);\r\n\r\n\treturn 0;\r\n}\t// main "
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=decimal_value&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/decimal_value"
     }
   ],
   "rights": {

@@ -1,13 +1,10 @@
 {
   "id": "6954bccff9187b06cf837031",
   "user_email": "moh70@pitt.edu",
-  "status": "public",
+  "status": "broken:pending-fix",
   "listed_at": "2022-01-28T16:04:24.000Z",
-  "updated_at": "2026-01-17T13:18:44.175Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:57:18.445Z",
+  "tags": [],
   "identity": {
     "id": "arithmetic_triangle_side",
     "title": "Find triangle side by using Pythagorean Theorem",

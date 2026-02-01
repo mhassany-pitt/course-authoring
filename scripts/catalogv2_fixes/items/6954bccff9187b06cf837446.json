@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:26.070Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:02.113Z",
+  "tags": [],
   "identity": {
     "id": "key_demo",
     "title": "ISD::KeyDemo.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=key_demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/key_demo"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 12.22: KeyDemo.java\r\n// Demonstrating keystroke events.\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\nimport java.awt.event.*;\r\n\r\npublic class KeyDemo extends JFrame implements KeyListener {\r\n   private String line1 = \"\", line2 = \"\";\r\n   private String line3 = \"\";\r\n   private JTextArea textArea;\r\n\r\n   public KeyDemo()\r\n   {\r\n      super( \"Demonstrating Keystroke Events\" );\r\n\r\n      textArea = new JTextArea( 10, 15 );\r\n      textArea.setText( \"Press any key on the keyboard...\" );\r\n      textArea.setEnabled( false );\r\n\r\n      // allow frame to process Key events\r\n      addKeyListener( this );\r\n\r\n      getContentPane().add( textArea );  \r\n\r\n      setSize( 350, 100 );\r\n      show();\r\n   }\r\n\r\n   public void keyPressed( KeyEvent e )\r\n   {\r\n      line1 = \"Key pressed: \" +\r\n               e.getKeyText( e.getKeyCode() );\r\n      setLines2and3( e );\r\n   }\r\n\r\n   public void keyReleased( KeyEvent e )\r\n   {\r\n      line1 = \"Key released: \" +\r\n               e.getKeyText( e.getKeyCode() );\r\n      setLines2and3( e );\r\n   }\r\n\r\n   public void keyTyped( KeyEvent e )\r\n   {\r\n      line1 = \"Key typed: \" + e.getKeyChar();\r\n      setLines2and3( e );\r\n   }\r\n\r\n   private void setLines2and3( KeyEvent e )\r\n   {\r\n      line2 = \"This key is \" +\r\n              ( e.isActionKey() ? \"\" : \"not \" ) +\r\n              \"an action key\";\r\n\r\n      String temp = \r\n         e.getKeyModifiersText( e.getModifiers() );\r\n\r\n      line3 = \"Modifier keys pressed: \" +\r\n              ( temp.equals( \"\" ) ? \"none\" : temp );\r\n\r\n      textArea.setText(\r\n         line1 + \"\n\" + line2 + \"\n\" + line3 + \"\n\" );\r\n   }\r\n\r\n   public static void main( String args[] )\r\n   {\r\n      KeyDemo app = new KeyDemo();\r\n\r\n      app.addWindowListener(\r\n         new WindowAdapter() {\r\n            public void windowClosing( WindowEvent e )\r\n            {\r\n               System.exit( 0 );\r\n            }\r\n         }\r\n      );\r\n   }\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=key_demo"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/key_demo"
     }
   ],
   "rights": {

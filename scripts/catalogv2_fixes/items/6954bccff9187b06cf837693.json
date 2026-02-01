@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:15.151Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:47:17.113Z",
+  "tags": [],
   "identity": {
     "id": "TableCreation4",
     "title": "Foriegn Key",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=TableCreation4&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/TableCreation4"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "CREATE TABLE Enrolled\n\u00a0\u00a0\u00a0\u00a0\u00a0(sid CHAR(20) NOT NULL,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0cid CHAR(20) NOT NULL,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0grade CHAR(2),\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0PRIMARY KEY (sid,  cid),\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0FOREIGN KEY (sid)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0REFERENCES Students\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ON DELETE CASCADE\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0ON UPDATE SET DEFAULT);"
+    "prompt": "Foriegn Key",
+    "source_code": "CREATE TABLE Enrolled\r\n\n     (sid CHAR(20) NOT NULL,\r\n\n      cid CHAR(20) NOT NULL,\r\n\n      grade CHAR(2),\r\n\n      PRIMARY KEY (sid,  cid),\r\n\n      FOREIGN KEY (sid)\r\n\n      REFERENCES Students\r\n\n      ON DELETE CASCADE\r\n\n      ON UPDATE SET DEFAULT);"
   },
   "classification": {
     "topics": [],
@@ -80,7 +78,6 @@
       },
       "sql concept (code22101)": {
         "concepts": [
-          "NullValue",
           "NullValue"
         ],
         "note": "",
@@ -105,7 +102,6 @@
       },
       "sql concept (code4118)": {
         "concepts": [
-          "AggregateOperation",
           "AggregateOperation"
         ],
         "note": "",
@@ -114,8 +110,6 @@
       },
       "sql concept (code43)": {
         "concepts": [
-          "TupleSelectionCondition",
-          "TupleSelectionCondition",
           "TupleSelectionCondition"
         ],
         "note": "",
@@ -132,55 +126,29 @@
       },
       "sql_ontology": {
         "concepts": [
-          "DefaultValueClause",
-          "ForeignKeyClause",
-          "NotNullClause",
-          "OnDeleteClause",
-          "OnUpdateClause",
-          "PrimaryKeyClause",
-          "ReferencesClause",
-          "AttributeName",
-          "AttributeName",
-          "PrimaryKeyConstraint",
-          "CreateTableClause",
-          "DefaultValueClause",
-          "ForeignKeyClause",
-          "NotNullClause",
-          "OnDeleteClause",
-          "OnUpdateClause",
-          "PrimaryKeyClause",
-          "ReferencesClause",
-          "AttributeSpecification",
-          "CreateTableClause",
-          "DefaultValueClause",
-          "ForeignKeyClause",
-          "NotNullClause",
-          "OnDeleteClause",
-          "OnUpdateClause",
-          "PrimaryKeyClause",
-          "ReferencesClause",
-          "ForeignKeyConstraint",
-          "ForeignKeyConstraint",
-          "OrLogicalOperator",
-          "CascadeOnReferentialAction",
-          "IntegrityOnDelete",
-          "SetNullOnReferentialAction",
-          "CascadeOnReferentialAction",
-          "IntegrityOnUpdate",
-          "SetNullOnReferentialAction",
-          "PrimaryKeyConstraint",
-          "CascadeOnReferentialAction",
-          "SetNullOnReferentialAction",
-          "BracketCharacter",
-          "CommaCharacter",
-          "IntegrityOnDelete",
-          "IntegrityOnUpdate",
-          "IntegrityConstraint",
-          "FixedLengthCharacterString",
-          "CreateTableStatement",
-          "IntegrityConstraint",
           "SubQuery",
-          "SubQuery"
+          "AttributeName",
+          "CommaCharacter",
+          "PrimaryKeyConstraint",
+          "PrimaryKeyClause",
+          "CreateTableStatement",
+          "OrLogicalOperator",
+          "FixedLengthCharacterString",
+          "SetNullOnReferentialAction",
+          "CascadeOnReferentialAction",
+          "CreateTableClause",
+          "NotNullClause",
+          "ForeignKeyClause",
+          "ReferencesClause",
+          "ForeignKeyConstraint",
+          "AttributeSpecification",
+          "IntegrityOnDelete",
+          "IntegrityOnUpdate",
+          "BracketCharacter",
+          "DefaultValueClause",
+          "IntegrityConstraint",
+          "OnDeleteClause",
+          "OnUpdateClause"
         ],
         "note": "",
         "created_at": null,
@@ -203,7 +171,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=TableCreation4&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/TableCreation4"
     }
   ],
   "rights": {

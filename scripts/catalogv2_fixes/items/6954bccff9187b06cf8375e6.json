@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-01T15:34:20.000Z",
-  "updated_at": "2026-01-17T12:57:50.328Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:16.077Z",
+  "tags": [],
   "identity": {
     "id": "GradeBook",
     "title": "Grade Book",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=GradeBook&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/GradeBook"
   },
   "attribution": {
     "created_at": "2014-09-01T15:34:20.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "import java.util.ArrayList;\n\npublic class GradeBook\n{\n\u00a0\u00a0\u00a0private ArrayList<Double> scores;\n\n\u00a0\u00a0\u00a0public GradeBook()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scores = new ArrayList<Double>();\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public void addScore(double score)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scores.add(score);\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public double sum()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double total = 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (double element : scores)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0total = total + element;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return total;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0public double minimum()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (scores.size() == 0) return 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double smallest = scores.get(0);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for (int i = 1; i < scores.size(); i++)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (scores.get(i) < smallest)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0smallest = scores.get(i);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return smallest;\n\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public double finalScore()\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (scores.size() == 0)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else if (scores.size() == 1)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return scores.get(0);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return sum() - minimum();\n\u00a0\u00a0\u00a0}\n}\n}"
+    "source_code": "import java.util.ArrayList;\r\n\r\npublic class GradeBook\r\n{\r\n   private ArrayList<Double> scores;\r\n\r\n   public GradeBook()\r\n   {\r\n      scores = new ArrayList<Double>();\r\n   }\r\n\r\n   public void addScore(double score)\r\n   {\r\n      scores.add(score);\r\n   }\r\n\r\n   public double sum()\r\n   {\r\n      double total = 0;\r\n      for (double element : scores)\r\n      {\r\n         total = total + element;\r\n      }\r\n      return total;\r\n   }\r\n      \r\n   public double minimum()\r\n   {\r\n      if (scores.size() == 0) return 0;\r\n      double smallest = scores.get(0);\r\n      for (int i = 1; i < scores.size(); i++)\r\n      {\r\n         if (scores.get(i) < smallest)\r\n         {\r\n            smallest = scores.get(i);\r\n         }\r\n      }\r\n      return smallest;\r\n   }\r\n\r\n    public double finalScore() \r\n   {\r\n      if (scores.size() == 0)\r\n         return 0;\r\n      else if (scores.size() == 1)\r\n         return scores.get(0);\r\n      else\r\n         return sum() - minimum();\r\n   }\r\n}\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -89,7 +87,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=GradeBook&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/GradeBook"
     }
   ],
   "rights": {

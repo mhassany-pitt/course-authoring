@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-12T23:26:29.000Z",
-  "updated_at": "2026-01-17T13:21:06.607Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:46:23.849Z",
+  "tags": [],
   "identity": {
     "id": "person_employee_ch",
     "title": "Person and Employee Inheritance Information Challenge",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct two classes: one represents a Person and another one represents an Employee that should be defined as Person's child class. The classes should define functions to display the employee's information",
+    "source_code": "# Step1: Define the class\nclass Person():\n    #Step 1.1: Initialize the attributes of the Person class.\n    def __init__(self, name, idnumber):\n        self.name = name\n        self.idnumber = idnumber\n    # Step 1.2: Define the method to print the person's name and id\n    def display(self):\n        print(self.name)\n        print(self.idnumber)\n# Step2: Define a class that is Person's child class or subclass\nclass Employee(Person):\n    # Step 2.1: Initialize the attributes of the Employee class.\n    def __init__(self, name, idnumber, salary, post):\n        self.salary = salary\n        self.post = post\n        Person.__init__(self, name, idnumber)\n    # Step 1.2: Define the method to print the person's salary and post\n    def info(self):\n        print(self.salary)\n        print(self.post)\na = Employee('Rahul', 886012, 200000, 'Intern')\na.display()\na.info()"
   },
   "classification": {
     "topics": [],

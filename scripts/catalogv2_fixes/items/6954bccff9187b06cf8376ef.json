@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:29.715Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:30.240Z",
+  "tags": [],
   "identity": {
     "id": "do_switch_function",
     "title": "Do Switch Function",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=do_switch_function&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/do_switch_function"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\n#include <time.h>\nint sportsQuestion(void);\nint geographyQuestion(void);\nvoid pause(int);\nint giResponse = 0;\nmain()\n{\n\u00a0\u00a0\u00a0do {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\n\\tTHE TRIVIA GAME\\n\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"1\\tSports\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"2\\tGeography\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"3\\tQuit\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\n\\nEnter your selection: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0scanf(\"%d\", &giResponse);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0switch(giResponse) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0case 1:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (sportsQuestion() == 4)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nCorrect!\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nIncorrect\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0pause(2);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0case 2:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (geographyQuestion() == 2)\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nCorrect!\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0else\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nIncorrect\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0pause(2);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0}  while ( giResponse != 3 );\n}\nint sportsQuestion(void)\n{\n\u00a0\u00a0\u00a0int iAnswer = 0;\n\u00a0\u00a0\u00a0printf(\"\\tSports Question\\n\");\n\u00a0\u00a0\u00a0printf(\"\\nWhat University did NFL star Deon Sanders attend? \");\n\u00a0\u00a0\u00a0printf(\"\\n\\n1\\tUniversity of Miami\\n\");\n\u00a0\u00a0\u00a0printf(\"2\\tCalifornia State University\\n\");\n\u00a0\u00a0\u00a0printf(\"3\\tIndiana University\\n\");\n\u00a0\u00a0\u00a0printf(\"4\\tFlorida State University\\n\");\n\u00a0\u00a0\u00a0printf(\"\\nEnter your selection: \");\n\u00a0\u00a0\u00a0scanf(\"%d\", &iAnswer);\n\u00a0\u00a0\u00a0return iAnswer;\n}\nint geographyQuestion(void)\n{\n\u00a0\u00a0\u00a0int iAnswer = 0;\n\u00a0\u00a0\u00a0printf(\"\\tGeography Question\\n\");\n\u00a0\u00a0\u00a0printf(\"\\nWhat is the state capitol of Florida? \");\n\u00a0\u00a0\u00a0printf(\"\\n\\n1\\tPensecola\\n\");\n\u00a0\u00a0\u00a0printf(\"2\\tTallahassee\\n\");\n\u00a0\u00a0\u00a0printf(\"3\\tJacksonville\\n\");\n\u00a0\u00a0\u00a0printf(\"4\\tMiami\\n\");\n\u00a0\u00a0\u00a0printf(\"\\nEnter your selection: \");\n\u00a0\u00a0\u00a0scanf(\"%d\", &iAnswer);\n\u00a0\u00a0\u00a0return iAnswer;\n}\nvoid pause(int inNum)\n{\n\u00a0\u00a0\u00a0int iCurrentTime = 0;\n\u00a0\u00a0\u00a0int iElapsedTime = 0;\n\u00a0\u00a0\u00a0iCurrentTime = time(NULL);\n\u00a0\u00a0\u00a0do {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0iElapsedTime = time(NULL);\n\u00a0\u00a0\u00a0} while ( (iElapsedTime - iCurrentTime) < inNum );\n}"
+    "source_code": "#include <stdio.h>\r\n#include <time.h>\r\nint sportsQuestion(void);\r\nint geographyQuestion(void);\r\nvoid pause(int);\r\nint giResponse = 0;\r\nmain()\r\n{\r\n   do {\r\n      printf(\"\\n\\tTHE TRIVIA GAME\\n\\n\");\r\n      printf(\"1\\tSports\\n\");\r\n      printf(\"2\\tGeography\\n\");\r\n      printf(\"3\\tQuit\\n\");\r\n      printf(\"\\n\\nEnter your selection: \");\r\n      scanf(\"%d\", &giResponse);\r\n      switch(giResponse) {\r\n         case 1:\r\n            if (sportsQuestion() == 4)\r\n               printf(\"\\nCorrect!\\n\");\r\n            else\r\n               printf(\"\\nIncorrect\\n\");\r\n            pause(2);\r\n            break;\r\n         case 2:\r\n            if (geographyQuestion() == 2)\r\n               printf(\"\\nCorrect!\\n\");\r\n            else\r\n               printf(\"\\nIncorrect\\n\");\r\n            pause(2);\r\n            break;\r\n      } \r\n   }  while ( giResponse != 3 );\r\n} \r\nint sportsQuestion(void)\r\n{\r\n   int iAnswer = 0;\r\n   printf(\"\\tSports Question\\n\");\r\n   printf(\"\\nWhat University did NFL star Deon Sanders attend? \");\r\n   printf(\"\\n\\n1\\tUniversity of Miami\\n\");\r\n   printf(\"2\\tCalifornia State University\\n\");\r\n   printf(\"3\\tIndiana University\\n\");\r\n   printf(\"4\\tFlorida State University\\n\");\r\n   printf(\"\\nEnter your selection: \");\r\n   scanf(\"%d\", &iAnswer);\r\n   return iAnswer;\r\n} \r\nint geographyQuestion(void)\r\n{\r\n   int iAnswer = 0;\r\n   printf(\"\\tGeography Question\\n\");\r\n   printf(\"\\nWhat is the state capitol of Florida? \");\r\n   printf(\"\\n\\n1\\tPensecola\\n\");\r\n   printf(\"2\\tTallahassee\\n\");\r\n   printf(\"3\\tJacksonville\\n\");\r\n   printf(\"4\\tMiami\\n\");\r\n   printf(\"\\nEnter your selection: \");\r\n   scanf(\"%d\", &iAnswer);\r\n   return iAnswer;\r\n} \r\nvoid pause(int inNum)\r\n{\r\n   int iCurrentTime = 0;\r\n   int iElapsedTime = 0;\r\n   iCurrentTime = time(NULL);\r\n   do {\r\n      iElapsedTime = time(NULL);\r\n   } while ( (iElapsedTime - iCurrentTime) < inNum );\r\n}"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=do_switch_function&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/do_switch_function"
     }
   ],
   "rights": {

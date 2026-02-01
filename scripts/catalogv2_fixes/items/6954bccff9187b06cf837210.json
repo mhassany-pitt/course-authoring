@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2018-12-21T11:09:19.000Z",
-  "updated_at": "2026-01-17T13:18:57.779Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:45.219Z",
+  "tags": [],
   "identity": {
     "id": "char_strings_memphis",
     "title": "Char Strings (Memphis)",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=char_strings_memphis&svc=progvis"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/char_strings_memphis"
   },
   "attribution": {
     "created_at": "2018-12-21T11:09:19.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Some demos of working with the char and String data types.",
+    "source_code": "import java.util.Scanner;\n\npublic class CharStringDemos {\n\n\tpublic static void main(String[] args) {\n\t\t// So far we've talked about 7 primitive data types:\n\t\t//  int, long, short, byte\n\t\t//  double, float\n\t\t//  boolean\n\t\t//\n\t\t// char is the last primitive data type - it's used to store individual\n\t\t//  character values.  char values are denoted using single quotes, and\n\t\t//  internally they are stored as 16-bit Unicode.  This means every char\n\t\t//  value is associated with a number.  For example, 'A' is 65, and 'a' is 97.\n\t\tchar x = 'A', y = '0';\n\t\tSystem.out.println(x);\t\t\n\t\tSystem.out.println(y);\t\t\n\t\tSystem.out.println((int)x);\t\n\t\tSystem.out.println((int)y);\t\n\t\tSystem.out.println(x + y);\t\n\t\tSystem.out.println((char)65);\t\n\t\tSystem.out.println((char)65.9);\t\n\n\t\t// Declaring String variables and assigning them values\n\t\tString something = \"Sloths \", something2 = \"are nice!\";\n\t\tSystem.out.println(something + something2);\t\n\n\t\t// Concatenation also works with strings and non-string values\n\t\tint a = 10;\n\t\tSystem.out.println(\"a has the value of \" + a);\n\t\t\n\t\t// Converting a string to a numeric type -- you can't just cast to int or double!\n\t\tString number = \"10\";\n\t\tint n = Integer.parseInt(number);\n\t\tSystem.out.println(n);\n\t\tdouble d = Double.parseDouble(number);\n\t\tSystem.out.println(d);\n\t\t\n\t\t// Reading user input for a string\n\t\tScanner in = new Scanner(System.in);\n\t\tSystem.out.println(\"What is your name?\");\n\t\tString name = in.nextLine();\t\n\t\tSystem.out.println(\"What is your quest?\");\n\t\tString quest = in.nextLine();\n\t\tSystem.out.println(name + \", \" + quest);\n\t}\n}"
   },
   "classification": {
     "topics": [],
@@ -124,7 +121,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=char_strings_memphis&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/char_strings_memphis"
     }
   ],
   "rights": {

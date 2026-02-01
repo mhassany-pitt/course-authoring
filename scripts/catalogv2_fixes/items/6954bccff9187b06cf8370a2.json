@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-13T15:09:11.000Z",
-  "updated_at": "2026-01-17T13:18:51.046Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:23:28.791Z",
+  "tags": [],
   "identity": {
     "id": "py_recursion_gcf",
     "title": "Greatest Common Factor",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct a program that recursively finds and returns the great common factor between of two integers.\n\n",
+    "source_code": "# Step 1: Define the starting condition\ndef Recurgcf(a, b):\n    low = min(a, b)\n    high = max(a, b)\n# Step 2: Define the terminating condition\n    if low == 0:\n        return high\n    elif low == 1:\n        return 1\n    # Step 3: Recursion\n    else:\n        return Recurgcf(low, high%low)\nprint(Recurgcf(12,14))"
   },
   "classification": {
     "topics": [],

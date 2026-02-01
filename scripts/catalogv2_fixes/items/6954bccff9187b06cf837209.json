@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2019-02-15T09:18:02.000Z",
-  "updated_at": "2026-01-17T12:55:45.544Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:44.412Z",
+  "tags": [],
   "identity": {
     "id": "3-19_PizzaPrices",
     "title": "3-19_PizzaPrices",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=3-19_PizzaPrices&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-19_PizzaPrices"
   },
   "attribution": {
     "created_at": "2019-02-15T09:18:02.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/*\n\u00a0* Demo of how to define your own methods.\n\u00a0*/\nimport java.util.Scanner;\n\npublic class PizzaPrices {\n\n\u00a0\u00a0\u00a0\u00a0// The first line of a method definition is called the header.\n\u00a0\u00a0\u00a0\u00a0// The header includes \"public static\" (more on what this means later),\n\u00a0\u00a0\u00a0\u00a0//  followed by the method's return type, followed by the method's name,\n\u00a0\u00a0\u00a0\u00a0//  followed by a list of the method's parameters.\n\u00a0\u00a0\u00a0\u00a0public static double pizzaCost(int toppings) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// The method body indicates what to do with the parameters.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double cost = 5.46 + 1*toppings;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return cost;\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0// This is an overloaded version of the pizzaCost method.  Method\n\u00a0\u00a0\u00a0\u00a0//  overloading means defining more than one version of the same method that\n\u00a0\u00a0\u00a0\u00a0//  differ in their parameter quantity and/or type.  Java determines\n\u00a0\u00a0\u00a0\u00a0//  which version to use based on the arguments provided when you call\n\u00a0\u00a0\u00a0\u00a0//  the method.\n\u00a0\u00a0\u00a0\u00a0public static double pizzaCost(int toppings, String size) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double basePrice, toppingPrice;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0if (size.equalsIgnoreCase(\"S\")) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0basePrice = 5.46;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0toppingPrice = 1;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} else if (size.equalsIgnoreCase(\"M\")) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0basePrice = 8;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0toppingPrice = 1.5;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} else if (size.equalsIgnoreCase(\"L\")) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0basePrice = 10;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0toppingPrice = 2;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0} else {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0basePrice = 30;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0toppingPrice = 7.5;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double cost = basePrice + toppingPrice*toppings;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0return cost;\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Scanner yum = new Scanner(System.in);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"What size of pizza do you want? (S, M, L, USA)\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0String size = yum.nextLine();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"How many toppings?\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int numSloths = yum.nextInt();\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// This is an example of a method call.  To call a method, just type its\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  name followed by the inputs you want to use.  The inputs here are known\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  as arguments.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double cost = pizzaCost(numSloths, size);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(cost);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double bigOrderPrice = 7*pizzaCost(5, \"L\") + 40*pizzaCost(10, \"USA\") + pizzaCost(1, \"S\");\n\u00a0\u00a0\u00a0\u00a0}\n}\n"
+    "source_code": "/*\n * Demo of how to define your own methods.\n */\nimport java.util.Scanner;\n\npublic class PizzaPrices {\n\n\t// The first line of a method definition is called the header.\n\t// The header includes \"public static\" (more on what this means later),\n\t//  followed by the method's return type, followed by the method's name,\n\t//  followed by a list of the method's parameters.\n\tpublic static double pizzaCost(int toppings) {\n\t\t// The method body indicates what to do with the parameters.\n\t\tdouble cost = 5.46 + 1*toppings;\n\t\treturn cost;\n\t}\n\n\t// This is an overloaded version of the pizzaCost method.  Method\n\t//  overloading means defining more than one version of the same method that\n\t//  differ in their parameter quantity and/or type.  Java determines\n\t//  which version to use based on the arguments provided when you call\n\t//  the method.\n\tpublic static double pizzaCost(int toppings, String size) {\n\t\tdouble basePrice, toppingPrice;\n\t\tif (size.equalsIgnoreCase(\"S\")) {\n\t\t\tbasePrice = 5.46;\n\t\t\ttoppingPrice = 1;\n\t\t} else if (size.equalsIgnoreCase(\"M\")) {\n\t\t\tbasePrice = 8;\n\t\t\ttoppingPrice = 1.5;\n\t\t} else if (size.equalsIgnoreCase(\"L\")) {\n\t\t\tbasePrice = 10;\n\t\t\ttoppingPrice = 2;\n\t\t} else {\n\t\t\tbasePrice = 30;\n\t\t\ttoppingPrice = 7.5;\n\t\t}\n\t\t\n\t\tdouble cost = basePrice + toppingPrice*toppings;\n\t\treturn cost;\n\t}\n\t\n\tpublic static void main(String[] args) {\n\t\tScanner yum = new Scanner(System.in);\n\t\tSystem.out.println(\"What size of pizza do you want? (S, M, L, USA)\");\n\t\tString size = yum.nextLine();\n\t\tSystem.out.println(\"How many toppings?\");\n\t\tint numSloths = yum.nextInt();\n\n\t\t// This is an example of a method call.  To call a method, just type its\n\t\t//  name followed by the inputs you want to use.  The inputs here are known\n\t\t//  as arguments.\n\t\tdouble cost = pizzaCost(numSloths, size);\n\t\tSystem.out.println(cost);\n\t\tdouble bigOrderPrice = 7*pizzaCost(5, \"L\") + 40*pizzaCost(10, \"USA\") + pizzaCost(1, \"S\");\n\t}\n}\n"
   },
   "classification": {
     "topics": [],
@@ -123,7 +121,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=3-19_PizzaPrices&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-19_PizzaPrices"
     }
   ],
   "rights": {

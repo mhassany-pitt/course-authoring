@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:26.191Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:02.239Z",
+  "tags": [],
   "identity": {
     "id": "cookie_example",
     "title": "ISD::CookieExample.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=cookie_example"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/cookie_example"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 19.9: CookieExample.java\r\n// Using cookies.\r\nimport javax.servlet.*;\r\nimport javax.servlet.http.*;\r\nimport java.io.*;\r\n\r\npublic class CookieExample extends HttpServlet {\r\n   private String names[] = { \"C\", \"C++\", \"Java\",\r\n                              \"Visual Basic 6\" };\r\n   private String isbn[] = {\r\n      \"0-13-226119-7\", \"0-13-528910-6\",\r\n      \"0-13-012507-5\", \"0-13-528910-6\" };\r\n\r\n   public void doPost( HttpServletRequest request,\r\n                       HttpServletResponse response )\r\n      throws ServletException, IOException\r\n   {\r\n      PrintWriter output;\r\n      String language = request.getParameter( \"lang\" );\r\n\r\n      Cookie c = new Cookie( language, getISBN( language ) );\r\n      c.setMaxAge( 120 );  // seconds until cookie removed\r\n      response.addCookie( c );  // must precede getWriter\r\n      \r\n      response.setContentType( \"text/html\" );\r\n      output = response.getWriter();         \r\n\r\n      // send HTML page to client\r\n      output.println( \"<HTML><HEAD><TITLE>\" );\r\n      output.println( \"Cookies\" );\r\n      output.println( \"</TITLE></HEAD><BODY>\" );\r\n      output.println( \"<P>Welcome to Cookies!<BR>\" );\r\n      output.println( \"<P>\" );\r\n      output.println( language );\r\n      output.println( \" is a great language.\" );\r\n      output.println( \"</BODY></HTML>\" );\r\n\r\n      output.close();    // close stream\r\n   }\r\n\r\n   public void doGet( HttpServletRequest request,\r\n                      HttpServletResponse response )\r\n                      throws ServletException, IOException\r\n   {\r\n      PrintWriter output;\r\n      Cookie cookies[];\r\n\n      cookies = request.getCookies(); // get client's cookies\r\n\n\n      response.setContentType( \"text/html\" );\n      output = response.getWriter();\r\n\n\n      output.println( \"<HTML><HEAD><TITLE>\" );\r\n\n      output.println( \"Cookies II\" );\r\n\n      output.println( \"</TITLE></HEAD><BODY>\" );\r\n\n\n      if ( cookies != null ) {\r\n\n         output.println( \"<H1>Recommendations</H1>\" );\r\n\n\n         // get the name of each cookie\r\n\n         for ( int i = 0; i < cookies.length; i++ ) \r\n\n            output.println(\r\n\n               cookies[ i ].getName() + \" How to Program. \" +\r\n\n               \"ISBN#: \" + cookies[ i ].getValue() + \"<BR>\" );\r\n\n      }\r\n\n      else {\r\n\n         output.println( \"<H1>No Recommendations</H1>\" );\r\n\n         output.println( \"You did not select a language or\" );\r\n\n         output.println( \"the cookies have expired.\" );\r\n\n      }\r\n\n\n      output.println( \"</BODY></HTML>\" );\r\n\n      output.close();    // close stream\r\n\n   }\r\n\n\n   private String getISBN( String lang )\r\n\n   {\r\n\n      for ( int i = 0; i < names.length; ++i )\r\n\n         if ( lang.equals( names[ i ] ) )\r\n\n            return isbn[ i ];\r\n\n\n      return \"\";  // no matching string found\r\n\n   }\r\n\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=cookie_example"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/cookie_example"
     }
   ],
   "rights": {

@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-14T02:18:14.000Z",
-  "updated_at": "2026-01-17T13:18:49.748Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:25:45.927Z",
+  "tags": [],
   "identity": {
     "id": "py_sorting_selection_sort",
     "title": "Selection sort",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Ascending-order Selection sort operates by finding the minimum element of an array and moving it to the \u201cbeginning\u201d of the array, with the \u201cbeginning\u201d of the array incrementing forward after each element is placed in its proper position. Construct a function that performs selection sort on the given list, in ascending order. \n\n",
+    "source_code": "# Define a function that achieves ascending-order selection sort.\ndef sel_sort(data):\n    # Reorder the list in an ascending order.\n    for i in range(len(data)):\n        min_index = i\n        for j in range(i+1, len(data)):\n            if data[min_index] > data[j]:\n                    min_index = j\n        data[i], data[min_index] = data[min_index], data[i]\n    return data\nnum_list = [20, -3, 0, 25, 300, 10]\nprint(sel_sort(num_list))"
   },
   "classification": {
     "topics": [],

@@ -1,0 +1,4787 @@
+[
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_switch_demo2",
+    "platform_name": "JSVEE",
+    "title": "Switch Demo 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_switch_demo2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_switch_demo2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_function",
+    "platform_name": "JSVEE",
+    "title": "ae_python_function",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_function",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_function"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_while",
+    "platform_name": "JSVEE",
+    "title": "ae_python_while",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_while",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_while"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_sum",
+    "platform_name": "JSVEE",
+    "title": "Recursion Sum",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_sum",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_sum"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/doubly_linked_list",
+    "platform_name": "JSVEE",
+    "title": "Doubly Linked List",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/doubly_linked_list",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/doubly_linked_list"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_recursion",
+    "platform_name": "JSVEE",
+    "title": "Recursion",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_recursion",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_recursion"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_primitive_datatype_demo",
+    "platform_name": "JSVEE",
+    "title": "Primitive Datatype Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_primitive_datatype_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_primitive_datatype_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_do_while_v2",
+    "platform_name": "JSVEE",
+    "title": "DoWhile",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_do_while_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_do_while_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/bubble_sort_worst",
+    "platform_name": "JSVEE",
+    "title": "Bubble Sort Worst",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/bubble_sort_worst",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/bubble_sort_worst"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_while",
+    "platform_name": "JSVEE",
+    "title": "While Loop",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_while",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_while"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_assignment",
+    "platform_name": "JSVEE",
+    "title": "ae_python_assignment",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_assignment",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_assignment"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_arraylist2_v2",
+    "platform_name": "JSVEE",
+    "title": "ArrayList Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_arraylist2_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_arraylist2_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_inheritance_polymorphism_1",
+    "platform_name": "JSVEE",
+    "title": "Polymorphism and Inheritance 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_inheritance_polymorphism_1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_inheritance_polymorphism_1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input3",
+    "platform_name": "JSVEE",
+    "title": "Power With Input3",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input3",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input3"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_file1",
+    "platform_name": "JSVEE",
+    "title": "Files 1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_file1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_file1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/circle_class3",
+    "platform_name": "JSVEE",
+    "title": "Circle Class3",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/circle_class3",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/circle_class3"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/inheritance",
+    "platform_name": "JSVEE",
+    "title": "Inheritance",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/inheritance",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/inheritance"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch03_s06_BankAccountTester",
+    "platform_name": "JSVEE",
+    "title": "Bank Account Tester",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch03_s06_BankAccountTester",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch03_s06_BankAccountTester"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s10_CopyDemo",
+    "platform_name": "JSVEE",
+    "title": "Copy Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s10_CopyDemo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s10_CopyDemo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_lists1",
+    "platform_name": "JSVEE",
+    "title": "Lists 1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_lists1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_lists1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s09_MoveTester",
+    "platform_name": "JSVEE",
+    "title": "Move Tester",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s09_MoveTester",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s09_MoveTester"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/find_max2",
+    "platform_name": "JSVEE",
+    "title": "Find Max2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/find_max2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/find_max2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_EnhancedForLoopDemo",
+    "platform_name": "JSVEE",
+    "title": "Enhanced For Loop Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_EnhancedForLoopDemo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_EnhancedForLoopDemo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/circle_class2",
+    "platform_name": "JSVEE",
+    "title": "Circle Class2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/circle_class2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/circle_class2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_demo",
+    "platform_name": "JSVEE",
+    "title": "ae_demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/selection_sort2",
+    "platform_name": "JSVEE",
+    "title": "Selection Sort2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/selection_sort2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/selection_sort2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_for_demo",
+    "platform_name": "JSVEE",
+    "title": "For Loop Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_for_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_for_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_intro",
+    "platform_name": "JSVEE",
+    "title": "ae_python_intro",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_intro",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_intro"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_vals_refs1",
+    "platform_name": "JSVEE",
+    "title": "Values and References 1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_vals_refs1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_vals_refs1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_7_4",
+    "platform_name": "JSVEE",
+    "title": "For-Each with ArrayList",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_7_4",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_7_4"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_objects2",
+    "platform_name": "JSVEE",
+    "title": "Objects 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_objects2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_objects2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_6_6",
+    "platform_name": "JSVEE",
+    "title": "For with Multiple Variables 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_6_6",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_6_6"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_cash_register_constant_demo",
+    "platform_name": "JSVEE",
+    "title": "Cash Register Constant Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_cash_register_constant_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_cash_register_constant_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_functions3",
+    "platform_name": "JSVEE",
+    "title": "Functions 3",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_functions3",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_functions3"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/tree_node_access",
+    "platform_name": "JSVEE",
+    "title": "Tree Node Access",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/tree_node_access",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/tree_node_access"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_mult2_version2",
+    "platform_name": "JSVEE",
+    "title": "Recursion Mult2 Version2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_mult2_version2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_mult2_version2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_if",
+    "platform_name": "JSVEE",
+    "title": "ae_python_if",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_if",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_if"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_switch_demo1",
+    "platform_name": "JSVEE",
+    "title": "Switch Demo 1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_switch_demo1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_switch_demo1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_list",
+    "platform_name": "JSVEE",
+    "title": "ae_python_list",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_list",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_list"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_simple_inheritance_1",
+    "platform_name": "JSVEE",
+    "title": "Simple Inheritance",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_simple_inheritance_1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_simple_inheritance_1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_input2",
+    "platform_name": "JSVEE",
+    "title": "Input 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_input2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_input2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/circle_class",
+    "platform_name": "JSVEE",
+    "title": "Circle Class",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/circle_class",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/circle_class"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format3",
+    "platform_name": "JSVEE",
+    "title": "f-string format 1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format3",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format3"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_multidimarray_demo",
+    "platform_name": "JSVEE",
+    "title": "2D array Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_multidimarray_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_multidimarray_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_1_3",
+    "platform_name": "JSVEE",
+    "title": "Multiple Variables",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_1_3",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_1_3"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s07_AccessorMutatorDemo",
+    "platform_name": "JSVEE",
+    "title": "Accessor Mutator Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s07_AccessorMutatorDemo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s07_AccessorMutatorDemo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_functions2",
+    "platform_name": "JSVEE",
+    "title": "Functions 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_functions2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_functions2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_conditional_demo1",
+    "platform_name": "JSVEE",
+    "title": "If Conditions Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_conditional_demo1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_conditional_demo1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_split",
+    "platform_name": "JSVEE",
+    "title": "ae_python_split",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_split",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_split"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_greatest_divisor",
+    "platform_name": "JSVEE",
+    "title": "Recursion Greatest Divisor",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_greatest_divisor",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_greatest_divisor"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/palindrome",
+    "platform_name": "JSVEE",
+    "title": "Palindrome",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/palindrome",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/palindrome"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_swap",
+    "platform_name": "JSVEE",
+    "title": "Swap",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_swap",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_swap"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_wrapper_class_v2",
+    "platform_name": "JSVEE",
+    "title": "Wrapper Classes",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_wrapper_class_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_wrapper_class_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_constant_demo",
+    "platform_name": "JSVEE",
+    "title": "Constant Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_constant_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_constant_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_decisions1_v2",
+    "platform_name": "JSVEE",
+    "title": "if-else-if",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_decisions1_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_decisions1_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_comparison_operators_v2",
+    "platform_name": "JSVEE",
+    "title": "comparison operators",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_comparison_operators_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_comparison_operators_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_while_v2",
+    "platform_name": "JSVEE",
+    "title": "While",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_while_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_while_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/tree",
+    "platform_name": "JSVEE",
+    "title": "Tree",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/tree",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/tree"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_2_7",
+    "platform_name": "JSVEE",
+    "title": "Nested if",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_2_7",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_2_7"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_constant_math_demo",
+    "platform_name": "JSVEE",
+    "title": "Constsnt Math Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_constant_math_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_constant_math_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_arithmetics2",
+    "platform_name": "JSVEE",
+    "title": "Aritmethics 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_arithmetics2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_arithmetics2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_exception_v2",
+    "platform_name": "JSVEE",
+    "title": "Exceptions",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_exception_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_exception_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/leap_year3",
+    "platform_name": "JSVEE",
+    "title": "Leap Year3",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/leap_year3",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/leap_year3"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input4",
+    "platform_name": "JSVEE",
+    "title": "Power With Input4",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input4",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input4"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_concat_demo",
+    "platform_name": "JSVEE",
+    "title": "Concat Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_concat_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_concat_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_dict",
+    "platform_name": "JSVEE",
+    "title": "ae_python_dict",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_dict",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_dict"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_objects3",
+    "platform_name": "JSVEE",
+    "title": "Objects 3",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_objects3",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_objects3"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s06_ConstructorDemo",
+    "platform_name": "JSVEE",
+    "title": "Constructor Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s06_ConstructorDemo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s06_ConstructorDemo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/list_pop",
+    "platform_name": "JSVEE",
+    "title": "List Pop",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/list_pop",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/list_pop"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch03_s06_CashRegisterTester",
+    "platform_name": "JSVEE",
+    "title": "Cash Register Tester",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch03_s06_CashRegisterTester",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch03_s06_CashRegisterTester"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/greatest_divisor_brute_force",
+    "platform_name": "JSVEE",
+    "title": "Greatest Divisor Brute Force",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/greatest_divisor_brute_force",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/greatest_divisor_brute_force"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_array_demo",
+    "platform_name": "JSVEE",
+    "title": "Array Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_array_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_array_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_hiscore1",
+    "platform_name": "JSVEE",
+    "title": "Hiscore 1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_hiscore1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_hiscore1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_dict3",
+    "platform_name": "JSVEE",
+    "title": "Dictionary 3",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_dict3",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_dict3"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/partition3",
+    "platform_name": "JSVEE",
+    "title": "Partition3",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/partition3",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/partition3"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_input1",
+    "platform_name": "JSVEE",
+    "title": "Input 1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_input1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_input1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_nested_loops_v2",
+    "platform_name": "JSVEE",
+    "title": "Nested Loops",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_nested_loops_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_nested_loops_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_findmax",
+    "platform_name": "JSVEE",
+    "title": "Find Max",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_findmax",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_findmax"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s05_MethodDemo",
+    "platform_name": "JSVEE",
+    "title": "Method Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s05_MethodDemo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s05_MethodDemo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_StringExample_v2",
+    "platform_name": "JSVEE",
+    "title": "String Example",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_StringExample_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_StringExample_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/queue",
+    "platform_name": "JSVEE",
+    "title": "Queue",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/queue",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/queue"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_jeg_interface1_v2",
+    "platform_name": "JSVEE",
+    "title": "Interface",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_jeg_interface1_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_jeg_interface1_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_logic",
+    "platform_name": "JSVEE",
+    "title": "Logic",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_logic",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_logic"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/employee_class",
+    "platform_name": "JSVEE",
+    "title": "Employee Class",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/employee_class",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/employee_class"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_hiscore2",
+    "platform_name": "JSVEE",
+    "title": "Hiscore 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_hiscore2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_hiscore2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_dict2",
+    "platform_name": "JSVEE",
+    "title": "Dictionary 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_dict2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_dict2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/partition2",
+    "platform_name": "JSVEE",
+    "title": "Partition2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/partition2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/partition2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power",
+    "platform_name": "JSVEE",
+    "title": "Power",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/age_checking",
+    "platform_name": "JSVEE",
+    "title": "Age Checking",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/age_checking",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/age_checking"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format2",
+    "platform_name": "JSVEE",
+    "title": "Format 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_use_array_v2",
+    "platform_name": "JSVEE",
+    "title": "Using an Array2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_use_array_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_use_array_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/import_math",
+    "platform_name": "JSVEE",
+    "title": "Import Math",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/import_math",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/import_math"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_inheritance_polymorphism_2",
+    "platform_name": "JSVEE",
+    "title": "A Dog is also a Pet",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_inheritance_polymorphism_2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_inheritance_polymorphism_2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_simple_arithmetics",
+    "platform_name": "JSVEE",
+    "title": "Simpel Arithmetics",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_simple_arithmetics",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_simple_arithmetics"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/leap_year2",
+    "platform_name": "JSVEE",
+    "title": "Leap Year2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/leap_year2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/leap_year2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_halve",
+    "platform_name": "JSVEE",
+    "title": "Recursion Halve",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_halve",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_halve"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_file",
+    "platform_name": "JSVEE",
+    "title": "ae_python_file",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_file",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_file"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_greet",
+    "platform_name": "JSVEE",
+    "title": "Greet",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_greet",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_greet"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_while_demo",
+    "platform_name": "JSVEE",
+    "title": "While Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_while_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_while_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_nested_for_demo",
+    "platform_name": "JSVEE",
+    "title": "Nested For Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_nested_for_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_nested_for_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_greatest_divisor2",
+    "platform_name": "JSVEE",
+    "title": "Recursion Greatest Divisor2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_greatest_divisor2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_greatest_divisor2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format4",
+    "platform_name": "JSVEE",
+    "title": "f-string format 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format4",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format4"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/leap_year",
+    "platform_name": "JSVEE",
+    "title": "Leap Year",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/leap_year",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/leap_year"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_variables",
+    "platform_name": "JSVEE",
+    "title": "Variables",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_variables",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_variables"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/data_type_typeof",
+    "platform_name": "JSVEE",
+    "title": "Data Type Typeof",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/data_type_typeof",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/data_type_typeof"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_relational_operators_v2",
+    "platform_name": "JSVEE",
+    "title": "relational operators",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_relational_operators_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_relational_operators_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format1",
+    "platform_name": "JSVEE",
+    "title": "Format 1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/age_checking2",
+    "platform_name": "JSVEE",
+    "title": "Age Checking2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/age_checking2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/age_checking2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power2",
+    "platform_name": "JSVEE",
+    "title": "Power2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/partition",
+    "platform_name": "JSVEE",
+    "title": "Partition",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/partition",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/partition"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_tryexcept2",
+    "platform_name": "JSVEE",
+    "title": "Try Except 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_tryexcept2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_tryexcept2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_ifelse",
+    "platform_name": "JSVEE",
+    "title": "If Else",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_ifelse",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_ifelse"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_Measure",
+    "platform_name": "JSVEE",
+    "title": "Measure ",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_Measure",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_Measure"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_comparison",
+    "platform_name": "JSVEE",
+    "title": "Comparison",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_comparison",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_comparison"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/discount_calculator3",
+    "platform_name": "JSVEE",
+    "title": "Discount Calculator3",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/discount_calculator3",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/discount_calculator3"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_arithmetic_v2",
+    "platform_name": "JSVEE",
+    "title": "Arithmetic Operations",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_arithmetic_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_arithmetic_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/stack_lifo1",
+    "platform_name": "JSVEE",
+    "title": "Stack Lifo1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/stack_lifo1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/stack_lifo1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s03_VariableDemo",
+    "platform_name": "JSVEE",
+    "title": "Variable Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s03_VariableDemo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s03_VariableDemo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_functions1",
+    "platform_name": "JSVEE",
+    "title": "Functions 1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_functions1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_functions1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_objects1",
+    "platform_name": "JSVEE",
+    "title": "Objects 1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_objects1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_objects1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/data_type_isinstance",
+    "platform_name": "JSVEE",
+    "title": "Data Type Isinstance",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/data_type_isinstance",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/data_type_isinstance"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch01_s05_PrintTester",
+    "platform_name": "JSVEE",
+    "title": "Print Tester",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch01_s05_PrintTester",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch01_s05_PrintTester"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/find_target",
+    "platform_name": "JSVEE",
+    "title": "Find Target",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/find_target",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/find_target"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_hello",
+    "platform_name": "JSVEE",
+    "title": "Hello",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_hello",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_hello"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/greatest_divisor_brute_force2",
+    "platform_name": "JSVEE",
+    "title": "Greatest Divisor Brute Force2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/greatest_divisor_brute_force2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/greatest_divisor_brute_force2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_mult2_version1",
+    "platform_name": "JSVEE",
+    "title": "Recursion Mult2 Version1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_mult2_version1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_mult2_version1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_tostring_demo",
+    "platform_name": "JSVEE",
+    "title": "ToString Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_tostring_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_tostring_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_strings",
+    "platform_name": "JSVEE",
+    "title": "Strings",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_strings",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_strings"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_lists2",
+    "platform_name": "JSVEE",
+    "title": "Lists 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_lists2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_lists2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch01_s05_HelloPrinter",
+    "platform_name": "JSVEE",
+    "title": "Hello Printer",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch01_s05_HelloPrinter",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch01_s05_HelloPrinter"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_7_8",
+    "platform_name": "JSVEE",
+    "title": "For-each with break",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_7_8",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_7_8"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/stack_lifo2",
+    "platform_name": "JSVEE",
+    "title": "Stack Lifo2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/stack_lifo2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/stack_lifo2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/discount_calculator2",
+    "platform_name": "JSVEE",
+    "title": "Discount Calculator2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/discount_calculator2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/discount_calculator2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_ifelifelse",
+    "platform_name": "JSVEE",
+    "title": "If El If Else",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_ifelifelse",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_ifelifelse"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_class2",
+    "platform_name": "JSVEE",
+    "title": "ae_python_class2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_class2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_class2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_tryexcept1",
+    "platform_name": "JSVEE",
+    "title": "Try Except 1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_tryexcept1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_tryexcept1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input",
+    "platform_name": "JSVEE",
+    "title": "Power With Input",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/selection_sort",
+    "platform_name": "JSVEE",
+    "title": "Selection Sort",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/selection_sort",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/selection_sort"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/student_class",
+    "platform_name": "JSVEE",
+    "title": "Student Class",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/student_class",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/student_class"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_vals_refs2",
+    "platform_name": "JSVEE",
+    "title": "Values and References 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_vals_refs2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_vals_refs2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_float",
+    "platform_name": "JSVEE",
+    "title": "ae_python_float",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_float",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_float"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_use_2darray_v2",
+    "platform_name": "JSVEE",
+    "title": "Use 2D Array",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_use_2darray_v2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_use_2darray_v2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_vals_refs3",
+    "platform_name": "JSVEE",
+    "title": "Values and References 3",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_vals_refs3",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_vals_refs3"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_input",
+    "platform_name": "JSVEE",
+    "title": "ae_python_input",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_input",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_input"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_returnvalue",
+    "platform_name": "JSVEE",
+    "title": "Return value",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_returnvalue",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_returnvalue"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/studet_class2",
+    "platform_name": "JSVEE",
+    "title": "Studet Class2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/studet_class2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/studet_class2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_sum2",
+    "platform_name": "JSVEE",
+    "title": "Recursion Sum2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_sum2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_sum2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input2",
+    "platform_name": "JSVEE",
+    "title": "Power With Input2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_class1",
+    "platform_name": "JSVEE",
+    "title": "ae_python_class1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_class1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_class1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_nested_if",
+    "platform_name": "JSVEE",
+    "title": "Nested If",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_nested_if",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_nested_if"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_file2",
+    "platform_name": "JSVEE",
+    "title": "Files 2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_file2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_file2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/discount_calculator",
+    "platform_name": "JSVEE",
+    "title": "Discount Calculator",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/discount_calculator",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/discount_calculator"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_7_5",
+    "platform_name": "JSVEE",
+    "title": "For-Each",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_7_5",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_7_5"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/function_pass",
+    "platform_name": "JSVEE",
+    "title": "Function Pass",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/function_pass",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/function_pass"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch03_s01_CounterDemo",
+    "platform_name": "JSVEE",
+    "title": "Counter Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch03_s01_CounterDemo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch03_s01_CounterDemo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_lists3",
+    "platform_name": "JSVEE",
+    "title": "Lists 3",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_lists3",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_lists3"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_for",
+    "platform_name": "JSVEE",
+    "title": "For Loop",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_for",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_for"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_for",
+    "platform_name": "JSVEE",
+    "title": "ae_python_for",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_for",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_for"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_unary_demo",
+    "platform_name": "JSVEE",
+    "title": "Unary Operator Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_unary_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_unary_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_halve2",
+    "platform_name": "JSVEE",
+    "title": "Recursion Halve2",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_halve2",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_halve2"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/singly_linked_list",
+    "platform_name": "JSVEE",
+    "title": "Singly Linked List",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/singly_linked_list",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/singly_linked_list"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_dict1",
+    "platform_name": "JSVEE",
+    "title": "Dictionary 1",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Sirki\u00e4 Teemu"
+    ],
+    "institution": [
+      "Aalto Finland"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_dict1",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_dict1"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_do_while_demo",
+    "platform_name": "JSVEE",
+    "title": "DoWhile Demo",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Roya Hosseini"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Java"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_do_while_demo",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_do_while_demo"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_fibonacci",
+    "platform_name": "JSVEE",
+    "title": "Recursion Fibonacci",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_fibonacci",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_fibonacci"
+    ]
+  },
+  {
+    "catalog_type": "SLCItem",
+    "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/bubble_sort_best",
+    "platform_name": "JSVEE",
+    "title": "Bubble Sort Best",
+    "description": "",
+    "license": "MIT",
+    "author": [
+      "Kamil Akhuseyinoglu"
+    ],
+    "institution": [
+      "University of Pittsburgh"
+    ],
+    "keywords": [],
+    "features": [],
+    "programming_language": [
+      "Python"
+    ],
+    "natural_language": [
+      "en"
+    ],
+    "iframe_url": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/bubble_sort_best",
+    "protocol": [
+      "SPLICE"
+    ],
+    "protocol_url": [
+      "https://acos.cs.vt.edu/html/jsvee/jsvee-python/bubble_sort_best"
+    ]
+  }
+]

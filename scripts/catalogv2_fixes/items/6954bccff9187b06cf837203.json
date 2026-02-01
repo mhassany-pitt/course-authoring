@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2019-02-15T15:55:17.000Z",
-  "updated_at": "2026-01-17T12:55:44.676Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:46:04.477Z",
+  "tags": [],
   "identity": {
     "id": "3-21_ParamPassing",
     "title": "3-21_ParamPassing",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=3-21_ParamPassing&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-21_ParamPassing"
   },
   "attribution": {
     "created_at": "2019-02-15T15:55:17.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/*\n\u00a0* Demo of how Java handles pass-by-value in methods.\n\u00a0* \"Pass-by-value\" means that when a method is called, the values of the arguments\n\u00a0* get copied to the parameters of the method.  The method does its work using its\n\u00a0* own copy of the parameters, meaning that the original arguments are not affected.\n\u00a0*/\npublic class ParamPassing {\n\n\u00a0\u00a0\u00a0\u00a0// This swap method performs its actions on its own copies of the\n\u00a0\u00a0\u00a0\u00a0//  variables x and y, so x and y from main are not affected.\n\u00a0\u00a0\u00a0\u00a0public static void swap(int x, int y) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"in swap: x = \" + x + \", y = \" + y);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int temp = x;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0x = y;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0y = temp;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"in swap: x = \" + x + \", y = \" + y);\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0// This swap method performs its actions on its own copies of the\n\u00a0\u00a0\u00a0\u00a0//  variables x, index1, and index2.  However, because array variables\n\u00a0\u00a0\u00a0\u00a0//  are references, the copy of x still points to the same block of memory\n\u00a0\u00a0\u00a0\u00a0//  as the x reference in main.  Hence, the x in main *is* affected.\n\u00a0\u00a0\u00a0\u00a0public static void swap(int[] x, int index1, int index2)\n\u00a0\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int temp = x[index1];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0x[index1] = x[index2];\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0x[index2] = temp;\n\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int[] x = {10, 7, 13, 9, 4};\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"in main: x[2] = \" + x[2] + \", x[4] = \" + x[4]);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0swap(x, 2, 4);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"in main: x[2] = \" + x[2] + \", x[4] = \" + x[4]);\n\u00a0\u00a0\u00a0\u00a0}\n}\n"
+    "source_code": "/*\n * Demo of how Java handles pass-by-value in methods.\n * \"Pass-by-value\" means that when a method is called, the values of the arguments\n * get copied to the parameters of the method.  The method does its work using its\n * own copy of the parameters, meaning that the original arguments are not affected.\n */\npublic class ParamPassing {\n\n\t// This swap method performs its actions on its own copies of the\n\t//  variables x and y, so x and y from main are not affected.\n\tpublic static void swap(int x, int y) {\n\t\tSystem.out.println(\"in swap: x = \" + x + \", y = \" + y);\n\t\tint temp = x;\n\t\tx = y;\n\t\ty = temp;\n\t\tSystem.out.println(\"in swap: x = \" + x + \", y = \" + y);\n\t}\n\n\t// This swap method performs its actions on its own copies of the\n\t//  variables x, index1, and index2.  However, because array variables\n\t//  are references, the copy of x still points to the same block of memory\n\t//  as the x reference in main.  Hence, the x in main *is* affected.\n\tpublic static void swap(int[] x, int index1, int index2)\n\t{\n\t\tint temp = x[index1];\n\t\tx[index1] = x[index2];\n\t\tx[index2] = temp;\n\t}\n\t\n\tpublic static void main(String[] args) {\n\t\t\n\t\tint[] x = {10, 7, 13, 9, 4};\n\t\tSystem.out.println(\"in main: x[2] = \" + x[2] + \", x[4] = \" + x[4]);\n\t\tswap(x, 2, 4);\n\t\tSystem.out.println(\"in main: x[2] = \" + x[2] + \", x[4] = \" + x[4]);\n\t}\n}\n"
   },
   "classification": {
     "topics": [],
@@ -70,24 +68,23 @@
         "concepts": [
           "ActualMethodParameter",
           "ArrayDataType",
-          "ArrayDataType",
-          "ArrayElement",
+          "VoidDataType",
           "ArrayInitializationStatement",
-          "ArrayInitializer",
-          "ArrayVariable",
-          "ClassDefinition",
+          "SimpleAssignmentExpression",
+          "StringLiteral",
           "FormalMethodParameter",
-          "IntDataType",
-          "java.lang.System.out.println",
+          "ArrayElement",
           "MethodDefinition",
+          "ClassDefinition",
+          "java.lang.System.out.println",
+          "StaticMethodSpecifier",
+          "ArrayInitializer",
           "PublicClassSpecifier",
           "PublicMethodSpecifier",
-          "SimpleAssignmentExpression",
-          "StaticMethodSpecifier",
           "StringAddition",
           "StringDataType",
-          "StringLiteral",
-          "VoidDataType"
+          "IntDataType",
+          "ArrayVariable"
         ],
         "note": "",
         "created_at": null,
@@ -110,7 +107,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=3-21_ParamPassing&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-21_ParamPassing"
     }
   ],
   "rights": {

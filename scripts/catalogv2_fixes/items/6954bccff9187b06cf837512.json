@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2015-09-05T21:25:13.000Z",
-  "updated_at": "2026-01-17T12:57:16.402Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:13.495Z",
+  "tags": [],
   "identity": {
     "id": "printing_py",
     "title": "Simple Printing",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=printing_py&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-py/printing_py"
   },
   "attribution": {
     "created_at": "2015-09-05T21:25:13.000Z",
@@ -33,7 +31,7 @@
     ]
   },
   "content": {
-    "prompt": "",
+    "prompt": "Printing strings and numbers",
     "source_code": "# Example: Printing primitive data with print\n\nprint(\"Hello, World!\")\nprint(\"Here are integers:\", 10, 99)\nprint(\"Here are floats: \", 3.1415, 0.001)\nprint(\"Here are strings: \", \"IS12\", \"hello!\")\n"
   },
   "classification": {
@@ -79,7 +77,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=printing_py&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-py/printing_py"
     }
   ],
   "rights": {

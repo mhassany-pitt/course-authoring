@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:19.005Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:22.534Z",
+  "tags": [],
   "identity": {
     "id": "casting_num",
     "title": "casting_num",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=casting_num&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/casting_num"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/*\u00a0\u00a0\u00a0\u00a0Demonstrate casting of numeric types.\n\u00a0\u00a0\u00a0\u00a0   Written by:\n\u00a0\u00a0\u00a0\u00a0   Date:\n*/\n#include <stdio.h>\n\nint main (void)\n{\n//\u00a0\u00a0\u00a0\u00a0Local Declarations\n\u00a0\u00a0\u00a0\u00a0int    intNum1  = 100;\n\u00a0\u00a0\u00a0\u00a0int    intNum2  =  45;\n\u00a0\u00a0\u00a0\u00a0double fltNum1  = 100.0;\n\u00a0\u00a0\u00a0\u00a0double fltNum2  =  45.0;\n\u00a0\u00a0\u00a0\u00a0double fltNum3;\n\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0printf(\"intNum1 contains:  %3d\\n\",   intNum1);\n\u00a0\u00a0\u00a0\u00a0printf(\"intNum2 contains:  %3d\\n\",   intNum2);\n\u00a0\u00a0\u00a0\u00a0printf(\"fltNum1 contains:  %6.2f\\n\", fltNum1);\n\u00a0\u00a0\u00a0\u00a0printf(\"fltNum2 contains:  %6.2f\\n\", fltNum2);\n\n\u00a0\u00a0\u00a0\u00a0fltNum3 = (double)(intNum1 / intNum2);\n\u00a0\u00a0\u00a0\u00a0printf\n\u00a0\u00a0\u00a0\u00a0   (\"\\n(double)(intNum1 / intNum2): %6.2f\\n\",\n\u00a0\u00a0\u00a0\u00a0    fltNum3);\n\n\u00a0\u00a0\u00a0\u00a0fltNum3 = (double)intNum1 / intNum2;\n\u00a0\u00a0\u00a0\u00a0printf(\"(double) intNum1 / intNum2 : %6.2f\\n\",\n\u00a0\u00a0\u00a0\u00a0       fltNum3);\n\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\u00a0\u00a0\u00a0\u00a0// main"
+    "source_code": "/*\tDemonstrate casting of numeric types.\r\n\t   Written by:\r\n\t   Date:\r\n*/\r\n#include <stdio.h>\r\n\r\nint main (void)\r\n{\r\n//\tLocal Declarations \r\n\tint    intNum1  = 100;\r\n\tint    intNum2  =  45;\r\n\tdouble fltNum1  = 100.0;\r\n\tdouble fltNum2  =  45.0;\r\n\tdouble fltNum3;\r\n\t\r\n//\tStatements \r\n\tprintf(\"intNum1 contains:  %3d\\n\",   intNum1);\r\n\tprintf(\"intNum2 contains:  %3d\\n\",   intNum2);\r\n\tprintf(\"fltNum1 contains:  %6.2f\\n\", fltNum1);\r\n\tprintf(\"fltNum2 contains:  %6.2f\\n\", fltNum2);\r\n\t\r\n\tfltNum3 = (double)(intNum1 / intNum2);\r\n\tprintf \r\n\t   (\"\\n(double)(intNum1 / intNum2): %6.2f\\n\",\r\n\t    fltNum3);\r\n\t\r\n\tfltNum3 = (double)intNum1 / intNum2;\r\n\tprintf(\"(double) intNum1 / intNum2 : %6.2f\\n\",\r\n\t       fltNum3);\r\n\t\r\n\treturn 0;\r\n}\t// main "
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=casting_num&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/casting_num"
     }
   ],
   "rights": {

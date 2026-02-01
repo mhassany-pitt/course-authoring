@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-10T08:49:49.000Z",
-  "updated_at": "2026-01-17T05:27:04.391Z",
+  "updated_at": "2026-01-17T20:45:04.403Z",
   "tags": [],
   "identity": {
     "id": "Encontrar el Mayor Divisor de un Numero Positivo__68273d7266a8e1b992c81271-68273d7066a8e1b992c8126f-1",
@@ -40,22 +40,14 @@
     "knowledge_components": {
       "alice_edu_py_ontology expert": {
         "concepts": [
-          "SingleWhileLoopIteration",
-          "FindRemainder",
           "AssigningValueVariable",
-          "CallingLibraryFunction",
-          "BooleanEvaluating",
-          "ChangingValueVariable",
-          "Printing",
+          "FindRemainder",
           "Subtraction",
-          "SingleWhileLoopIteration",
-          "FindRemainder",
-          "AssigningValueVariable",
-          "CallingLibraryFunction",
           "BooleanEvaluating",
-          "ChangingValueVariable",
           "Printing",
-          "Subtraction"
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "SingleWhileLoopIteration"
         ],
         "note": "",
         "created_at": null,

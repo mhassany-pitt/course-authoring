@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:50.269Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:46.272Z",
+  "tags": [],
   "identity": {
     "id": "simple_inheritance_1",
     "title": "Simple Inheritance",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=simple_inheritance_1&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/simple_inheritance_1"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "public class Pet {\n\u00a0\u00a0\u00a0\u00a0public void speak(){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"speaking!\");\n\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0public void jump(){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"jumping!\");\n\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0public void walk(){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"walking!\");\u00a0\u00a0\u00a0\u00a0\n\u00a0\u00a0\u00a0\u00a0}\n}\n\npublic class Dog extends Pet {\n\n}\n\npublic class SimpleInheritance {\n\u00a0\u00a0\u00a0\u00a0public static void main(String args[]){\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Dog myDog = new Dog();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0myDog.speak();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0myDog.walk();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0myDog.jump();\n\u00a0\u00a0\u00a0\u00a0}\n}"
+    "source_code": "public class Pet {\r\n\n    public void speak(){\r\n\n        System.out.println(\"speaking!\");\r\n\n    }\r\n\n\tpublic void jump(){\r\n\n        System.out.println(\"jumping!\");\r\n\n    }\r\n\n    public void walk(){\r\n\n        System.out.println(\"walking!\");\t\r\n\n    }\r\n\n}\r\n\n\npublic class Dog extends Pet {\r\n\n\n}\r\n\n\npublic class SimpleInheritance {\r\n\n    public static void main(String args[]){\r\n\n        Dog myDog = new Dog();\r\n\n        myDog.speak();\r\n\n        myDog.walk();\r\n\n        myDog.jump();\r\n\n    }\r\n\n}"
   },
   "classification": {
     "topics": [],
@@ -79,7 +77,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=simple_inheritance_1&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/simple_inheritance_1"
     }
   ],
   "rights": {

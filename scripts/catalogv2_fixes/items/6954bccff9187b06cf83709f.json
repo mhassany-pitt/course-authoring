@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-13T15:17:11.000Z",
-  "updated_at": "2026-01-17T13:21:05.710Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:46:23.361Z",
+  "tags": [],
   "identity": {
     "id": "search_binary_rec_challenge",
     "title": "Recursive Binary Search Challenge",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct a function that uses recursive binary search to find if a specific value is in a list (known as a \"key\"). Recall: Binary search uses the \"Divide and Conquer\" strategy. Given a list of ordered integers, the key is searched by dividing the data list in half and only searching in the half that contains the key, and repeating the process until the key is found and the index of the key is returned. If the key is not found, -1 is returned.",
+    "source_code": "# Step 1: Define the function\ndef binary_search(data, key, low, high):\n    # Step 1.1: Set default values\n    guess = (high + low) // 2\n    # Step 1.2: Set terminating condition(s)\n    if low >= high:\n        return -1\n    elif key == data[guess]:\n        return data.index(key)\n    # Step 1.3: Set recursion condition\n    else:\n        if (key < data[guess]):\n            high = guess\n        else:\n            low = guess + 1\n        return binary_search(data, key, low, high)\n# Step 2: Test the function\nList = [2,4,8,15,19,20,22,29,31,35,38]\nkey = 5\nidx = binary_search(List, key, 0, len(List))\nprint(idx)"
   },
   "classification": {
     "topics": [],

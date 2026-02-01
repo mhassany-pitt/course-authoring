@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:26.329Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:02.343Z",
+  "tags": [],
   "identity": {
     "id": "session_example",
     "title": "ISD::SessionExample.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=session_example"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/session_example"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 19.13: SessionExample.java\r\n// Using sessions.\r\nimport javax.servlet.*;\r\nimport javax.servlet.http.*;\r\nimport java.io.*;\r\n\r\npublic class SessionExample extends HttpServlet {\r\n   private final static String names[] =\r\n      { \"C\", \"C++\", \"Java\", \"Visual Basic 6\" };\r\n   private final static String isbn[] = {\r\n      \"0-13-226119-7\", \"0-13-528910-6\",\r\n      \"0-13-012507-5\", \"0-13-528910-6\" };\r\n \r\n   public void doPost( HttpServletRequest request,\r\n                       HttpServletResponse response )\r\n      throws ServletException, IOException\r\n   {\r\n      PrintWriter output;\r\n      String language = request.getParameter( \"lang\" );\r\n\r\n      // Get the user's session object.\r\n\n      // Create a session (true) if one does not exist.\r\n\n      HttpSession session = request.getSession( true );\r\n\n\n      // add a value for user's choice to session\r\n\n      session.putValue( language, getISBN( language ) );\r\n\n\n      response.setContentType( \"text/html\" );\r\n\n      output = response.getWriter();\r\n\n\n      // send HTML page to client\r\n\n      output.println( \"<HTML><HEAD><TITLE>\" );\r\n\n      output.println( \"Sessions\" );\r\n\n      output.println( \"</TITLE></HEAD><BODY>\" );\r\n\n      output.println( \"<P>Welcome to Sessions!<BR>\" );\r\n\n      output.println( \"<P>\" );\r\n\n      output.println( language );\r\n\n      output.println( \" is a great language.\" );\r\n\n      output.println( \"</BODY></HTML>\" );\r\n\n\n      output.close();    // close stream\r\n\n   }\r\n\n\n   public void doGet( HttpServletRequest request,\r\n\n                      HttpServletResponse response )\r\n\n                      throws ServletException, IOException\r\n\n   {\r\n\n      PrintWriter output;\r\n\n\n      // Get the user's session object.\r\n\n      // Don't create a session (false) if one does not exist.\r\n\n      HttpSession session = request.getSession( false );\r\n\n\n      // get names of session object's values\r\n\n      String valueNames[];\r\n\n\n      if ( session != null )\r\n\n         valueNames = session.getValueNames();\r\n\n      else\r\n\n         valueNames = null;\r\n\n\n      response.setContentType( \"text/html\" ); \r\n\n      output = response.getWriter();\r\n\n\n      output.println( \"<HTML><HEAD><TITLE>\" );\r\n\n      output.println( \"Sessions II\" );\r\n\n      output.println( \"</TITLE></HEAD><BODY>\" );\r\n\n\n      if ( valueNames != null && valueNames.length != 0 ) {\r\n\n         output.println( \"<H1>Recommendations</H1>\" );\r\n\n\n         // get value for each name in valueNames\r\n\n         for ( int i = 0; i < valueNames.length; i++ ) {\r\n\n            String value =\r\n\n               (String) session.getValue( valueNames[ i ] );\r\n\n\n            output.println(\r\n\n               valueNames[ i ] + \" How to Program. \" +\r\n\n               \"ISBN#: \" + value + \"<BR>\" );\r\n\n         }\r\n\n      }\r\n\n      else {\r\n\n         output.println( \"<H1>No Recommendations</H1>\" );\r\n\n         output.println( \"You did not select a language or\" );\r\n\n         output.println( \"the session has expired.\" );\r\n\n      }\r\n\n\n      output.println( \"</BODY></HTML>\" );\r\n\n      output.close();    // close stream\r\n\n   }\r\n\n\n   private String getISBN( String lang )\r\n\n   {\r\n\n      for ( int i = 0; i < names.length; ++i )\r\n\n         if ( lang.equals( names[ i ] ) )\r\n\n            return isbn[ i ];\r\n\n\n       return \"\";  // no matching string found\r\n\n   }\r\n\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=session_example"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/session_example"
     }
   ],
   "rights": {

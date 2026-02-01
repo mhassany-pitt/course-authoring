@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-08T21:20:28.000Z",
-  "updated_at": "2026-01-17T12:57:46.662Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:14.178Z",
+  "tags": [],
   "identity": {
     "id": "c_ch2_string_variables",
     "title": "Ctring Variables",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=c_ch2_string_variables&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_string_variables"
   },
   "attribution": {
     "created_at": "2014-09-08T21:20:28.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <iostream>\n#include <string>\u00a0\u00a0\u00a0\u00a0\nusing namespace std;\n\nint main()\n{\n\u00a0\u00a0\u00a0\u00a0string movieTitle;\n\n\u00a0\u00a0\u00a0\u00a0movieTitle = \"Wheels of Fury\";\n\u00a0\u00a0\u00a0\u00a0cout << \"My favorite movie is \" << movieTitle << endl;\n\u00a0\u00a0\u00a0\u00a0return 0;\n}"
+    "source_code": "#include <iostream>\n#include <string>\t \nusing namespace std;\n\nint main()\n{\n    string movieTitle;\n \n    movieTitle = \"Wheels of Fury\";\n    cout << \"My favorite movie is \" << movieTitle << endl;\n    return 0;\n}"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=c_ch2_string_variables&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_string_variables"
     }
   ],
   "rights": {

@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:18.719Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:22.301Z",
+  "tags": [],
   "identity": {
     "id": "compound_assign",
     "title": "compound_assign",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=compound_assign&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/compound_assign"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/*\u00a0\u00a0\u00a0\u00a0Demonstrate examples of compound assignments.  */\n#include <stdio.h>\n\nint main (void)\n{\n//\u00a0\u00a0\u00a0\u00a0Local Declarations\n\u00a0\u00a0\u00a0\u00a0int x;\n\u00a0\u00a0\u00a0\u00a0int y;\n\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0x = 10;\n\u00a0\u00a0\u00a0\u00a0y = 5;\n\n\u00a0\u00a0\u00a0\u00a0printf(\"x: %2d  |  y: %2d \",    x, y);\n\u00a0\u00a0\u00a0\u00a0printf(\"  |  x *= y + 2: %2d \", x *= y + 2);\n\u00a0\u00a0\u00a0\u00a0printf(\"  |  x is now: %2d\\n\",  x);\n\n\u00a0\u00a0\u00a0\u00a0x = 10;\n\u00a0\u00a0\u00a0\u00a0printf(\"x: %2d  |  y: %2d \",    x, y);\n\u00a0\u00a0\u00a0\u00a0printf(\"  |  x /= y + 1: %2d \", x /= y + 1);\n\u00a0\u00a0\u00a0\u00a0printf(\"  |  x is now: %2d\\n\",  x);\n\n\u00a0\u00a0\u00a0\u00a0x = 10;\n\u00a0\u00a0\u00a0\u00a0printf(\"x: %2d  |  y: %2d \",     x, y);\n\u00a0\u00a0\u00a0\u00a0printf(\"  |  x %%= y - 3: %2d \", x %= y - 3);\n\u00a0\u00a0\u00a0\u00a0printf(\"  |  x is now: %2d\\n\", x);\n\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\u00a0\u00a0\u00a0\u00a0// main"
+    "source_code": "/*\tDemonstrate examples of compound assignments.  */\r\n#include <stdio.h>\r\n\r\nint main (void)\r\n{\r\n//\tLocal Declarations \r\n\tint x;\r\n\tint y;\r\n\r\n//\tStatements \r\n\tx = 10;\r\n\ty = 5;\r\n\r\n\tprintf(\"x: %2d  |  y: %2d \",    x, y);\r\n\tprintf(\"  |  x *= y + 2: %2d \", x *= y + 2);\r\n\tprintf(\"  |  x is now: %2d\\n\",  x);\r\n\r\n\tx = 10;\r\n\tprintf(\"x: %2d  |  y: %2d \",    x, y);\r\n\tprintf(\"  |  x /= y + 1: %2d \", x /= y + 1);\r\n\tprintf(\"  |  x is now: %2d\\n\",  x);\r\n\r\n\tx = 10;\r\n\tprintf(\"x: %2d  |  y: %2d \",     x, y);\r\n\tprintf(\"  |  x %%= y - 3: %2d \", x %= y - 3);\r\n\tprintf(\"  |  x is now: %2d\\n\", x);\r\n\r\n\treturn 0;\r\n}\t// main "
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=compound_assign&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/compound_assign"
     }
   ],
   "rights": {

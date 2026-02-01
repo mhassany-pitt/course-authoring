@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:40.112Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:38.356Z",
+  "tags": [],
   "identity": {
     "id": "OperatorExample_v2",
     "title": "Operator",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=OperatorExample_v2&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/OperatorExample_v2"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "public class Operator{\n\u00a0\u00a0public static void main(String[] argv) {\n\u00a0\u00a0\u00a0\u00a0int a = 3 % 2;\n\u00a0\u00a0\u00a0\u00a0int b = 11 % 3;\n\u00a0\u00a0\u00a0\u00a0int c = 7 % -3;\n\n\u00a0\u00a0\u00a0\u00a0System.out.println(a);\n\u00a0\u00a0\u00a0\u00a0System.out.println(b);\n\u00a0\u00a0\u00a0\u00a0System.out.println(c);\n\u00a0\u00a0}\n}"
+    "prompt": "Operator",
+    "source_code": "public class Operator{    \n  public static void main(String[] argv) {    \n    int a = 3 % 2;    \n    int b = 11 % 3;    \n    int c = 7 % -3;    \n\n    System.out.println(a);    \n    System.out.println(b);    \n    System.out.println(c);    \n  }    \n}  "
   },
   "classification": {
     "topics": [],
@@ -75,7 +73,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=OperatorExample_v2&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/OperatorExample_v2"
     }
   ],
   "rights": {

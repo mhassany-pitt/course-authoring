@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-12T23:56:07.000Z",
-  "updated_at": "2026-01-17T13:21:06.492Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:46:23.750Z",
+  "tags": [],
   "identity": {
     "id": "print_a_right_square_star_pattern_ch",
     "title": "Printing the outline of a square star pattern Challenge",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Construct a program that takes an input as the size of a square and print the outline of the square.\\nFor example, if a user\u2019s input is 4, the printed square should look like:\\n****\\n*  *\\n*  *\\n****",
+    "source_code": "# Step 1: Read the size of the square star pattern\nsize = int(input(\"Enter size of side of square :\"))\n# Step 2: Print the rows in the star pattern, one by one\nfor i in range(size):\n    # Step 2.1: Check if the current row is the first or the last one\n    if i == 0 or i == size - 1:\n        for k in range(size):\n            print(\"*\", end = \"\")\n    else:\n        print(\"*\", end = \"\")\n        # Step 2.2: Print other rows pattern.\n        for j in range(size - 2):\n            print(\" \", end = \"\")\n        print(\"*\", end=\"\")\n    # Step 3: Print the next line\n    print()"
   },
   "classification": {
     "topics": [],

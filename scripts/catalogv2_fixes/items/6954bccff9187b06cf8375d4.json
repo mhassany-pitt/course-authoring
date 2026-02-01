@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-08T20:51:56.000Z",
-  "updated_at": "2026-01-17T12:57:47.555Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:14.951Z",
+  "tags": [],
   "identity": {
     "id": "c_ch2_n",
     "title": "Using End of Line Statement",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=c_ch2_n&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_n"
   },
   "attribution": {
     "created_at": "2014-09-08T20:51:56.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n\u00a0\u00a0\u00a0\u00a0cout << \"The following items were top sellers\";\n\u00a0\u00a0\u00a0\u00a0cout << \"during the month of June:\";\n\u00a0\u00a0\u00a0\u00a0cout << \"Computer gamesCoffee\";\n\u00a0\u00a0\u00a0\u00a0cout << \"Aspirin\";\n\u00a0\u00a0\u00a0\u00a0return 0;\n}"
+    "source_code": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    cout << \"The following items were top sellers\";\n    cout << \"during the month of June:\";\n    cout << \"Computer gamesCoffee\";\n    cout << \"Aspirin\";\n    return 0;\n}"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=c_ch2_n&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_n"
     }
   ],
   "rights": {

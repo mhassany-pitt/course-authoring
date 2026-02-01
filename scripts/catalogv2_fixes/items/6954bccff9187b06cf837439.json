@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:24.446Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:00.640Z",
+  "tags": [],
   "identity": {
     "id": "label_test",
     "title": "ISD::LabelTest.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=label_test"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/label_test"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 12.4: LabelTest.java\n// Demonstrating the JLabel class.\nimport javax.swing.*;\n\nimport java.awt.*;\n\nimport java.awt.event.*;\n\n\n\npublic class LabelTest extends JFrame {\n   private JLabel label1, label2, label3;\n\n   public LabelTest()\n   {\n      super( \"Testing JLabel\" );\n\n      Container c = getContentPane();\n      c.setLayout( new FlowLayout() );\n\n\n      // JLabel constructor with a string argument\n      label1 = new JLabel( \"Label with text\" );\n      label1.setToolTipText( \"This is label1\" );\r\n\n      c.add( label1 );\r\n\n\n\n      // JLabel constructor with string, Icon and\n      // alignment arguments\n      Icon bug = new ImageIcon( \"bug1.gif\" );\n      label2 = new JLabel( \"Label with text and icon\",\n\n\n      label2.setToolTipText( \"This is label2\" );\n      c.add( label2 );\n\n\n      // JLabel constructor no arguments\n      label3 = new JLabel();\n      label3.setText( \"Label with icon and text at bottom\" );\n      label3.setIcon( bug );\n      label3.setHorizontalTextPosition(\n         SwingConstants.CENTER );\n      label3.setVerticalTextPosition(\n         SwingConstants.BOTTOM );\n      label3.setToolTipText( \"This is label3\" );\n      c.add( label3 );\n\n\n      setSize( 275, 170 );\n      show();\n   }\n\n\n   public static void main( String args[] )\n   {\n      LabelTest app = new LabelTest();\n\n\n      app.addWindowListener(\n         new WindowAdapter() {\n            public void windowClosing( WindowEvent e )\n            {\n               System.exit( 0 );\n            }\n         }\n      );\n   }\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=label_test"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/label_test"
     }
   ],
   "rights": {

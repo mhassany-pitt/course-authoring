@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:28.677Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:04.286Z",
+  "tags": [],
   "identity": {
     "id": "Point",
     "title": "DEPRECATED_Point",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=Point"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Point"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "//Sun Java Tutorial, Learning the Java Language>> Classes and Objects\r\n//Initializing an Object\r\n\r\npublic class Point {\r\n    public int x = 0;\r\n    public int y = 0;\r\n    //constructor\r\n    public Point(int a, int b) {\r\n\tx = a;\r\n\ty = b;\r\n    }\r\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=Point"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Point"
     }
   ],
   "rights": {

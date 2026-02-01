@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-08T21:29:02.000Z",
-  "updated_at": "2026-01-17T12:57:46.255Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:13.882Z",
+  "tags": [],
   "identity": {
     "id": "c_ch2_initialize_variable",
     "title": "Initializing Variables",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=c_ch2_initialize_variable&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_initialize_variable"
   },
   "attribution": {
     "created_at": "2014-09-08T21:29:02.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main()\n{\nstring month = \"February\";\nint year,\u00a0\u00a0\u00a0\u00a0\n\u00a0\u00a0\u00a0\u00a0days = 28;\u00a0\u00a0\u00a0\u00a0\n\nyear = 2007;\u00a0\u00a0\u00a0\u00a0\n\ncout << \"In \"   << year << \" \" << month\n\nreturn 0;\n}"
+    "source_code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main()\n{\nstring month = \"February\";     \nint year,\t    \n    days = 28;\t    \n\nyear = 2007;\t   \n\ncout << \"In \"   << year << \" \" << month \n\nreturn 0;\n}"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=c_ch2_initialize_variable&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_initialize_variable"
     }
   ],
   "rights": {

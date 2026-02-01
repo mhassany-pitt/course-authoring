@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:25.622Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:27.132Z",
+  "tags": [],
   "identity": {
     "id": "ForStatement",
     "title": "ForStatement",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=ForStatement&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/ForStatement"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\nint main( void )\n{\n\u00a0\u00a0\u00a0int row, col;\n\n\u00a0\u00a0\u00a0for ( row = 1; row <= 10; row++ ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( col = 1; col <= row; col++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"*\" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"\\n\" );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0printf( \"\\n\" );\n\u00a0\u00a0\u00a0for ( row = 10; row >= 1; row-- ) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0for ( col = 1; col <= row; col++ )\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"*\" );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf( \"\\n\" );\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0return 0;\n}"
+    "source_code": "#include <stdio.h>\r\nint main( void )\r\n{ \r\n   int row, col;\r\n\r\n   for ( row = 1; row <= 10; row++ ) { \r\n      for ( col = 1; col <= row; col++ )\r\n         printf( \"*\" );\r\n      printf( \"\\n\" );\r\n   }\r\n   printf( \"\\n\" );\r\n   for ( row = 10; row >= 1; row-- ) { \r\n      for ( col = 1; col <= row; col++ )\r\n         printf( \"*\" );\r\n      printf( \"\\n\" );\r\n   }\r\n   return 0;\r\n}"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=ForStatement&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/ForStatement"
     }
   ],
   "rights": {

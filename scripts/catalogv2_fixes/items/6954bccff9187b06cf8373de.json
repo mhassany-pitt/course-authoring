@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T13:19:10.156Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:50.258Z",
+  "tags": [],
   "identity": {
     "id": "use_2darray",
     "title": "DEPRECATED_Use 2D Array",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=use_2darray"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/use_2darray"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "public class Test2Darray {\r\n  public static void main(String args[]) {\r\n    int[][] multiD = {       { 1, 2, 3, 4 },        { 5, 6, 7 }    };\r\n    System.out.println(\"The element at [0][2] is \" + multiD[0][2]);\r\n  }\r\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=use_2darray"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/use_2darray"
     }
   ],
   "rights": {

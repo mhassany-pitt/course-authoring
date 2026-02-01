@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-06-09T10:57:07.000Z",
-  "updated_at": "2026-01-17T12:55:30.687Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:41.255Z",
+  "tags": [],
   "identity": {
     "id": "csedpad_arraylists_ex1",
     "title": "(Arraylists) Ex1 - CsEdPad",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_arraylists_ex1&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_arraylists_ex1"
   },
   "attribution": {
     "created_at": "2020-06-09T10:57:07.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "import java.util.ArrayList;\n\npublic class ArrayListEx1 {\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\n\u00a0\u00a0\u00a0\u00a0    ArrayList < String > travelList = new ArrayList < String > ();\n\n\u00a0\u00a0\u00a0\u00a0    travelList.add(\"Switzerland\");\n\u00a0\u00a0\u00a0\u00a0    travelList.add(\"Denmark\");\n\u00a0\u00a0\u00a0\u00a0    travelList.add(\"India\");\n\u00a0\u00a0\u00a0\u00a0    travelList.add(\"China\");\n\u00a0\u00a0\u00a0\u00a0    travelList.add(\"Thailand\");\n\u00a0\u00a0\u00a0\u00a0    travelList.add(\"Bhutan\");\n\n\u00a0\u00a0\u00a0\u00a0    ArrayList < String > newTravelList = new ArrayList <  > ();\n\n\u00a0\u00a0\u00a0\u00a0    for (int i = 0; i < 5; i++) {\n\u00a0\u00a0\u00a0\u00a0        newTravelList.add(i, travelList.get(i));\n\u00a0\u00a0\u00a0\u00a0    }\n\n\u00a0\u00a0\u00a0\u00a0    newTravelList.remove(\"China\");\n\n\u00a0\u00a0\u00a0\u00a0    newTravelList.remove(0);\n\u00a0\u00a0\u00a0\u00a0    System.out.print(newTravelList);\n\n\u00a0\u00a0\u00a0\u00a0}\n}"
+    "prompt": "This program shows a person original travel list and creating new travel list from original and making some changes on new travel list.",
+    "source_code": "import java.util.ArrayList;\n\npublic class ArrayListEx1 {\n    public static void main(String[] args) {\n\n\t    ArrayList < String > travelList = new ArrayList < String > ();\n\n\t    travelList.add(\"Switzerland\");\n\t    travelList.add(\"Denmark\");\n\t    travelList.add(\"India\");\n\t    travelList.add(\"China\");\n\t    travelList.add(\"Thailand\");\n\t    travelList.add(\"Bhutan\");\n\n\t    ArrayList < String > newTravelList = new ArrayList <  > ();\n\n\t    for (int i = 0; i < 5; i++) {\n\t        newTravelList.add(i, travelList.get(i));\n\t    }\n\n\t    newTravelList.remove(\"China\");\n\n\t    newTravelList.remove(0);\n\t    System.out.print(newTravelList);\n\n    }\n}"
   },
   "classification": {
     "topics": [],
@@ -119,7 +117,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_arraylists_ex1&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_arraylists_ex1"
     }
   ],
   "rights": {

@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-05-12T02:51:10.000Z",
-  "updated_at": "2026-01-17T12:55:32.015Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:42.300Z",
+  "tags": [],
   "identity": {
     "id": "csedpad_logicaloperators_leapyear",
     "title": "(LogicalOperators) Leap year - CSEdPad",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_logicaloperators_leapyear&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_logicaloperators_leapyear"
   },
   "attribution": {
     "created_at": "2020-05-12T02:51:10.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "public class LeapYear {\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//initialise a variable to store the value of the year which is to be evaluated as a leap year or not a leap year\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int year = 2020;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0String leapYear;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//use logical and conditional operators to check whether a year is leap year or not.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0leapYear = (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)) ? \"It's a leap Year\": \"Not a Leap year!\";\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(leapYear);\n\u00a0\u00a0\u00a0\u00a0}\n}"
+    "prompt": "This program checks whether a year is a leap year or not",
+    "source_code": "public class LeapYear {\n\tpublic static void main(String[] args) {\n\t\t//initialise a variable to store the value of the year which is to be evaluated as a leap year or not a leap year\n\t\tint year = 2020;\n\t\tString leapYear;\n\t\t//use logical and conditional operators to check whether a year is leap year or not.\n\t\tleapYear = (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)) ? \"It's a leap Year\": \"Not a Leap year!\";\n\t\tSystem.out.println(leapYear);\n\t}\n}"
   },
   "classification": {
     "topics": [],
@@ -111,7 +109,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_logicaloperators_leapyear&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_logicaloperators_leapyear"
     }
   ],
   "rights": {

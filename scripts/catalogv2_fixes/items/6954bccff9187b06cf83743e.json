@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:25.050Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:01.267Z",
+  "tags": [],
   "identity": {
     "id": "combobox_test",
     "title": "ISD::ComboBoxTest.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=combobox_test"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/combobox_test"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 12.13: ComboBoxTest.java\n\n// Using a JComboBox to select an image to display.\n\nimport java.awt.*;\n\nimport java.awt.event.*;\n\nimport javax.swing.*;\n\n\n\npublic class ComboBoxTest extends JFrame {\n   private JComboBox images;\n   private JLabel label;\n   private String names[] =\n      { \"bug1.gif\", \"bug2.gif\",\n        \"travelbug.gif\", \"buganim.gif\" };\n   private Icon icons[] =\n      { new ImageIcon( names[ 0 ] ),\n        new ImageIcon( names[ 1 ] ),\n        new ImageIcon( names[ 2 ] ),\n        new ImageIcon( names[ 3 ] ) };\n\n\n   public ComboBoxTest()\n   {\n      super( \"Testing JComboBox\" );\n\n\n      Container c = getContentPane();\n      c.setLayout( new FlowLayout() );\n\n\n      images = new JComboBox( names );\n      images.setMaximumRowCount( 3 );\r\n\n\n\n      images.addItemListener(\n         new ItemListener() {\n            public void itemStateChanged( ItemEvent e )\n            {\n               label.setIcon(\n                  icons[ images.getSelectedIndex() ] );\n            }\n         }\n      );\n\n\n      c.add( images );\n\n\n      label = new JLabel( icons[ 0 ] );\n      c.add( label );\n\n\n      setSize( 350, 100 );\n      show();\n   }\n\n\n   public static void main( String args[] )\n   {\n      ComboBoxTest app = new ComboBoxTest();\n\n\n      app.addWindowListener(\n         new WindowAdapter() {\n            public void windowClosing( WindowEvent e )\n            {\n               System.exit( 0 );\n            }\n         }\n      );\n   }\n\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=combobox_test"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/combobox_test"
     }
   ],
   "rights": {

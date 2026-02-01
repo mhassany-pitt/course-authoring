@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:57:57.245Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:18.754Z",
+  "tags": [],
   "identity": {
     "id": "count_occur",
     "title": "count_occur",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=count_occur&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/count_occur"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\n#define GIVENCH 'e'\nvoid main(void)\n{\n\u00a0\u00a0int occurrences; char nextch;\n\u00a0\u00a0FILE *text;\n\u00a0\u00a0text = fopen(\"inputfile.txt\",\"r\");\n\u00a0\u00a0occurrences = 0;\n\u00a0\u00a0nextch = getc(text);\n\u00a0\u00a0while (!feof(text))\n\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0if (nextch == GIVENCH) occurrences++;\n\u00a0\u00a0\u00a0\u00a0nextch = getc(text);\n\u00a0\u00a0\u00a0}\n\u00a0\u00a0fclose(text);\n\u00a0\u00a0printf(\"The character %c\", GIVENCH);\n\u00a0\u00a0printf(\" appears %i times.\\n\", occurrences);\n}\n}"
+    "source_code": "#include <stdio.h>\r\n#define GIVENCH 'e'\r\nvoid main(void)\r\n{\r\n  int occurrences; char nextch;\r\n  FILE *text;\r\n  text = fopen(\"inputfile.txt\",\"r\");\r\n  occurrences = 0;\r\n  nextch = getc(text);\r\n  while (!feof(text))\r\n  {\r\n    if (nextch == GIVENCH) occurrences++;\r\n    nextch = getc(text);\r\n   } \r\n  fclose(text);\r\n  printf(\"The character %c\", GIVENCH);\r\n  printf(\" appears %i times.\\n\", occurrences);\r\n}\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=count_occur&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/count_occur"
     }
   ],
   "rights": {

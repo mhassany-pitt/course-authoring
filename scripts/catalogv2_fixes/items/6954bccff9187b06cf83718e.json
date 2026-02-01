@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-06-08T22:39:42.000Z",
-  "updated_at": "2026-01-17T13:18:53.863Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:41.669Z",
+  "tags": [],
   "identity": {
     "id": "csedpad_switch_convertdresssizenumbertoname",
     "title": "(Switch) Convert dress size number - CSEdPad",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_switch_convertdresssizenumbertoname&svc=progvis"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_switch_convertdresssizenumbertoname"
   },
   "attribution": {
     "created_at": "2020-06-08T22:39:42.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Given a user-supplied US dress size (2, 4, 6, etc.), output the corresponding size label (XS, S, M, L, etc.).",
+    "source_code": "import java.util.Scanner;\n\npublic class ConvertDressSizeNumberToName {\n\n     public static void main(String args[]) {\n\n        Scanner scan = new Scanner(System.in);\n        System.out.print(\"\\nEnter a US dress size (2, 4, 6, 8, 10, or 12): \");\n        int size = scan.nextInt();\n        scan.close();\n    \n        String output = \"Size: \";\n\n        switch (size) {\n\t        case 2:\n\t        case 4:\n\t            output += \"XS\";\n\t            break;\n\t        case 6:\n\t            output += \"S\";\n\t            break;\n\t        case 8:\n\t            output += \"M\";\n\t            break;\n\t        case 10:\n\t            output += \"L\";\n\t            break;\n\t        case 12:\n\t            output += \"XL\";\n\t            break;\n\n\t        default:\n\t            output = \"Error: \" + size + \" is not a valid US dress size\";\n\t            break;\n        }\n\n        System.out.println(\"\\n\" + output);\n    }\n    \n}"
   },
   "classification": {
     "topics": [],
@@ -124,7 +121,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_switch_convertdresssizenumbertoname&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_switch_convertdresssizenumbertoname"
     }
   ],
   "rights": {

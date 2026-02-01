@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-05-27T23:26:56.000Z",
-  "updated_at": "2026-01-17T05:27:19.123Z",
+  "updated_at": "2026-01-17T20:45:06.368Z",
   "tags": [],
   "identity": {
     "id": "py_first_even_number_es",
@@ -40,14 +40,13 @@
     "knowledge_components": {
       "alice_edu_py_ontology jordan": {
         "concepts": [
-          "IntegerLiteral",
-          "ComparisonExpression",
-          "SingleForLoopIteration",
           "IfCheckingInForLoop",
           "ComparisonExpression",
-          "BooleanLiteral",
+          "FindRemainder",
+          "IntegerLiteral",
           "CheckingForItem",
-          "FindRemainder"
+          "BooleanLiteral",
+          "SingleForLoopIteration"
         ],
         "note": "",
         "created_at": null,

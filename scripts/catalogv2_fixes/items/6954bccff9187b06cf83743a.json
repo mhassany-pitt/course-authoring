@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:24.566Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:00.749Z",
+  "tags": [],
   "identity": {
     "id": "show_color2",
     "title": "ISD::ShowColors2.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=show_color2"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/show_color2"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 11.6: ShowColors2.java\n\n// Demonstrating JColorChooser\n\nimport java.awt.*;\n\nimport javax.swing.*;\n\nimport java.awt.event.*;\n\n\n\npublic class ShowColors2 extends JFrame {\n   private JButton changeColor;\n   private Color color = Color.lightGray;\n   private Container c;\n\n\n   public ShowColors2()\n\n   {\n      super( \"Using JColorChooser\" );\n\n\n      c = getContentPane();\n      c.setLayout( new FlowLayout() );\n\n\n      changeColor = new JButton( \"Change Color\" );\n      changeColor.addActionListener(\n         new ActionListener() {\n            public void actionPerformed( ActionEvent e )\n            {\n               color =\n                  JColorChooser.showDialog( ShowColors2.this,\n                     \"Choose a color\", color );\n\n\n               if ( color == null )\n                  color = Color.lightGray;\n\n\n               c.setBackground( color );\n               c.repaint();\n            }\n         }\n      );\n      c.add( changeColor );\n\n\n      setSize( 400, 130 );\n\n      show();\n\n   }\n\n\n   public static void main( String args[] )\n   {\n      ShowColors2 app = new ShowColors2();\n\n\n      app.addWindowListener(\n         new WindowAdapter() {\n            public void windowClosing( WindowEvent e )\n            {\n               System.exit( 0 );\n            }\n         }\n      );\n   }\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=show_color2"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/show_color2"
     }
   ],
   "rights": {

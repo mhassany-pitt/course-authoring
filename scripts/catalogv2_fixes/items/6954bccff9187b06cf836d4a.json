@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-10T18:16:57.000Z",
-  "updated_at": "2026-01-17T05:27:01.867Z",
+  "updated_at": "2026-01-17T20:45:02.188Z",
   "tags": [],
   "identity": {
     "id": "Calculo y Redondeo del Indice de Masa Corporal (IMC) al Entero Mas Cercano.__684855dadf5ea13f28e43796-684855d8df5ea13f28e43794-1",
@@ -40,26 +40,16 @@
     "knowledge_components": {
       "alice_edu_py_ontology expert": {
         "concepts": [
-          "TransformingToFloatType",
-          "Multiplication",
           "AssigningValueVariable",
-          "HandlingInput",
-          "CallingLibraryFunction",
-          "ChangingValueVariable",
-          "Printing",
-          "Power",
-          "Division",
+          "TransformingToFloatType",
           "Round",
-          "TransformingToFloatType",
           "Multiplication",
-          "AssigningValueVariable",
-          "HandlingInput",
-          "CallingLibraryFunction",
-          "ChangingValueVariable",
           "Printing",
+          "CallingLibraryFunction",
           "Power",
           "Division",
-          "Round"
+          "HandlingInput",
+          "ChangingValueVariable"
         ],
         "note": "",
         "created_at": null,

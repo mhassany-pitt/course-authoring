@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-05-12T00:48:26.000Z",
-  "updated_at": "2026-01-17T12:55:32.566Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:42.733Z",
+  "tags": [],
   "identity": {
     "id": "csedpad_preliminary_averagespeedinmarathon",
     "title": "(Preliminary)AverageSpeedInMarathon-CSEdPad",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_preliminary_averagespeedinmarathon&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_preliminary_averagespeedinmarathon"
   },
   "attribution": {
     "created_at": "2020-05-12T00:48:26.000Z",
@@ -33,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": "",
-    "source_code": "public class AverageSpeedInMarathon {\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//Declare multiple constant variables\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// i.e 26 miles 285 yards\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0final double MILES_PER_MARATHON = 26.21875;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0final int SEC_PER_HR = 3600;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0final int SEC_PER_MIN = 60;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//Declare multiple variables to hold marathon run time.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double runtimeHrs = 2.0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double runtimeMins = 8.0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double runtimeSecs = 44.0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//Calculate average miles per hour speed using the constant variables.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double totalSecs = runtimeHrs*SEC_PER_HR + runtimeMins*SEC_PER_MIN + runtimeSecs;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0double aveMPH = MILES_PER_MARATHON/(totalSecs/SEC_PER_HR);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//Print the value of aveMPH to console using format method.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.format(\"Average MPH was: %.2f mph\\n\", aveMPH);\n\u00a0\u00a0\u00a0\u00a0}\n}"
+    "prompt": "Construct a program that calculates the average speed in miles per hour using the values stored in variables given and print the height in meters with 2 digits after the decimal point to the console.",
+    "source_code": "public class AverageSpeedInMarathon {\n    public static void main(String[] args) {\n        //Declare multiple constant variables\n        // i.e 26 miles 285 yards\n        final double MILES_PER_MARATHON = 26.21875;\n        final int SEC_PER_HR = 3600;\n        final int SEC_PER_MIN = 60;\n        //Declare multiple variables to hold marathon run time.\n        double runtimeHrs = 2.0;\n        double runtimeMins = 8.0;\n        double runtimeSecs = 44.0;\n        //Calculate average miles per hour speed using the constant variables.\n        double totalSecs = runtimeHrs*SEC_PER_HR + runtimeMins*SEC_PER_MIN + runtimeSecs;\n        double aveMPH = MILES_PER_MARATHON/(totalSecs/SEC_PER_HR);\n        //Print the value of aveMPH to console using format method.\n        System.out.format(\"Average MPH was: %.2f mph\\n\", aveMPH);\n    }\n}"
   },
   "classification": {
     "topics": [],
@@ -107,7 +105,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=csedpad_preliminary_averagespeedinmarathon&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_preliminary_averagespeedinmarathon"
     }
   ],
   "rights": {

@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-09-07T03:47:36.000Z",
-  "updated_at": "2026-01-17T05:28:59.859Z",
+  "updated_at": "2026-01-17T20:45:54.031Z",
   "tags": [],
   "identity": {
     "id": "java_is_tautonym",
@@ -40,12 +40,9 @@
     "knowledge_components": {
       "manual_expert": {
         "concepts": [
-          "AndExpression",
           "java.lang.String.substring",
           "ModulusExpression",
-          "AndExpression",
-          "java.lang.String.substring",
-          "ModulusExpression"
+          "AndExpression"
         ],
         "note": "",
         "created_at": null,

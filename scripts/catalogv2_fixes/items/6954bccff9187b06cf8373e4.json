@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T13:19:11.376Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:50.952Z",
+  "tags": [],
   "identity": {
     "id": "IS17_poly2",
     "title": "IS17_inheritance3",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=IS17_poly2"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_poly2"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "class Liquid {\r\n\r\n\n     void swirl(boolean clockwise) {\r\n\r\n\n         System.out.println(\"Swirling Liquid\");\r\n\r\n\n     }\r\n\r\n\n}\r\n\r\n\n\r\n\nclass Coffee extends Liquid {\r\n\r\n\n     void swirl(boolean clockwise) {\r\n\r\n\n         System.out.println(\"Swirling Coffee\");\r\n\r\n\n     }\r\n\r\n\n}\r\n\r\n\n\r\n\nclass Milk extends Liquid {\r\n\r\n\n    void swirl(boolean clockwise) {\r\n\r\n\n         System.out.println(\"Swirling Milk\");\r\n\r\n\n    }\r\n\r\n\n}\r\n\r\n\n\r\n\nclass Cup {\r\n\r\n\n       private Liquid innerLiquid;\r\n\r\n\n       Cup(Liquid liq) {\r\n\r\n\n            innerLiquid = liq;\r\n\r\n\n            innerLiquid.swirl(false);\r\n\r\n\n      }\r\n\r\n\n}\r\n\r\n\n\r\n\npublic class Example1 {\r\n\r\n\n     public static void main(String[] args) {\r\n\r\n\n         Liquid liquid = new Liquid();\r\n\r\n\n         Liquid coffee = new Coffee();\r\n\r\n\n         Liquid milk = new Milk();\r\n\r\n\n\r\n\n         Cup cup1 = new Cup(liquid);\r\n\r\n\n         Cup cup2 = new Cup(coffee);\r\n\r\n\n         Cup cup3 = new Cup(milk);\r\n\r\n\n     }\r\n\r\n\n}\r\n"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=IS17_poly2"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_poly2"
     }
   ],
   "rights": {

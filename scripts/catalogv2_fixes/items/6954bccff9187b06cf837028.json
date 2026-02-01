@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-01-15T13:29:15.000Z",
-  "updated_at": "2026-01-17T12:54:55.893Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:40.381Z",
+  "tags": [],
   "identity": {
     "id": "LeftJoin25_1",
     "title": "Left Join 1",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=LeftJoin25_1&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/LeftJoin25_1"
   },
   "attribution": {
     "created_at": "2025-01-15T13:29:15.000Z",
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=LeftJoin25_1&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/LeftJoin25_1"
     }
   ],
   "rights": {

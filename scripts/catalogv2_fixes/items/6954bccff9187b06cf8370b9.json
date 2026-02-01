@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-09T16:10:08.000Z",
-  "updated_at": "2026-01-17T12:55:11.102Z",
+  "updated_at": "2026-01-17T20:45:46.431Z",
   "tags": [
     "TODO:add-prompt"
   ],
@@ -42,21 +42,14 @@
     "knowledge_components": {
       "acos parser": {
         "concepts": [
-          "Add",
           "arg",
-          "Assign",
           "Call",
-          "FunctionDef",
           "Return",
-          "Tuple",
-          "Tuple",
-          "Constant",
-          "arg",
-          "Call",
           "Add",
-          "FunctionDef",
           "Assign",
-          "Return"
+          "Constant",
+          "Tuple",
+          "FunctionDef"
         ],
         "note": "",
         "created_at": null,

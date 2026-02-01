@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-01T10:53:43.000Z",
-  "updated_at": "2026-01-17T12:57:51.926Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:17.123Z",
+  "tags": [],
   "identity": {
     "id": "ConstructorDemo",
     "title": "Constructor Demo",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=ConstructorDemo&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/ConstructorDemo"
   },
   "attribution": {
     "created_at": "2014-09-01T10:53:43.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "import java.awt.Rectangle;\n\npublic class ConstructorDemo\n{\n\u00a0\u00a0\u00a0public static void main(String[] args)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(new Rectangle(5, 10, 20, 30));\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Rectangle box = new Rectangle(5, 10, 20, 30);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(\"box: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(box);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0box = new Rectangle();\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(\"box: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(box);\n\u00a0\u00a0\u00a0}\n}\n}"
+    "source_code": "import java.awt.Rectangle;\r\n\r\npublic class ConstructorDemo\r\n{\r\n   public static void main(String[] args)\r\n   {\r\n      System.out.println(new Rectangle(5, 10, 20, 30));\r\n\r\n      Rectangle box = new Rectangle(5, 10, 20, 30);\r\n      System.out.print(\"box: \");\r\n      System.out.println(box);\r\n\r\n      box = new Rectangle();\r\n      System.out.print(\"box: \");\r\n      System.out.println(box);\r\n   }\r\n}\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -72,7 +70,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=ConstructorDemo&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/ConstructorDemo"
     }
   ],
   "rights": {

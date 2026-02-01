@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:24.682Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:00.862Z",
+  "tags": [],
   "identity": {
     "id": "textfield_test",
     "title": "ISD::TextFieldTest.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=textfield_test"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/textfield_test"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 12.7: TextFieldTest.java\n\n// Demonstrating the JTextField class.\n\nimport java.awt.*;\n\nimport java.awt.event.*;\n\nimport javax.swing.*;\n\n\n\npublic class TextFieldTest extends JFrame {\n   private JTextField text1, text2, text3;\n   private JPasswordField password;\n\n\n   public TextFieldTest()\n   {\n      super( \"Testing JTextField and JPasswordField\" );\n\n\n      Container c = getContentPane();\n      c.setLayout( new FlowLayout() );\n\n\n      // construct textfield with default sizing\n      text1 = new JTextField( 10 );\n      c.add( text1 );\n\n\n      // construct textfield with default text\n      text2 = new JTextField( \"Enter text here\" );\n      c.add( text2 );\n\n\n      // construct textfield with default text and\n      // 20 visible elements and no event handler\n      text3 = new JTextField( \"Uneditable text field\", 20 );\n      text3.setEditable( false );\n      c.add( text3 );\n\n\n      // construct textfield with default text\n      password = new JPasswordField( \"Hidden text\" );\n      c.add( password );\n\n\n      TextFieldHandler handler = new TextFieldHandler();\n      text1.addActionListener( handler );\n      text2.addActionListener( handler );\n      text3.addActionListener( handler );\n      password.addActionListener( handler );\n\n\n      setSize( 325, 100 );\n      show();\n   }\n\n\n   public static void main( String args[] )\n   {\n      TextFieldTest app = new TextFieldTest();\n\n\n      app.addWindowListener(\n         new WindowAdapter() {\n            public void windowClosing( WindowEvent e )\n            {\n               System.exit( 0 );\n            }\n         }\n      );\n   }\n\n\n   // inner class for event handling\n   private class TextFieldHandler implements ActionListener {\n      public void actionPerformed( ActionEvent e )\n      {\n         String s = \"\";\n\n\n         if ( e.getSource() == text1 )\n            s = \"text1: \" + e.getActionCommand();\n         else if ( e.getSource() == text2 )\n            s = \"text2: \" + e.getActionCommand();\n         else if ( e.getSource() == text3 )\n            s = \"text3: \" + e.getActionCommand();\n         else if ( e.getSource() == password ) {\n            JPasswordField pwd =\n               (JPasswordField) e.getSource();\n            s = \"password: \" +\n                new String( pwd.getPassword() );\n         }\n\n\n         JOptionPane.showMessageDialog( null, s );\n      }\n   }\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=textfield_test"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/textfield_test"
     }
   ],
   "rights": {

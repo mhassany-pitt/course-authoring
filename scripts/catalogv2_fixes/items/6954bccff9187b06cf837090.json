@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-15T23:14:48.000Z",
-  "updated_at": "2026-01-17T13:18:48.723Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:27:13.273Z",
+  "tags": [],
   "identity": {
     "id": "py_trees_traversal",
     "title": "Tree traversal.",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "The tree can be traversed by deciding on a sequence to visit each node. There are three traversal algorithms: in-order traversal, pre-order traversal and post-order traversal.\nIn-order traversal visits the nodes from the left, the root node and the right\nPre-order traversal visits the nodes from the root node, the left and the right\nPost-order traversal visits the nodes from the left, the right and the root node.\nIn this example, we construct an in-order traversal algorithm. ",
+    "source_code": "# Define a binary tree class\nclass BinaryTree:\n    def __init__(self, root):\n        self.left = None\n        self.right = None\n        self.key = root\n    # Define the Insert Node function\n    def insert(self, data):\n        if self.key:\n            if data < self.key:\n                if self.left is None:\n                    self.left = BinaryTree(data)\n                else:\n                    self.left.insert(data)\n            elif data > self.key:\n                if self.right is None:\n                    self.right = BinaryTree(data)\n                else:\n                    self.right.insert(data)\n        else:\n            self.key = data\n    # Define Inorder traversal function\n    def inorder_traversal(self, root):\n        res = []\n        if root:\n            res = self.inorder_traversal(root.left)\n            res.append(root.key)\n            res = res + self.inorder_traversal(root.right)\n        return res\nroot = BinaryTree(5)\nroot.insert(14)\nroot.insert(16)\nroot.insert(3)\nroot.insert(4)\nroot.insert(10)\nprint(root.inorder_traversal(root))"
   },
   "classification": {
     "topics": [],

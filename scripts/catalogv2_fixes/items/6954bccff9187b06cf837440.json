@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:44.000Z",
-  "updated_at": "2026-01-17T13:19:25.296Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:34:01.480Z",
+  "tags": [],
   "identity": {
     "id": "multi_selection",
     "title": "ISD::MultipleSelection.java",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=multi_selection"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/multi_selection"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:44.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "// Fig. 12.15: MultipleSelection.java\r\n// Copying items from one List to another.\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\nimport java.awt.event.*;\r\n\r\npublic class MultipleSelection extends JFrame {\r\n   private JList colorList, copyList;\r\n   private JButton copy;\r\n   private String colorNames[] =\r\n      { \"Black\", \"Blue\", \"Cyan\", \"Dark Gray\", \"Gray\", \r\n        \"Green\", \"Light Gray\", \"Magenta\", \"Orange\", \"Pink\",\r\n        \"Red\", \"White\", \"Yellow\" };\r\n\r\n   public MultipleSelection()\r\n   {\r\n      super( \"Multiple Selection Lists\" );\r\n\r\n      Container c = getContentPane();\r\n      c.setLayout( new FlowLayout() );\r\n\r\n      colorList = new JList( colorNames );\r\n      colorList.setVisibleRowCount( 5 );\r\n      colorList.setFixedCellHeight( 15 );\r\n      colorList.setSelectionMode(\r\n         ListSelectionModel.MULTIPLE_INTERVAL_SELECTION );\r\n      c.add( new JScrollPane( colorList ) );\r\n\r\n      // create copy button\r\n      copy = new JButton( \"Copy >>>\" );\r\n      copy.addActionListener(\r\n         new ActionListener() {\r\n            public void actionPerformed( ActionEvent e )\r\n            {\r\n               // place selected values in copyList\r\n               copyList.setListData(\r\n                  colorList.getSelectedValues() );\r\n            }\r\n         }\r\n      );\r\n      c.add( copy );\r\n\r\n      copyList = new JList( );\r\n      copyList.setVisibleRowCount( 5 );\r\n      copyList.setFixedCellWidth( 100 );\r\n      copyList.setFixedCellHeight( 15 );\r\n      copyList.setSelectionMode(\r\n         ListSelectionModel.SINGLE_INTERVAL_SELECTION );\r\n      c.add( new JScrollPane( copyList ) );\r\n\r\n      setSize( 300, 120 );\r\n      show();\r\n   }\r\n\r\n   public static void main( String args[] )\r\n   { \r\n      MultipleSelection app = new MultipleSelection();\r\n\r\n      app.addWindowListener(\r\n         new WindowAdapter() {\r\n            public void windowClosing( WindowEvent e )\r\n            {\r\n               System.exit( 0 );\r\n            }\r\n         }\r\n      );\r\n   }\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=multi_selection"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/multi_selection"
     }
   ],
   "rights": {

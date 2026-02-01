@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-01T18:56:57.000Z",
-  "updated_at": "2026-01-17T12:57:49.302Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:15.372Z",
+  "tags": [],
   "identity": {
     "id": "StringsEqualsIgnoreCase",
     "title": "Strings (equalsIgnoreCase)",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=StringsEqualsIgnoreCase&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/StringsEqualsIgnoreCase"
   },
   "attribution": {
     "created_at": "2014-09-01T18:56:57.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "public class Test {\n\n\u00a0\u00a0\u00a0public static void main(String args[]) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0String str1 = new String(\"HELLO WORLD\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0String str2 = new String(\"hello world\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0boolean isEqual;\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0isEqual = str1.equals( str2 );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(isEqual);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0isEqual = str1.equalsIgnoreCase( Str2 );\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(isEqual);\n\n\u00a0\u00a0\u00a0}\n}"
+    "source_code": "public class Test {\n\n   public static void main(String args[]) {\n      String str1 = new String(\"HELLO WORLD\");\n      String str2 = new String(\"hello world\");\n      boolean isEqual;\n\n      isEqual = str1.equals( str2 );\n      System.out.println(isEqual);\n\n      isEqual = str1.equalsIgnoreCase( Str2 );\n      System.out.println(isEqual);\n     \n   }\n}"
   },
   "classification": {
     "topics": [],
@@ -76,7 +74,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=StringsEqualsIgnoreCase&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/StringsEqualsIgnoreCase"
     }
   ],
   "rights": {

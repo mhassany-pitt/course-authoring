@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:58.464Z",
+  "updated_at": "2026-01-17T20:47:38.380Z",
   "tags": [
     "TODO:add-prompt"
   ],
@@ -67,23 +67,19 @@
       "java ontology v2": {
         "concepts": [
           "GreaterExpression",
-          "IntDataType",
-          "java.lang.System.out.print",
-          "SimpleAssignmentExpression",
-          "SimpleVariable",
-          "VariableInitializationStatement",
-          "ClassDefinition",
-          "PublicClassSpecifier",
-          "FormalMethodParameter",
-          "MethodDefinition",
           "PublicMethodSpecifier",
-          "StaticMethodSpecifier",
-          "VoidDataType",
-          "IntDataType",
-          "SimpleAssignmentExpression",
+          "VariableInitializationStatement",
+          "SimpleVariable",
+          "ClassDefinition",
           "ActualMethodParameter",
-          "GreaterExpression",
-          "java.lang.System.out.print"
+          "SimpleAssignmentExpression",
+          "java.lang.System.out.print",
+          "IntDataType",
+          "FormalMethodParameter",
+          "StaticMethodSpecifier",
+          "PublicClassSpecifier",
+          "VoidDataType",
+          "MethodDefinition"
         ],
         "note": "",
         "created_at": null,

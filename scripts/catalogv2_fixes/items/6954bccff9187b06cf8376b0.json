@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:20.174Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:23.186Z",
+  "tags": [],
   "identity": {
     "id": "input_print",
     "title": "input_print",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=input_print&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/input_print"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "/*\u00a0\u00a0\u00a0\u00a0This program calculates and prints the sum of\n\u00a0\u00a0\u00a0\u00a0three numbers input by the user at the keyboard.\n\u00a0\u00a0\u00a0\u00a0   Written by:\n\u00a0\u00a0\u00a0\u00a0   Date:\n*/\n#include <stdio.h>\n\nint main (void)\n{\n//\u00a0\u00a0\u00a0\u00a0Local Declarations\n\u00a0\u00a0\u00a0\u00a0int a;\n\u00a0\u00a0\u00a0\u00a0int b;\n\u00a0\u00a0\u00a0\u00a0int c;\n\u00a0\u00a0\u00a0\u00a0int sum;\n\n//\u00a0\u00a0\u00a0\u00a0Statements\n\u00a0\u00a0\u00a0\u00a0printf(\"\\nWelcome. This program adds\\n\");\n\u00a0\u00a0\u00a0\u00a0printf(\"three numbers. Enter three numbers\\n\");\n\u00a0\u00a0\u00a0\u00a0printf(\"in the form: nnn nnn nnn <return>\\n\");\n\u00a0\u00a0\u00a0\u00a0scanf(\"%d %d %d\", &a, &b, &c);\n\n\u00a0\u00a0\u00a0\u00a0// Numbers are now in a, b, and c. Add them.\n\u00a0\u00a0\u00a0\u00a0sum = a + b + c;\n\n\u00a0\u00a0\u00a0\u00a0printf(\"The total is: %d\\n\\n\", sum);\n\n\u00a0\u00a0\u00a0\u00a0printf(\"Thank you. Have a good day.\\n\");\n\u00a0\u00a0\u00a0\u00a0return 0;\n}\u00a0\u00a0\u00a0\u00a0//  main"
+    "source_code": "/*\tThis program calculates and prints the sum of \r\n\r\n\n\tthree numbers input by the user at the keyboard.\r\n\r\n\n\t   Written by: \r\n\r\n\n\t   Date: \r\n\r\n\n*/\r\n\r\n\n#include <stdio.h>\r\n\r\n\n\r\n\nint main (void) \r\n\r\n\n{\r\n\r\n\n//\tLocal Declarations \r\n\r\n\n\tint a;\r\n\r\n\n\tint b;\r\n\r\n\n\tint c;\r\n\r\n\n\tint sum;\r\n\r\n\n\r\n\n//\tStatements \r\n\r\n\n\tprintf(\"\\nWelcome. This program adds\\n\");\r\n\n\tprintf(\"three numbers. Enter three numbers\\n\");\r\n\n\tprintf(\"in the form: nnn nnn nnn <return>\\n\");\r\n\n\tscanf(\"%d %d %d\", &a, &b, &c);\r\n\r\n\n\r\n\n\t// Numbers are now in a, b, and c. Add them. \r\n\r\n\n\tsum = a + b + c;\r\n\r\n\n\r\n\n\tprintf(\"The total is: %d\\n\\n\", sum);\r\n\n\r\n\n\tprintf(\"Thank you. Have a good day.\\n\");\r\n\n\treturn 0;\r\n\r\n\n}\t//  main \r\n"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=input_print&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/input_print"
     }
   ],
   "rights": {

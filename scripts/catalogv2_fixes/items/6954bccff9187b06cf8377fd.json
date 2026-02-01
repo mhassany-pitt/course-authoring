@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T13:19:32.638Z",
+  "updated_at": "2026-01-17T20:47:48.151Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -43,23 +43,18 @@
     "knowledge_components": {
       "expert": {
         "concepts": [
-          "SELECT-FROM-WHERE",
           "DomainType",
-          "MultipleAttributeSelection",
-          "SingleTableSelection",
           "EqualComparison",
-          "WhereClause",
-          "StringConstant",
-          "Tuple",
-          "SelectStatement",
-          "FromClause",
-          "SingleQuotationCharacter",
-          "Instance",
           "AttributeName",
-          "EqualComparison",
-          "MultipleAttributeSelection",
-          "SingleTableSelection",
           "StringConstant",
+          "SelectStatement",
+          "Instance",
+          "SELECT-FROM-WHERE",
+          "SingleTableSelection",
+          "FromClause",
+          "Tuple",
+          "SingleQuotationCharacter",
+          "MultipleAttributeSelection",
           "WhereClause"
         ],
         "note": "",

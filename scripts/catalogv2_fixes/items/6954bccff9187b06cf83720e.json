@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2018-12-21T11:37:21.000Z",
-  "updated_at": "2026-01-17T12:55:46.206Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:44.973Z",
+  "tags": [],
   "identity": {
     "id": "while_memphis",
     "title": "While (Memphis)",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=while_memphis&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/while_memphis"
   },
   "attribution": {
     "created_at": "2018-12-21T11:37:21.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "public class WhileDemos {\n\u00a0\u00a0\u00a0\u00a0public static void main(String[] args) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Example 1: This loop repeats 5 times.  Use this as a template for\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  a loop that repeats a certain number of times!\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int i = 0;\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0while (i < 5) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Sloths are nice!\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0i++;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Example 2: This loop also repeats 5 times.  We just start i from\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  5 and make it count down, instead of starting i from 0 and\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  making it count up.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int i = 5;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0while (i > 0) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(\"Sloths are nice!\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0i--;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Example 3: This loop displays the first 100 positive odd integers\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0///  (1, 3, 5, 7, ...) on the screen.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int x = 1;\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int i = 0;\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0while (i < 100) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(i + \" - \" + x);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0x += 2;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0i++;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0// Example 4: Another way of getting the first 100 positive odd integers\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0//  This version uses a single variable i.\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int i = 0;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0while (i < 100) {\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(2*i + 1);\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0i++;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0}\n\u00a0\u00a0\u00a0\u00a0}\n}\n"
+    "source_code": "public class WhileDemos {\n\tpublic static void main(String[] args) {\n\t\t// Example 1: This loop repeats 5 times.  Use this as a template for \n\t\t//  a loop that repeats a certain number of times!\n\t\tint i = 0;\t\t\n\t\twhile (i < 5) {\n\t\t\tSystem.out.println(\"Sloths are nice!\");\n\t\t\ti++;\n\t\t}\n\n\t\t// Example 2: This loop also repeats 5 times.  We just start i from\n\t\t//  5 and make it count down, instead of starting i from 0 and\n\t\t//  making it count up.\n\t\tint i = 5;\n\t\twhile (i > 0) {\n\t\t\tSystem.out.println(\"Sloths are nice!\");\n\t\t\ti--;\n\t\t}\n\n\t\t// Example 3: This loop displays the first 100 positive odd integers\n\t\t///  (1, 3, 5, 7, ...) on the screen.\n\t\tint x = 1;\t\t\t\n\t\tint i = 0;\t\t\t\n\t\twhile (i < 100) {\n\t\t\tSystem.out.println(i + \" - \" + x);\n\t\t\tx += 2;\n\t\t\ti++;\n\t\t}\n\n\t\t// Example 4: Another way of getting the first 100 positive odd integers\n\t\t//  This version uses a single variable i.\n\t\tint i = 0;\n\t\twhile (i < 100) {\n\t\t\tSystem.out.println(2*i + 1);\n\t\t\ti++;\n\t\t}\n\t}\n}\n"
   },
   "classification": {
     "topics": [],
@@ -109,7 +107,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=while_memphis&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/while_memphis"
     }
   ],
   "rights": {

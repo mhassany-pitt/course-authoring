@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-13T14:44:30.000Z",
-  "updated_at": "2026-01-17T13:18:51.299Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:23:02.455Z",
+  "tags": [],
   "identity": {
     "id": "py_single_linked_list",
     "title": "Singly Linked List",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Create the necessary classes for a Singly Linked List, containing the method append(item) to add a new item to the end of the linked list. Test the singly linked list after the classes are created.",
+    "source_code": "# Step 1: Define Node class\nclass SLinkedListNode:\n    def __init__(self, initData, initNext):\n        self.data = initData\n        self.next = initNext\n    def getData(self):\n        return self.data\n    def getNext(self):\n        return self.next\n    def setData(self, newData):\n        self.data = newData\n    def setNext(self, newNext):\n        self.next = newNext\n# Step 2: Define the Singly Linked List class\nclass SLinkedList:\n    def __init__(self):\n        self.head = None\n        self.size = 0\n    def __str__(self):\n        s = '['\n        i = 0\n        current = self.head\n        while current != None:\n            if i > 0:\n                s = s + ','\n            dataObject = current.getData()\n            if dataObject != None:\n                s = s + '%s' % dataObject\n                i = i + 1\n            current = current.getNext()\n        s = s + ']'\n        return s\n    def append(self, item):\n        temp = SLinkedListNode(item, None)\n        if (self.head == None):\n            self.head = temp\n        else:\n            current = self.head\n            while (current.getNext() != None):\n                current = current.getNext()\n            current.setNext(temp)\n        self.size += 1\n# Step 3: Test the Linked List\nlinked_list = SLinkedList()\nlinked_list.append('Hello')\nlinked_list.append('World')\nprint(linked_list)"
   },
   "classification": {
     "topics": [],

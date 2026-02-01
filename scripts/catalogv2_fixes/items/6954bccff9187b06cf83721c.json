@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2018-12-05T19:18:12.000Z",
-  "updated_at": "2026-01-17T12:55:48.122Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:33:46.554Z",
+  "tags": [],
   "identity": {
     "id": "memphis_scanner_input",
     "title": "Scanner input",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=memphis_scanner_input&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/memphis_scanner_input"
   },
   "attribution": {
     "created_at": "2018-12-05T19:18:12.000Z",
@@ -33,7 +31,7 @@
     ]
   },
   "content": {
-    "prompt": "",
+    "prompt": "Test",
     "source_code": "import java.util.Scanner;"
   },
   "classification": {
@@ -65,7 +63,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=memphis_scanner_input&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/memphis_scanner_input"
     }
   ],
   "rights": {

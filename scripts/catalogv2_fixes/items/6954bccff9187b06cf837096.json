@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-14T18:30:42.000Z",
-  "updated_at": "2026-01-17T13:18:49.493Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:26:05.986Z",
+  "tags": [],
   "identity": {
     "id": "py_sorting_insertion_sort",
     "title": "Insertion Sort",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Insertion sort works similarly to how one would sort a hand of cards: by choosing an element and searching through the rest of the array to determine its proper place. Construct a function that performs insertion sort in ascending order on the given list. \n\n",
+    "source_code": "# Define the insertion sorting function that sorts the given list in an ascending order\ndef insertion_sort(data):\n    for i in range(1, len(data)):\n        current = data[i]\n        j = i-1\n        while j>=0 and current < data[j]:\n            data[j+1] = data[j]\n            j -=1\n        data[j+1] = current\n    return data\nnum_list = [30, -20, 25, 0, 2, 5]\nprint(insertion_sort(num_list))"
   },
   "classification": {
     "topics": [],

@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:57:58.115Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:19.447Z",
+  "tags": [],
   "identity": {
     "id": "pass_file",
     "title": "pass_file",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pass_file&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pass_file"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\n#define LINELEN 81\n#define NUMLINES 5\nchar *file_name = \"text.dat\";\nint main(void)\n{\n\u00a0\u00a0FILE *out_file;\n\u00a0\u00a0void in_out(FILE *);\n\u00a0\u00a0out_file = fopen(file_name,\"w\");\n\u00a0\u00a0if (out_file == (FILE *) NULL)\n\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0printf(\"\\nFailed to open the file %s\\n\", file_name);\n\u00a0\u00a0\u00a0\u00a0return -1;\n\u00a0\u00a0}\n\u00a0\u00a0in_out(out_file);\n\u00a0\u00a0fclose(out_file);\n\u00a0\u00a0return 0;\n}\nvoid in_out(FILE *fname)\n{\n\u00a0\u00a0int count;\n\u00a0\u00a0char line[LINELEN];  \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0/* enough storage for one line of text */\n\u00a0\u00a0printf(\"Please enter five lines of text:\\n\");\n\u00a0\u00a0for (count = 0; count < NUMLINES; count++)\n\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0gets(line);\n\u00a0\u00a0\u00a0\u00a0fprintf(fname,\"%s\\n\",line);\n\u00a0\u00a0}\n\u00a0\u00a0return;\n}\n}"
+    "source_code": "#include <stdio.h>\r\n#define LINELEN 81    \r\n#define NUMLINES 5    \r\nchar *file_name = \"text.dat\"; \r\nint main(void)\r\n{\r\n  FILE *out_file;\r\n  void in_out(FILE *);\r\n  out_file = fopen(file_name,\"w\");\r\n  if (out_file == (FILE *) NULL)\r\n  {\r\n    printf(\"\\nFailed to open the file %s\\n\", file_name);\r\n    return -1;\r\n  }\r\n  in_out(out_file);\r\n  fclose(out_file);\r\n  return 0;\r\n}\r\nvoid in_out(FILE *fname)   \r\n{\r\n  int count;\r\n  char line[LINELEN];  \t\t/* enough storage for one line of text */\r\n  printf(\"Please enter five lines of text:\\n\");\r\n  for (count = 0; count < NUMLINES; count++)\r\n  {\r\n    gets(line);\r\n    fprintf(fname,\"%s\\n\",line);\r\n  }\r\n  return;\r\n}\r\n}\r"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pass_file&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pass_file"
     }
   ],
   "rights": {

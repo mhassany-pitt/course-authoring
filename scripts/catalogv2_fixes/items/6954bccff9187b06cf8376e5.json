@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:28.311Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:29.204Z",
+  "tags": [],
   "identity": {
     "id": "Srand",
     "title": "Srand",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Srand&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Srand"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <stdio.h>\n#include <stdlib.h>\nmain()\n{\nunsigned seed;\nint iRandomNum = 0;\nprintf(\"Enter seed: \");\nscanf(\"%u\", &seed);\nsrand(seed);\niRandomNum = (rand() % 4) + 1;\nprintf(\"\\nFortune Cookie \\n\");\nswitch (iRandomNum) {\n\u00a0\u00a0\u00a0case 1:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nYou will meet a new friend today.\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0case 2:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nYou will enjoy a long and happy life.\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0case 3:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\\nOpportunity knocks softly. Can you hear it?\\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n\u00a0\u00a0\u00a0case 4:\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0printf(\"\nYou'll be financially rewarded for your good deeds.\n\");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0break;\n} //end switch\nprintf(\"\\nLucky lotto numbers: \");\nprintf(\"%d \", (rand() % 49) + 1);\nprintf(\"%d \", (rand() % 49) + 1);\nprintf(\"%d \", (rand() % 49) + 1);\nprintf(\"%d \", (rand() % 49) + 1);\nprintf(\"%d \", (rand() % 49) + 1);\nprintf(\"%d\\n\", (rand() % 49) + 1);\n} //end main function"
+    "source_code": "#include <stdio.h>\r\n#include <stdlib.h>\r\nmain()\r\n{\r\nunsigned seed;\r\nint iRandomNum = 0;\r\nprintf(\"Enter seed: \");\r\nscanf(\"%u\", &seed);\r\nsrand(seed);\r\niRandomNum = (rand() % 4) + 1;\r\nprintf(\"\\nFortune Cookie \\n\");\r\nswitch (iRandomNum) {\r\n   case 1:\r\n      printf(\"\\nYou will meet a new friend today.\\n\");\r\n      break;\r\n   case 2:\r\n      printf(\"\\nYou will enjoy a long and happy life.\\n\");\r\n      break;\r\n   case 3:\r\n      printf(\"\\nOpportunity knocks softly. Can you hear it?\\n\");\r\n      break;\r\n   case 4:\r\n      printf(\"\nYou'll be financially rewarded for your good deeds.\n\");\r\n      break;\r\n} //end switch\r\nprintf(\"\\nLucky lotto numbers: \");\r\nprintf(\"%d \", (rand() % 49) + 1);\r\nprintf(\"%d \", (rand() % 49) + 1);\r\nprintf(\"%d \", (rand() % 49) + 1);\r\nprintf(\"%d \", (rand() % 49) + 1);\r\nprintf(\"%d \", (rand() % 49) + 1);\r\nprintf(\"%d\\n\", (rand() % 49) + 1);\r\n} //end main function"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=Srand&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Srand"
     }
   ],
   "rights": {

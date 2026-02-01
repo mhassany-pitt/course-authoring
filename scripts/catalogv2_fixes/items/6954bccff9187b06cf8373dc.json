@@ -3,18 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T13:19:09.906Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-17T20:33:50.051Z",
+  "tags": [],
   "identity": {
     "id": "wrapper_class",
     "title": "DEPRECATED_Wrapper Classes",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=wrapper_class"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/wrapper_class"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "",
+    "source_code": "import java.util.*;\r\npublic class Wrapper{\r\n    public static void main(String argv[]){\r\n    ArrayList AL = new ArrayList();\r\n    AL.add(new Integer(1));\r\n    AL.add(new Integer(2));\r\n    for(int i=0; i < AL.size();i ++){\r\n        Integer iw =(Integer) AL.get(i);\r\n        System.out.println(iw.intValue());\r\n    }\r\n   }\r\n}"
   },
   "classification": {
     "topics": [],
@@ -56,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pitt/annotated/annotated-java/Dissection2?act=wrapper_class"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/wrapper_class"
     }
   ],
   "rights": {

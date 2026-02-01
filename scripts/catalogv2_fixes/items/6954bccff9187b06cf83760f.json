@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-08-30T15:44:21.000Z",
-  "updated_at": "2026-01-17T12:57:56.809Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:18.414Z",
+  "tags": [],
   "identity": {
     "id": "VariableDemo",
     "title": "Variable Demo",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=VariableDemo&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/VariableDemo"
   },
   "attribution": {
     "created_at": "2014-08-30T15:44:21.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "public class VariableDemo\n{\n\u00a0\u00a0\u00a0public static void main(String[] args)\n\u00a0\u00a0\u00a0{\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int width = 10;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(\"width: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(width);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0width = 20;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(\"width: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(width);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0int height = 20;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0width = height + 10;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(\"width: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(width);\n\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0width = width + 10;\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.print(\"width: \");\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0System.out.println(width);\n\u00a0\u00a0\u00a0}\n}\n}"
+    "source_code": "public class VariableDemo\r\n\n{\r\n\n   public static void main(String[] args)\r\n\n   {\r\n\n      int width = 10; \r\n\n      System.out.print(\"width: \");\r\n\n      System.out.println(width);\r\n\n\n      width = 20;\r\n\n      System.out.print(\"width: \");\r\n\n      System.out.println(width);\r\n\n\n      int height = 20;\r\n\n      width = height + 10; \r\n\n      System.out.print(\"width: \");\r\n\n      System.out.println(width);\r\n\n\n      width = width + 10; \r\n\n      System.out.print(\"width: \");\r\n\n      System.out.println(width);      \r\n\n   }\r\n\n}\r\n\n}\r\n"
   },
   "classification": {
     "topics": [],
@@ -71,7 +69,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=VariableDemo&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/VariableDemo"
     }
   ],
   "rights": {

@@ -3,11 +3,8 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-14T01:43:57.000Z",
-  "updated_at": "2026-01-17T13:18:50.250Z",
-  "tags": [
-    "TODO:add-prompt",
-    "TODO:add-source-code"
-  ],
+  "updated_at": "2026-01-21T15:25:02.447Z",
+  "tags": [],
   "identity": {
     "id": "py_stack_stack",
     "title": "Stack",
@@ -34,8 +31,8 @@
     ]
   },
   "content": {
-    "prompt": null,
-    "source_code": null
+    "prompt": "Implementing Stack. Using Class to construct a Stack structure.\n\n",
+    "source_code": "# Define a Stack Class\nclass Stack:\n    # Initializing the stack\n    def __init__(self):\n        self.items = []\n    # Checking if the stack is empty\n    def is_empty(self):\n        return len(self.items) == 0\n    # Adding elements to the stack\n    def push(self, item):\n        self.items.append(item)\n    # Removing the elements from the stack\n    def pop(self):\n        return self.items.pop()\n    # Checking the element in the stack\n    def peek(self):\n        if not self.is_empty():\n            return self.items[len(self.items) - 1]\n    # Checking the size of the stack\n    def size(self):\n        return len(self.items)\ns=Stack()\nprint(s.is_empty())\ns.push(4)\ns.push('dog')\nprint(s.peek())\ns.push(True)\nprint(s.size())\nprint(s.is_empty())\ns.push(8.4)\nprint(s.pop())\nprint(s.pop())\nprint(s.size())"
   },
   "classification": {
     "topics": [],

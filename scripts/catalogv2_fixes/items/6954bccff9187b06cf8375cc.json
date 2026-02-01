@@ -3,17 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-08T21:23:43.000Z",
-  "updated_at": "2026-01-17T12:57:46.527Z",
-  "tags": [
-    "TODO:add-prompt"
-  ],
+  "updated_at": "2026-01-17T20:34:14.075Z",
+  "tags": [],
   "identity": {
     "id": "c_ch2_boolean_variables",
     "title": "Boolean Variables",
     "type": "Example"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=c_ch2_boolean_variables&svc=progvis&sid=demo"
+    "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_boolean_variables"
   },
   "attribution": {
     "created_at": "2014-09-08T21:23:43.000Z",
@@ -34,7 +32,7 @@
   },
   "content": {
     "prompt": "",
-    "source_code": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n\u00a0\u00a0\u00a0\u00a0bool boolValue;\n\n\u00a0\u00a0\u00a0\u00a0boolValue = true;\n\u00a0\u00a0\u00a0\u00a0cout << boolValue << endl;\n\n\u00a0\u00a0\u00a0\u00a0boolValue = false;\n\u00a0\u00a0\u00a0\u00a0cout << boolValue << endl;\n\u00a0\u00a0\u00a0\u00a0return 0;\n}"
+    "source_code": "#include <iostream>\r\n\nusing namespace std;\r\n\n\nint main()\r\n\n{\r\n\n    bool boolValue;\r\n\n\n    boolValue = true;\r\n\n    cout << boolValue << endl;\r\n\n\n    boolValue = false;\r\n\n    cout << boolValue << endl;\r\n\n    return 0;\r\n\n}"
   },
   "classification": {
     "topics": [],
@@ -55,7 +53,7 @@
   "delivery": [
     {
       "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=c_ch2_boolean_variables&svc=progvis"
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_boolean_variables"
     }
   ],
   "rights": {
