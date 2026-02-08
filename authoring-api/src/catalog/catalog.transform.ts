@@ -127,11 +127,12 @@ export const filter = (content: any): boolean => {
     return false;
   }
 
-  return ![
-    { type: 'animated_example', domain_id: 'sql' },
-    { type: 'animatedexamples', domain_id: 'sql' },
-    { type: 'lesslet' },
-    { type: 'mchq', domain_id: 'telcom' },
-    { type: 'educvideos' },
-  ].some((e: any) => Object.keys(e).every((k) => content[k] === e[k]));
+  // return ![
+  //   { type: 'animated_example', domain_id: 'sql' },
+  //   { type: 'animatedexamples', domain_id: 'sql' },
+  //   { type: 'lesslet' },
+  //   { type: 'mchq', domain_id: 'telcom' },
+  //   { type: 'educvideos' },
+  // ].some((e: any) => Object.keys(e).every((k) => content[k] === e[k]));
+  return true;
 };

@@ -6,11 +6,10 @@ import { createWriteStream, ensureDir } from 'fs-extra';
 
 @Controller('catalog')
 export class CatalogController {
-
   constructor(
     private config: ConfigService,
     private service: CatalogService,
-  ) { }
+  ) {}
 
   @Get('contents')
   async getContents() {
@@ -44,7 +43,7 @@ export class CatalogController {
     await ensureDir(logdir);
 
     // rotate log file daily
-    const logfile = (new Date()).toISOString().split('T')[0] + '.log';
+    const logfile = new Date().toISOString().split('T')[0] + '.log';
 
     const stream = createWriteStream(`${logdir}${logfile}`, { flags: 'a' });
     stream.write(`${Date.now()} - ${JSON.stringify(body)}\n`);
