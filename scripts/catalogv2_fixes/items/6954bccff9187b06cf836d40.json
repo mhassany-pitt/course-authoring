@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-13T13:34:46.000Z",
-  "updated_at": "2026-01-17T20:45:01.068Z",
+  "updated_at": "2026-01-31T16:41:36.529Z",
   "tags": [],
   "identity": {
     "id": "Imprimir Tabla de Conteo de Medallas con Totales por Fila y por Columna__684c3d3ca0cac29134435d81-684c3d39a0cac29134435d7f-1",
@@ -25,7 +25,7 @@
     ]
   },
   "languages": {
-    "content_language": "en",
+    "content_language": "es",
     "programming_languages": [
       "Python"
     ]

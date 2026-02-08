@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-05-12T15:21:10.000Z",
-  "updated_at": "2026-01-17T05:27:21.680Z",
+  "updated_at": "2026-01-31T16:41:29.896Z",
   "tags": [],
   "identity": {
     "id": "ps_python_nested_loop_2_es",
@@ -25,7 +25,7 @@
     ]
   },
   "languages": {
-    "content_language": "en",
+    "content_language": "es",
     "programming_languages": [
       "Python"
     ]

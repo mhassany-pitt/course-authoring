@@ -1,20 +1,15 @@
 import {
   Body,
   Controller,
-  Get,
-  Header,
-  Headers,
   HttpException,
   Param,
   Patch,
   Post,
   Request,
-  UseGuards,
 } from '@nestjs/common';
 import { SLCItemsService } from './slc-items.service';
-import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
 import { ConfigService } from '@nestjs/config';
-import { exists, read } from 'fs-extra';
+import { exists } from 'fs-extra';
 import { readFile } from 'fs/promises';
 
 @Controller('slc-items-api')
@@ -22,7 +17,7 @@ export class SLCItemsAPIController {
   constructor(
     private config: ConfigService,
     private catalog: SLCItemsService,
-  ) { }
+  ) {}
 
   async throwIfNotValidApiToken(req: any) {
     const apiToken = req.headers['api-token'];
@@ -30,17 +25,17 @@ export class SLCItemsAPIController {
     const path = `${this.config.get('STORAGE_PATH')}/SLCS_CATALOG_API_TOKENS.txt`;
     if (await exists(path)) {
       const tokens = await readFile(path, 'utf-8');
-      const includes = tokens.split('\n').map((t) => t.trim()).includes(apiToken);
+      const includes = tokens
+        .split('\n')
+        .map((t) => t.trim())
+        .includes(apiToken);
       if (includes) return;
     }
     throw new HttpException('Unauthorized! Invalid API token.', 401);
   }
 
-  @Get()
-  async create(
-    @Request() req: any,
-    @Body() body: any,
-  ) {
+  @Post()
+  async create(@Request() req: any, @Body() body: any) {
     await this.throwIfNotValidApiToken(req);
     if (!req.headers['api-user-email'])
       throw new HttpException(`Missing 'api-user-email' header!`, 401);

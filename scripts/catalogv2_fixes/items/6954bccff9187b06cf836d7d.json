@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-05-27T16:27:27.000Z",
-  "updated_at": "2026-01-17T05:27:19.375Z",
+  "updated_at": "2026-01-31T16:41:32.600Z",
   "tags": [],
   "identity": {
     "id": "py_contar_digitos_es",
@@ -25,7 +25,7 @@
     ]
   },
   "languages": {
-    "content_language": "en",
+    "content_language": "es",
     "programming_languages": [
       "Python"
     ]
