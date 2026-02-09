@@ -12,7 +12,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "conditionals"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -41,7 +43,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "exception handling",
+      "exceptions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -70,7 +75,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -99,7 +106,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "linked list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -128,7 +137,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "loops"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -186,7 +197,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -215,7 +228,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "dictionaries"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -244,7 +259,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -273,7 +291,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "value vs reference"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -302,7 +322,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -331,7 +353,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "json",
+      "json-aggregate"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -389,7 +414,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "data types"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -418,7 +445,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "objects",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -447,7 +479,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -476,7 +510,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "json",
+      "json-aggregate"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -505,7 +542,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion",
+      "search algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -534,7 +574,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -621,7 +663,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -650,7 +695,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "dictionaries"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -679,7 +726,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -766,7 +815,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "boolean expressions",
+      "boolean logic",
+      "comparison operators"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -795,7 +848,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -824,7 +880,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "control flow",
+      "if statement",
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -882,7 +942,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -911,7 +974,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "conditionals"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -969,7 +1034,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -998,7 +1066,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "dictionaries"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1027,7 +1097,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "search algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1056,7 +1128,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "json",
+      "json-aggregate"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1085,7 +1160,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1114,7 +1192,11 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "nested loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1172,7 +1254,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "json",
+      "json-aggregate"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1201,7 +1286,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "functions",
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1230,7 +1319,14 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions",
+      "recursion",
+      "search",
+      "search algorithms",
+      "sorting",
+      "sorting algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1259,7 +1355,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1375,7 +1473,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "doubly linked list",
+      "linked list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1433,7 +1534,11 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "json",
+      "pandas",
+      "statistics"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1462,7 +1567,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "exceptions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1491,7 +1598,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1520,7 +1629,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "objects"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1549,7 +1661,11 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "for loop",
+      "nested loops"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1665,7 +1781,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1694,7 +1812,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "search algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1752,7 +1872,13 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "dictionaries",
+      "dictionary",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1810,7 +1936,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "json",
+      "json-iterate"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1839,7 +1968,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "dictionaries"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1868,7 +1999,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "exception handling",
+      "exceptions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1897,7 +2031,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "value vs reference"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1926,7 +2062,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1955,7 +2094,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "queue"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1984,7 +2125,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "nested loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2042,7 +2187,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "trees"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2071,7 +2218,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "value vs reference"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2100,7 +2249,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2158,7 +2310,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2187,7 +2341,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2216,7 +2372,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "objects"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2332,7 +2491,13 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "2d list",
+      "classes",
+      "data structures",
+      "list",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2361,7 +2526,12 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "stack",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2390,7 +2560,11 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion",
+      "search algorithms",
+      "sorting algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2419,7 +2593,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2448,7 +2625,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "dictionaries"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2477,7 +2656,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2506,7 +2687,13 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "dictionaries",
+      "dictionary",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2564,7 +2751,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "search algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2593,7 +2782,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2622,7 +2814,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2651,7 +2845,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2680,7 +2876,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2738,7 +2936,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "objects"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2796,7 +2997,13 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "dictionaries",
+      "dictionary",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2825,7 +3032,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "for loop",
+      "loops"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2854,7 +3064,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "search algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2883,7 +3095,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2970,7 +3185,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2999,7 +3216,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "pandas"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3028,7 +3247,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3057,7 +3278,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "dictionaries",
+      "dictionary"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3115,7 +3339,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "json",
+      "json-conditions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3144,7 +3371,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list",
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3173,7 +3403,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "for loop",
+      "loops"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3260,7 +3494,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3289,7 +3525,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3347,7 +3585,12 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion",
+      "search algorithms",
+      "sorting",
+      "sorting algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3376,7 +3619,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "conditionals",
+      "for loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3405,7 +3651,12 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "recursion",
+      "search algorithms",
+      "sorting algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3434,7 +3685,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "for loop",
+      "loops"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3463,7 +3717,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "boolean expressions",
+      "boolean logic",
+      "comparison operators"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3492,7 +3750,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "boolean expressions",
+      "conditionals"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3521,7 +3782,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "nested loops"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3550,7 +3813,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "dictionaries"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3579,7 +3844,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "exception handling",
+      "file i/o"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3608,7 +3876,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "for loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3637,7 +3907,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "aliasing",
+      "value vs reference"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3666,7 +3939,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "objects"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3695,7 +3971,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "conditionals",
+      "for loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3724,7 +4003,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "trees"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3753,7 +4034,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3782,7 +4065,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3869,7 +4154,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3898,7 +4185,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "file i/o"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3927,7 +4216,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3956,7 +4247,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "json",
+      "json-iterate"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3985,7 +4279,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "exceptions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4014,7 +4310,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "boolean expressions",
+      "boolean logic",
+      "if-else statement",
+      "logical operators"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4072,7 +4373,13 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "dictionaries",
+      "dictionary",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4101,7 +4408,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "pandas"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4217,7 +4526,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4275,7 +4586,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4304,7 +4618,13 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "dictionaries",
+      "dictionary",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4333,7 +4653,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4362,7 +4684,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "objects",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4391,7 +4718,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "value vs reference"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4420,7 +4749,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "2d list",
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4449,7 +4781,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "for loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4478,7 +4812,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4507,7 +4843,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "exception handling",
+      "file i/o"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4565,7 +4904,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4623,7 +4964,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "dictionaries"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4652,7 +4995,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "pandas"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4681,7 +5026,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4710,7 +5058,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "file i/o"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4739,7 +5089,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "json",
+      "pandas"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4768,7 +5121,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4797,7 +5153,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4826,7 +5185,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "conditionals",
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4855,7 +5217,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4884,7 +5248,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "for loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4942,7 +5308,12 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion",
+      "search algorithms",
+      "sorting algorithms",
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4971,7 +5342,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "pandas",
+      "statistics"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5000,7 +5374,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5116,7 +5492,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "json",
+      "json-aggregate"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5145,7 +5524,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "boolean expressions",
+      "conditionals"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5174,7 +5556,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "json",
+      "json-conditions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5203,7 +5588,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "for loop",
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5232,7 +5620,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "boolean expressions",
+      "conditionals"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5319,7 +5710,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "data types"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5348,7 +5741,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "pandas",
+      "statistics"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5377,7 +5773,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5406,7 +5804,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions",
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5464,7 +5865,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5551,7 +5954,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5580,7 +5985,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "for loop",
+      "loops"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5609,7 +6017,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "conditionals"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5638,7 +6048,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "nested loops"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5667,7 +6079,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "json",
+      "pandas"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5696,7 +6111,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "control flow",
+      "if statement",
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5725,7 +6145,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "dictionaries"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5754,7 +6176,12 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion",
+      "search algorithms",
+      "sorting",
+      "sorting algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5841,7 +6268,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5957,7 +6386,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -5986,7 +6417,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"

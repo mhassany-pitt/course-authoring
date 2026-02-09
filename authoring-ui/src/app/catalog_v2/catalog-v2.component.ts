@@ -52,8 +52,8 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     public router: Router,
     private route: ActivatedRoute,
     public app: AppService,
-    public api: CatalogV2Service
-  ) { }
+    public api: CatalogV2Service,
+  ) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
@@ -93,11 +93,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     this.items.forEach((item: any) => {
       if (item.attribution?.authors?.length) {
         item.attribution._authors = item.attribution.authors
-          .map(
-            (author: any) =>
-              `${author.name}` +
-              (author.affiliation ? ` (${author.affiliation})` : '')
-          )
+          .map((author: any) => author.name.trim())
           .join(', ');
       }
     });
@@ -107,10 +103,16 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     table: Table,
     field: string,
     facet: FilterKV,
-    matchMode = 'contains'
+    matchMode = 'contains',
   ) {
     const isActive = this.selectedKVs[field]?.label == facet.label;
-    this.applyQuickFilter(table, field, isActive ? null : facet.label.trim(), matchMode, facet);
+    this.applyQuickFilter(
+      table,
+      field,
+      isActive ? null : facet.label.trim(),
+      matchMode,
+      facet,
+    );
     this.syncQueryParams({ [field]: isActive ? null : facet.label.trim() });
   }
 
@@ -124,7 +126,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     this.reloadFilterKVs(this.items);
     const clearedParams = this.quickFilterFields.reduce(
       (acc: Params, key) => ({ ...acc, [key]: null }),
-      { q: null }
+      { q: null },
     );
     this.syncQueryParams(clearedParams);
   }
@@ -157,10 +159,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       (item.attribution?.authors || []).forEach((author: any) => {
         const name = (author?.name || '').trim();
         if (!name) return;
-        const label = author.affiliation
-          ? `${name} (${author.affiliation})`
-          : name;
-        authorSet.add(label);
+        authorSet.add(name);
       });
       authorSet.forEach((label) => {
         authorCounts.set(label, (authorCounts.get(label) || 0) + 1);
@@ -208,7 +207,12 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   }
 
   private applyFiltersIfReady() {
-    if (!this.viewReady || !this.dataReady || !this.table || !this.lastQueryParams) {
+    if (
+      !this.viewReady ||
+      !this.dataReady ||
+      !this.table ||
+      !this.lastQueryParams
+    ) {
       return;
     }
     this.applyFiltersFromParams(this.lastQueryParams);
@@ -229,7 +233,9 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         const matchMode = this.getMatchModeForField(field);
         if (value) {
           this.table.filter(value, field, matchMode);
-          const facet = this.getFacetForField(field).find((kv) => kv.label === value);
+          const facet = this.getFacetForField(field).find(
+            (kv) => kv.label === value,
+          );
           this.selectedKVs[field] = facet || { label: value, value: 0 };
         } else {
           this.table.filter(null, field, matchMode);
@@ -246,7 +252,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     field: string,
     value: string | null,
     matchMode: string,
-    facet?: FilterKV
+    facet?: FilterKV,
   ) {
     if (value) {
       table.filter(value, field, matchMode);
@@ -260,7 +266,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
 
   private recountSelected() {
     this.selectedKVs['count'] = Object.keys(this.selectedKVs).filter(
-      (key) => key !== 'count'
+      (key) => key !== 'count',
     ).length;
   }
 

@@ -4,7 +4,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_switch_demo2",
     "platform_name": "JSVEE",
     "title": "Switch Demo 2",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Switch Demo 2",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -12,7 +12,11 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "arraylist",
+      "conditionals",
+      "switch statement"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -33,7 +37,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_function",
     "platform_name": "JSVEE",
     "title": "ae_python_function",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_function",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -41,7 +45,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -62,7 +68,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_while",
     "platform_name": "JSVEE",
     "title": "ae_python_while",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_while",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -70,7 +76,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -91,7 +100,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_sum",
     "platform_name": "JSVEE",
     "title": "Recursion Sum",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Recursion Sum",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -99,7 +108,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -120,7 +131,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/doubly_linked_list",
     "platform_name": "JSVEE",
     "title": "Doubly Linked List",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Doubly Linked List",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -128,7 +139,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "doubly linked list",
+      "linked list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -149,7 +163,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_recursion",
     "platform_name": "JSVEE",
     "title": "Recursion",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Recursion",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -157,7 +171,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions",
+      "recursion"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -178,7 +195,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_primitive_datatype_demo",
     "platform_name": "JSVEE",
     "title": "Primitive Datatype Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Primitive Datatype Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -186,7 +203,12 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "data types",
+      "operators",
+      "primitive data types",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -207,7 +229,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_do_while_v2",
     "platform_name": "JSVEE",
     "title": "DoWhile",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating DoWhile",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -215,7 +237,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "do-while loop",
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -236,7 +262,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/bubble_sort_worst",
     "platform_name": "JSVEE",
     "title": "Bubble Sort Worst",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Bubble Sort Worst",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -244,7 +270,12 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion",
+      "search algorithms",
+      "sorting",
+      "sorting algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -265,7 +296,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_while",
     "platform_name": "JSVEE",
     "title": "While Loop",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating While Loop",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -273,7 +304,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -294,7 +328,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_assignment",
     "platform_name": "JSVEE",
     "title": "ae_python_assignment",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_assignment",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -302,7 +336,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -323,7 +360,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_arraylist2_v2",
     "platform_name": "JSVEE",
     "title": "ArrayList Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating ArrayList Demo",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -331,7 +368,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "arraylist",
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -352,7 +392,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_inheritance_polymorphism_1",
     "platform_name": "JSVEE",
     "title": "Polymorphism and Inheritance 2",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Polymorphism and Inheritance 2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -360,7 +400,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "inheritance"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -381,7 +423,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input3",
     "platform_name": "JSVEE",
     "title": "Power With Input3",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Power With Input3",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -410,7 +452,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_file1",
     "platform_name": "JSVEE",
     "title": "Files 1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Files 1",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -418,7 +460,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "file i/o"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -439,7 +484,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/circle_class3",
     "platform_name": "JSVEE",
     "title": "Circle Class3",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Circle Class3",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -468,7 +513,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/inheritance",
     "platform_name": "JSVEE",
     "title": "Inheritance",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Inheritance",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -476,7 +521,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "objects"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -497,7 +545,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch03_s06_BankAccountTester",
     "platform_name": "JSVEE",
     "title": "Bank Account Tester",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Bank Account Tester",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -505,7 +553,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "objects"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -526,7 +577,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s10_CopyDemo",
     "platform_name": "JSVEE",
     "title": "Copy Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Copy Demo",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -534,7 +585,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "objects"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -555,7 +609,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_lists1",
     "platform_name": "JSVEE",
     "title": "Lists 1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Lists 1",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -563,7 +617,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -584,7 +640,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s09_MoveTester",
     "platform_name": "JSVEE",
     "title": "Move Tester",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Move Tester",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -592,7 +648,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "objects"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -613,7 +672,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/find_max2",
     "platform_name": "JSVEE",
     "title": "Find Max2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Find Max2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -621,7 +680,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "search algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -642,7 +703,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_EnhancedForLoopDemo",
     "platform_name": "JSVEE",
     "title": "Enhanced For Loop Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Enhanced For Loop Demo",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -650,7 +711,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "2d arrays",
+      "arraylist",
+      "arrays",
+      "for loop"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -671,7 +737,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/circle_class2",
     "platform_name": "JSVEE",
     "title": "Circle Class2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Circle Class2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -700,7 +766,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_demo",
     "platform_name": "JSVEE",
     "title": "ae_demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating ae_demo",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -729,7 +795,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/selection_sort2",
     "platform_name": "JSVEE",
     "title": "Selection Sort2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Selection Sort2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -737,7 +803,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "sorting algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -758,7 +826,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_for_demo",
     "platform_name": "JSVEE",
     "title": "For Loop Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating For Loop Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -766,7 +834,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "for loop",
+      "nested loops"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -787,7 +858,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_intro",
     "platform_name": "JSVEE",
     "title": "ae_python_intro",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_intro",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -795,7 +866,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -816,7 +890,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_vals_refs1",
     "platform_name": "JSVEE",
     "title": "Values and References 1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Values and References 1",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -824,7 +898,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "value vs reference"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -845,7 +921,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_7_4",
     "platform_name": "JSVEE",
     "title": "For-Each with ArrayList",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating For-Each with ArrayList",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -853,7 +929,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "arraylist",
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -874,7 +953,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_objects2",
     "platform_name": "JSVEE",
     "title": "Objects 2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Objects 2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -882,7 +961,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "objects",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -903,7 +987,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_6_6",
     "platform_name": "JSVEE",
     "title": "For with Multiple Variables 2",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating For with Multiple Variables 2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -911,7 +995,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "for loop",
+      "loops",
+      "nested loops"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -932,7 +1020,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_cash_register_constant_demo",
     "platform_name": "JSVEE",
     "title": "Cash Register Constant Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Cash Register Constant Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -940,7 +1028,13 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "constants",
+      "data types",
+      "operators",
+      "primitive data types",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -961,7 +1055,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_functions3",
     "platform_name": "JSVEE",
     "title": "Functions 3",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Functions 3",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -969,7 +1063,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -990,7 +1087,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/tree_node_access",
     "platform_name": "JSVEE",
     "title": "Tree Node Access",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Tree Node Access",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -998,7 +1095,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "binary search",
+      "trees"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1019,7 +1119,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_mult2_version2",
     "platform_name": "JSVEE",
     "title": "Recursion Mult2 Version2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Recursion Mult2 Version2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -1027,7 +1127,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1048,7 +1150,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_if",
     "platform_name": "JSVEE",
     "title": "ae_python_if",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_if",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1056,7 +1158,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1077,7 +1181,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_switch_demo1",
     "platform_name": "JSVEE",
     "title": "Switch Demo 1",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Switch Demo 1",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -1085,7 +1189,11 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "conditionals",
+      "control flow",
+      "switch statement"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1106,7 +1214,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_list",
     "platform_name": "JSVEE",
     "title": "ae_python_list",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_list",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1114,7 +1222,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1135,7 +1245,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_simple_inheritance_1",
     "platform_name": "JSVEE",
     "title": "Simple Inheritance",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Simple Inheritance",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1143,7 +1253,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "inheritance",
+      "object"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1164,7 +1277,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_input2",
     "platform_name": "JSVEE",
     "title": "Input 2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Input 2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1172,7 +1285,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "input",
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1193,7 +1310,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/circle_class",
     "platform_name": "JSVEE",
     "title": "Circle Class",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Circle Class",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -1222,7 +1339,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format3",
     "platform_name": "JSVEE",
     "title": "f-string format 1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating f-string format 1",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -1230,7 +1347,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1251,7 +1370,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_multidimarray_demo",
     "platform_name": "JSVEE",
     "title": "2D array Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating 2D array Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -1259,7 +1378,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "2d arrays",
+      "arrays"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1280,7 +1402,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_1_3",
     "platform_name": "JSVEE",
     "title": "Multiple Variables",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Multiple Variables",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1288,7 +1410,13 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "arithmetic operators",
+      "data types",
+      "operators",
+      "primitive data types",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1309,7 +1437,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s07_AccessorMutatorDemo",
     "platform_name": "JSVEE",
     "title": "Accessor Mutator Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Accessor Mutator Demo",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1317,7 +1445,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "object",
+      "objects"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1338,7 +1470,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_functions2",
     "platform_name": "JSVEE",
     "title": "Functions 2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Functions 2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1346,7 +1478,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1367,7 +1501,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_conditional_demo1",
     "platform_name": "JSVEE",
     "title": "If Conditions Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating If Conditions Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -1375,7 +1509,12 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "boolean expressions",
+      "conditionals",
+      "control flow",
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1396,7 +1535,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_split",
     "platform_name": "JSVEE",
     "title": "ae_python_split",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_split",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1404,7 +1543,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1425,7 +1566,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_greatest_divisor",
     "platform_name": "JSVEE",
     "title": "Recursion Greatest Divisor",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Recursion Greatest Divisor",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -1433,7 +1574,14 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions",
+      "recursion",
+      "search",
+      "search algorithms",
+      "sorting",
+      "sorting algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1454,7 +1602,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/palindrome",
     "platform_name": "JSVEE",
     "title": "Palindrome",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Palindrome",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -1462,7 +1610,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1483,7 +1633,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_swap",
     "platform_name": "JSVEE",
     "title": "Swap",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Swap",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1491,7 +1641,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "swap",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1512,7 +1666,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_wrapper_class_v2",
     "platform_name": "JSVEE",
     "title": "Wrapper Classes",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Wrapper Classes",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -1520,7 +1674,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "wrapper classes"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1541,7 +1697,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_constant_demo",
     "platform_name": "JSVEE",
     "title": "Constant Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Constant Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -1549,7 +1705,13 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "constants",
+      "data types",
+      "operators",
+      "primitive data types",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1570,7 +1732,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_decisions1_v2",
     "platform_name": "JSVEE",
     "title": "if-else-if",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating if-else-if",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1578,7 +1740,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "conditionals",
+      "control flow",
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1599,7 +1765,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_comparison_operators_v2",
     "platform_name": "JSVEE",
     "title": "comparison operators",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating comparison operators",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1607,7 +1773,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "boolean expressions",
+      "control flow",
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1628,7 +1798,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_while_v2",
     "platform_name": "JSVEE",
     "title": "While",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating While",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1636,7 +1806,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1657,7 +1830,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/tree",
     "platform_name": "JSVEE",
     "title": "Tree",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Tree",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -1665,7 +1838,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "binary search",
+      "trees"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1686,7 +1862,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_2_7",
     "platform_name": "JSVEE",
     "title": "Nested if",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Nested if",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1694,7 +1870,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "conditionals",
+      "control flow",
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1715,7 +1895,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_constant_math_demo",
     "platform_name": "JSVEE",
     "title": "Constsnt Math Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Constsnt Math Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -1723,7 +1903,13 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "constants",
+      "data types",
+      "operators",
+      "primitive data types",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1744,7 +1930,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_arithmetics2",
     "platform_name": "JSVEE",
     "title": "Aritmethics 2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Aritmethics 2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1752,7 +1938,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1773,7 +1962,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_exception_v2",
     "platform_name": "JSVEE",
     "title": "Exceptions",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Exceptions",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -1781,7 +1970,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "exception handling",
+      "exceptions"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1802,7 +1994,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/leap_year3",
     "platform_name": "JSVEE",
     "title": "Leap Year3",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Leap Year3",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -1831,7 +2023,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input4",
     "platform_name": "JSVEE",
     "title": "Power With Input4",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Power With Input4",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -1839,7 +2031,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1860,7 +2054,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_concat_demo",
     "platform_name": "JSVEE",
     "title": "Concat Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Concat Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -1868,7 +2062,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "string operations",
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1889,7 +2086,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_dict",
     "platform_name": "JSVEE",
     "title": "ae_python_dict",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_dict",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1897,7 +2094,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "dictionaries",
+      "dictionary"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1918,7 +2118,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_objects3",
     "platform_name": "JSVEE",
     "title": "Objects 3",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Objects 3",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1926,7 +2126,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "objects",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -1947,7 +2152,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s06_ConstructorDemo",
     "platform_name": "JSVEE",
     "title": "Constructor Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Constructor Demo",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -1955,7 +2160,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "objects"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -1976,7 +2184,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/list_pop",
     "platform_name": "JSVEE",
     "title": "List Pop",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating List Pop",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -1984,7 +2192,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2005,7 +2215,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch03_s06_CashRegisterTester",
     "platform_name": "JSVEE",
     "title": "Cash Register Tester",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Cash Register Tester",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2013,7 +2223,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "objects"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -2034,7 +2247,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/greatest_divisor_brute_force",
     "platform_name": "JSVEE",
     "title": "Greatest Divisor Brute Force",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Greatest Divisor Brute Force",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -2042,7 +2255,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "for loop",
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2063,7 +2279,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_array_demo",
     "platform_name": "JSVEE",
     "title": "Array Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Array Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -2071,7 +2287,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "2d arrays",
+      "arrays"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -2092,7 +2311,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_hiscore1",
     "platform_name": "JSVEE",
     "title": "Hiscore 1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Hiscore 1",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2100,7 +2319,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "control flow",
+      "if statement",
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2121,7 +2344,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_dict3",
     "platform_name": "JSVEE",
     "title": "Dictionary 3",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Dictionary 3",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2129,7 +2352,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "dictionaries",
+      "dictionary",
+      "json"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2150,7 +2377,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/partition3",
     "platform_name": "JSVEE",
     "title": "Partition3",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Partition3",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -2179,7 +2406,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_input1",
     "platform_name": "JSVEE",
     "title": "Input 1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Input 1",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2187,7 +2414,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions",
+      "input",
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2208,7 +2440,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_nested_loops_v2",
     "platform_name": "JSVEE",
     "title": "Nested Loops",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Nested Loops",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2216,7 +2448,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "nested loops"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -2237,7 +2471,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_findmax",
     "platform_name": "JSVEE",
     "title": "Find Max",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Find Max",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2245,7 +2479,13 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "json",
+      "list",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2266,7 +2506,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s05_MethodDemo",
     "platform_name": "JSVEE",
     "title": "Method Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Method Demo",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2274,7 +2514,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "objects"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -2295,7 +2538,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_StringExample_v2",
     "platform_name": "JSVEE",
     "title": "String Example",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating String Example",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2303,7 +2546,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "string operations",
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -2324,7 +2570,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/queue",
     "platform_name": "JSVEE",
     "title": "Queue",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Queue",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -2332,7 +2578,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "queue",
+      "queues"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2353,7 +2602,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_jeg_interface1_v2",
     "platform_name": "JSVEE",
     "title": "Interface",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Interface",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -2361,7 +2610,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "interfaces"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -2382,7 +2633,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_logic",
     "platform_name": "JSVEE",
     "title": "Logic",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Logic",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2390,7 +2641,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "boolean expressions",
+      "boolean logic",
+      "logical operators"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2411,7 +2666,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/employee_class",
     "platform_name": "JSVEE",
     "title": "Employee Class",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Employee Class",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -2440,7 +2695,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_hiscore2",
     "platform_name": "JSVEE",
     "title": "Hiscore 2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Hiscore 2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2448,7 +2703,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "control flow",
+      "if statement",
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2469,7 +2728,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_dict2",
     "platform_name": "JSVEE",
     "title": "Dictionary 2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Dictionary 2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2477,7 +2736,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "dictionaries",
+      "dictionary",
+      "json"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2498,7 +2761,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/partition2",
     "platform_name": "JSVEE",
     "title": "Partition2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Partition2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -2506,7 +2769,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "list",
+      "nested loops"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2527,7 +2793,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power",
     "platform_name": "JSVEE",
     "title": "Power",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Power",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -2556,7 +2822,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/age_checking",
     "platform_name": "JSVEE",
     "title": "Age Checking",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Age Checking",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -2564,7 +2830,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "2d list",
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2585,7 +2854,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format2",
     "platform_name": "JSVEE",
     "title": "Format 2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Format 2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2593,7 +2862,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "string formatting",
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2614,7 +2886,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_use_array_v2",
     "platform_name": "JSVEE",
     "title": "Using an Array2",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Using an Array2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2622,7 +2894,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "2d arrays",
+      "arrays"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -2643,7 +2918,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/import_math",
     "platform_name": "JSVEE",
     "title": "Import Math",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Import Math",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -2651,7 +2926,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "data types",
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2672,7 +2950,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_inheritance_polymorphism_2",
     "platform_name": "JSVEE",
     "title": "A Dog is also a Pet",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating A Dog is also a Pet",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -2680,7 +2958,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "inheritance"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -2701,7 +2981,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_simple_arithmetics",
     "platform_name": "JSVEE",
     "title": "Simpel Arithmetics",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Simpel Arithmetics",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2709,7 +2989,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2730,7 +3013,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/leap_year2",
     "platform_name": "JSVEE",
     "title": "Leap Year2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Leap Year2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -2759,7 +3042,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_halve",
     "platform_name": "JSVEE",
     "title": "Recursion Halve",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Recursion Halve",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -2767,7 +3050,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2788,7 +3073,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_file",
     "platform_name": "JSVEE",
     "title": "ae_python_file",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_file",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2796,7 +3081,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "file i/o"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2817,7 +3104,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_greet",
     "platform_name": "JSVEE",
     "title": "Greet",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Greet",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2825,7 +3112,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "input",
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2846,7 +3137,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_while_demo",
     "platform_name": "JSVEE",
     "title": "While Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating While Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -2854,7 +3145,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -2875,7 +3168,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_nested_for_demo",
     "platform_name": "JSVEE",
     "title": "Nested For Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Nested For Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -2883,7 +3176,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "nested loops"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -2904,7 +3199,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_greatest_divisor2",
     "platform_name": "JSVEE",
     "title": "Recursion Greatest Divisor2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Recursion Greatest Divisor2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -2912,7 +3207,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions",
+      "recursion"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2933,7 +3231,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format4",
     "platform_name": "JSVEE",
     "title": "f-string format 2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating f-string format 2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -2941,7 +3239,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2962,7 +3262,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/leap_year",
     "platform_name": "JSVEE",
     "title": "Leap Year",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Leap Year",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -2970,7 +3270,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "for loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -2991,7 +3293,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_variables",
     "platform_name": "JSVEE",
     "title": "Variables",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Variables",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -2999,7 +3301,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3020,7 +3325,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/data_type_typeof",
     "platform_name": "JSVEE",
     "title": "Data Type Typeof",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Data Type Typeof",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3028,7 +3333,11 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "data types",
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3049,7 +3358,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_relational_operators_v2",
     "platform_name": "JSVEE",
     "title": "relational operators",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating relational operators",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3057,7 +3366,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "boolean expressions",
+      "logical operators"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -3078,7 +3390,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_format1",
     "platform_name": "JSVEE",
     "title": "Format 1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Format 1",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3086,7 +3398,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "string formatting",
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3107,7 +3422,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/age_checking2",
     "platform_name": "JSVEE",
     "title": "Age Checking2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Age Checking2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3115,7 +3430,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3136,7 +3454,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power2",
     "platform_name": "JSVEE",
     "title": "Power2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Power2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3144,7 +3462,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3165,7 +3485,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/partition",
     "platform_name": "JSVEE",
     "title": "Partition",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Partition",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3173,7 +3493,11 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "list",
+      "nested loops"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3194,7 +3518,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_tryexcept2",
     "platform_name": "JSVEE",
     "title": "Try Except 2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Try Except 2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3202,7 +3526,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "exception handling",
+      "exceptions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3223,7 +3550,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_ifelse",
     "platform_name": "JSVEE",
     "title": "If Else",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating If Else",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3231,7 +3558,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "control flow",
+      "if statement",
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3252,7 +3583,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_Measure",
     "platform_name": "JSVEE",
     "title": "Measure ",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Measure ",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -3260,7 +3591,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "interfaces"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -3281,7 +3614,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_comparison",
     "platform_name": "JSVEE",
     "title": "Comparison",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Comparison",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3289,7 +3622,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "boolean expressions",
+      "boolean logic",
+      "comparison operators"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3310,7 +3647,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/discount_calculator3",
     "platform_name": "JSVEE",
     "title": "Discount Calculator3",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Discount Calculator3",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3339,7 +3676,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_arithmetic_v2",
     "platform_name": "JSVEE",
     "title": "Arithmetic Operations",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Arithmetic Operations",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3347,7 +3684,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "arithmetic operations",
+      "arithmetic operators",
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -3368,7 +3710,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/stack_lifo1",
     "platform_name": "JSVEE",
     "title": "Stack Lifo1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Stack Lifo1",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3376,7 +3718,12 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "stack",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3397,7 +3744,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch02_s03_VariableDemo",
     "platform_name": "JSVEE",
     "title": "Variable Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Variable Demo",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3405,7 +3752,13 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "arithmetic operations",
+      "arithmetic operators",
+      "data types",
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -3426,7 +3779,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_functions1",
     "platform_name": "JSVEE",
     "title": "Functions 1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Functions 1",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3434,7 +3787,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3455,7 +3810,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_objects1",
     "platform_name": "JSVEE",
     "title": "Objects 1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Objects 1",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3463,7 +3818,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "objects",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3484,7 +3844,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/data_type_isinstance",
     "platform_name": "JSVEE",
     "title": "Data Type Isinstance",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Data Type Isinstance",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3492,7 +3852,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "data types"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3513,7 +3875,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch01_s05_PrintTester",
     "platform_name": "JSVEE",
     "title": "Print Tester",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Print Tester",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3521,7 +3883,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "arithmetic operations",
+      "data types",
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -3542,7 +3909,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/find_target",
     "platform_name": "JSVEE",
     "title": "Find Target",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Find Target",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3550,7 +3917,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "search algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3571,7 +3940,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_hello",
     "platform_name": "JSVEE",
     "title": "Hello",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Hello",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3579,7 +3948,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3600,7 +3972,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/greatest_divisor_brute_force2",
     "platform_name": "JSVEE",
     "title": "Greatest Divisor Brute Force2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Greatest Divisor Brute Force2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3608,7 +3980,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "boolean expressions",
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3629,7 +4004,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_mult2_version1",
     "platform_name": "JSVEE",
     "title": "Recursion Mult2 Version1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Recursion Mult2 Version1",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3637,7 +4012,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3658,7 +4035,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_tostring_demo",
     "platform_name": "JSVEE",
     "title": "ToString Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating ToString Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -3666,7 +4043,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "string operations",
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -3687,7 +4067,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_strings",
     "platform_name": "JSVEE",
     "title": "Strings",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Strings",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3695,7 +4075,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "strings"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3716,7 +4098,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_lists2",
     "platform_name": "JSVEE",
     "title": "Lists 2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Lists 2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3724,7 +4106,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3745,7 +4129,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch01_s05_HelloPrinter",
     "platform_name": "JSVEE",
     "title": "Hello Printer",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Hello Printer",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3753,7 +4137,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "data types",
+      "operators",
+      "primitive data types",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -3774,7 +4163,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_7_8",
     "platform_name": "JSVEE",
     "title": "For-each with break",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating For-each with break",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3782,7 +4171,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "2d arrays",
+      "arraylist",
+      "arrays",
+      "loops"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -3803,7 +4197,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/stack_lifo2",
     "platform_name": "JSVEE",
     "title": "Stack Lifo2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Stack Lifo2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3811,7 +4205,12 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "stack",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3832,7 +4231,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/discount_calculator2",
     "platform_name": "JSVEE",
     "title": "Discount Calculator2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Discount Calculator2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3840,7 +4239,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3861,7 +4262,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_ifelifelse",
     "platform_name": "JSVEE",
     "title": "If El If Else",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating If El If Else",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3869,7 +4270,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "control flow",
+      "if statement",
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3890,7 +4296,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_class2",
     "platform_name": "JSVEE",
     "title": "ae_python_class2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_class2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3898,7 +4304,13 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "classes",
+      "data structures",
+      "objects",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3919,7 +4331,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_tryexcept1",
     "platform_name": "JSVEE",
     "title": "Try Except 1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Try Except 1",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -3927,7 +4339,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "exception handling",
+      "exceptions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -3948,7 +4363,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input",
     "platform_name": "JSVEE",
     "title": "Power With Input",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Power With Input",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3977,7 +4392,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/selection_sort",
     "platform_name": "JSVEE",
     "title": "Selection Sort",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Selection Sort",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3985,7 +4400,13 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion",
+      "search",
+      "search algorithms",
+      "sorting",
+      "sorting algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4006,7 +4427,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/student_class",
     "platform_name": "JSVEE",
     "title": "Student Class",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Student Class",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -4035,7 +4456,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_vals_refs2",
     "platform_name": "JSVEE",
     "title": "Values and References 2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Values and References 2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4043,7 +4464,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "value vs reference"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4064,7 +4487,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_float",
     "platform_name": "JSVEE",
     "title": "ae_python_float",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_float",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4072,7 +4495,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "data types",
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4093,7 +4520,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_use_2darray_v2",
     "platform_name": "JSVEE",
     "title": "Use 2D Array",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Use 2D Array",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4101,7 +4528,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "2d arrays",
+      "arrays"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -4122,7 +4552,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_vals_refs3",
     "platform_name": "JSVEE",
     "title": "Values and References 3",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Values and References 3",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4130,7 +4560,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "value vs reference"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4151,7 +4583,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_input",
     "platform_name": "JSVEE",
     "title": "ae_python_input",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_input",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4159,7 +4591,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions",
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4180,7 +4616,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_returnvalue",
     "platform_name": "JSVEE",
     "title": "Return value",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Return value",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4188,7 +4624,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4209,7 +4647,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/studet_class2",
     "platform_name": "JSVEE",
     "title": "Studet Class2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Studet Class2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -4238,7 +4676,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_sum2",
     "platform_name": "JSVEE",
     "title": "Recursion Sum2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Recursion Sum2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -4246,7 +4684,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4267,7 +4707,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/power_with_input2",
     "platform_name": "JSVEE",
     "title": "Power With Input2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Power With Input2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -4296,7 +4736,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_class1",
     "platform_name": "JSVEE",
     "title": "ae_python_class1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_class1",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4304,7 +4744,13 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "classes",
+      "data structures",
+      "objects",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4325,7 +4771,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_nested_if",
     "platform_name": "JSVEE",
     "title": "Nested If",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Nested If",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4333,7 +4779,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "control flow",
+      "if statement",
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4354,7 +4805,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_file2",
     "platform_name": "JSVEE",
     "title": "Files 2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Files 2",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4362,7 +4813,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "algorithm analysis",
+      "file i/o"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4383,7 +4837,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/discount_calculator",
     "platform_name": "JSVEE",
     "title": "Discount Calculator",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Discount Calculator",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -4391,7 +4845,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "if-else statement"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4412,7 +4868,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_JavaTutorial_4_7_5",
     "platform_name": "JSVEE",
     "title": "For-Each",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating For-Each",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4420,7 +4876,12 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "2d arrays",
+      "arraylist",
+      "arrays",
+      "loops"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -4441,7 +4902,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/function_pass",
     "platform_name": "JSVEE",
     "title": "Function Pass",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Function Pass",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -4449,7 +4910,10 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "functions",
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4470,7 +4934,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_BJ4_ch03_s01_CounterDemo",
     "platform_name": "JSVEE",
     "title": "Counter Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Counter Demo",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4478,7 +4942,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "objects"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -4499,7 +4966,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_lists3",
     "platform_name": "JSVEE",
     "title": "Lists 3",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Lists 3",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4507,7 +4974,9 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4528,7 +4997,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_for",
     "platform_name": "JSVEE",
     "title": "For Loop",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating For Loop",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4536,7 +5005,11 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "for loop",
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4557,7 +5030,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_python_for",
     "platform_name": "JSVEE",
     "title": "ae_python_for",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating ae_python_for",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4565,7 +5038,10 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "for loop",
+      "loops"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4586,7 +5062,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_unary_demo",
     "platform_name": "JSVEE",
     "title": "Unary Operator Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating Unary Operator Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -4594,7 +5070,11 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "arithmetic operations",
+      "operators",
+      "variables"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -4615,7 +5095,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_halve2",
     "platform_name": "JSVEE",
     "title": "Recursion Halve2",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Recursion Halve2",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -4623,7 +5103,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4644,7 +5126,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/singly_linked_list",
     "platform_name": "JSVEE",
     "title": "Singly Linked List",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Singly Linked List",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -4652,7 +5134,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "linked list"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4673,7 +5157,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/ae_adl_dict1",
     "platform_name": "JSVEE",
     "title": "Dictionary 1",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Dictionary 1",
     "license": "MIT",
     "author": [
       "Sirki\u00e4 Teemu"
@@ -4681,7 +5165,14 @@
     "institution": [
       "Aalto Finland"
     ],
-    "keywords": [],
+    "keywords": [
+      "classes",
+      "data structures",
+      "dictionaries",
+      "dictionary",
+      "json",
+      "stacks"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4702,7 +5193,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_do_while_demo",
     "platform_name": "JSVEE",
     "title": "DoWhile Demo",
-    "description": "",
+    "description": "Java CodeVisualization for demonstrating DoWhile Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -4710,7 +5201,11 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "do-while loop",
+      "loops",
+      "while loop"
+    ],
     "features": [],
     "programming_language": [
       "Java"
@@ -4731,7 +5226,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/recursion_fibonacci",
     "platform_name": "JSVEE",
     "title": "Recursion Fibonacci",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Recursion Fibonacci",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -4739,7 +5234,9 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion"
+    ],
     "features": [],
     "programming_language": [
       "Python"
@@ -4760,7 +5257,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/jsvee/jsvee-python/bubble_sort_best",
     "platform_name": "JSVEE",
     "title": "Bubble Sort Best",
-    "description": "",
+    "description": "Python CodeVisualization for demonstrating Bubble Sort Best",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -4768,7 +5265,12 @@
     "institution": [
       "University of Pittsburgh"
     ],
-    "keywords": [],
+    "keywords": [
+      "recursion",
+      "search algorithms",
+      "sorting",
+      "sorting algorithms"
+    ],
     "features": [],
     "programming_language": [
       "Python"
