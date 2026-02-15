@@ -30,7 +30,6 @@ export class HubComponent implements OnInit, AfterViewInit {
 
   delayedTimeout: any;
   courses: any[] = [];
-
   selected: any = null;
 
   selectedKVs: { [key: string]: any } = {};
@@ -41,14 +40,9 @@ export class HubComponent implements OnInit, AfterViewInit {
   loading = true;
 
   private readonly multiFilterSeparator = '||';
-  private readonly quickFiltersOpenParam = 'qf';
   private availableFacetLabels: { [key: string]: Set<string> } = {};
   private allFacetLabels: { [key: string]: string[] } = {};
 
-  private viewReady = false;
-  private dataReady = false;
-  private lastQueryParams: Params | null = null;
-  private isApplyingRouteFilters = false;
   private readonly quickFilterFields = [
     'domain',
     'institution',
@@ -56,7 +50,7 @@ export class HubComponent implements OnInit, AfterViewInit {
   ];
 
   get quickFiltersExpanded() {
-    return this.lastQueryParams?.[this.quickFiltersOpenParam] != null;
+    return this.route.snapshot.queryParams?.['qf'] == '1';
   }
 
   get isLoggedIn() {
@@ -86,22 +80,19 @@ export class HubComponent implements OnInit, AfterViewInit {
     );
 
     this.title.setTitle('Courses Hub');
-    this.route.queryParams.subscribe((params) => {
-      this.lastQueryParams = params;
-      this.applyFiltersIfReady();
-    });
+    this.route.queryParams.subscribe((params) =>
+      this.applyFiltersFromParams(params),
+    );
     this.reload();
   }
 
-  ngAfterViewInit(): void {
-    this.viewReady = true;
-    this.applyFiltersIfReady();
-  }
+  ngAfterViewInit(): void {}
 
-  filter(table: Table, $event: any) {
+  filter(table: Table, $event: any, skip = false) {
     const value = ($event.target.value || '').trim();
     this.globalQuery = value;
     table.filterGlobal(value, 'contains');
+    if (skip) return;
     this.syncQueryParams({ q: value || null });
   }
 
@@ -112,8 +103,11 @@ export class HubComponent implements OnInit, AfterViewInit {
         this.courses = resp;
         this.selectedKVs = { count: 0 };
         this.reloadFilterKVs(this.courses);
-        this.dataReady = true;
-        this.applyFiltersIfReady();
+        this.refreshAvailableFacetLabels();
+        setTimeout(
+          () => this.applyFiltersFromParams(this.route.snapshot.queryParams),
+          0,
+        );
       },
       error: (error: any) => console.log(error),
       complete: () => (this.loading = false),
@@ -140,14 +134,11 @@ export class HubComponent implements OnInit, AfterViewInit {
   clearQuickFilters(table: Table) {
     table.reset();
     this.globalQuery = '';
-    if (this.searchInputEl?.nativeElement) {
-      this.searchInputEl.nativeElement.value = '';
-    }
     this.selectedKVs = { count: 0 };
     this.reloadFilterKVs(this.courses);
     const clearedParams = this.quickFilterFields.reduce(
       (acc: Params, key) => ({ ...acc, [key]: null }),
-      { q: null },
+      { q: null, qf: null },
     );
     this.syncQueryParams(clearedParams);
   }
@@ -186,9 +177,7 @@ export class HubComponent implements OnInit, AfterViewInit {
       }
     });
 
-    this.domainKVs = Array.from(domainCounts.entries())
-      .map(([value, count]) => ({ label: value, value: count }))
-      .sort((a, b) => b.value - a.value || a.label.localeCompare(b.label));
+    this.domainKVs = this.toKeyValue(domainCounts);
 
     this.institutionKVs = Array.from(institutionCounts.entries())
       .map(([key, count]) => ({
@@ -197,9 +186,7 @@ export class HubComponent implements OnInit, AfterViewInit {
       }))
       .sort((a, b) => b.value - a.value || a.label.localeCompare(b.label));
 
-    this.authorKVs = Array.from(authorCounts.entries())
-      .map(([value, count]) => ({ label: value, value: count }))
-      .sort((a, b) => b.value - a.value || a.label.localeCompare(b.label));
+    this.authorKVs = this.toKeyValue(authorCounts);
 
     this.allFacetLabels = {
       domain: this.domainKVs.map((kv) => kv.label),
@@ -222,19 +209,15 @@ export class HubComponent implements OnInit, AfterViewInit {
 
   clearGlobalFilter(table: Table) {
     this.globalQuery = '';
-    if (this.searchInputEl?.nativeElement) {
-      this.searchInputEl.nativeElement.value = '';
-    }
     table.filterGlobal('', 'contains');
     this.syncQueryParams({ q: null });
   }
 
   toggleActiveQuickFilter(table: Table, field: string, label: string) {
-    const facet =
-      this.findFacetByLabel(field, label) || {
-        label,
-        value: 0,
-      };
+    const facet = this.findFacetByLabel(field, label) || {
+      label,
+      value: 0,
+    };
     this.toggleQuickFilter(table, field, facet);
   }
 
@@ -302,51 +285,35 @@ export class HubComponent implements OnInit, AfterViewInit {
     return obj ? Object.keys(obj) : [];
   }
 
-  private applyFiltersIfReady() {
-    if (
-      !this.viewReady ||
-      !this.dataReady ||
-      this.loading ||
-      !this.table ||
-      !this.lastQueryParams
-    ) {
-      return;
-    }
-    this.applyFiltersFromParams(this.lastQueryParams);
-  }
-
   private applyFiltersFromParams(params: Params) {
-    this.isApplyingRouteFilters = true;
-    try {
-      const global = (params['q'] || '').trim();
-      this.globalQuery = global;
-      if (this.searchInputEl?.nativeElement) {
-        this.searchInputEl.nativeElement.value = global;
-      }
-      this.table.filterGlobal(global, 'contains');
+    this.globalQuery = (params['q'] || '').trim();
+    if (this.table) this.table.filterGlobal(this.globalQuery, 'contains');
 
-      this.selectedKVs = { count: 0 };
-      this.quickFilterFields.forEach((field) => {
-        const values = this.parseFilterValues(params[field]);
-        if (values.length) {
-          const facets = values.map(
-            (label) =>
-              this.findFacetByLabel(field, label) || {
-                label,
-                value: 0,
-              },
-          );
+    this.selectedKVs = { count: 0 };
+    this.quickFilterFields.forEach((field) => {
+      const values = this.parseFilterValues(params[field]);
+      if (values.length) {
+        const facets = values.map(
+          (label) =>
+            this.findFacetByLabel(field, label) || {
+              label,
+              value: 0,
+            },
+        );
+        if (this.table) {
           this.applyQuickFilter(this.table, field, values, facets);
         } else {
-          this.table.filter(null, field, 'inCaseInsensitive');
-          delete this.selectedKVs[field];
+          this.selectedKVs[field] = facets;
         }
-      });
-      this.recountSelected();
-      this.refreshAvailableFacetLabels();
-    } finally {
-      this.isApplyingRouteFilters = false;
-    }
+      } else {
+        if (this.table) {
+          this.table.filter(null, field, 'inCaseInsensitive');
+        }
+        delete this.selectedKVs[field];
+      }
+    });
+    this.recountSelected();
+    this.refreshAvailableFacetLabels();
   }
 
   private applyQuickFilter(
@@ -378,7 +345,6 @@ export class HubComponent implements OnInit, AfterViewInit {
   }
 
   private syncQueryParams(params: Params) {
-    if (this.isApplyingRouteFilters) return;
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams: params,
@@ -389,7 +355,7 @@ export class HubComponent implements OnInit, AfterViewInit {
 
   toggleQuickFiltersPanel() {
     this.syncQueryParams({
-      [this.quickFiltersOpenParam]: this.quickFiltersExpanded ? null : '1',
+      qf: this.quickFiltersExpanded ? null : '1',
     });
   }
 

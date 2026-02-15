@@ -59,13 +59,14 @@
           [class.rounded-lg]="!quickFiltersExpanded"
         >
           <input
-            #searchInputEl
             type="text"
             name="name"
             pInputText
             placeholder="Search ..."
             class="text-xl border-gray-200 w-full pr-12"
-            (keyup)="filter(table, $event)"
+            [(ngModel)]="globalQuery"
+            (keyup)="filter(table, $event, true)"
+            (blur)="filter(table, $event)"
           />
           <div
             class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center gap-2"
@@ -85,26 +86,15 @@
         </div>
 
         <div
-          *ngIf="
-            globalQuery || selectedKVs['count'] > 0 || quickFiltersExpanded
-          "
+          *ngIf="selectedKVs['count'] > 0 || quickFiltersExpanded"
           class="border-l border-r border-b border-t-0 border-solid border-gray-200 p-4 rounded-b-md shadow-md bg-white relative overflow-auto flex flex-col items-start gap-2"
         >
           <div
-            *ngIf="globalQuery || activeQuickFilters.length"
+            *ngIf="activeQuickFilters.length"
             class="w-full flex flex-wrap items-center gap-1 text-xs text-gray-500"
           >
             <span class="uppercase">Active Filters:</span>
-            <span *ngIf="globalQuery" class="inline-flex items-center gap-1">
-              <span>q: {{ globalQuery }}</span>
-              <a
-                class="cursor-pointer hover:underline"
-                (click)="clearGlobalFilter(table)"
-                aria-label="Clear search filter"
-              >
-                clear
-              </a>
-            </span>
+
             <a
               *ngFor="let filter of activeQuickFilters; let $index = index"
               class="text-xs cursor-pointer hover:underline font-bold text-blue-700 underline"
@@ -122,7 +112,7 @@
 
             <span class="grow"></span>
             <p-button
-              *ngIf="table.filteredValue"
+              *ngIf="table && table.filteredValue"
               [label]="table.filteredValue.length + ' Matched'"
               icon="fa fa-times"
               iconPos="right"

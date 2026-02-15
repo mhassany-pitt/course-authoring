@@ -36,7 +36,6 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   licenseKVs: FilterKV[] = [];
   globalQuery = '';
   private readonly multiFilterSeparator = '||';
-  private readonly quickFiltersOpenParam = 'qf';
   private availableFacetLabels: { [key: string]: Set<string> } = {};
   private allFacetLabels: { [key: string]: string[] } = {};
   private readonly globalFilterFields = [
@@ -51,21 +50,18 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   ];
 
   loading = true;
-  private viewReady = false;
-  private dataReady = false;
-  private lastQueryParams: Params | null = null;
-  private isApplyingRouteFilters = false;
+
   private readonly quickFilterFields = [
-    'identity.type', // is a string
-    'languages.programming_languages', // is an array of strings
-    'attribution.authors', // attribution.authors is an array of objects with a "name" field, but we flatten it to an array of strings for filtering
-    'attribution.provider', // is a string
-    'rights.license', // is a string
-    'tags', // is an array of strings
+    'identity.type',
+    'languages.programming_languages',
+    'attribution.authors',
+    'attribution.provider',
+    'rights.license',
+    'tags',
   ];
 
   get quickFiltersExpanded() {
-    return this.lastQueryParams?.[this.quickFiltersOpenParam] != null;
+    return this.route.snapshot.queryParams?.['qf'] == '1';
   }
 
   constructor(
@@ -105,22 +101,19 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         return selected.some((s) => names.includes(s));
       },
     );
-    this.route.queryParams.subscribe((params) => {
-      this.lastQueryParams = params;
-      this.applyFiltersIfReady();
-    });
+    this.route.queryParams.subscribe((params) =>
+      this.applyFiltersFromParams(params),
+    );
     this.reload();
   }
 
-  ngAfterViewInit(): void {
-    this.viewReady = true;
-    this.applyFiltersIfReady();
-  }
+  ngAfterViewInit(): void {}
 
-  filter(table: Table, $event: any) {
+  filter(table: Table, $event: any, skip = false) {
     const value = ($event.target.value || '').trim();
     this.globalQuery = value;
     table.filterGlobal(value, 'contains');
+    if (skip) return;
     this.syncQueryParams({ q: value || null });
   }
 
@@ -132,8 +125,10 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         this.flattenAuthors();
         this.reloadFilterKVs(this.items);
         this.refreshAvailableFacetLabels();
-        this.dataReady = true;
-        this.applyFiltersIfReady();
+        setTimeout(
+          () => this.applyFiltersFromParams(this.route.snapshot.queryParams),
+          0,
+        );
       },
       error: (error: any) => console.log(error),
       complete: () => (this.loading = false),
@@ -170,15 +165,12 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   clearQuickFilters(table: Table) {
     table.reset();
     this.globalQuery = '';
-    if (this.searchInputEl?.nativeElement) {
-      this.searchInputEl.nativeElement.value = '';
-    }
     this.selectedKVs = {};
     this.selectedKVs['count'] = 0;
     this.reloadFilterKVs(this.items);
     const clearedParams = this.quickFilterFields.reduce(
       (acc: Params, key) => ({ ...acc, [key]: null }),
-      { q: null },
+      { q: null, qf: null },
     );
     this.syncQueryParams(clearedParams);
   }
@@ -414,51 +406,35 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     }
   }
 
-  private applyFiltersIfReady() {
-    if (
-      !this.viewReady ||
-      !this.dataReady ||
-      this.loading ||
-      !this.table ||
-      !this.lastQueryParams
-    ) {
-      return;
-    }
-    this.applyFiltersFromParams(this.lastQueryParams);
-  }
-
   private applyFiltersFromParams(params: Params) {
-    this.isApplyingRouteFilters = true;
-    try {
-      const global = (params['q'] || '').trim();
-      this.globalQuery = global;
-      if (this.searchInputEl?.nativeElement) {
-        this.searchInputEl.nativeElement.value = global;
-      }
-      this.table.filterGlobal(global, 'contains');
+    this.globalQuery = (params['q'] || '').trim();
+    if (this.table) this.table.filterGlobal(this.globalQuery, 'contains');
 
-      this.selectedKVs = {};
-      this.quickFilterFields.forEach((field) => {
-        const values = this.parseFilterValues(params[field]);
-        if (values.length) {
-          const facets = values.map(
-            (label) =>
-              this.getFacetForField(field).find((kv) => kv.label === label) || {
-                label,
-                value: 0,
-              },
-          );
+    this.selectedKVs = {};
+    this.quickFilterFields.forEach((field) => {
+      const values = this.parseFilterValues(params[field]);
+      if (values.length) {
+        const facets = values.map(
+          (label) =>
+            this.getFacetForField(field).find((kv) => kv.label === label) || {
+              label,
+              value: 0,
+            },
+        );
+        if (this.table) {
           this.applyQuickFilter(this.table, field, values, facets);
         } else {
-          this.table.filter(null, field, this.getTableMatchModeForField(field));
-          delete this.selectedKVs[field];
+          this.selectedKVs[field] = facets;
         }
-      });
-      this.recountSelected();
-      this.refreshAvailableFacetLabels();
-    } finally {
-      this.isApplyingRouteFilters = false;
-    }
+      } else {
+        if (this.table) {
+          this.table.filter(null, field, this.getTableMatchModeForField(field));
+        }
+        delete this.selectedKVs[field];
+      }
+    });
+    this.recountSelected();
+    this.refreshAvailableFacetLabels();
   }
 
   private applyQuickFilter(
@@ -490,7 +466,6 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   }
 
   private syncQueryParams(params: Params) {
-    if (this.isApplyingRouteFilters) return;
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams: params,
@@ -501,7 +476,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
 
   toggleQuickFiltersPanel() {
     this.syncQueryParams({
-      [this.quickFiltersOpenParam]: this.quickFiltersExpanded ? null : '1',
+      ['qf']: this.quickFiltersExpanded ? null : '1',
     });
   }
 
@@ -526,9 +501,6 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
 
   clearGlobalFilter(table: Table) {
     this.globalQuery = '';
-    if (this.searchInputEl?.nativeElement) {
-      this.searchInputEl.nativeElement.value = '';
-    }
     table.filterGlobal('', 'contains');
     this.syncQueryParams({ q: null });
   }
