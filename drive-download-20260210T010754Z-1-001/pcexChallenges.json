@@ -1,0 +1,4622 @@
+{
+  "2 dimensional arrays (fundamental operations)": {
+    "topic": "2 dimensional arrays (fundamental operations)",
+    "pcexChallenges": [
+      {
+        "name": "JPrintMedalsRowColumnTotal",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrays2dBasic2",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrays2dBasic3",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JSodaSurverySodaAvg",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JArraySwapAdjacentElements",
+        "rate": 4.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayBasic3",
+        "rate": 3.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayRotateLeftTwice",
+        "rate": 3.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot3",
+        "rate": 3.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JPhoneAge2",
+        "rate": 3.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JSearchArrayCountsEach",
+        "rate": 3.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JThreeBoolean2",
+        "rate": 3.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JThreeBoolean3",
+        "rate": 3.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentConsecutives",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentGreater",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayBasic2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayFillUserInput",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayMin",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageArrayElements",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot4",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JFailCourse2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JFailCourse3",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput4",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar3",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JSearchArrayTotalCounts",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JTemperatureListDaysAboveThreshold",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageWonEqual",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayRotateRight",
+        "rate": 2.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayRotateRightTwice",
+        "rate": 2.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageDouble",
+        "rate": 2.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageEvenNums",
+        "rate": 2.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput2",
+        "rate": 2.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput3",
+        "rate": 2.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfMaxOfThree",
+        "rate": 2.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JRepeatedSequence2",
+        "rate": 2.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JSodaSurverySodaRespondentAvg",
+        "rate": 2.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageInput",
+        "rate": 2.9,
+        "futureKcs": false
+      },
+      {
+        "name": "ifElseOddEven",
+        "rate": 2.9,
+        "futureKcs": false
+      },
+      {
+        "name": "DisplayTime2",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JCheckProductCode2",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc2",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar2",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar3",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JForOne2",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JForThree2",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JForTwo2",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JLargestDivisor",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JReverseNumber",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JStars2",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JSumDigits",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JWriteSquaresOdd",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JWriteSquaresRange",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "PointTester2",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "StringAddition2",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "TVTester2",
+        "rate": 2.6,
+        "futureKcs": false
+      },
+      {
+        "name": "AnimalTester2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "BmiCalculator2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "FahrenheitToCelsius",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "InheritancePointTester2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials3",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JCharAt2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc3",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseIfGrade2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseWages2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JInputStat2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfTemperature2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JStringEqual2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JVocabulary2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "LoanTester2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "PythagoreanTheorem2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "Transactions2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "VendingMachine2",
+        "rate": 2.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JCheckAge2",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JWorkHours2",
+        "rate": 0.0,
+        "futureKcs": true
+      }
+    ]
+  },
+  "Exceptions (Ch. 11) (manually throwing exceptions)": {
+    "topic": "Exceptions (Ch. 11) (manually throwing exceptions)",
+    "pcexChallenges": [
+      {
+        "name": "JCheckAge2",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JWorkHours2",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JArraySwapAdjacentElements",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayBasic3",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayRotateLeftTwice",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot3",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JPhoneAge2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JPrintMedalsRowColumnTotal",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JSearchArrayCountsEach",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JThreeBoolean2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JThreeBoolean3",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentConsecutives",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentGreater",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayBasic2",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayFillUserInput",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayMin",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrays2dBasic2",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrays2dBasic3",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageArrayElements",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot2",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot4",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JFailCourse2",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JFailCourse3",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput4",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar2",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar3",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JSearchArrayTotalCounts",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JSodaSurverySodaAvg",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JTemperatureListDaysAboveThreshold",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageWonEqual",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayRotateRight",
+        "rate": 1.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayRotateRightTwice",
+        "rate": 1.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageDouble",
+        "rate": 1.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageEvenNums",
+        "rate": 1.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput2",
+        "rate": 1.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput3",
+        "rate": 1.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfMaxOfThree",
+        "rate": 1.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JRepeatedSequence2",
+        "rate": 1.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JSodaSurverySodaRespondentAvg",
+        "rate": 1.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageInput",
+        "rate": 1.7,
+        "futureKcs": false
+      },
+      {
+        "name": "ifElseOddEven",
+        "rate": 1.7,
+        "futureKcs": false
+      },
+      {
+        "name": "DisplayTime2",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JCheckProductCode2",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc2",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar2",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar3",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JForOne2",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JForThree2",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JForTwo2",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JLargestDivisor",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JReverseNumber",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JStars2",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JSumDigits",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JWriteSquaresOdd",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JWriteSquaresRange",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "PointTester2",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "StringAddition2",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "TVTester2",
+        "rate": 0.8,
+        "futureKcs": false
+      },
+      {
+        "name": "AnimalTester2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "BmiCalculator2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "FahrenheitToCelsius",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "InheritancePointTester2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials3",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JCharAt2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc3",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseIfGrade2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseWages2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JInputStat2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfTemperature2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JStringEqual2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JVocabulary2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "LoanTester2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "PythagoreanTheorem2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "Transactions2",
+        "rate": 0.0,
+        "futureKcs": false
+      },
+      {
+        "name": "VendingMachine2",
+        "rate": 0.0,
+        "futureKcs": false
+      }
+    ]
+  },
+  "arrays": {
+    "topic": "arrays",
+    "pcexChallenges": [
+      {
+        "name": "JSearchArrayCountsEach",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayMin",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JArraySwapAdjacentElements",
+        "rate": 3.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayBasic3",
+        "rate": 3.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayRotateLeftTwice",
+        "rate": 3.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JSearchArrayTotalCounts",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JTemperatureListDaysAboveThreshold",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayRotateRight",
+        "rate": 3.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayRotateRightTwice",
+        "rate": 3.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JPrintMedalsRowColumnTotal",
+        "rate": 2.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic2",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayFillUserInput",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageArrayElements",
+        "rate": 2.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JSodaSurverySodaRespondentAvg",
+        "rate": 2.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot3",
+        "rate": 2.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JPhoneAge2",
+        "rate": 2.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JThreeBoolean2",
+        "rate": 2.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JThreeBoolean3",
+        "rate": 2.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentConsecutives",
+        "rate": 1.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentGreater",
+        "rate": 1.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot2",
+        "rate": 1.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot4",
+        "rate": 1.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JFailCourse2",
+        "rate": 1.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JFailCourse3",
+        "rate": 1.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput4",
+        "rate": 1.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar2",
+        "rate": 1.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar3",
+        "rate": 1.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageWonEqual",
+        "rate": 1.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageDouble",
+        "rate": 1.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageEvenNums",
+        "rate": 1.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput2",
+        "rate": 1.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput3",
+        "rate": 1.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfMaxOfThree",
+        "rate": 1.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JRepeatedSequence2",
+        "rate": 1.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageInput",
+        "rate": 1.6,
+        "futureKcs": false
+      },
+      {
+        "name": "ifElseOddEven",
+        "rate": 1.6,
+        "futureKcs": false
+      },
+      {
+        "name": "DisplayTime2",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JCheckProductCode2",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc2",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar2",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar3",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JForOne2",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JForThree2",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JForTwo2",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JLargestDivisor",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JReverseNumber",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JStars2",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JSumDigits",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JWriteSquaresOdd",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JWriteSquaresRange",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "PointTester2",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "StringAddition2",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "TVTester2",
+        "rate": 1.4,
+        "futureKcs": false
+      },
+      {
+        "name": "AnimalTester2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "BmiCalculator2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "FahrenheitToCelsius",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "InheritancePointTester2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials3",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JCharAt2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc3",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseIfGrade2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseWages2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JInputStat2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfTemperature2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JStringEqual2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JVocabulary2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "LoanTester2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "PythagoreanTheorem2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "Transactions2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "VendingMachine2",
+        "rate": 1.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrays2dBasic2",
+        "rate": 0.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic3",
+        "rate": 0.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaAvg",
+        "rate": 0.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JWorkHours2",
+        "rate": 0.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JCheckAge2",
+        "rate": 0.0,
+        "futureKcs": true
+      }
+    ]
+  },
+  "block & scope": {
+    "topic": "block & scope",
+    "pcexChallenges": [
+      {
+        "name": "JAdjacentConsecutives",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot4",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar2",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar3",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageDouble",
+        "rate": 4.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageEvenNums",
+        "rate": 4.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JCheckProductCode2",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc2",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar2",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar3",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JLargestDivisor",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JReverseNumber",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JSumDigits",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "PointTester2",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "StringAddition2",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "TVTester2",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "AnimalTester2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "BmiCalculator2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "FahrenheitToCelsius",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "InheritancePointTester2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials3",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JCharAt2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc3",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseIfGrade2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseWages2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JInputStat2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfTemperature2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JStringEqual2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JVocabulary2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "LoanTester2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "PythagoreanTheorem2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "Transactions2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "VendingMachine2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot3",
+        "rate": 3.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JPhoneAge2",
+        "rate": 3.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean2",
+        "rate": 3.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean3",
+        "rate": 3.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JAdjacentGreater",
+        "rate": 3.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JBooleanDryHot2",
+        "rate": 3.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse2",
+        "rate": 3.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse3",
+        "rate": 3.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JInput4",
+        "rate": 3.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JWinPercentageWonEqual",
+        "rate": 3.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JCheckAge2",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JInput2",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JInput3",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JNestedIfMaxOfThree",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JRepeatedSequence2",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JWinPercentageInput",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "ifElseOddEven",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "DisplayTime2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JForOne2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JForThree2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JForTwo2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JStars2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JWriteSquaresOdd",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JWriteSquaresRange",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic2",
+        "rate": 2.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayFillUserInput",
+        "rate": 2.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JAverageArrayElements",
+        "rate": 2.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRight",
+        "rate": 2.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRightTwice",
+        "rate": 2.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaRespondentAvg",
+        "rate": 2.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JWorkHours2",
+        "rate": 2.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JArraySwapAdjacentElements",
+        "rate": 1.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic3",
+        "rate": 1.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateLeftTwice",
+        "rate": 1.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayMin",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic2",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic3",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayTotalCounts",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaAvg",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JTemperatureListDaysAboveThreshold",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JPrintMedalsRowColumnTotal",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayCountsEach",
+        "rate": 0.0,
+        "futureKcs": true
+      }
+    ]
+  },
+  "booleans": {
+    "topic": "booleans",
+    "pcexChallenges": [
+      {
+        "name": "JAdjacentConsecutives",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot4",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar2",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar3",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageEvenNums",
+        "rate": 4.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot3",
+        "rate": 4.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JPhoneAge2",
+        "rate": 4.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean2",
+        "rate": 4.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean3",
+        "rate": 4.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JCheckProductCode2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JLargestDivisor",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "TVTester2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentGreater",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JBooleanDryHot2",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse2",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse3",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JInput4",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JDecInc2",
+        "rate": 3.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar2",
+        "rate": 3.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar3",
+        "rate": 3.4,
+        "futureKcs": false
+      },
+      {
+        "name": "StringAddition2",
+        "rate": 3.4,
+        "futureKcs": false
+      },
+      {
+        "name": "AnimalTester2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "BmiCalculator2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "FahrenheitToCelsius",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "InheritancePointTester2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials3",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JCharAt2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc3",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseIfGrade2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseWages2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JInputStat2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfTemperature2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JStringEqual2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JVocabulary2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "LoanTester2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "PythagoreanTheorem2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "Transactions2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "VendingMachine2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageDouble",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JWinPercentageWonEqual",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JCheckAge2",
+        "rate": 3.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JInput2",
+        "rate": 3.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JInput3",
+        "rate": 3.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JWinPercentageInput",
+        "rate": 3.1,
+        "futureKcs": true
+      },
+      {
+        "name": "ifElseOddEven",
+        "rate": 3.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JRepeatedSequence2",
+        "rate": 2.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JReverseNumber",
+        "rate": 2.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JSumDigits",
+        "rate": 2.6,
+        "futureKcs": true
+      },
+      {
+        "name": "PointTester2",
+        "rate": 2.6,
+        "futureKcs": true
+      },
+      {
+        "name": "DisplayTime2",
+        "rate": 2.5,
+        "futureKcs": true
+      },
+      {
+        "name": "JForOne2",
+        "rate": 2.5,
+        "futureKcs": true
+      },
+      {
+        "name": "JForThree2",
+        "rate": 2.5,
+        "futureKcs": true
+      },
+      {
+        "name": "JForTwo2",
+        "rate": 2.5,
+        "futureKcs": true
+      },
+      {
+        "name": "JStars2",
+        "rate": 2.5,
+        "futureKcs": true
+      },
+      {
+        "name": "JWriteSquaresOdd",
+        "rate": 2.5,
+        "futureKcs": true
+      },
+      {
+        "name": "JWriteSquaresRange",
+        "rate": 2.5,
+        "futureKcs": true
+      },
+      {
+        "name": "JAverageArrayElements",
+        "rate": 2.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic2",
+        "rate": 1.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayFillUserInput",
+        "rate": 1.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JNestedIfMaxOfThree",
+        "rate": 1.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRight",
+        "rate": 1.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRightTwice",
+        "rate": 1.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaRespondentAvg",
+        "rate": 1.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JWorkHours2",
+        "rate": 1.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JArraySwapAdjacentElements",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic3",
+        "rate": 0.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateLeftTwice",
+        "rate": 0.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayMin",
+        "rate": 0.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic2",
+        "rate": 0.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic3",
+        "rate": 0.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayTotalCounts",
+        "rate": 0.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaAvg",
+        "rate": 0.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JTemperatureListDaysAboveThreshold",
+        "rate": 0.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JPrintMedalsRowColumnTotal",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayCountsEach",
+        "rate": 0.0,
+        "futureKcs": true
+      }
+    ]
+  },
+  "console I/O": {
+    "topic": "console I/O",
+    "pcexChallenges": [
+      {
+        "name": "JEscapeChar2",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar3",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc2",
+        "rate": 4.4,
+        "futureKcs": false
+      },
+      {
+        "name": "StringAddition2",
+        "rate": 4.4,
+        "futureKcs": false
+      },
+      {
+        "name": "AnimalTester2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "BmiCalculator2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "FahrenheitToCelsius",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "InheritancePointTester2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials3",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JCharAt2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc3",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseIfGrade2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseWages2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JInputStat2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfTemperature2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JStringEqual2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JVocabulary2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "LoanTester2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "PythagoreanTheorem2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "Transactions2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "VendingMachine2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JRepeatedSequence2",
+        "rate": 3.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JReverseNumber",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JSumDigits",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "PointTester2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "DisplayTime2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JCheckProductCode2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JForOne2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JForThree2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JForTwo2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JLargestDivisor",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JStars2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JWriteSquaresOdd",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JWriteSquaresRange",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "TVTester2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic2",
+        "rate": 2.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayFillUserInput",
+        "rate": 2.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JAverageDouble",
+        "rate": 2.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JNestedIfMaxOfThree",
+        "rate": 2.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JWinPercentageWonEqual",
+        "rate": 2.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRight",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRightTwice",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JAverageEvenNums",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JCheckAge2",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JInput2",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JInput3",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaRespondentAvg",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JWinPercentageInput",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JWorkHours2",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "ifElseOddEven",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArraySwapAdjacentElements",
+        "rate": 1.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic3",
+        "rate": 1.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateLeftTwice",
+        "rate": 1.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JAdjacentConsecutives",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JAdjacentGreater",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayMin",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic2",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic3",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JAverageArrayElements",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JBooleanDryHot2",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JBooleanDryHot4",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse2",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse3",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JInput4",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JRentCar2",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JRentCar3",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayTotalCounts",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaAvg",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JTemperatureListDaysAboveThreshold",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JBooleanDryHot3",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JPhoneAge2",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JPrintMedalsRowColumnTotal",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayCountsEach",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean2",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean3",
+        "rate": 0.0,
+        "futureKcs": true
+      }
+    ]
+  },
+  "for loops": {
+    "topic": "for loops",
+    "pcexChallenges": [
+      {
+        "name": "JRepeatedSequence2",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JForOne2",
+        "rate": 4.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JForThree2",
+        "rate": 4.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JForTwo2",
+        "rate": 4.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JStars2",
+        "rate": 4.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JWriteSquaresOdd",
+        "rate": 4.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JWriteSquaresRange",
+        "rate": 4.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentConsecutives",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentGreater",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot4",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput4",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar2",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar3",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageWonEqual",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageDouble",
+        "rate": 4.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageEvenNums",
+        "rate": 4.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput2",
+        "rate": 4.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput3",
+        "rate": 4.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageInput",
+        "rate": 4.4,
+        "futureKcs": false
+      },
+      {
+        "name": "JCheckProductCode2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar3",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JLargestDivisor",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JReverseNumber",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JSumDigits",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "PointTester2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "StringAddition2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "TVTester2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "AnimalTester2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "BmiCalculator2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "FahrenheitToCelsius",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "InheritancePointTester2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials3",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JCharAt2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc3",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseIfGrade2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseWages2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JInputStat2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfTemperature2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JStringEqual2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JVocabulary2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "LoanTester2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "PythagoreanTheorem2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "Transactions2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "VendingMachine2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayBasic2",
+        "rate": 4.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayFillUserInput",
+        "rate": 4.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JAverageArrayElements",
+        "rate": 4.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaRespondentAvg",
+        "rate": 3.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JBooleanDryHot3",
+        "rate": 3.5,
+        "futureKcs": true
+      },
+      {
+        "name": "JPhoneAge2",
+        "rate": 3.5,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean2",
+        "rate": 3.5,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean3",
+        "rate": 3.5,
+        "futureKcs": true
+      },
+      {
+        "name": "JBooleanDryHot2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse3",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JCheckAge2",
+        "rate": 3.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JNestedIfMaxOfThree",
+        "rate": 3.3,
+        "futureKcs": true
+      },
+      {
+        "name": "ifElseOddEven",
+        "rate": 3.3,
+        "futureKcs": true
+      },
+      {
+        "name": "DisplayTime2",
+        "rate": 3.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArraySwapAdjacentElements",
+        "rate": 3.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic3",
+        "rate": 2.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateLeftTwice",
+        "rate": 2.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic2",
+        "rate": 2.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic3",
+        "rate": 2.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayTotalCounts",
+        "rate": 2.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaAvg",
+        "rate": 2.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JTemperatureListDaysAboveThreshold",
+        "rate": 2.8,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRight",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRightTwice",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JWorkHours2",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayMin",
+        "rate": 1.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JPrintMedalsRowColumnTotal",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayCountsEach",
+        "rate": 0.0,
+        "futureKcs": true
+      }
+    ]
+  },
+  "methods": {
+    "topic": "methods",
+    "pcexChallenges": [
+      {
+        "name": "JBooleanDryHot3",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JPhoneAge2",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JThreeBoolean2",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JThreeBoolean3",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot2",
+        "rate": 4.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JFailCourse2",
+        "rate": 4.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JFailCourse3",
+        "rate": 4.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfMaxOfThree",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "ifElseOddEven",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "DisplayTime2",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentConsecutives",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentGreater",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot4",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput4",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar3",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageWonEqual",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageDouble",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageEvenNums",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput3",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JRepeatedSequence2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageInput",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JCheckProductCode2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar3",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JForOne2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JForThree2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JForTwo2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JLargestDivisor",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JReverseNumber",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JStars2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JSumDigits",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JWriteSquaresOdd",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JWriteSquaresRange",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "PointTester2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "StringAddition2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "TVTester2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "AnimalTester2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "BmiCalculator2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "FahrenheitToCelsius",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "InheritancePointTester2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials3",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JCharAt2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc3",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseIfGrade2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseWages2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JInputStat2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfTemperature2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JStringEqual2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JVocabulary2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "LoanTester2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "PythagoreanTheorem2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "Transactions2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "VendingMachine2",
+        "rate": 3.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayBasic2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayFillUserInput",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JAverageArrayElements",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JCheckAge2",
+        "rate": 3.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaRespondentAvg",
+        "rate": 3.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArraySwapAdjacentElements",
+        "rate": 2.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic3",
+        "rate": 2.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateLeftTwice",
+        "rate": 2.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic2",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic3",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayTotalCounts",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaAvg",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JTemperatureListDaysAboveThreshold",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRight",
+        "rate": 2.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRightTwice",
+        "rate": 2.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JWorkHours2",
+        "rate": 2.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayMin",
+        "rate": 1.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JPrintMedalsRowColumnTotal",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayCountsEach",
+        "rate": 0.0,
+        "futureKcs": true
+      }
+    ]
+  },
+  "recursion": {
+    "topic": "recursion",
+    "pcexChallenges": [
+      {
+        "name": "JArraySwapAdjacentElements",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayBasic3",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayRotateLeftTwice",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot3",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JPhoneAge2",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JPrintMedalsRowColumnTotal",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JSearchArrayCountsEach",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JThreeBoolean2",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JThreeBoolean3",
+        "rate": 4.6,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentConsecutives",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentGreater",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayBasic2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayFillUserInput",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayMin",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrays2dBasic2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrays2dBasic3",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageArrayElements",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot4",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JFailCourse2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JFailCourse3",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput4",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar3",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JSearchArrayTotalCounts",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JSodaSurverySodaAvg",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JTemperatureListDaysAboveThreshold",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageWonEqual",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayRotateRight",
+        "rate": 3.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JArrayRotateRightTwice",
+        "rate": 3.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageDouble",
+        "rate": 3.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageEvenNums",
+        "rate": 3.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput2",
+        "rate": 3.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput3",
+        "rate": 3.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfMaxOfThree",
+        "rate": 3.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JRepeatedSequence2",
+        "rate": 3.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JSodaSurverySodaRespondentAvg",
+        "rate": 3.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageInput",
+        "rate": 3.7,
+        "futureKcs": false
+      },
+      {
+        "name": "ifElseOddEven",
+        "rate": 3.7,
+        "futureKcs": false
+      },
+      {
+        "name": "DisplayTime2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JCheckProductCode2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar3",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JForOne2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JForThree2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JForTwo2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JLargestDivisor",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JReverseNumber",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JStars2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JSumDigits",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JWriteSquaresOdd",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JWriteSquaresRange",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "PointTester2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "StringAddition2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "TVTester2",
+        "rate": 3.3,
+        "futureKcs": false
+      },
+      {
+        "name": "AnimalTester2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "BmiCalculator2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "FahrenheitToCelsius",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "InheritancePointTester2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials3",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JCharAt2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc3",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseIfGrade2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseWages2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JInputStat2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfTemperature2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JStringEqual2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JVocabulary2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "LoanTester2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "PythagoreanTheorem2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "Transactions2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "VendingMachine2",
+        "rate": 2.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JCheckAge2",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JWorkHours2",
+        "rate": 0.0,
+        "futureKcs": true
+      }
+    ]
+  },
+  "text files": {
+    "topic": "text files",
+    "pcexChallenges": [
+      {
+        "name": "JAdjacentConsecutives",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentGreater",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot4",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput4",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar2",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar3",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageWonEqual",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageDouble",
+        "rate": 4.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageEvenNums",
+        "rate": 4.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput2",
+        "rate": 4.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput3",
+        "rate": 4.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageInput",
+        "rate": 4.8,
+        "futureKcs": false
+      },
+      {
+        "name": "JCheckProductCode2",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc2",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar2",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar3",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JLargestDivisor",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JReverseNumber",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "JSumDigits",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "PointTester2",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "StringAddition2",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "TVTester2",
+        "rate": 4.7,
+        "futureKcs": false
+      },
+      {
+        "name": "AnimalTester2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "BmiCalculator2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "FahrenheitToCelsius",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "InheritancePointTester2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials3",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JCharAt2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc3",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseIfGrade2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseWages2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JInputStat2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfTemperature2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JStringEqual2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JVocabulary2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "LoanTester2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "PythagoreanTheorem2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "Transactions2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "VendingMachine2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot3",
+        "rate": 3.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JPhoneAge2",
+        "rate": 3.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean2",
+        "rate": 3.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean3",
+        "rate": 3.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JBooleanDryHot2",
+        "rate": 3.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse2",
+        "rate": 3.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse3",
+        "rate": 3.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JCheckAge2",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JNestedIfMaxOfThree",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "JRepeatedSequence2",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "ifElseOddEven",
+        "rate": 3.6,
+        "futureKcs": true
+      },
+      {
+        "name": "DisplayTime2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JForOne2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JForThree2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JForTwo2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JStars2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JWriteSquaresOdd",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JWriteSquaresRange",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic2",
+        "rate": 2.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayFillUserInput",
+        "rate": 2.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JAverageArrayElements",
+        "rate": 2.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRight",
+        "rate": 2.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRightTwice",
+        "rate": 2.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaRespondentAvg",
+        "rate": 2.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JWorkHours2",
+        "rate": 2.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JArraySwapAdjacentElements",
+        "rate": 1.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic3",
+        "rate": 1.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateLeftTwice",
+        "rate": 1.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayMin",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic2",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic3",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayTotalCounts",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaAvg",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JTemperatureListDaysAboveThreshold",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JPrintMedalsRowColumnTotal",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayCountsEach",
+        "rate": 0.0,
+        "futureKcs": true
+      }
+    ]
+  },
+  "variables & operators": {
+    "topic": "variables & operators",
+    "pcexChallenges": [
+      {
+        "name": "JDecInc2",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "StringAddition2",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "AnimalTester2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "BmiCalculator2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "FahrenheitToCelsius",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "InheritancePointTester2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials3",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JCharAt2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc3",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseIfGrade2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseWages2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JInputStat2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfTemperature2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JStringEqual2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JVocabulary2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "LoanTester2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "PythagoreanTheorem2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "Transactions2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "VendingMachine2",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JReverseNumber",
+        "rate": 3.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JSumDigits",
+        "rate": 3.9,
+        "futureKcs": true
+      },
+      {
+        "name": "PointTester2",
+        "rate": 3.9,
+        "futureKcs": true
+      },
+      {
+        "name": "DisplayTime2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JCheckProductCode2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JEscapeChar2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JEscapeChar3",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JForOne2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JForThree2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JForTwo2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JLargestDivisor",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JStars2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JWriteSquaresOdd",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JWriteSquaresRange",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "TVTester2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JAverageDouble",
+        "rate": 2.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JNestedIfMaxOfThree",
+        "rate": 2.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JWinPercentageWonEqual",
+        "rate": 2.9,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRight",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRightTwice",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JAverageEvenNums",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JCheckAge2",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JInput2",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JInput3",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JRepeatedSequence2",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaRespondentAvg",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JWinPercentageInput",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JWorkHours2",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "ifElseOddEven",
+        "rate": 2.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JAdjacentConsecutives",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JAdjacentGreater",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic2",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayFillUserInput",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayMin",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic2",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic3",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JAverageArrayElements",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JBooleanDryHot2",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JBooleanDryHot4",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse2",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse3",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JInput4",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JRentCar2",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JRentCar3",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayTotalCounts",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaAvg",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JTemperatureListDaysAboveThreshold",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArraySwapAdjacentElements",
+        "rate": 0.7,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic3",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateLeftTwice",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JBooleanDryHot3",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JPhoneAge2",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JPrintMedalsRowColumnTotal",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayCountsEach",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean2",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean3",
+        "rate": 0.0,
+        "futureKcs": true
+      }
+    ]
+  },
+  "while loops": {
+    "topic": "while loops",
+    "pcexChallenges": [
+      {
+        "name": "JAdjacentGreater",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput4",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageWonEqual",
+        "rate": 5.0,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput2",
+        "rate": 4.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JInput3",
+        "rate": 4.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JWinPercentageInput",
+        "rate": 4.9,
+        "futureKcs": false
+      },
+      {
+        "name": "JAdjacentConsecutives",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot4",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar2",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JRentCar3",
+        "rate": 4.5,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageDouble",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JAverageEvenNums",
+        "rate": 4.3,
+        "futureKcs": false
+      },
+      {
+        "name": "JCheckProductCode2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JEscapeChar3",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JLargestDivisor",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JReverseNumber",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "JSumDigits",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "PointTester2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "StringAddition2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "TVTester2",
+        "rate": 4.2,
+        "futureKcs": false
+      },
+      {
+        "name": "AnimalTester2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "BmiCalculator2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "FahrenheitToCelsius",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "InheritancePointTester2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "Initials3",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JCharAt2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JDecInc3",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseIfGrade2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JIfElseWages2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JInputStat2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JNestedIfTemperature2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JStringEqual2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JVocabulary2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "LoanTester2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "PythagoreanTheorem2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "Transactions2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "VendingMachine2",
+        "rate": 4.1,
+        "futureKcs": false
+      },
+      {
+        "name": "JBooleanDryHot3",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JPhoneAge2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean2",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JThreeBoolean3",
+        "rate": 3.4,
+        "futureKcs": true
+      },
+      {
+        "name": "JBooleanDryHot2",
+        "rate": 3.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse2",
+        "rate": 3.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JFailCourse3",
+        "rate": 3.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JCheckAge2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JNestedIfMaxOfThree",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JRepeatedSequence2",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "ifElseOddEven",
+        "rate": 3.2,
+        "futureKcs": true
+      },
+      {
+        "name": "DisplayTime2",
+        "rate": 3.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JForOne2",
+        "rate": 3.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JForThree2",
+        "rate": 3.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JForTwo2",
+        "rate": 3.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JStars2",
+        "rate": 3.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JWriteSquaresOdd",
+        "rate": 3.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JWriteSquaresRange",
+        "rate": 3.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic2",
+        "rate": 2.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayFillUserInput",
+        "rate": 2.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JAverageArrayElements",
+        "rate": 2.2,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRight",
+        "rate": 2.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateRightTwice",
+        "rate": 2.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaRespondentAvg",
+        "rate": 2.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JWorkHours2",
+        "rate": 2.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JArraySwapAdjacentElements",
+        "rate": 1.3,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayBasic3",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayRotateLeftTwice",
+        "rate": 1.1,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrayMin",
+        "rate": 1.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic2",
+        "rate": 1.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JArrays2dBasic3",
+        "rate": 1.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayTotalCounts",
+        "rate": 1.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JSodaSurverySodaAvg",
+        "rate": 1.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JTemperatureListDaysAboveThreshold",
+        "rate": 1.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JPrintMedalsRowColumnTotal",
+        "rate": 0.0,
+        "futureKcs": true
+      },
+      {
+        "name": "JSearchArrayCountsEach",
+        "rate": 0.0,
+        "futureKcs": true
+      }
+    ]
+  }
+}
