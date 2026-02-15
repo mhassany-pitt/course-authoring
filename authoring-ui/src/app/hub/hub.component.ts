@@ -37,7 +37,6 @@ export class HubComponent implements OnInit, AfterViewInit {
   domainKVs: FilterKV[] = [];
   institutionKVs: FilterKV[] = [];
   authorKVs: FilterKV[] = [];
-  quickFiltersExpanded = false;
   globalQuery = '';
   loading = true;
 
@@ -55,6 +54,10 @@ export class HubComponent implements OnInit, AfterViewInit {
     'institution',
     'author.fullname',
   ];
+
+  get quickFiltersExpanded() {
+    return this.lastQueryParams?.[this.quickFiltersOpenParam] != null;
+  }
 
   get isLoggedIn() {
     return !!this.app.user;
@@ -303,6 +306,7 @@ export class HubComponent implements OnInit, AfterViewInit {
     if (
       !this.viewReady ||
       !this.dataReady ||
+      this.loading ||
       !this.table ||
       !this.lastQueryParams
     ) {
@@ -314,9 +318,6 @@ export class HubComponent implements OnInit, AfterViewInit {
   private applyFiltersFromParams(params: Params) {
     this.isApplyingRouteFilters = true;
     try {
-      this.quickFiltersExpanded =
-        String(params[this.quickFiltersOpenParam] || '') === '1';
-
       const global = (params['q'] || '').trim();
       this.globalQuery = global;
       if (this.searchInputEl?.nativeElement) {
@@ -387,9 +388,8 @@ export class HubComponent implements OnInit, AfterViewInit {
   }
 
   toggleQuickFiltersPanel() {
-    this.quickFiltersExpanded = !this.quickFiltersExpanded;
     this.syncQueryParams({
-      [this.quickFiltersOpenParam]: this.quickFiltersExpanded ? '1' : null,
+      [this.quickFiltersOpenParam]: this.quickFiltersExpanded ? null : '1',
     });
   }
 

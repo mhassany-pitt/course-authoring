@@ -34,7 +34,6 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   tagKVs: FilterKV[] = [];
   plKVs: FilterKV[] = [];
   licenseKVs: FilterKV[] = [];
-  quickFiltersExpanded = false;
   globalQuery = '';
   private readonly multiFilterSeparator = '||';
   private readonly quickFiltersOpenParam = 'qf';
@@ -65,6 +64,10 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     'tags', // is an array of strings
   ];
 
+  get quickFiltersExpanded() {
+    return this.lastQueryParams?.[this.quickFiltersOpenParam] != null;
+  }
+
   constructor(
     public router: Router,
     private route: ActivatedRoute,
@@ -93,7 +96,11 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         if (!Array.isArray(value)) return false;
         const selected = filters.map((v) => String(v).toLowerCase().trim());
         const names = value
-          .map((author: any) => String(author?.name || '').toLowerCase().trim())
+          .map((author: any) =>
+            String(author?.name || '')
+              .toLowerCase()
+              .trim(),
+          )
           .filter(Boolean);
         return selected.some((s) => names.includes(s));
       },
@@ -143,11 +150,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     });
   }
 
-  toggleQuickFilter(
-    table: Table,
-    field: string,
-    facet: FilterKV,
-  ) {
+  toggleQuickFilter(table: Table, field: string, facet: FilterKV) {
     const selectedLabels = this.getSelectedLabels(field);
     const isActive = selectedLabels.includes(facet.label);
     const nextLabels = isActive
@@ -308,7 +311,9 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       if (Array.isArray(value)) {
         return value.some((v) => String(v).toLowerCase().includes(query));
       }
-      return String(value || '').toLowerCase().includes(query);
+      return String(value || '')
+        .toLowerCase()
+        .includes(query);
     });
   }
 
@@ -326,18 +331,18 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     selected: string[],
   ) {
     if (!selected.length) return true;
-    const itemValues = this
-      .getItemFacetLabels(item, field)
-      .map((v) => v.toLowerCase());
+    const itemValues = this.getItemFacetLabels(item, field).map((v) =>
+      v.toLowerCase(),
+    );
     if (!itemValues.length) return false;
     const selectedValues = selected.map((v) => v.toLowerCase());
     return selectedValues.some((value) => itemValues.includes(value));
   }
 
   private itemMatchesFacetLabel(item: any, field: string, label: string) {
-    const itemValues = this
-      .getItemFacetLabels(item, field)
-      .map((v) => v.toLowerCase());
+    const itemValues = this.getItemFacetLabels(item, field).map((v) =>
+      v.toLowerCase(),
+    );
     const target = label.toLowerCase();
     return itemValues.includes(target);
   }
@@ -413,6 +418,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     if (
       !this.viewReady ||
       !this.dataReady ||
+      this.loading ||
       !this.table ||
       !this.lastQueryParams
     ) {
@@ -424,7 +430,6 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   private applyFiltersFromParams(params: Params) {
     this.isApplyingRouteFilters = true;
     try {
-      this.quickFiltersExpanded = String(params[this.quickFiltersOpenParam] || '') === '1';
       const global = (params['q'] || '').trim();
       this.globalQuery = global;
       if (this.searchInputEl?.nativeElement) {
@@ -495,9 +500,8 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   }
 
   toggleQuickFiltersPanel() {
-    this.quickFiltersExpanded = !this.quickFiltersExpanded;
     this.syncQueryParams({
-      [this.quickFiltersOpenParam]: this.quickFiltersExpanded ? '1' : null,
+      [this.quickFiltersOpenParam]: this.quickFiltersExpanded ? null : '1',
     });
   }
 
@@ -535,11 +539,12 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   }
 
   toggleActiveQuickFilter(table: Table, field: string, label: string) {
-    const facet =
-      this.getFacetForField(field).find((kv) => kv.label === label) || {
-        label,
-        value: 0,
-      };
+    const facet = this.getFacetForField(field).find(
+      (kv) => kv.label === label,
+    ) || {
+      label,
+      value: 0,
+    };
     this.toggleQuickFilter(table, field, facet);
   }
 
@@ -562,14 +567,13 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   }
 
   private getSelectedLabels(field: string) {
-    return ((this.selectedKVs[field] || []) as FilterKV[]).map((kv) => kv.label);
+    return ((this.selectedKVs[field] || []) as FilterKV[]).map(
+      (kv) => kv.label,
+    );
   }
 
   private getTableMatchModeForField(field: string) {
-    if (
-      field === 'languages.programming_languages' ||
-      field === 'tags'
-    ) {
+    if (field === 'languages.programming_languages' || field === 'tags') {
       return 'arrayStringIn';
     }
     if (field === 'attribution.authors') {
