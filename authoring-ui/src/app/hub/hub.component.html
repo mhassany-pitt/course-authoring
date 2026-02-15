@@ -39,240 +39,329 @@
       Click on a course name to view more details.
     </p>
 
-    <div class="flex items-start gap-6">
-      <!-- sidebar -->
-      <div
-        class="w-1/3 bg-slate-100 border border-slate-200 rounded-lg p-3 shadow-sm flex flex-col items-start gap-3"
-      >
-        <div class="w-full flex items-center gap-2 justify-end">
-          <span *ngIf="table.filteredValue" class="grow">
-            {{ table.filteredValue.length }} matched.
-          </span>
-          <a
-            *ngIf="selectedKVs['count'] > 0"
-            class="flex items-center gap-1 text-red-700 cursor-pointer border border-solid border-red-400 px-2 py-1 rounded hover:bg-red-100 active:bg-red-200"
-            (click)="clearQuickFilters(table)"
-          >
-            <span class="">Clear Filters</span>
-            <i class="pi pi-times"></i>
-          </a>
-        </div>
-
-        <div class="text-gray-500 text-xs uppercase">
-          Quick Filters (click to toggle)
-        </div>
-
-        <div class="w-full flex flex-wrap gap-1 pl-2">
-          <div class="flex items-center gap-2 w-full -ml-2">
-            <span class="text-sm font-bold text-gray-600">Domains:</span>
-            <hr class="grow" />
-          </div>
-          <a
-            *ngFor="let facet of domainKVs"
-            class="text-xs cursor-pointer hover:underline"
-            [class.font-bold]="selectedKVs['domain']?.label == facet.label"
-            [class.text-blue-700]="selectedKVs['domain']?.label == facet.label"
-            [class.underline]="selectedKVs['domain']?.label == facet.label"
-            (click)="toggleQuickFilter(table, 'domain', facet, 'equals')"
-          >
-            {{ facet.label }} ({{ facet.value }}),
-          </a>
-          <span class="text-sm text-gray-400" *ngIf="!domainKVs.length">
-            No domains yet.
-          </span>
-        </div>
-
-        <div class="w-full flex flex-wrap gap-1 pl-2">
-          <div class="flex items-center gap-2 w-full -ml-2">
-            <span class="text-sm font-bold text-gray-600">Institutions:</span>
-            <hr class="grow" />
-          </div>
-          <a
-            *ngFor="let facet of institutionKVs"
-            class="text-xs cursor-pointer hover:underline"
-            [class.font-bold]="selectedKVs['institution']?.label == facet.label"
-            [class.text-blue-700]="
-              selectedKVs['institution']?.label == facet.label
-            "
-            [class.underline]="selectedKVs['institution']?.label == facet.label"
-            (click)="toggleQuickFilter(table, 'institution', facet, 'equals')"
-          >
-            {{ facet.label }} ({{ facet.value }}),
-          </a>
-          <span class="text-sm text-gray-400" *ngIf="!institutionKVs.length">
-            No institutions yet.
-          </span>
-        </div>
-
-        <div class="w-full flex flex-wrap gap-1 pl-2">
-          <div class="flex items-center gap-2 w-full -ml-2">
-            <span class="text-sm font-bold text-gray-600">Authors:</span>
-            <hr class="grow" />
-          </div>
-          <a
-            *ngFor="let facet of authorKVs"
-            class="text-xs cursor-pointer hover:underline"
-            [class.font-bold]="
-              selectedKVs['author.fullname']?.label == facet.label
-            "
-            [class.text-blue-700]="
-              selectedKVs['author.fullname']?.label == facet.label
-            "
-            [class.underline]="
-              selectedKVs['author.fullname']?.label == facet.label
-            "
-            (click)="
-              toggleQuickFilter(table, 'author.fullname', facet, 'contains')
-            "
-          >
-            {{ facet.label }} ({{ facet.value }}),
-          </a>
-          <span class="text-sm text-gray-400" *ngIf="!authorKVs.length">
-            No authors yet.
-          </span>
-        </div>
-      </div>
-
-      <!-- search & table -->
-      <div class="w-2/3 flex flex-col gap-4">
-        <div class="bg-gray-100 shadow-md">
+    <div class="flex flex-col gap-4">
+      <div class="w-full flex flex-col gap-0">
+        <div
+          class="bg-gray-100 shadow-md relative border border-slate-200"
+          [class.rounded-t-lg]="quickFiltersExpanded"
+          [class.rounded-lg]="!quickFiltersExpanded"
+        >
           <input
             #searchInputEl
             type="text"
             name="name"
             pInputText
             placeholder="Search ..."
-            class="text-xl border-gray-200 w-full"
+            class="text-xl border-gray-200 w-full pr-12"
             (keyup)="filter(table, $event)"
           />
+          <div
+            class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center gap-2"
+          >
+            <p-button
+              type="button"
+              (click)="toggleQuickFiltersPanel()"
+              label="Quick Filters"
+              aria-label="Quick Filters"
+              icon="fa fa-filter"
+              iconPos="right"
+              [severity]="quickFiltersExpanded ? 'contrast' : 'secondary'"
+              [outlined]="!quickFiltersExpanded"
+              [attr.aria-pressed]="quickFiltersExpanded"
+            />
+          </div>
         </div>
 
-        <div class="border shadow-md">
-          <p-table
-            #table
-            [value]="courses"
-            [globalFilterFields]="[
-              'id',
-              'user_email',
-              'code',
-              'name',
-              'description',
-              'domain',
-              'institution',
-              'author.fullname',
-              'author.email',
-              'units_ct',
-              'resources_ct',
-              'created_at',
-            ]"
-            (onFilter)="reloadFilterKVs(table.filteredValue || courses)"
+        <div
+          *ngIf="
+            globalQuery || selectedKVs['count'] > 0 || quickFiltersExpanded
+          "
+          class="border-l border-r border-b border-t-0 border-solid border-gray-200 p-4 rounded-b-md shadow-md bg-white relative overflow-auto flex flex-col items-start gap-2"
+        >
+          <div
+            *ngIf="globalQuery || activeQuickFilters.length"
+            class="w-full flex flex-wrap items-center gap-1 text-xs text-gray-500"
           >
-            <ng-template pTemplate="body" let-course>
-              <tr>
-                <td class="relative">
-                  <div class="flex flex-col gap-1">
-                    <div class="text-xs text-gray-400">
-                      <span class="uppercase">{{ course.institution }}</span>
-                      <span> | </span>
-                      <span>{{ course.author.fullname }}</span>
-                    </div>
-                    <span class="text-xs text-gray-400">
-                      {{ course.created_at | date: "medium" }}
-                    </span>
-                    <div class="flex items-center gap-4">
-                      <span
-                        class="text-blue-600 cursor-pointer flex gap-1"
-                        (click)="toggleLoad(course)"
-                      >
-                        <span class="capitalize font-bold">{{
-                          course.name
-                        }}</span>
-                        <span class="uppercase">"{{ course.code }}"</span>
-                        <i
-                          class="pi pi-chevron-down text-gray-400"
-                          [ngClass]="{
-                            'pi-chevron-up':
-                              selected && selected.id == course.id,
-                          }"
-                        ></i>
-                      </span>
+            <span class="uppercase">Active Filters:</span>
+            <span *ngIf="globalQuery" class="inline-flex items-center gap-1">
+              <span>q: {{ globalQuery }}</span>
+              <a
+                class="cursor-pointer hover:underline"
+                (click)="clearGlobalFilter(table)"
+                aria-label="Clear search filter"
+              >
+                clear
+              </a>
+            </span>
+            <a
+              *ngFor="let filter of activeQuickFilters; let idx = index"
+              class="text-xs cursor-pointer hover:underline font-bold text-blue-700 underline"
+              [class.capitalize]="'author.fullname' == filter.field"
+              [class.uppercase]="
+                ['domain', 'institution'].includes(filter.field)
+              "
+              (click)="
+                toggleActiveQuickFilter(table, filter.field, filter.label)
+              "
+              aria-label="Toggle quick filter"
+            >
+              {{
+                idx < activeQuickFilters.length - 1
+                  ? filter.label + ","
+                  : filter.label
+              }}
+            </a>
 
-                      <span
-                        *ngIf="app.user"
-                        class="cursor-pointer"
-                        (click)="clone(course)"
-                      >
-                        <i
-                          class="pi pi-clone text-gray-400 hover:text-gray-900"
-                        ></i>
-                      </span>
+            <span class="grow"></span>
+            <p-button
+              *ngIf="table.filteredValue"
+              [label]="table.filteredValue.length + ' Matched'"
+              icon="fa fa-times"
+              iconPos="right"
+              severity="danger"
+              outlined="true"
+              styleClass="px-2 py-1 text-xs items-center"
+              (click)="clearQuickFilters(table)"
+            >
+            </p-button>
+          </div>
 
-                      <span class="cursor-pointer" (click)="export(course)">
-                        <i
-                          class="pi pi-download text-gray-400 hover:text-gray-900"
-                        ></i>
-                      </span>
-                    </div>
-                    <div class="text-xs">
-                      <span class="uppercase">{{ course.domain }}</span>
-                      <span>, </span>
-                      <span>{{ course.units_ct }} units</span>
-                    </div>
+          <ng-container *ngIf="quickFiltersExpanded">
+            <div class="text-gray-400 text-xs uppercase">Click to toggle</div>
+
+            <div class="w-full flex flex-wrap gap-1 pl-2">
+              <div class="flex items-center gap-2 w-full -ml-2">
+                <span class="text-sm font-bold text-gray-600">Domains:</span>
+                <hr class="grow" />
+              </div>
+              <a
+                *ngFor="let facet of domainKVs"
+                class="text-xs cursor-pointer hover:underline uppercase"
+                [class.font-bold]="isQuickFilterSelected('domain', facet.label)"
+                [class.text-blue-700]="
+                  isQuickFilterSelected('domain', facet.label)
+                "
+                [class.underline]="isQuickFilterSelected('domain', facet.label)"
+                [class.text-gray-400]="
+                  !isQuickFilterSelected('domain', facet.label) &&
+                  !isQuickFilterAvailable('domain', facet.label)
+                "
+                (click)="toggleQuickFilter(table, 'domain', facet)"
+              >
+                {{ facet.label }} ({{ facet.value }}),
+              </a>
+              <span class="text-sm text-gray-400" *ngIf="!domainKVs.length">
+                No domains yet.
+              </span>
+            </div>
+
+            <div class="w-full flex flex-wrap gap-1 pl-2">
+              <div class="flex items-center gap-2 w-full -ml-2">
+                <span class="text-sm font-bold text-gray-600"
+                  >Institutions:</span
+                >
+                <hr class="grow" />
+              </div>
+              <a
+                *ngFor="let facet of institutionKVs"
+                class="text-xs cursor-pointer hover:underline uppercase"
+                [class.font-bold]="
+                  isQuickFilterSelected('institution', facet.label)
+                "
+                [class.text-blue-700]="
+                  isQuickFilterSelected('institution', facet.label)
+                "
+                [class.underline]="
+                  isQuickFilterSelected('institution', facet.label)
+                "
+                [class.text-gray-400]="
+                  !isQuickFilterSelected('institution', facet.label) &&
+                  !isQuickFilterAvailable('institution', facet.label)
+                "
+                (click)="toggleQuickFilter(table, 'institution', facet)"
+              >
+                {{ facet.label }} ({{ facet.value }}),
+              </a>
+              <span
+                class="text-sm text-gray-400"
+                *ngIf="!institutionKVs.length"
+              >
+                No institutions yet.
+              </span>
+            </div>
+
+            <div class="w-full flex flex-wrap gap-1 pl-2">
+              <div class="flex items-center gap-2 w-full -ml-2">
+                <span class="text-sm font-bold text-gray-600">Authors:</span>
+                <hr class="grow" />
+              </div>
+              <a
+                *ngFor="let facet of authorKVs"
+                class="text-xs cursor-pointer hover:underline capitalize"
+                [class.font-bold]="
+                  isQuickFilterSelected('author.fullname', facet.label)
+                "
+                [class.text-blue-700]="
+                  isQuickFilterSelected('author.fullname', facet.label)
+                "
+                [class.underline]="
+                  isQuickFilterSelected('author.fullname', facet.label)
+                "
+                [class.text-gray-400]="
+                  !isQuickFilterSelected('author.fullname', facet.label) &&
+                  !isQuickFilterAvailable('author.fullname', facet.label)
+                "
+                (click)="toggleQuickFilter(table, 'author.fullname', facet)"
+              >
+                {{ facet.label }} ({{ facet.value }}),
+              </a>
+              <span class="text-sm text-gray-400" *ngIf="!authorKVs.length">
+                No authors yet.
+              </span>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+      <div
+        *ngIf="loading"
+        class="w-full border border-amber-300 bg-amber-50 text-amber-900 rounded-md p-8 shadow-sm flex items-center justify-center gap-3"
+        role="status"
+        aria-live="polite"
+      >
+        <i class="pi pi-spin pi-spinner text-xl"></i>
+        <span class="text-base font-semibold">Loading courses...</span>
+      </div>
+
+      <div *ngIf="!loading" class="w-full border shadow-md">
+        <p-table
+          #table
+          [value]="courses"
+          [loading]="loading"
+          [globalFilterFields]="[
+            'id',
+            'user_email',
+            'code',
+            'name',
+            'description',
+            'domain',
+            'institution',
+            'author.fullname',
+            'author.email',
+            'units_ct',
+            'resources_ct',
+            'created_at',
+          ]"
+          (onFilter)="onTableFilter(table.filteredValue || courses)"
+        >
+          <ng-template pTemplate="body" let-course>
+            <tr>
+              <td class="relative">
+                <div class="flex flex-col gap-1">
+                  <div
+                    class="text-xs text-gray-400 uppercase flex flex-wrap gap-1"
+                  >
+                    <span>{{ course.institution }} |</span>
+                    <span>{{ course.author.fullname }} |</span>
+                    <span>{{ course.domain }} |</span>
+                    <span>{{ course.units_ct }} unit(s) |</span>
+                    <span>{{ course.created_at | date: "medium" }}</span>
+                  </div>
+                  <div class="flex items-center gap-4">
                     <span
-                      *ngIf="course.description"
-                      class="text-xs text-gray-400"
+                      class="text-blue-600 cursor-pointer flex gap-1"
+                      (click)="toggleLoad(course)"
                     >
-                      {{ course.description }}
+                      <span class="capitalize font-bold">
+                        {{ course.name }}
+                      </span>
+                      <span class="uppercase">"{{ course.code }}"</span>
+                      <i
+                        class="pi pi-chevron-down text-gray-400"
+                        [ngClass]="{
+                          'pi-chevron-up': selected && selected.id == course.id,
+                        }"
+                      ></i>
                     </span>
 
-                    <ng-container *ngIf="selected && selected.id == course.id">
-                      <span class="pl-2 text-sm font-bold">Units:</span>
-                      <div class="max-h-64 overflow-y-auto pl-2">
-                        <div *ngFor="let unit of selected.units" class="pl-2">
-                          <span class="text-sm font-bold capitalize">{{
-                            unit.name
-                          }}</span>
-                          <div
-                            *ngFor="let r of keys(unit.activities)"
-                            class="flex gap-2"
+                    <span
+                      *ngIf="app.user"
+                      class="cursor-pointer"
+                      title="Clone Course"
+                      (click)="clone(course)"
+                    >
+                      <i
+                        class="pi pi-clone text-gray-400 hover:text-gray-900"
+                      ></i>
+                    </span>
+
+                    <span
+                      class="cursor-pointer"
+                      title="Download JSON"
+                      (click)="export(course)"
+                    >
+                      <i
+                        class="pi pi-download text-gray-400 hover:text-gray-900"
+                      ></i>
+                    </span>
+                  </div>
+                  <span
+                    *ngIf="course.description"
+                    class="text-xs text-gray-400"
+                  >
+                    {{ course.description }}
+                  </span>
+
+                  <ng-container *ngIf="selected && selected.id == course.id">
+                    <span class="pl-2 text-sm font-bold">Units:</span>
+                    <div class="max-h-64 overflow-y-auto pl-2">
+                      <div *ngFor="let unit of selected.units" class="pl-2">
+                        <span class="text-sm font-bold capitalize">{{
+                          unit.name
+                        }}</span>
+                        <div
+                          *ngFor="let r of keys(unit.activities)"
+                          class="flex flex-wrap items-center gap-1 pl-4 text-xs"
+                        >
+                          <span class="capitalize">
+                            {{ selected.resources[r].name }}:
+                          </span>
+                          <a
+                            *ngFor="
+                              let a of unit.activities[r];
+                              let $index = index
+                            "
+                            [href]="a.url"
+                            target="_blank"
+                            >{{
+                              $index < unit.activities[r].length - 1
+                                ? a.name + ", "
+                                : a.name
+                            }}</a
                           >
-                            <span class="text-xs w-48 pl-4 capitalize"
-                              >{{ selected.resources[r].name }} →</span
-                            >
-                            <ul class="m-0">
-                              <li *ngFor="let a of unit.activities[r]">
-                                <a
-                                  href="{{ a.url }}"
-                                  class="text-xs"
-                                  target="_blank"
-                                  >{{ a.name }}</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                          <div *ngIf="keys(unit.activities).length < 1">
-                            <span class="text-xs text-gray-400"
-                              >no activities!</span
-                            >
-                          </div>
+                        </div>
+                        <div *ngIf="keys(unit.activities).length < 1">
+                          <span class="text-xs text-gray-400"
+                            >no activities!</span
+                          >
                         </div>
                       </div>
-                    </ng-container>
-                  </div>
-                </td>
-              </tr>
-            </ng-template>
-            <ng-template pTemplate="emptymessage">
-              <tr>
-                <td colspan="2">
-                  <div class="text-xs text-center text-gray-400 w-full">
-                    no courses matched, revise your search keyword
-                  </div>
-                </td>
-              </tr>
-            </ng-template>
-          </p-table>
-        </div>
+                    </div>
+                  </ng-container>
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="emptymessage">
+            <tr>
+              <td colspan="2">
+                <div class="text-xs text-center text-gray-400 w-full">
+                  no courses matched, revise your search keyword
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
       </div>
     </div>
   </div>

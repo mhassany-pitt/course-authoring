@@ -305,13 +305,12 @@
             <label class="flex flex-col gap-1">
               <span class="text-xs text-gray-600">Source Snippet</span>
               <pre
-                *ngIf="item.content.source_code"
                 class="block p-2 border border-solid border-slate-200 rounded-md text-sm leading-5 min-h-10"
               ><code
               [highlight]="item.content.source_code || '&lt;&lt;empty&gt;&gt;'"
               [language]="
                 item.languages.programming_languages.length == 0 ? 'plaintext' : (
-                  item.languages.programming_languages[0] == 'asm' ? 'x86asm' : item.languages.programming_languages[0]
+                  item.languages.programming_languages[0] == 'Assembly' ? 'x86asm' : item.languages.programming_languages[0]
                 )"
               lineNumbers style="padding: 0;"></code></pre>
             </label>
