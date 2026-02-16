@@ -3,8 +3,6 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CatalogItem, CatalogItemReport } from './catalog-item.schema';
 import { toObject, useId } from 'src/utils';
-import { readJSON } from 'fs-extra';
-import { pwd } from 'shelljs';
 
 @Injectable()
 export class CatalogV2Service {
@@ -12,7 +10,7 @@ export class CatalogV2Service {
     @InjectModel('catalog_items_v2') private catalogItems: Model<CatalogItem>,
     @InjectModel('catalog_item_reports_v2')
     private catalogItemReports: Model<CatalogItemReport>,
-  ) { }
+  ) {}
 
   async list() {
     const items = await this.catalogItems
@@ -20,10 +18,25 @@ export class CatalogV2Service {
       .sort({ listed_at: 'desc' })
       .select(
         'identity.id identity.title identity.type status listed_at links.demo_url ' +
-        'content.prompt tags attribution.authors languages.programming_languages ' +
-        'attribution.provider rights.license',
+          'content.prompt tags attribution.authors languages.programming_languages ' +
+          'attribution.provider rights.license delivery.format classification.knowledge_components',
       );
-    return items.map((i) => useId(toObject(i)));
+
+    return items
+      .map((i) => toObject(i))
+      .map((i) => {
+        const kc = i.classification?.knowledge_components ?? {};
+        const conceptsOnly = Object.fromEntries(
+          Object.entries(kc).map(([k, v]: any) => [
+            k,
+            { concepts: v?.concepts ?? [] },
+          ]),
+        );
+        return useId({
+          ...i,
+          classification: { knowledge_components: conceptsOnly },
+        });
+      });
   }
 
   async read(id: string) {

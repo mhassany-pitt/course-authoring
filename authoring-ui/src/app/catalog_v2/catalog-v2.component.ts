@@ -1,10 +1,12 @@
 import {
   AfterViewInit,
   Component,
+  DestroyRef,
   ElementRef,
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Table } from 'primeng/table';
 import { FilterService } from 'primeng/api';
@@ -34,10 +36,20 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   tagKVs: FilterKV[] = [];
   plKVs: FilterKV[] = [];
   licenseKVs: FilterKV[] = [];
+  deliveryFormatKVs: FilterKV[] = [];
+  conceptKVs: FilterKV[] = [];
+  authorsQuery = '';
+  showAllAuthors = false;
+  knowledgeComponentsQuery = '';
+  showAllKnowledgeComponents = false;
+  private readonly authorsDefaultLimit = 20;
+  private readonly knowledgeComponentsDefaultLimit = 20;
   globalQuery = '';
   private readonly multiFilterSeparator = '||';
   private availableFacetLabels: { [key: string]: Set<string> } = {};
   private allFacetLabels: { [key: string]: string[] } = {};
+  private knowledgeConceptsCache = new WeakMap<object, string[]>();
+  private knowledgeConceptsLowerCache = new WeakMap<object, string[]>();
   private readonly globalFilterFields = [
     'id',
     'identity.title',
@@ -56,7 +68,9 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     'languages.programming_languages',
     'attribution.authors',
     'attribution.provider',
+    'classification.knowledge_components',
     'rights.license',
+    'delivery',
     'tags',
   ];
 
@@ -70,9 +84,36 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     public app: AppService,
     public api: CatalogV2Service,
     private filterService: FilterService,
+    private destroyRef: DestroyRef,
   ) {}
 
   ngOnInit(): void {
+    this.filterService.register(
+      'knowledgeConceptIn',
+      (value: any, filters: string[] | null | undefined) => {
+        if (!filters || !Array.isArray(filters) || !filters.length) return true;
+        if (!value || typeof value !== 'object') return false;
+        const selected = filters.map((v) => String(v).toLowerCase().trim());
+        const current = this.getKnowledgeConceptsLower(value);
+        return selected.some((s) => current.includes(s));
+      },
+    );
+    this.filterService.register(
+      'deliveryFormatIn',
+      (value: any, filters: string[] | null | undefined) => {
+        if (!filters || !Array.isArray(filters) || !filters.length) return true;
+        if (!Array.isArray(value)) return false;
+        const selected = filters.map((v) => String(v).toLowerCase().trim());
+        const current = value
+          .map((entry: any) =>
+            String(entry?.format || '')
+              .toLowerCase()
+              .trim(),
+          )
+          .filter(Boolean);
+        return selected.some((s) => current.includes(s));
+      },
+    );
     this.filterService.register(
       'arrayStringIn',
       (value: any, filters: string[] | null | undefined) => {
@@ -101,9 +142,9 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         return selected.some((s) => names.includes(s));
       },
     );
-    this.route.queryParams.subscribe((params) =>
-      this.applyFiltersFromParams(params),
-    );
+    this.route.queryParams
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((params) => this.applyFiltersFromParams(params));
     this.reload();
   }
 
@@ -176,11 +217,16 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   }
 
   reloadFilterKVs(items: any) {
+    this.knowledgeConceptsCache = new WeakMap<object, string[]>();
+    this.knowledgeConceptsLowerCache = new WeakMap<object, string[]>();
+
     if (!items) {
       this.typeKVs = [];
       this.authorKVs = [];
       this.tagKVs = [];
       this.plKVs = [];
+      this.deliveryFormatKVs = [];
+      this.conceptKVs = [];
       this.providersKVs = [];
       this.licenseKVs = [];
       return;
@@ -190,6 +236,8 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     const authorCounts = new Map<string, number>();
     const tagCounts = new Map<string, number>();
     const plCounts = new Map<string, number>();
+    const deliveryFormatCounts = new Map<string, number>();
+    const conceptCounts = new Map<string, number>();
     const providerCounts = new Map<string, number>();
     const licenseCounts = new Map<string, number>();
 
@@ -227,6 +275,28 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         plCounts.set(label, (plCounts.get(label) || 0) + 1);
       });
 
+      const deliveryFormatSet = new Set<string>();
+      (item.delivery || []).forEach((delivery: any) => {
+        const label = (delivery?.format || '').trim();
+        if (label) deliveryFormatSet.add(label);
+      });
+      deliveryFormatSet.forEach((label) => {
+        deliveryFormatCounts.set(
+          label,
+          (deliveryFormatCounts.get(label) || 0) + 1,
+        );
+      });
+
+      const knowledgeComponents =
+        item.classification?.knowledge_components || {};
+      const conceptSet = new Set<string>();
+      this.getKnowledgeConcepts(knowledgeComponents).forEach((label) =>
+        conceptSet.add(label),
+      );
+      conceptSet.forEach((label) => {
+        conceptCounts.set(label, (conceptCounts.get(label) || 0) + 1);
+      });
+
       const provider = (item.attribution?.provider || '').trim();
       if (provider)
         providerCounts.set(provider, (providerCounts.get(provider) || 0) + 1);
@@ -240,11 +310,17 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     this.authorKVs = this.toKeyValue(authorCounts);
     this.tagKVs = this.toKeyValue(tagCounts);
     this.plKVs = this.toKeyValue(plCounts);
+    this.deliveryFormatKVs = this.toKeyValue(deliveryFormatCounts);
+    this.conceptKVs = this.toKeyValue(conceptCounts);
     this.providersKVs = this.toKeyValue(providerCounts);
     this.licenseKVs = this.toKeyValue(licenseCounts);
     this.allFacetLabels = {
       'identity.type': this.typeKVs.map((kv) => kv.label),
       'languages.programming_languages': this.plKVs.map((kv) => kv.label),
+      delivery: this.deliveryFormatKVs.map((kv) => kv.label),
+      'classification.knowledge_components': this.conceptKVs.map(
+        (kv) => kv.label,
+      ),
       'attribution.authors': this.authorKVs.map((kv) => kv.label),
       'attribution.provider': this.providersKVs.map((kv) => kv.label),
       'rights.license': this.licenseKVs.map((kv) => kv.label),
@@ -357,6 +433,15 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         return (item.attribution?.authors || [])
           .map((author: any) => (author?.name || '').trim())
           .filter(Boolean);
+      case 'delivery':
+        return (item.delivery || [])
+          .map((delivery: any) => (delivery?.format || '').trim())
+          .filter(Boolean);
+      case 'classification.knowledge_components': {
+        const knowledgeComponents =
+          item.classification?.knowledge_components || {};
+        return this.getKnowledgeConcepts(knowledgeComponents);
+      }
       case 'attribution.provider': {
         const label = (item.attribution?.provider || '').trim();
         return label ? [label] : [];
@@ -391,6 +476,12 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         return;
       case 'attribution.authors':
         this.authorKVs = kvs;
+        return;
+      case 'delivery':
+        this.deliveryFormatKVs = kvs;
+        return;
+      case 'classification.knowledge_components':
+        this.conceptKVs = kvs;
         return;
       case 'attribution.provider':
         this.providersKVs = kvs;
@@ -488,6 +579,10 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         return this.plKVs;
       case 'attribution.authors':
         return this.authorKVs;
+      case 'delivery':
+        return this.deliveryFormatKVs;
+      case 'classification.knowledge_components':
+        return this.conceptKVs;
       case 'attribution.provider':
         return this.providersKVs;
       case 'rights.license':
@@ -521,7 +616,9 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   }
 
   get activeQuickFilterKeys() {
-    return Object.keys(this.selectedKVs).filter((key) => key !== 'count');
+    return this.quickFilterFields.filter(
+      (field) => this.getSelectedLabels(field).length > 0,
+    );
   }
 
   get activeQuickFilters() {
@@ -538,6 +635,90 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     return !!this.availableFacetLabels[field]?.has(label);
   }
 
+  selectedCount(field: string) {
+    return this.getSelectedLabels(field).length;
+  }
+
+  quickFilterFieldLabel(field: string) {
+    switch (field) {
+      case 'identity.type':
+        return 'Types';
+      case 'languages.programming_languages':
+        return 'Programming Languages';
+      case 'attribution.authors':
+        return 'Authors';
+      case 'attribution.provider':
+        return 'Providers';
+      case 'classification.knowledge_components':
+        return 'Knowledge Components';
+      case 'rights.license':
+        return 'Licenses';
+      case 'delivery':
+        return 'Delivery Format';
+      case 'tags':
+        return 'Tags';
+      default:
+        return field;
+    }
+  }
+
+  onKnowledgeComponentsQueryChange(value: string) {
+    this.knowledgeComponentsQuery = value || '';
+    this.showAllKnowledgeComponents = false;
+  }
+
+  onAuthorsQueryChange(value: string) {
+    this.authorsQuery = value || '';
+    this.showAllAuthors = false;
+  }
+
+  toggleAuthorsView() {
+    this.showAllAuthors = !this.showAllAuthors;
+  }
+
+  toggleKnowledgeComponentsView() {
+    this.showAllKnowledgeComponents = !this.showAllKnowledgeComponents;
+  }
+
+  get filteredAuthorKVs() {
+    const query = this.authorsQuery.trim().toLowerCase();
+    if (!query) return this.authorKVs;
+    return this.authorKVs.filter((kv) =>
+      kv.label.toLowerCase().includes(query),
+    );
+  }
+
+  get visibleAuthorKVs() {
+    if (this.showAllAuthors) return this.filteredAuthorKVs;
+    return this.filteredAuthorKVs.slice(0, this.authorsDefaultLimit);
+  }
+
+  get hasMoreAuthors() {
+    return this.filteredAuthorKVs.length > this.authorsDefaultLimit;
+  }
+
+  get filteredConceptKVs() {
+    const query = this.knowledgeComponentsQuery.trim().toLowerCase();
+    if (!query) return this.conceptKVs;
+    return this.conceptKVs.filter((kv) =>
+      kv.label.toLowerCase().includes(query),
+    );
+  }
+
+  get visibleConceptKVs() {
+    if (this.showAllKnowledgeComponents) return this.filteredConceptKVs;
+    return this.filteredConceptKVs.slice(
+      0,
+      this.knowledgeComponentsDefaultLimit,
+    );
+  }
+
+  get hasMoreKnowledgeComponents() {
+    return (
+      this.filteredConceptKVs.length > this.knowledgeComponentsDefaultLimit
+    );
+  }
+
   private getSelectedLabels(field: string) {
     return ((this.selectedKVs[field] || []) as FilterKV[]).map(
       (kv) => kv.label,
@@ -547,6 +728,12 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   private getTableMatchModeForField(field: string) {
     if (field === 'languages.programming_languages' || field === 'tags') {
       return 'arrayStringIn';
+    }
+    if (field === 'delivery') {
+      return 'deliveryFormatIn';
+    }
+    if (field === 'classification.knowledge_components') {
+      return 'knowledgeConceptIn';
     }
     if (field === 'attribution.authors') {
       return 'authorNameIn';
@@ -566,5 +753,38 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   private serializeFilterValues(values: string[]): string | null {
     if (!values.length) return null;
     return values.join(this.multiFilterSeparator);
+  }
+
+  private getKnowledgeConcepts(knowledgeComponents: any): string[] {
+    if (!knowledgeComponents || typeof knowledgeComponents !== 'object') {
+      return [];
+    }
+    const key = knowledgeComponents as object;
+    const cached = this.knowledgeConceptsCache.get(key);
+    if (cached) return cached;
+    const concepts = Array.from(
+      new Set(
+        Object.values(knowledgeComponents as Record<string, any>)
+          .flatMap((entry) => (entry?.concepts || []) as any[])
+          .map((concept) => String(concept || '').trim())
+          .filter(Boolean),
+      ),
+    );
+    this.knowledgeConceptsCache.set(key, concepts);
+    return concepts;
+  }
+
+  private getKnowledgeConceptsLower(knowledgeComponents: any): string[] {
+    if (!knowledgeComponents || typeof knowledgeComponents !== 'object') {
+      return [];
+    }
+    const key = knowledgeComponents as object;
+    const cached = this.knowledgeConceptsLowerCache.get(key);
+    if (cached) return cached;
+    const concepts = this.getKnowledgeConcepts(knowledgeComponents).map((v) =>
+      v.toLowerCase(),
+    );
+    this.knowledgeConceptsLowerCache.set(key, concepts);
+    return concepts;
   }
 }

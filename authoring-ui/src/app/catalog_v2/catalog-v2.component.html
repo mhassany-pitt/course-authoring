@@ -1,7 +1,7 @@
 <div class="flex flex-col">
   <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
     <div
-      class="container mx-auto flex items-center gap-2 px-2 md:px-0 max-w-7xl"
+      class="container mx-auto flex items-center gap-2 px-2 md:px-0 max-w-6xl"
     >
       <img src="assets/logo.png" class="h-8 w-8" />
       <span class="text-xl font-bold hidden md:inline-block text-nowrap">
@@ -26,7 +26,7 @@
   </div>
 
   <div
-    class="container mx-auto mt-24 mb-16 flex flex-col gap-4 max-w-7xl z-0 relative"
+    class="container mx-auto mt-24 mb-16 flex flex-col gap-4 max-w-6xl z-0 relative"
   >
     <!-- header -->
     <h1 class="my-0">
@@ -91,37 +91,53 @@
         >
           <div
             *ngIf="activeQuickFilters.length"
-            class="w-full flex flex-wrap items-center gap-1 text-xs text-gray-500"
+            class="w-full flex items-start gap-1 text-xs text-gray-500"
           >
-            <span class="uppercase">Active Filters:</span>
+            <div class="grow">
+              <span class="uppercase font-bold">Active Filters:</span>
+              <ng-container
+                *ngFor="let filter of activeQuickFilters; let $index = index"
+              >
+                <span
+                  *ngIf="
+                    $index === 0 ||
+                    activeQuickFilters[$index - 1].field !== filter.field
+                  "
+                  class="text-gray-400"
+                >
+                  {{ quickFilterFieldLabel(filter.field) }}:
+                </span>
+                <a
+                  class="text-xs cursor-pointer hover:underline font-bold text-blue-700"
+                  (click)="
+                    toggleActiveQuickFilter(table, filter.field, filter.label)
+                  "
+                  aria-label="Toggle quick filter"
+                >
+                  {{
+                    $index < activeQuickFilters.length - 1
+                      ? activeQuickFilters[$index + 1].field !== filter.field
+                        ? filter.label + ";"
+                        : filter.label + ","
+                      : filter.label
+                  }}
+                </a>
+              </ng-container>
+            </div>
 
-            <a
-              *ngFor="let filter of activeQuickFilters; let $index = index"
-              class="text-xs cursor-pointer hover:underline font-bold text-blue-700 underline"
-              (click)="
-                toggleActiveQuickFilter(table, filter.field, filter.label)
-              "
-              aria-label="Toggle quick filter"
-            >
-              {{
-                $index < activeQuickFilters.length - 1
-                  ? filter.label + ","
-                  : filter.label
-              }}
-            </a>
-
-            <span class="grow"></span>
-            <p-button
-              *ngIf="table && table.filteredValue"
-              [label]="table.filteredValue.length + ' Matched'"
-              icon="fa fa-times"
-              iconPos="right"
-              severity="danger"
-              outlined="true"
-              styleClass="px-2 py-1 text-xs items-center"
-              (click)="clearQuickFilters(table)"
-            >
-            </p-button>
+            <div class="min-w-fit">
+              <p-button
+                *ngIf="table && table.filteredValue"
+                [label]="table.filteredValue.length + ' Matched'"
+                icon="fa fa-times"
+                iconPos="right"
+                severity="danger"
+                outlined="true"
+                styleClass="px-2 py-1 text-xs items-center"
+                (click)="clearQuickFilters(table)"
+              >
+              </p-button>
+            </div>
           </div>
 
           <ng-container *ngIf="quickFiltersExpanded">
@@ -129,7 +145,7 @@
 
             <div class="w-full flex flex-wrap gap-1 pl-2">
               <div class="flex items-center gap-2 w-full -ml-2">
-                <span class="text-sm font-bold text-gray-600">Types: </span>
+                <span class="text-sm font-bold text-gray-600"> Types: </span>
                 <hr class="grow" />
               </div>
               <a
@@ -139,9 +155,6 @@
                   isQuickFilterSelected('identity.type', facet.label)
                 "
                 [class.text-blue-700]="
-                  isQuickFilterSelected('identity.type', facet.label)
-                "
-                [class.underline]="
                   isQuickFilterSelected('identity.type', facet.label)
                 "
                 [class.text-gray-400]="
@@ -179,12 +192,6 @@
                     facet.label
                   )
                 "
-                [class.underline]="
-                  isQuickFilterSelected(
-                    'languages.programming_languages',
-                    facet.label
-                  )
-                "
                 [class.text-gray-400]="
                   !isQuickFilterSelected(
                     'languages.programming_languages',
@@ -212,19 +219,35 @@
 
             <div class="w-full flex flex-wrap gap-1 pl-2">
               <div class="flex items-center gap-2 w-full -ml-2">
-                <span class="text-sm font-bold text-gray-600">Authors:</span>
+                <span class="text-sm font-bold text-gray-600"> Authors: </span>
                 <hr class="grow" />
+                <a
+                  *ngIf="hasMoreAuthors"
+                  class="text-xs cursor-pointer hover:underline"
+                  (click)="toggleAuthorsView()"
+                >
+                  {{
+                    showAllAuthors
+                      ? "Show less"
+                      : "Show all (" + filteredAuthorKVs.length + ")"
+                  }}
+                </a>
+                <input
+                  type="text"
+                  pInputText
+                  placeholder="Filter authors ..."
+                  class="text-xs px-2 py-1"
+                  [ngModel]="authorsQuery"
+                  (ngModelChange)="onAuthorsQueryChange($event)"
+                />
               </div>
               <a
-                *ngFor="let facet of authorKVs"
+                *ngFor="let facet of visibleAuthorKVs"
                 class="text-xs cursor-pointer hover:underline"
                 [class.font-bold]="
                   isQuickFilterSelected('attribution.authors', facet.label)
                 "
                 [class.text-blue-700]="
-                  isQuickFilterSelected('attribution.authors', facet.label)
-                "
-                [class.underline]="
                   isQuickFilterSelected('attribution.authors', facet.label)
                 "
                 [class.text-gray-400]="
@@ -235,14 +258,19 @@
               >
                 {{ facet.label }} ({{ facet.value }}),
               </a>
-              <span class="text-sm text-gray-400" *ngIf="!authorKVs.length">
+              <span
+                class="text-sm text-gray-400"
+                *ngIf="!filteredAuthorKVs.length"
+              >
                 No authors yet.
               </span>
             </div>
 
             <div class="w-full flex flex-wrap gap-1 pl-2">
               <div class="flex items-center gap-2 w-full -ml-2">
-                <span class="text-sm font-bold text-gray-600">Providers:</span>
+                <span class="text-sm font-bold text-gray-600">
+                  Providers:
+                </span>
                 <hr class="grow" />
               </div>
               <a
@@ -252,9 +280,6 @@
                   isQuickFilterSelected('attribution.provider', facet.label)
                 "
                 [class.text-blue-700]="
-                  isQuickFilterSelected('attribution.provider', facet.label)
-                "
-                [class.underline]="
                   isQuickFilterSelected('attribution.provider', facet.label)
                 "
                 [class.text-gray-400]="
@@ -274,7 +299,110 @@
 
             <div class="w-full flex flex-wrap gap-1 pl-2">
               <div class="flex items-center gap-2 w-full -ml-2">
-                <span class="text-sm font-bold text-gray-600">Licenses:</span>
+                <span class="text-sm font-bold text-gray-600"
+                  >Knowledge Components ({{
+                    selectedCount("classification.knowledge_components")
+                  }}):</span
+                >
+                <hr class="grow" />
+                <a
+                  *ngIf="hasMoreKnowledgeComponents"
+                  class="text-xs cursor-pointer hover:underline"
+                  (click)="toggleKnowledgeComponentsView()"
+                >
+                  {{
+                    showAllKnowledgeComponents
+                      ? "Show less"
+                      : "Show all (" + filteredConceptKVs.length + ")"
+                  }}
+                </a>
+                <input
+                  type="text"
+                  pInputText
+                  placeholder="Filter KCs ..."
+                  class="text-xs px-2 py-1"
+                  [ngModel]="knowledgeComponentsQuery"
+                  (ngModelChange)="onKnowledgeComponentsQueryChange($event)"
+                />
+              </div>
+              <a
+                *ngFor="let facet of visibleConceptKVs"
+                class="text-xs cursor-pointer hover:underline"
+                [class.font-bold]="
+                  isQuickFilterSelected(
+                    'classification.knowledge_components',
+                    facet.label
+                  )
+                "
+                [class.text-blue-700]="
+                  isQuickFilterSelected(
+                    'classification.knowledge_components',
+                    facet.label
+                  )
+                "
+                [class.text-gray-400]="
+                  !isQuickFilterSelected(
+                    'classification.knowledge_components',
+                    facet.label
+                  ) &&
+                  !isQuickFilterAvailable(
+                    'classification.knowledge_components',
+                    facet.label
+                  )
+                "
+                (click)="
+                  toggleQuickFilter(
+                    table,
+                    'classification.knowledge_components',
+                    facet
+                  )
+                "
+              >
+                {{ facet.label }} ({{ facet.value }}),
+              </a>
+              <span
+                class="text-sm text-gray-400"
+                *ngIf="!filteredConceptKVs.length"
+              >
+                No knowledge components yet.
+              </span>
+            </div>
+
+            <div class="w-full flex flex-wrap gap-1 pl-2">
+              <div class="flex items-center gap-2 w-full -ml-2">
+                <span class="text-sm font-bold text-gray-600"
+                  >Delivery Format:</span
+                >
+                <hr class="grow" />
+              </div>
+              <a
+                *ngFor="let facet of deliveryFormatKVs"
+                class="text-xs cursor-pointer hover:underline"
+                [class.font-bold]="
+                  isQuickFilterSelected('delivery', facet.label)
+                "
+                [class.text-blue-700]="
+                  isQuickFilterSelected('delivery', facet.label)
+                "
+                [class.text-gray-400]="
+                  !isQuickFilterSelected('delivery', facet.label) &&
+                  !isQuickFilterAvailable('delivery', facet.label)
+                "
+                (click)="toggleQuickFilter(table, 'delivery', facet)"
+              >
+                {{ facet.label }} ({{ facet.value }}),
+              </a>
+              <span
+                class="text-sm text-gray-400"
+                *ngIf="!deliveryFormatKVs.length"
+              >
+                No delivery formats yet.
+              </span>
+            </div>
+
+            <div class="w-full flex flex-wrap gap-1 pl-2">
+              <div class="flex items-center gap-2 w-full -ml-2">
+                <span class="text-sm font-bold text-gray-600"> Licenses: </span>
                 <hr class="grow" />
               </div>
               <a
@@ -284,9 +412,6 @@
                   isQuickFilterSelected('rights.license', facet.label)
                 "
                 [class.text-blue-700]="
-                  isQuickFilterSelected('rights.license', facet.label)
-                "
-                [class.underline]="
                   isQuickFilterSelected('rights.license', facet.label)
                 "
                 [class.text-gray-400]="
@@ -304,7 +429,7 @@
 
             <div class="w-full flex flex-wrap gap-1 pl-2">
               <div class="flex items-center gap-2 w-full -ml-2">
-                <span class="text-sm font-bold text-gray-600">Tags:</span>
+                <span class="text-sm font-bold text-gray-600"> Tags: </span>
                 <hr class="grow" />
               </div>
               <a
@@ -314,7 +439,6 @@
                 [class.text-blue-700]="
                   isQuickFilterSelected('tags', facet.label)
                 "
-                [class.underline]="isQuickFilterSelected('tags', facet.label)"
                 [class.text-gray-400]="
                   !isQuickFilterSelected('tags', facet.label) &&
                   !isQuickFilterAvailable('tags', facet.label)
@@ -333,7 +457,7 @@
 
       <div
         *ngIf="loading"
-        class="w-full border border-amber-300 bg-amber-50 text-amber-900 rounded-md p-8 shadow-sm flex items-center justify-center gap-3"
+        class="w-full bg-white rounded-md p-8 shadow-sm flex items-center justify-center gap-3"
         role="status"
         aria-live="polite"
       >
