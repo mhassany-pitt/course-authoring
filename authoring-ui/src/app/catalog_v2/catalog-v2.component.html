@@ -455,34 +455,39 @@
         </div>
       </div>
 
-      <div
-        *ngIf="loading"
-        class="w-full bg-white rounded-md p-8 shadow-sm flex items-center justify-center gap-3"
-        role="status"
-        aria-live="polite"
-      >
-        <i class="pi pi-spin pi-spinner text-xl"></i>
-        <span class="text-base font-semibold">Loading catalog data...</span>
-      </div>
-
-      <div *ngIf="!loading" class="w-full">
+      <div class="border border-solid border-gray-200 shadow-md">
         <p-table
           #table
           [value]="items"
           [loading]="loading"
+          [showLoader]="false"
+          [paginator]="true"
+          [rows]="50"
+          [rowsPerPageOptions]="[10, 25, 100]"
           [globalFilterFields]="[
             'id',
-            'identity.title',
             'identity.id',
-            'identity.type',
-            'status',
+            'identity.title',
             'content.prompt',
-            'attribution._authors',
-            'tags',
           ]"
-          class="border shadow-md"
           (onFilter)="onTableFilter(table.filteredValue || items)"
         >
+          <ng-template pTemplate="loadingbody">
+            <tr>
+              <td>
+                <div
+                  class="w-full p-8 flex items-center justify-center gap-3"
+                  role="status"
+                  aria-live="polite"
+                >
+                  <i class="pi pi-spin pi-spinner text-xl"></i>
+                  <span class="text-base font-semibold"
+                    >Loading catalog data...</span
+                  >
+                </div>
+              </td>
+            </tr>
+          </ng-template>
           <ng-template pTemplate="body" let-item let-rowIndex="rowIndex">
             <tr>
               <td>
