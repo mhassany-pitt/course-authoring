@@ -48,8 +48,16 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   private readonly multiFilterSeparator = '||';
   private availableFacetLabels: { [key: string]: Set<string> } = {};
   private allFacetLabels: { [key: string]: string[] } = {};
+  private itemFacetLabelsCache = new WeakMap<object, Map<string, string[]>>();
+  private itemFacetLabelsLowerCache = new WeakMap<object, Map<string, string[]>>();
   private knowledgeConceptsCache = new WeakMap<object, string[]>();
   private knowledgeConceptsLowerCache = new WeakMap<object, string[]>();
+  private lastAuthorKVsRef: FilterKV[] | null = null;
+  private lastAuthorsQuery = '';
+  private filteredAuthorKVsCache: FilterKV[] = [];
+  private lastConceptKVsRef: FilterKV[] | null = null;
+  private lastKnowledgeComponentsQuery = '';
+  private filteredConceptKVsCache: FilterKV[] = [];
   private readonly globalFilterFields = [
     'id',
     'identity.title',
@@ -62,6 +70,8 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   ];
 
   loading = true;
+  private latestQueryParams: Params = {};
+  private dataLoaded = false;
 
   private readonly quickFilterFields = [
     'identity.type',
@@ -144,11 +154,20 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     );
     this.route.queryParams
       .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe((params) => this.applyFiltersFromParams(params));
+      .subscribe((params) => {
+        this.latestQueryParams = params;
+        if (this.dataLoaded && this.table) {
+          this.applyFiltersFromParams(params);
+        }
+      });
     this.reload();
   }
 
-  ngAfterViewInit(): void {}
+  ngAfterViewInit(): void {
+    if (this.dataLoaded) {
+      this.applyFiltersFromParams(this.latestQueryParams);
+    }
+  }
 
   filter(table: Table, $event: any, skip = false) {
     const value = ($event.target.value || '').trim();
@@ -160,16 +179,16 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
 
   reload() {
     this.loading = true;
+    this.dataLoaded = false;
     this.api.list().subscribe({
       next: (items: any) => {
         this.items = items;
         this.flattenAuthors();
         this.reloadFilterKVs(this.items);
-        this.refreshAvailableFacetLabels();
-        setTimeout(
-          () => this.applyFiltersFromParams(this.route.snapshot.queryParams),
-          0,
-        );
+        this.dataLoaded = true;
+        if (this.table) {
+          this.applyFiltersFromParams(this.latestQueryParams);
+        }
       },
       error: (error: any) => console.log(error),
       complete: () => (this.loading = false),
@@ -217,6 +236,11 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   }
 
   reloadFilterKVs(items: any) {
+    this.itemFacetLabelsCache = new WeakMap<object, Map<string, string[]>>();
+    this.itemFacetLabelsLowerCache = new WeakMap<
+      object,
+      Map<string, string[]>
+    >();
     this.knowledgeConceptsCache = new WeakMap<object, string[]>();
     this.knowledgeConceptsLowerCache = new WeakMap<object, string[]>();
 
@@ -399,18 +423,14 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     selected: string[],
   ) {
     if (!selected.length) return true;
-    const itemValues = this.getItemFacetLabels(item, field).map((v) =>
-      v.toLowerCase(),
-    );
+    const itemValues = this.getItemFacetLabelsLower(item, field);
     if (!itemValues.length) return false;
     const selectedValues = selected.map((v) => v.toLowerCase());
     return selectedValues.some((value) => itemValues.includes(value));
   }
 
   private itemMatchesFacetLabel(item: any, field: string, label: string) {
-    const itemValues = this.getItemFacetLabels(item, field).map((v) =>
-      v.toLowerCase(),
-    );
+    const itemValues = this.getItemFacetLabelsLower(item, field);
     const target = label.toLowerCase();
     return itemValues.includes(target);
   }
@@ -420,43 +440,79 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   }
 
   private getItemFacetLabels(item: any, field: string): string[] {
+    if (!item || typeof item !== 'object') return [];
+    const cacheKey = item as object;
+    const cachedMap = this.itemFacetLabelsCache.get(cacheKey);
+    const cached = cachedMap?.get(field);
+    if (cached) return cached;
+
+    let labels: string[] = [];
     switch (field) {
       case 'identity.type': {
         const label = (item.identity?.type || '').trim();
-        return label ? [label] : [];
+        labels = label ? [label] : [];
+        break;
       }
       case 'languages.programming_languages':
-        return (item.languages?.programming_languages || [])
+        labels = (item.languages?.programming_languages || [])
           .map((pl: any) => (pl || '').trim())
           .filter(Boolean);
+        break;
       case 'attribution.authors':
-        return (item.attribution?.authors || [])
+        labels = (item.attribution?.authors || [])
           .map((author: any) => (author?.name || '').trim())
           .filter(Boolean);
+        break;
       case 'delivery':
-        return (item.delivery || [])
+        labels = (item.delivery || [])
           .map((delivery: any) => (delivery?.format || '').trim())
           .filter(Boolean);
+        break;
       case 'classification.knowledge_components': {
         const knowledgeComponents =
           item.classification?.knowledge_components || {};
-        return this.getKnowledgeConcepts(knowledgeComponents);
+        labels = this.getKnowledgeConcepts(knowledgeComponents);
+        break;
       }
       case 'attribution.provider': {
         const label = (item.attribution?.provider || '').trim();
-        return label ? [label] : [];
+        labels = label ? [label] : [];
+        break;
       }
       case 'rights.license': {
         const label = (item.rights?.license || '').trim();
-        return label ? [label] : [];
+        labels = label ? [label] : [];
+        break;
       }
       case 'tags':
-        return (item.tags || [])
+        labels = (item.tags || [])
           .map((tag: any) => (tag || '').trim())
           .filter(Boolean);
+        break;
       default:
-        return [];
+        labels = [];
+        break;
     }
+
+    const nextMap = cachedMap || new Map<string, string[]>();
+    nextMap.set(field, labels);
+    this.itemFacetLabelsCache.set(cacheKey, nextMap);
+    return labels;
+  }
+
+  private getItemFacetLabelsLower(item: any, field: string): string[] {
+    if (!item || typeof item !== 'object') return [];
+    const cacheKey = item as object;
+    const cachedMap = this.itemFacetLabelsLowerCache.get(cacheKey);
+    const cached = cachedMap?.get(field);
+    if (cached) return cached;
+    const lowered = this.getItemFacetLabels(item, field).map((v) =>
+      v.toLowerCase(),
+    );
+    const nextMap = cachedMap || new Map<string, string[]>();
+    nextMap.set(field, lowered);
+    this.itemFacetLabelsLowerCache.set(cacheKey, nextMap);
+    return lowered;
   }
 
   private getAllFacetLabels(field: string) {
@@ -682,10 +738,15 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
 
   get filteredAuthorKVs() {
     const query = this.authorsQuery.trim().toLowerCase();
-    if (!query) return this.authorKVs;
-    return this.authorKVs.filter((kv) =>
-      kv.label.toLowerCase().includes(query),
-    );
+    if (this.lastAuthorKVsRef === this.authorKVs && this.lastAuthorsQuery === query) {
+      return this.filteredAuthorKVsCache;
+    }
+    this.lastAuthorKVsRef = this.authorKVs;
+    this.lastAuthorsQuery = query;
+    this.filteredAuthorKVsCache = !query
+      ? this.authorKVs
+      : this.authorKVs.filter((kv) => kv.label.toLowerCase().includes(query));
+    return this.filteredAuthorKVsCache;
   }
 
   get visibleAuthorKVs() {
@@ -699,10 +760,18 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
 
   get filteredConceptKVs() {
     const query = this.knowledgeComponentsQuery.trim().toLowerCase();
-    if (!query) return this.conceptKVs;
-    return this.conceptKVs.filter((kv) =>
-      kv.label.toLowerCase().includes(query),
-    );
+    if (
+      this.lastConceptKVsRef === this.conceptKVs &&
+      this.lastKnowledgeComponentsQuery === query
+    ) {
+      return this.filteredConceptKVsCache;
+    }
+    this.lastConceptKVsRef = this.conceptKVs;
+    this.lastKnowledgeComponentsQuery = query;
+    this.filteredConceptKVsCache = !query
+      ? this.conceptKVs
+      : this.conceptKVs.filter((kv) => kv.label.toLowerCase().includes(query));
+    return this.filteredConceptKVsCache;
   }
 
   get visibleConceptKVs() {
