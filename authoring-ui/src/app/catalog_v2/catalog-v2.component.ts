@@ -49,9 +49,13 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   private availableFacetLabels: { [key: string]: Set<string> } = {};
   private allFacetLabels: { [key: string]: string[] } = {};
   private itemFacetLabelsCache = new WeakMap<object, Map<string, string[]>>();
-  private itemFacetLabelsLowerCache = new WeakMap<object, Map<string, string[]>>();
+  private itemFacetLabelsLowerCache = new WeakMap<
+    object,
+    Map<string, string[]>
+  >();
   private knowledgeConceptsCache = new WeakMap<object, string[]>();
   private knowledgeConceptsLowerCache = new WeakMap<object, string[]>();
+  private itemGlobalSearchValuesLowerCache = new WeakMap<object, string[]>();
   private lastAuthorKVsRef: FilterKV[] | null = null;
   private lastAuthorsQuery = '';
   private filteredAuthorKVsCache: FilterKV[] = [];
@@ -68,6 +72,9 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     'attribution._authors',
     'tags',
   ];
+  private readonly facetRefreshDebounceMs = 150;
+  private facetRefreshDebounceHandle: ReturnType<typeof setTimeout> | null =
+    null;
 
   loading = true;
   private latestQueryParams: Params = {};
@@ -95,7 +102,14 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     public api: CatalogV2Service,
     private filterService: FilterService,
     private destroyRef: DestroyRef,
-  ) {}
+  ) {
+    this.destroyRef.onDestroy(() => {
+      if (this.facetRefreshDebounceHandle) {
+        clearTimeout(this.facetRefreshDebounceHandle);
+        this.facetRefreshDebounceHandle = null;
+      }
+    });
+  }
 
   ngOnInit(): void {
     this.filterService.register(
@@ -173,8 +187,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     const value = ($event.target.value || '').trim();
     this.globalQuery = value;
     table.filterGlobal(value, 'contains');
-    if (skip) return;
-    this.syncQueryParams({ q: value || null });
+    if (!skip) this.syncQueryParams({ q: value || null });
   }
 
   reload() {
@@ -243,6 +256,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     >();
     this.knowledgeConceptsCache = new WeakMap<object, string[]>();
     this.knowledgeConceptsLowerCache = new WeakMap<object, string[]>();
+    this.itemGlobalSearchValuesLowerCache = new WeakMap<object, string[]>();
 
     if (!items) {
       this.typeKVs = [];
@@ -352,8 +366,14 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     };
   }
 
-  onTableFilter(filteredItems: any[] | null | undefined) {
-    this.refreshAvailableFacetLabels();
+  onTableFilter(_filteredItems: any[] | null | undefined) {
+    if (this.facetRefreshDebounceHandle) {
+      clearTimeout(this.facetRefreshDebounceHandle);
+    }
+    this.facetRefreshDebounceHandle = setTimeout(() => {
+      this.facetRefreshDebounceHandle = null;
+      this.refreshAvailableFacetLabels();
+    }, this.facetRefreshDebounceMs);
   }
 
   private toKeyValue(source: Map<string, number>) {
@@ -368,15 +388,31 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       const countMap = new Map<string, number>();
       const allLabels = this.getAllFacetLabels(targetField);
       allLabels.forEach((label) => countMap.set(label, 0));
-
+      const labelsByLower = new Map<string, string[]>();
       allLabels.forEach((label) => {
-        let count = 0;
-        this.items.forEach((item: any) => {
-          if (!this.matchesActiveFiltersExcept(item, targetField)) return;
-          if (!this.itemMatchesFacetLabel(item, targetField, label)) return;
-          count += 1;
+        const lower = label.toLowerCase();
+        const current = labelsByLower.get(lower);
+        if (current) {
+          current.push(label);
+        } else {
+          labelsByLower.set(lower, [label]);
+        }
+      });
+
+      this.items.forEach((item: any) => {
+        if (!this.matchesActiveFiltersExcept(item, targetField)) return;
+        const itemLabelsLower = new Set(
+          this.getItemFacetLabelsLower(item, targetField),
+        );
+        if (!itemLabelsLower.size) return;
+
+        itemLabelsLower.forEach((lower) => {
+          const matchingLabels = labelsByLower.get(lower);
+          if (!matchingLabels?.length) return;
+          matchingLabels.forEach((label) => {
+            countMap.set(label, (countMap.get(label) || 0) + 1);
+          });
         });
-        countMap.set(label, count);
       });
 
       const kvs = this.toKeyValue(countMap);
@@ -398,15 +434,29 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   private matchesGlobalQuery(item: any) {
     const query = this.globalQuery.trim().toLowerCase();
     if (!query) return true;
-    return this.globalFilterFields.some((field) => {
+    return this.getItemGlobalSearchValuesLower(item).some((value) =>
+      value.includes(query),
+    );
+  }
+
+  private getItemGlobalSearchValuesLower(item: any): string[] {
+    if (!item || typeof item !== 'object') return [];
+    const cacheKey = item as object;
+    const cached = this.itemGlobalSearchValuesLowerCache.get(cacheKey);
+    if (cached) return cached;
+
+    const values: string[] = [];
+    this.globalFilterFields.forEach((field) => {
       const value = this.getItemFieldValue(item, field);
       if (Array.isArray(value)) {
-        return value.some((v) => String(v).toLowerCase().includes(query));
+        value.forEach((entry) => values.push(String(entry).toLowerCase()));
+      } else {
+        values.push(String(value || '').toLowerCase());
       }
-      return String(value || '')
-        .toLowerCase()
-        .includes(query);
     });
+
+    this.itemGlobalSearchValuesLowerCache.set(cacheKey, values);
+    return values;
   }
 
   private matchesQuickFilterField(item: any, field: string) {
@@ -425,14 +475,8 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     if (!selected.length) return true;
     const itemValues = this.getItemFacetLabelsLower(item, field);
     if (!itemValues.length) return false;
-    const selectedValues = selected.map((v) => v.toLowerCase());
-    return selectedValues.some((value) => itemValues.includes(value));
-  }
-
-  private itemMatchesFacetLabel(item: any, field: string, label: string) {
-    const itemValues = this.getItemFacetLabelsLower(item, field);
-    const target = label.toLowerCase();
-    return itemValues.includes(target);
+    const selectedValues = new Set(selected.map((v) => v.toLowerCase()));
+    return itemValues.some((value) => selectedValues.has(value));
   }
 
   private getItemFieldValue(item: any, field: string): any {
@@ -738,7 +782,10 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
 
   get filteredAuthorKVs() {
     const query = this.authorsQuery.trim().toLowerCase();
-    if (this.lastAuthorKVsRef === this.authorKVs && this.lastAuthorsQuery === query) {
+    if (
+      this.lastAuthorKVsRef === this.authorKVs &&
+      this.lastAuthorsQuery === query
+    ) {
       return this.filteredAuthorKVsCache;
     }
     this.lastAuthorKVsRef = this.authorKVs;
