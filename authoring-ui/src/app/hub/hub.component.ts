@@ -50,7 +50,7 @@ export class HubComponent implements OnInit, AfterViewInit {
   ];
 
   get quickFiltersExpanded() {
-    return this.route.snapshot.queryParams?.['qf'] == '1';
+    return true;
   }
 
   get isLoggedIn() {
@@ -350,12 +350,6 @@ export class HubComponent implements OnInit, AfterViewInit {
       queryParams: params,
       queryParamsHandling: 'merge',
       replaceUrl: false,
-    });
-  }
-
-  toggleQuickFiltersPanel() {
-    this.syncQueryParams({
-      qf: this.quickFiltersExpanded ? null : '1',
     });
   }
 

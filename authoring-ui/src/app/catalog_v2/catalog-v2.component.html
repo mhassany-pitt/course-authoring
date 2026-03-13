@@ -51,503 +51,636 @@
       <i class="fa fa-external-link"></i> to view the demo page.
     </p>
 
-    <div class="flex flex-col gap-4">
-      <div class="w-full flex flex-col gap-0">
-        <div
-          class="bg-gray-100 shadow-md relative border border-slate-200"
-          [class.rounded-t-lg]="quickFiltersExpanded"
-          [class.rounded-lg]="!quickFiltersExpanded"
-        >
-          <input
-            type="text"
-            name="name"
-            pInputText
-            placeholder="Search ..."
-            class="text-xl border-gray-200 w-full pr-12"
-            [(ngModel)]="globalQuery"
-            (keyup)="filter(table, $event, true)"
-            (blur)="filter(table, $event)"
-          />
+    <div class="flex gap-4">
+      <div class="w-1/3 flex flex-col gap-4 sticky top-20 self-start">
+        <div class="w-full flex flex-col gap-0">
           <div
-            class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center gap-2"
+            class="bg-gray-100 shadow-md relative border border-slate-200"
+            [class.rounded-t-lg]="quickFiltersExpanded"
+            [class.rounded-lg]="!quickFiltersExpanded"
           >
-            <p-button
-              type="button"
-              (click)="toggleQuickFiltersPanel()"
-              label="Quick Filters"
-              aria-label="Quick Filters"
-              icon="fa fa-filter"
-              iconPos="right"
-              [severity]="quickFiltersExpanded ? 'contrast' : 'secondary'"
-              [outlined]="!quickFiltersExpanded"
-              [attr.aria-pressed]="quickFiltersExpanded"
+            <input
+              type="text"
+              name="name"
+              pInputText
+              placeholder="Search ..."
+              class="text-xl border-gray-100 w-full pr-4"
+              [(ngModel)]="globalQuery"
+              (keyup)="filter(table, $event, true)"
+              (blur)="filter(table, $event)"
             />
           </div>
-        </div>
 
-        <div
-          *ngIf="selectedKVs['count'] > 0 || quickFiltersExpanded"
-          class="border-l border-r border-b border-t-0 border-solid border-gray-200 p-4 rounded-b-md shadow-md bg-white relative overflow-auto flex flex-col items-start gap-2"
-        >
           <div
-            *ngIf="activeQuickFilters.length"
-            class="w-full flex items-start gap-1 text-xs text-gray-500"
+            *ngIf="selectedKVs['count'] > 0 || quickFiltersExpanded"
+            class="border-l border-r border-b border-t-0 border-solid border-gray-100 p-4 rounded-b-md shadow-md bg-white relative overflow-y-auto flex flex-col items-start gap-2 max-h-[calc(100vh-18rem)]"
           >
-            <div class="grow">
-              <span class="uppercase font-bold">Active Filters:</span>
-              <ng-container
-                *ngFor="let filter of activeQuickFilters; let $index = index"
-              >
-                <span
-                  *ngIf="
-                    $index === 0 ||
-                    activeQuickFilters[$index - 1].field !== filter.field
-                  "
-                  class="text-gray-400"
-                >
-                  {{ quickFilterFieldLabel(filter.field) }}:
-                </span>
-                <a
-                  class="text-xs cursor-pointer hover:underline font-bold text-blue-700"
-                  (click)="
-                    toggleActiveQuickFilter(table, filter.field, filter.label)
-                  "
-                  aria-label="Toggle quick filter"
-                >
-                  {{
-                    $index < activeQuickFilters.length - 1
-                      ? activeQuickFilters[$index + 1].field !== filter.field
-                        ? filter.label + ";"
-                        : filter.label + ","
-                      : filter.label
-                  }}
-                </a>
-              </ng-container>
-            </div>
+            <ng-container *ngIf="quickFiltersExpanded">
+              <div class="w-full flex items-center gap-2">
+                <div class="text-gray-400 text-xs uppercase">
+                  Click to toggle
+                </div>
+                <span class="grow"></span>
+                <div class="min-w-fit -my-2">
+                  <p-button
+                    *ngIf="table && table.filteredValue"
+                    [label]="table.filteredValue.length + ' Matched'"
+                    icon="fa fa-times"
+                    iconPos="right"
+                    severity="danger"
+                    outlined="true"
+                    styleClass="px-2 py-1 text-xs items-center"
+                    (click)="clearQuickFilters(table)"
+                  >
+                  </p-button>
+                </div>
+              </div>
 
-            <div class="min-w-fit">
-              <p-button
-                *ngIf="table && table.filteredValue"
-                [label]="table.filteredValue.length + ' Matched'"
-                icon="fa fa-times"
-                iconPos="right"
-                severity="danger"
-                outlined="true"
-                styleClass="px-2 py-1 text-xs items-center"
-                (click)="clearQuickFilters(table)"
-              >
-              </p-button>
-            </div>
+              <div class="w-full flex flex-wrap gap-1">
+                <div class="flex items-center gap-2 w-full">
+                  <button
+                    type="button"
+                    class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                    (click)="toggleQuickFilterSection('types')"
+                    [attr.aria-expanded]="quickFilterSections.types"
+                  >
+                    Types:
+                    <i
+                      class="fa"
+                      [class.fa-angle-down]="quickFilterSections.types"
+                      [class.fa-angle-right]="!quickFilterSections.types"
+                    ></i>
+                  </button>
+                  <hr
+                    class="grow border-0 border-t border-gray-50 opacity-30"
+                  />
+                </div>
+                <div *ngIf="quickFilterSections.types" class="ml-2">
+                  <a
+                    *ngFor="let facet of typeKVs"
+                    class="text-xs cursor-pointer hover:underline"
+                    [class.font-bold]="
+                      isQuickFilterSelected('identity.type', facet.label)
+                    "
+                    [class.text-blue-700]="
+                      isQuickFilterSelected('identity.type', facet.label)
+                    "
+                    [class.text-gray-400]="
+                      !isQuickFilterSelected('identity.type', facet.label) &&
+                      !isQuickFilterAvailable('identity.type', facet.label)
+                    "
+                    (click)="toggleQuickFilter(table, 'identity.type', facet)"
+                  >
+                    {{ facet.label }} ({{ facet.value }}),
+                  </a>
+                  <span class="text-sm text-gray-400" *ngIf="!typeKVs.length">
+                    No types yet.
+                  </span>
+                </div>
+              </div>
+
+              <div class="w-full flex flex-wrap gap-1">
+                <div class="flex items-center gap-2 w-full">
+                  <button
+                    type="button"
+                    class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                    (click)="toggleQuickFilterSection('programmingLanguages')"
+                    [attr.aria-expanded]="
+                      quickFilterSections.programmingLanguages
+                    "
+                  >
+                    Programming Languages:
+                    <i
+                      class="fa"
+                      [class.fa-angle-down]="
+                        quickFilterSections.programmingLanguages
+                      "
+                      [class.fa-angle-right]="
+                        !quickFilterSections.programmingLanguages
+                      "
+                    ></i>
+                  </button>
+                  <hr
+                    class="grow border-0 border-t border-gray-50 opacity-30"
+                  />
+                </div>
+                <div
+                  *ngIf="quickFilterSections.programmingLanguages"
+                  class="ml-2"
+                >
+                  <a
+                    *ngFor="let facet of plKVs"
+                    class="text-xs cursor-pointer hover:underline"
+                    [class.font-bold]="
+                      isQuickFilterSelected(
+                        'languages.programming_languages',
+                        facet.label
+                      )
+                    "
+                    [class.text-blue-700]="
+                      isQuickFilterSelected(
+                        'languages.programming_languages',
+                        facet.label
+                      )
+                    "
+                    [class.text-gray-400]="
+                      !isQuickFilterSelected(
+                        'languages.programming_languages',
+                        facet.label
+                      ) &&
+                      !isQuickFilterAvailable(
+                        'languages.programming_languages',
+                        facet.label
+                      )
+                    "
+                    (click)="
+                      toggleQuickFilter(
+                        table,
+                        'languages.programming_languages',
+                        facet
+                      )
+                    "
+                  >
+                    {{ facet.label }} ({{ facet.value }}),
+                  </a>
+                  <span class="text-sm text-gray-400" *ngIf="!plKVs.length">
+                    No programming languages yet.
+                  </span>
+                </div>
+              </div>
+
+              <div class="w-full flex flex-wrap gap-1">
+                <div class="flex items-center gap-2 w-full">
+                  <button
+                    type="button"
+                    class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                    (click)="toggleQuickFilterSection('providers')"
+                    [attr.aria-expanded]="quickFilterSections.providers"
+                  >
+                    Providers:
+                    <i
+                      class="fa"
+                      [class.fa-angle-down]="quickFilterSections.providers"
+                      [class.fa-angle-right]="!quickFilterSections.providers"
+                    ></i>
+                  </button>
+                  <hr
+                    class="grow border-0 border-t border-gray-50 opacity-30"
+                  />
+                </div>
+                <div *ngIf="quickFilterSections.providers" class="ml-2">
+                  <a
+                    *ngFor="let facet of providersKVs"
+                    class="text-xs cursor-pointer hover:underline"
+                    [class.font-bold]="
+                      isQuickFilterSelected('attribution.provider', facet.label)
+                    "
+                    [class.text-blue-700]="
+                      isQuickFilterSelected('attribution.provider', facet.label)
+                    "
+                    [class.text-gray-400]="
+                      !isQuickFilterSelected(
+                        'attribution.provider',
+                        facet.label
+                      ) &&
+                      !isQuickFilterAvailable(
+                        'attribution.provider',
+                        facet.label
+                      )
+                    "
+                    (click)="
+                      toggleQuickFilter(table, 'attribution.provider', facet)
+                    "
+                  >
+                    {{ facet.label }} ({{ facet.value }}),
+                  </a>
+                  <span
+                    class="text-sm text-gray-400"
+                    *ngIf="!providersKVs.length"
+                  >
+                    No providers yet.
+                  </span>
+                </div>
+              </div>
+
+              <div class="w-full flex flex-wrap gap-1">
+                <div class="flex items-center gap-2 w-full">
+                  <button
+                    type="button"
+                    class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                    (click)="toggleQuickFilterSection('authors')"
+                    [attr.aria-expanded]="quickFilterSections.authors"
+                  >
+                    Authors:
+                    <i
+                      class="fa"
+                      [class.fa-angle-down]="quickFilterSections.authors"
+                      [class.fa-angle-right]="!quickFilterSections.authors"
+                    ></i>
+                  </button>
+                  <hr
+                    class="grow border-0 border-t border-gray-50 opacity-30"
+                  />
+                  <a
+                    *ngIf="hasMoreAuthors"
+                    class="text-xs cursor-pointer hover:underline"
+                    (click)="toggleAuthorsView()"
+                  >
+                    {{
+                      showAllAuthors
+                        ? "Show less"
+                        : "Show all (" + filteredAuthorKVs.length + ")"
+                    }}
+                  </a>
+                  <input
+                    type="text"
+                    pInputText
+                    placeholder="Filter authors ..."
+                    class="text-xs px-2 py-1 w-32"
+                    [ngModel]="authorsQuery"
+                    (ngModelChange)="onAuthorsQueryChange($event)"
+                  />
+                </div>
+                <div *ngIf="quickFilterSections.authors" class="ml-2">
+                  <a
+                    *ngFor="let facet of visibleAuthorKVs"
+                    class="text-xs cursor-pointer hover:underline"
+                    [class.font-bold]="
+                      isQuickFilterSelected('attribution.authors', facet.label)
+                    "
+                    [class.text-blue-700]="
+                      isQuickFilterSelected('attribution.authors', facet.label)
+                    "
+                    [class.text-gray-400]="
+                      !isQuickFilterSelected(
+                        'attribution.authors',
+                        facet.label
+                      ) &&
+                      !isQuickFilterAvailable(
+                        'attribution.authors',
+                        facet.label
+                      )
+                    "
+                    (click)="
+                      toggleQuickFilter(table, 'attribution.authors', facet)
+                    "
+                  >
+                    {{ facet.label }} ({{ facet.value }}),
+                  </a>
+                  <span
+                    class="text-sm text-gray-400"
+                    *ngIf="!filteredAuthorKVs.length"
+                  >
+                    No authors yet.
+                  </span>
+                </div>
+              </div>
+
+              <div class="w-full flex flex-wrap gap-1">
+                <div class="flex items-start gap-2 w-full pt-1">
+                  <button
+                    type="button"
+                    class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                    (click)="toggleQuickFilterSection('knowledgeComponents')"
+                    [attr.aria-expanded]="
+                      quickFilterSections.knowledgeComponents
+                    "
+                  >
+                    KCs ({{
+                      selectedCount("classification.knowledge_components")
+                    }}):
+                    <i
+                      class="fa"
+                      [class.fa-angle-down]="
+                        quickFilterSections.knowledgeComponents
+                      "
+                      [class.fa-angle-right]="
+                        !quickFilterSections.knowledgeComponents
+                      "
+                    ></i>
+                  </button>
+                  <hr
+                    class="grow border-0 border-t border-gray-50 opacity-30"
+                  />
+                  <a
+                    *ngIf="hasMoreKnowledgeComponents"
+                    class="text-xs cursor-pointer hover:underline"
+                    (click)="toggleKnowledgeComponentsView()"
+                  >
+                    {{
+                      showAllKnowledgeComponents
+                        ? "Show less"
+                        : "Show all (" + filteredConceptKVs.length + ")"
+                    }}
+                  </a>
+                  <input
+                    type="text"
+                    pInputText
+                    placeholder="Filter KCs ..."
+                    class="text-xs px-2 py-1 w-32"
+                    [ngModel]="knowledgeComponentsQuery"
+                    (ngModelChange)="onKnowledgeComponentsQueryChange($event)"
+                  />
+                </div>
+                <div class="flex items-center gap-2 ml-2">
+                  <span class="text-xs text-gray-400">Category:</span>
+                  <select
+                    class="text-xs p-1 rounded border-gray-300 w-full"
+                    [(ngModel)]="selectedKnowledgeComponentCategory"
+                    (ngModelChange)="onKnowledgeComponentCategoryChange($event)"
+                  >
+                    <option
+                      *ngFor="let category of knowledgeComponentCategories"
+                      [ngValue]="category"
+                    >
+                      {{ category }}
+                    </option>
+                  </select>
+                </div>
+                <div
+                  *ngIf="quickFilterSections.knowledgeComponents"
+                  class="ml-2"
+                >
+                  <a
+                    *ngFor="let facet of visibleConceptKVs"
+                    class="text-xs cursor-pointer hover:underline max-w-full whitespace-normal break-words"
+                    [class.font-bold]="
+                      isQuickFilterSelected(
+                        'classification.knowledge_components',
+                        facet.label
+                      )
+                    "
+                    [class.text-blue-700]="
+                      isQuickFilterSelected(
+                        'classification.knowledge_components',
+                        facet.label
+                      )
+                    "
+                    [class.text-gray-400]="
+                      !isQuickFilterSelected(
+                        'classification.knowledge_components',
+                        facet.label
+                      ) &&
+                      !isQuickFilterAvailable(
+                        'classification.knowledge_components',
+                        facet.label
+                      )
+                    "
+                    (click)="
+                      toggleQuickFilter(
+                        table,
+                        'classification.knowledge_components',
+                        facet
+                      )
+                    "
+                  >
+                    {{ facet.label }} ({{ facet.value }}),
+                  </a>
+                  <span
+                    class="text-sm text-gray-400"
+                    *ngIf="!filteredConceptKVs.length"
+                  >
+                    No knowledge components yet.
+                  </span>
+                </div>
+              </div>
+
+              <div class="w-full flex flex-wrap gap-1">
+                <div class="flex items-center gap-2 w-full">
+                  <button
+                    type="button"
+                    class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                    (click)="toggleQuickFilterSection('deliveryFormat')"
+                    [attr.aria-expanded]="quickFilterSections.deliveryFormat"
+                  >
+                    Delivery Format:
+                    <i
+                      class="fa"
+                      [class.fa-angle-down]="quickFilterSections.deliveryFormat"
+                      [class.fa-angle-right]="
+                        !quickFilterSections.deliveryFormat
+                      "
+                    ></i>
+                  </button>
+                  <hr
+                    class="grow border-0 border-t border-gray-50 opacity-30"
+                  />
+                </div>
+                <div *ngIf="quickFilterSections.deliveryFormat" class="ml-2">
+                  <a
+                    *ngFor="let facet of deliveryFormatKVs"
+                    class="text-xs cursor-pointer hover:underline"
+                    [class.font-bold]="
+                      isQuickFilterSelected('delivery', facet.label)
+                    "
+                    [class.text-blue-700]="
+                      isQuickFilterSelected('delivery', facet.label)
+                    "
+                    [class.text-gray-400]="
+                      !isQuickFilterSelected('delivery', facet.label) &&
+                      !isQuickFilterAvailable('delivery', facet.label)
+                    "
+                    (click)="toggleQuickFilter(table, 'delivery', facet)"
+                  >
+                    {{ facet.label }} ({{ facet.value }}),
+                  </a>
+                  <span
+                    class="text-sm text-gray-400"
+                    *ngIf="!deliveryFormatKVs.length"
+                  >
+                    No delivery formats yet.
+                  </span>
+                </div>
+              </div>
+
+              <div class="w-full flex flex-wrap gap-1">
+                <div class="flex items-center gap-2 w-full">
+                  <button
+                    type="button"
+                    class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                    (click)="toggleQuickFilterSection('licenses')"
+                    [attr.aria-expanded]="quickFilterSections.licenses"
+                  >
+                    Licenses:
+                    <i
+                      class="fa"
+                      [class.fa-angle-down]="quickFilterSections.licenses"
+                      [class.fa-angle-right]="!quickFilterSections.licenses"
+                    ></i>
+                  </button>
+                  <hr
+                    class="grow border-0 border-t border-gray-50 opacity-30"
+                  />
+                </div>
+                <div *ngIf="quickFilterSections.licenses" class="ml-2">
+                  <a
+                    *ngFor="let facet of licenseKVs"
+                    class="text-xs cursor-pointer hover:underline"
+                    [class.font-bold]="
+                      isQuickFilterSelected('rights.license', facet.label)
+                    "
+                    [class.text-blue-700]="
+                      isQuickFilterSelected('rights.license', facet.label)
+                    "
+                    [class.text-gray-400]="
+                      !isQuickFilterSelected('rights.license', facet.label) &&
+                      !isQuickFilterAvailable('rights.license', facet.label)
+                    "
+                    (click)="toggleQuickFilter(table, 'rights.license', facet)"
+                  >
+                    {{ facet.label }} ({{ facet.value }}),
+                  </a>
+                  <span
+                    class="text-sm text-gray-400"
+                    *ngIf="!licenseKVs.length"
+                  >
+                    No licenses yet.
+                  </span>
+                </div>
+              </div>
+
+              <div class="w-full flex flex-wrap gap-1">
+                <div class="flex items-center gap-2 w-full">
+                  <button
+                    type="button"
+                    class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                    (click)="toggleQuickFilterSection('tags')"
+                    [attr.aria-expanded]="quickFilterSections.tags"
+                  >
+                    Tags:
+                    <i
+                      class="fa"
+                      [class.fa-angle-down]="quickFilterSections.tags"
+                      [class.fa-angle-right]="!quickFilterSections.tags"
+                    ></i>
+                  </button>
+                  <hr
+                    class="grow border-0 border-t border-gray-50 opacity-30"
+                  />
+                </div>
+                <div *ngIf="quickFilterSections.tags" class="ml-2">
+                  <a
+                    *ngFor="let facet of tagKVs"
+                    class="text-xs cursor-pointer hover:underline"
+                    [class.font-bold]="
+                      isQuickFilterSelected('tags', facet.label)
+                    "
+                    [class.text-blue-700]="
+                      isQuickFilterSelected('tags', facet.label)
+                    "
+                    [class.text-gray-400]="
+                      !isQuickFilterSelected('tags', facet.label) &&
+                      !isQuickFilterAvailable('tags', facet.label)
+                    "
+                    (click)="toggleQuickFilter(table, 'tags', facet)"
+                  >
+                    {{ facet.label }} ({{ facet.value }}),
+                  </a>
+                  <span class="text-sm text-gray-400" *ngIf="!tagKVs.length">
+                    No tags yet.
+                  </span>
+                </div>
+              </div>
+            </ng-container>
           </div>
-
-          <ng-container *ngIf="quickFiltersExpanded">
-            <div class="text-gray-400 text-xs uppercase">Click to toggle</div>
-
-            <div class="w-full flex flex-wrap gap-1 pl-2">
-              <div class="flex items-center gap-2 w-full -ml-2">
-                <span class="text-sm font-bold text-gray-600"> Types: </span>
-                <hr class="grow" />
-              </div>
-              <a
-                *ngFor="let facet of typeKVs"
-                class="text-xs cursor-pointer hover:underline"
-                [class.font-bold]="
-                  isQuickFilterSelected('identity.type', facet.label)
-                "
-                [class.text-blue-700]="
-                  isQuickFilterSelected('identity.type', facet.label)
-                "
-                [class.text-gray-400]="
-                  !isQuickFilterSelected('identity.type', facet.label) &&
-                  !isQuickFilterAvailable('identity.type', facet.label)
-                "
-                (click)="toggleQuickFilter(table, 'identity.type', facet)"
-              >
-                {{ facet.label }} ({{ facet.value }}),
-              </a>
-              <span class="text-sm text-gray-400" *ngIf="!typeKVs.length">
-                No types yet.
-              </span>
-            </div>
-
-            <div class="w-full flex flex-wrap gap-1 pl-2">
-              <div class="flex items-center gap-2 w-full -ml-2">
-                <span class="text-sm font-bold text-gray-600"
-                  >Programming Languages:</span
-                >
-                <hr class="grow" />
-              </div>
-              <a
-                *ngFor="let facet of plKVs"
-                class="text-xs cursor-pointer hover:underline"
-                [class.font-bold]="
-                  isQuickFilterSelected(
-                    'languages.programming_languages',
-                    facet.label
-                  )
-                "
-                [class.text-blue-700]="
-                  isQuickFilterSelected(
-                    'languages.programming_languages',
-                    facet.label
-                  )
-                "
-                [class.text-gray-400]="
-                  !isQuickFilterSelected(
-                    'languages.programming_languages',
-                    facet.label
-                  ) &&
-                  !isQuickFilterAvailable(
-                    'languages.programming_languages',
-                    facet.label
-                  )
-                "
-                (click)="
-                  toggleQuickFilter(
-                    table,
-                    'languages.programming_languages',
-                    facet
-                  )
-                "
-              >
-                {{ facet.label }} ({{ facet.value }}),
-              </a>
-              <span class="text-sm text-gray-400" *ngIf="!plKVs.length">
-                No programming languages yet.
-              </span>
-            </div>
-
-            <div class="w-full flex flex-wrap gap-1 pl-2">
-              <div class="flex items-center gap-2 w-full -ml-2">
-                <span class="text-sm font-bold text-gray-600"> Authors: </span>
-                <hr class="grow" />
-                <a
-                  *ngIf="hasMoreAuthors"
-                  class="text-xs cursor-pointer hover:underline"
-                  (click)="toggleAuthorsView()"
-                >
-                  {{
-                    showAllAuthors
-                      ? "Show less"
-                      : "Show all (" + filteredAuthorKVs.length + ")"
-                  }}
-                </a>
-                <input
-                  type="text"
-                  pInputText
-                  placeholder="Filter authors ..."
-                  class="text-xs px-2 py-1"
-                  [ngModel]="authorsQuery"
-                  (ngModelChange)="onAuthorsQueryChange($event)"
-                />
-              </div>
-              <a
-                *ngFor="let facet of visibleAuthorKVs"
-                class="text-xs cursor-pointer hover:underline"
-                [class.font-bold]="
-                  isQuickFilterSelected('attribution.authors', facet.label)
-                "
-                [class.text-blue-700]="
-                  isQuickFilterSelected('attribution.authors', facet.label)
-                "
-                [class.text-gray-400]="
-                  !isQuickFilterSelected('attribution.authors', facet.label) &&
-                  !isQuickFilterAvailable('attribution.authors', facet.label)
-                "
-                (click)="toggleQuickFilter(table, 'attribution.authors', facet)"
-              >
-                {{ facet.label }} ({{ facet.value }}),
-              </a>
-              <span
-                class="text-sm text-gray-400"
-                *ngIf="!filteredAuthorKVs.length"
-              >
-                No authors yet.
-              </span>
-            </div>
-
-            <div class="w-full flex flex-wrap gap-1 pl-2">
-              <div class="flex items-center gap-2 w-full -ml-2">
-                <span class="text-sm font-bold text-gray-600">
-                  Providers:
-                </span>
-                <hr class="grow" />
-              </div>
-              <a
-                *ngFor="let facet of providersKVs"
-                class="text-xs cursor-pointer hover:underline"
-                [class.font-bold]="
-                  isQuickFilterSelected('attribution.provider', facet.label)
-                "
-                [class.text-blue-700]="
-                  isQuickFilterSelected('attribution.provider', facet.label)
-                "
-                [class.text-gray-400]="
-                  !isQuickFilterSelected('attribution.provider', facet.label) &&
-                  !isQuickFilterAvailable('attribution.provider', facet.label)
-                "
-                (click)="
-                  toggleQuickFilter(table, 'attribution.provider', facet)
-                "
-              >
-                {{ facet.label }} ({{ facet.value }}),
-              </a>
-              <span class="text-sm text-gray-400" *ngIf="!providersKVs.length">
-                No providers yet.
-              </span>
-            </div>
-
-            <div class="w-full flex flex-wrap gap-1 pl-2">
-              <div class="flex items-center gap-2 w-full -ml-2">
-                <span class="text-sm font-bold text-gray-600"
-                  >Knowledge Components ({{
-                    selectedCount("classification.knowledge_components")
-                  }}):</span
-                >
-                <hr class="grow" />
-                <a
-                  *ngIf="hasMoreKnowledgeComponents"
-                  class="text-xs cursor-pointer hover:underline"
-                  (click)="toggleKnowledgeComponentsView()"
-                >
-                  {{
-                    showAllKnowledgeComponents
-                      ? "Show less"
-                      : "Show all (" + filteredConceptKVs.length + ")"
-                  }}
-                </a>
-                <input
-                  type="text"
-                  pInputText
-                  placeholder="Filter KCs ..."
-                  class="text-xs px-2 py-1"
-                  [ngModel]="knowledgeComponentsQuery"
-                  (ngModelChange)="onKnowledgeComponentsQueryChange($event)"
-                />
-              </div>
-              <a
-                *ngFor="let facet of visibleConceptKVs"
-                class="text-xs cursor-pointer hover:underline"
-                [class.font-bold]="
-                  isQuickFilterSelected(
-                    'classification.knowledge_components',
-                    facet.label
-                  )
-                "
-                [class.text-blue-700]="
-                  isQuickFilterSelected(
-                    'classification.knowledge_components',
-                    facet.label
-                  )
-                "
-                [class.text-gray-400]="
-                  !isQuickFilterSelected(
-                    'classification.knowledge_components',
-                    facet.label
-                  ) &&
-                  !isQuickFilterAvailable(
-                    'classification.knowledge_components',
-                    facet.label
-                  )
-                "
-                (click)="
-                  toggleQuickFilter(
-                    table,
-                    'classification.knowledge_components',
-                    facet
-                  )
-                "
-              >
-                {{ facet.label }} ({{ facet.value }}),
-              </a>
-              <span
-                class="text-sm text-gray-400"
-                *ngIf="!filteredConceptKVs.length"
-              >
-                No knowledge components yet.
-              </span>
-            </div>
-
-            <div class="w-full flex flex-wrap gap-1 pl-2">
-              <div class="flex items-center gap-2 w-full -ml-2">
-                <span class="text-sm font-bold text-gray-600"
-                  >Delivery Format:</span
-                >
-                <hr class="grow" />
-              </div>
-              <a
-                *ngFor="let facet of deliveryFormatKVs"
-                class="text-xs cursor-pointer hover:underline"
-                [class.font-bold]="
-                  isQuickFilterSelected('delivery', facet.label)
-                "
-                [class.text-blue-700]="
-                  isQuickFilterSelected('delivery', facet.label)
-                "
-                [class.text-gray-400]="
-                  !isQuickFilterSelected('delivery', facet.label) &&
-                  !isQuickFilterAvailable('delivery', facet.label)
-                "
-                (click)="toggleQuickFilter(table, 'delivery', facet)"
-              >
-                {{ facet.label }} ({{ facet.value }}),
-              </a>
-              <span
-                class="text-sm text-gray-400"
-                *ngIf="!deliveryFormatKVs.length"
-              >
-                No delivery formats yet.
-              </span>
-            </div>
-
-            <div class="w-full flex flex-wrap gap-1 pl-2">
-              <div class="flex items-center gap-2 w-full -ml-2">
-                <span class="text-sm font-bold text-gray-600"> Licenses: </span>
-                <hr class="grow" />
-              </div>
-              <a
-                *ngFor="let facet of licenseKVs"
-                class="text-xs cursor-pointer hover:underline"
-                [class.font-bold]="
-                  isQuickFilterSelected('rights.license', facet.label)
-                "
-                [class.text-blue-700]="
-                  isQuickFilterSelected('rights.license', facet.label)
-                "
-                [class.text-gray-400]="
-                  !isQuickFilterSelected('rights.license', facet.label) &&
-                  !isQuickFilterAvailable('rights.license', facet.label)
-                "
-                (click)="toggleQuickFilter(table, 'rights.license', facet)"
-              >
-                {{ facet.label }} ({{ facet.value }}),
-              </a>
-              <span class="text-sm text-gray-400" *ngIf="!licenseKVs.length">
-                No licenses yet.
-              </span>
-            </div>
-
-            <div class="w-full flex flex-wrap gap-1 pl-2">
-              <div class="flex items-center gap-2 w-full -ml-2">
-                <span class="text-sm font-bold text-gray-600"> Tags: </span>
-                <hr class="grow" />
-              </div>
-              <a
-                *ngFor="let facet of tagKVs"
-                class="text-xs cursor-pointer hover:underline"
-                [class.font-bold]="isQuickFilterSelected('tags', facet.label)"
-                [class.text-blue-700]="
-                  isQuickFilterSelected('tags', facet.label)
-                "
-                [class.text-gray-400]="
-                  !isQuickFilterSelected('tags', facet.label) &&
-                  !isQuickFilterAvailable('tags', facet.label)
-                "
-                (click)="toggleQuickFilter(table, 'tags', facet)"
-              >
-                {{ facet.label }} ({{ facet.value }}),
-              </a>
-              <span class="text-sm text-gray-400" *ngIf="!tagKVs.length">
-                No tags yet.
-              </span>
-            </div>
-          </ng-container>
         </div>
       </div>
 
-      <div class="border border-solid border-gray-200 shadow-md">
-        <p-table
-          #table
-          [value]="items"
-          [loading]="loading"
-          [showLoader]="false"
-          [paginator]="true"
-          [rows]="50"
-          [rowsPerPageOptions]="[10, 25, 100]"
-          [globalFilterFields]="[
-            'id',
-            'identity.id',
-            'identity.title',
-            'content.prompt',
-          ]"
-          (onFilter)="onTableFilter(table.filteredValue || items)"
-        >
-          <ng-template pTemplate="loadingbody">
-            <tr>
-              <td>
-                <div
-                  class="w-full p-8 flex items-center justify-center gap-3"
-                  role="status"
-                  aria-live="polite"
-                >
-                  <i class="pi pi-spin pi-spinner text-xl"></i>
-                  <span class="text-base font-semibold"
-                    >Loading catalog data...</span
+      <div class="w-2/3">
+        <div class="border border-solid border-gray-100 shadow-md">
+          <p-table
+            #table
+            [value]="items"
+            [loading]="loading"
+            [showLoader]="false"
+            [paginator]="true"
+            [rows]="50"
+            [rowsPerPageOptions]="[25, 50, 100]"
+            [globalFilterFields]="[
+              'id',
+              'identity.id',
+              'identity.title',
+              'content.prompt',
+            ]"
+            (onFilter)="onTableFilter(table.filteredValue || items)"
+          >
+            <ng-template pTemplate="loadingbody">
+              <tr>
+                <td>
+                  <div
+                    class="w-full p-8 flex items-center justify-center gap-3"
+                    role="status"
+                    aria-live="polite"
                   >
-                </div>
-              </td>
-            </tr>
-          </ng-template>
-          <ng-template pTemplate="body" let-item let-rowIndex="rowIndex">
-            <tr>
-              <td>
-                <div class="flex flex-col gap-1">
-                  <span class="text-xs uppercase text-gray-400">
-                    {{ item.identity?.type }} |
-                    {{ item.attribution._authors || "Unknown Author" }} |
-                    {{ item.listed_at | date: "medium" }}
-                  </span>
-                  <div class="flex items-center gap-2">
-                    <a
-                      [routerLink]="['/catalog-v2', item.id]"
-                      class="font-bold cursor-pointer text-blue-700"
+                    <i class="pi pi-spin pi-spinner text-xl"></i>
+                    <span class="text-base font-semibold"
+                      >Loading catalog data...</span
                     >
-                      {{ item.identity?.title || "Untitled" }}
-                    </a>
-                    <span
-                      class="text-xs rounded-md px-1"
-                      [class.bg-slate-200]="item.status == 'private'"
-                      [class.bg-green-200]="item.status == 'public'"
-                      [class.bg-red-200]="item.status == 'deprecated'"
-                      [class.bg-yellow-200]="
-                        item.status == 'broken:pending-fix'
-                      "
-                    >
-                      {{ item.status }}
-                    </span>
-                    <a
-                      *ngIf="item.links?.demo_url"
-                      [href]="item.links.demo_url"
-                      target="_blank"
-                      class="text-gray-400"
-                      title="View Demo"
-                    >
-                      <i class="fa fa-external-link"></i>
-                    </a>
                   </div>
-                  <span class="ml-2 text-xs">
-                    ID: {{ item.identity?.id }}
-                  </span>
-                  <span *ngIf="item.content?.prompt" class="ml-2 text-xs">
-                    Prompt: {{ item.content.prompt }}
-                  </span>
-                  <span *ngIf="item.tags?.length" class="ml-2 text-xs">
-                    Tags: {{ item.tags.join(", ") }}
-                  </span>
-                </div>
-              </td>
-            </tr>
-          </ng-template>
-          <ng-template pTemplate="emptymessage">
-            <tr>
-              <td>
-                <div class="text-xs text-center text-gray-400 w-full">
-                  no record matched, revise your filter keyword
-                </div>
-              </td>
-            </tr>
-          </ng-template>
-        </p-table>
+                </td>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-item let-rowIndex="rowIndex">
+              <tr>
+                <td>
+                  <div class="flex flex-col gap-1">
+                    <span class="text-xs uppercase text-gray-400">
+                      {{ item.identity?.type }} |
+                      {{ item.attribution._authors || "Unknown Author" }} |
+                      {{ item.listed_at | date: "medium" }}
+                    </span>
+                    <div class="flex items-center gap-2">
+                      <a
+                        [routerLink]="['/catalog-v2', item.id]"
+                        class="font-bold cursor-pointer text-blue-700"
+                      >
+                        {{ item.identity?.title || "Untitled" }}
+                      </a>
+                      <span
+                        class="text-xs rounded-md px-1"
+                        [class.bg-slate-200]="item.status == 'private'"
+                        [class.bg-green-200]="item.status == 'public'"
+                        [class.bg-red-200]="item.status == 'deprecated'"
+                        [class.bg-yellow-200]="
+                          item.status == 'broken:pending-fix'
+                        "
+                      >
+                        {{ item.status }}
+                      </span>
+                      <a
+                        *ngIf="item.links?.demo_url"
+                        [href]="item.links.demo_url"
+                        target="_blank"
+                        class="text-gray-400"
+                        title="View Demo"
+                      >
+                        <i class="fa fa-external-link"></i>
+                      </a>
+                    </div>
+                    <span class="ml-2 text-xs">
+                      ID: {{ item.identity?.id }}
+                    </span>
+                    <span *ngIf="item.content?.prompt" class="ml-2 text-xs">
+                      Prompt: {{ item.content.prompt }}
+                    </span>
+                    <span *ngIf="item.tags?.length" class="ml-2 text-xs">
+                      Tags: {{ item.tags.join(", ") }}
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="emptymessage">
+              <tr>
+                <td>
+                  <div class="text-xs text-center text-gray-400 w-full">
+                    no record matched, revise your filter keyword
+                  </div>
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
       </div>
     </div>
   </div>

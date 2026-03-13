@@ -15,6 +15,15 @@ import { AppService } from '../app.service';
 import { getNavLinks } from '../utils';
 
 type FilterKV = { label: string; value: number };
+type QuickFilterSectionKey =
+  | 'types'
+  | 'programmingLanguages'
+  | 'authors'
+  | 'providers'
+  | 'knowledgeComponents'
+  | 'deliveryFormat'
+  | 'licenses'
+  | 'tags';
 
 @Component({
   selector: 'app-catalog-v2',
@@ -38,6 +47,9 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   licenseKVs: FilterKV[] = [];
   deliveryFormatKVs: FilterKV[] = [];
   conceptKVs: FilterKV[] = [];
+  conceptKVsByCategory: Record<string, FilterKV[]> = {};
+  knowledgeComponentCategories: string[] = ['All'];
+  selectedKnowledgeComponentCategory = 'All';
   authorsQuery = '';
   showAllAuthors = false;
   knowledgeComponentsQuery = '';
@@ -61,6 +73,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   private filteredAuthorKVsCache: FilterKV[] = [];
   private lastConceptKVsRef: FilterKV[] | null = null;
   private lastKnowledgeComponentsQuery = '';
+  private lastKnowledgeComponentCategory = 'All';
   private filteredConceptKVsCache: FilterKV[] = [];
   private readonly globalFilterFields = [
     'id',
@@ -91,8 +104,23 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     'tags',
   ];
 
+  quickFilterSections: Record<QuickFilterSectionKey, boolean> = {
+    types: true,
+    programmingLanguages: true,
+    authors: false,
+    providers: true,
+    knowledgeComponents: false,
+    deliveryFormat: false,
+    licenses: false,
+    tags: false,
+  };
+
+  toggleQuickFilterSection(key: QuickFilterSectionKey) {
+    this.quickFilterSections[key] = !this.quickFilterSections[key];
+  }
+
   get quickFiltersExpanded() {
-    return this.route.snapshot.queryParams?.['qf'] == '1';
+    return true;
   }
 
   constructor(
@@ -276,6 +304,8 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     const plCounts = new Map<string, number>();
     const deliveryFormatCounts = new Map<string, number>();
     const conceptCounts = new Map<string, number>();
+    const conceptCountsByCategory = new Map<string, Map<string, number>>();
+    const categorySet = new Set<string>();
     const providerCounts = new Map<string, number>();
     const licenseCounts = new Map<string, number>();
 
@@ -335,6 +365,34 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         conceptCounts.set(label, (conceptCounts.get(label) || 0) + 1);
       });
 
+      const categoryConceptSets = new Map<string, Set<string>>();
+      Object.entries(knowledgeComponents as Record<string, any>).forEach(
+        ([categoryRaw, entry]) => {
+          const category = String(categoryRaw || '').trim();
+          if (!category) return;
+          categorySet.add(category);
+          let current = categoryConceptSets.get(category);
+          if (!current) {
+            current = new Set<string>();
+            categoryConceptSets.set(category, current);
+          }
+          (entry?.concepts || []).forEach((concept: any) => {
+            const label = String(concept || '').trim();
+            if (label) current!.add(label);
+          });
+        },
+      );
+      categoryConceptSets.forEach((labels, category) => {
+        let counts = conceptCountsByCategory.get(category);
+        if (!counts) {
+          counts = new Map<string, number>();
+          conceptCountsByCategory.set(category, counts);
+        }
+        labels.forEach((label) => {
+          counts!.set(label, (counts!.get(label) || 0) + 1);
+        });
+      });
+
       const provider = (item.attribution?.provider || '').trim();
       if (provider)
         providerCounts.set(provider, (providerCounts.get(provider) || 0) + 1);
@@ -350,6 +408,18 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     this.plKVs = this.toKeyValue(plCounts);
     this.deliveryFormatKVs = this.toKeyValue(deliveryFormatCounts);
     this.conceptKVs = this.toKeyValue(conceptCounts);
+    const sortedCategories = Array.from(categorySet).sort((a, b) =>
+      a.localeCompare(b),
+    );
+    this.knowledgeComponentCategories = ['All', ...sortedCategories];
+    this.conceptKVsByCategory = {};
+    sortedCategories.forEach((category) => {
+      const counts = conceptCountsByCategory.get(category) || new Map();
+      this.conceptKVsByCategory[category] = this.toKeyValue(counts);
+    });
+    if (!this.knowledgeComponentCategories.includes(this.selectedKnowledgeComponentCategory)) {
+      this.selectedKnowledgeComponentCategory = 'All';
+    }
     this.providersKVs = this.toKeyValue(providerCounts);
     this.licenseKVs = this.toKeyValue(licenseCounts);
     this.allFacetLabels = {
@@ -665,12 +735,6 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     });
   }
 
-  toggleQuickFiltersPanel() {
-    this.syncQueryParams({
-      ['qf']: this.quickFiltersExpanded ? null : '1',
-    });
-  }
-
   private getFacetForField(field: string) {
     switch (field) {
       case 'identity.type':
@@ -767,17 +831,31 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     this.showAllKnowledgeComponents = false;
   }
 
+  onKnowledgeComponentCategoryChange(value: string) {
+    this.selectedKnowledgeComponentCategory = value || 'All';
+    this.showAllKnowledgeComponents = false;
+    this.lastConceptKVsRef = null;
+  }
+
   onAuthorsQueryChange(value: string) {
     this.authorsQuery = value || '';
     this.showAllAuthors = false;
   }
 
   toggleAuthorsView() {
-    this.showAllAuthors = !this.showAllAuthors;
+    const next = !this.showAllAuthors;
+    this.showAllAuthors = next;
+    if (next) {
+      this.quickFilterSections.authors = true;
+    }
   }
 
   toggleKnowledgeComponentsView() {
-    this.showAllKnowledgeComponents = !this.showAllKnowledgeComponents;
+    const next = !this.showAllKnowledgeComponents;
+    this.showAllKnowledgeComponents = next;
+    if (next) {
+      this.quickFilterSections.knowledgeComponents = true;
+    }
   }
 
   get filteredAuthorKVs() {
@@ -807,18 +885,30 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
 
   get filteredConceptKVs() {
     const query = this.knowledgeComponentsQuery.trim().toLowerCase();
+    const baseKVs = this.getConceptKVsForSelectedCategory();
     if (
-      this.lastConceptKVsRef === this.conceptKVs &&
-      this.lastKnowledgeComponentsQuery === query
+      this.lastConceptKVsRef === baseKVs &&
+      this.lastKnowledgeComponentsQuery === query &&
+      this.lastKnowledgeComponentCategory === this.selectedKnowledgeComponentCategory
     ) {
       return this.filteredConceptKVsCache;
     }
-    this.lastConceptKVsRef = this.conceptKVs;
+    this.lastConceptKVsRef = baseKVs;
     this.lastKnowledgeComponentsQuery = query;
+    this.lastKnowledgeComponentCategory = this.selectedKnowledgeComponentCategory;
     this.filteredConceptKVsCache = !query
-      ? this.conceptKVs
-      : this.conceptKVs.filter((kv) => kv.label.toLowerCase().includes(query));
+      ? baseKVs
+      : baseKVs.filter((kv) => kv.label.toLowerCase().includes(query));
     return this.filteredConceptKVsCache;
+  }
+
+  private getConceptKVsForSelectedCategory() {
+    if (this.selectedKnowledgeComponentCategory === 'All') {
+      return this.conceptKVs;
+    }
+    return (
+      this.conceptKVsByCategory[this.selectedKnowledgeComponentCategory] || []
+    );
   }
 
   get visibleConceptKVs() {
