@@ -1,0 +1,67 @@
+{
+  "id": "699249db7e3947753a76643a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:03.615Z",
+  "tags": [],
+  "identity": {
+    "id": "c_pokazivaci_dereferenciranje_int__693552f9e28428298e55e310-69355005e28428298e55e05e-0",
+    "title": "c_pokazivaci_dereferenciranje_int",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Dereferenciranje_pokazivaca__693552f9e28428298e55e310?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji deklari\u0161e cjelobrojnu varijablu i dodjeljuje njenu adresu odgovaraju\u0107em pokaziva\u010du p. Zatim ispisati adresu varijable a i vrijednosti pohranjene u a, p i na adresi na koju pokazuje p.",
+    "source_code": "#include <stdio.h>\r\n\r\nint main() {\r\n    int a = 10;\r\n    int *p = &a;\r\n\r\n    printf(\"Adresa varijable a: %p\\n\", &a);\r\n    printf(\"Vrijednost varijable a: %d\\n\", a);\r\n    printf(\"Vrijednost pohranjena u p (adresa na koju p pokazuje): %p\\n\", p);\r\n    printf(\"Vrijednost pohranjena u adresi na koju p pokazuje: %d\\n\", *p);\r\n\r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Dereferenciranje_pokazivaca__693552f9e28428298e55e310?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:03.616Z",
+  "updated_at": "2026-03-21T20:48:27.650Z",
+  "paws_id": 4577
+}

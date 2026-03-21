@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-05-12T15:19:48.000Z",
-  "updated_at": "2026-01-31T16:41:22.179Z",
+  "updated_at": "2026-03-21T20:49:35.821Z",
   "tags": [],
   "identity": {
     "id": "ps_python_palindrome4_es",
     "title": "Construir una funci\u00f3n que determine si una cadena dada como par\u00e1metro es un pal\u00edndromo",
-    "type": "Question"
+    "type": "ParsonsProblem"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_palindrome4_es&grp=demo&usr=demo&sid=-1&cid=-1"
+    "demo_url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_palindrome4_es&grp=demo&usr=demo&sid=-1&cid=-1"
   },
   "attribution": {
     "created_at": "2025-05-12T15:19:48.000Z",
@@ -92,8 +92,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_palindrome4_es"
+      "format": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_palindrome4_es"
     }
   ],
   "rights": {
@@ -102,5 +102,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.946Z"
+  "created_at": "2025-12-31T06:03:59.946Z",
+  "paws_id": 3943
 }

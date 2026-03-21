@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-05-26T23:55:35.000Z",
-  "updated_at": "2026-01-31T16:41:31.525Z",
+  "updated_at": "2026-03-21T20:49:21.644Z",
   "tags": [],
   "identity": {
     "id": "py_num_above_average_es",
     "title": "Contar el numero de valores que estan por encima del promedio (ES)",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/305/embed?act=PCRS&sub=py_num_above_average_es"
@@ -118,7 +118,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/305/embed?act=PCRS&sub=py_num_above_average_es"
+    },
+    {
+      "format": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/305/embed?act=PCRS&sub=py_num_above_average_es"
     }
   ],
@@ -130,25 +134,26 @@
   "uses": [
     {
       "context_id": "cid=457",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
       "context_name": "Python: PythonES | Programacion en Python en Espanol > Listas",
       "used_at": "2025-03-30T22:04:51.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=461",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
       "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Listas",
       "used_at": "2025-05-25T23:03:06.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=463",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
       "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Listas",
       "used_at": "2025-06-17T01:16:04.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:03:59.939Z"
+  "created_at": "2025-12-31T06:03:59.939Z",
+  "paws_id": 4001
 }

@@ -1,0 +1,80 @@
+{
+  "id": "69923554fbbb65899e0a1e95",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T00:00:00.000Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-python-FunctionsWithDecisions-6",
+    "title": "codecheck-python-FunctionsWithDecisions-6",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-python-FunctionsWithDecisions-6"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00.000Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Given four numbers a, b, c, d, return true if exactly two of them are the same. ",
+    "source_code": "\r\n# Given four numbers a, b, c, and d, return true if exactly two of them are the same. \r\n# If there are two sets of identical numbers (e.g. 1, 2, 1, 2), return True.\r\n\r\ndef exactlyTwoTheSame(a, b, c, d):\r\n   # Your code here...\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Branches",
+          "Branches with Functions"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-python-FunctionsWithDecisions-6"
+    },
+    {
+      "format": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-python-FunctionsWithDecisions-6"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T21:06:28.322Z",
+  "updated_at": "2026-03-21T20:48:59.696Z",
+  "paws_id": 2925
+}

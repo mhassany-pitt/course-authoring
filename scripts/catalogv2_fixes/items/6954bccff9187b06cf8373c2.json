@@ -3,14 +3,14 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:46.000Z",
-  "updated_at": "2026-01-17T12:56:31.261Z",
+  "updated_at": "2026-03-21T20:47:40.157Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "ae_demo",
     "title": "ae_demo",
-    "type": "Animated Example"
+    "type": "CodeVisualization"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-java/ae?example-id=ae_demo&grp=demo&usr=demo&sid=-1&cid=-1"
@@ -54,8 +54,12 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "PITT",
       "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-java/ae?example-id=ae_demo"
+    },
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/jsvee/jsvee-java/ae_demo"
     }
   ],
   "rights": {
@@ -64,5 +68,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.123Z"
+  "created_at": "2025-12-31T06:04:00.123Z",
+  "paws_id": 1725
 }

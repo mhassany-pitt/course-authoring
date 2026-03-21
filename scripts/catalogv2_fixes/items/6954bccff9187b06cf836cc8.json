@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T22:25:57.000Z",
-  "updated_at": "2026-01-17T05:26:45.903Z",
+  "updated_at": "2026-03-21T20:48:43.785Z",
   "tags": [],
   "identity": {
     "id": "The Class for Representing a Loan (Case 2)__68bdb308f6cc3d7a9cc096bf-68bdb308f6cc3d7a9cc096bd-1",
     "title": "The Class for Representing a Loan (Case 2)",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096bf?_t=1757557557305&index=1"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096bf?_t=1757557557305&index=1"
   },
   "attribution": {
     "created_at": "2025-09-10T22:25:57.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096bf?_t=1757557557305&index=1"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096bf?_t=1757557557305&index=1"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096bf?_t=1757557557305&index=1"
     }
   ],
   "rights": {
@@ -64,18 +68,19 @@
   "uses": [
     {
       "context_id": "cid=468",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
       "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Objects and Classes",
       "used_at": "2025-09-03T18:00:26.000Z",
       "used_by": "Mohammad Hassany - "
     },
     {
       "context_id": "cid=484",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
       "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > Objects and Classes",
       "used_at": "2025-09-27T20:26:25.000Z",
       "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:03:59.916Z"
+  "created_at": "2025-12-31T06:03:59.916Z",
+  "paws_id": 4377
 }

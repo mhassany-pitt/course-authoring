@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2015-08-22T12:52:20.000Z",
-  "updated_at": "2026-01-17T12:57:26.903Z",
+  "updated_at": "2026-03-21T20:50:13.977Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "pyt4.1",
     "title": "While Loop Statement",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt4.1&svc=progvis&sid=demo"
+    "demo_url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt4.1&svc=progvis&sid=demo"
   },
   "attribution": {
     "created_at": "2015-08-22T12:52:20.000Z",
@@ -54,8 +54,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt4.1&svc=progvis"
+      "format": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt4.1&svc=progvis"
+    },
+    {
+      "format": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt4.1&svc=progvis"
     }
   ],
   "rights": {
@@ -66,25 +70,26 @@
   "uses": [
     {
       "context_id": "cid=25",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=25",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=25",
       "context_name": "Python: Python 101 | Python 101 (Beginner) > Loops",
       "used_at": "2015-08-03T14:03:59.000Z",
       "used_by": "Hardik Vasa - University of Pittsburgh"
     },
     {
       "context_id": "cid=454",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
       "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > While Loops",
       "used_at": "2025-03-27T12:46:05.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=460",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
       "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Worked Examples > While Loops",
       "used_at": "2025-04-09T10:48:28.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.156Z"
+  "created_at": "2025-12-31T06:04:00.156Z",
+  "paws_id": 994
 }

@@ -1,0 +1,67 @@
+{
+  "id": "699249da7e3947753a766414",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:02.590Z",
+  "tags": [],
+  "identity": {
+    "id": "c_brojanje_rijeci_razmaci__693c50a7e6aa8ff1d74e2d13-693c4df3e6aa8ff1d74e2bb2-0",
+    "title": "c_brojanje_rijeci_razmaci",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Detektovanje_granica_unutar_stringa__693c50a7e6aa8ff1d74e2d13?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program u kojem se omogu\u0107ava unos nekog stringa s najvi\u0161e 1000 karaktera, a zatim se ispisuje broj rije\u010di koje se u njemu nalaze. Rije\u010d je definisana kao niz karaktera ome\u0111en razmacima, oznakom po\u010detka ili kraja stringa.",
+    "source_code": "#include <stdio.h>\n#define MAX_VELICINA 1001\n\nvoid unesi(char niz[], int velicina) {\n\tchar znak = getchar();\n\tif (znak == '\\n') znak = getchar();\n\tint i = 0;\n\twhile (i < velicina-1 && znak != '\\n') {\n\t\tniz[i] = znak;\n\t\ti++;\n\t\tznak = getchar();\n\t}\n\tniz[i] = '\\0';\n}\n\nint main()\n{\n    char tekst[MAX_VELICINA];\n    int i = 0, brojRijeci = 0;\n\n    printf(\"Unesite tekst (do 1000 karaktera): \");\n    unesi(tekst, MAX_VELICINA);\n\n    while (tekst[i] != '\\0' && tekst[i] == ' ') {\n        i++;\n    }\n\n    for (; tekst[i] != '\\0'; i++) {\n        if (tekst[i] != ' ' && (tekst[i+1] == '\\0' || tekst[i+1] == ' ')) {\n            brojRijeci++;\n        }\n    }\n\n    printf(\"Broj rijeci: %d\\n\", brojRijeci);\n\n    return 0;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Detektovanje_granica_unutar_stringa__693c50a7e6aa8ff1d74e2d13?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:02.591Z",
+  "updated_at": "2026-03-21T20:48:18.712Z",
+  "paws_id": 4572
+}

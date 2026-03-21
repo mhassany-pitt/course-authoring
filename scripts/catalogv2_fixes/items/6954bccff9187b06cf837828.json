@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "broken:pending-fix",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-21T16:06:03.174Z",
+  "updated_at": "2026-03-21T20:48:05.607Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -11,10 +11,10 @@
   "identity": {
     "id": "capitaltable.c",
     "title": "IS12:: capitaltable.c (4.9)",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=capitaltable.c&svc=progvis"
+    "demo_url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=capitaltable.c&svc=progvis"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -80,8 +80,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=capitaltable.c&svc=progvis"
+      "format": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=capitaltable.c&svc=progvis"
+    },
+    {
+      "format": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=capitaltable.c&svc=progvis"
     }
   ],
   "rights": {
@@ -90,5 +94,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.211Z"
+  "created_at": "2025-12-31T06:04:00.211Z",
+  "paws_id": 798
 }

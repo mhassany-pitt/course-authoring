@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-16T17:24:08.000Z",
-  "updated_at": "2026-01-17T05:27:40.870Z",
+  "updated_at": "2026-03-21T20:48:01.395Z",
   "tags": [],
   "identity": {
     "id": "linkedlist.remove_all_but_two",
     "title": "JLinkedListUtil",
-    "type": "PCEX Set"
+    "type": "CodeConstruction"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=linkedlist.remove_all_but_two"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=linkedlist.remove_all_but_two"
   },
   "attribution": {
     "created_at": "2025-04-16T17:24:08.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=linkedlist.remove_all_but_two"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=linkedlist.remove_all_but_two"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=linkedlist.remove_all_but_two"
     }
   ],
   "rights": {
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.957Z"
+  "created_at": "2025-12-31T06:03:59.957Z",
+  "paws_id": 3727
 }

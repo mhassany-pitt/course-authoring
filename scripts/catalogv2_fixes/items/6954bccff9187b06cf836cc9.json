@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T22:25:52.000Z",
-  "updated_at": "2026-01-17T05:26:46.019Z",
+  "updated_at": "2026-03-21T20:48:05.105Z",
   "tags": [],
   "identity": {
     "id": "arraylist.vocabulary__68bdb308f6cc3d7a9cc096c7",
     "title": "Creating a List of Words from a File ",
-    "type": "PCEX Set"
+    "type": "CodeConstruction"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096c7?_t=1757557552174&index=0"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096c7?_t=1757557552174&index=0"
   },
   "attribution": {
     "created_at": "2025-09-10T22:25:52.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096c7?_t=1757557552174&index=0"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096c7?_t=1757557552174&index=0"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096c7?_t=1757557552174&index=0"
     }
   ],
   "rights": {
@@ -64,11 +68,12 @@
   "uses": [
     {
       "context_id": "cid=468",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
       "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > File processing",
       "used_at": "2025-09-03T18:00:26.000Z",
       "used_by": "Mohammad Hassany - "
     }
   ],
-  "created_at": "2025-12-31T06:03:59.916Z"
+  "created_at": "2025-12-31T06:03:59.916Z",
+  "paws_id": 4374
 }

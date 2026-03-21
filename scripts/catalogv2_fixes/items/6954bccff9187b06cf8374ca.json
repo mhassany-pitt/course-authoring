@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2015-11-15T19:48:19.000Z",
-  "updated_at": "2026-01-17T12:57:06.516Z",
+  "updated_at": "2026-03-21T20:48:30.329Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "pyt10.17",
     "title": "Class Definition - Bank Account",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.17&svc=progvis&sid=demo"
+    "demo_url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.17&svc=progvis&sid=demo"
   },
   "attribution": {
     "created_at": "2015-11-15T19:48:19.000Z",
@@ -102,8 +102,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.17&svc=progvis"
+      "format": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.17&svc=progvis"
+    },
+    {
+      "format": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.17&svc=progvis"
     }
   ],
   "rights": {
@@ -114,18 +118,19 @@
   "uses": [
     {
       "context_id": "cid=23",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=23",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=23",
       "context_name": "Python: PYTHON001 | Python Course (v1) > Classes and objects",
       "used_at": "2015-05-11T10:25:58.000Z",
       "used_by": "Python Admin - University of Pittsburgh"
     },
     {
       "context_id": "cid=344",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
       "context_name": "Python: PYTHON001 | PythonCourseV1Clones > Classes and objects",
       "used_at": "2017-05-22T17:58:24.000Z",
       "used_by": "Roya Hosseini - University of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.140Z"
+  "created_at": "2025-12-31T06:04:00.140Z",
+  "paws_id": 1256
 }

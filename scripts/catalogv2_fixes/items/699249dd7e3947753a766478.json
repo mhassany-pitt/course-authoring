@@ -1,0 +1,67 @@
+{
+  "id": "699249dd7e3947753a766478",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:05.277Z",
+  "tags": [],
+  "identity": {
+    "id": "c_funkcija_djeljiv_sa_3__6910b19a1b622a00857ded0b-6910a5f11b622a00857dec8f-0",
+    "title": "c_funkcija_djeljiv_sa_3",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Funkcije_i_djeljivost__6910b19a1b622a00857ded0b?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati funkciju int djeljivSaTri(int x) koja vra\u0107a 1 ako je broj x djeljiv sa 3, a 0 ako broj x nije djeljiv sa 3. U glavnom programu koristiti tu funkciju da se ispi\u0161u svi brojevi od 10 do 50 koji su djeljivi sa 3.",
+    "source_code": "#include <stdio.h>\r\n\r\nint djeljivSaTri(int x) {\r\n    return (x % 3 == 0);\r\n}\r\n\r\nint main() {\r\n    int i;\r\n    for (i = 10; i <= 50; i++) {\r\n        if (djeljivSaTri(i)) {\r\n            printf(\"%d \", i);\r\n        }\r\n    }\r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Funkcije_i_djeljivost__6910b19a1b622a00857ded0b?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:05.278Z",
+  "updated_at": "2026-03-21T20:48:28.975Z",
+  "paws_id": 4579
+}

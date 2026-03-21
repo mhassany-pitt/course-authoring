@@ -1,0 +1,80 @@
+{
+  "id": "69923558fbbb65899e0a1f21",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T00:00:00.000Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-python-2DArraysNoLoops-7",
+    "title": "codecheck-python-2DArraysNoLoops-7",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-python-2DArraysNoLoops-7"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00.000Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Given a two-dimensional array of integers and row/column indexes r, c, return the number of neighbors (not counting the element itself). A neighbor is any neighbor in the compass direction N E S W NE NW SE SW. ",
+    "source_code": "\r\n# Given a two-dimensional array of integers and row/column indexes r, c, \r\n# return the number of neighbors (not counting the element itself). \r\n# A neighbor is any neighbor in the compass direction N E S W NE NW SE SW.\r\n# You may assume that r and c denote a valid location in the array.\r\n\r\ndef countNeighbors(arr, r, c):\r\n   # Your code here...\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Two-Dimensional Arrays",
+          "No Loops"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-python-2DArraysNoLoops-7"
+    },
+    {
+      "format": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-python-2DArraysNoLoops-7"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T21:06:32.526Z",
+  "updated_at": "2026-03-21T20:49:57.097Z",
+  "paws_id": 3030
+}

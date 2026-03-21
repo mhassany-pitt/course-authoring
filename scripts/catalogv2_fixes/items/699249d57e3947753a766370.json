@@ -1,0 +1,67 @@
+{
+  "id": "699249d57e3947753a766370",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:33:57.863Z",
+  "tags": [],
+  "identity": {
+    "id": "c_strukture__6952b141136f190edb6d321e-693821dbe28428298e57809c-2",
+    "title": "c_strukture",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_ispis_struktura__6952b141136f190edb6d321e?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program u kojem se defini\u0161u strukture Tacka i Kruznica. Program treba omoguciti unos obje strukture i ispisati da li je une\u0161ena ta\u010dka unutar kru\u017enice. Kreirati pomo\u0107nu funkciju koja ra\u010duna udaljenost izme\u0111u dvije ta\u010dke.",
+    "source_code": "#include <stdio.h>\r\n#include <math.h>\r\n/* Definicija tacke i kruznice */\r\nstruct Tacka {\r\n\tdouble x,y;\r\n};\r\nstruct Kruznica {\r\n\tstruct Tacka centar;\r\n\tdouble poluprecnik;\r\n};\r\n/* Funkcije za unos */\r\nstruct Tacka unos_tacke() {\r\n\tstruct Tacka t;\r\n\tprintf (\"Unesite koordinate tacke (x,y): \");\r\n\tscanf (\"%lf,%lf\", &t.x, &t.y);\r\n\treturn t;\r\n}\r\nstruct Kruznica unos_kruznice() {\r\n\tstruct Kruznica k;\r\n\tprintf (\"Unesite centar kruznice:\\n\");\r\n\tk.centar = unos_tacke();\r\n\tprintf (\"Unesite poluprecnik kruznice: \");\r\n\tscanf(\"%lf\", &k.poluprecnik);\r\n\treturn k;\r\n}\r\n/* Funkcija za udaljenost izmedju dvije tacke */\r\nfloat udaljenost(struct Tacka t1, struct Tacka t2) {\r\n\treturn sqrt( (t1.x-t2.x)*(t1.x-t2.x) + (t1.y-t2.y)*(t1.y-t2.y) );\r\n}\r\n/* Glavni program: Da li je tacka unutar kruznice */\r\nint main() {\r\n\tstruct Kruznica k;\r\n\tstruct Tacka t;\r\n\tdouble d;\r\n\tprintf (\"Unesite kruznicu:\\n\");\r\n\tk = unos_kruznice();\r\n\tprintf (\"Unesite neku tacku:\\n\");\r\n\tt = unos_tacke();\r\n\t/* Tacka se nalazi unutar kruznice ako je udaljenost tacke od centra\r\n\tkruznice manja od poluprecnika kruznice */\r\n\td = udaljenost(t, k.centar);\r\n\tif (d<k.poluprecnik)\r\n\t\tprintf(\"Tacka je unutar kruznice.\");\r\n\telse if (d==k.poluprecnik)\r\n\t\tprintf(\"Tacka je na kruznici.\");\r\n\telse\r\n\t\tprintf(\"Tacka je izvan kruznice.\");\r\n\treturn 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_ispis_struktura__6952b141136f190edb6d321e?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:33:57.864Z",
+  "updated_at": "2026-03-21T20:48:39.252Z",
+  "paws_id": 4589
+}

@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-05-12T15:19:48.000Z",
-  "updated_at": "2026-01-31T16:41:18.946Z",
+  "updated_at": "2026-03-21T20:48:51.305Z",
   "tags": [],
   "identity": {
     "id": "ps_python_power_with_loops2_es",
     "title": "Calcular una potencia",
-    "type": "Question"
+    "type": "ParsonsProblem"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_power_with_loops2_es&grp=demo&usr=demo&sid=-1&cid=-1"
+    "demo_url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_power_with_loops2_es&grp=demo&usr=demo&sid=-1&cid=-1"
   },
   "attribution": {
     "created_at": "2025-05-12T15:19:48.000Z",
@@ -97,8 +97,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_power_with_loops2_es"
+      "format": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_power_with_loops2_es"
     }
   ],
   "rights": {
@@ -109,32 +109,33 @@
   "uses": [
     {
       "context_id": "cid=457",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
       "context_name": "Python: PythonES | Programacion en Python en Espanol > Ciclos",
       "used_at": "2025-03-30T22:04:51.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=461",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
       "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Ciclos For",
       "used_at": "2025-05-25T23:03:06.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=463",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
       "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Ciclos",
       "used_at": "2025-06-17T01:16:04.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=464",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=464",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=464",
       "context_name": "Python: UTFSM-Progra | Test Jordan Thesis Python ES > Ciclos",
       "used_at": "2025-07-10T18:56:02.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:03:59.948Z"
+  "created_at": "2025-12-31T06:03:59.948Z",
+  "paws_id": 3967
 }

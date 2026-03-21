@@ -1,0 +1,67 @@
+{
+  "id": "699249df7e3947753a7664d6",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:07.706Z",
+  "tags": [],
+  "identity": {
+    "id": "c_max_number__68b896c02da757ceaee7ff41-68ac650c50db7094e126abcc-1",
+    "title": "c_max_number",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Kontrola_toka_programa__68b896c02da757ceaee7ff41?index=3"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji sa tastature tra\u017ei unos dva cijela broja, a zatim na ekran ispisuje onaj broj koji je ve\u0107i od njih. Ako su brojevi jednaki, program treba ispisati taj broj.",
+    "source_code": "#include <stdio.h>\r\n\r\nint main() {\r\n    int a, b;\r\n\r\n    printf(\"Unesite dva cijela broja: \");\r\n    scanf(\"%d %d\", &a, &b);\r\n\r\n    printf(\"Maksimum od %d i %d \", a, b);\r\n    if(a < b)\r\n        printf(\"je %d \", b);\r\n    else\r\n        printf(\"je %d \", a);\r\n        \r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Kontrola_toka_programa__68b896c02da757ceaee7ff41?index=3"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:07.707Z",
+  "updated_at": "2026-03-21T20:50:21.414Z",
+  "paws_id": 4695
+}

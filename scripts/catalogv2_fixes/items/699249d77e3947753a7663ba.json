@@ -1,0 +1,67 @@
+{
+  "id": "699249d77e3947753a7663ba",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:33:59.887Z",
+  "tags": [],
+  "identity": {
+    "id": "c_formatirane_datoteke_upis_sa_decimalama__694591f5b71cfad938224778-69459027b71cfad938224608-1",
+    "title": "c_formatirane_datoteke_upis_sa_decimalama",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Upis_u_formatirane_tekstualne_datoteke__694591f5b71cfad938224778?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "U programu su data imena studenata i njihovi bodovi. Potrebno je kreirati novu datoteku studenti.txt i u nju upisati za svakog studenta njegov broj bodova zaokru\u017een na dvije decimale i ime studenta. Razdvojiti vrijednosti kao u sljede\u0107em primjeru: Bodovi: 12.98; Ime: Ana.",
+    "source_code": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n    FILE *izlaz;\n    char *imena[] = {\"Ana\", \"Marko\", \"Lejla\"};\n    float bodovi[] = {12.9823, 19.1283, 17.8};\n    int vel = 3, i;\n\n    izlaz = fopen(\"studenti.txt\", \"w\");\n    if (izlaz == NULL) {\n        printf(\"Otvaranje datoteke studenti.txt nije uspjelo!\\n\");\n        return 1;\n    }\n\n    for (i = 0; i < vel; i++) {\n        fprintf(izlaz, \"Bodovi: %.2f; Ime: %s\\n\", bodovi[i], imena[i]);\n    }\n\n    printf(\"Upis zavrsen.\\n\");\n\n    fclose(izlaz);\n    return 0;\n}\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Upis_u_formatirane_tekstualne_datoteke__694591f5b71cfad938224778?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:33:59.888Z",
+  "updated_at": "2026-03-21T20:48:01.056Z",
+  "paws_id": 4558
+}

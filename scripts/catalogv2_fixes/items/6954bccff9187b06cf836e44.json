@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-15T18:22:32.000Z",
-  "updated_at": "2026-01-17T05:27:42.306Z",
+  "updated_at": "2026-03-21T20:50:32.173Z",
   "tags": [],
   "identity": {
     "id": "compare_linkedlist",
     "title": "Compare Two LinkedList",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/561/embed?act=PCRS&sub=compare_linkedlist"
@@ -52,7 +52,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/561/embed?act=PCRS&sub=compare_linkedlist"
+    },
+    {
+      "format": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/561/embed?act=PCRS&sub=compare_linkedlist"
     }
   ],
@@ -64,11 +68,12 @@
   "uses": [
     {
       "context_id": "cid=458",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
       "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Linked Lists (Feedback)",
       "used_at": "2025-04-09T09:52:36.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:03:59.958Z"
+  "created_at": "2025-12-31T06:03:59.958Z",
+  "paws_id": 3706
 }

@@ -1,0 +1,80 @@
+{
+  "id": "69923558fbbb65899e0a1f1f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T00:00:00.000Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-python-2DArraysNoLoops-8",
+    "title": "codecheck-python-2DArraysNoLoops-8",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-python-2DArraysNoLoops-8"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00.000Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "On a chessboard, positions are marked with a letter between a and h for the column and a number between 1 and 8 for the row. Given an 8x8 array of integers and a string with such a position, return the element at that position. ",
+    "source_code": "\r\n# On a chessboard, positions are marked with a letter between a and h for the column \r\n# and a number between 1 and 8 for the row. Given an 8x8 array of integers and a \r\n# string with such a position, return the element at that position.\r\n\r\ndef getChessBoardInfo(board, pos):\r\n   # Your code here...\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Two-Dimensional Arrays",
+          "No Loops"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-python-2DArraysNoLoops-8"
+    },
+    {
+      "format": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-python-2DArraysNoLoops-8"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T21:06:32.465Z",
+  "updated_at": "2026-03-21T20:48:59.640Z",
+  "paws_id": 3031
+}

@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-15T23:58:23.000Z",
-  "updated_at": "2026-01-17T05:26:42.343Z",
+  "updated_at": "2026-03-21T20:47:07.879Z",
   "tags": [],
   "identity": {
     "id": "Converting Milliseconds to Hours-Minutes- and Seconds__664e241291363872f0ba32f4-664e240191363872f0ba32f0-1",
     "title": "Converting Milliseconds to Hours-Minutes- and Seconds",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e241291363872f0ba32f4?_t=1757995103718&index=1"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e241291363872f0ba32f4?_t=1757995103718&index=1"
   },
   "attribution": {
     "created_at": "2025-09-15T23:58:23.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e241291363872f0ba32f4?_t=1757995103718&index=1"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e241291363872f0ba32f4?_t=1757995103718&index=1"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e241291363872f0ba32f4?_t=1757995103718&index=1"
     }
   ],
   "rights": {
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.913Z"
+  "created_at": "2025-12-31T06:03:59.913Z",
+  "paws_id": 4404
 }

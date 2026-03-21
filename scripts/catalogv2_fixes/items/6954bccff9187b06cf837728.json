@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T20:34:36.440Z",
+  "updated_at": "2026-03-21T20:50:11.872Z",
   "tags": [],
   "identity": {
     "id": "pointernot",
     "title": "PointerNotation",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pointernot"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -52,7 +52,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pointernot"
     }
   ],
@@ -62,5 +62,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.191Z"
+  "created_at": "2025-12-31T06:04:00.191Z",
+  "paws_id": 728
 }

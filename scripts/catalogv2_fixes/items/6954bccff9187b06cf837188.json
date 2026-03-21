@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-06-09T13:13:15.000Z",
-  "updated_at": "2026-01-17T20:33:41.024Z",
+  "updated_at": "2026-03-21T20:48:27.937Z",
   "tags": [],
   "identity": {
     "id": "csedpad_methods_addingnumbers",
     "title": "(Methods) Adding numbers - CSEdPad",
-    "type": "Example"
+    "type": "CodeConstruction"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_methods_addingnumbers"
   },
   "attribution": {
     "created_at": "2020-06-09T13:13:15.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -100,7 +100,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_methods_addingnumbers"
     }
   ],
@@ -112,11 +112,12 @@
   "uses": [
     {
       "context_id": "cid=389",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
       "context_name": "Java: CSEdPad | CSEdPad Examples > Methods",
       "used_at": "2020-05-10T20:11:07.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.063Z"
+  "created_at": "2025-12-31T06:04:00.063Z",
+  "paws_id": 2511
 }

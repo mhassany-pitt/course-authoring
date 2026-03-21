@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-05-19T13:29:02.000Z",
-  "updated_at": "2026-01-17T20:33:41.771Z",
+  "updated_at": "2026-03-21T20:49:45.269Z",
   "tags": [],
   "identity": {
     "id": "csedpad_twodimarrays_matrixmultiply",
     "title": "(Two-dim arrays) Matrix multiply - CSEdPad",
-    "type": "Example"
+    "type": "CodeConstruction"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_twodimarrays_matrixmultiply"
   },
   "attribution": {
     "created_at": "2020-05-19T13:29:02.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -124,7 +124,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_twodimarrays_matrixmultiply"
     }
   ],
@@ -136,11 +136,12 @@
   "uses": [
     {
       "context_id": "cid=389",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
       "context_name": "Java: CSEdPad | CSEdPad Examples > Two-dimensional arrays",
       "used_at": "2020-05-10T20:11:07.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.063Z"
+  "created_at": "2025-12-31T06:04:00.063Z",
+  "paws_id": 2504
 }

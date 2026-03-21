@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-17T19:47:54.000Z",
-  "updated_at": "2026-01-17T13:18:37.705Z",
+  "updated_at": "2026-03-21T20:49:44.676Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -14,7 +14,7 @@
     "type": "OpenDSA Slideshow"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/lti/launch?tool=opendsa_slideshows&sub=HeapSortAnalysisCON"
+    "demo_url": "https://adapt2.sis.pitt.edu/lti/launch?tool=opendsa_slideshows&sub=HeapSortAnalysisCON"
   },
   "attribution": {
     "created_at": "2025-04-17T19:47:54.000Z",
@@ -55,8 +55,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/lti/launch?tool=opendsa_slideshows&sub=HeapSortAnalysisCON"
+      "format": "LTI 1.1",
+      "url": "https://adapt2.sis.pitt.edu/lti/launch?tool=opendsa_slideshows&sub=HeapSortAnalysisCON"
     }
   ],
   "rights": {
@@ -65,5 +65,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.953Z"
+  "created_at": "2025-12-31T06:03:59.953Z",
+  "paws_id": 3767
 }

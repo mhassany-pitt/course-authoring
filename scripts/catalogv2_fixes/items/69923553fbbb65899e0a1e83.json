@@ -1,0 +1,80 @@
+{
+  "id": "69923553fbbb65899e0a1e83",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T00:00:00.000Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-python-OtherStringOperations-6",
+    "title": "codecheck-python-OtherStringOperations-6",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-python-OtherStringOperations-6"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00.000Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write a method that undoes the effect of the preceding exercise. ",
+    "source_code": "\r\n# Write a method that takes in a string, splits it in half, and returns\r\n# a new string with the first character of the first half, followed by the\r\n# first character of the second half. For example, 'ABCDEFabcdef' becomes \r\n# 'AaBbCcDdEeFf'.\r\n \r\ndef reverseEvenThenOdd(s):\r\n   # Your code here...\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Strings",
+          "Other String Operations"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-python-OtherStringOperations-6"
+    },
+    {
+      "format": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-python-OtherStringOperations-6"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T21:06:27.778Z",
+  "updated_at": "2026-03-21T20:47:39.781Z",
+  "paws_id": 2955
+}

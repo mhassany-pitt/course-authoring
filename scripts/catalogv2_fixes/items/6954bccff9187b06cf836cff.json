@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T22:16:00.000Z",
-  "updated_at": "2026-01-17T05:26:52.631Z",
+  "updated_at": "2026-03-21T20:49:39.828Z",
   "tags": [],
   "identity": {
     "id": "Determining Whether One is a Teenager (Case 2) __68bdb309f6cc3d7a9cc09794-68bdb309f6cc3d7a9cc09792-1",
     "title": "Determining Whether One is a Teenager (Case 2) ",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09794?_t=1757556960162&index=1"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09794?_t=1757556960162&index=1"
   },
   "attribution": {
     "created_at": "2025-09-10T22:16:00.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09794?_t=1757556960162&index=1"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09794?_t=1757556960162&index=1"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09794?_t=1757556960162&index=1"
     }
   ],
   "rights": {
@@ -64,11 +68,12 @@
   "uses": [
     {
       "context_id": "cid=467",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
       "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Exceptions",
       "used_at": "2025-09-03T17:58:29.000Z",
       "used_by": "Mohammad Hassany - "
     }
   ],
-  "created_at": "2025-12-31T06:03:59.921Z"
+  "created_at": "2025-12-31T06:03:59.921Z",
+  "paws_id": 4322
 }

@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-16T17:23:24.000Z",
-  "updated_at": "2026-01-17T12:41:41.876Z",
+  "updated_at": "2026-03-21T20:49:20.318Z",
   "tags": [],
   "identity": {
     "id": "JRecursionSum1_ch",
     "title": "Recursively calculate the sum of all numbers from 1 to n Challenge",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=JAVA&set=recursion.recursion_sum&ch=JRecursionSum1_ch"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=JAVA&set=recursion.recursion_sum&ch=JRecursionSum1_ch"
   },
   "attribution": {
     "created_at": "2025-04-16T17:23:24.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=recursion.recursion_sum&ch=JRecursionSum1_ch"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=recursion.recursion_sum&ch=JRecursionSum1_ch"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=recursion.recursion_sum&ch=JRecursionSum1_ch"
     }
   ],
   "rights": {
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.957Z"
+  "created_at": "2025-12-31T06:03:59.957Z",
+  "paws_id": 3724
 }

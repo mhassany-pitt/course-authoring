@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-02-04T01:07:51.000Z",
-  "updated_at": "2026-01-17T05:29:11.948Z",
+  "updated_at": "2026-03-21T20:48:01.170Z",
   "tags": [],
   "identity": {
     "id": "while2_coding_main",
     "title": "while2_coding_main",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/433/embed?act=PCRS&sub=while2_coding_main"
@@ -74,7 +74,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/433/embed?act=PCRS&sub=while2_coding_main"
+    },
+    {
+      "format": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/433/embed?act=PCRS&sub=while2_coding_main"
     }
   ],
@@ -84,5 +88,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.066Z"
+  "created_at": "2025-12-31T06:04:00.066Z",
+  "paws_id": 2478
 }

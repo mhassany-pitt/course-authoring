@@ -1,0 +1,67 @@
+{
+  "id": "699249dd7e3947753a766484",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:05.594Z",
+  "tags": [],
+  "identity": {
+    "id": "c_funkcija_suma_kolicnika__6910b1521b622a00857decff-69106f5a1b622a00857debb5-3",
+    "title": "c_funkcija_suma_kolicnika",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Funkcije_i_izrazi__6910b1521b622a00857decff?index=3"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati funkciju sa prototipom double suma_kolicnika(int a, int b) koja ra\u010duna i vra\u0107a sumu: S=a/1+a/2+a/3+...+a/b. U glavnom programu unijeti a i b i ispisati rezultat.",
+    "source_code": "#include <stdio.h>\r\n\r\ndouble suma_kolicnika(int a, int b) {\r\n    double suma = 0.0;\r\n    int i;\r\n    for (i = 1; i <= b; i++)\r\n        suma += (double)a / i;\r\n    return suma;\r\n}\r\n\r\nint main() {\r\n    int a, b;\r\n    printf(\"Unesite cijeli broj a: \\n\");\r\n    scanf(\"%d\", &a);\r\n    printf(\"Unesite cijeli broj b: \\n\");\r\n    scanf(\"%d\", &b);\r\n\r\n    printf(\"Suma kolicnika od %d/1 do %d/%d je %.6f\\n\", a, a, b, suma_kolicnika(a, b));\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Funkcije_i_izrazi__6910b1521b622a00857decff?index=3"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:05.595Z",
+  "updated_at": "2026-03-21T20:49:45.157Z",
+  "paws_id": 4654
+}

@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-03T08:00:00.000Z",
-  "updated_at": "2026-01-17T05:27:56.344Z",
+  "updated_at": "2026-03-21T20:48:01.961Z",
   "tags": [],
   "identity": {
     "id": "py_class_day_calendar_es",
     "title": "PCRS C3-PL  Class Day Calendar",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/259/embed?act=PCRS&sub=py_class_day_calendar_es"
@@ -107,7 +107,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/259/embed?act=PCRS&sub=py_class_day_calendar_es"
+    },
+    {
+      "format": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/259/embed?act=PCRS&sub=py_class_day_calendar_es"
     }
   ],
@@ -117,5 +121,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.970Z"
+  "created_at": "2025-12-31T06:03:59.970Z",
+  "paws_id": 4104
 }

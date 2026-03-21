@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-09T10:31:21.000Z",
-  "updated_at": "2026-01-31T16:41:34.494Z",
+  "updated_at": "2026-03-21T20:48:59.280Z",
   "tags": [],
   "identity": {
     "id": "Advertir al Usuario sobre los Cambios en la Temperatura y Humedad.__6827373266a8e1b992c81241-6827373166a8e1b992c8123f-1",
     "title": "Advertir al Usuario sobre los Cambios en la Temperatura y Humedad.",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6827373266a8e1b992c81241?_t=1749534494091&index=1&locale=es"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6827373266a8e1b992c81241?_t=1749534494091&index=1&locale=es"
   },
   "attribution": {
     "created_at": "2025-06-09T10:31:21.000Z",
@@ -70,8 +70,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6827373266a8e1b992c81241?_t=1749534494091&index=1&locale=es"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6827373266a8e1b992c81241?_t=1749534494091&index=1&locale=es"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6827373266a8e1b992c81241?_t=1749534494091&index=1&locale=es"
     }
   ],
   "rights": {
@@ -82,25 +86,26 @@
   "uses": [
     {
       "context_id": "cid=457",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
       "context_name": "Python: PythonES | Programacion en Python en Espanol > Condicionales",
       "used_at": "2025-03-30T22:04:51.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=461",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
       "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Condicionales",
       "used_at": "2025-05-25T23:03:06.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=463",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
       "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Condicionales",
       "used_at": "2025-06-17T01:16:04.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:03:59.936Z"
+  "created_at": "2025-12-31T06:03:59.936Z",
+  "paws_id": 4174
 }

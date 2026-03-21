@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T20:34:37.600Z",
+  "updated_at": "2026-03-21T20:49:33.414Z",
   "tags": [],
   "identity": {
     "id": "pointerarr",
     "title": "PointerArrays",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pointerarr"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -52,7 +52,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pointerarr"
     }
   ],
@@ -62,5 +62,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.191Z"
+  "created_at": "2025-12-31T06:04:00.191Z",
+  "paws_id": 730
 }

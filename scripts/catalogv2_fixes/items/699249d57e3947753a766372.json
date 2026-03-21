@@ -1,0 +1,67 @@
+{
+  "id": "699249d57e3947753a766372",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:33:57.923Z",
+  "tags": [],
+  "identity": {
+    "id": "c_unos_i_ispis_datuma__6952b141136f190edb6d321e-693f4527443e2801de635384-1",
+    "title": "c_unos_i_ispis_datuma",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_ispis_struktura__6952b141136f190edb6d321e?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati kod koji kreira strukturu datum te funkcije za unos i ispis datuma.",
+    "source_code": "#include <stdio.h>\r\n\r\nstruct Datum {\r\n    int dan, mjesec, godina;\r\n};\r\n\r\nstruct Datum unesi_datum() {\r\n    struct Datum d;\r\n    printf(\"Unesite datum: \");\r\n    scanf(\"%d %d %d\", &d.dan, &d.mjesec, &d.godina);\r\n    return d;\r\n}\r\n\r\nvoid ispisi_datum(struct Datum d) {\r\n    printf(\"%d.%d.%d.\\n\", d.dan, d.mjesec, d.godina);\r\n}\r\n\r\nint main() {\r\n    struct Datum d1 = unesi_datum();\r\n    struct Datum d2 = unesi_datum();\r\n    \r\n    printf(\"Unijeli ste sljedece datume: \\n\");\r\n    ispisi_datum(d1);\r\n    ispisi_datum(d2);\r\n\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_ispis_struktura__6952b141136f190edb6d321e?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:33:57.924Z",
+  "updated_at": "2026-03-21T20:49:41.716Z",
+  "paws_id": 4651
+}

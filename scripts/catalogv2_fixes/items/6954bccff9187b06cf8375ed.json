@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-01T11:22:14.000Z",
-  "updated_at": "2026-01-17T20:34:16.647Z",
+  "updated_at": "2026-03-21T20:48:47.352Z",
   "tags": [],
   "identity": {
     "id": "BankAccountTester",
     "title": "Bank Account Tester",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/BankAccountTester"
   },
   "attribution": {
     "created_at": "2014-09-01T11:22:14.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -77,7 +77,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/BankAccountTester"
     }
   ],
@@ -89,67 +89,68 @@
   "uses": [
     {
       "context_id": "cid=11",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=11",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=11",
       "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] > Classes",
       "used_at": "2014-08-30T12:57:33.000Z",
       "used_by": "Administrator - University of Pittsburgh"
     },
     {
       "context_id": "cid=13",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=13",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=13",
       "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] - Animated Examples > Classes",
       "used_at": "2014-09-09T15:38:38.000Z",
       "used_by": "Administrator - University of Pittsburgh"
     },
     {
       "context_id": "cid=19",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=19",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=19",
       "context_name": "Java: INFSCI 0017 | Test - (ISD) JAVA course [clone] > Classes",
       "used_at": "2014-11-06T10:59:11.000Z",
       "used_by": "Administrator - University of Pittsburgh"
     },
     {
       "context_id": "cid=21",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=21",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=21",
       "context_name": "Java: INFSCI 0017 2 | Demo Course 2 > Classes",
       "used_at": "2015-04-15T13:10:54.000Z",
       "used_by": "Roya Hosseini - University of Pittsburgh"
     },
     {
       "context_id": "cid=29",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=29",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=29",
       "context_name": "Java: INFSCI 0017 | mg-gs-demo > Classes",
       "used_at": "2015-09-14T11:10:25.000Z",
       "used_by": "Roya Hosseini - University of Pittsburgh"
     },
     {
       "context_id": "cid=31",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
       "context_name": "Java: INFSCI 0017 | roya-clone-test-java > Classes",
       "used_at": "2015-12-08T17:16:50.000Z",
       "used_by": "Roya Hosseini - University of Pittsburgh"
     },
     {
       "context_id": "cid=32",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=32",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=32",
       "context_name": "Java: INFSCI 0017 | Revised Java Course v2 > Classes",
       "used_at": "2016-01-15T10:31:22.000Z",
       "used_by": "dguerra - Pitt"
     },
     {
       "context_id": "cid=339",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=339",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=339",
       "context_name": "Java: INFSCI 0017 | Java Study 2016 A > Objects and Classes",
       "used_at": "2016-11-02T14:34:05.000Z",
       "used_by": "dguerra - Pitt"
     },
     {
       "context_id": "cid=382",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=382",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=382",
       "context_name": "Java: INFSCI 0017 | Revised Java Course v3 > Classes",
       "used_at": "2020-01-11T16:29:42.000Z",
       "used_by": "Zak Risha, Zak Risha - University of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.170Z"
+  "created_at": "2025-12-31T06:04:00.170Z",
+  "paws_id": 539
 }

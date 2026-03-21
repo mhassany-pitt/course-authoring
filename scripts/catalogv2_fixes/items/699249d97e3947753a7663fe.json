@@ -1,0 +1,67 @@
+{
+  "id": "699249d97e3947753a7663fe",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:01.989Z",
+  "tags": [],
+  "identity": {
+    "id": "c_ubacivanje_rijeci__693dab82443e2801de62624f-693da541443e2801de625e37-0",
+    "title": "c_ubacivanje_rijeci",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Ubacivanje_karaktera_u_string__693dab82443e2801de62624f?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji u datom stringu zamjenjuje svaku cifru 1 sa tekstom \"jedan\". Pretpostaviti da je primljeni string dovoljno velik da primi sve dodatne karaktere.",
+    "source_code": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    char tekst[100] = \"Ovo je 1 primjer\";\n    char *s = tekst;\n    char jedan[] = \"jedan\";\n    int duzina = strlen(jedan), i;\n\n    while (*s != '\\0') {\n        if (*s == '1') {\n            char *kraj = s;\n            while (*kraj != '\\0') kraj++;\n            while (kraj >= s) {\n                *(kraj + duzina - 1) = *kraj;\n                kraj--;\n            }\n            for (i = 0; i < duzina; i++) {\n                *(s + i) = jedan[i];\n            }\n\n            s += duzina;\n        } else {\n            s++;\n        }\n    }\n\n    printf(\"%s\\n\", tekst);\n    return 0;\n}\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Ubacivanje_karaktera_u_string__693dab82443e2801de62624f?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:01.990Z",
+  "updated_at": "2026-03-21T20:49:28.257Z",
+  "paws_id": 4635
+}

@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-06-09T01:08:18.000Z",
-  "updated_at": "2026-01-17T20:33:41.368Z",
+  "updated_at": "2026-03-21T20:48:22.621Z",
   "tags": [],
   "identity": {
     "id": "csedpad_exceptionhandling_arithmetic",
     "title": "(Exception Handling) Arithmetic - CSEdPad",
-    "type": "Example"
+    "type": "CodeConstruction"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_exceptionhandling_arithmetic"
   },
   "attribution": {
     "created_at": "2020-06-09T01:08:18.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -100,7 +100,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_exceptionhandling_arithmetic"
     }
   ],
@@ -112,11 +112,12 @@
   "uses": [
     {
       "context_id": "cid=389",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
       "context_name": "Java: CSEdPad | CSEdPad Examples > Exception handling",
       "used_at": "2020-05-10T20:11:07.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.063Z"
+  "created_at": "2025-12-31T06:04:00.063Z",
+  "paws_id": 2508
 }

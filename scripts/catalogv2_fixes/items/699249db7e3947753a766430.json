@@ -1,0 +1,67 @@
+{
+  "id": "699249db7e3947753a766430",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:03.341Z",
+  "tags": [],
+  "identity": {
+    "id": "c_pokazivaci_manipulacija_clanova_niza__69355d5de28428298e55e8a6-69355d3ee28428298e55e8a2-1",
+    "title": "c_pokazivaci_manipulacija_clanova_niza",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Pokazivacka_aritmetika__69355d5de28428298e55e8a6?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Dat je niz cijelih brojeva i pokaziva\u010d p koji pokazuje na drugi \u010dlan niza. Uve\u0107ati vrijednost drugog \u010dlana niza za 1 preko pokaziva\u010da p i ispisati je. Zatim izra\u010dunati i postaviti novu vrijednost pretposljednjeg elementa niza tako \u0161to se njegova prethodna vrijednost pomno\u017ei sa 2, te i tu novu vrijednost ispisati.",
+    "source_code": "#include <stdio.h>\r\n\r\nint main() {\r\n    int niz[] = { 1, 0, 3, -5, 4 };\r\n    int *p = &niz[1];\r\n\r\n    /* Uve\u0107avanje vrijednosti drugog \u010dlana niza za 1 */\r\n    (*p)++;\r\n    printf(\"Drugi clan: %d\\n\", *p);\r\n    \r\n    /* Postavljanje nove vrijednosti pretposljednjeg \u010dlana niza */\r\n    *(p+2) *= 2;\r\n    printf(\"Nova vrijednost pretposljednjeg elementa: %d\\n\", *(p + 2));\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Pokazivacka_aritmetika__69355d5de28428298e55e8a6?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:03.342Z",
+  "updated_at": "2026-03-21T20:47:35.632Z",
+  "paws_id": 4538
+}

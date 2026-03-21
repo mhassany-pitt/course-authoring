@@ -1,0 +1,67 @@
+{
+  "id": "699249dd7e3947753a766476",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:05.223Z",
+  "tags": [],
+  "identity": {
+    "id": "c_funkcija_djelitelji__6910b19a1b622a00857ded0b-6910aaf01b622a00857decb2-1",
+    "title": "c_funkcija_djelitelji",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Funkcije_i_djeljivost__6910b19a1b622a00857ded0b?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji od korisnika tra\u017ei unos prirodnog  broja n i poziva funkciju djelitelji koja ispisuje sve njegove djelitelje.",
+    "source_code": "#include <stdio.h>\r\n#include <math.h>\r\n\r\nvoid djelitelji(int x) {\r\n    int i;\r\n    printf(\"\\nDjelitelji broja %d su: \\n\", x);\r\n    int limit = (int) sqrt(x);\r\n    for (i = 1; i <= limit; i++) {\r\n        if (x % i == 0) {\r\n            printf(\"%d \", i);\r\n            if (i != x / i) {\r\n                printf(\"%d \", x / i);\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\nint main() {\r\n    int n;\r\n    printf(\"Unesite prirodan broj: \");\r\n    scanf(\"%d\", &n);\r\n\r\n    if (n <= 0) {\r\n        printf(\"Broj mora biti prirodan.\\n\");\r\n        return 1;\r\n    }\r\n\r\n    djelitelji(n);\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Funkcije_i_djeljivost__6910b19a1b622a00857ded0b?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:05.224Z",
+  "updated_at": "2026-03-21T20:49:38.968Z",
+  "paws_id": 4648
+}

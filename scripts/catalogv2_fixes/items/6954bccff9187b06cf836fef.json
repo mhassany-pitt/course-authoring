@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-01-21T16:44:51.000Z",
-  "updated_at": "2026-01-17T12:54:55.642Z",
+  "updated_at": "2026-03-21T20:47:09.184Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "q_java_booleanGreaterEqual2",
     "title": "q_java_Boolean Operation (Greater equal 2)",
-    "type": "Question"
+    "type": "PredictingFinalResult"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_booleanGreaterEqual2"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_booleanGreaterEqual2"
   },
   "attribution": {
     "created_at": "2025-01-21T16:44:51.000Z",
@@ -54,8 +54,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_booleanGreaterEqual2"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_booleanGreaterEqual2"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_booleanGreaterEqual2"
     }
   ],
   "rights": {
@@ -66,11 +70,12 @@
   "uses": [
     {
       "context_id": "cid=449",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=449",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=449",
       "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Spring 2025 (Peter B) > Boolean Expressions",
       "used_at": "2025-01-15T05:27:01.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.015Z"
+  "created_at": "2025-12-31T06:04:00.015Z",
+  "paws_id": 3443
 }

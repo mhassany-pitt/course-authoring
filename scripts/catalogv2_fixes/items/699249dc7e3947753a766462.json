@@ -1,0 +1,67 @@
+{
+  "id": "699249dc7e3947753a766462",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:04.699Z",
+  "tags": [],
+  "identity": {
+    "id": "c_dijeljenje_reda__692365b9e28428298e4ba8b7-69234421e28428298e4b94b1-1",
+    "title": "c_dijeljenje_reda",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Aritmeticke_operacije_nad_redovima_i_kolonama_matrice__692365b9e28428298e4ba8b7?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji dijeli red matrice sa nekim prirodnim brojem. Korisnik unosi indeks reda koji \u017eeli podijeliti i prirodni broj kojim ga \u017eeli podijeliti.",
+    "source_code": "#include <stdio.h>\r\n#define DIM 5\r\n\r\nint main() {\r\n    int i, j, red, broj;\r\n    double matrica[DIM][DIM] = {\r\n        {1, 2, 3, 4, 5},\r\n        {6, 7, 8, 9, 9},\r\n        {8, 7, 6, 5, 4},\r\n        {3, 2, 1, 1, 2},\r\n        {3, 4, 5, 6, 7}\r\n    };\r\n    \r\n    printf(\"Unesite indeks reda koji \u017eelite podijeliti (0-%d):\\n\", DIM-1);\r\n    scanf(\"%d\", &red);\r\n    \r\n    if (red < 0 || red >= DIM) {\r\n        printf(\"Nevalidan indeks.\");\r\n        return 1;\r\n    }\r\n    \r\n    printf(\"Unesite broj s kojim \u017eelite podijeliti red %d:\\n\", red);\r\n    scanf(\"%d\", &broj);\r\n    \r\n    if (broj <= 0) {\r\n        printf(\"Nevalidan broj.\");\r\n        return 1;\r\n    }\r\n    \r\n    for (j = 0; j < DIM; j++) {\r\n        matrica[red][j] /= broj;\r\n    }\r\n    \r\n    for (i = 0; i < DIM; i++) {\r\n        for (j = 0; j < DIM; j++) {\r\n            printf(\"%3g \", matrica[i][j]);\r\n        }\r\n        printf(\"\\n\");\r\n    }\r\n\r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Aritmeticke_operacije_nad_redovima_i_kolonama_matrice__692365b9e28428298e4ba8b7?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:04.700Z",
+  "updated_at": "2026-03-21T20:50:02.209Z",
+  "paws_id": 4673
+}

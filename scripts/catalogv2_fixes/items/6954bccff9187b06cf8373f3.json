@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T20:33:53.039Z",
+  "updated_at": "2026-03-21T20:48:47.066Z",
   "tags": [],
   "identity": {
     "id": "IS17_inheritance2_2",
     "title": "IS17_inheritance2_2",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance2_2"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -52,7 +52,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance2_2"
     }
   ],
@@ -62,5 +62,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.126Z"
+  "created_at": "2025-12-31T06:04:00.126Z",
+  "paws_id": 1642
 }

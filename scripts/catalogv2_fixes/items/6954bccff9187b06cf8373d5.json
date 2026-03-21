@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T20:46:32.548Z",
+  "updated_at": "2026-03-21T20:47:51.037Z",
   "tags": [],
   "identity": {
     "id": "nested_loops",
     "title": "DEPRECATED_Nested Loops",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/nested_loops"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -101,7 +101,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/nested_loops"
     }
   ],
@@ -111,5 +111,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.124Z"
+  "created_at": "2025-12-31T06:04:00.124Z",
+  "paws_id": 1612
 }

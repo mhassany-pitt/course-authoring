@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-05-12T15:21:10.000Z",
-  "updated_at": "2026-01-31T16:41:28.295Z",
+  "updated_at": "2026-03-21T20:49:02.132Z",
   "tags": [],
   "identity": {
     "id": "ps_python_quick_sorting_es",
     "title": "Practicar el algoritmo de ordenaci\u00f3n r\u00e1pida (Quick Sort)",
-    "type": "Question"
+    "type": "ParsonsProblem"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_quick_sorting_es&grp=demo&usr=demo&sid=-1&cid=-1"
+    "demo_url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_quick_sorting_es&grp=demo&usr=demo&sid=-1&cid=-1"
   },
   "attribution": {
     "created_at": "2025-05-12T15:21:10.000Z",
@@ -87,8 +87,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_quick_sorting_es"
+      "format": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_quick_sorting_es"
     }
   ],
   "rights": {
@@ -97,5 +97,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.942Z"
+  "created_at": "2025-12-31T06:03:59.942Z",
+  "paws_id": 3990
 }

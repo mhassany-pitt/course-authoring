@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T20:34:30.014Z",
+  "updated_at": "2026-03-21T20:50:01.846Z",
   "tags": [],
   "identity": {
     "id": "assign_return",
     "title": "Assign Return",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/assign_return"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -52,7 +52,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/assign_return"
     }
   ],
@@ -62,5 +62,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.186Z"
+  "created_at": "2025-12-31T06:04:00.186Z",
+  "paws_id": 703
 }

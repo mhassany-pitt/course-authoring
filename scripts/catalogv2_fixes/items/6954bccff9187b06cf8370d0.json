@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-06T01:03:30.000Z",
-  "updated_at": "2026-01-17T12:55:14.279Z",
+  "updated_at": "2026-03-21T20:47:54.757Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "tree_node_access",
     "title": "Tree Node Access",
-    "type": "Animated Example"
+    "type": "CodeVisualization"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=tree_node_access&grp=demo&usr=demo&sid=-1&cid=-1"
+    "demo_url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=tree_node_access&grp=demo&usr=demo&sid=-1&cid=-1"
   },
   "attribution": {
     "created_at": "2021-09-06T01:03:30.000Z",
@@ -54,8 +54,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=tree_node_access"
+      "format": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=tree_node_access"
     }
   ],
   "rights": {
@@ -66,60 +66,61 @@
   "uses": [
     {
       "context_id": "cid=413",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
       "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Trees",
       "used_at": "2021-08-11T18:22:22.000Z",
       "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
     },
     {
       "context_id": "cid=422",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
       "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > Topic 10",
       "used_at": "2022-05-23T22:24:04.000Z",
       "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
     },
     {
       "context_id": "cid=423",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=423",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=423",
       "context_name": "Python: PYTHON001 | U of A CMPUT 175 Fall 2022 (Python II) > Topic 10 - Binary Search, Trees",
       "used_at": "2022-08-10T17:36:04.000Z",
       "used_by": "Emma, McDonald - University of Alberta"
     },
     {
       "context_id": "cid=428",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=428",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=428",
       "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2023 (Python II) > Halfweek 10 and 11 - Trees",
       "used_at": "2023-05-02T00:12:59.000Z",
       "used_by": "Emma, McDonald - University of Alberta"
     },
     {
       "context_id": "cid=431",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=431",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=431",
       "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2024 (Python II) > Halfweek 10 and 11 - Trees",
       "used_at": "2024-05-03T14:17:30.000Z",
       "used_by": "Emma, McDonald - University of Alberta"
     },
     {
       "context_id": "cid=454",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
       "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Trees",
       "used_at": "2025-03-27T12:46:05.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=460",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
       "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Worked Examples > Trees",
       "used_at": "2025-04-09T10:48:28.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=462",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
       "context_name": "Python: SandboxPython | Sandbox Python Course > Trees",
       "used_at": "2025-06-14T00:28:07.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.042Z"
+  "created_at": "2025-12-31T06:04:00.042Z",
+  "paws_id": 2746
 }

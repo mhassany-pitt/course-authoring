@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T18:18:02.000Z",
-  "updated_at": "2026-01-17T05:26:57.524Z",
+  "updated_at": "2026-03-21T20:49:16.532Z",
   "tags": [],
   "identity": {
     "id": "Determining the Weather Condition (Case 3)__68bdb309f6cc3d7a9cc09838-68bdb309f6cc3d7a9cc09833-2",
     "title": "Determining the Weather Condition (Case 3)",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09838?_t=1757542682513&index=2"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09838?_t=1757542682513&index=2"
   },
   "attribution": {
     "created_at": "2025-09-10T18:18:02.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09838?_t=1757542682513&index=2"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09838?_t=1757542682513&index=2"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09838?_t=1757542682513&index=2"
     }
   ],
   "rights": {
@@ -64,25 +68,26 @@
   "uses": [
     {
       "context_id": "cid=467",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
       "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Boolean Expressions",
       "used_at": "2025-09-03T17:58:29.000Z",
       "used_by": "Mohammad Hassany - "
     },
     {
       "context_id": "cid=468",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
       "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Boolean Expressions",
       "used_at": "2025-09-03T18:00:26.000Z",
       "used_by": "Mohammad Hassany - "
     },
     {
       "context_id": "cid=484",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
       "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > Boolean Expressions",
       "used_at": "2025-09-27T20:26:25.000Z",
       "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:03:59.925Z"
+  "created_at": "2025-12-31T06:03:59.925Z",
+  "paws_id": 4279
 }

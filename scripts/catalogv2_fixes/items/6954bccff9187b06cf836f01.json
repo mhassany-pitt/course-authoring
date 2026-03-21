@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-03T08:00:00.000Z",
-  "updated_at": "2026-01-31T16:41:14.463Z",
+  "updated_at": "2026-03-21T20:49:52.444Z",
   "tags": [],
   "identity": {
     "id": "py_find_n_letters_es",
     "title": "Encontrar letra n veces con while (ES)",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/346/embed?act=PCRS&sub=py_find_n_letters_es"
@@ -105,7 +105,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/346/embed?act=PCRS&sub=py_find_n_letters_es"
+    },
+    {
+      "format": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/346/embed?act=PCRS&sub=py_find_n_letters_es"
     }
   ],
@@ -117,32 +121,33 @@
   "uses": [
     {
       "context_id": "cid=457",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
       "context_name": "Python: PythonES | Programacion en Python en Espanol > Strings",
       "used_at": "2025-03-30T22:04:51.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=461",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
       "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Ciclos While",
       "used_at": "2025-05-25T23:03:06.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=461",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
       "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Strings",
       "used_at": "2025-05-25T23:03:06.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=463",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
       "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Strings",
       "used_at": "2025-06-17T01:16:04.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:03:59.980Z"
+  "created_at": "2025-12-31T06:03:59.980Z",
+  "paws_id": 4246
 }

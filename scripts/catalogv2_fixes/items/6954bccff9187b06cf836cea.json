@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T22:19:25.000Z",
-  "updated_at": "2026-01-17T05:26:50.237Z",
+  "updated_at": "2026-03-21T20:49:17.504Z",
   "tags": [],
   "identity": {
     "id": "arrays2d.j_print_medals__68bdb308f6cc3d7a9cc09746",
     "title": "Printing Table of Medal Winner Counts with Row Totals",
-    "type": "PCEX Set"
+    "type": "CodeConstruction"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc09746?_t=1757557165442&index=0"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc09746?_t=1757557165442&index=0"
   },
   "attribution": {
     "created_at": "2025-09-10T22:19:25.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc09746?_t=1757557165442&index=0"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc09746?_t=1757557165442&index=0"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc09746?_t=1757557165442&index=0"
     }
   ],
   "rights": {
@@ -64,11 +68,12 @@
   "uses": [
     {
       "context_id": "cid=467",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=467",
       "context_name": "Java: CS 007 | CS007 - Java Programming (Fall 2025) > Two-dimensional Arrays",
       "used_at": "2025-09-03T17:58:29.000Z",
       "used_by": "Mohammad Hassany - "
     }
   ],
-  "created_at": "2025-12-31T06:03:59.919Z"
+  "created_at": "2025-12-31T06:03:59.919Z",
+  "paws_id": 4341
 }

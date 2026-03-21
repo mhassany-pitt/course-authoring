@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:03.788Z",
+  "updated_at": "2026-03-21T20:49:57.941Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "strcomp.c",
     "title": "IS12:: strcomp.c (14.2)",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=strcomp.c&svc=progvis&sid=demo"
+    "demo_url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=strcomp.c&svc=progvis&sid=demo"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -89,8 +89,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=strcomp.c&svc=progvis"
+      "format": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=strcomp.c&svc=progvis"
+    },
+    {
+      "format": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=strcomp.c&svc=progvis"
     }
   ],
   "rights": {
@@ -99,5 +103,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.176Z"
+  "created_at": "2025-12-31T06:04:00.176Z",
+  "paws_id": 821
 }

@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T18:22:42.000Z",
-  "updated_at": "2026-01-17T05:26:53.967Z",
+  "updated_at": "2026-03-21T20:48:40.113Z",
   "tags": [],
   "identity": {
     "id": "Calculating the Average of the Input Integers that are an Even Number__68bdb309f6cc3d7a9cc097c7-68bdb309f6cc3d7a9cc097c2-1",
     "title": "Calculating the Average of the Input Integers that are an Even Number",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097c7?_t=1757543451055&index=1"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097c7?_t=1757543451055&index=1"
   },
   "attribution": {
     "created_at": "2025-09-10T18:22:42.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097c7?_t=1757543451055&index=1"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097c7?_t=1757543451055&index=1"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097c7?_t=1757543451055&index=1"
     }
   ],
   "rights": {
@@ -64,18 +68,19 @@
   "uses": [
     {
       "context_id": "cid=468",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
       "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > While Loops",
       "used_at": "2025-09-03T18:00:26.000Z",
       "used_by": "Mohammad Hassany - "
     },
     {
       "context_id": "cid=484",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
       "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > While Loops",
       "used_at": "2025-09-27T20:26:25.000Z",
       "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:03:59.922Z"
+  "created_at": "2025-12-31T06:03:59.922Z",
+  "paws_id": 4309
 }

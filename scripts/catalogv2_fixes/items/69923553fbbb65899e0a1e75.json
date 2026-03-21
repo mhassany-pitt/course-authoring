@@ -1,0 +1,80 @@
+{
+  "id": "69923553fbbb65899e0a1e75",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T00:00:00.000Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-python-Producing2DArrays-2",
+    "title": "codecheck-python-Producing2DArrays-2",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-python-Producing2DArrays-2"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00.000Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Given two two-dimensional arrays a and b of integers with the same number of rows and columns, return a list of the same size where each element is the greater of the corresponding elements in the two arrays. ",
+    "source_code": "\r\n# Given two two-dimensional arrays a and b of integers \r\n# with the same number of rows and columns, return a two-dimensional array \r\n# of the same size where each element is the greater of the \r\n# corresponding elements in the two lists.\r\n\r\ndef getGreaterElements(a, b):\r\n   # Your code here...\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Two-Dimensional Arrays",
+          "Producing 2D Arrays"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-python-Producing2DArrays-2"
+    },
+    {
+      "format": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-python-Producing2DArrays-2"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T21:06:27.387Z",
+  "updated_at": "2026-03-21T20:49:56.588Z",
+  "paws_id": 3062
+}

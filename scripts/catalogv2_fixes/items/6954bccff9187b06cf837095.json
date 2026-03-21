@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-14T18:30:44.000Z",
-  "updated_at": "2026-01-21T15:46:22.977Z",
+  "updated_at": "2026-03-21T20:48:51.133Z",
   "tags": [],
   "identity": {
     "id": "insertion_sort_ch",
     "title": "Insertion Sort Challenge",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_sorting_insertion_sort&ch=insertion_sort_ch"
+    "demo_url": "https://adapt2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_sorting_insertion_sort&ch=insertion_sort_ch"
   },
   "attribution": {
     "created_at": "2021-09-14T18:30:44.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_sorting_insertion_sort&ch=insertion_sort_ch"
+      "format": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_sorting_insertion_sort&ch=insertion_sort_ch"
+    },
+    {
+      "format": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_sorting_insertion_sort&ch=insertion_sort_ch"
     }
   ],
   "rights": {
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.034Z"
+  "created_at": "2025-12-31T06:04:00.034Z",
+  "paws_id": 2803
 }

@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-02-22T00:20:06.000Z",
-  "updated_at": "2026-01-17T12:54:44.354Z",
+  "updated_at": "2026-03-21T20:48:52.374Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "q_py___eq__1_es",
     "title": "q_py___eq__1_es",
-    "type": "Question"
+    "type": "PredictingFinalResult"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py___eq__1_es&sub=q_py___eq__1_es&act=q_py_spanish"
+    "demo_url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py___eq__1_es&sub=q_py___eq__1_es&act=q_py_spanish"
   },
   "attribution": {
     "created_at": "2025-02-22T00:20:06.000Z",
@@ -54,8 +54,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py___eq__1_es&sub=q_py___eq__1_es&act=q_py_spanish"
+      "format": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py___eq__1_es&sub=q_py___eq__1_es&act=q_py_spanish"
+    },
+    {
+      "format": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py___eq__1_es&sub=q_py___eq__1_es&act=q_py_spanish"
     }
   ],
   "rights": {
@@ -64,5 +68,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.000Z"
+  "created_at": "2025-12-31T06:04:00.000Z",
+  "paws_id": 3890
 }

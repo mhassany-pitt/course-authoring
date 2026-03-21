@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2017-11-05T18:43:19.000Z",
-  "updated_at": "2026-01-17T05:29:47.868Z",
+  "updated_at": "2026-03-21T20:50:26.690Z",
   "tags": [],
   "identity": {
     "id": "2d_arrays_2",
     "title": "2D Arrays 2",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/375/embed?act=PCRS&sub=2d_arrays_2"
@@ -52,7 +52,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/375/embed?act=PCRS&sub=2d_arrays_2"
+    },
+    {
+      "format": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/375/embed?act=PCRS&sub=2d_arrays_2"
     }
   ],
@@ -64,32 +68,33 @@
   "uses": [
     {
       "context_id": "cid=31",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
       "context_name": "Java: INFSCI 0017 | roya-clone-test-java > Two-dimensional Arrays",
       "used_at": "2015-12-08T17:16:50.000Z",
       "used_by": "Roya Hosseini - University of Pittsburgh"
     },
     {
       "context_id": "cid=345",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=345",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=345",
       "context_name": "Java: INFSCI 0017 | Introduction to JAVA Programming - Program Construction > Two-Dimensional Arrays",
       "used_at": "2017-08-20T11:59:48.000Z",
       "used_by": "Roya Hosseini - University of Pittsburgh"
     },
     {
       "context_id": "cid=350",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=350",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=350",
       "context_name": "Java: INFSCI 0017 | Java programming course - Norway > Two-Dimensional Arrays",
       "used_at": "2017-12-13T17:21:41.000Z",
       "used_by": "Boban Vesin, Boban Vesin - NTNU"
     },
     {
       "context_id": "cid=440",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
       "context_name": "Java: CMIS 2200 | Application Programming II > Module 4 - Arrays ",
       "used_at": "2024-08-27T03:21:22.000Z",
       "used_by": "Pratibha Menon - "
     }
   ],
-  "created_at": "2025-12-31T06:04:00.099Z"
+  "created_at": "2025-12-31T06:04:00.099Z",
+  "paws_id": 2055
 }

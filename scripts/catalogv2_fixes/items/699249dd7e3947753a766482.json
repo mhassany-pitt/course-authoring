@@ -1,0 +1,67 @@
+{
+  "id": "699249dd7e3947753a766482",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:05.547Z",
+  "tags": [],
+  "identity": {
+    "id": "c_funkcija_stepenuj__6910b1521b622a00857decff-69106c421b622a00857deba2-2",
+    "title": "c_funkcija_stepenuj",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Funkcije_i_izrazi__6910b1521b622a00857decff?index=2"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji koristi funkciju stepenuj za izra\u010dunavanje stepena cijelog broja. Ispisati vrijednosti stepenovanja brojeva 2 i -3 za stepene n = 0, 1, 2, 3 i 4.",
+    "source_code": "#include <stdio.h>\r\n\r\nint stepenuj(int, int); /* prototip funkcije */\r\n\r\nint main() {\r\n\tint i, x, y;\r\n\t\r\n\tprintf(\"stepen 2^stepen (-3)^stepen\\n\");\r\n\tfor(i = 0; i < 5; ++i) {\r\n\t\tx = stepenuj(2, i);\r\n\t\ty = stepenuj(-3, i);\r\n\t\tprintf(\"%4d %6d %10d\\n\", i, x, y);\r\n\t}\r\n\t\r\n\treturn 0;\r\n}\r\n\r\n/* stepenuj bazu na n, gdje je n >= 0 */\r\nint stepenuj(int baza, int n) {\r\n\tint i, p = 1;\r\n\t\r\n\tfor(i = 0; i < n; i++) p = p * baza;\r\n\t\r\n\treturn p;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Funkcije_i_izrazi__6910b1521b622a00857decff?index=2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:05.548Z",
+  "updated_at": "2026-03-21T20:49:06.728Z",
+  "paws_id": 4613
+}

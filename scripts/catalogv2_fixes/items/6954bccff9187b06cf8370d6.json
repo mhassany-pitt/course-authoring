@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-06T00:34:42.000Z",
-  "updated_at": "2026-01-17T12:55:15.074Z",
+  "updated_at": "2026-03-21T20:48:34.652Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "leap_year3",
     "title": "Leap Year3",
-    "type": "Animated Example"
+    "type": "CodeVisualization"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=leap_year3&grp=demo&usr=demo&sid=-1&cid=-1"
+    "demo_url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=leap_year3&grp=demo&usr=demo&sid=-1&cid=-1"
   },
   "attribution": {
     "created_at": "2021-09-06T00:34:42.000Z",
@@ -54,8 +54,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=leap_year3"
+      "format": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=leap_year3"
     }
   ],
   "rights": {
@@ -64,5 +64,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.043Z"
+  "created_at": "2025-12-31T06:04:00.043Z",
+  "paws_id": 2719
 }

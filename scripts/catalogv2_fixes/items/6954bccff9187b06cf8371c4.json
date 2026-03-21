@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2019-10-22T14:17:28.000Z",
-  "updated_at": "2026-01-17T20:33:43.147Z",
+  "updated_at": "2026-03-21T20:48:10.824Z",
   "tags": [],
   "identity": {
     "id": "memp_variables_1",
     "title": "memp_variables_1",
-    "type": "Example"
+    "type": "CodeConstruction"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/memp_variables_1"
   },
   "attribution": {
     "created_at": "2019-10-22T14:17:28.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -79,7 +79,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/memp_variables_1"
     }
   ],
@@ -89,5 +89,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.069Z"
+  "created_at": "2025-12-31T06:04:00.069Z",
+  "paws_id": 2449
 }

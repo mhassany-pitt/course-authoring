@@ -1,0 +1,67 @@
+{
+  "id": "699249d77e3947753a7663a6",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:33:59.333Z",
+  "tags": [],
+  "identity": {
+    "id": "c_citanje_iz_txt_challenge__694f41c8136f190edb6b1622-694f2fd0136f190edb6b0c2d-1",
+    "title": "c_citanje_iz_txt_challenge",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Citanje_struktura_iz_tekstualnih_datoteka__694f41c8136f190edb6b1622?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji \u010dita podatke iz tekstualne datoteke rezultati.txt. Datoteka sadr\u017ei vi\u0161e redova, pri \u010demu je svaki red zapisan u sljede\u0107em formatu: prezime studenta, ime studenta i broj bodova, razdvojeni razmacima. Program treba u\u010ditati sve zapise iz datoteke i na osnovu u\u010ditanih podataka ispisati ukupan broj studenata, broj studenata koji su polo\u017eili ispit (studenti sa 40 ili vi\u0161e bodova), te podatke o studentu koji ima najve\u0107i broj bodova (prezime, ime i broj bodova). Ukoliko datoteka ne postoji ili je prazna, program treba ispisati odgovaraju\u0107u poruku o gre\u0161ci.\n",
+    "source_code": "#include <stdio.h>\r\n\r\nstruct Rezultat {\r\n    char prezime[20];\r\n    char ime[20];\r\n    int bodovi;\r\n};\r\n\r\nint main() {\r\n    FILE *f = fopen(\"rezultati.txt\", \"r\");\r\n    if (f == NULL) {\r\n        printf(\"Greska: ne mogu otvoriti rezultati.txt\\n\");\r\n        return 1;\r\n    }\r\n\r\n    struct Rezultat r;\r\n    int ukupno = 0, polozilo = 0;\r\n\r\n    int maxBodovi = -1;\r\n    struct Rezultat najbolji;\r\n\r\n    while (fscanf(f, \"%19s %19s %d\", r.prezime, r.ime, &r.bodovi) == 3) {\r\n        ukupno++;\r\n        if (r.bodovi >= 40) polozilo++;\r\n\r\n        if (r.bodovi > maxBodovi) {\r\n            maxBodovi = r.bodovi;\r\n            najbolji = r;\r\n        }\r\n    }\r\n\r\n    fclose(f);\r\n\r\n    if (ukupno == 0) {\r\n        printf(\"Datoteka je prazna ili format nije ispravan.\\n\");\r\n        return 0;\r\n    }\r\n\r\n    printf(\"Ukupno studenata: %d\\n\", ukupno);\r\n    printf(\"Polozilo (>=40): %d\\n\", polozilo);\r\n    printf(\"Najbolji: %s %s (%d)\\n\", najbolji.prezime, najbolji.ime, najbolji.bodovi);\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Citanje_struktura_iz_tekstualnih_datoteka__694f41c8136f190edb6b1622?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:33:59.334Z",
+  "updated_at": "2026-03-21T20:47:26.516Z",
+  "paws_id": 4529
+}

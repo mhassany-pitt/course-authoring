@@ -1,0 +1,67 @@
+{
+  "id": "699249dd7e3947753a76648a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:05.747Z",
+  "tags": [],
+  "identity": {
+    "id": "c_min_array__6910b0d21b622a00857decf5-690f62621b622a00857de767-1",
+    "title": "c_min_array",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_obrada_nizova_i_matrica__6910b0d21b622a00857decf5?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji tra\u017ei unos niza 10 cijelih brojeva sa tastature i zatim ispisuje najmanji element u nizu.",
+    "source_code": "#include <stdio.h>\r\n#define DUZINA 10\r\n\r\nint main() {\r\n\tint niz[DUZINA];\r\n\tint i, min;\r\n\t\r\n\t/* unos niza */\r\n\tfor (i = 0; i < DUZINA; i++) {\r\n\t\tprintf(\"Unesite %d. broj: \", i+1);\r\n\t\tscanf(\"%d\", &niz[i]);\r\n\t}\r\n\r\n\t/* pronalazak najmanjeg elementa */\r\n\tmin = niz[0];\r\n\tfor (i = 1; i < DUZINA; i++) \r\n\t\tif (min > niz[i]) \r\n            min = niz[i];\r\n\r\n\tprintf(\"Najmanji element je: %d\\n\", min);\r\n\r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_obrada_nizova_i_matrica__6910b0d21b622a00857decf5?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:05.748Z",
+  "updated_at": "2026-03-21T20:47:31.045Z",
+  "paws_id": 4533
+}

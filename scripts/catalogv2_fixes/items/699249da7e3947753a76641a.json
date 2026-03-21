@@ -1,0 +1,67 @@
+{
+  "id": "699249da7e3947753a76641a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:02.741Z",
+  "tags": [],
+  "identity": {
+    "id": "c_pokazivaci_na_karaktere_brojanje_samoglasnika__693b360480e2aaa929a25bd8-693b2fb680e2aaa929a257a2-0",
+    "title": "c_pokazivaci_na_karaktere_brojanje_samoglasnika",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Pokazivaci_na_karaktere__693b360480e2aaa929a25bd8?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji prolazi kroz niz karaktera koriste\u0107i pokaziva\u010dku aritmetiku i broji koliko se puta pojavljuju samoglasnici. Program treba prepoznati i mala i velika slova. Na kraju ispisati ukupan broj samoglasnika.",
+    "source_code": "#include <stdio.h>\r\n#include <ctype.h>\r\n\r\nint main() {\r\n    char niz[] = \"Programiranje\";\r\n    char *p = niz;\r\n    int brojac = 0;\r\n\r\n    while (*p != '\\0') {\r\n        char c = tolower(*p);\r\n        if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u') {\r\n            brojac++;\r\n        }\r\n        p++;\r\n    }\r\n\r\n    printf(\"Broj samoglasnika: %d\\n\", brojac);\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Pokazivaci_na_karaktere__693b360480e2aaa929a25bd8?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:02.742Z",
+  "updated_at": "2026-03-21T20:48:57.070Z",
+  "paws_id": 4604
+}

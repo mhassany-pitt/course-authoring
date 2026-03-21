@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2018-12-21T11:09:19.000Z",
-  "updated_at": "2026-01-17T20:33:45.219Z",
+  "updated_at": "2026-03-21T20:49:58.050Z",
   "tags": [],
   "identity": {
     "id": "char_strings_memphis",
     "title": "Char Strings (Memphis)",
-    "type": "Example"
+    "type": "CodeConstruction"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/char_strings_memphis"
   },
   "attribution": {
     "created_at": "2018-12-21T11:09:19.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -120,7 +120,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/char_strings_memphis"
     }
   ],
@@ -132,11 +132,12 @@
   "uses": [
     {
       "context_id": "cid=367",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
       "context_name": "Java: INFSCI 0017 | CSEdPad test course (CS1 Memphis) > Strings",
       "used_at": "2018-11-30T09:02:48.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.080Z"
+  "created_at": "2025-12-31T06:04:00.080Z",
+  "paws_id": 2370
 }

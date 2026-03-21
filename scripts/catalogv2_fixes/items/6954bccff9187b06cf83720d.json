@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2019-02-01T11:11:08.000Z",
-  "updated_at": "2026-01-17T20:46:05.111Z",
+  "updated_at": "2026-03-21T20:48:30.825Z",
   "tags": [],
   "identity": {
     "id": "3-19_ArrayDemos",
     "title": "3-19_ArrayDemos",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-19_ArrayDemos"
   },
   "attribution": {
     "created_at": "2019-02-01T11:11:08.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -106,7 +106,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-19_ArrayDemos"
     }
   ],
@@ -118,11 +118,12 @@
   "uses": [
     {
       "context_id": "cid=367",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
       "context_name": "Java: INFSCI 0017 | CSEdPad test course (CS1 Memphis) > Arrays",
       "used_at": "2018-11-30T09:02:48.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.080Z"
+  "created_at": "2025-12-31T06:04:00.080Z",
+  "paws_id": 2373
 }

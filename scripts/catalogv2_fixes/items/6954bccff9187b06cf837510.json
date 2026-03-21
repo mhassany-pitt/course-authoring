@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2015-09-08T18:46:35.000Z",
-  "updated_at": "2026-01-17T12:57:16.123Z",
+  "updated_at": "2026-03-21T20:47:20.563Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "q_java_pretest10",
     "title": "Question 11",
-    "type": "Question"
+    "type": "PredictingFinalResult"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_pretest10"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_pretest10"
   },
   "attribution": {
     "created_at": "2015-09-08T18:46:35.000Z",
@@ -84,8 +84,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_pretest10"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_pretest10"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_pretest10"
     }
   ],
   "rights": {
@@ -96,11 +100,12 @@
   "uses": [
     {
       "context_id": "cid=28",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=28",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=28",
       "context_name": "Java: pretestJava | Pretest Course > Boolean Expressions",
       "used_at": "2015-09-08T18:10:42.000Z",
       "used_by": "Roya Hosseini - University of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.145Z"
+  "created_at": "2025-12-31T06:04:00.145Z",
+  "paws_id": 1073
 }

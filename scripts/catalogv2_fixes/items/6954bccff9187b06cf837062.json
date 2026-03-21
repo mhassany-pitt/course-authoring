@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-16T11:36:31.000Z",
-  "updated_at": "2026-01-17T05:28:36.766Z",
+  "updated_at": "2026-03-21T20:48:18.490Z",
   "tags": [],
   "identity": {
     "id": "ps_python_tree_preorder_traversal",
     "title": "Construct a preorder traversal function",
-    "type": "Question"
+    "type": "ParsonsProblem"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_tree_preorder_traversal&grp=demo&usr=demo&sid=-1&cid=-1"
+    "demo_url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_tree_preorder_traversal&grp=demo&usr=demo&sid=-1&cid=-1"
   },
   "attribution": {
     "created_at": "2021-09-16T11:36:31.000Z",
@@ -86,8 +86,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_tree_preorder_traversal"
+      "format": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_tree_preorder_traversal"
     }
   ],
   "rights": {
@@ -98,18 +98,19 @@
   "uses": [
     {
       "context_id": "cid=413",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
       "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Trees",
       "used_at": "2021-08-11T18:22:22.000Z",
       "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
     },
     {
       "context_id": "cid=422",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
       "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > Topic 10",
       "used_at": "2022-05-23T22:24:04.000Z",
       "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.028Z"
+  "created_at": "2025-12-31T06:04:00.028Z",
+  "paws_id": 2871
 }

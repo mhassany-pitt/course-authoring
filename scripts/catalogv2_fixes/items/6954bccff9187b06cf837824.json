@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-31T23:47:00.341Z",
+  "updated_at": "2026-03-21T20:48:17.949Z",
   "tags": [],
   "identity": {
     "id": "getchar()",
     "title": "getchar()",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/getchar"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -52,8 +52,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/getchar()"
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/getchar"
     }
   ],
   "rights": {
@@ -62,5 +62,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.211Z"
+  "created_at": "2025-12-31T06:04:00.211Z",
+  "paws_id": 748
 }

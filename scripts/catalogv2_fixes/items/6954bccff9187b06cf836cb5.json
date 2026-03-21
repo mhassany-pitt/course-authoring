@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-15T23:57:30.000Z",
-  "updated_at": "2026-01-17T05:26:43.539Z",
+  "updated_at": "2026-03-21T20:47:18.085Z",
   "tags": [],
   "identity": {
     "id": "Vending Machine With Quarters-Dimes- and Nickels__664e3efd91363872f0ba35f8-664e3ef991363872f0ba35f6-1",
     "title": "Vending Machine With Quarters-Dimes- and Nickels",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e3efd91363872f0ba35f8?_t=1757995050643&index=1"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e3efd91363872f0ba35f8?_t=1757995050643&index=1"
   },
   "attribution": {
     "created_at": "2025-09-15T23:57:30.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e3efd91363872f0ba35f8?_t=1757995050643&index=1"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e3efd91363872f0ba35f8?_t=1757995050643&index=1"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e3efd91363872f0ba35f8?_t=1757995050643&index=1"
     }
   ],
   "rights": {
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.914Z"
+  "created_at": "2025-12-31T06:03:59.914Z",
+  "paws_id": 4396
 }

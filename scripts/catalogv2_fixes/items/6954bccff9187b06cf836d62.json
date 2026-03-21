@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-09T12:13:57.000Z",
-  "updated_at": "2026-01-17T05:27:04.671Z",
+  "updated_at": "2026-03-21T20:47:40.656Z",
   "tags": [],
   "identity": {
     "id": "JSON ITERATION 1__6847083edf5ea13f28e4317c-67a9950a136666301a9e5075-0",
     "title": "JSON ITERATION 1",
-    "type": "PCEX Set"
+    "type": "CodeConstruction"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6847083edf5ea13f28e4317c?_t=1749485645138&index=0&locale=es"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6847083edf5ea13f28e4317c?_t=1749485645138&index=0&locale=es"
   },
   "attribution": {
     "created_at": "2025-06-09T12:13:57.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6847083edf5ea13f28e4317c?_t=1749485645138&index=0&locale=es"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6847083edf5ea13f28e4317c?_t=1749485645138&index=0&locale=es"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6847083edf5ea13f28e4317c?_t=1749485645138&index=0&locale=es"
     }
   ],
   "rights": {
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.936Z"
+  "created_at": "2025-12-31T06:03:59.936Z",
+  "paws_id": 4178
 }

@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T22:14:08.000Z",
-  "updated_at": "2026-01-17T05:26:53.295Z",
+  "updated_at": "2026-03-21T20:48:28.110Z",
   "tags": [],
   "identity": {
     "id": " Animal Class Hierarchy (Case 2) __68bdb309f6cc3d7a9cc097ac-68bdb309f6cc3d7a9cc097aa-1",
     "title": " Animal Class Hierarchy (Case 2) ",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097ac?_t=1757556848204&index=1"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097ac?_t=1757556848204&index=1"
   },
   "attribution": {
     "created_at": "2025-09-10T22:14:08.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097ac?_t=1757556848204&index=1"
+      "format": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097ac?_t=1757556848204&index=1"
+    },
+    {
+      "format": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097ac?_t=1757556848204&index=1"
     }
   ],
   "rights": {
@@ -64,11 +68,12 @@
   "uses": [
     {
       "context_id": "cid=468",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
       "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > Inheritance",
       "used_at": "2025-09-03T18:00:26.000Z",
       "used_by": "Mohammad Hassany - "
     }
   ],
-  "created_at": "2025-12-31T06:03:59.921Z"
+  "created_at": "2025-12-31T06:03:59.921Z",
+  "paws_id": 4316
 }

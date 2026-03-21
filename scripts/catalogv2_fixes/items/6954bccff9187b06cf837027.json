@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-01-17T15:49:23.000Z",
-  "updated_at": "2026-01-17T20:33:40.277Z",
+  "updated_at": "2026-03-21T20:49:45.330Z",
   "tags": [],
   "identity": {
     "id": "LeftJoin25_1_version_1",
     "title": "LeftJoin1_version_1",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/LeftJoin25_1_version_1"
   },
   "attribution": {
     "created_at": "2025-01-17T15:49:23.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -52,7 +52,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/LeftJoin25_1_version_1"
     }
   ],
@@ -64,11 +64,12 @@
   "uses": [
     {
       "context_id": "cid=447",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=447",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=447",
       "context_name": "SQL: Temple-MIS2502-2025-Spring-1SQL | Temple MIS2502 2025-Spring 1-SQL > Left Join",
       "used_at": "2024-12-11T10:46:15.000Z",
       "used_by": "Rully Agus Hendrawan, Rully Agus Hendrawan - "
     }
   ],
-  "created_at": "2025-12-31T06:04:00.021Z"
+  "created_at": "2025-12-31T06:04:00.021Z",
+  "paws_id": 3429
 }

@@ -1,0 +1,120 @@
+{
+  "id": "6988ea0c3be3b366adec6cb1",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-08T19:54:52.064Z",
+  "tags": [],
+  "identity": {
+    "id": "subqueries-2-lti",
+    "title": "Subqueries query execution 2",
+    "type": "CodeVisualization"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/lti/launch?tool=dbqa&sub=subqueries-2&usr=adl01&grp=adl01"
+  },
+  "attribution": {
+    "created_at": "2021-01-02T22:58:52.000Z",
+    "provider": "DBQA",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": "University of Pittsburgh"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "SQL"
+    ]
+  },
+  "content": {
+    "prompt": "Subqueries query execution 2",
+    "source_code": ""
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "DistinctClause",
+          "InPredicate",
+          "MultipleAttributeSelection",
+          "PredicateNegation",
+          "SimpleSubquery",
+          "SingleTableSelection",
+          "WhereClause"
+        ],
+        "note": ""
+      },
+      "sql_ontology ": {
+        "concepts": [
+          "Clause::WhereClause",
+          "DeleteStatement::WhereClause",
+          "FromClause::SingleTableSelection",
+          "Predicate::InPredicate",
+          "Predicate::PredicateNegation",
+          "SelectClause::DistinctClause",
+          "SelectClause::MultipleAttributeSelection",
+          "SelectFromViewStatement::WhereClause",
+          "SelectStatement::WhereClause",
+          "SubQuery::SimpleSubquery",
+          "SubQuery::WhereClause",
+          "UpdateStatement::WhereClause"
+        ],
+        "note": ""
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "LTI 1.1",
+      "url": "https://adapt2.sis.pitt.edu/lti/launch?tool=dbqa&sub=subqueries-2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=392",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=392",
+      "context_name": "Database Management(LTI-DBQA)",
+      "used_at": "2020-07-24T10:47:34.000Z",
+      "used_by": "Kamil Akhuseyinoglu"
+    },
+    {
+      "context_id": "cid=408",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=408",
+      "context_name": "Database Management (Aalto +SQL-Tutor+DBQA)",
+      "used_at": "2021-01-29T20:23:45.000Z",
+      "used_by": "Kamil Akhuseyinoglu"
+    },
+    {
+      "context_id": "cid=451",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=451",
+      "context_name": "BINUS-SQL-2025",
+      "used_at": "2025-02-12T23:04:56.000Z",
+      "used_by": "Rully Agus Hendrawan"
+    }
+  ],
+  "created_at": "2026-02-08T19:54:52.066Z",
+  "updated_at": "2026-03-21T20:47:45.081Z",
+  "paws_id": 2661
+}

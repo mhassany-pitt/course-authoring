@@ -1,0 +1,67 @@
+{
+  "id": "699249de7e3947753a7664b8",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:06.926Z",
+  "tags": [],
+  "identity": {
+    "id": "c_ispisi_sa_sirinom_i_preciznosti__68d1a96763fa732f4df66957-68d19a3563fa732f4df668e3-1",
+    "title": "c_ispisi_sa_sirinom_i_preciznosti",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Formatirani_ispisi__68d1a96763fa732f4df66957?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji ispisuje dva cijela broja poravnata udesno i razdvojena razmakom, pri \u010demu prvi broj treba zauzeti barem 5 mjesta, a drugi barem 8 mjesta. Nakon toga ispisati i dva realna broja razdvojena razmakom, pri \u010demu je prvi broj zaokru\u017een na 2 decimalna mjesta, a drugi broj na 5 decimalnih mjesta. Prvi broj treba ukupno zauzeti barem 4 mjesta prilikom ispisa, a drugi barem 8 mjesta.",
+    "source_code": "#include <stdio.h>\r\n\r\nint main() {\r\n    printf(\"Cijeli brojevi: %5d %8d \", 10, 99);\r\n    printf(\"Realni brojevi: %4.2f %8.5f \", 3.1415, 0.001);\r\n    \r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Formatirani_ispisi__68d1a96763fa732f4df66957?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:06.927Z",
+  "updated_at": "2026-03-21T20:50:22.815Z",
+  "paws_id": 4696
+}

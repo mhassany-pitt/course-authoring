@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-03T08:00:00.000Z",
-  "updated_at": "2026-01-17T05:28:07.941Z",
+  "updated_at": "2026-03-21T20:47:26.875Z",
   "tags": [],
   "identity": {
     "id": "py_operator1_es",
     "title": "PCRS C3-PL  Operator1",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/234/embed?act=PCRS&sub=py_operator1_es"
@@ -84,7 +84,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "format": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/234/embed?act=PCRS&sub=py_operator1_es"
+    },
+    {
+      "format": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/234/embed?act=PCRS&sub=py_operator1_es"
     }
   ],
@@ -94,5 +98,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.985Z"
+  "created_at": "2025-12-31T06:03:59.985Z",
+  "paws_id": 4087
 }

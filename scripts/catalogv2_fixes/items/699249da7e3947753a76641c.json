@@ -1,0 +1,67 @@
+{
+  "id": "699249da7e3947753a76641c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:02.790Z",
+  "tags": [],
+  "identity": {
+    "id": "c_trazenje_karaktera_u_stringu_pokazivaci__693b360480e2aaa929a25bd8-693b33f680e2aaa929a25a70-1",
+    "title": "c_trazenje_karaktera_u_stringu_pokazivaci",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Pokazivaci_na_karaktere__693b360480e2aaa929a25bd8?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": " Napisati program koji pomo\u0107u pokaziva\u010dke aritmetike provjerava da li se u datom stringu nalazi odre\u0111eni karakter.",
+    "source_code": "#include <stdio.h>\r\n\r\nint main() {\r\n    char niz[] = \"uvod u programiranje\";\r\n    char trazeni = 'd';\r\n    char *p = niz;\r\n\r\n    while (*p != '\\0') {\r\n        if (*p == trazeni) {\r\n            printf(\"Karakter '%c' je pronadjen!\\n\", trazeni);\r\n            return 0;\r\n        }\r\n        p++;\r\n    }\r\n\r\n    printf(\"Karakter '%c' nije pronadjen!\\n\", trazeni);\r\n    \r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Pokazivaci_na_karaktere__693b360480e2aaa929a25bd8?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:02.791Z",
+  "updated_at": "2026-03-21T20:48:04.707Z",
+  "paws_id": 4562
+}

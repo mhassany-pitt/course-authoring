@@ -1,0 +1,67 @@
+{
+  "id": "699249d67e3947753a76637a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:33:58.144Z",
+  "tags": [],
+  "identity": {
+    "id": "c_strukture_i_nizovi__69523e43136f190edb6cea34-6948223cb71cfad93823c8be-1",
+    "title": "c_strukture_i_nizovi",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Nizovi_u_strukturama_i_nizovi_struktura__69523e43136f190edb6cea34?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program u programskom jeziku C koji omogu\u0107ava rad sa studentima koriste\u0107i strukture i nizove. Potrebno je definisati strukturu Student koja sadr\u017ei ime i prezime studenta, broj indeksa, niz od pet ocjena i prosjek ocjena. Program treba omogu\u0107iti unos podataka za tri studenta, pri \u010demu se za svakog studenta unose li\u010dni podaci i ocjene. Nakon unosa, potrebno je izra\u010dunati prosjek ocjena za svakog studenta kori\u0161tenjem posebne funkcije. Zatim je potrebno sortirati niz studenata po prosjeku ocjena u rastu\u0107em redoslijedu koriste\u0107i selection sort algoritam i na kraju ispisati podatke o studentima nakon sortiranja. ",
+    "source_code": "#include <stdio.h>\r\n#include <string.h>\r\n\r\nstruct Student {\r\n    char ime[20];\r\n    char prezime[20];\r\n    int indeks;\r\n    int ocjene[5]; \r\n    float prosjek;\r\n};\r\n\r\n/* racunanje prosjeka */\r\nfloat izracunajProsjek(int ocjene[], int brojOcjena) {\r\n    int suma = 0, i;\r\n    for (i = 0; i < brojOcjena; i++) {\r\n        suma += ocjene[i];\r\n    }\r\n    return (float)suma / brojOcjena;\r\n}\r\n\r\nint main() {\r\n    int brojStudenata = 3;\r\n    int brojOcjena = 5;\r\n\r\n    struct Student studenti[brojStudenata];\r\n    int i, j;\r\n\r\n    /* unos podataka */\r\n    for (i = 0; i < brojStudenata; i++) {\r\n        printf(\"\\nStudent %d\\n\", i + 1);\r\n\r\n        printf(\"Ime: \");\r\n        scanf(\"%s\", studenti[i].ime);\r\n\r\n        printf(\"Prezime: \");\r\n        scanf(\"%s\", studenti[i].prezime);\r\n\r\n        printf(\"Indeks: \");\r\n        scanf(\"%d\", &studenti[i].indeks);\r\n\r\n        printf(\"Unesite %d ocjena:\\n\", brojOcjena);\r\n        for (j = 0; j < brojOcjena; j++) {\r\n            printf(\"Ocjena %d: \", j + 1);\r\n            scanf(\"%d\", &studenti[i].ocjene[j]);\r\n        }\r\n\r\n        studenti[i].prosjek = izracunajProsjek(studenti[i].ocjene, brojOcjena);\r\n    }\r\n\r\n    /* selection sort po prosjeku */\r\n    for (i = 0; i < brojStudenata - 1; i++) {\r\n        int minIndex = i;\r\n\r\n        for (j = i + 1; j < brojStudenata; j++) {\r\n            if (studenti[j].prosjek < studenti[minIndex].prosjek) {\r\n                minIndex = j;\r\n            }\r\n        }\r\n\r\n        if (minIndex != i) {\r\n            struct Student temp = studenti[i];\r\n            studenti[i] = studenti[minIndex];\r\n            studenti[minIndex] = temp;\r\n        }\r\n    }\r\n\r\n    /* ispis nakon sortiranja */\r\n    printf(\"Studenti sortirani po prosjeku: \\n\");\r\n    for (i = 0; i < brojStudenata; i++) {\r\n        printf(\"%s %s | indeks: %d | prosjek: %.2f\\n\",\r\n               studenti[i].ime,\r\n               studenti[i].prezime,\r\n               studenti[i].indeks,\r\n               studenti[i].prosjek);\r\n    }\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Nizovi_u_strukturama_i_nizovi_struktura__69523e43136f190edb6cea34?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:33:58.145Z",
+  "updated_at": "2026-03-21T20:49:50.580Z",
+  "paws_id": 4662
+}

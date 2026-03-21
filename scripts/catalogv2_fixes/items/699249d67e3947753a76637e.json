@@ -1,0 +1,67 @@
+{
+  "id": "699249d67e3947753a76637e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:33:58.258Z",
+  "tags": [],
+  "identity": {
+    "id": "c_strukture_i_nizovi_challenge__69523e43136f190edb6cea34-6949d3fcb71cfad93824cb91-2",
+    "title": "c_strukture_i_nizovi_challenge",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Nizovi_u_strukturama_i_nizovi_struktura__69523e43136f190edb6cea34?index=2"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program u programskom jeziku C koji radi sa strukturom `Proizvod` koja sadr\u017ei naziv proizvoda i njegovu cijenu. U programu je dat niz od nekoliko proizvoda. Potrebno je implementirati funkciju koja sortira niz proizvoda po cijeni u rastu\u0107em redoslijedu koriste\u0107i selection sort algoritam. Prilikom sortiranja obavezno je koristiti pokaziva\u010d na niz struktura i pokaziva\u010dku aritmetiku za pristup elementima niza. Nakon sortiranja potrebno je ispisati proizvode redom, sa njihovim nazivom i cijenom.\n",
+    "source_code": "#include <stdio.h>\r\n\r\nstruct Proizvod {\r\n    char naziv[20];\r\n    float cijena;\r\n};\r\n\r\nvoid sortirajPoCijeni(struct Proizvod *p, int n) {\r\n    for (int i = 0; i < n - 1; i++) {\r\n        int minIndex = i;\r\n\r\n        for (int j = i + 1; j < n; j++) {\r\n            if ((p + j)->cijena < (p + minIndex)->cijena) {\r\n                minIndex = j;\r\n            }\r\n        }\r\n\r\n        if (minIndex != i) {\r\n            struct Proizvod temp = *(p + i);\r\n            *(p + i) = *(p + minIndex);\r\n            *(p + minIndex) = temp;\r\n        }\r\n    }\r\n}\r\n\r\nint main() {\r\n    struct Proizvod proizvodi[4] = {\r\n        {\"Hljeb\", 2.0},\r\n        {\"Mlijeko\", 2.5},\r\n        {\"Sir\", 5.0},\r\n        {\"Jaja\", 3.0}\r\n    };\r\n\r\n    int n = 4;\r\n    struct Proizvod *p = proizvodi;\r\n\r\n    sortirajPoCijeni(p, n);\r\n\r\n    printf(\"Proizvodi sortirani po cijeni:\\n\");\r\n    for (int i = 0; i < n; i++) {\r\n        printf(\"%s - %.2f\\n\", (p + i)->naziv, (p + i)->cijena);\r\n    }\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "format": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Nizovi_u_strukturama_i_nizovi_struktura__69523e43136f190edb6cea34?index=2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:33:58.259Z",
+  "updated_at": "2026-03-21T20:48:17.781Z",
+  "paws_id": 4571
+}
