@@ -1,0 +1,67 @@
+{
+  "id": "699249d57e3947753a766352",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:33:57.031Z",
+  "tags": [],
+  "identity": {
+    "id": "c_dinamicka_alokacija_niza_calloc __6952fa18136f190edb6d5e8a-6952e071136f190edb6d4f2b-1",
+    "title": "c_dinamicka_alokacija_niza_calloc",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Dinamicka_alokacija_nizova__6952fa18136f190edb6d5e8a?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji koristi dinami\u010dku alokaciju memorije za cjelobrojni niz. Program treba imati posebnu funkciju za alokaciju niza i posebnu funkciju za osloba\u0111anje zauzete memorije. Korisnik unosi broj elemenata niza, zatim unosi vrijednosti elemenata. Nakon unosa, program treba ispisati elemente niza u obrnutom redoslijedu. Na kraju programa obavezno pravilno osloboditi dinami\u010dki alociranu memoriju.",
+    "source_code": "#include <stdio.h>\r\n#include <stdlib.h>\r\n\r\nint *alociraj_niz(int broj_el) {\r\n        return (int*)calloc(broj_el, sizeof(int));\r\n}\r\n\r\n\r\nvoid oslobodi_niz(int *niz) {\r\n    free(niz);\r\n}\r\n\r\nint nadji_maks(int* niz, int n) {\r\n    int maks = niz[0];\r\n    for (int i = 1; i < n; i++) {\r\n        if (niz[i] > maks) {\r\n            maks = niz[i];\r\n        }\r\n    }\r\n    return maks;\r\n}\r\n\r\nint main() {\r\n    int n;\r\n\r\n    printf(\"Unesite broj elemenata niza: \");\r\n    scanf(\"%d\", &n);\r\n\r\n    int* niz = alociraj_niz(n);\r\n    if (niz == NULL) {\r\n        printf(\"Alokacija nije uspjela.\\n\");\r\n        return 1;\r\n    }\r\n\r\n    for (int i = 0; i < n; i++) {\r\n        printf(\"niz[%d] = \", i);\r\n        scanf(\"%d\", &niz[i]);\r\n    }\r\n\r\n    int maks = nadji_maks(niz, n);\r\n    printf(\"Maksimalni element u nizu je: %d\\n\", maks);\r\n\r\n    oslobodi_niz(niz);\r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Dinamicka_alokacija_nizova__6952fa18136f190edb6d5e8a?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:33:57.033Z",
+  "updated_at": "2026-03-21T20:49:21.135Z",
+  "paws_id": 4624
+}

@@ -1,0 +1,67 @@
+{
+  "id": "699249d87e3947753a7663c0",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:00.052Z",
+  "tags": [],
+  "identity": {
+    "id": "c_formatirane_datoteke_citanje_brojeva_i_stringa__69458765b71cfad9382240a3-69458437b71cfad938223f41-1",
+    "title": "c_formatirane_datoteke_citanje_brojeva_i_stringa",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Citanje_sadrzaja_formatiranih_tekstualnih_datoteka__69458765b71cfad9382240a3?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Data je datoteka knjige.txt koja u svakom redu sadr\u017ei sljede\u0107e podatke razdvojene zarezom: cijena (realan broj), broj primjeraka (cijeli broj) i naziv (string). Napisati program koji ra\u010duna i ispisuje na ekran ukupnu vrijednost spa\u0161enih knjiga (zbir proizvoda cijene i broja primjeraka svake knjige).",
+    "source_code": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nint main() {\n    FILE *ulaz;\n    double cijena;\n    int brojPrimjeraka;\n    char naziv[100];\n    double ukupnaVrijednost = 0;\n\n    ulaz = fopen(\"knjige.txt\", \"r\");\n    if (ulaz == NULL) {\n        printf(\"Otvaranje datoteke knjige.txt nije uspjelo!\\n\");\n        return 1;\n    }\n\n    while (fscanf(ulaz, \"%lf,%d,\", &cijena, &brojPrimjeraka) == 2) {\n        /* u\u010ditavanje ostatka reda u string */\n        if (fgets(naziv, sizeof(naziv), ulaz) != NULL) {\n            /* uklanjanje \\n sa kraja stringa ako postoji */\n            naziv[strcspn(naziv, \"\\n\")] = '\\0';\n            ukupnaVrijednost += cijena * brojPrimjeraka;\n        }\n    }\n\n    printf(\"Ukupna vrijednost knjiga: %.2f\\n\", ukupnaVrijednost);\n\n    fclose(ulaz);\n    return 0;\n}\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Citanje_sadrzaja_formatiranih_tekstualnih_datoteka__69458765b71cfad9382240a3?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:00.053Z",
+  "updated_at": "2026-03-21T20:48:06.191Z",
+  "paws_id": 4565
+}

@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-05-19T12:03:17.000Z",
-  "updated_at": "2026-01-17T20:33:42.092Z",
+  "updated_at": "2026-03-21T20:48:41.084Z",
   "tags": [],
   "identity": {
     "id": "csedpad_classesobjects_rectangle",
     "title": "(Classes & Objects) Rectangle - CSEdPad",
-    "type": "Example"
+    "type": "CodeConstruction"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_classesobjects_rectangle"
   },
   "attribution": {
     "created_at": "2020-05-19T12:03:17.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -120,7 +120,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/csedpad_classesobjects_rectangle"
     }
   ],
@@ -132,11 +132,12 @@
   "uses": [
     {
       "context_id": "cid=389",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=389",
       "context_name": "Java: CSEdPad | CSEdPad Examples > Classes and Objects",
       "used_at": "2020-05-10T20:11:07.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.064Z"
+  "created_at": "2025-12-31T06:04:00.064Z",
+  "paws_id": 2501
 }

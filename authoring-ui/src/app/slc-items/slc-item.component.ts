@@ -38,7 +38,7 @@ export class SlcItemComponent implements OnInit, OnDestroy {
   useContextName = '';
   useBy = '';
   useDate = '';
-  deliveryFormat = '';
+  deliveryProtocol = '';
   deliveryUrl = '';
 
   private historicalOptions: HistoryOptions = {
@@ -80,7 +80,7 @@ export class SlcItemComponent implements OnInit, OnDestroy {
     prereqTopics: 'Topics learners should know in advance.',
     prereqConcepts: 'Concepts learners should know in advance.',
     prereqItemIds: 'IDs of items learners should complete first.',
-    deliveryFormat: 'Delivery channel or packaging format.',
+    deliveryProtocol: 'Delivery channel or packaging format.',
     deliveryUrl: 'URL where the item can be accessed.',
     useContextUrl: 'URL of the course or context where used.',
     useContextName: 'Name of the course or context where used.',
@@ -100,7 +100,7 @@ export class SlcItemComponent implements OnInit, OnDestroy {
   catalogTypeOptions: { label: string; value: string }[] = [];
   interactionTypeOptions: { label: string; value: string }[] = [];
   instructionalRoleOptions: { label: string; value: string }[] = [];
-  deliveryFormatOptions: { label: string; value: string }[] = [];
+  deliveryProtocolOptions: { label: string; value: string }[] = [];
 
   loading = true;
   saving = false;
@@ -153,11 +153,11 @@ export class SlcItemComponent implements OnInit, OnDestroy {
   }
 
   addDelivery() {
-    if (!this.deliveryFormat && !this.deliveryUrl) return;
+    if (!this.deliveryProtocol && !this.deliveryUrl) return;
     const delivery = this.model.delivery || [];
-    delivery.push({ format: this.deliveryFormat, url: this.deliveryUrl });
+    delivery.push({ protocol: this.deliveryProtocol, url: this.deliveryUrl });
     this.model.delivery = delivery;
-    this.deliveryFormat = '';
+    this.deliveryProtocol = '';
     this.deliveryUrl = '';
   }
 
@@ -457,9 +457,9 @@ export class SlcItemComponent implements OnInit, OnDestroy {
       this.model?.pedagogy?.instructional_role,
     ]);
 
-    this.deliveryFormatOptions = this.toOptions([
+    this.deliveryProtocolOptions = this.toOptions([
       ...this.historicalOptions.delivery_formats,
-      ...(this.model?.delivery || []).map((d) => d.format),
+      ...(this.model?.delivery || []).map((d) => d.protocol),
     ]);
   }
 

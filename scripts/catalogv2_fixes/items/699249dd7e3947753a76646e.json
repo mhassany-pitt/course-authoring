@@ -1,0 +1,67 @@
+{
+  "id": "699249dd7e3947753a76646e",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:05.011Z",
+  "tags": [],
+  "identity": {
+    "id": "c_elementi_ispod_glavne_dijagonale__692364eae28428298e4ba75c-69232495e28428298e4b832b-1",
+    "title": "c_elementi_ispod_glavne_dijagonale",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Rad_sa_dijagonalama_matrica__692364eae28428298e4ba75c?index=2"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji postavlja sve elemente ispod glavne dijagonale na 0, a zatim ispisuje matricu na ekran.",
+    "source_code": "#include <stdio.h>\r\n#define DIM 5\r\n\r\nint main() {\r\n    int i, j;\r\n    int matrica[DIM][DIM] = {\r\n        {1, 2, 3, 4, 5},\r\n        {6, 7, 8, 9, 9},\r\n        {8, 7, 6, 5, 4},\r\n        {3, 2, 1, 1, 2},\r\n        {3, 4, 5, 6, 7}\r\n    };\r\n\r\n    /* Postavljanje elemenata ispod dijagonale na nulu */\r\n    for (i = 0; i < DIM; i++) {\r\n        for (j = 0; j < DIM; j++) {\r\n            if (i > j)\r\n                matrica[i][j] = 0;\r\n        }\r\n    }\r\n\r\n    printf(\"Matrica sada glasi:\\n\");\r\n    for (i = 0; i < DIM; i++) {\r\n        for (j = 0; j < DIM; j++) {\r\n            printf(\"%d \", matrica[i][j]);\r\n        }\r\n        printf(\"\\n\");\r\n    }\r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Rad_sa_dijagonalama_matrica__692364eae28428298e4ba75c?index=2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:05.012Z",
+  "updated_at": "2026-03-21T20:48:27.812Z",
+  "paws_id": 4578
+}

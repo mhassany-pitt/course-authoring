@@ -1,0 +1,124 @@
+{
+  "id": "6988ea113be3b366adec6cd3",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-08T19:54:57.193Z",
+  "tags": [],
+  "identity": {
+    "id": "pattern-matching-4-lti",
+    "title": "Pattern-matching query execution 4",
+    "type": "CodeVisualization"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/lti/launch?tool=dbqa&sub=pattern-matching-4&usr=adl01&grp=adl01"
+  },
+  "attribution": {
+    "created_at": "2021-01-02T22:58:51.000Z",
+    "provider": "DBQA",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": "University of Pittsburgh"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "SQL"
+    ]
+  },
+  "content": {
+    "prompt": "Pattern-matching query execution 4",
+    "source_code": ""
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "expert": {
+        "concepts": [
+          "LikePredicate",
+          "MultipleAttributeSelection",
+          "SingleTableSelection",
+          "UnderscoreCharacter",
+          "WhereClause"
+        ],
+        "note": ""
+      },
+      "sql_ontology ": {
+        "concepts": [
+          "Clause::WhereClause",
+          "DeleteStatement::WhereClause",
+          "FromClause::SingleTableSelection",
+          "LikePredicate::UnderscoreCharacter",
+          "Predicate::LikePredicate",
+          "ReservedCharacter::UnderscoreCharacter",
+          "SelectClause::MultipleAttributeSelection",
+          "SelectFromViewStatement::WhereClause",
+          "SelectStatement::WhereClause",
+          "SubQuery::WhereClause",
+          "UpdateStatement::WhereClause"
+        ],
+        "note": ""
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://adapt2.sis.pitt.edu/lti/launch?tool=dbqa&sub=pattern-matching-4"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=392",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=392",
+      "context_name": "Database Management(LTI-DBQA)",
+      "used_at": "2020-07-24T10:47:34.000Z",
+      "used_by": "Kamil Akhuseyinoglu"
+    },
+    {
+      "context_id": "cid=408",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=408",
+      "context_name": "Database Management (Aalto +SQL-Tutor+DBQA)",
+      "used_at": "2021-01-29T20:23:45.000Z",
+      "used_by": "Kamil Akhuseyinoglu"
+    },
+    {
+      "context_id": "cid=447",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=447",
+      "context_name": "Temple MIS2502 2025-Spring 1-SQL",
+      "used_at": "2024-12-11T10:46:15.000Z",
+      "used_by": "Rully Agus Hendrawan"
+    },
+    {
+      "context_id": "cid=451",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=451",
+      "context_name": "BINUS-SQL-2025",
+      "used_at": "2025-02-12T23:04:56.000Z",
+      "used_by": "Rully Agus Hendrawan"
+    }
+  ],
+  "created_at": "2026-02-08T19:54:57.194Z",
+  "updated_at": "2026-03-21T20:50:23.177Z",
+  "paws_id": 2651
+}

@@ -1,0 +1,67 @@
+{
+  "id": "699249dd7e3947753a766472",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:05.118Z",
+  "tags": [],
+  "identity": {
+    "id": "c_proizvod_elemenata_na_dijagonalama_neparan__692364eae28428298e4ba75c-69236802e28428298e4baa19-4",
+    "title": "c_proizvod_elemenata_na_dijagonalama_neparan",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Rad_sa_dijagonalama_matrica__692364eae28428298e4ba75c?index=4"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji ispisuje proizvod svih elemenata na glavnoj i sporednoj dijagonali matrice dimenzija 5x5.",
+    "source_code": "#include <stdio.h>\r\n#define DIM 5\r\n\r\nint main() {\r\n    int i;\r\n    long int proizvod = 1;\r\n    int matrica[DIM][DIM] = {\r\n        {1, 2, 3, 4, 5},\r\n        {6, 7, 8, 9, 6},\r\n        {8, 7, 6, 5, 11},\r\n        {3, 2, 1, 1, 4},\r\n        {7, 8, 3, 2, 2}\r\n    };\r\n\r\n    for(i = 0; i < DIM; i++){\r\n        proizvod *= matrica[i][i]; /* elementi sa glavne dijagonale */\r\n        proizvod *= matrica[i][DIM-1-i]; /* elementi sa sporedne dijagonale */\r\n    }\r\n    \r\n    proizvod /= matrica[DIM/2][DIM/2];\r\n    printf(\"Proizvod elemenata na glavnoj i sporednoj dijagonali je %ld\", proizvod);\r\n\r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Rad_sa_dijagonalama_matrica__692364eae28428298e4ba75c?index=4"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:05.119Z",
+  "updated_at": "2026-03-21T20:47:37.739Z",
+  "paws_id": 4541
+}

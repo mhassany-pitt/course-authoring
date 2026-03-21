@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-02-18T00:00:00.000Z",
-  "updated_at": "2026-01-17T05:28:28.567Z",
+  "updated_at": "2026-03-21T20:49:17.913Z",
   "tags": [],
   "identity": {
     "id": "ps_python_nested_loops_for_2",
     "title": "Nested Loops For 2",
-    "type": "Parsons Problem"
+    "type": "ParsonsProblem"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_loops_for_2&grp=demo&usr=demo&sid=-1&cid=-1"
+    "demo_url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_loops_for_2&grp=demo&usr=demo&sid=-1&cid=-1"
   },
   "attribution": {
     "created_at": "2025-02-18T00:00:00.000Z",
@@ -52,8 +52,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_loops_for_2"
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_loops_for_2"
     }
   ],
   "rights": {
@@ -64,11 +64,12 @@
   "uses": [
     {
       "context_id": "cid=448",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=448",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=448",
       "context_name": "Python: Temple-MIS2502-2025-Spring-2Python | Temple MIS2502 2025-Spring 2-Python > Nested Loops",
       "used_at": "2024-12-12T15:41:33.000Z",
       "used_by": "Rully Agus Hendrawan, Rully Agus Hendrawan - "
     }
   ],
-  "created_at": "2025-12-31T06:04:00.012Z"
+  "created_at": "2025-12-31T06:04:00.012Z",
+  "paws_id": 3491
 }

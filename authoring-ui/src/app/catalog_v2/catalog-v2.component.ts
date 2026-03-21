@@ -21,7 +21,7 @@ type QuickFilterSectionKey =
   | 'authors'
   | 'providers'
   | 'knowledgeComponents'
-  | 'deliveryFormat'
+  | 'deliveryProtocol'
   | 'licenses'
   | 'tags';
 
@@ -45,7 +45,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   tagKVs: FilterKV[] = [];
   plKVs: FilterKV[] = [];
   licenseKVs: FilterKV[] = [];
-  deliveryFormatKVs: FilterKV[] = [];
+  deliveryProtocolKVs: FilterKV[] = [];
   conceptKVs: FilterKV[] = [];
   conceptKVsByCategory: Record<string, FilterKV[]> = {};
   knowledgeComponentCategories: string[] = ['All'];
@@ -110,7 +110,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     authors: false,
     providers: true,
     knowledgeComponents: false,
-    deliveryFormat: false,
+    deliveryProtocol: false,
     licenses: false,
     tags: false,
   };
@@ -151,7 +151,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       },
     );
     this.filterService.register(
-      'deliveryFormatIn',
+      'deliveryProtocolIn',
       (value: any, filters: string[] | null | undefined) => {
         if (!filters || !Array.isArray(filters) || !filters.length) return true;
         if (!Array.isArray(value)) return false;
@@ -291,7 +291,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       this.authorKVs = [];
       this.tagKVs = [];
       this.plKVs = [];
-      this.deliveryFormatKVs = [];
+      this.deliveryProtocolKVs = [];
       this.conceptKVs = [];
       this.providersKVs = [];
       this.licenseKVs = [];
@@ -302,7 +302,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     const authorCounts = new Map<string, number>();
     const tagCounts = new Map<string, number>();
     const plCounts = new Map<string, number>();
-    const deliveryFormatCounts = new Map<string, number>();
+    const deliveryProtocolCounts = new Map<string, number>();
     const conceptCounts = new Map<string, number>();
     const conceptCountsByCategory = new Map<string, Map<string, number>>();
     const categorySet = new Set<string>();
@@ -343,15 +343,15 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         plCounts.set(label, (plCounts.get(label) || 0) + 1);
       });
 
-      const deliveryFormatSet = new Set<string>();
+      const deliveryProtocolSet = new Set<string>();
       (item.delivery || []).forEach((delivery: any) => {
         const label = (delivery?.format || '').trim();
-        if (label) deliveryFormatSet.add(label);
+        if (label) deliveryProtocolSet.add(label);
       });
-      deliveryFormatSet.forEach((label) => {
-        deliveryFormatCounts.set(
+      deliveryProtocolSet.forEach((label) => {
+        deliveryProtocolCounts.set(
           label,
-          (deliveryFormatCounts.get(label) || 0) + 1,
+          (deliveryProtocolCounts.get(label) || 0) + 1,
         );
       });
 
@@ -406,7 +406,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     this.authorKVs = this.toKeyValue(authorCounts);
     this.tagKVs = this.toKeyValue(tagCounts);
     this.plKVs = this.toKeyValue(plCounts);
-    this.deliveryFormatKVs = this.toKeyValue(deliveryFormatCounts);
+    this.deliveryProtocolKVs = this.toKeyValue(deliveryProtocolCounts);
     this.conceptKVs = this.toKeyValue(conceptCounts);
     const sortedCategories = Array.from(categorySet).sort((a, b) =>
       a.localeCompare(b),
@@ -425,7 +425,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     this.allFacetLabels = {
       'identity.type': this.typeKVs.map((kv) => kv.label),
       'languages.programming_languages': this.plKVs.map((kv) => kv.label),
-      delivery: this.deliveryFormatKVs.map((kv) => kv.label),
+      delivery: this.deliveryProtocolKVs.map((kv) => kv.label),
       'classification.knowledge_components': this.conceptKVs.map(
         (kv) => kv.label,
       ),
@@ -648,7 +648,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         this.authorKVs = kvs;
         return;
       case 'delivery':
-        this.deliveryFormatKVs = kvs;
+        this.deliveryProtocolKVs = kvs;
         return;
       case 'classification.knowledge_components':
         this.conceptKVs = kvs;
@@ -744,7 +744,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       case 'attribution.authors':
         return this.authorKVs;
       case 'delivery':
-        return this.deliveryFormatKVs;
+        return this.deliveryProtocolKVs;
       case 'classification.knowledge_components':
         return this.conceptKVs;
       case 'attribution.provider':
@@ -818,7 +818,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       case 'rights.license':
         return 'Licenses';
       case 'delivery':
-        return 'Delivery Format';
+        return 'Delivery Protocol';
       case 'tags':
         return 'Tags';
       default:
@@ -936,7 +936,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       return 'arrayStringIn';
     }
     if (field === 'delivery') {
-      return 'deliveryFormatIn';
+      return 'deliveryProtocolIn';
     }
     if (field === 'classification.knowledge_components') {
       return 'knowledgeConceptIn';

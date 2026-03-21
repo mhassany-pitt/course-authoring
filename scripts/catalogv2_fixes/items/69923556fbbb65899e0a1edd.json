@@ -1,0 +1,80 @@
+{
+  "id": "69923556fbbb65899e0a1edd",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T00:00:00.000Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-python-LoopsAlongaRoworColumn-3",
+    "title": "codecheck-python-LoopsAlongaRoworColumn-3",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-python-LoopsAlongaRoworColumn-3"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00.000Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Given a two-dimensional array of integers, an index, and a string R or C, return the sum of the elements in that row or column. ",
+    "source_code": "\r\n# Given a two-dimensional array of integers, an index, and a string \r\n# containing the letter R or C, return the sum of the elements in \r\n# that row or column. For example, if the input is [[1,2,3],[4,5,6]] with\r\n# an index of 0 and string of 'R', the result would be 6 (because 1 + 2 + 3 = 6).\r\n# In the same case, if the string was 'C' instead, the results would be 5\r\n# because 1 + 4 = 5. You may assume that both dimensions of the array\r\n# have at least one element and that the given index exists for the row/column.\r\n\r\ndef sumRowOrCol(arr, index, rowOrCol):\r\n   # Your code here...\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Two-Dimensional Arrays",
+          "Loops Along a Row or Column"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-python-LoopsAlongaRoworColumn-3"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-python-LoopsAlongaRoworColumn-3"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T21:06:30.530Z",
+  "updated_at": "2026-03-21T20:48:49.048Z",
+  "paws_id": 3034
+}

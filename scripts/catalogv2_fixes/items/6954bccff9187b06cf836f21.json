@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-03T08:00:00.000Z",
-  "updated_at": "2026-01-17T05:28:07.725Z",
+  "updated_at": "2026-03-21T20:50:03.152Z",
   "tags": [],
   "identity": {
     "id": "py_same_name_list_es",
     "title": "PCRS C3-PL  Same Name List",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/232/embed?act=PCRS&sub=py_same_name_list_es"
@@ -86,7 +86,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/232/embed?act=PCRS&sub=py_same_name_list_es"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/232/embed?act=PCRS&sub=py_same_name_list_es"
     }
   ],
@@ -96,5 +100,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.985Z"
+  "created_at": "2025-12-31T06:03:59.985Z",
+  "paws_id": 4085
 }

@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-09-21T08:13:21.000Z",
-  "updated_at": "2026-01-17T05:28:59.102Z",
+  "updated_at": "2026-03-21T20:49:29.823Z",
   "tags": [],
   "identity": {
     "id": "obj_truck",
     "title": "Truck class",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/455/embed?act=PCRS&sub=obj_truck"
@@ -83,7 +83,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/455/embed?act=PCRS&sub=obj_truck"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/455/embed?act=PCRS&sub=obj_truck"
     }
   ],
@@ -95,18 +99,19 @@
   "uses": [
     {
       "context_id": "cid=393",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
       "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Classes/Objects",
       "used_at": "2020-07-26T21:31:59.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=440",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
       "context_name": "Java: CMIS 2200 | Application Programming II > Module 2- Objects and Classes",
       "used_at": "2024-08-27T03:21:22.000Z",
       "used_by": "Pratibha Menon - "
     }
   ],
-  "created_at": "2025-12-31T06:04:00.054Z"
+  "created_at": "2025-12-31T06:04:00.054Z",
+  "paws_id": 2607
 }

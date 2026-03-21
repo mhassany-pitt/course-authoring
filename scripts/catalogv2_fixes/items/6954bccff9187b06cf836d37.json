@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T17:52:36.000Z",
-  "updated_at": "2026-01-17T05:26:59.395Z",
+  "updated_at": "2026-03-21T20:50:15.706Z",
   "tags": [],
   "identity": {
     "id": "files.j_work_hours__68bdb309f6cc3d7a9cc0986b",
     "title": "Reporting the Total Hours Each Employee Worked (Case 1)",
-    "type": "PCEX Set"
+    "type": "CodeConstruction"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc0986b?_t=1757542343776&index=0"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc0986b?_t=1757542343776&index=0"
   },
   "attribution": {
     "created_at": "2025-09-10T17:52:36.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc0986b?_t=1757542343776&index=0"
+      "protocol": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc0986b?_t=1757542343776&index=0"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc0986b?_t=1757542343776&index=0"
     }
   ],
   "rights": {
@@ -64,18 +68,19 @@
   "uses": [
     {
       "context_id": "cid=468",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
       "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > File processing",
       "used_at": "2025-09-03T18:00:26.000Z",
       "used_by": "Mohammad Hassany - "
     },
     {
       "context_id": "cid=470",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=470",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=470",
       "context_name": "Java: TestWEATUM2Fall2025 | TestWEATUM2Fall2025 > WorkHours",
       "used_at": "2025-09-11T15:04:14.000Z",
       "used_by": "ABLN, ABLN - University of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:03:59.930Z"
+  "created_at": "2025-12-31T06:03:59.930Z",
+  "paws_id": 4264
 }

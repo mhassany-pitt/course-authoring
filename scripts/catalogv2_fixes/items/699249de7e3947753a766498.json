@@ -1,0 +1,67 @@
+{
+  "id": "699249de7e3947753a766498",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:06.111Z",
+  "tags": [],
+  "identity": {
+    "id": "c_prebacivanje_u_drugi_niz__6910afee1b622a00857decdc-690f78da1b622a00857de7e6-2",
+    "title": "c_prebacivanje_u_drugi_niz",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_prebacivanje_elemenata_niza__6910afee1b622a00857decdc?index=2"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji od korisnika tra\u017ei unos niza od 5 cijelih brojeva, a zatim sve elemente tog niza prebacuje u drugi niz i ispisuje elemente drugog niza.",
+    "source_code": "#include <stdio.h>\r\n#define VELICINA 5\r\n\r\nint main() {\r\n    int niz1[VELICINA], niz2[VELICINA];\r\n    int i, min;\r\n   \r\n    /* unos niza */\r\n    for (i = 0; i < VELICINA; ++i) {\r\n        printf(\"Unesite %d. broj: \", i+1);\r\n        scanf(\"%d\", &niz1[i]);\r\n    }\r\n    \r\n    /* kopiranje elemenata u drugi niz */\r\n    for (i = 0; i < VELICINA; i++) {\r\n        niz2[i] = niz1[i];\r\n    }\r\n\r\n    /* ispis drugog niza */\r\n    printf(\"\\nElementi drugog niza su: \");\r\n    for (i = 0; i < VELICINA; i++) {\r\n        printf(\"%d \", niz2[i]);\r\n    }\r\n\r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_prebacivanje_elemenata_niza__6910afee1b622a00857decdc?index=2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:06.112Z",
+  "updated_at": "2026-03-21T20:49:59.120Z",
+  "paws_id": 4669
+}

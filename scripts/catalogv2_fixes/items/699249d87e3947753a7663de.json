@@ -1,0 +1,67 @@
+{
+  "id": "699249d87e3947753a7663de",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:00.901Z",
+  "tags": [],
+  "identity": {
+    "id": "Queue Class - Check if Element Exists__6941554cb71cfad9381fb1f2-69414b4fb71cfad9381fa3e4-1",
+    "title": "Queue Class - Check if Element Exists",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Queue__6941554cb71cfad9381fb1f2?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Aditya Joshi",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "In this example, you will use Queue class from queue provided by python. This class contains methods for adding a new element to the end and retrieving the first element of the queue. However it does not contain a method to check if the queue contains an element. We will define a function that will traverse the queue and return True if the queue contains the given element.",
+    "source_code": "from queue import Queue\r\n\r\nq = Queue()\r\nq.put(\"P1\")\r\nq.put(\"P2\")\r\nq.put(\"P3\")\r\n\r\ndef queue_contains(q, value):\r\n    found = False\r\n    temp = Queue()\r\n    \r\n    while not q.empty():\r\n        element = q.get()\r\n        if element == value:\r\n            found = True\r\n        temp.put (element)\r\n        \r\n    while not temp.empty():\r\n        q.put(temp.get())\r\n    return found"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Queue__6941554cb71cfad9381fb1f2?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:00.902Z",
+  "updated_at": "2026-03-21T20:50:14.360Z",
+  "paws_id": 4736
+}

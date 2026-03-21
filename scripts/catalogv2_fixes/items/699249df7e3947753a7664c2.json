@@ -1,0 +1,67 @@
+{
+  "id": "699249df7e3947753a7664c2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:07.186Z",
+  "tags": [],
+  "identity": {
+    "id": "c_ispis_unazad (for petlja)__68b9be49fce5207cc0b4d140-68b9bbcefce5207cc0b4d119-0",
+    "title": "c_ispis_unazad (for petlja)",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/For_petlja__68b9be49fce5207cc0b4d140?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji ispisuje na ekran brojeve od 1 do 5 unazad koriste\u0107i for petlju.",
+    "source_code": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint brojac;\r\n\tfor (brojac = 5; brojac >= 1; brojac--) {\r\n\t\tprintf(\"%d\\n\" , brojac);\r\n\t}\r\n\treturn 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/For_petlja__68b9be49fce5207cc0b4d140?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:07.187Z",
+  "updated_at": "2026-03-21T20:47:05.398Z",
+  "paws_id": 4512
+}

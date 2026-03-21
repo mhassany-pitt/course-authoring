@@ -320,7 +320,7 @@
         <!-- classification -->
         <section
           id="classification"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg hidden"
         >
           <div
             class="text-sm font-semibold cursor-pointer"
@@ -410,7 +410,7 @@
         <!-- pedagogy -->
         <section
           id="pedagogy"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg hidden"
         >
           <div
             class="text-sm font-semibold cursor-pointer"
@@ -504,7 +504,7 @@
                 class="flex items-center gap-2 p-2 border border-solid border-slate-200 bg-white rounded-md"
                 *ngFor="let d of item.delivery; let i = index"
               >
-                <span class="uppercase"> {{ d.format || "format" }}: </span>
+                <span class="uppercase"> {{ d.protocol || "protocol" }}: </span>
                 <a [href]="d.url" target="_blank">{{
                   d.url || "&lt;&lt;empty&gt;&gt;"
                 }}</a>

@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-02-18T11:21:01.000Z",
-  "updated_at": "2026-01-17T05:29:11.367Z",
+  "updated_at": "2026-03-21T20:47:55.885Z",
   "tags": [],
   "identity": {
     "id": "num_inversions_array",
     "title": "Find Num Inversions Array",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/438/embed?act=PCRS&sub=num_inversions_array"
@@ -80,7 +80,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/438/embed?act=PCRS&sub=num_inversions_array"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/438/embed?act=PCRS&sub=num_inversions_array"
     }
   ],
@@ -92,25 +96,26 @@
   "uses": [
     {
       "context_id": "cid=393",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
       "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Arrays/ArrayLists/LinkedLists",
       "used_at": "2020-07-26T21:31:59.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=406",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
       "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Loops / Arrays / Exceptions",
       "used_at": "2021-01-24T20:49:48.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=406",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
       "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Arrays/ArrayLists/LinkedLists",
       "used_at": "2021-01-24T20:49:48.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.065Z"
+  "created_at": "2025-12-31T06:04:00.065Z",
+  "paws_id": 2484
 }

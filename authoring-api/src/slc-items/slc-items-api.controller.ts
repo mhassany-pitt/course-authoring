@@ -1,10 +1,12 @@
 import {
   Body,
   Controller,
+  Delete,
   HttpException,
   Param,
   Patch,
   Post,
+  Put,
   Request,
 } from '@nestjs/common';
 import { SLCItemsService } from './slc-items.service';
@@ -39,9 +41,12 @@ export class SLCItemsAPIController {
     await this.throwIfNotValidApiToken(req);
     if (!req.headers['api-user-email'])
       throw new HttpException(`Missing 'api-user-email' header!`, 401);
-    return await this.catalog.create(req.headers['api-user-email'], body);
+    try {
+      return await this.catalog.create(req.headers['api-user-email'], body);
+    } catch (error) {
+      throw new HttpException(error.message, 500);
+    }
   }
-
   @Patch(':id')
   async update(
     @Param('id') id: string,
@@ -49,6 +54,39 @@ export class SLCItemsAPIController {
     @Body() body: any,
   ) {
     await this.throwIfNotValidApiToken(req);
-    return await this.catalog.update(id, null, body, true);
+    const existing = await this.catalog.read(id, null, true);
+    if (!existing)
+      throw new HttpException(`Item with id ${id} not found!`, 404);
+    try {
+      return await this.catalog.update(id, null, body, true);
+    } catch (error) {
+      throw new HttpException(error.message, 500);
+    }
+  }
+
+  @Delete(':id')
+  async delete(@Param('id') id: string, @Request() req: any) {
+    await this.throwIfNotValidApiToken(req);
+    const existing = await this.catalog.read(id, null, true);
+    if (!existing)
+      throw new HttpException(`Item with id ${id} not found!`, 404);
+    try {
+      return await this.catalog.delete(id, null, true);
+    } catch (error) {
+      throw new HttpException(error.message, 500);
+    }
+  }
+
+  @Put(':id/sync-to-aggregate')
+  async syncToAggregate(@Param('id') id: string, @Request() req: any) {
+    await this.throwIfNotValidApiToken(req);
+    const existing = await this.catalog.read(id, null, true);
+    if (!existing)
+      throw new HttpException(`Item with id ${id} not found!`, 404);
+    try {
+      return await this.catalog.syncToAggregate(id);
+    } catch (error) {
+      throw new HttpException(error.message, 500);
+    }
   }
 }

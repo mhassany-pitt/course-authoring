@@ -461,7 +461,7 @@
         <!-- classification -->
         <section
           id="classification"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg hidden"
         >
           <div class="text-sm font-semibold">Classification</div>
           <div class="flex flex-wrap items-end gap-2">
@@ -636,7 +636,7 @@
         <!-- pedagogy -->
         <section
           id="pedagogy"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
+          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg hidden"
         >
           <div class="text-sm font-semibold">Pedagogy</div>
           <label class="flex flex-col gap-1">
@@ -740,15 +740,15 @@
           <div class="flex flex-wrap items-end gap-2">
             <label class="w-40 flex flex-col gap-1">
               <span class="text-xs text-gray-600 flex items-center gap-1">
-                <span>Format (select or type)</span>
+                <span>Protocol (select or type)</span>
                 <i
                   class="fa fa-info-circle"
-                  (click)="showFieldInfo('deliveryFormat')"
+                  (click)="showFieldInfo('deliveryProtocol')"
                 ></i>
               </span>
               <p-dropdown
-                [options]="deliveryFormatOptions"
-                [(ngModel)]="deliveryFormat"
+                [options]="deliveryProtocolOptions"
+                [(ngModel)]="deliveryProtocol"
                 optionLabel="label"
                 optionValue="value"
                 placeholder="Select"
@@ -785,7 +785,7 @@
               class="flex items-center gap-2 p-2 border border-solid bg-white border-slate-200 hover:bg-gray-200 rounded-md"
               *ngFor="let d of model.delivery; let i = index"
             >
-              <span class="uppercase"> {{ d.format || "format" }}: </span>
+              <span class="uppercase"> {{ d.protocol || "protocol" }}: </span>
               <a [href]="d.url" target="_blank">{{
                 d.url || "&lt;&lt;empty&gt;&gt;"
               }}</a>

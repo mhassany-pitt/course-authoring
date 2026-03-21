@@ -1,0 +1,67 @@
+{
+  "id": "699249de7e3947753a7664a8",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:06.527Z",
+  "tags": [],
+  "identity": {
+    "id": "c_celzijus_farenhajt_konverzija__68d56ea863fa732f4df6775b-68d446df63fa732f4df6732d-0",
+    "title": "c_celzijus_farenhajt_konverzija",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Izrazi__68d56ea863fa732f4df6775b?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji tra\u017ei unos broja stepeni u Celzijusima i pretvara ih u Farenhajte prema formuli: F = C * (9/5) + 32. Program treba ispisati na ekran obje vrijednosti sa jednim decimalnim mjestom.",
+    "source_code": "#include <stdio.h>\r\n\r\nint main() {\r\n    double celzijus;\r\n    printf(\"Unesite broj stepeni u Celzijusima:\\n\");\r\n    scanf(\"%lf\", &celzijus);\r\n    \r\n    double farenhajt = (celzijus*9/5)+32;\r\n    printf(\"%.1f Celzijusa = %.1f Farenhajta\", celzijus, farenhajt);\r\n    \r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Izrazi__68d56ea863fa732f4df6775b?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:06.528Z",
+  "updated_at": "2026-03-21T20:49:21.700Z",
+  "paws_id": 4625
+}

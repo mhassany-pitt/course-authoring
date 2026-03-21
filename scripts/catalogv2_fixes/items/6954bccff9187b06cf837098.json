@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-14T02:18:14.000Z",
-  "updated_at": "2026-01-21T15:25:45.927Z",
+  "updated_at": "2026-03-21T20:49:29.656Z",
   "tags": [],
   "identity": {
     "id": "py_sorting_selection_sort",
     "title": "Selection sort",
-    "type": "PCEX Set"
+    "type": "CodeConstruction"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_sorting_selection_sort"
+    "demo_url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_sorting_selection_sort"
   },
   "attribution": {
     "created_at": "2021-09-14T02:18:14.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_sorting_selection_sort"
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_sorting_selection_sort"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_sorting_selection_sort"
     }
   ],
   "rights": {
@@ -64,46 +68,47 @@
   "uses": [
     {
       "context_id": "cid=413",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
       "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Sorting",
       "used_at": "2021-08-11T18:22:22.000Z",
       "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
     },
     {
       "context_id": "cid=422",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
       "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > Topic 8",
       "used_at": "2022-05-23T22:24:04.000Z",
       "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
     },
     {
       "context_id": "cid=423",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=423",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=423",
       "context_name": "Python: PYTHON001 | U of A CMPUT 175 Fall 2022 (Python II) > Topic 8 - Search, Recursion, Sorting",
       "used_at": "2022-08-10T17:36:04.000Z",
       "used_by": "Emma, McDonald - University of Alberta"
     },
     {
       "context_id": "cid=424",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=424",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=424",
       "context_name": "Python: PYTHON001 | U of A CMPUT 174 Fall 2022 (Python I) > Sorting",
       "used_at": "2022-08-10T17:36:39.000Z",
       "used_by": "Emma, McDonald - University of Alberta"
     },
     {
       "context_id": "cid=428",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=428",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=428",
       "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2023 (Python II) > Halfweek 9 - Sorting",
       "used_at": "2023-05-02T00:12:59.000Z",
       "used_by": "Emma, McDonald - University of Alberta"
     },
     {
       "context_id": "cid=431",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=431",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=431",
       "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2024 (Python II) > Halfweek 9 - Sorting",
       "used_at": "2024-05-03T14:17:30.000Z",
       "used_by": "Emma, McDonald - University of Alberta"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.035Z"
+  "created_at": "2025-12-31T06:04:00.035Z",
+  "paws_id": 2800
 }

@@ -1,0 +1,67 @@
+{
+  "id": "699249d67e3947753a766388",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:33:58.528Z",
+  "tags": [],
+  "identity": {
+    "id": "c_citanje_izmjena_datoteka_koristenjem_kursora__6951d3d8136f190edb6ca847-6951c268136f190edb6c9e63-0",
+    "title": "c_citanje_izmjena_datoteka_koristenjem_kursora",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Rad_s_kursorom_u_tekstualnim_datotekama__6951d3d8136f190edb6ca847?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji radi sa tekstualnom datotekom podaci.txt otvorenom u read-update re\u017eimu. Program treba prvo otvoriti datoteku i pomo\u0107u funkcije fseek pomjeriti kursor na kraj datoteke, a zatim pomo\u0107u funkcije ftell odrediti i ispisati trenutnu poziciju kursora (veli\u010dinu datoteke). Nakon toga program treba pomjeriti kursor na po\u010detak datoteke kori\u0161tenjem fseek sa parametrom SEEK_SET i ispisati prvih nekoliko znakova iz datoteke. Na kraju, program treba ponovo ispisati trenutnu poziciju kursora koriste\u0107i ftell i zatvoriti datoteku. Ukoliko datoteku nije mogu\u0107e otvoriti, program treba ispisati odgovaraju\u0107u poruku o gre\u0161ci.",
+    "source_code": "#include <stdio.h>\r\n\r\n\r\n/* Sadrzaj datoteke:\r\n\r\nOvo je primjer tekstualne datoteke.\r\nKoristi se za demonstraciju rada sa fseek i ftell funkcijama.\r\nPomjeranje kursora omogucava citanje sa razlicitih pozicija.\r\n\r\n*/\r\n\r\n\r\nint main() {\r\n    FILE *file = fopen(\"podaci.txt\", \"r+\");   /* read-update mod */\r\n    if (file == NULL) {\r\n        printf(\"Greska: ne mogu otvoriti podaci.txt\\n\");\r\n        return 1;\r\n    }\r\n\r\n    /* 1) pomjeramo kursor na kraj datoteke */\r\n    fseek(file, 0, SEEK_END);\r\n\r\n    /* 2) ftell daje trenutnu poziciju (najcesce broj bajtova = velicina datoteke) */\r\n    long velicina = ftell(file);\r\n    printf(\"Velicina datoteke (ftell na kraju): %ld\\n\", velicina);\r\n\r\n    /* 3) pomjeramo kursor na pocetak datoteke */\r\n    fseek(file, 0, SEEK_SET);\r\n\r\n    /* 4) procitaj i ispisi prvih N znakova */\r\n    int N = 20;\r\n    int c;\r\n    int brojac = 0;\r\n\r\n    printf(\"Prvih %d znakova: \", N);\r\n    while (brojac < N && (c = fgetc(file)) != EOF) {\r\n        printf(\"%c\", c);\r\n        brojac++;\r\n    }\r\n    printf(\"\\n\");\r\n\r\n    /* 5) ispisujemo trenutnu poziciju nakon citanja */\r\n    long pozicija = ftell(file);\r\n    printf(\"Pozicija kursora nakon citanja: %ld\\n\", pozicija);\r\n\r\n    fclose(file);\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Rad_s_kursorom_u_tekstualnim_datotekama__6951d3d8136f190edb6ca847?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:33:58.529Z",
+  "updated_at": "2026-03-21T20:49:31.633Z",
+  "paws_id": 4639
+}

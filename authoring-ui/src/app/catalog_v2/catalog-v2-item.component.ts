@@ -33,14 +33,14 @@ export class CatalogV2ItemComponent implements OnInit, OnDestroy {
   _t: any = {
     identity: true,
     languages: true,
-    attribution: false,
-    rights: false,
+    attribution: true,
+    rights: true,
     content: true,
-    classification: false,
-    'knowledge-components': false,
-    pedagogy: false,
-    delivery: false,
-    uses: false,
+    classification: true,
+    'knowledge-components': true,
+    pedagogy: true,
+    delivery: true,
+    uses: true,
   }; // toggles
 
   private routeSub: Subscription | undefined;

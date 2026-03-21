@@ -79,6 +79,7 @@ export class CoursesController {
       r.id = `${r.id}`;
       delete r.providers;
     });
+    const catalog_v2_protocols = {};
     const providers = new Set<string>();
     course.units?.forEach((u: any, index: number) => {
       u.id = `${u.id}`;
@@ -92,6 +93,14 @@ export class CoursesController {
       // find providers
       Object.values(u.activities || {}).forEach((r: any[]) => {
         r.forEach(a => providers.add(a.provider_id));
+        r.forEach(a => {
+          a.delivery?.forEach((d: any) => {
+            if (!catalog_v2_protocols[a.provider_id]) 
+              catalog_v2_protocols[a.provider_id] = new Set<string>();
+            if (d.protocol) catalog_v2_protocols[a.provider_id].add(d.protocol.toLowerCase());
+          });
+          delete a.delivery;
+        });
       });
     });
     course.units?.forEach((u: any) => {
@@ -108,6 +117,14 @@ export class CoursesController {
     delete course.term;
 
     course.provider_protocols = this.courses.getProviderSupportedProtocols([...providers]);
+
+    // merge protocols from catalog-v2 items
+    for (const provider_id of Object.keys(catalog_v2_protocols)) {
+      course.provider_protocols[provider_id] = Array.from(new Set([
+        ...(course.provider_protocols[provider_id] || []),
+        ...Array.from(catalog_v2_protocols[provider_id])
+      ]));
+    }
 
     return course;
   }

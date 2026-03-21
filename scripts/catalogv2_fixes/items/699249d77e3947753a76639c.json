@@ -1,0 +1,67 @@
+{
+  "id": "699249d77e3947753a76639c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:33:59.055Z",
+  "tags": [],
+  "identity": {
+    "id": "c_citanje_iz_bin_datoteke__694f41e6136f190edb6b1628-694d106d136f190edb69c54a-1",
+    "title": "c_citanje_iz_bin_datoteke",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Citanje_iz_binarnih_datoteka__694f41e6136f190edb6b1628?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji omogu\u0107ava \u010ditanje podataka o osobama iz binarne datoteke baza.dat. Datoteka sadr\u017ei zapise tipa Osoba, pri \u010demu svaki zapis obuhvata ime osobe i broj godina. Potrebno je definisati strukturu Osoba i funkciju ucitaj koja prima pokaziva\u010d na niz struktura i iz binarne datoteke u\u010ditava maksimalno 100 zapisa kori\u0161tenjem funkcije fread. Funkcija treba vratiti broj uspje\u0161no u\u010ditanih zapisa. U glavnom programu potrebno je pozvati funkciju ucitaj, a zatim ispisati ukupan broj u\u010ditanih osoba i tabelarni prikaz njihovih imena i godina. Ukoliko datoteku nije mogu\u0107e otvoriti ili u njoj nema zapisa, program treba ispisati odgovaraju\u0107u poruku.\n",
+    "source_code": "#include <stdio.h>\r\n\r\n#define KAPACITET 100\r\n\r\nstruct Osoba {\r\n    char ime[20];\r\n    int godine;\r\n};\r\n\r\nint ucitaj(struct Osoba *imenik) {\r\n    FILE *dat = fopen(\"baza.dat\", \"rb\");\r\n    if (dat == NULL) {\r\n        printf(\"Greska pri otvaranju datoteke.\\n\");\r\n        return 0;\r\n    }\r\n\r\n    int ucitano = fread(imenik, sizeof(struct Osoba), KAPACITET, dat);\r\n\r\n    fclose(dat);\r\n    return ucitano;\r\n}\r\n\r\nint main() {\r\n    struct Osoba imenik[KAPACITET];\r\n    int broj;\r\n\r\n    broj = ucitaj(imenik);\r\n\r\n    if (broj == 0) {\r\n        printf(\"Nema ucitanih zapisa.\\n\");\r\n        return 0;\r\n    }\r\n\r\n    printf(\"Ucitano osoba: %d\\n\", broj);\r\n    printf(\"-------------------------\\n\");\r\n    printf(\"%-20s %s\\n\", \"Ime\", \"Godine\");\r\n    printf(\"-------------------------\\n\");\r\n\r\n    for (int i = 0; i < broj; i++) {\r\n        printf(\"%-20s %d\\n\", imenik[i].ime, imenik[i].godine);\r\n    }\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Citanje_iz_binarnih_datoteka__694f41e6136f190edb6b1628?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:33:59.056Z",
+  "updated_at": "2026-03-21T20:49:32.270Z",
+  "paws_id": 4640
+}

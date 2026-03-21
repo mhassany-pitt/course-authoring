@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2018-12-06T20:19:46.000Z",
-  "updated_at": "2026-01-17T20:33:45.904Z",
+  "updated_at": "2026-03-21T20:48:51.418Z",
   "tags": [],
   "identity": {
     "id": "boolean_expressions_memphis",
     "title": "Boolean expressions (Memphis)",
-    "type": "Example"
+    "type": "CodeConstruction"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/boolean_expressions_memphis"
   },
   "attribution": {
     "created_at": "2018-12-06T20:19:46.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -112,7 +112,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/boolean_expressions_memphis"
     }
   ],
@@ -124,11 +124,12 @@
   "uses": [
     {
       "context_id": "cid=367",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
       "context_name": "Java: INFSCI 0017 | CSEdPad test course (CS1 Memphis) > Logical operations",
       "used_at": "2018-11-30T09:02:48.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.081Z"
+  "created_at": "2025-12-31T06:04:00.081Z",
+  "paws_id": 2364
 }

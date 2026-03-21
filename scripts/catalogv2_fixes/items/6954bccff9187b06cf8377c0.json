@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T20:47:40.660Z",
+  "updated_at": "2026-03-21T20:49:00.065Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "jFor4",
     "title": "Loop For 4",
-    "type": "Question"
+    "type": "PredictingFinalResult"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jfor4&act=Loops_for&sub=jFor4&svc=progvis"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jfor4&act=Loops_for&sub=jFor4&svc=progvis"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -140,8 +140,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jfor4&act=Loops_for&sub=jFor4&svc=progvis"
+      "protocol": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jfor4&act=Loops_for&sub=jFor4&svc=progvis"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jfor4&act=Loops_for&sub=jFor4&svc=progvis"
     }
   ],
   "rights": {
@@ -152,25 +156,26 @@
   "uses": [
     {
       "context_id": "cid=1",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=1",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=1",
       "context_name": "Java: INFSCI 0017 | Introduction to Java Programming > Loops For",
       "used_at": "2013-05-23T12:19:44.000Z",
       "used_by": "Administrator - University of Pittsburgh"
     },
     {
       "context_id": "cid=17",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=17",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=17",
       "context_name": "Java: INFSCI 0017 | Introduction to Java Programming (Fall 2014-ae) > Loops For",
       "used_at": "2014-09-11T11:50:18.000Z",
       "used_by": "Administrator - University of Pittsburgh"
     },
     {
       "context_id": "cid=439",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=439",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=439",
       "context_name": "Java: CMIS 1200 | Application Programming I > Module 4b- For loops",
       "used_at": "2024-08-21T17:05:02.000Z",
       "used_by": "Pratibha Menon - "
     }
   ],
-  "created_at": "2025-12-31T06:04:00.202Z"
+  "created_at": "2025-12-31T06:04:00.202Z",
+  "paws_id": 310
 }

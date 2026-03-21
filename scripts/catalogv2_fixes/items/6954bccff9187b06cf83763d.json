@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T12:58:03.350Z",
+  "updated_at": "2026-03-21T20:47:59.520Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "patternsearch.c",
     "title": "IS12:: patternsearch.c (12.3)",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=patternsearch.c&svc=progvis&sid=demo"
+    "demo_url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=patternsearch.c&svc=progvis&sid=demo"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
@@ -88,8 +88,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=patternsearch.c&svc=progvis"
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=patternsearch.c&svc=progvis"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=patternsearch.c&svc=progvis"
     }
   ],
   "rights": {
@@ -98,5 +102,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.176Z"
+  "created_at": "2025-12-31T06:04:00.176Z",
+  "paws_id": 818
 }

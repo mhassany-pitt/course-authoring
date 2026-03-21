@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-03T08:00:00.000Z",
-  "updated_at": "2026-01-17T05:28:07.115Z",
+  "updated_at": "2026-03-21T20:47:22.526Z",
   "tags": [],
   "identity": {
     "id": "py_mononym_es",
     "title": "PCRS C3-PL  Mononym",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/225/embed?act=PCRS&sub=py_mononym_es"
@@ -78,7 +78,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/225/embed?act=PCRS&sub=py_mononym_es"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/225/embed?act=PCRS&sub=py_mononym_es"
     }
   ],
@@ -88,5 +92,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.984Z"
+  "created_at": "2025-12-31T06:03:59.984Z",
+  "paws_id": 4079
 }

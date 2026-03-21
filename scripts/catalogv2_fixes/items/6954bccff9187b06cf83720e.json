@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2018-12-21T11:37:21.000Z",
-  "updated_at": "2026-01-17T20:33:44.973Z",
+  "updated_at": "2026-03-21T20:48:18.006Z",
   "tags": [],
   "identity": {
     "id": "while_memphis",
     "title": "While (Memphis)",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/while_memphis"
   },
   "attribution": {
     "created_at": "2018-12-21T11:37:21.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -106,7 +106,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/while_memphis"
     }
   ],
@@ -118,11 +118,12 @@
   "uses": [
     {
       "context_id": "cid=367",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=367",
       "context_name": "Java: INFSCI 0017 | CSEdPad test course (CS1 Memphis) > While Loops",
       "used_at": "2018-11-30T09:02:48.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.080Z"
+  "created_at": "2025-12-31T06:04:00.080Z",
+  "paws_id": 2372
 }

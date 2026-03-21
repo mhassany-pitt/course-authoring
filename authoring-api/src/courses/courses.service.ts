@@ -103,7 +103,8 @@ export class CoursesService {
     };
 
     return only.reduce((acc, curr) => {
-      acc[curr] = mapping[curr].split(",");
+      if (mapping[curr]) 
+        acc[curr] = mapping[curr].split(",");
       return acc;
     }, {});
   }

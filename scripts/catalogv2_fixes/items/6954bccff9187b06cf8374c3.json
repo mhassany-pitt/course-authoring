@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2015-11-16T00:18:19.000Z",
-  "updated_at": "2026-01-17T12:57:05.630Z",
+  "updated_at": "2026-03-21T20:50:02.273Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "pyt10.24",
     "title": "Exceptions 3",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.24&svc=progvis&sid=demo"
+    "demo_url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.24&svc=progvis&sid=demo"
   },
   "attribution": {
     "created_at": "2015-11-16T00:18:19.000Z",
@@ -90,8 +90,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.24&svc=progvis"
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.24&svc=progvis"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt10.24&svc=progvis"
     }
   ],
   "rights": {
@@ -102,18 +106,19 @@
   "uses": [
     {
       "context_id": "cid=23",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=23",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=23",
       "context_name": "Python: PYTHON001 | Python Course (v1) > Exceptions",
       "used_at": "2015-05-11T10:25:58.000Z",
       "used_by": "Python Admin - University of Pittsburgh"
     },
     {
       "context_id": "cid=344",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
       "context_name": "Python: PYTHON001 | PythonCourseV1Clones > Exceptions",
       "used_at": "2017-05-22T17:58:24.000Z",
       "used_by": "Roya Hosseini - University of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.140Z"
+  "created_at": "2025-12-31T06:04:00.140Z",
+  "paws_id": 1263
 }

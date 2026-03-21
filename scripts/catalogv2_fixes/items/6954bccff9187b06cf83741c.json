@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-09-16T14:07:45.000Z",
-  "updated_at": "2026-01-17T20:33:57.530Z",
+  "updated_at": "2026-03-21T20:47:08.824Z",
   "tags": [],
   "identity": {
     "id": "IS17_interface1_5",
     "title": "IS17_interface1_5",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface1_5"
   },
   "attribution": {
     "created_at": "2016-09-16T14:07:45.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -52,7 +52,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface1_5"
     }
   ],
@@ -62,5 +62,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.128Z"
+  "created_at": "2025-12-31T06:04:00.128Z",
+  "paws_id": 1683
 }

@@ -1,0 +1,80 @@
+{
+  "id": "69923553fbbb65899e0a1e73",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T00:00:00.000Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-python-Producing2DArrays-6",
+    "title": "codecheck-python-Producing2DArrays-6",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-python-Producing2DArrays-6"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00.000Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Repeat where the row lengths don't have to match. Fill the shorter array with zeroes. ",
+    "source_code": "\r\n# Given two two-dimensional rectangular arrays, return a\r\n# two-dimensional array that places them side by side in the\r\n# following pattern:\r\n# a[0][0] a[0][1] ... a[0][n] b[0][0] b[0][1] ... b[0][m]\r\n# a[1][0] a[1][1] ... a[1][n] b[1][0] b[1][1] ... b[1][m].\r\n# ...\r\n# If the row lengths don't match, fill the values corresponding\r\n# to the shorter array with zeroes\r\n\r\ndef sideBySide(a, b):\r\n   # Your code here...\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Two-Dimensional Arrays",
+          "Producing 2D Arrays"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-python-Producing2DArrays-6"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-python-Producing2DArrays-6"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T21:06:27.339Z",
+  "updated_at": "2026-03-21T20:49:17.803Z",
+  "paws_id": 3066
+}

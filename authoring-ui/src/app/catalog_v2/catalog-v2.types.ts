@@ -7,6 +7,7 @@ export interface HistoryOptions {
 
 export interface CatalogV2Item {
   id: string;
+  paws_id: number;
   user_email: string;
   status: 'public' | 'private' | 'deprecated';
   listed_at: string;
@@ -52,7 +53,7 @@ export interface CatalogV2Item {
     interaction_type: string;
   };
   delivery: {
-    format: string;
+    protocol: string;
     url: string;
   }[];
   rights: {
@@ -72,6 +73,7 @@ export interface CatalogV2Item {
 
 export const blankItem = (): CatalogV2Item => ({
   id: '',
+  paws_id: -1,
   user_email: '',
   status: 'public',
   listed_at: '',

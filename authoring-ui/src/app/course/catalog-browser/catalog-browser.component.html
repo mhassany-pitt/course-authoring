@@ -1,0 +1,438 @@
+<div
+  class="container mx-auto flex flex-col p-3 overflow-hidden bg-blue-50 border-2 border-dashed border-blue-300"
+  style="height: 32rem"
+>
+  <div class="mb-3 flex items-center gap-2">
+    <div class="text-base font-semibold text-blue-900">
+      Add activities for "{{ resourceName || "Untitled Resource" }}" in "{{
+        unitName || "Untitled Unit"
+      }}"
+    </div>
+    <span class="flex-grow"></span>
+    <p-button
+      type="button"
+      [label]="showSelectedOnly ? 'Selected Only' : 'All Items'"
+      severity="secondary"
+      [outlined]="!showSelectedOnly"
+      class="p-button-xs"
+      (click)="showSelectedOnly = !showSelectedOnly"
+    >
+    </p-button>
+    <p-button
+      type="button"
+      icon="fa fa-times"
+      severity="secondary"
+      class="p-button-xs"
+      (click)="close.emit()"
+    >
+    </p-button>
+  </div>
+
+  <div *ngIf="loading" class="py-2 text-[0.95rem] text-slate-600">
+    Loading catalog items...
+  </div>
+
+  <div *ngIf="!loading && error" class="py-2 text-[0.95rem] text-red-700">
+    {{ error }}
+  </div>
+
+  <div
+    *ngIf="!loading && !error"
+    class="min-h-0 flex h-full flex-1 items-stretch gap-4 max-[900px]:flex-col"
+  >
+    <div
+      class="sticky top-0 h-full w-96 shrink-0 self-start max-[900px]:w-full"
+    >
+      <div class="flex h-full w-full flex-col gap-2">
+        <div
+          class="bg-gray-100 shadow-md relative border border-slate-200 rounded-t-lg"
+        >
+          <p-iconField iconPosition="left" class="w-full">
+            <input
+              pInputText
+              type="text"
+              class="text-xl border-gray-100 w-full pr-4"
+              placeholder="Search ..."
+              [(ngModel)]="globalQuery"
+              (input)="filterTable(dt, $event)"
+            />
+            <p-inputIcon><i class="fa fa-search"></i></p-inputIcon>
+          </p-iconField>
+        </div>
+
+        <div
+          class="min-h-0 flex-1 border-l border-r border-b border-t-0 border-solid border-gray-100 p-4 rounded-b-md shadow-md bg-white relative overflow-y-auto flex flex-col items-start gap-2"
+        >
+          <div class="w-full flex items-center gap-2">
+            <div class="text-gray-400 text-xs uppercase">Click to toggle</div>
+            <span class="grow"></span>
+            <div class="min-w-fit -my-2">
+              <p-button
+                *ngIf="selectedFacetCount"
+                [label]="selectedFacetCount + ' Selected'"
+                icon="fa fa-times"
+                iconPos="right"
+                severity="danger"
+                outlined="true"
+                styleClass="px-2 py-1 text-xs items-center"
+                (click)="clearFacetFilters()"
+              >
+              </p-button>
+            </div>
+          </div>
+
+          <div class="w-full flex flex-wrap gap-1">
+            <div class="flex items-center gap-2 w-full">
+              <button
+                type="button"
+                class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                (click)="toggleQuickFilterSection('types')"
+                [attr.aria-expanded]="quickFilterSections.types"
+              >
+                Types:
+                <i
+                  class="fa"
+                  [class.fa-angle-down]="quickFilterSections.types"
+                  [class.fa-angle-right]="!quickFilterSections.types"
+                ></i>
+              </button>
+              <hr class="grow border-0 border-t border-gray-50 opacity-30" />
+            </div>
+            <div *ngIf="quickFilterSections.types" class="ml-2">
+              <a
+                *ngFor="let option of typeOptions"
+                class="text-xs cursor-pointer hover:underline"
+                [class.font-bold]="isFacetSelected(selectedTypes, option.label)"
+                [class.text-blue-700]="
+                  isFacetSelected(selectedTypes, option.label)
+                "
+                [class.text-gray-400]="
+                  !isFacetSelected(selectedTypes, option.label) &&
+                  !isFacetAvailable(option.count, selectedTypes, option.label)
+                "
+                (click)="toggleFacet(selectedTypes, option.label)"
+              >
+                {{ option.label }} ({{ option.count }}),
+              </a>
+            </div>
+          </div>
+
+          <div class="w-full flex flex-wrap gap-1">
+            <div class="flex items-center gap-2 w-full">
+              <button
+                type="button"
+                class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                (click)="toggleQuickFilterSection('providers')"
+                [attr.aria-expanded]="quickFilterSections.providers"
+              >
+                Providers:
+                <i
+                  class="fa"
+                  [class.fa-angle-down]="quickFilterSections.providers"
+                  [class.fa-angle-right]="!quickFilterSections.providers"
+                ></i>
+              </button>
+              <hr class="grow border-0 border-t border-gray-50 opacity-30" />
+            </div>
+            <div *ngIf="quickFilterSections.providers" class="ml-2">
+              <a
+                *ngFor="let option of providerOptions"
+                class="text-xs cursor-pointer hover:underline"
+                [class.font-bold]="
+                  isFacetSelected(selectedProviders, option.label)
+                "
+                [class.text-blue-700]="
+                  isFacetSelected(selectedProviders, option.label)
+                "
+                [class.text-gray-400]="
+                  !isFacetSelected(selectedProviders, option.label) &&
+                  !isFacetAvailable(
+                    option.count,
+                    selectedProviders,
+                    option.label
+                  )
+                "
+                (click)="toggleFacet(selectedProviders, option.label)"
+              >
+                {{ option.label }} ({{ option.count }}),
+              </a>
+            </div>
+          </div>
+
+          <div class="w-full flex flex-wrap gap-1">
+            <div class="flex items-center gap-2 w-full">
+              <button
+                type="button"
+                class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                (click)="toggleQuickFilterSection('contentLanguages')"
+                [attr.aria-expanded]="quickFilterSections.contentLanguages"
+              >
+                Content Language:
+                <i
+                  class="fa"
+                  [class.fa-angle-down]="quickFilterSections.contentLanguages"
+                  [class.fa-angle-right]="!quickFilterSections.contentLanguages"
+                ></i>
+              </button>
+              <hr class="grow border-0 border-t border-gray-50 opacity-30" />
+            </div>
+            <div *ngIf="quickFilterSections.contentLanguages" class="ml-2">
+              <a
+                *ngFor="let option of contentLanguageOptions"
+                class="text-xs cursor-pointer hover:underline"
+                [class.font-bold]="
+                  isFacetSelected(selectedContentLanguages, option.label)
+                "
+                [class.text-blue-700]="
+                  isFacetSelected(selectedContentLanguages, option.label)
+                "
+                [class.text-gray-400]="
+                  !isFacetSelected(selectedContentLanguages, option.label) &&
+                  !isFacetAvailable(
+                    option.count,
+                    selectedContentLanguages,
+                    option.label
+                  )
+                "
+                (click)="toggleFacet(selectedContentLanguages, option.label)"
+              >
+                {{ option.label }} ({{ option.count }}),
+              </a>
+            </div>
+          </div>
+
+          <div class="w-full flex flex-wrap gap-1">
+            <div class="flex items-center gap-2 w-full">
+              <button
+                type="button"
+                class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                (click)="toggleQuickFilterSection('authors')"
+                [attr.aria-expanded]="quickFilterSections.authors"
+              >
+                Authors:
+                <i
+                  class="fa"
+                  [class.fa-angle-down]="quickFilterSections.authors"
+                  [class.fa-angle-right]="!quickFilterSections.authors"
+                ></i>
+              </button>
+              <hr class="grow border-0 border-t border-gray-50 opacity-30" />
+              <a
+                *ngIf="hasMoreAuthors"
+                class="text-xs cursor-pointer hover:underline"
+                (click)="toggleAuthorsView()"
+              >
+                {{
+                  showAllAuthors
+                    ? "Show less"
+                    : "Show all (" + filteredAuthorOptions.length + ")"
+                }}
+              </a>
+              <input
+                type="text"
+                pInputText
+                placeholder="Filter authors ..."
+                class="text-xs px-2 py-1 w-32"
+                [ngModel]="authorsQuery"
+                (ngModelChange)="onAuthorsQueryChange($event)"
+              />
+            </div>
+            <div *ngIf="quickFilterSections.authors" class="ml-2">
+              <a
+                *ngFor="let option of visibleAuthorOptions"
+                class="text-xs cursor-pointer hover:underline"
+                [class.font-bold]="
+                  isFacetSelected(selectedAuthors, option.label)
+                "
+                [class.text-blue-700]="
+                  isFacetSelected(selectedAuthors, option.label)
+                "
+                [class.text-gray-400]="
+                  !isFacetSelected(selectedAuthors, option.label) &&
+                  !isFacetAvailable(option.count, selectedAuthors, option.label)
+                "
+                (click)="toggleFacet(selectedAuthors, option.label)"
+              >
+                {{ option.label }} ({{ option.count }}),
+              </a>
+              <span
+                *ngIf="!filteredAuthorOptions.length"
+                class="text-sm text-gray-400"
+              >
+                No authors yet.
+              </span>
+            </div>
+          </div>
+
+          <div class="w-full flex flex-wrap gap-1">
+            <div class="flex items-start gap-2 w-full pt-1">
+              <button
+                type="button"
+                class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                (click)="toggleQuickFilterSection('knowledgeComponents')"
+                [attr.aria-expanded]="quickFilterSections.knowledgeComponents"
+              >
+                KCs:
+                <i
+                  class="fa"
+                  [class.fa-angle-down]="
+                    quickFilterSections.knowledgeComponents
+                  "
+                  [class.fa-angle-right]="
+                    !quickFilterSections.knowledgeComponents
+                  "
+                ></i>
+              </button>
+              <hr class="grow border-0 border-t border-gray-50 opacity-30" />
+              <a
+                *ngIf="hasMoreKnowledgeComponents"
+                class="text-xs cursor-pointer hover:underline"
+                (click)="toggleKnowledgeComponentsView()"
+              >
+                {{
+                  showAllKnowledgeComponents
+                    ? "Show less"
+                    : "Show all (" +
+                      filteredKnowledgeComponentOptions.length +
+                      ")"
+                }}
+              </a>
+              <input
+                type="text"
+                pInputText
+                placeholder="Filter KCs ..."
+                class="text-xs px-2 py-1 w-32"
+                [ngModel]="knowledgeComponentsQuery"
+                (ngModelChange)="onKnowledgeComponentsQueryChange($event)"
+              />
+            </div>
+            <div class="flex items-center gap-2 ml-2">
+              <span class="text-xs text-gray-400">Category:</span>
+              <select
+                class="text-xs p-1 rounded border-gray-300 w-full"
+                [ngModel]="selectedKnowledgeComponentCategory"
+                (ngModelChange)="onKnowledgeComponentCategoryChange($event)"
+              >
+                <option
+                  *ngFor="let category of knowledgeComponentCategories"
+                  [ngValue]="category"
+                >
+                  {{ category }}
+                </option>
+              </select>
+            </div>
+            <div *ngIf="quickFilterSections.knowledgeComponents" class="ml-2">
+              <a
+                *ngFor="let option of visibleKnowledgeComponentOptions"
+                class="text-xs cursor-pointer hover:underline max-w-full whitespace-normal break-words"
+                [class.font-bold]="
+                  isFacetSelected(selectedKnowledgeComponents, option.label)
+                "
+                [class.text-blue-700]="
+                  isFacetSelected(selectedKnowledgeComponents, option.label)
+                "
+                [class.text-gray-400]="
+                  !isFacetSelected(selectedKnowledgeComponents, option.label) &&
+                  !isFacetAvailable(
+                    option.count,
+                    selectedKnowledgeComponents,
+                    option.label
+                  )
+                "
+                (click)="toggleFacet(selectedKnowledgeComponents, option.label)"
+              >
+                {{ option.label }} ({{ option.count }}),
+              </a>
+              <span
+                *ngIf="!filteredKnowledgeComponentOptions.length"
+                class="text-sm text-gray-400"
+              >
+                No knowledge components yet.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="min-w-0 flex h-full flex-1 flex-col overflow-hidden border border-solid border-gray-100 bg-white shadow-md"
+    >
+      <div class="min-h-0 flex-1 bg-white">
+        <p-table
+          #dt
+          [value]="filteredItems"
+          dataKey="id"
+          [(selection)]="selectedItems"
+          (onRowSelect)="addSelectedItem($event.data)"
+          (onRowUnselect)="removeSelectedItem($event.data)"
+          [paginator]="true"
+          [rows]="25"
+          [scrollable]="true"
+          scrollHeight="flex"
+          [globalFilterFields]="[
+            'identity.id',
+            'identity.title',
+            'identity.type',
+            'attribution.provider',
+            'attribution.authors',
+          ]"
+          styleClass="p-datatable-sm catalog-browser-table h-full"
+        >
+          <ng-template pTemplate="body" let-item>
+            <tr>
+              <td class="align-top">
+                <div class="flex items-center gap-2">
+                  <div class="px-2">
+                    <p-tableCheckbox [value]="item" />
+                  </div>
+                  <div class="flex flex-col gap-1 py-2 pr-2">
+                    <span class="text-xs uppercase text-gray-400">
+                      {{ item.identity.type || "Unknown Type" }} |
+                      {{ item.attribution.provider || "Unknown Provider" }} |
+                      {{ authorsText(item) }}
+                    </span>
+                    <div class="flex items-center gap-2">
+                      <span class="font-bold text-blue-700">
+                        {{ item.identity.title || "Untitled Item" }}
+                      </span>
+                      <a
+                        *ngIf="item.links.demo_url"
+                        [href]="item.links.demo_url"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-gray-400"
+                        title="View Demo"
+                      >
+                        <i class="fa fa-external-link"></i>
+                      </a>
+                    </div>
+                    <span class="ml-2 text-xs">
+                      ID: {{ item.identity.id || "-" }}
+                    </span>
+                    <span *ngIf="item.content?.prompt" class="ml-2 text-xs">
+                      Prompt: {{ item.content.prompt }}
+                    </span>
+                    <span *ngIf="item.tags?.length" class="ml-2 text-xs">
+                      Tags: {{ item.tags.join(", ") }}
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+
+          <ng-template pTemplate="emptymessage">
+            <tr>
+              <td colspan="2">
+                <div class="text-xs text-center text-gray-400 w-full p-4">
+                  no record matched, revise your filter keyword
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+</div>

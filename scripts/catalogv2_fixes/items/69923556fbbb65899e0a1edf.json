@@ -1,0 +1,80 @@
+{
+  "id": "69923556fbbb65899e0a1edf",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T00:00:00.000Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-python-LoopsAlongaRoworColumn-4",
+    "title": "codecheck-python-LoopsAlongaRoworColumn-4",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-python-LoopsAlongaRoworColumn-4"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00.000Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Given a two-dimensional array of integers, a row index r, and a column index c, return the sum of all elements in the given row and column. The element where the row and column meet should only be included once. ",
+    "source_code": "\r\n# Given a two-dimensional array of integers, a row index r, \r\n# and a column index c, return the sum of all elements in the \r\n# given row and column. The element where the row and column \r\n# meet should only be included once. You may assume that the\r\n# given index for row/column exists.\r\n\r\ndef sumRowAndCol(arr, rowIndex, colIndex):\r\n   # Your code here...\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Two-Dimensional Arrays",
+          "Loops Along a Row or Column"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-python-LoopsAlongaRoworColumn-4"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-python-LoopsAlongaRoworColumn-4"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T21:06:30.587Z",
+  "updated_at": "2026-03-21T20:49:32.076Z",
+  "paws_id": 3035
+}

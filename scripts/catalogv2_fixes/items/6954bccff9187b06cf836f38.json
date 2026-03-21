@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-03-28T00:42:50.000Z",
-  "updated_at": "2026-01-17T05:28:10.262Z",
+  "updated_at": "2026-03-21T20:47:46.088Z",
   "tags": [],
   "identity": {
     "id": "py_legal_age",
     "title": "Can Vote",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/15/embed?act=PCRS&sub=py_legal_age"
@@ -52,7 +52,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/15/embed?act=PCRS&sub=py_legal_age"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/15/embed?act=PCRS&sub=py_legal_age"
     }
   ],
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.988Z"
+  "created_at": "2025-12-31T06:03:59.988Z",
+  "paws_id": 3562
 }

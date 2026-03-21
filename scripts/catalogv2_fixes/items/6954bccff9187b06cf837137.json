@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-09-07T03:52:02.000Z",
-  "updated_at": "2026-01-17T20:45:53.826Z",
+  "updated_at": "2026-03-21T20:47:16.733Z",
   "tags": [],
   "identity": {
     "id": "java_if_else_tax_calculator",
     "title": "Tax Calculator",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/448/embed?act=PCRS&sub=java_if_else_tax_calculator"
@@ -74,7 +74,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/448/embed?act=PCRS&sub=java_if_else_tax_calculator"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/448/embed?act=PCRS&sub=java_if_else_tax_calculator"
     }
   ],
@@ -86,46 +90,47 @@
   "uses": [
     {
       "context_id": "cid=393",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=393",
       "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 > Decision Structures",
       "used_at": "2020-07-26T21:31:59.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=406",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=406",
       "context_name": "Java: LabsCMPINF401 | Wentworth COMP1050 Labs > Decision Structures",
       "used_at": "2021-01-24T20:49:48.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=409",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
       "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Decision Structures",
       "used_at": "2021-02-02T10:38:51.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=415",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
       "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Decision Structures",
       "used_at": "2021-09-07T10:17:36.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=418",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
       "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Decision Structures",
       "used_at": "2022-01-19T00:18:35.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=458",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
       "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Decision Structures",
       "used_at": "2025-04-09T09:52:36.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.054Z"
+  "created_at": "2025-12-31T06:04:00.054Z",
+  "paws_id": 2603
 }

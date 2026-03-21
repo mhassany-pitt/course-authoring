@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-03-23T15:11:52.000Z",
-  "updated_at": "2026-01-17T20:34:09.714Z",
+  "updated_at": "2026-03-21T20:48:21.161Z",
   "tags": [],
   "identity": {
     "id": "DataSelection2_version_1_pt",
     "title": "Selecting Multiple Attributes pt",
-    "type": "Example"
+    "type": "CodeConstruction"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/DataSelection2_version_1_pt"
   },
   "attribution": {
     "created_at": "2016-03-23T15:11:52.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -52,7 +52,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/DataSelection2_version_1_pt"
     }
   ],
@@ -64,11 +64,12 @@
   "uses": [
     {
       "context_id": "cid=335",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=335",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=335",
       "context_name": "SQL: IS 1022-2710 | Database Management (PT) > SELECT-FROM",
       "used_at": "2016-03-29T14:24:29.000Z",
       "used_by": "Rafael Araujo - University of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.135Z"
+  "created_at": "2025-12-31T06:04:00.135Z",
+  "paws_id": 1404
 }

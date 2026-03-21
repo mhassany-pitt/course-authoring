@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-05-28T14:02:36.000Z",
-  "updated_at": "2026-01-31T16:41:33.944Z",
+  "updated_at": "2026-03-21T20:48:00.784Z",
   "tags": [],
   "identity": {
     "id": "py_month_bill_es",
     "title": "Calcular factura mensual (ES)",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/336/embed?act=PCRS&sub=py_month_bill_es"
@@ -87,7 +87,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/336/embed?act=PCRS&sub=py_month_bill_es"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/336/embed?act=PCRS&sub=py_month_bill_es"
     }
   ],
@@ -99,11 +103,12 @@
   "uses": [
     {
       "context_id": "cid=461",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
       "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Variables y Operaciones",
       "used_at": "2025-05-25T23:03:06.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:03:59.937Z"
+  "created_at": "2025-12-31T06:03:59.937Z",
+  "paws_id": 4020
 }

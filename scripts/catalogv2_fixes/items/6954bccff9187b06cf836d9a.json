@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-05-12T15:21:10.000Z",
-  "updated_at": "2026-01-31T16:41:28.843Z",
+  "updated_at": "2026-03-21T20:47:21.053Z",
   "tags": [],
   "identity": {
     "id": "ps_python_queue_es",
     "title": "Construir una funci\u00f3n que use una estructura de cola (Queue)",
-    "type": "Question"
+    "type": "ParsonsProblem"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_queue_es&grp=demo&usr=demo&sid=-1&cid=-1"
+    "demo_url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_queue_es&grp=demo&usr=demo&sid=-1&cid=-1"
   },
   "attribution": {
     "created_at": "2025-05-12T15:21:10.000Z",
@@ -97,8 +97,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_queue_es"
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_queue_es"
     }
   ],
   "rights": {
@@ -107,5 +107,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.941Z"
+  "created_at": "2025-12-31T06:03:59.941Z",
+  "paws_id": 3986
 }

@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2019-02-23T16:57:47.000Z",
-  "updated_at": "2026-01-17T13:18:55.406Z",
+  "updated_at": "2026-03-21T20:49:41.140Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -11,10 +11,10 @@
   "identity": {
     "id": "listUpper",
     "title": "List Upper",
-    "type": "Question"
+    "type": "FreeCodingProblems"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/lti/launch?tool=codeworkout&sub=listUpper"
+    "demo_url": "https://adapt2.sis.pitt.edu/lti/launch?tool=codeworkout&sub=listUpper"
   },
   "attribution": {
     "created_at": "2019-02-23T16:57:47.000Z",
@@ -55,8 +55,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/lti/launch?tool=codeworkout&sub=listUpper"
+      "protocol": "LTI 1.1",
+      "url": "https://adapt2.sis.pitt.edu/lti/launch?tool=codeworkout&sub=listUpper"
     }
   ],
   "rights": {
@@ -67,18 +67,19 @@
   "uses": [
     {
       "context_id": "cid=368",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=368",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=368",
       "context_name": "Java: INFSCI 0017 | LTI > List",
       "used_at": "2019-02-17T22:05:39.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=374",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=374",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=374",
       "context_name": "Java: INFSCI 0017 | Java Course (AE-QP-PCEX-CodeWorkout) > ArrayList",
       "used_at": "2019-05-31T05:04:44.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.077Z"
+  "created_at": "2025-12-31T06:04:00.077Z",
+  "paws_id": 2404
 }

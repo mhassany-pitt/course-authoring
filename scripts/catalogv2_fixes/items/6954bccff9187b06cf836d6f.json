@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-05-31T15:06:22.000Z",
-  "updated_at": "2026-01-17T12:54:01.420Z",
+  "updated_at": "2026-03-21T20:49:51.892Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "testing_um2_arun_java_SLR_weat_ch__683b514227c37279d84e7db0-683a85ad27c37279d84e794b-1",
     "title": "testing_um2_arun_java_SLR_weat_ch",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/683b514227c37279d84e7db0?_t=1748718394194&index=1"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/683b514227c37279d84e7db0?_t=1748718394194&index=1"
   },
   "attribution": {
     "created_at": "2025-05-31T15:06:22.000Z",
@@ -54,8 +54,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/683b514227c37279d84e7db0?_t=1748718394194&index=1"
+      "protocol": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/683b514227c37279d84e7db0?_t=1748718394194&index=1"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/683b514227c37279d84e7db0?_t=1748718394194&index=1"
     }
   ],
   "rights": {
@@ -66,11 +70,12 @@
   "uses": [
     {
       "context_id": "cid=436",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=436",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=436",
       "context_name": "Java: moh70-DEMO4 | moh70-DEMO4 > 1",
       "used_at": "2024-08-19T12:55:19.000Z",
       "used_by": "Mohammad Hassany - University of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:03:59.937Z"
+  "created_at": "2025-12-31T06:03:59.937Z",
+  "paws_id": 4062
 }

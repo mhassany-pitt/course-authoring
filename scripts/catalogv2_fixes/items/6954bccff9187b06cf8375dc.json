@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-03T19:50:56.000Z",
-  "updated_at": "2026-01-17T20:47:05.499Z",
+  "updated_at": "2026-03-21T20:48:00.238Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "jusingFloat",
     "title": "Using float",
-    "type": "Question"
+    "type": "PredictingFinalResult"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jusingFloat&act=Primitive_Data_Types&sub=jusingFloat&svc=progvis"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jusingFloat&act=Primitive_Data_Types&sub=jusingFloat&svc=progvis"
   },
   "attribution": {
     "created_at": "2014-09-03T19:50:56.000Z",
@@ -83,8 +83,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jusingFloat&act=Primitive_Data_Types&sub=jusingFloat&svc=progvis"
+      "protocol": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jusingFloat&act=Primitive_Data_Types&sub=jusingFloat&svc=progvis"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=jusingFloat&act=Primitive_Data_Types&sub=jusingFloat&svc=progvis"
     }
   ],
   "rights": {
@@ -95,88 +99,89 @@
   "uses": [
     {
       "context_id": "cid=11",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=11",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=11",
       "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] > Primitive Data Types",
       "used_at": "2014-08-30T12:57:33.000Z",
       "used_by": "Administrator - University of Pittsburgh"
     },
     {
       "context_id": "cid=13",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=13",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=13",
       "context_name": "Java: INFSCI 0017 | Revised Java Course [clone] - Animated Examples > Primitive Data Types",
       "used_at": "2014-09-09T15:38:38.000Z",
       "used_by": "Administrator - University of Pittsburgh"
     },
     {
       "context_id": "cid=19",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=19",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=19",
       "context_name": "Java: INFSCI 0017 | Test - (ISD) JAVA course [clone] > Primitive Data Types",
       "used_at": "2014-11-06T10:59:11.000Z",
       "used_by": "Administrator - University of Pittsburgh"
     },
     {
       "context_id": "cid=21",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=21",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=21",
       "context_name": "Java: INFSCI 0017 2 | Demo Course 2 > Primitive Data Types",
       "used_at": "2015-04-15T13:10:54.000Z",
       "used_by": "Roya Hosseini - University of Pittsburgh"
     },
     {
       "context_id": "cid=29",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=29",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=29",
       "context_name": "Java: INFSCI 0017 | mg-gs-demo > Primitive Data Types",
       "used_at": "2015-09-14T11:10:25.000Z",
       "used_by": "Roya Hosseini - University of Pittsburgh"
     },
     {
       "context_id": "cid=31",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=31",
       "context_name": "Java: INFSCI 0017 | roya-clone-test-java > Primitive Data Types",
       "used_at": "2015-12-08T17:16:50.000Z",
       "used_by": "Roya Hosseini - University of Pittsburgh"
     },
     {
       "context_id": "cid=32",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=32",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=32",
       "context_name": "Java: INFSCI 0017 | Revised Java Course v2 > Primitive Data Types",
       "used_at": "2016-01-15T10:31:22.000Z",
       "used_by": "dguerra - Pitt"
     },
     {
       "context_id": "cid=339",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=339",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=339",
       "context_name": "Java: INFSCI 0017 | Java Study 2016 A > Variables and Types",
       "used_at": "2016-11-02T14:34:05.000Z",
       "used_by": "dguerra - Pitt"
     },
     {
       "context_id": "cid=361",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=361",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=361",
       "context_name": "Java: INFSCI 0017 | Revised Java Course v2 (QJ-AE-PCEX-PCRS) > Primitive Data Types",
       "used_at": "2018-09-11T14:14:28.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=366",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=366",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=366",
       "context_name": "Java: INFSCI 0017 | CSEdPad course v1 (all Java content) > Primitive Data Types",
       "used_at": "2018-10-18T16:24:57.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=374",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=374",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=374",
       "context_name": "Java: INFSCI 0017 | Java Course (AE-QP-PCEX-CodeWorkout) > Primitive Data Types",
       "used_at": "2019-05-31T05:04:44.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=382",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=382",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=382",
       "context_name": "Java: INFSCI 0017 | Revised Java Course v3 > Primitive Data Types",
       "used_at": "2020-01-11T16:29:42.000Z",
       "used_by": "Zak Risha, Zak Risha - University of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.169Z"
+  "created_at": "2025-12-31T06:04:00.169Z",
+  "paws_id": 557
 }

@@ -1,0 +1,67 @@
+{
+  "id": "699249d97e3947753a7663f6",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:01.778Z",
+  "tags": [],
+  "identity": {
+    "id": "c_funkcija_uporedi_stringove__693dd520443e2801de627aa0-693dd023443e2801de6277e0-1",
+    "title": "c_funkcija_uporedi_stringove",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Slanje_stringova_u_funkcije__693dd520443e2801de627aa0?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati funkciju koja daje poredak dva stringa po leksikografskom redoslijedu, te vra\u0107a -1 ako je prvi string manji od drugog, +1 ako je prvi string ve\u0107i od drugog, a 0 ako su jednaki.",
+    "source_code": "#include <stdio.h>\n\nint uporedi(const char* s1, const char* s2) {\n\twhile (*s1 != '\\0' && *s2 != '\\0') {\n\t\tif (*s1 < *s2) return -1;\n\t\tif (*s1 > *s2) return 1;\n\t\ts1++;\n\t\ts2++;\n\t}\n\tif (*s1 != '\\0') return 1;\n\tif (*s2 != '\\0') return -1;\n\treturn 0;\n}\n\nint main() {\n\tprintf(\"%d\", uporedi(\"uvod\", \"programiranje\"));\n\treturn 0;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Slanje_stringova_u_funkcije__693dd520443e2801de627aa0?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:01.779Z",
+  "updated_at": "2026-03-21T20:47:35.693Z",
+  "paws_id": 4539
+}

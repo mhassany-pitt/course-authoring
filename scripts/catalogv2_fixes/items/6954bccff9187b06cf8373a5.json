@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "broken:pending-fix",
   "listed_at": "2016-11-17T19:00:00.000Z",
-  "updated_at": "2026-01-17T20:51:19.973Z",
+  "updated_at": "2026-03-21T20:48:20.861Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -11,10 +11,10 @@
   "identity": {
     "id": "j2DArrays3_ForCons_MaxsubNoit",
     "title": "subproblem 373",
-    "type": "Question"
+    "type": "PredictingFinalResult"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=j2DArrays3_ForCons_MaxsubNoit&act=Subproblems&sub=j2DArrays3_ForCons_MaxsubNoit&svc="
+    "demo_url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=j2DArrays3_ForCons_MaxsubNoit&act=Subproblems&sub=j2DArrays3_ForCons_MaxsubNoit&svc="
   },
   "attribution": {
     "created_at": "2016-11-17T19:00:00.000Z",
@@ -55,8 +55,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=j2DArrays3_ForCons_MaxsubNoit&act=Subproblems&sub=j2DArrays3_ForCons_MaxsubNoit&svc="
+      "protocol": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=j2DArrays3_ForCons_MaxsubNoit&act=Subproblems&sub=j2DArrays3_ForCons_MaxsubNoit&svc="
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=j2DArrays3_ForCons_MaxsubNoit&act=Subproblems&sub=j2DArrays3_ForCons_MaxsubNoit&svc="
     }
   ],
   "rights": {
@@ -67,11 +71,12 @@
   "uses": [
     {
       "context_id": "cid=340",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=340",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=340",
       "context_name": "Java: INFSCI 0017 | Java Study 2016 Yun > Subproblems",
       "used_at": "2016-11-16T07:46:02.000Z",
       "used_by": "Yun Huang, Yun Huang - "
     }
   ],
-  "created_at": "2025-12-31T06:04:00.121Z"
+  "created_at": "2025-12-31T06:04:00.121Z",
+  "paws_id": 1841
 }

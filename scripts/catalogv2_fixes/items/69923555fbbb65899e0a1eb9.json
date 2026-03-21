@@ -1,0 +1,80 @@
+{
+  "id": "69923555fbbb65899e0a1eb9",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T00:00:00.000Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-python-Branches-3",
+    "title": "codecheck-python-Branches-3",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-python-Branches-3"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00.000Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "On a chessboard, fields are marked with a letter between a and h for the column and a number between 1 and 8 for the row. Given a position string, print the color of the field (white or black). ",
+    "source_code": "\r\n# On a chessboard, positions are marked with letters between a and h for the column and a\r\n# number between 1 and 8 for the row. The first place on the board, a1, is black. The next\r\n# is white, alternating across a row. Odd rows start with black, even rows start with white.\r\n\r\n# Give a 2 character input string with a letter (a-h) and a number (1-8), print \"Black\" or\r\n# \"White\" indicating if the square is black or white.\r\n\r\ninputStr = 'a1' \n\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Branches",
+          "Branches Without Functions"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-python-Branches-3"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-python-Branches-3"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T21:06:29.500Z",
+  "updated_at": "2026-03-21T20:50:23.127Z",
+  "paws_id": 2909
+}

@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-03T08:00:00.000Z",
-  "updated_at": "2026-01-17T05:27:55.870Z",
+  "updated_at": "2026-03-21T20:48:46.211Z",
   "tags": [],
   "identity": {
     "id": "py_special_list_class_es",
     "title": "PCRS C3-PL  Special List Class",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/256/embed?act=PCRS&sub=py_special_list_class_es"
@@ -112,7 +112,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/256/embed?act=PCRS&sub=py_special_list_class_es"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/256/embed?act=PCRS&sub=py_special_list_class_es"
     }
   ],
@@ -122,5 +126,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.969Z"
+  "created_at": "2025-12-31T06:03:59.969Z",
+  "paws_id": 4101
 }

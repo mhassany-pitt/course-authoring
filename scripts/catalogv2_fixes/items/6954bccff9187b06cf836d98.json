@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-05-12T15:21:10.000Z",
-  "updated_at": "2026-01-31T16:41:29.101Z",
+  "updated_at": "2026-03-21T20:50:07.029Z",
   "tags": [],
   "identity": {
     "id": "ps_python_search_min_max_index_es",
     "title": "Practicar la b\u00fasqueda del \u00edndice de los elementos m\u00ednimo y m\u00e1ximo",
-    "type": "Question"
+    "type": "ParsonsProblem"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_search_min_max_index_es&grp=demo&usr=demo&sid=-1&cid=-1"
+    "demo_url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_search_min_max_index_es&grp=demo&usr=demo&sid=-1&cid=-1"
   },
   "attribution": {
     "created_at": "2025-05-12T15:21:10.000Z",
@@ -83,8 +83,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_search_min_max_index_es"
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_search_min_max_index_es"
     }
   ],
   "rights": {
@@ -93,5 +93,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.941Z"
+  "created_at": "2025-12-31T06:03:59.941Z",
+  "paws_id": 3984
 }

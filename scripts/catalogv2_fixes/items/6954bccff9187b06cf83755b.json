@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2015-08-19T21:42:17.000Z",
-  "updated_at": "2026-01-17T12:57:28.774Z",
+  "updated_at": "2026-03-21T20:49:13.284Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "pyt2.1",
     "title": "Arithmatic Operations",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt2.1&svc=progvis&sid=demo"
+    "demo_url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt2.1&svc=progvis&sid=demo"
   },
   "attribution": {
     "created_at": "2015-08-19T21:42:17.000Z",
@@ -90,8 +90,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt2.1&svc=progvis"
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt2.1&svc=progvis"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/web_ex_NV0FGdaHzy/Dissection2?act=pyt2.1&svc=progvis"
     }
   ],
   "rights": {
@@ -102,39 +106,40 @@
   "uses": [
     {
       "context_id": "cid=23",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=23",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=23",
       "context_name": "Python: PYTHON001 | Python Course (v1) > Variables",
       "used_at": "2015-05-11T10:25:58.000Z",
       "used_by": "Python Admin - University of Pittsburgh"
     },
     {
       "context_id": "cid=25",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=25",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=25",
       "context_name": "Python: Python 101 | Python 101 (Beginner) > Basic Operators",
       "used_at": "2015-08-03T14:03:59.000Z",
       "used_by": "Hardik Vasa - University of Pittsburgh"
     },
     {
       "context_id": "cid=27",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=27",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=27",
       "context_name": "Python: Python 201 | Python 201 (Intermediate) > Operators",
       "used_at": "2015-08-18T23:39:25.000Z",
       "used_by": "Hardik Vasa - University of Pittsburgh"
     },
     {
       "context_id": "cid=344",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=344",
       "context_name": "Python: PYTHON001 | PythonCourseV1Clones > Variables",
       "used_at": "2017-05-22T17:58:24.000Z",
       "used_by": "Roya Hosseini - University of Pittsburgh"
     },
     {
       "context_id": "cid=460",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
       "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Worked Examples > Variables and Operations",
       "used_at": "2025-04-09T10:48:28.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.157Z"
+  "created_at": "2025-12-31T06:04:00.157Z",
+  "paws_id": 985
 }

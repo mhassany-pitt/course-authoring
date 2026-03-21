@@ -18,8 +18,8 @@ export class CatalogV2Service {
       .sort({ listed_at: 'desc' })
       .select(
         'identity.id identity.title identity.type status listed_at links.demo_url ' +
-          'content.prompt tags attribution.authors languages.programming_languages ' +
-          'attribution.provider rights.license delivery.format classification.knowledge_components',
+          'content.prompt tags attribution.authors languages.programming_languages languages.content_language languages.content_language ' +
+          'attribution.provider rights.license delivery classification.knowledge_components paws_id',
       );
 
     return items

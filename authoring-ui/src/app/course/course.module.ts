@@ -24,6 +24,7 @@ import { RearrangeResourcesComponent } from "./rearrange-resources/rearrange-res
 import { RearrangeUnitsComponent } from "./rearrange-units/rearrange-units.component";
 import { EditUnitActivitiesComponent } from "./edit-unit-activities/edit-unit-activities.component";
 import { EnableProvidersComponent } from "./enable-providers/enable-providers.component";
+import { CatalogBrowserComponent } from "./catalog-browser/catalog-browser.component";
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ChipsModule } from 'primeng/chips';
@@ -41,6 +42,7 @@ import { RouterModule } from '@angular/router';
     RearrangeUnitsComponent,
     EditUnitActivitiesComponent,
     EnableProvidersComponent,
+    CatalogBrowserComponent,
     DropdownModule, InputTextModule, ButtonGroupModule,
     InputTextareaModule, DropdownModule,
     CheckboxModule, ButtonModule, TabViewModule,

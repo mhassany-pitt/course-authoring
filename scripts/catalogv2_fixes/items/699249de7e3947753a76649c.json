@@ -1,0 +1,67 @@
+{
+  "id": "699249de7e3947753a76649c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:06.220Z",
+  "tags": [],
+  "identity": {
+    "id": "c_selection_sort__6910af0f1b622a00857decc8-68fb73559816d6f78f736032-0",
+    "title": "c_selection_sort",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Selection_sort__6910af0f1b622a00857decc8?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji tra\u017ei unos niza od 10 realnih brojeva sa tastature. Niz je zatim potrebno sortirati u rastu\u0107em redoslijedu pomo\u0107u Selection sort algoritma i ispisati sortirani niz na ekran.",
+    "source_code": "#include <stdio.h>\r\n#define DUZINA 10\r\n\r\nint main()\r\n{\r\n\tdouble niz[DUZINA], temp;\r\n\tint i, j, min;\r\n\t\r\n\t/* unos niza */\r\n\tfor (i = 0; i < DUZINA; i++)\r\n\t{\r\n\t\tprintf(\"Unesite %d. realan broj: \", i + 1);\r\n\t\tscanf(\"%lf\", &niz[i]);\r\n\t}\r\n\t\r\n\tfor (i = 0; i < DUZINA; i++)\r\n\t{\r\n\t\tmin = i;\r\n\t\tfor (j = i + 1; j < DUZINA; j++)\r\n\t\t{\r\n\t\t\tif (niz[j] < niz[min])\r\n\t\t\t\tmin = j;\r\n\t\t}\r\n\t\ttemp = niz[i];\r\n\t\tniz[i] = niz[min];\r\n\t\tniz[min] = temp;\r\n\t}\r\n\t\r\n\t/* ispis niza */\r\n\tprintf(\"Sortiran niz:\\n\");\r\n\tfor (i = 0; i < DUZINA; i++)\r\n\t\tprintf(\"%g \", niz[i]);\r\n\tprintf(\"\\n\");\r\n\t\r\n\treturn 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Selection_sort__6910af0f1b622a00857decc8?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:06.221Z",
+  "updated_at": "2026-03-21T20:49:59.631Z",
+  "paws_id": 4670
+}

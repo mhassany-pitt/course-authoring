@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "1970-01-01T00:00:00.000Z",
-  "updated_at": "2026-01-17T20:34:47.606Z",
+  "updated_at": "2026-03-21T20:49:49.624Z",
   "tags": [],
   "identity": {
     "id": "Calculate_profit ",
     "title": "Calculate_profit",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Calculate_profit"
   },
   "attribution": {
     "created_at": "1970-01-01T00:00:00.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -52,7 +52,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Calculate_profit"
     }
   ],
@@ -62,5 +62,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.211Z"
+  "created_at": "2025-12-31T06:04:00.211Z",
+  "paws_id": 678
 }

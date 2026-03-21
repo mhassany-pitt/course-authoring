@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-01-13T10:10:19.000Z",
-  "updated_at": "2026-01-17T05:29:13.420Z",
+  "updated_at": "2026-03-21T20:50:02.133Z",
   "tags": [],
   "identity": {
     "id": "py_treasure_box",
     "title": "Treasure Box",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/192/embed?act=PCRS&sub=py_treasure_box"
@@ -52,7 +52,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/192/embed?act=PCRS&sub=py_treasure_box"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/192/embed?act=PCRS&sub=py_treasure_box"
     }
   ],
@@ -64,60 +68,61 @@
   "uses": [
     {
       "context_id": "cid=375",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=375",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=375",
       "context_name": "Python: PYTHON001 | University of Alberta Python Course > If-Else",
       "used_at": "2019-07-03T11:34:57.000Z",
       "used_by": "Michelle, Wang - University of Alberta"
     },
     {
       "context_id": "cid=384",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=384",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=384",
       "context_name": "Python: PYTHON001 | Widener University Python Course (Spring+PCRS) > If-Else",
       "used_at": "2020-01-12T17:36:15.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=390",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=390",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=390",
       "context_name": "Python: PYTHON001 | Python Computational Thinking Workshop SCI Pitt > Control Structures",
       "used_at": "2020-06-18T15:47:50.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=391",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=391",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=391",
       "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2020 > If-Else",
       "used_at": "2020-07-03T01:07:51.000Z",
       "used_by": "Carrie, Demmans - University of Alberta"
     },
     {
       "context_id": "cid=396",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=396",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=396",
       "context_name": "Python: PYTHON001 | Widener University Python Course (Fall 2020) > If-Else",
       "used_at": "2020-08-16T23:39:01.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=407",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=407",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=407",
       "context_name": "Python: PYTHON001 | Widener University Python Course (Spring 2021) > If-Else",
       "used_at": "2021-01-26T22:51:01.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=429",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=429",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=429",
       "context_name": "Python: INFO063-17 | INTRODUCCI\u00c3\u0093N A LA PROGRAMACI\u00c3\u0093N > If-Else",
       "used_at": "2023-05-30T22:07:20.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=465",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=465",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=465",
       "context_name": "Python: PYTHON001 | Widener University Python Course (Fall 2025) > If-Else",
       "used_at": "2025-08-08T15:59:35.000Z",
       "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.067Z"
+  "created_at": "2025-12-31T06:04:00.067Z",
+  "paws_id": 2463
 }

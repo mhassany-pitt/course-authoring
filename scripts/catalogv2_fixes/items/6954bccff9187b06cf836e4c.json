@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-03T08:00:00.000Z",
-  "updated_at": "2026-01-17T05:27:43.229Z",
+  "updated_at": "2026-03-21T20:50:19.103Z",
   "tags": [],
   "identity": {
     "id": "py_event_class",
     "title": "PCRS C3-PL  Event Class",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/24/embed?act=PCRS&sub=py_event_class"
@@ -52,7 +52,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/24/embed?act=PCRS&sub=py_event_class"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/24/embed?act=PCRS&sub=py_event_class"
     }
   ],
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.959Z"
+  "created_at": "2025-12-31T06:03:59.959Z",
+  "paws_id": 3596
 }

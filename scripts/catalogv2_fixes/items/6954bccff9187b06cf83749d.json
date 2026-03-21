@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2016-03-18T16:19:57.000Z",
-  "updated_at": "2026-01-17T20:34:11.742Z",
+  "updated_at": "2026-03-21T20:49:28.663Z",
   "tags": [],
   "identity": {
     "id": "TableCreation3_version_2_pt",
     "title": "Primary Key and Unique Key pt",
-    "type": "Example"
+    "type": "CodeConstruction"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/TableCreation3_version_2_pt"
   },
   "attribution": {
     "created_at": "2016-03-18T16:19:57.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -52,7 +52,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/TableCreation3_version_2_pt"
     }
   ],
@@ -62,5 +62,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.136Z"
+  "created_at": "2025-12-31T06:04:00.136Z",
+  "paws_id": 1385
 }

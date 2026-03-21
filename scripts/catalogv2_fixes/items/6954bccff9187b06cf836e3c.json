@@ -3,17 +3,17 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-16T01:05:02.000Z",
-  "updated_at": "2026-01-17T12:54:19.922Z",
+  "updated_at": "2026-03-21T20:49:15.097Z",
   "tags": [
     "TODO:add-prompt"
   ],
   "identity": {
     "id": "q_java_q_py_dlinkedlist1",
     "title": "q_java_q_py_dlinkedlist1",
-    "type": "Question"
+    "type": "PredictingFinalResult"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_q_py_dlinkedlist1&act=LinkedLists&sub=q_java_q_py_dlinkedlist1"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_q_py_dlinkedlist1&act=LinkedLists&sub=q_java_q_py_dlinkedlist1"
   },
   "attribution": {
     "created_at": "2025-04-16T01:05:02.000Z",
@@ -54,8 +54,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_q_py_dlinkedlist1&act=LinkedLists&sub=q_java_q_py_dlinkedlist1"
+      "protocol": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_q_py_dlinkedlist1&act=LinkedLists&sub=q_java_q_py_dlinkedlist1"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/quizjet/displayQuiz.jsp?rdfID=q_java_q_py_dlinkedlist1&act=LinkedLists&sub=q_java_q_py_dlinkedlist1"
     }
   ],
   "rights": {
@@ -66,18 +70,19 @@
   "uses": [
     {
       "context_id": "cid=458",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
       "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Linked Lists",
       "used_at": "2025-04-09T09:52:36.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=458",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
       "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Linked Lists (Feedback)",
       "used_at": "2025-04-09T09:52:36.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:03:59.957Z"
+  "created_at": "2025-12-31T06:03:59.957Z",
+  "paws_id": 3713
 }

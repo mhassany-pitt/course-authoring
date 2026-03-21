@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-03T08:00:00.000Z",
-  "updated_at": "2026-01-17T05:27:58.399Z",
+  "updated_at": "2026-03-21T20:47:42.978Z",
   "tags": [],
   "identity": {
     "id": "py_item_catalog_class_es",
     "title": "PCRS C3-PL  Item Catalog Class",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/279/embed?act=PCRS&sub=py_item_catalog_class_es"
@@ -52,7 +52,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/279/embed?act=PCRS&sub=py_item_catalog_class_es"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/279/embed?act=PCRS&sub=py_item_catalog_class_es"
     }
   ],
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.971Z"
+  "created_at": "2025-12-31T06:03:59.971Z",
+  "paws_id": 4121
 }

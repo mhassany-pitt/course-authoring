@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-09-12T20:04:36.000Z",
-  "updated_at": "2026-01-21T15:46:23.969Z",
+  "updated_at": "2026-03-21T20:49:59.061Z",
   "tags": [],
   "identity": {
     "id": "rich_compare1_challenge",
     "title": "Greater Than Comparison Method Challenge",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_rich_compare&ch=rich_compare1_challenge"
+    "demo_url": "https://adapt2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_rich_compare&ch=rich_compare1_challenge"
   },
   "attribution": {
     "created_at": "2021-09-12T20:04:36.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_rich_compare&ch=rich_compare1_challenge"
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_rich_compare&ch=rich_compare1_challenge"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_rich_compare&ch=rich_compare1_challenge"
     }
   ],
   "rights": {
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.038Z"
+  "created_at": "2025-12-31T06:04:00.038Z",
+  "paws_id": 2775
 }

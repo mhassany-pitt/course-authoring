@@ -1,0 +1,67 @@
+{
+  "id": "699249de7e3947753a7664a0",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:06.321Z",
+  "tags": [],
+  "identity": {
+    "id": "Print using variables__68f8cc219816d6f78f735512-68f8ccba9816d6f78f735537-1",
+    "title": "Print using variables",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Sequential_Execution__68f8cc219816d6f78f735512?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Aditya Joshi",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write a program that generates the output as below. Use only variables in the print-statements, so `print(\"text\")` is not allowed but `print(a)` or `print(a,z,a)` is allowed.\n\nRequired output:\n<pre style=\"margin-left:0mm\">\nDetroit cows that\nDetroit cows bully ,\nbully Detroit cows\nBuffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo\n</pre>",
+    "source_code": "a = \"Detroit\"\r\nb = \"cows\"\r\nc = \"that\"\r\nd = \"bully\"\r\ne = \",\"\r\nf = \"Buffalo\"\r\ng = \"buffalo\"\r\nprint(a,b,c)\r\nprint(a,b,d,e)\r\nprint(d,a,b)\r\nprint(f,g,f,g,g,g,f,g)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Sequential_Execution__68f8cc219816d6f78f735512?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:06.322Z",
+  "updated_at": "2026-03-21T20:47:41.058Z",
+  "paws_id": 4544
+}

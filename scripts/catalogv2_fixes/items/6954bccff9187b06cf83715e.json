@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-08-09T19:21:44.000Z",
-  "updated_at": "2026-01-17T12:41:49.730Z",
+  "updated_at": "2026-03-21T20:49:12.189Z",
   "tags": [],
   "identity": {
     "id": "py_average_list_elements",
     "title": "Calculating Sum/Average of the List Values ",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_list_process_elements&ch=py_average_list_elements"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_list_process_elements&ch=py_average_list_elements"
   },
   "attribution": {
     "created_at": "2020-08-09T19:21:44.000Z",
@@ -96,8 +96,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_process_elements&ch=py_average_list_elements"
+      "protocol": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_process_elements&ch=py_average_list_elements"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_process_elements&ch=py_average_list_elements"
     }
   ],
   "rights": {
@@ -108,18 +112,19 @@
   "uses": [
     {
       "context_id": "cid=394",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=394",
       "context_name": "Python: PYTHON001 | Python Course (AE-QP-PCEX Ex-PCEX Ch-Parsons) > Lists",
       "used_at": "2020-08-09T17:56:50.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=404",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=404",
       "context_name": "Python: PYTHON001 | Aalto Python Fall 2020 (PCEX-Ex,PCEX-Ch) > Lists",
       "used_at": "2020-09-07T18:36:47.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.058Z"
+  "created_at": "2025-12-31T06:04:00.058Z",
+  "paws_id": 2571
 }

@@ -1,0 +1,67 @@
+{
+  "id": "699249df7e3947753a7664c4",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:07.246Z",
+  "tags": [],
+  "identity": {
+    "id": "c_faktorijeli (for petlja)__68b9be49fce5207cc0b4d140-68b9bde2fce5207cc0b4d12e-1",
+    "title": "c_faktorijeli (for petlja)",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/For_petlja__68b9be49fce5207cc0b4d140?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji pomo\u0107u for petlje ispisuje na ekran faktorijele svih brojeva od 1 do 5.",
+    "source_code": "#include <stdio.h>\r\n\r\nint main() {\r\n    int brojac = 5; /* brojac za iteracije petlje */\r\n    int n = 1; /* ovaj broj ce ici od 1 do n unutar petlje */\r\n    long stari_faktorijel = 1; /* faktorijel prethodne vrijednosti (n-1) */\r\n    long novi_faktorijel; /* vrijednost faktorijel(n) koja se treba izracunati */\r\n\r\n    for (; brojac > 0; brojac--) {\r\n        novi_faktorijel = stari_faktorijel * n;\r\n        printf(\"Faktorijel(%d) = %ld \" , n, novi_faktorijel);\r\n        n++;\r\n        stari_faktorijel = novi_faktorijel;\r\n    }\r\n        \r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/For_petlja__68b9be49fce5207cc0b4d140?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:07.247Z",
+  "updated_at": "2026-03-21T20:48:13.027Z",
+  "paws_id": 4567
+}

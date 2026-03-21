@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-05-12T15:19:48.000Z",
-  "updated_at": "2026-01-31T16:41:19.736Z",
+  "updated_at": "2026-03-21T20:49:10.125Z",
   "tags": [],
   "identity": {
     "id": "ps_python_find_and_square6_es",
     "title": "Actualizar elementos necesarios en una nueva lista",
-    "type": "Question"
+    "type": "ParsonsProblem"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_find_and_square6_es&grp=demo&usr=demo&sid=-1&cid=-1"
+    "demo_url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_find_and_square6_es&grp=demo&usr=demo&sid=-1&cid=-1"
   },
   "attribution": {
     "created_at": "2025-05-12T15:19:48.000Z",
@@ -52,8 +52,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_find_and_square6_es"
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_find_and_square6_es"
     }
   ],
   "rights": {
@@ -62,5 +62,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.948Z"
+  "created_at": "2025-12-31T06:03:59.948Z",
+  "paws_id": 3961
 }

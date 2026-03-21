@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-03T08:00:00.000Z",
-  "updated_at": "2026-01-17T05:27:46.077Z",
+  "updated_at": "2026-03-21T20:47:44.192Z",
   "tags": [],
   "identity": {
     "id": "py_duplicate_cut",
     "title": "PCRS C3-PL  Duplicate Cut",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/94/embed?act=PCRS&sub=py_duplicate_cut"
@@ -52,7 +52,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/94/embed?act=PCRS&sub=py_duplicate_cut"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/94/embed?act=PCRS&sub=py_duplicate_cut"
     }
   ],
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.961Z"
+  "created_at": "2025-12-31T06:03:59.961Z",
+  "paws_id": 3623
 }

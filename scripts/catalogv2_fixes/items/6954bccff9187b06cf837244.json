@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2018-02-08T01:49:04.000Z",
-  "updated_at": "2026-01-17T13:19:01.990Z",
+  "updated_at": "2026-03-21T20:47:35.808Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -14,7 +14,7 @@
     "type": "Question"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/sqlknot/index.html?cid=12&tid=1&lang=TR"
+    "demo_url": "https://adapt2.sis.pitt.edu/sqlknot/index.html?cid=12&tid=1&lang=TR"
   },
   "attribution": {
     "created_at": "2018-02-08T01:49:04.000Z",
@@ -55,8 +55,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/sqlknot/index.html?cid=12&tid=1&lang=TR"
+      "protocol": "html",
+      "url": "https://adapt2.sis.pitt.edu/sqlknot/index.html?cid=12&tid=1&lang=TR"
     }
   ],
   "rights": {
@@ -67,11 +67,12 @@
   "uses": [
     {
       "context_id": "cid=354",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=354",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=354",
       "context_name": "SQL: BL306A | Database Management[TR] > Metinsel \u0130\u015flemler",
       "used_at": "2018-02-07T13:32:58.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.085Z"
+  "created_at": "2025-12-31T06:04:00.085Z",
+  "paws_id": 2317
 }

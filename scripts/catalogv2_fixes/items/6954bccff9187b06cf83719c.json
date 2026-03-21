@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2020-04-06T09:35:01.000Z",
-  "updated_at": "2026-01-17T05:29:10.586Z",
+  "updated_at": "2026-03-21T20:47:49.263Z",
   "tags": [],
   "identity": {
     "id": "create_class",
     "title": "Create class Truck",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/447/embed?act=PCRS&sub=create_class"
@@ -52,7 +52,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/447/embed?act=PCRS&sub=create_class"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/447/embed?act=PCRS&sub=create_class"
     }
   ],
@@ -64,11 +68,12 @@
   "uses": [
     {
       "context_id": "cid=440",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
       "context_name": "Java: CMIS 2200 | Application Programming II > Module 2- Objects and Classes",
       "used_at": "2024-08-27T03:21:22.000Z",
       "used_by": "Pratibha Menon - "
     }
   ],
-  "created_at": "2025-12-31T06:04:00.065Z"
+  "created_at": "2025-12-31T06:04:00.065Z",
+  "paws_id": 2491
 }

@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-03-28T00:42:49.000Z",
-  "updated_at": "2026-01-17T05:28:11.641Z",
+  "updated_at": "2026-03-21T20:48:12.659Z",
   "tags": [],
   "identity": {
     "id": "py_class_day",
     "title": "Class Day",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/24/embed?act=PCRS&sub=py_class_day"
@@ -52,7 +52,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/24/embed?act=PCRS&sub=py_class_day"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/24/embed?act=PCRS&sub=py_class_day"
     }
   ],
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.989Z"
+  "created_at": "2025-12-31T06:03:59.989Z",
+  "paws_id": 3553
 }

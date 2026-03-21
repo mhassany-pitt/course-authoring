@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-03T08:00:00.000Z",
-  "updated_at": "2026-01-31T16:41:11.908Z",
+  "updated_at": "2026-03-21T20:47:06.462Z",
   "tags": [],
   "identity": {
     "id": "py_collect_underperformers_es",
     "title": "Recolectar bajo rendimiento lista (ES)",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/218/embed?act=PCRS&sub=py_collect_underperformers_es"
@@ -105,7 +105,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/218/embed?act=PCRS&sub=py_collect_underperformers_es"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/218/embed?act=PCRS&sub=py_collect_underperformers_es"
     }
   ],
@@ -115,5 +119,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.983Z"
+  "created_at": "2025-12-31T06:03:59.983Z",
+  "paws_id": 4073
 }

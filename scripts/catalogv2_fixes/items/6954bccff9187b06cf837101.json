@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2021-03-02T10:32:54.000Z",
-  "updated_at": "2026-01-17T05:28:53.700Z",
+  "updated_at": "2026-03-21T20:47:24.150Z",
   "tags": [],
   "identity": {
     "id": "class_ice_cream",
     "title": "class_ice_cream",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/494/embed?act=PCRS&sub=class_ice_cream"
@@ -86,7 +86,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/494/embed?act=PCRS&sub=class_ice_cream"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/494/embed?act=PCRS&sub=class_ice_cream"
     }
   ],
@@ -98,46 +102,47 @@
   "uses": [
     {
       "context_id": "cid=409",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=409",
       "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2021) > Classes/Objects",
       "used_at": "2021-02-02T10:38:51.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=415",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=415",
       "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Fall 2021) > Classes/Objects",
       "used_at": "2021-09-07T10:17:36.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=418",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=418",
       "context_name": "Java: LabsCMPINF401 | Labs CMPINF401 (Spring 2022) > Classes/Objects",
       "used_at": "2022-01-19T00:18:35.000Z",
       "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
     },
     {
       "context_id": "cid=440",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=440",
       "context_name": "Java: CMIS 2200 | Application Programming II > Module 2- Objects and Classes",
       "used_at": "2024-08-27T03:21:22.000Z",
       "used_by": "Pratibha Menon - "
     },
     {
       "context_id": "cid=458",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=458",
       "context_name": "Java: Labs401007 | Java Labs Spring 2025 - Social Comparison > Classes/Objects",
       "used_at": "2025-04-09T09:52:36.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     },
     {
       "context_id": "cid=474",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=474",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=474",
       "context_name": "Java: CMU15-121 | CMU 15-121 - Intro Data Structures - Fall 2025 > Objects and Classes",
       "used_at": "2025-09-16T16:41:24.000Z",
       "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.048Z"
+  "created_at": "2025-12-31T06:04:00.048Z",
+  "paws_id": 2686
 }

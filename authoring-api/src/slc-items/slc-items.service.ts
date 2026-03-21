@@ -1,18 +1,20 @@
 import { Injectable, HttpException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
+import { InjectDataSource } from '@nestjs/typeorm/dist/common/typeorm.decorators';
 import { Model } from 'mongoose';
 import {
   CatalogItem,
   CatalogItemReport,
 } from 'src/catalog_v2/catalog-item.schema';
 import { toObject, useId } from 'src/utils';
+import { DataSource } from 'typeorm/data-source/DataSource';
 
 @Injectable()
 export class SLCItemsService {
   constructor(
     @InjectModel('catalog_items_v2') private items: Model<CatalogItem>,
-    @InjectModel('catalog_item_reports_v2')
-    private reports: Model<CatalogItemReport>,
+    @InjectModel('catalog_item_reports_v2') private reports: Model<CatalogItemReport>,
+    @InjectDataSource('aggregate') private aggregate: DataSource,
   ) { }
 
   async list(user_email: string, isAdmin = false) {
@@ -40,8 +42,7 @@ export class SLCItemsService {
     const found = await this.items.findOne(
       isAdmin ? { _id: id } : { _id: id, user_email },
     );
-    if (!found) throw new HttpException('catalog item not found', 404);
-    return useId(toObject(found));
+    return found ? useId(toObject(found)) : null;
   }
 
   async update(
@@ -56,8 +57,47 @@ export class SLCItemsService {
       { ...payload, updated_at: new Date() },
       { new: true },
     );
-    if (!updated) throw new HttpException('catalog item not found', 404);
-    return useId(toObject(updated));
+    return updated ? useId(toObject(updated)) : null;
+  }
+
+  async delete(id: string, user_email: string, isAdmin = false) {
+    const deleted = await this.items.findOneAndDelete(
+      isAdmin ? { _id: id } : { _id: id, user_email },
+    );
+    return deleted ? useId(toObject(deleted)) : null;
+  }
+
+  async syncToAggregate(id: string) {
+    const item = await this.items.findById(id);
+    if (item.paws_id) // already synced
+      return useId(toObject(item)); 
+
+    const result = await this.aggregate.query(
+      `INSERT INTO ent_content 
+      (content_id, content_name, content_type, display_name, \`desc\`, url, 
+        \`domain\`, provider_id, comment, visible, creation_date, creator_id, 
+        privacy, author_name) 
+      VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        item.identity.title,
+        item.identity.type,
+        item.identity.title,
+        item.content.prompt,
+        item.links.demo_url,
+        item.languages?.programming_languages?.[0] ?? null,
+        item.attribution?.provider ?? null,
+        '',
+        item.status === 'public' ? 1 : 0,
+        item.created_at,
+        item.user_email,
+        item.status === 'public' ? 'public' : 'private',
+        item.attribution?.authors?.map(a => a.name).join(', ') ?? '',
+      ]
+    );
+
+    item.paws_id = result.insertId;
+    await item.save();
+    return useId(toObject(item));
   }
 
   async listReports() {

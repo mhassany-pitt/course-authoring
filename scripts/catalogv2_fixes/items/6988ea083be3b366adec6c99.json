@@ -1,0 +1,75 @@
+{
+  "id": "6988ea083be3b366adec6c99",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-08T19:54:48.222Z",
+  "tags": [],
+  "identity": {
+    "id": "left-join-1-lti",
+    "title": "Left-join query execution 1",
+    "type": "CodeVisualization"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/lti/launch?tool=dbqa&sub=left-join-1&usr=adl01&grp=adl01"
+  },
+  "attribution": {
+    "created_at": "2025-01-15T00:00:00.000Z",
+    "provider": "DBQA",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Rully Hendrawan",
+        "affiliation": "University of Pittsburgh"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "SQL"
+    ]
+  },
+  "content": {
+    "prompt": "Left-join query execution 1",
+    "source_code": ""
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://adapt2.sis.pitt.edu/lti/launch?tool=dbqa&sub=left-join-1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=447",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=447",
+      "context_name": "Temple MIS2502 2025-Spring 1-SQL",
+      "used_at": "2024-12-11T10:46:15.000Z",
+      "used_by": "Rully Agus Hendrawan"
+    }
+  ],
+  "created_at": "2026-02-08T19:54:48.225Z",
+  "updated_at": "2026-03-21T20:49:57.548Z",
+  "paws_id": 3428
+}

@@ -1,0 +1,67 @@
+{
+  "id": "699249d57e3947753a76636c",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:33:57.757Z",
+  "tags": [],
+  "identity": {
+    "id": "c_strukture_funkcija_pravougaonik__6952bd0d136f190edb6d396e-6942edd6b71cfad93820a634-1",
+    "title": "c_strukture_funkcija_pravougaonik",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Funkcije_i_strukture__6952bd0d136f190edb6d396e?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati funkciju povecaj_pravougaonik koja prima strukturu Pravougaonik. Ova struktura sadr\u017ei polja \"sirina\" i \"visina\".  Funkcija vra\u0107a strukturu pravougaonik te pove\u0107ava \u0161irinu pravougaonika za 1.",
+    "source_code": "#include <stdio.h>\r\n\r\nstruct Pravougaonik {\r\n    int sirina;\r\n    int visina;\r\n};\r\n\r\n/* Funkcija prima strukturu i vraca novu strukturu */\r\nstruct Pravougaonik povecaj_pravougaonik(struct Pravougaonik p) {\r\n    p.sirina += 1;\r\n    return p;\r\n}\r\n\r\nint main(void) {\r\n    struct Pravougaonik p1 = {4, 3};\r\n    struct Pravougaonik p2;\r\n\r\n    p2 = povecaj_pravougaonik(p1);\r\n\r\n    printf(\"Povecani pravougaonik: %d x %d\\n\", p2.sirina, p2.visina);\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Funkcije_i_strukture__6952bd0d136f190edb6d396e?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:33:57.758Z",
+  "updated_at": "2026-03-21T20:49:25.291Z",
+  "paws_id": 4630
+}

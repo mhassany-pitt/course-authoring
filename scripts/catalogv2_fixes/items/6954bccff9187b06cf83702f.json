@@ -1,9 +1,9 @@
 {
   "id": "6954bccff9187b06cf83702f",
   "user_email": "moh70@pitt.edu",
-  "status": "public",
+  "status": "broken:pending-fix",
   "listed_at": "2023-04-27T22:55:32.000Z",
-  "updated_at": "2026-01-17T13:18:43.922Z",
+  "updated_at": "2026-03-21T20:48:54.141Z",
   "tags": [
     "TODO:add-prompt",
     "TODO:add-source-code"
@@ -11,10 +11,10 @@
   "identity": {
     "id": "ebook-py-3-ch01-sec05-exampletable-1",
     "title": "ebook-py-3-ch01-sec05-exampletable-1",
-    "type": "Question"
+    "type": "FreeCodingProblems"
   },
   "links": {
-    "demo_url": "http://adapt2.sis.pitt.edu/lti/launch?tool=codecheck&sub=ebook-py-3-ch01-sec05-exampletable-1"
+    "demo_url": "https://adapt2.sis.pitt.edu/lti/launch?tool=codecheck&sub=ebook-py-3-ch01-sec05-exampletable-1"
   },
   "attribution": {
     "created_at": "2023-04-27T22:55:32.000Z",
@@ -55,8 +55,8 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://adapt2.sis.pitt.edu/lti/launch?tool=codecheck&sub=ebook-py-3-ch01-sec05-exampletable-1"
+      "protocol": "LTI 1.1",
+      "url": "https://adapt2.sis.pitt.edu/lti/launch?tool=codecheck&sub=ebook-py-3-ch01-sec05-exampletable-1"
     }
   ],
   "rights": {
@@ -67,11 +67,12 @@
   "uses": [
     {
       "context_id": "cid=427",
-      "context_url": "http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=427",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=427",
       "context_name": "Python:  | Python for Everyone > Section 1.5",
       "used_at": "2023-04-28T10:31:45.000Z",
       "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
     }
   ],
-  "created_at": "2025-12-31T06:04:00.022Z"
+  "created_at": "2025-12-31T06:04:00.022Z",
+  "paws_id": 2905
 }

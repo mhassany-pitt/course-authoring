@@ -3,12 +3,12 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2017-08-21T11:35:55.000Z",
-  "updated_at": "2026-01-17T05:30:07.190Z",
+  "updated_at": "2026-03-21T20:50:15.761Z",
   "tags": [],
   "identity": {
     "id": "pcrs_arithmetic_test",
     "title": "pcrs java arithmetic",
-    "type": "PCRS"
+    "type": "FreeCodingProblems"
   },
   "links": {
     "demo_url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/335/embed?act=PCRS&sub=arithmetic"
@@ -52,7 +52,11 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "PITT",
+      "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/335/embed?act=PCRS&sub=arithmetic"
+    },
+    {
+      "protocol": "HTML",
       "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/java/335/embed?act=PCRS&sub=arithmetic"
     }
   ],
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.114Z"
+  "created_at": "2025-12-31T06:04:00.114Z",
+  "paws_id": 1929
 }

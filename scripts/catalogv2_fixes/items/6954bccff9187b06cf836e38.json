@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-16T17:23:40.000Z",
-  "updated_at": "2026-01-17T05:27:41.071Z",
+  "updated_at": "2026-03-21T20:49:15.636Z",
   "tags": [],
   "identity": {
     "id": "recursion.recursion_power",
     "title": " Recursively calculate the power of a number",
-    "type": "PCEX Set"
+    "type": "CodeConstruction"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=recursion.recursion_power"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=recursion.recursion_power"
   },
   "attribution": {
     "created_at": "2025-04-16T17:23:40.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=recursion.recursion_power"
+      "protocol": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=recursion.recursion_power"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=JAVA&set=recursion.recursion_power"
     }
   ],
   "rights": {
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.957Z"
+  "created_at": "2025-12-31T06:03:59.957Z",
+  "paws_id": 3725
 }

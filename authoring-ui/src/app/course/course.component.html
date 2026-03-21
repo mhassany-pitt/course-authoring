@@ -58,7 +58,8 @@
         <span class="text-red-600 align-super">*</span>
         <span class="text-sm text-gray-600">Required fields</span>
       </div>
-      <p-tabView [(activeIndex)]="activeTabIndex" (activeIndexChange)="forceUiRefresh('textarea-ref-tt')">
+
+      <p-tabView [(activeIndex)]="activeTabIndex" (activeIndexChange)="onTabChange($event)">
         <p-tabPanel header="General Information">
           <div class="flex flex-col gap-2 p-2">
             <div class="flex items-center gap-2">
@@ -94,7 +95,7 @@
                 <p-dropdown #domainEl [options]="domains" name="domain" [(ngModel)]="course.domain" optionValue="id"
                   optionLabel="name" placeholder="Select" required="true" styleClass="w-32"
                   [ngClass]="{'ng-invalid ng-dirty': any(domainEl).errors?.['required']}"
-                  (onChange)="loadProviders()" />
+                  (onChange)="loadProviders(course.domain)" />
               </div>
               <div class="flex flex-col gap-1">
                 <span class="flex items-center gap-1 text-sm">
@@ -109,12 +110,12 @@
             <div class="flex flex-col gap-1">
               <span class="text-sm text-gray-600">Description:</span>
               <textarea rows="5" pInputTextarea name="description" [(ngModel)]="course.description"
-                placeholder="This course is ..." [autoResize]="true"></textarea>
+                placeholder="This course is ..." [autoResize]="true" class="min-h-16"></textarea>
             </div>
           </div>
         </p-tabPanel>
         <p-tabPanel header="Units and Resources">
-          <div class="overflow-x-auto">
+          <div class="overflow-x-auto" (scroll)="refreshCatalogBrowserPosition()">
             <p-table [value]="course.units" [columns]="course.resources" styleClass="p-datatable-sm units-table">
               <ng-template pTemplate="header" let-columns>
                 <tr>
@@ -219,8 +220,11 @@
                     </div>
                   </td>
                   <ng-container *ngFor="let resource of course.resources; let rindex = index;">
-                    <td *ngIf="resource.providers?.length" class="relative align-top resource-col">
-                      <div class="flex flex-col justify-start gap-1 p-1">
+                    <td *ngIf="resource.providers?.length" class="relative align-top resource-col"
+                      [attr.id]="isCatalogBrowserOpen(unit, resource) ? activeCatalogBrowserAnchorId : null"
+                      [ngClass]="{ 'bg-blue-50 border-dashed border-2 border-blue-300': isCatalogBrowserOpen(unit, resource) }">
+                      <div class="flex flex-col justify-start gap-1 p-1"
+                        [ngClass]="{ 'min-h-full bg-blue-50': isCatalogBrowserOpen(unit, resource) }">
                         <div cdkDropList *ngIf="unit.activities?.[resource.id]?.length > 0" class="text-sm"
                           (cdkDropListDropped)="rearrange($event, unit.activities[resource.id])">
                           <span *ngFor="let activity of unit.activities[resource.id]; let aindex = index;" cdkDrag
@@ -235,12 +239,15 @@
                             </a>
                           </span>
                         </div>
-                        <p-button type="button" label="add activities" icon="fa fa-edit" severity="secondary"
-                          class="p-button-xs" [text]="true" (click)="editUnitActivities(unit, resource)">
-                        </p-button>
+                        <div>
+                          <p-button type="button" label="add activities" icon="fa fa-edit" severity="secondary"
+                            class="p-button-xs" [text]="true" (click)="toggleCatalogBrowser(unit, resource)">
+                            <!-- (click)="editUnitActivities(unit, resource)" -->
+                          </p-button>
+                        </div>
                       </div>
                     </td>
-                    <td *ngIf="!resource.providers?.length && uindex == 0" [rowSpan]="course.units.length"
+                    <td *ngIf="!resource.providers?.length && uindex == 0" [rowSpan]="course.units.length + extraTableRows"
                       class="relative align-top resource-col">
                       <div class="flex flex-col justify-start">
                         <p-button type="button"
@@ -250,7 +257,7 @@
                       </div>
                     </td>
                   </ng-container>
-                  <td *ngIf="!course.resources?.length && uindex == 0" [rowSpan]="course.units.length"
+                  <td *ngIf="!course.resources?.length && uindex == 0" [rowSpan]="course.units.length + extraTableRows"
                     class="relative align-top resource-col">
                     <div class="flex flex-col justify-start">
                       <p-button type="button" label="use the plus '+' button above to add a resource"
@@ -259,6 +266,23 @@
                     </div>
                   </td>
                   <td></td>
+                </tr>
+                <tr *ngIf="isCatalogBrowserOpenForUnit(unit)" id="catalog-browser-row">
+                  <td [attr.colspan]="course.resources.length+1"
+                    class="relative !p-0.5 !py-0 bg-transparent overflow-visible border-0"
+                    style="height: 34rem;">
+                    <div class="relative w-full z-0" style="height: 34rem;">
+                      <div [ngStyle]="catalogBrowserPopupStyle" class="pointer-events-auto">
+                        <span class="absolute -top-2 h-4 w-4 -translate-x-1/2 rotate-45 border-dashed border-r-0 border-b-0 border-l-2 border-t-2 border-blue-300 bg-blue-50 pointer-events-none z-20"
+                          [ngStyle]="catalogBrowserPopupAnchorStyle"></span>
+                        <app-catalog-browser [resourceName]="activeCatalogBrowserResourceName" [unitName]="unit.name" [domain]="course.domain"
+                          [providerIds]="activeCatalogBrowserProviderIds" [selectedActivities]="activeCatalogBrowserActivities"
+                          (close)="closeCatalogBrowser()"
+                          (selectedActivitiesChange)="updateCatalogBrowserActivities($event)" />
+                      </div>
+                    </div>
+                  </td>
+                  <td class="bg-transparent border-0 !p-0.5"></td>
                 </tr>
               </ng-template>
               <ng-template pTemplate="emptymessage">

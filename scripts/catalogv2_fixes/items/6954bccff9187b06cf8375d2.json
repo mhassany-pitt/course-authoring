@@ -3,19 +3,19 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2014-09-08T20:59:15.000Z",
-  "updated_at": "2026-01-17T20:34:14.735Z",
+  "updated_at": "2026-03-21T20:47:05.805Z",
   "tags": [],
   "identity": {
     "id": "c_ch2_change_variable",
     "title": "Change the Value of a Variable",
-    "type": "Example"
+    "type": "BehaviorExample"
   },
   "links": {
     "demo_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_change_variable"
   },
   "attribution": {
     "created_at": "2014-09-08T20:59:15.000Z",
-    "provider": "WebEx",
+    "provider": "AnnEx",
     "publisher": "",
     "authors": [
       {
@@ -52,7 +52,7 @@
   },
   "delivery": [
     {
-      "format": "html",
+      "protocol": "SPLICE",
       "url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_change_variable"
     }
   ],
@@ -62,5 +62,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:04:00.168Z"
+  "created_at": "2025-12-31T06:04:00.168Z",
+  "paws_id": 571
 }

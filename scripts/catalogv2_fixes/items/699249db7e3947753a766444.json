@@ -1,0 +1,67 @@
+{
+  "id": "699249db7e3947753a766444",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-02-15T22:34:03.887Z",
+  "tags": [],
+  "identity": {
+    "id": "c_pokazivaci_dodjela_i_ispis__69348d69e28428298e557133-693489cfe28428298e556fd4-2",
+    "title": "c_pokazivaci_dodjela_i_ispis",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Adrese_i_dodjela_vrijednosti_pokazivacima__69348d69e28428298e557133?index=2"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Dopuniti nedostaju\u0107e linije u kodu.",
+    "source_code": "#include <stdio.h>\r\n\r\nint main() {\r\n    float f = 3.14;\r\n    float *pf;\r\n    \r\n    pf = &f;\r\n\r\n    printf(\"Vrijednost varijable f: \");\r\n    printf(\"%f\", f);\r\n    printf(\"\\nAdresa varijable f: \");\r\n    printf(\"%p\", &f);\r\n    printf(\"\\nVrijednost varijable pf: \");\r\n    printf(\"%p\", pf);\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Adrese_i_dodjela_vrijednosti_pokazivacima__69348d69e28428298e557133?index=2"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-02-15T22:34:03.888Z",
+  "updated_at": "2026-03-21T20:49:53.924Z",
+  "paws_id": 4664
+}

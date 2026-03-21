@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T22:20:19.000Z",
-  "updated_at": "2026-01-17T05:26:49.191Z",
+  "updated_at": "2026-03-21T20:47:58.271Z",
   "tags": [],
   "identity": {
     "id": "Printing Full Name with Middle Initial__68bdb308f6cc3d7a9cc0972e-68bdb308f6cc3d7a9cc09729-1",
     "title": "Printing Full Name with Middle Initial",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0972e?_t=1757557219672&index=1"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0972e?_t=1757557219672&index=1"
   },
   "attribution": {
     "created_at": "2025-09-10T22:20:19.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=http://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0972e?_t=1757557219672&index=1"
+      "protocol": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0972e?_t=1757557219672&index=1"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0972e?_t=1757557219672&index=1"
     }
   ],
   "rights": {
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.918Z"
+  "created_at": "2025-12-31T06:03:59.918Z",
+  "paws_id": 4348
 }

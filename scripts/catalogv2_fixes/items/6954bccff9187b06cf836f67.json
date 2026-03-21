@@ -3,15 +3,15 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-02-23T16:01:36.000Z",
-  "updated_at": "2026-01-17T12:41:42.485Z",
+  "updated_at": "2026-03-21T20:49:40.208Z",
   "tags": [],
   "identity": {
     "id": "py_pandas_select_1_ch",
     "title": "PANDAS Select 1 Challenge",
-    "type": "PCEX Challenge"
+    "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "http://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_pandas_select_1&ch=py_pandas_select_1_ch"
+    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_pandas_select_1&ch=py_pandas_select_1_ch"
   },
   "attribution": {
     "created_at": "2025-02-23T16:01:36.000Z",
@@ -52,8 +52,12 @@
   },
   "delivery": [
     {
-      "format": "html",
-      "url": "http://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pandas_select_1&ch=py_pandas_select_1_ch"
+      "protocol": "PITT",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pandas_select_1&ch=py_pandas_select_1_ch"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pandas_select_1&ch=py_pandas_select_1_ch"
     }
   ],
   "rights": {
@@ -62,5 +66,6 @@
     "usage_notes": ""
   },
   "uses": [],
-  "created_at": "2025-12-31T06:03:59.994Z"
+  "created_at": "2025-12-31T06:03:59.994Z",
+  "paws_id": 3526
 }
