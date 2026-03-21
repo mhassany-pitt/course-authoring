@@ -6,9 +6,12 @@ export type CatalogItemReportDocument = HydratedDocument<CatalogItemReport>;
 
 @Schema({ timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } })
 export class CatalogItem {
+  @Prop() paws_id: string;
+
   @Prop({ required: true }) user_email: string;
   @Prop({ default: 'private', enum: ['public', 'private', 'deprecated', 'broken:pending-fix'] })
   status: string;
+
   @Prop({ default: () => new Date() }) listed_at: Date;
   @Prop({ type: Date }) updated_at: Date;
   @Prop({ type: [String], default: [] }) tags: string[];
