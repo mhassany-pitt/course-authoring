@@ -68,19 +68,7 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
   ) { }
 
   ngOnInit() {
-    this.loading = true;
-    this.catalogV2.list().subscribe({
-      next: (items) => {
-        this.allItems = items || [];
-        this.applyProviderFilter();
-        this.syncSelectedItems();
-        this.loading = false;
-      },
-      error: () => {
-        this.error = 'Unable to load catalog items.';
-        this.loading = false;
-      },
-    });
+    this.loadCatalogItems();
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -98,6 +86,35 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
     return this.showSelectedOnly
       ? items.filter((item) => this.isSelected(item))
       : items;
+  }
+
+  get lastLoadedAt() {
+    return this.catalogV2.getLastLoadedAt();
+  }
+
+  get reloadCatalogLabel() {
+    const lastLoadedAt = this.lastLoadedAt;
+    if (!lastLoadedAt) {
+      return 'Load catalog';
+    }
+
+    const diffMs = Math.max(0, Date.now() - lastLoadedAt.getTime());
+    const diffMinutes = Math.floor(diffMs / 60000);
+
+    if (diffMinutes < 1) {
+      return 'Last loaded: just now!';
+    }
+    if (diffMinutes < 60) {
+      return `Last loaded: ${diffMinutes} minute${diffMinutes === 1 ? '' : 's'} ago!`;
+    }
+
+    const diffHours = Math.floor(diffMinutes / 60);
+    if (diffHours < 24) {
+      return `Last loaded: ${diffHours} hour${diffHours === 1 ? '' : 's'} ago!`;
+    }
+
+    const diffDays = Math.floor(diffHours / 24);
+    return `Last loaded: ${diffDays} day${diffDays === 1 ? '' : 's'} ago!`;
   }
 
   get typeOptions() {
@@ -219,6 +236,27 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
 
   filterTable(table: any, event: Event) {
     table.filterGlobal((event.target as HTMLInputElement).value, 'contains');
+  }
+
+  loadCatalogItems(force = false) {
+    this.loading = true;
+    this.error = '';
+    this.catalogV2.list({ force }).subscribe({
+      next: (items) => {
+        this.allItems = items || [];
+        this.applyProviderFilter();
+        this.syncSelectedItems();
+        this.loading = false;
+      },
+      error: () => {
+        this.error = 'Unable to load catalog items.';
+        this.loading = false;
+      },
+    });
+  }
+
+  reloadCatalogItems() {
+    this.loadCatalogItems(true);
   }
 
   applyProviderFilter() {

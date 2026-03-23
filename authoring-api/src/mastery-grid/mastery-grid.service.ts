@@ -79,12 +79,15 @@ export class MasteryGridService {
 
             // -- add resource providers
             for (const provider of (resource.providers || [])) {
-                await this._addResourceProvider(agg, {
-                    resource_id: mapped_resource.mapped_resource_id,
-                    provider_id: provider.id, // provider.id is loaded from the aggregate db
-                });
-                if (mapped_resource.provider_ids.includes(provider.id) == false)
-                    mapped_resource.provider_ids.push(provider.id);
+                const mappedProviderIds = this.providerCatalogToLegacy(provider.id);
+                for (const mappedProviderId of mappedProviderIds) {
+                    await this._addResourceProvider(agg, {
+                        resource_id: mapped_resource.mapped_resource_id,
+                        provider_id: mappedProviderId,
+                    });
+                    if (mapped_resource.provider_ids.includes(mappedProviderId) == false)
+                        mapped_resource.provider_ids.push(mappedProviderId);
+                }
             }
         }
 
@@ -448,6 +451,28 @@ export class MasteryGridService {
 
     private async _deleteUnitActivity(agg: EntityManager, { id }) {
         return agg.query('DELETE FROM rel_topic_content WHERE id = ?', [id]);
+    }
+
+    private providerCatalogToLegacy(provider: string) {
+        return {
+            "CodeCheck": ["codecheck"],
+            "CodeLab": ["codelab"],
+            "CodeOcean": ["codeocean"],
+            "CodeWorkout": ["codeworkout"],
+            "CTAT": ["ctat"],
+            "DBQA": ["dbqa"],
+            "PCRS": ["pcrs"],
+            "QuizJET": ["quizjet"],
+            "QuizPET": ["quizpet"],
+            "WebEx": ["webex"],
+            "ReadingMirror": ["readingmirror"],
+            "SQL-KnoT": ["sqlknot"],
+            "jsParsons": ["parsons"],
+            "JSVEE": ["animatedexamples"],
+            "PCEX": ["pcex", "pcex_ch"],
+            "OpenDSA": ["opendsa_problems","opendsa_slideshows"],
+            "AnnEx": ["webex"],
+        }[provider] || [provider];
     }
 }
 

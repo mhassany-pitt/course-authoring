@@ -11,11 +11,24 @@
     <span class="flex-grow"></span>
     <p-button
       type="button"
-      [label]="showSelectedOnly ? 'Selected Only' : 'All Items'"
+      [label]="showSelectedOnly ? 'Showing: Selected Only' : 'Showing: All Items'"
       severity="secondary"
       [outlined]="!showSelectedOnly"
       class="p-button-xs"
+      styleClass="!px-2 !py-1"
       (click)="showSelectedOnly = !showSelectedOnly"
+    >
+    </p-button>
+    <p-button
+      type="button"
+      [label]="reloadCatalogLabel"
+      icon="fa fa-refresh"
+      severity="secondary"
+      [outlined]="true"
+      class="p-button-xs"
+      styleClass="!px-2 !py-1"
+      [loading]="loading"
+      (click)="reloadCatalogItems()"
     >
     </p-button>
     <p-button
