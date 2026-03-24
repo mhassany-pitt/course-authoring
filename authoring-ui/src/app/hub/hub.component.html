@@ -221,9 +221,9 @@
                     <span>{{ course.units_ct }} unit(s) |</span>
                     <span>{{ course.created_at | date: "medium" }}</span>
                   </div>
-                  <div class="flex items-center gap-4">
+                  <div class="flex items-start gap-4">
                     <span
-                      class="text-blue-600 cursor-pointer flex gap-1"
+                      class="text-blue-600 cursor-pointer"
                       (click)="toggleLoad(course)"
                     >
                       <span class="capitalize font-bold">

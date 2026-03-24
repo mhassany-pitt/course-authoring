@@ -31,6 +31,10 @@ export class CourseComponent implements OnInit {
   editingResource: any;
   editingUnit: any;
   editingActivities: any;
+  editingActivityJson = '';
+  editingActivityDialogVisible = false;
+  editingActivityIndex = -1;
+  editingActivityContext: { unit: any, resource: any } | null = null;
 
   domains: any = [];
   catalogItems: CatalogV2Item[] = [];
@@ -62,6 +66,7 @@ export class CourseComponent implements OnInit {
   activeCatalogBrowser: { unitId: any, resourceId: any } | null = null;
   catalogBrowserPopupStyle: Record<string, string> = {};
   catalogBrowserPopupAnchorStyle: Record<string, string> = {};
+  altKeyPressed = false;
 
   arrangingItems = '';
 
@@ -119,6 +124,21 @@ export class CourseComponent implements OnInit {
   getTabIndexFromQueryParam() {
     const tab = Number(this.route.snapshot.queryParamMap.get('tab'));
     return Number.isInteger(tab) && tab >= 0 ? tab : 0;
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  onWindowKeydown(event: KeyboardEvent) {
+    this.altKeyPressed = event.altKey;
+  }
+
+  @HostListener('window:keyup', ['$event'])
+  onWindowKeyup(event: KeyboardEvent) {
+    this.altKeyPressed = event.altKey;
+  }
+
+  @HostListener('window:blur')
+  onWindowBlur() {
+    this.altKeyPressed = false;
   }
 
   logLeavePage(targetUrl: string) {
@@ -611,6 +631,57 @@ export class CourseComponent implements OnInit {
         );
       },
     });
+  }
+
+  editActivityAdvanced(unit: any, resource: any, activity: any, aindex: number) {
+    this.editingActivityContext = { unit, resource };
+    this.editingActivityIndex = aindex;
+    this.editingActivityJson = JSON.stringify(this.cloneValue(activity), null, 2);
+    this.editingActivityDialogVisible = true;
+  }
+
+  closeActivityAdvancedDialog() {
+    this.editingActivityDialogVisible = false;
+    this.editingActivityJson = '';
+    this.editingActivityIndex = -1;
+    this.editingActivityContext = null;
+  }
+
+  saveActivityAdvanced() {
+    if (!this.editingActivityContext || this.editingActivityIndex < 0)
+      return;
+
+    try {
+      const updatedActivity = JSON.parse(this.editingActivityJson);
+      updatedActivity._userEdited = true;
+
+      const { unit, resource } = this.editingActivityContext;
+      unit.activities ||= {};
+      unit.activities[resource.id] ||= [];
+
+      const prevValue = this.cloneValue(unit.activities[resource.id]);
+      unit.activities[resource.id][this.editingActivityIndex] = updatedActivity;
+
+      this.logCourseChange(
+        'edit-activity-advanced',
+        {
+          unit: this.getActivityLogUnit(unit),
+          resource: this.getActivityLogResource(resource),
+          field: 'activities',
+          edited_index: this.editingActivityIndex,
+        },
+        unit.activities[resource.id],
+        prevValue
+      );
+
+      this.closeActivityAdvancedDialog();
+    } catch (error: any) {
+      this.messages.add({
+        severity: 'error',
+        summary: 'Invalid JSON',
+        detail: error?.message || 'Please provide valid JSON.',
+      });
+    }
   }
 
   forceUiRefresh(id: string) {

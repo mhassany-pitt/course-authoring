@@ -267,14 +267,19 @@
                         <div cdkDropList *ngIf="unit.activities?.[resource.id]?.length > 0" class="text-sm"
                           (cdkDropListDropped)="rearrange($event, unit.activities[resource.id], unit, resource)">
                           <span *ngFor="let activity of unit.activities[resource.id]; let aindex = index;" cdkDrag
-                            class="flex items-center gap-1 overflow-hidden rounded 
-                                   hover:border hover:border-dashed hover:border-gray-400 hover:px-1 hover:-mx-1">
-                            <i class="fa fa-times text-gray-300 hover:text-red-600 cursor-pointer"
+                            class="group flex items-center gap-1 py-0.5 overflow-visible rounded min-w-0 leading-none">
+                            <i class="fa fa-times cursor-pointer text-gray-300 hover:text-red-600"
                               (click)="removeActivity(unit, resource, aindex)"></i>
-                            <i class="fa fa-bars text-gray-500 cursor-move"></i>
+                            <i *ngIf="altKeyPressed" class="fa fa-edit cursor-pointer text-gray-300 hover:text-blue-600"
+                              (click)="editActivityAdvanced(unit, resource, activity, aindex)"></i>
+                            <i cdkDragHandle class="fa fa-bars cursor-move text-gray-500"></i>
                             <a [href]="getPreviewLink(app.user, activity.url)" target="_blank"
-                              class="inline-block text-wrap no-underline">
-                              {{ activity.name }}
+                              class="block min-w-0 flex-1 overflow-visible text-gray-600 no-underline hover:text-blue-700 group-hover:relative group-hover:z-20"
+                              [ngClass]="{ 'italic text-slate-500': activity._userEdited }">
+                              <span
+                                class="block overflow-hidden text-ellipsis whitespace-nowrap group-hover:relative group-hover:z-20 group-hover:inline-block group-hover:max-w-none group-hover:overflow-visible group-hover:bg-white group-hover:font-bold">
+                                {{ activity.name }}
+                              </span>
                             </a>
                           </span>
                         </div>
@@ -423,6 +428,24 @@
     <p-chips *ngIf="course" [(ngModel)]="course.collaborator_emails" separator="," placeholder="user@company.com, ..."
       class="p-chips-sm"></p-chips>
     <span class="text-xs text-gray-400">Type collaborator's email and press enter to add.</span>
+  </div>
+</p-dialog>
+
+<p-dialog header="Edit Activity JSON" [(visible)]="editingActivityDialogVisible" [modal]="true"
+  [style]="{ width: '75vw', 'max-width': '800px' }" (onHide)="closeActivityAdvancedDialog()">
+  <div class="flex flex-col gap-2">
+    <span class="text-sm text-amber-700">
+      IMPORTANT: Edit with caution, changes will modify the activity!
+    </span>
+    <textarea rows="18" pInputTextarea [(ngModel)]="editingActivityJson" [autoResize]="false"
+      class="w-full font-mono text-sm"></textarea>
+    <span class="text-xs text-gray-400">
+      <code>"_userEdited"</code> is used to mark the activity edited by user.
+    </span>
+    <div class="flex justify-end gap-2">
+      <p-button type="button" label="Cancel" severity="secondary" (click)="closeActivityAdvancedDialog()"></p-button>
+      <p-button type="button" label="Save" (click)="saveActivityAdvanced()"></p-button>
+    </div>
   </div>
 </p-dialog>
 
