@@ -33,6 +33,17 @@ import { AccordionModule } from 'primeng/accordion';
   styleUrl: './app.component.less'
 })
 export class AppComponent {
+  readonly DOCUMENTATION_URL = 'https://docs.google.com/document/d/12PhDaTUDmPsw0zapytMcr24UeXW41MMBii5S5VfWzg4/edit?usp=sharing';
+  readonly VERSION = 1;
+  lastDismissed = +(this.getStorageItem('course-authoring.update-notice.version') || 0);
 
   constructor(public app: AppService) { }
+
+  getStorageItem(key: string) {
+    return localStorage.getItem(key);
+  }
+
+  setStorageItem(key: string, value: string) {
+    localStorage.setItem(key, value);
+  }
 }

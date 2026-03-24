@@ -31,6 +31,17 @@ export class CoursesService {
     return this.http.patch(`${environment.apiUrl}/courses/${course.id}`, course, { withCredentials: true });
   }
 
+  log(id: string, log: any) {
+    return this.http.post(
+      `${environment.apiUrl}/courses/${id}/log`,
+      log,
+      {
+        withCredentials: true,
+        context: new HttpContext().set(NGX_LOADING_BAR_IGNORED, true),
+      }
+    );
+  }
+
   delete(id: string, undo: boolean) {
     return this.http.delete(`${environment.apiUrl}/courses/${id}${undo ? '?undo=true' : ''}`, { withCredentials: true });
   }

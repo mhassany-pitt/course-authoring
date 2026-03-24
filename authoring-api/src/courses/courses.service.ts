@@ -1,13 +1,16 @@
 import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { InjectModel } from '@nestjs/mongoose';
+import { writeFile } from 'fs/promises';
 import { Model } from 'mongoose';
 import { Course } from './course.schema';
 import { toObject } from 'src/utils';
+import { ensureDir } from 'fs-extra';
 
 @Injectable()
 export class CoursesService {
-
   constructor(
+    private config: ConfigService,
     @InjectModel('courses') private courses: Model<Course>,
   ) {
     // setTimeout(() => this.migrate(), 3000);
@@ -62,18 +65,27 @@ export class CoursesService {
     return await this.courses.findOneAndUpdate({ user_email, _id: id }, { deleted_at: undo ? null : new Date() }, { new: true });
   }
 
-  private async migrate() {
-    // if (await exists('./courses-to-migrate.done')) {
-    //   console.log('courses already migrated!');
-    //   return;
-    // }
-    // const courses = await readJson('./courses-to-migrate.json');
-    // for (const course of courses) {
-    //   await this.courses.create(course);
-    //   console.log('migrated course:', course['name']);
-    // }
-    // await writeFile('./courses-to-migrate.done', '');
+  async log({ id, log }) {
+    await ensureDir(`${this.config.get('STORAGE_PATH')}/logs`);
+    await writeFile(
+      `${this.config.get('STORAGE_PATH')}/logs/${id}.log`,
+      `${Date.now()} - ${JSON.stringify(log)}\n`,
+      { flag: 'a' }
+    );
   }
+
+  // private async migrate() {
+  //   if (await exists('./courses-to-migrate.done')) {
+  //     console.log('courses already migrated!');
+  //     return;
+  //   }
+  //   const courses = await readJson('./courses-to-migrate.json');
+  //   for (const course of courses) {
+  //     await this.courses.create(course);
+  //     console.log('migrated course:', course['name']);
+  //   }
+  //   await writeFile('./courses-to-migrate.done', '');
+  // }
 
   getProviderSupportedProtocols(only: string[]) {
     const mapping = {

@@ -1,4 +1,34 @@
 <div *ngIf="course" class="flex flex-col">
+  <p-dialog [visible]="!trackingMessageDismissed" header="Dear User" position="top" [closable]="false" [modal]="true"
+    [style]="{'max-width': '30rem'}" appendTo="body">
+    <p class="mt-0 leading-normal">
+      On this page, we collect data to <i>enhance this tool and support our research</i>.
+      By using the tool, you consent to this collection.
+      Your privacy is our top priority, and all data will be used exclusively for these purposes.
+
+      <br /><br />
+
+      Please check this box if you do not consent to the data collection.<br />
+      <p-checkbox label="Don't collect data on this page." [(ngModel)]="_v['dont-collect-data']" [binary]="true"
+        class="p-checkbox-sm mt-2 ml-2"></p-checkbox>
+
+      <br /><br />
+
+      Feel free to to reach out
+      (<a href="mailto:moh70@pitt.edu" class="underline">moh70&#64;pitt.edu</a>)
+      if you have any questions or concerns.
+
+      <br /><br />
+
+      Thank you, <br />
+      PAWS Lab Team<br />
+      University of Pittsburgh
+    </p>
+
+    <button pButton type="button" label="Dismiss" class="p-button-help" (click)="dismissTrackingMessage()">
+    </button>
+  </p-dialog>
+
   <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
     <div class="container mx-auto flex items-center gap-2 px-2 md:px-0">
       <img src="assets/logo.png" class="h-8 w-8" />
@@ -66,7 +96,7 @@
               <div class="flex-grow flex flex-col gap-1">
                 <span class="text-sm text-gray-600">Institution:</span>
                 <input type="text" pInputText name="institution" [(ngModel)]="course.institution"
-                  placeholder="University of ..." />
+                  placeholder="University of ..." (focus)="rememberFieldValue($event)" (blur)="logFieldBlur($event)" />
               </div>
             </div>
             <div class="flex flex-wrap lg:flex-nowrap items-center gap-2">
@@ -76,7 +106,8 @@
                   <span class="text-red-600 align-super">*</span>
                 </span>
                 <input #codeEl type="text" pInputText name="code" [(ngModel)]="course.code" placeholder="INFSCI ..."
-                  required="true" [ngClass]="{'ng-invalid ng-dirty': any(codeEl).errors?.['required']}" />
+                  required="true" [ngClass]="{'ng-invalid ng-dirty': any(codeEl).errors?.['required']}"
+                  (focus)="rememberFieldValue($event)" (blur)="logFieldBlur($event)" />
               </div>
               <div class="flex-grow flex flex-col gap-1">
                 <span class="flex items-center gap-1 text-sm">
@@ -85,17 +116,18 @@
                 </span>
                 <input #nameEl type="text" pInputText name="name" [(ngModel)]="course.name"
                   placeholder="Introduction to ..." required="true"
-                  [ngClass]="{'ng-invalid ng-dirty': any(nameEl).errors?.['required']}" />
+                  [ngClass]="{'ng-invalid ng-dirty': any(nameEl).errors?.['required']}"
+                  (focus)="rememberFieldValue($event)" (blur)="logFieldBlur($event)" />
               </div>
               <div class="flex flex-col gap-1">
                 <span class="flex items-center gap-1 text-sm">
                   <span class="text-gray-600">Domain:</span>
                   <span class="text-red-600 align-super">*</span>
                 </span>
-                <p-dropdown #domainEl [options]="domains" name="domain" [(ngModel)]="course.domain" optionValue="id"
+                <p-dropdown #domainEl [options]="domains" name="domain" [ngModel]="course.domain" optionValue="id"
                   optionLabel="name" placeholder="Select" required="true" styleClass="w-32"
                   [ngClass]="{'ng-invalid ng-dirty': any(domainEl).errors?.['required']}"
-                  (onChange)="loadProviders(course.domain)" />
+                  (onChange)="onDomainChange($event.value)" />
               </div>
               <div class="flex flex-col gap-1">
                 <span class="flex items-center gap-1 text-sm">
@@ -103,14 +135,16 @@
                   <span class="text-red-600 align-super">*</span>
                 </span>
                 <p-dropdown #yesNoEl [options]="[{label:'Yes',value: true}, {label:'No',value:false}]" name="published"
-                  [(ngModel)]="course.published" placeholder="Select" required="true" styleClass="w-32"
-                  [ngClass]="{'ng-invalid ng-dirty': any(yesNoEl).errors?.['required']}" />
+                  [ngModel]="course.published" placeholder="Select" required="true" styleClass="w-32"
+                  [ngClass]="{'ng-invalid ng-dirty': any(yesNoEl).errors?.['required']}"
+                  (onChange)="onPublishedChange($event.value)" />
               </div>
             </div>
             <div class="flex flex-col gap-1">
               <span class="text-sm text-gray-600">Description:</span>
               <textarea rows="5" pInputTextarea name="description" [(ngModel)]="course.description"
-                placeholder="This course is ..." [autoResize]="true" class="min-h-16"></textarea>
+                placeholder="This course is ..." [autoResize]="true" class="min-h-16"
+                (focus)="rememberFieldValue($event)" (blur)="logFieldBlur($event)"></textarea>
             </div>
           </div>
         </p-tabPanel>
@@ -131,8 +165,7 @@
                           [text]="true" [raised]="true" class="p-button-xs" (click)="arrangingItems = 'units'">
                         </p-button>
                         <p-button type="button" label="new unit" icon="fa fa-plus" severity="secondary" [text]="true"
-                          [raised]="true" class="p-button-xs"
-                          (click)="course.units.push({ id: nextResourceId(), level: 0 })">
+                          [raised]="true" class="p-button-xs" (click)="addUnit()">
                         </p-button>
                       </div>
                     </div>
@@ -148,7 +181,7 @@
                         </p-button>
                         <p-button type="button" [label]="course.resources?.length > 1 ? 'new resource' : ''"
                           icon="fa fa-plus" title="new resource" severity="secondary" [text]="true" [raised]="true"
-                          class="p-button-xs" (click)="course.resources.push({ id: nextResourceId() })">
+                          class="p-button-xs" (click)="addResource()">
                         </p-button>
                       </div>
                     </div>
@@ -175,7 +208,9 @@
                         <textarea *ngIf="!tt['textarea-ref-tt']" #resourceNameEl rows="1" pInputTextarea
                           [name]="'resource'+resource.id" [(ngModel)]="resource.name" placeholder="Resource ..."
                           required="true" [autoResize]="true" class="text-xs font-bold p-1 flex-grow"
-                          [ngClass]="{'ng-invalid ng-dirty': any(resourceNameEl).errors?.['required']}"></textarea>
+                          [ngClass]="{'ng-invalid ng-dirty': any(resourceNameEl).errors?.['required']}"
+                          (focus)="rememberTrackedField('resource-name:' + resource.id, resource.name)"
+                          (blur)="logTrackedFieldBlur('resource-name:' + resource.id, resource.name, { field: 'name', resource: getActivityLogResource(resource) })"></textarea>
                         <span class="absolute right-0.5 top-0 text-red-600 align-super">*</span>
                       </div>
                     </div>
@@ -201,7 +236,7 @@
 
                         <p-button type="button" [icon]="'fa ' + (unit._ui_expand ? 'fa-chevron-up' : 'fa-chevron-down')"
                           severity="secondary" [text]="true" title="Expand/Collapse Description" class="p-button-xs"
-                          (click)="unit._ui_expand = !unit._ui_expand; forceUiRefresh('unitdesc-ref-tt:' + unit.id);">
+                          (click)="toggleUnitDescription(unit)">
                         </p-button>
                       </div>
                       <div class="flex-grow flex flex-col gap-0.5">
@@ -209,13 +244,17 @@
                           <textarea *ngIf="!tt['textarea-ref-tt']" #unitNameEl rows="1" pInputTextarea
                             [name]="'unit-name'+unit.id" [(ngModel)]="unit.name" placeholder="Name" required="true"
                             [autoResize]="true" class="text-xs font-bold p-1 flex-grow"
-                            [ngClass]="{'ng-invalid ng-dirty': any(unitNameEl).errors?.['required']}"></textarea>
+                            [ngClass]="{'ng-invalid ng-dirty': any(unitNameEl).errors?.['required']}"
+                            (focus)="rememberTrackedField('unit-name:' + unit.id, unit.name)"
+                            (blur)="logTrackedFieldBlur('unit-name:' + unit.id, unit.name, { field: 'name', unit: getActivityLogUnit(unit) })"></textarea>
                           <span class="absolute right-0.5 top-0 text-red-600 align-super">*</span>
                         </div>
                         <textarea *ngIf="!tt['textarea-ref-tt'] && !tt['unitdesc-ref-tt:' + unit.id]" rows="2"
                           pInputTextarea [name]="'unit-description'+unit.id" [(ngModel)]="unit.description"
                           placeholder="Description" [autoResize]="unit._ui_expand"
-                          class="text-xs p-1 flex-grow"></textarea>
+                          class="text-xs p-1 flex-grow"
+                          (focus)="rememberTrackedField('unit-description:' + unit.id, unit.description)"
+                          (blur)="logTrackedFieldBlur('unit-description:' + unit.id, unit.description, { field: 'description', unit: getActivityLogUnit(unit) })"></textarea>
                       </div>
                     </div>
                   </td>
@@ -226,7 +265,7 @@
                       <div class="flex flex-col justify-start gap-1 p-1"
                         [ngClass]="{ 'min-h-full bg-blue-50': isCatalogBrowserOpen(unit, resource) }">
                         <div cdkDropList *ngIf="unit.activities?.[resource.id]?.length > 0" class="text-sm"
-                          (cdkDropListDropped)="rearrange($event, unit.activities[resource.id])">
+                          (cdkDropListDropped)="rearrange($event, unit.activities[resource.id], unit, resource)">
                           <span *ngFor="let activity of unit.activities[resource.id]; let aindex = index;" cdkDrag
                             class="flex items-center gap-1 overflow-hidden rounded 
                                    hover:border hover:border-dashed hover:border-gray-400 hover:px-1 hover:-mx-1">
@@ -278,6 +317,7 @@
                         <app-catalog-browser [resourceName]="activeCatalogBrowserResourceName" [unitName]="unit.name" [domain]="course.domain"
                           [providerIds]="activeCatalogBrowserProviderIds" [selectedActivities]="activeCatalogBrowserActivities"
                           (close)="closeCatalogBrowser()"
+                          (interaction)="logCatalogBrowserInteraction($event)"
                           (selectedActivitiesChange)="updateCatalogBrowserActivities($event)" />
                       </div>
                     </div>
@@ -321,13 +361,15 @@
                 <div class="flex flex-col">
                   <span class="text-xs text-gray-400 ml-1">Mnemonic:</span>
                   <input type="text" pInputText [name]="'group_mnemonic'+i" [(ngModel)]="group.mnemonic"
-                    placeholder="Group Mnemonic" size="small" [required]="true" [size]="20" />
+                    placeholder="Group Mnemonic" size="small" [required]="true" [size]="20"
+                    (focus)="rememberFieldValue($event)" (blur)="logFieldBlur($event)" />
                 </div>
 
                 <div class="flex flex-col flex-grow">
                   <span class="text-xs text-gray-400 ml-1">Name:</span>
                   <input type="text" pInputText [name]="'group_name'+i" [(ngModel)]="group.name"
-                    placeholder="Group Name" [required]="true" />
+                    placeholder="Group Name" [required]="true"
+                    (focus)="rememberFieldValue($event)" (blur)="logFieldBlur($event)" />
                 </div>
 
                 <div class="flex flex-col">
@@ -357,12 +399,13 @@
               </div>
               <textarea *ngIf="tt['group_students'+i]" pInputTextarea [name]="'group_students'+i"
                 [(ngModel)]="group.students" [autoResize]="true" [readonly]="true"
+                (focus)="rememberFieldValue($event)" (blur)="logFieldBlur($event)"
                 [placeholder]="'fullname,email\nstudent1,student1@university.edu\nstudent2,student2@university.edu\n...'">
               </textarea>
             </ng-container>
             <div class="flex items-center gap-2">
               <p-button type="button" label="add group" icon="fa fa-plus" size="small" severity="secondary"
-                (click)="course.groups.push({ id: nextResourceId() })"></p-button>
+                (click)="addGroup()"></p-button>
             </div>
           </div>
         </p-tabPanel>
@@ -384,7 +427,7 @@
 </p-dialog>
 
 <app-enable-providers *ngIf="editingProviders" [providers]="editingProviders" [list]="providersList"
-  (close)="editingProviders = null" (complete)="editingResource.providers = $event; editingProviders = null;" />
+  (close)="editingProviders = null" (complete)="applyResourceProviders($event)" />
 
 <app-rearrange-resources *ngIf="arrangingItems == 'resources'" [resources]="course.resources"
   (close)="arrangingItems = ''" (complete)="applyResourcesArrangement($event); arrangingItems = '';" />

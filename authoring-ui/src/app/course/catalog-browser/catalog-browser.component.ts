@@ -35,6 +35,7 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
   @Input() selectedActivities: any[] = [];
   @Output() close = new EventEmitter<void>();
   @Output() selectedActivitiesChange = new EventEmitter<any[]>();
+  @Output() interaction = new EventEmitter<any>();
 
   allItems: CatalogV2Item[] = [];
   items: CatalogV2Item[] = [];
@@ -235,7 +236,9 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
   }
 
   filterTable(table: any, event: Event) {
-    table.filterGlobal((event.target as HTMLInputElement).value, 'contains');
+    const value = (event.target as HTMLInputElement).value;
+    table.filterGlobal(value, 'contains');
+    this.emitInteraction('catalog-search', { field: 'search' }, value, null);
   }
 
   loadCatalogItems(force = false) {
@@ -256,6 +259,7 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
   }
 
   reloadCatalogItems() {
+    this.emitInteraction('reload-catalog', { field: 'catalog' }, { force: true }, null);
     this.loadCatalogItems(true);
   }
 
@@ -282,6 +286,7 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
     const activities = [...(this.selectedActivities || [])];
     if (!activities.some((current: any) => current.id == activity.id || current.url == activity.url))
       activities.push(activity);
+    this.emitInteraction('add-activity', { item: this.getItemSummary(item), field: 'activities' }, activity, null);
     this.selectedActivitiesChange.emit(activities);
   }
 
@@ -290,6 +295,7 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
     const activities = (this.selectedActivities || []).filter((current: any) =>
       current.id != activity.id && current.url != activity.url
     );
+    this.emitInteraction('remove-activity', { item: this.getItemSummary(item), field: 'activities' }, activity, null);
     this.selectedActivitiesChange.emit(activities);
   }
 
@@ -309,12 +315,14 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
     };
   }
 
-  toggleFacet(selection: string[], value: string) {
+  toggleFacet(selection: string[], value: string, facet: string) {
+    const prevValue = [...selection];
     const index = selection.indexOf(value);
     if (index >= 0)
       selection.splice(index, 1);
     else
       selection.push(value);
+    this.emitInteraction('toggle-filter', { field: 'facet', facet, value }, [...selection], prevValue);
   }
 
   isFacetSelected(selection: string[], value: string) {
@@ -322,40 +330,71 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
   }
 
   clearFacetFilters() {
+    const prevValue = {
+      types: [...this.selectedTypes],
+      providers: [...this.selectedProviders],
+      authors: [...this.selectedAuthors],
+      knowledgeComponents: [...this.selectedKnowledgeComponents],
+      contentLanguages: [...this.selectedContentLanguages],
+    };
     this.selectedTypes = [];
     this.selectedProviders = [];
     this.selectedAuthors = [];
     this.selectedKnowledgeComponents = [];
     this.selectedContentLanguages = [];
+    this.emitInteraction('clear-filters', { field: 'facets' }, {
+      types: [],
+      providers: [],
+      authors: [],
+      knowledgeComponents: [],
+      contentLanguages: [],
+    }, prevValue);
   }
 
   toggleQuickFilterSection(key: QuickFilterSectionKey) {
+    const prevValue = this.quickFilterSections[key];
     this.quickFilterSections[key] = !this.quickFilterSections[key];
+    this.emitInteraction(
+      'toggle-filter-section',
+      { field: 'filter-section', section: key },
+      this.quickFilterSections[key],
+      prevValue
+    );
   }
 
   toggleAuthorsView() {
     this.quickFilterSections.authors = true;
+    const prevValue = this.showAllAuthors;
     this.showAllAuthors = !this.showAllAuthors;
+    this.emitInteraction('toggle-authors-view', { field: 'authors-view' }, this.showAllAuthors, prevValue);
   }
 
   toggleKnowledgeComponentsView() {
     this.quickFilterSections.knowledgeComponents = true;
+    const prevValue = this.showAllKnowledgeComponents;
     this.showAllKnowledgeComponents = !this.showAllKnowledgeComponents;
+    this.emitInteraction('toggle-kc-view', { field: 'knowledge-components-view' }, this.showAllKnowledgeComponents, prevValue);
   }
 
   onAuthorsQueryChange(value: string) {
+    const prevValue = this.authorsQuery;
     this.authorsQuery = value || '';
     this.showAllAuthors = false;
+    this.emitInteraction('filter-authors', { field: 'authors-query' }, this.authorsQuery, prevValue);
   }
 
   onKnowledgeComponentsQueryChange(value: string) {
+    const prevValue = this.knowledgeComponentsQuery;
     this.knowledgeComponentsQuery = value || '';
     this.showAllKnowledgeComponents = false;
+    this.emitInteraction('filter-kcs', { field: 'knowledge-components-query' }, this.knowledgeComponentsQuery, prevValue);
   }
 
   onKnowledgeComponentCategoryChange(value: string) {
+    const prevValue = this.selectedKnowledgeComponentCategory;
     this.selectedKnowledgeComponentCategory = value || 'All';
     this.showAllKnowledgeComponents = false;
+    this.emitInteraction('change-kc-category', { field: 'knowledge-components-category' }, this.selectedKnowledgeComponentCategory, prevValue);
   }
 
   get selectedFacetCount() {
@@ -392,5 +431,38 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
 
   isSelected(item: CatalogV2Item) {
     return this.selectedItems.some((selected) => selected.id === item.id);
+  }
+
+  toggleShowSelectedOnly() {
+    const prevValue = this.showSelectedOnly;
+    this.showSelectedOnly = !this.showSelectedOnly;
+    this.emitInteraction('toggle-selected-only', { field: 'show-selected-only' }, this.showSelectedOnly, prevValue);
+  }
+
+  onTablePage(event: any) {
+    this.emitInteraction('catalog-page', { field: 'page' }, {
+      page: event.page,
+      rows: event.rows,
+      first: event.first,
+    }, null);
+  }
+
+  previewItem(item: CatalogV2Item) {
+    this.emitInteraction('preview-item', { item: this.getItemSummary(item), field: 'preview' }, item.links?.demo_url || null, null);
+  }
+
+  emitInteraction(action: string, object: any, value: any, prev_value: any) {
+    this.interaction.emit({ action, object, value, prev_value });
+  }
+
+  getItemSummary(item: CatalogV2Item) {
+    return {
+      id: item.identity?.id || item.paws_id,
+      paws_id: item.paws_id,
+      title: item.identity?.title || 'Untitled Item',
+      provider: item.attribution?.provider || '',
+      type: item.identity?.type || '',
+      demo_url: item.links?.demo_url || '',
+    };
   }
 }

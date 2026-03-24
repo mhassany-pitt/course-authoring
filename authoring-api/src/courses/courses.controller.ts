@@ -153,4 +153,10 @@ export class CoursesController {
     const course = await this.courses.clone({ id: req.params.id, user_email: req.user.email });
     return useId(toObject(course));
   }
+
+  @Post(':id/log')
+  @UseGuards(AuthenticatedGuard)
+  async log(@Request() req: any, @Param('id') id: string, @Body() log: any) {
+    await this.courses.log({ id, log });
+  }
 }

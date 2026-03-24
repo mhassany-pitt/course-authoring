@@ -16,7 +16,7 @@
       [outlined]="!showSelectedOnly"
       class="p-button-xs"
       styleClass="!px-2 !py-1"
-      (click)="showSelectedOnly = !showSelectedOnly"
+      (click)="toggleShowSelectedOnly()"
     >
     </p-button>
     <p-button
@@ -123,7 +123,7 @@
                   !isFacetSelected(selectedTypes, option.label) &&
                   !isFacetAvailable(option.count, selectedTypes, option.label)
                 "
-                (click)="toggleFacet(selectedTypes, option.label)"
+                (click)="toggleFacet(selectedTypes, option.label, 'types')"
               >
                 {{ option.label }} ({{ option.count }}),
               </a>
@@ -165,7 +165,7 @@
                     option.label
                   )
                 "
-                (click)="toggleFacet(selectedProviders, option.label)"
+                (click)="toggleFacet(selectedProviders, option.label, 'providers')"
               >
                 {{ option.label }} ({{ option.count }}),
               </a>
@@ -207,7 +207,7 @@
                     option.label
                   )
                 "
-                (click)="toggleFacet(selectedContentLanguages, option.label)"
+                (click)="toggleFacet(selectedContentLanguages, option.label, 'contentLanguages')"
               >
                 {{ option.label }} ({{ option.count }}),
               </a>
@@ -264,7 +264,7 @@
                   !isFacetSelected(selectedAuthors, option.label) &&
                   !isFacetAvailable(option.count, selectedAuthors, option.label)
                 "
-                (click)="toggleFacet(selectedAuthors, option.label)"
+                (click)="toggleFacet(selectedAuthors, option.label, 'authors')"
               >
                 {{ option.label }} ({{ option.count }}),
               </a>
@@ -352,7 +352,7 @@
                     option.label
                   )
                 "
-                (click)="toggleFacet(selectedKnowledgeComponents, option.label)"
+                (click)="toggleFacet(selectedKnowledgeComponents, option.label, 'knowledgeComponents')"
               >
                 {{ option.label }} ({{ option.count }}),
               </a>
@@ -379,6 +379,7 @@
           [(selection)]="selectedItems"
           (onRowSelect)="addSelectedItem($event.data)"
           (onRowUnselect)="removeSelectedItem($event.data)"
+          (onPage)="onTablePage($event)"
           [paginator]="true"
           [rows]="25"
           [scrollable]="true"
@@ -416,6 +417,7 @@
                         rel="noopener noreferrer"
                         class="text-gray-400"
                         title="View Demo"
+                        (click)="previewItem(item)"
                       >
                         <i class="fa fa-external-link"></i>
                       </a>
