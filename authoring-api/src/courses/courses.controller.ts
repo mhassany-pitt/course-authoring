@@ -7,6 +7,7 @@ import { toObject, useId } from 'src/utils';
 import { CoursesService } from './courses.service';
 import { UsersService } from 'src/users/users.service';
 import { ConfigService } from '@nestjs/config';
+import { CatalogV2Service } from 'src/catalog_v2/catalog_v2.service';
 
 @Controller('courses')
 export class CoursesController {
@@ -14,6 +15,7 @@ export class CoursesController {
   constructor(
     private config: ConfigService,
     private courses: CoursesService,
+    private catalogV2: CatalogV2Service,
     private users: UsersService,
   ) { }
 
@@ -75,39 +77,37 @@ export class CoursesController {
       email: course.user_email,
       fullname: (await this.users.findUser(course.user_email)).fullname,
     };
+
     course.resources?.forEach((r: any) => {
       r.id = `${r.id}`;
       delete r.providers;
     });
-    const catalog_v2_protocols = {};
-    const providers = new Set<string>();
-    course.units?.forEach((u: any, index: number) => {
-      u.id = `${u.id}`;
+
+    for (let index = 0; index < (course.units || []).length; index++) {
+      const unit = course.units[index];
+      unit.id = `${unit.id}`;
+
       // find parent unit
-      for (let i = index - 1; i >= 0; i--)
-        if (course.units[i].level == u.level - 1) {
-          u.parent = course.units[i].id;
+      for (let parentIndex = index - 1; parentIndex >= 0; parentIndex--)
+        if (course.units[parentIndex].level == unit.level - 1) {
+          unit.parent = course.units[parentIndex].id;
           break;
         }
 
-      // find providers
-      Object.values(u.activities || {}).forEach((r: any[]) => {
-        r.forEach(a => providers.add(a.provider_id));
-        r.forEach(a => {
-          a.delivery?.forEach((d: any) => {
-            if (!catalog_v2_protocols[a.provider_id]) 
-              catalog_v2_protocols[a.provider_id] = new Set<string>();
-            if (d.protocol) catalog_v2_protocols[a.provider_id].add(d.protocol.toLowerCase());
-          });
-          delete a.delivery;
-        });
-      });
-    });
+      // attach delivery info to activities
+      const resources: any[] = Object.values(unit.activities || {});
+      for (const resource of resources)
+        for (const activity of resource) {
+          activity.delivery = (await this.catalogV2.findByPAWSID(activity.id))?.delivery;
+        }
+    };
+
     course.units?.forEach((u: any) => {
       delete u.level;
       delete u._ui_expand;
     });
 
+    // remove not-necessary/sensitive fields
     delete course.students;
     delete course.user_email;
     delete course.linkings;
@@ -115,16 +115,6 @@ export class CoursesController {
     delete course.groups;
     delete course.year;
     delete course.term;
-
-    course.provider_protocols = this.courses.getProviderSupportedProtocols([...providers]);
-
-    // merge protocols from catalog-v2 items
-    for (const provider_id of Object.keys(catalog_v2_protocols)) {
-      course.provider_protocols[provider_id] = Array.from(new Set([
-        ...(course.provider_protocols[provider_id] || []),
-        ...Array.from(catalog_v2_protocols[provider_id])
-      ]));
-    }
 
     return course;
   }

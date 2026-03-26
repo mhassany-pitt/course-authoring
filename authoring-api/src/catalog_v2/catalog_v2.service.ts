@@ -39,6 +39,11 @@ export class CatalogV2Service {
       });
   }
 
+  async findByPAWSID(paws_id: number) {
+    const item = await this.catalogItems.findOne({ paws_id });
+    return item ? useId(toObject(item)) : null;
+  }
+
   async read(id: string) {
     const item = await this.catalogItems.findOne({
       _id: id,
