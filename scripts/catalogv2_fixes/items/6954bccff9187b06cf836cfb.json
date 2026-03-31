@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T22:16:52.000Z",
-  "updated_at": "2026-03-21T20:47:36.229Z",
+  "updated_at": "2026-03-23T18:16:16.852Z",
   "tags": [],
   "identity": {
     "id": "Calculating the Wage of an Employee at the Customer Service Call Center__68bdb309f6cc3d7a9cc09784-68bdb309f6cc3d7a9cc09782-1",
@@ -11,7 +11,7 @@
     "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09784?_t=1758485059927&index=1"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/ifelse_if_else_wage__68bdb309f6cc3d7a9cc09784"
   },
   "attribution": {
     "created_at": "2025-09-10T22:16:52.000Z",
@@ -52,12 +52,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09784?_t=1758485059927&index=1"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/ifelse_if_else_wage__68bdb309f6cc3d7a9cc09784"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09784?_t=1758485059927&index=1"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/ifelse_if_else_wage__68bdb309f6cc3d7a9cc09784"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/ifelse_if_else_wage__68bdb309f6cc3d7a9cc09784"
     }
   ],
   "rights": {

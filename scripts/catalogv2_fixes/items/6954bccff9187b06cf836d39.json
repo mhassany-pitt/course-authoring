@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-16T16:12:02.000Z",
-  "updated_at": "2026-03-21T20:47:52.642Z",
+  "updated_at": "2026-03-23T18:16:37.724Z",
   "tags": [],
   "identity": {
     "id": "py_classes_inheritance_es__685068eaa0cac29134436ebc",
@@ -11,7 +11,7 @@
     "type": "CodeConstruction"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/685068eaa0cac29134436ebc?_t=1750184419936&index=0&locale=es"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_classes_inheritance_es__685068eaa0cac29134436ebc"
   },
   "attribution": {
     "created_at": "2025-06-16T16:12:02.000Z",
@@ -98,12 +98,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/685068eaa0cac29134436ebc?_t=1750184419936&index=0&locale=es"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_classes_inheritance_es__685068eaa0cac29134436ebc"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/685068eaa0cac29134436ebc?_t=1750184419936&index=0&locale=es"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_classes_inheritance_es__685068eaa0cac29134436ebc"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_classes_inheritance_es__685068eaa0cac29134436ebc"
     }
   ],
   "rights": {

@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-09T10:31:38.000Z",
-  "updated_at": "2026-03-21T20:48:46.157Z",
+  "updated_at": "2026-03-23T18:17:48.459Z",
   "tags": [],
   "identity": {
     "id": "Calculando el Porcentaje de Victorias de un Equipo (Caso 2)__6834728366a8e1b992c843d6-6834727f66a8e1b992c843d1-1",
@@ -11,7 +11,7 @@
     "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6834728366a8e1b992c843d6?_t=1749534479778&index=1&locale=es"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_win_percentage_es__6834728366a8e1b992c843d6"
   },
   "attribution": {
     "created_at": "2025-06-09T10:31:38.000Z",
@@ -69,12 +69,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6834728366a8e1b992c843d6?_t=1749534479778&index=1&locale=es"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_win_percentage_es__6834728366a8e1b992c843d6"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6834728366a8e1b992c843d6?_t=1749534479778&index=1&locale=es"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_win_percentage_es__6834728366a8e1b992c843d6"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_win_percentage_es__6834728366a8e1b992c843d6"
     }
   ],
   "rights": {

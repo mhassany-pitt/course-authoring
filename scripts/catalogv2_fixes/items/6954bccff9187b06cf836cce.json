@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T22:24:45.000Z",
-  "updated_at": "2026-03-21T20:47:38.141Z",
+  "updated_at": "2026-03-23T18:16:19.232Z",
   "tags": [],
   "identity": {
     "id": "Increment/Decrement Operators (Case 2)__68bdb308f6cc3d7a9cc096da-68bdb308f6cc3d7a9cc096d5-1",
@@ -11,7 +11,7 @@
     "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096da?_t=1757557485160&index=1"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/artithmetic_inc_dec_operators__68bdb308f6cc3d7a9cc096da"
   },
   "attribution": {
     "created_at": "2025-09-10T22:24:45.000Z",
@@ -52,12 +52,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096da?_t=1757557485160&index=1"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/artithmetic_inc_dec_operators__68bdb308f6cc3d7a9cc096da"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096da?_t=1757557485160&index=1"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/artithmetic_inc_dec_operators__68bdb308f6cc3d7a9cc096da"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/artithmetic_inc_dec_operators__68bdb308f6cc3d7a9cc096da"
     }
   ],
   "rights": {

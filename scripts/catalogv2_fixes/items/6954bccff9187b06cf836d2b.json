@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T18:18:02.000Z",
-  "updated_at": "2026-03-21T20:48:36.866Z",
+  "updated_at": "2026-03-23T18:17:35.716Z",
   "tags": [],
   "identity": {
     "id": "Determining the Weather Condition (Case 4)__68bdb309f6cc3d7a9cc09838-68bdb309f6cc3d7a9cc09836-3",
@@ -11,7 +11,7 @@
     "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09838?_t=1757542682513&index=3"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/booleans_hot_dry__68bdb309f6cc3d7a9cc09838"
   },
   "attribution": {
     "created_at": "2025-09-10T18:18:02.000Z",
@@ -52,12 +52,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09838?_t=1757542682513&index=3"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/booleans_hot_dry__68bdb309f6cc3d7a9cc09838"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09838?_t=1757542682513&index=3"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/booleans_hot_dry__68bdb309f6cc3d7a9cc09838"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/booleans_hot_dry__68bdb309f6cc3d7a9cc09838"
     }
   ],
   "rights": {

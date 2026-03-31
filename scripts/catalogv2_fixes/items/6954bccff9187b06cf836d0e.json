@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T18:22:08.000Z",
-  "updated_at": "2026-03-21T20:47:29.899Z",
+  "updated_at": "2026-03-23T18:16:08.811Z",
   "tags": [],
   "identity": {
     "id": "Determining When a Student Fails a Course (Case 2)__68bdb309f6cc3d7a9cc097d2-68bdb309f6cc3d7a9cc097cd-1",
@@ -11,7 +11,7 @@
     "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097d2?_t=1757542928667&index=1"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/booleans_fail_course__68bdb309f6cc3d7a9cc097d2"
   },
   "attribution": {
     "created_at": "2025-09-10T18:22:08.000Z",
@@ -52,12 +52,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097d2?_t=1757542928667&index=1"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/booleans_fail_course__68bdb309f6cc3d7a9cc097d2"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097d2?_t=1757542928667&index=1"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/booleans_fail_course__68bdb309f6cc3d7a9cc097d2"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/booleans_fail_course__68bdb309f6cc3d7a9cc097d2"
     }
   ],
   "rights": {

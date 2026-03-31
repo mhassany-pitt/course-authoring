@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T22:25:57.000Z",
-  "updated_at": "2026-03-21T20:49:10.304Z",
+  "updated_at": "2026-03-23T18:18:18.302Z",
   "tags": [],
   "identity": {
     "id": "objects.classes.loan__68bdb308f6cc3d7a9cc096bf",
@@ -11,7 +11,7 @@
     "type": "CodeConstruction"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096bf?_t=1757557557305&index=0"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/objects_classes_loan__68bdb308f6cc3d7a9cc096bf"
   },
   "attribution": {
     "created_at": "2025-09-10T22:25:57.000Z",
@@ -52,12 +52,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096bf?_t=1757557557305&index=0"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/objects_classes_loan__68bdb308f6cc3d7a9cc096bf"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc096bf?_t=1757557557305&index=0"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/objects_classes_loan__68bdb308f6cc3d7a9cc096bf"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/objects_classes_loan__68bdb308f6cc3d7a9cc096bf"
     }
   ],
   "rights": {

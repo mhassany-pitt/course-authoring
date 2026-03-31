@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-10T12:35:45.000Z",
-  "updated_at": "2026-03-21T20:50:03.482Z",
+  "updated_at": "2026-03-23T18:19:27.117Z",
   "tags": [],
   "identity": {
     "id": "py_phone_age_es__682dca1966a8e1b992c82ad0",
@@ -11,7 +11,7 @@
     "type": "CodeConstruction"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dca1966a8e1b992c82ad0?_t=1750184389188&index=0&locale=es"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_phone_age_es__682dca1966a8e1b992c82ad0"
   },
   "attribution": {
     "created_at": "2025-06-10T12:35:45.000Z",
@@ -87,12 +87,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dca1966a8e1b992c82ad0?_t=1750184389188&index=0&locale=es"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_phone_age_es__682dca1966a8e1b992c82ad0"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dca1966a8e1b992c82ad0?_t=1750184389188&index=0&locale=es"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_phone_age_es__682dca1966a8e1b992c82ad0"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_phone_age_es__682dca1966a8e1b992c82ad0"
     }
   ],
   "rights": {

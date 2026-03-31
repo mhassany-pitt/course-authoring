@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-04T17:19:17.000Z",
-  "updated_at": "2026-03-21T20:49:22.356Z",
+  "updated_at": "2026-03-23T18:18:34.064Z",
   "tags": [],
   "identity": {
     "id": "py_pythagorean_theorem__664e23fd91363872f0ba32ea",
@@ -11,7 +11,7 @@
     "type": "CodeConstruction"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e23fd91363872f0ba32ea?_t=1749071975286&index=0"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_pythagorean_theorem__664e23fd91363872f0ba32ea"
   },
   "attribution": {
     "created_at": "2025-06-04T17:19:17.000Z",
@@ -52,12 +52,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e23fd91363872f0ba32ea?_t=1749071975286&index=0"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_pythagorean_theorem__664e23fd91363872f0ba32ea"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/664e23fd91363872f0ba32ea?_t=1749071975286&index=0"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_pythagorean_theorem__664e23fd91363872f0ba32ea"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_pythagorean_theorem__664e23fd91363872f0ba32ea"
     }
   ],
   "rights": {

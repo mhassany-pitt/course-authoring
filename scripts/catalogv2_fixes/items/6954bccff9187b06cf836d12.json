@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T18:21:36.000Z",
-  "updated_at": "2026-03-21T20:48:20.159Z",
+  "updated_at": "2026-03-23T18:17:14.503Z",
   "tags": [],
   "identity": {
     "id": "Reversing the Digits of an Integer__68bdb309f6cc3d7a9cc097dd-68bdb309f6cc3d7a9cc097db-2",
@@ -11,7 +11,7 @@
     "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097dd?_t=1757542896256&index=2"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/while_loops_j_digits__68bdb309f6cc3d7a9cc097dd"
   },
   "attribution": {
     "created_at": "2025-09-10T18:21:36.000Z",
@@ -52,12 +52,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097dd?_t=1757542896256&index=2"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/while_loops_j_digits__68bdb309f6cc3d7a9cc097dd"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc097dd?_t=1757542896256&index=2"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/while_loops_j_digits__68bdb309f6cc3d7a9cc097dd"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/while_loops_j_digits__68bdb309f6cc3d7a9cc097dd"
     }
   ],
   "rights": {

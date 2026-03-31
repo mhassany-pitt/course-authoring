@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-13T13:34:46.000Z",
-  "updated_at": "2026-03-21T20:50:29.148Z",
+  "updated_at": "2026-03-23T18:20:02.691Z",
   "tags": [],
   "identity": {
     "id": "Imprimir Tabla de Conteo de Medallas con Totales por Fila y por Columna__684c3d3ca0cac29134435d81-684c3d39a0cac29134435d7f-1",
@@ -11,7 +11,7 @@
     "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684c3d3ca0cac29134435d81?_t=1750198426771&index=1&locale=es"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_print_medals_es__684c3d3ca0cac29134435d81"
   },
   "attribution": {
     "created_at": "2025-06-13T13:34:46.000Z",
@@ -80,12 +80,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684c3d3ca0cac29134435d81?_t=1750198426771&index=1&locale=es"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_print_medals_es__684c3d3ca0cac29134435d81"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684c3d3ca0cac29134435d81?_t=1750198426771&index=1&locale=es"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_print_medals_es__684c3d3ca0cac29134435d81"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_print_medals_es__684c3d3ca0cac29134435d81"
     }
   ],
   "rights": {

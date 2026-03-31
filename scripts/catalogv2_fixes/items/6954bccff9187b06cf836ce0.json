@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T22:22:15.000Z",
-  "updated_at": "2026-03-21T20:50:09.304Z",
+  "updated_at": "2026-03-23T18:19:35.935Z",
   "tags": [],
   "identity": {
     "id": "Updating an Element in the Array (Case 3) __68bdb308f6cc3d7a9cc0971b-68bdb308f6cc3d7a9cc09719-2",
@@ -11,7 +11,7 @@
     "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0971b?_t=1757557335332&index=2"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/arrays_j_array_basic__68bdb308f6cc3d7a9cc0971b"
   },
   "attribution": {
     "created_at": "2025-09-10T22:22:15.000Z",
@@ -52,12 +52,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0971b?_t=1757557335332&index=2"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/arrays_j_array_basic__68bdb308f6cc3d7a9cc0971b"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0971b?_t=1757557335332&index=2"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/arrays_j_array_basic__68bdb308f6cc3d7a9cc0971b"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/arrays_j_array_basic__68bdb308f6cc3d7a9cc0971b"
     }
   ],
   "rights": {

@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T22:18:56.000Z",
-  "updated_at": "2026-03-21T20:48:11.890Z",
+  "updated_at": "2026-03-23T18:17:04.236Z",
   "tags": [],
   "identity": {
     "id": "artihmetic.vending_machine__68bdb308f6cc3d7a9cc0974e",
@@ -11,7 +11,7 @@
     "type": "CodeConstruction"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0974e?_t=1757995042361&index=0"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/artihmetic_vending_machine__68bdb308f6cc3d7a9cc0974e"
   },
   "attribution": {
     "created_at": "2025-09-10T22:18:56.000Z",
@@ -52,12 +52,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0974e?_t=1757995042361&index=0"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/artihmetic_vending_machine__68bdb308f6cc3d7a9cc0974e"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb308f6cc3d7a9cc0974e?_t=1757995042361&index=0"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/artihmetic_vending_machine__68bdb308f6cc3d7a9cc0974e"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/artihmetic_vending_machine__68bdb308f6cc3d7a9cc0974e"
     }
   ],
   "rights": {

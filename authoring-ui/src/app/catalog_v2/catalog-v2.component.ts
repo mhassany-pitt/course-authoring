@@ -158,7 +158,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         const selected = filters.map((v) => String(v).toLowerCase().trim());
         const current = value
           .map((entry: any) =>
-            String(entry?.format || '')
+            String(entry?.protocol || '')
               .toLowerCase()
               .trim(),
           )
@@ -345,7 +345,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
 
       const deliveryProtocolSet = new Set<string>();
       (item.delivery || []).forEach((delivery: any) => {
-        const label = (delivery?.format || '').trim();
+        const label = (delivery?.protocol || '').trim();
         if (label) deliveryProtocolSet.add(label);
       });
       deliveryProtocolSet.forEach((label) => {
@@ -579,7 +579,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         break;
       case 'delivery':
         labels = (item.delivery || [])
-          .map((delivery: any) => (delivery?.format || '').trim())
+          .map((delivery: any) => (delivery?.protocol || '').trim())
           .filter(Boolean);
         break;
       case 'classification.knowledge_components': {

@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-09T10:31:21.000Z",
-  "updated_at": "2026-03-21T20:48:59.280Z",
+  "updated_at": "2026-03-23T18:18:05.322Z",
   "tags": [],
   "identity": {
     "id": "Advertir al Usuario sobre los Cambios en la Temperatura y Humedad.__6827373266a8e1b992c81241-6827373166a8e1b992c8123f-1",
@@ -11,7 +11,7 @@
     "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6827373266a8e1b992c81241?_t=1749534494091&index=1&locale=es"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_nested_if_temperature_es__6827373266a8e1b992c81241"
   },
   "attribution": {
     "created_at": "2025-06-09T10:31:21.000Z",
@@ -70,12 +70,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6827373266a8e1b992c81241?_t=1749534494091&index=1&locale=es"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_nested_if_temperature_es__6827373266a8e1b992c81241"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/6827373266a8e1b992c81241?_t=1749534494091&index=1&locale=es"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_nested_if_temperature_es__6827373266a8e1b992c81241"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_nested_if_temperature_es__6827373266a8e1b992c81241"
     }
   ],
   "rights": {

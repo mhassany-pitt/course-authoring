@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-10T08:53:22.000Z",
-  "updated_at": "2026-03-21T20:48:23.666Z",
+  "updated_at": "2026-03-23T18:17:18.692Z",
   "tags": [],
   "identity": {
     "id": "py_char_dict_llm_es__682dcacc66a8e1b992c82b04",
@@ -11,7 +11,7 @@
     "type": "CodeConstruction"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dcacc66a8e1b992c82b04?_t=1750184403978&index=0&locale=es"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_char_dict_llm_es__682dcacc66a8e1b992c82b04"
   },
   "attribution": {
     "created_at": "2025-06-10T08:53:22.000Z",
@@ -132,12 +132,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dcacc66a8e1b992c82b04?_t=1750184403978&index=0&locale=es"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_char_dict_llm_es__682dcacc66a8e1b992c82b04"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dcacc66a8e1b992c82b04?_t=1750184403978&index=0&locale=es"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_char_dict_llm_es__682dcacc66a8e1b992c82b04"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_char_dict_llm_es__682dcacc66a8e1b992c82b04"
     }
   ],
   "rights": {

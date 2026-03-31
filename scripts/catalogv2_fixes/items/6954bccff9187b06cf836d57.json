@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-10T08:53:01.000Z",
-  "updated_at": "2026-03-21T20:49:44.032Z",
+  "updated_at": "2026-03-23T18:19:02.056Z",
   "tags": [],
   "identity": {
     "id": "Desplazando los Valores de la Lista a la Derecha una Posicion__682dcaab66a8e1b992c82af3-682dcaa666a8e1b992c82aec-2",
@@ -11,7 +11,7 @@
     "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dcaab66a8e1b992c82af3?_t=1750184398685&index=2&locale=es"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_list_rotate_llm_es__682dcaab66a8e1b992c82af3"
   },
   "attribution": {
     "created_at": "2025-06-10T08:53:01.000Z",
@@ -25,7 +25,7 @@
     ]
   },
   "languages": {
-    "content_language": "en",
+    "content_language": "es",
     "programming_languages": [
       "Python"
     ]
@@ -73,12 +73,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dcaab66a8e1b992c82af3?_t=1750184398685&index=2&locale=es"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_list_rotate_llm_es__682dcaab66a8e1b992c82af3"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/682dcaab66a8e1b992c82af3?_t=1750184398685&index=2&locale=es"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_list_rotate_llm_es__682dcaab66a8e1b992c82af3"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_list_rotate_llm_es__682dcaab66a8e1b992c82af3"
     }
   ],
   "rights": {

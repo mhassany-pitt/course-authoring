@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-06-13T13:40:59.000Z",
-  "updated_at": "2026-03-21T20:48:17.637Z",
+  "updated_at": "2026-03-23T18:17:11.589Z",
   "tags": [],
   "identity": {
     "id": "Concatenando Caracteres de Dos Strings (Caso 2).__684c61c3a0cac29134435e3c-684c61c0a0cac29134435e3a-1",
@@ -11,7 +11,7 @@
     "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684c61c3a0cac29134435e3c?_t=1749844183272&index=1&locale=es"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_concat_char_two_str_llm_es__684c61c3a0cac29134435e3c"
   },
   "attribution": {
     "created_at": "2025-06-13T13:40:59.000Z",
@@ -70,12 +70,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684c61c3a0cac29134435e3c?_t=1749844183272&index=1&locale=es"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_concat_char_two_str_llm_es__684c61c3a0cac29134435e3c"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/684c61c3a0cac29134435e3c?_t=1749844183272&index=1&locale=es"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_concat_char_two_str_llm_es__684c61c3a0cac29134435e3c"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_concat_char_two_str_llm_es__684c61c3a0cac29134435e3c"
     }
   ],
   "rights": {

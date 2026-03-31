@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-15T23:58:04.000Z",
-  "updated_at": "2026-03-21T20:49:04.497Z",
+  "updated_at": "2026-03-23T18:18:11.472Z",
   "tags": [],
   "identity": {
     "id": "Converting Milliseconds to Hours-Minutes- and Seconds.__677c5572949ed2ff17c30456-677c24fa90e7c54581d663aa-1",
@@ -11,7 +11,7 @@
     "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/677c5572949ed2ff17c30456?_t=1757995084547&index=1"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_time_conversion_llm__677c5572949ed2ff17c30456"
   },
   "attribution": {
     "created_at": "2025-09-15T23:58:04.000Z",
@@ -52,12 +52,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/677c5572949ed2ff17c30456?_t=1757995084547&index=1"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_time_conversion_llm__677c5572949ed2ff17c30456"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/677c5572949ed2ff17c30456?_t=1757995084547&index=1"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_time_conversion_llm__677c5572949ed2ff17c30456"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_time_conversion_llm__677c5572949ed2ff17c30456"
     }
   ],
   "rights": {

@@ -3,7 +3,7 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-09-10T17:57:55.000Z",
-  "updated_at": "2026-03-21T20:50:04.105Z",
+  "updated_at": "2026-03-23T18:19:27.984Z",
   "tags": [],
   "identity": {
     "id": "Printing A Sequence of Repeated Numbers (Case 2) __68bdb309f6cc3d7a9cc09863-68bdb309f6cc3d7a9cc09861-1",
@@ -11,7 +11,7 @@
     "type": "CodeCompletionProblem"
   },
   "links": {
-    "demo_url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09863?_t=1757542463301&index=1"
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/nested_for_repeated_sequence__68bdb309f6cc3d7a9cc09863"
   },
   "attribution": {
     "created_at": "2025-09-10T17:57:55.000Z",
@@ -52,12 +52,16 @@
   },
   "delivery": [
     {
-      "protocol": "PITT",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09863?_t=1757542463301&index=1"
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/nested_for_repeated_sequence__68bdb309f6cc3d7a9cc09863"
     },
     {
       "protocol": "HTML",
-      "url": "https://pawscomp2.sis.pitt.edu/pcex-authoring/preview/index.html?load=https://pawscomp2.sis.pitt.edu/pcex-authoring/api/hub/68bdb309f6cc3d7a9cc09863?_t=1757542463301&index=1"
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/nested_for_repeated_sequence__68bdb309f6cc3d7a9cc09863"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/nested_for_repeated_sequence__68bdb309f6cc3d7a9cc09863"
     }
   ],
   "rights": {
