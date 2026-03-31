@@ -22,6 +22,7 @@ type QuickFilterSectionKey =
   | 'providers'
   | 'knowledgeComponents'
   | 'deliveryProtocol'
+  | 'contentLanguage'
   | 'licenses'
   | 'tags';
 
@@ -46,6 +47,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   plKVs: FilterKV[] = [];
   licenseKVs: FilterKV[] = [];
   deliveryProtocolKVs: FilterKV[] = [];
+  contentLanguageKVs: FilterKV[] = [];
   conceptKVs: FilterKV[] = [];
   conceptKVsByCategory: Record<string, FilterKV[]> = {};
   knowledgeComponentCategories: string[] = ['All'];
@@ -101,6 +103,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     'classification.knowledge_components',
     'rights.license',
     'delivery',
+    'languages.content_language',
     'tags',
   ];
 
@@ -111,6 +114,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     providers: true,
     knowledgeComponents: false,
     deliveryProtocol: false,
+    contentLanguage: false,
     licenses: false,
     tags: false,
   };
@@ -292,6 +296,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       this.tagKVs = [];
       this.plKVs = [];
       this.deliveryProtocolKVs = [];
+      this.contentLanguageKVs = [];
       this.conceptKVs = [];
       this.providersKVs = [];
       this.licenseKVs = [];
@@ -303,6 +308,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     const tagCounts = new Map<string, number>();
     const plCounts = new Map<string, number>();
     const deliveryProtocolCounts = new Map<string, number>();
+    const contentLanguageCounts = new Map<string, number>();
     const conceptCounts = new Map<string, number>();
     const conceptCountsByCategory = new Map<string, Map<string, number>>();
     const categorySet = new Set<string>();
@@ -342,6 +348,14 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       plSet.forEach((label) => {
         plCounts.set(label, (plCounts.get(label) || 0) + 1);
       });
+
+      const contentLanguage = (item.languages?.content_language || '').trim();
+      if (contentLanguage) {
+        contentLanguageCounts.set(
+          contentLanguage,
+          (contentLanguageCounts.get(contentLanguage) || 0) + 1,
+        );
+      }
 
       const deliveryProtocolSet = new Set<string>();
       (item.delivery || []).forEach((delivery: any) => {
@@ -407,6 +421,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     this.tagKVs = this.toKeyValue(tagCounts);
     this.plKVs = this.toKeyValue(plCounts);
     this.deliveryProtocolKVs = this.toKeyValue(deliveryProtocolCounts);
+    this.contentLanguageKVs = this.toKeyValue(contentLanguageCounts);
     this.conceptKVs = this.toKeyValue(conceptCounts);
     const sortedCategories = Array.from(categorySet).sort((a, b) =>
       a.localeCompare(b),
@@ -426,6 +441,9 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       'identity.type': this.typeKVs.map((kv) => kv.label),
       'languages.programming_languages': this.plKVs.map((kv) => kv.label),
       delivery: this.deliveryProtocolKVs.map((kv) => kv.label),
+      'languages.content_language': this.contentLanguageKVs.map(
+        (kv) => kv.label,
+      ),
       'classification.knowledge_components': this.conceptKVs.map(
         (kv) => kv.label,
       ),
@@ -572,6 +590,11 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
           .map((pl: any) => (pl || '').trim())
           .filter(Boolean);
         break;
+      case 'languages.content_language': {
+        const label = (item.languages?.content_language || '').trim();
+        labels = label ? [label] : [];
+        break;
+      }
       case 'attribution.authors':
         labels = (item.attribution?.authors || [])
           .map((author: any) => (author?.name || '').trim())
@@ -649,6 +672,9 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         return;
       case 'delivery':
         this.deliveryProtocolKVs = kvs;
+        return;
+      case 'languages.content_language':
+        this.contentLanguageKVs = kvs;
         return;
       case 'classification.knowledge_components':
         this.conceptKVs = kvs;
@@ -745,6 +771,8 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         return this.authorKVs;
       case 'delivery':
         return this.deliveryProtocolKVs;
+      case 'languages.content_language':
+        return this.contentLanguageKVs;
       case 'classification.knowledge_components':
         return this.conceptKVs;
       case 'attribution.provider':
@@ -815,6 +843,8 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         return 'Providers';
       case 'classification.knowledge_components':
         return 'Knowledge Components';
+      case 'languages.content_language':
+        return 'Content Language';
       case 'rights.license':
         return 'Licenses';
       case 'delivery':

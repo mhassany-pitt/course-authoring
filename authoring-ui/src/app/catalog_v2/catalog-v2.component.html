@@ -498,6 +498,72 @@
                   <button
                     type="button"
                     class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
+                    (click)="toggleQuickFilterSection('contentLanguage')"
+                    [attr.aria-expanded]="quickFilterSections.contentLanguage"
+                  >
+                    Content Language:
+                    <i
+                      class="fa"
+                      [class.fa-angle-down]="quickFilterSections.contentLanguage"
+                      [class.fa-angle-right]="
+                        !quickFilterSections.contentLanguage
+                      "
+                    ></i>
+                  </button>
+                  <hr
+                    class="grow border-0 border-t border-gray-50 opacity-30"
+                  />
+                </div>
+                <div *ngIf="quickFilterSections.contentLanguage" class="ml-2">
+                  <a
+                    *ngFor="let facet of contentLanguageKVs"
+                    class="text-xs cursor-pointer hover:underline"
+                    [class.font-bold]="
+                      isQuickFilterSelected(
+                        'languages.content_language',
+                        facet.label
+                      )
+                    "
+                    [class.text-blue-700]="
+                      isQuickFilterSelected(
+                        'languages.content_language',
+                        facet.label
+                      )
+                    "
+                    [class.text-gray-400]="
+                      !isQuickFilterSelected(
+                        'languages.content_language',
+                        facet.label
+                      ) &&
+                      !isQuickFilterAvailable(
+                        'languages.content_language',
+                        facet.label
+                      )
+                    "
+                    (click)="
+                      toggleQuickFilter(
+                        table,
+                        'languages.content_language',
+                        facet
+                      )
+                    "
+                  >
+                    {{ facet.label }} ({{ facet.value }}),
+                  </a>
+                  <span
+                    class="text-sm text-gray-400"
+                    *ngIf="!contentLanguageKVs.length"
+                  >
+                    No content languages yet.
+                  </span>
+                </div>
+              </div>
+
+              <div class="w-full flex flex-wrap gap-1">
+                <div class="flex items-center gap-2 w-full">
+                  <button
+                    type="button"
+                    class="text-sm font-bold text-gray-600 inline-flex items-center justify-start gap-2 text-left cursor-pointer hover:underline bg-transparent border-0 p-0"
                     (click)="toggleQuickFilterSection('licenses')"
                     [attr.aria-expanded]="quickFilterSections.licenses"
                   >
