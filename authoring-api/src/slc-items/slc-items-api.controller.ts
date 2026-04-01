@@ -2,6 +2,7 @@ import {
   Body,
   Controller,
   Delete,
+  Get,
   HttpException,
   Param,
   Patch,
@@ -47,6 +48,16 @@ export class SLCItemsAPIController {
       throw new HttpException(error.message, 500);
     }
   }
+
+  @Get(':id')
+  async read(@Param('id') id: string, @Request() req: any) {
+    await this.throwIfNotValidApiToken(req);
+    const existing = await this.catalog.read(id, null, true);
+    if (!existing)
+      throw new HttpException(`Item with id ${id} not found!`, 404);
+    return existing;
+  }
+  
   @Patch(':id')
   async update(
     @Param('id') id: string,
