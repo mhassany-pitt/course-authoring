@@ -3,9 +3,68 @@ import { EntityManager } from 'typeorm';
 import { Course } from 'src/courses/course.schema';
 import { validate } from 'email-validator';
 import { nanoid } from 'nanoid';
+import axios from 'axios';
+import * as https from 'https';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class MasteryGridService {
+
+    constructor(
+        private config: ConfigService,
+    ) { }
+
+    private restartTimeout: any = null;
+    private _isRestarting = false;
+    private nextRestartScheduled = false;
+
+    getCbumStatus(): string {
+        if (this._isRestarting) return 'CBUM is restarting...';
+        if (this.restartTimeout || this.nextRestartScheduled) return 'CBUM restart is scheduled...';
+        return '';
+    }
+
+    restartCBUM() {
+        if (this._isRestarting) {
+            this.nextRestartScheduled = true;
+            return { message: 'CBUM is currently restarting, next restart will be scheduled in 1 min after the current one.' };
+        }
+
+        if (this.restartTimeout) {
+            return { message: 'CBUM restart already scheduled.' };
+        }
+
+        this.restartTimeout = setTimeout(() => this.executeRestart(), 60000);
+
+        return { message: 'CBUM restart scheduled in 1 min.' };
+    }
+
+    private async executeRestart() {
+        this.restartTimeout = null;
+        this._isRestarting = true;
+        try {
+            const isDevelopment = this.config.get('DEVELOPMENT') == 'true';
+            if (isDevelopment) {
+                console.log('Skipping CBUM restart in development environment');
+            } else {
+                const server = this.config.get('APACHE_URL');
+                const [username, password] = this.config.get('APACHE_USERPASS').split(':');
+                const agent = new https.Agent({ rejectUnauthorized: false });
+                const stop = await axios.get(`${server}/manager/text/stop?path=/cbum`, { auth: {username, password}, httpsAgent: agent });
+                console.log('CBUM stop response:', stop.data);
+                const start = await axios.get(`${server}/manager/text/start?path=/cbum`, { auth: {username, password}, httpsAgent: agent });
+                console.log('CBUM start response:', start.data);
+            }
+        } catch (error) {
+            console.error('Error restarting CBUM:', error);
+        } finally {
+            this._isRestarting = false;
+            if (this.nextRestartScheduled) {
+                this.nextRestartScheduled = false;
+                this.restartTimeout = setTimeout(() => this.executeRestart(), 60000);
+            }
+        }
+    }
 
     async agg_addCreatorIfNotExists(agg: EntityManager, user: User) {
         return await agg.query(

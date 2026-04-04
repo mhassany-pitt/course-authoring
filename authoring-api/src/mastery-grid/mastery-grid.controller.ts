@@ -1,4 +1,4 @@
-import { Controller, Param, Put, Request, UseGuards } from '@nestjs/common';
+import { Controller, Headers, HttpException, Param, Put, Request, UseGuards, Get } from '@nestjs/common';
 import { Aggregate, Group, Linkings, MasteryGridService } from './mastery-grid.service';
 import { DataSource } from 'typeorm';
 import { toObject, useId } from 'src/utils';
@@ -7,6 +7,8 @@ import { parse } from 'csv-parse';
 import { CoursesService } from 'src/courses/courses.service';
 import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
 import { stringify } from 'csv-stringify/sync';
+import { UsersService } from 'src/users/users.service';
+import { AuthService } from 'src/auth/auth.service';
 
 @Controller('mastery-grid')
 export class MasteryGridController {
@@ -14,6 +16,8 @@ export class MasteryGridController {
     constructor(
         private service: MasteryGridService,
         private courses: CoursesService,
+        private users: UsersService,
+        private auth: AuthService,
         @InjectDataSource('aggregate') private aggregate: DataSource,
         @InjectDataSource('um2') private user_modeling2: DataSource,
         @InjectDataSource('portal_test2') private portal_test2: DataSource,
@@ -22,11 +26,26 @@ export class MasteryGridController {
     @Put(':id/sync')
     @UseGuards(AuthenticatedGuard)
     async sync(@Request() req: any, @Param('id') id: string) {
-        const raw = await this.courses.load({ user_email: req.user.email, id });
-        const course = useId(toObject(raw));
+        const course = await this.courses.load({ user_email: req.user.email, id })
+        if (!course) throw new HttpException('course not found!', 404);
+        return this._sync(id);
+    }
+    
+    @Put(':id/sync/x-api-user') // modulearn can sync course to mastery grid
+    async syncXApiUser(@Request() req: any, @Param('id') id: string) {
+        if (!(await this.auth.validateApiUser(req.headers['x-api-key']))) 
+            throw new HttpException('Invalid API credentials', 401);
+        const course = await this.courses.findById({ id });
+        if (!course) throw new HttpException('course not found!', 404);
+        return this._sync(id);
+    }
 
-        if (!course.linkings)
-            course.linkings = {};
+    private async _sync(id: string) {
+        const course = useId(toObject(await this.courses.findById({ id })));
+        const user = await this.users.findUser(course.user_email);
+        const author = { email: user.email, fullname: user.fullname };
+
+        if (!course.linkings) course.linkings = {};
         const linkings: Linkings = course.linkings;
 
         linkings.aggregate = linkings.aggregate || {} as any;
@@ -43,7 +62,7 @@ export class MasteryGridController {
         try {
             const checkpoint = async () => {
                 linkings.last_synced = new Date();
-                await this.courses.update({ user_email: req.user.email, id }, { linkings }, true);
+                await this.courses.update({ user_email: author.email, id }, { linkings }, true);
             };
 
             await this.aggregate.transaction(async agg => {
@@ -55,7 +74,7 @@ export class MasteryGridController {
                 await this.service.agg_deleteCourseResources(agg, mapping);
                 await this.service.agg_deleteCourse(agg, mapping);
 
-                await this.service.agg_addCreatorIfNotExists(agg, req.user);
+                await this.service.agg_addCreatorIfNotExists(agg, author);
 
                 await this.service.agg_addCourse(agg, mapping, course);
                 await this.service.agg_addCourseResources(agg, mapping, course);
@@ -65,7 +84,7 @@ export class MasteryGridController {
             await checkpoint();
 
             await this.portal_test2.transaction(async pt2 => {
-                await this.service.pt2_addTeacherIfNotExists(pt2, req.user, linkings.portal_test2);
+                await this.service.pt2_addTeacherIfNotExists(pt2, author, linkings.portal_test2);
             });
 
             await checkpoint();
@@ -114,14 +133,22 @@ export class MasteryGridController {
                 for (const student of group.students) {
                     const { fullname, email, results, keep_password } = student;
                     const password = keep_password ? '[password was not changed]' : student.password;
-                    students.push({ group: `${group.mnemonic} - ${group.name}`, fullname, email, password, results });
+                    students.push({ grp_mnemonic: group.mnemonic, grp_name: group.name, fullname, email, password, results });
                 }
             }
 
-            return { students: stringify(students, { header: true }) };
+            return { 
+                students: stringify(students, { header: true }), 
+                cbum: this.service.restartCBUM() 
+            };
         } catch (error) {
             console.error('error syncing course', id, error);
             throw error;
         }
+    }
+
+    @Get('cbum-status')
+    getCbumStatus() {
+        return { status: this.service.getCbumStatus() };
     }
 }

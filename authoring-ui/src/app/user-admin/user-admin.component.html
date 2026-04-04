@@ -103,7 +103,10 @@
           </td>
           <td class="group" [ngClass]="{ italic: !user.fullname }">
             <div class="flex items-center">
-              <span>{{ user.fullname || "empty" }}</span>
+              <span>
+                {{ user.fullname || "empty" }}
+                {{ user.type === 'api' ? '(API-User)' : '' }}
+              </span>
               <i
                 class="pi pi-pencil cursor-pointer ml-1 opacity-0 group-hover:opacity-100"
                 style="font-size: 0.75rem"

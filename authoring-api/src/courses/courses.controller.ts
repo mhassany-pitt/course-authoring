@@ -8,6 +8,7 @@ import { CoursesService } from './courses.service';
 import { UsersService } from 'src/users/users.service';
 import { ConfigService } from '@nestjs/config';
 import { CatalogV2Service } from 'src/catalog_v2/catalog_v2.service';
+import { AuthService } from 'src/auth/auth.service';
 
 @Controller('courses')
 export class CoursesController {
@@ -17,6 +18,7 @@ export class CoursesController {
     private courses: CoursesService,
     private catalogV2: CatalogV2Service,
     private users: UsersService,
+    private auth: AuthService,
   ) { }
 
   @Get()
@@ -54,9 +56,23 @@ export class CoursesController {
 
   @Get(':id')
   @UseGuards(AuthenticatedGuard)
-  async read(@Request() req: any) {
-    let course = await this.courses.load({ id: req.params.id, user_email: req.user.email });
-    course = useId(toObject(course));
+  async read(@Request() req: any, @Param('id') id: string) {
+    const course = await this.courses.load({ id, user_email: req.user.email });
+    if (!course) throw new HttpException('course not found!', 404);
+    return this._read(id);
+  }
+
+  @Get(':id/x-api-user')
+  async readXApiUser(@Request() req: any, @Param('id') id: string) {
+    if (!(await this.auth.validateApiUser(req.headers['x-api-key']))) 
+      throw new HttpException('Invalid API credentials', 401);
+    const course = await this.courses.findById({ id });
+    if (!course) throw new HttpException('course not found!', 404);
+    return this._read(id);
+  }
+
+  private async _read(id: string) {
+    const course = useId(toObject(await this.courses.findById({ id })));
     course.linkings = {
       course_id: course.linkings?.aggregate?.mapped_course_id,
       group_id: course.linkings?.portal_test2?.mapped_group_id,
@@ -67,12 +83,23 @@ export class CoursesController {
 
   @Get(':id/export')
   @UseGuards(AuthenticatedGuard)
-  async export(@Param('id') id: string) {
-    const found = await this.courses.findById({ id });
-    if (!found) throw new HttpException('course not found!', 404);
+  async export(@Request() req: any, @Param('id') id: string) {
+    const course = useId(toObject(await this.courses.load({ user_email: req.user.email, id })));
+    if (!course) throw new HttpException('course not found!', 404);
+    return this._export(id);
+  }
 
-    const course = useId(toObject(found));
+  @Get(':id/export/x-api-user') // modulearn can get the course structure
+  async exportXApiUser(@Request() req: any, @Param('id') id: string) {
+    if (!(await this.auth.validateApiUser(req.headers['x-api-key']))) 
+      throw new HttpException('Invalid API credentials', 401);
+    const course = useId(toObject(await this.courses.findById({ id })));
+    if (!course) throw new HttpException('course not found!', 404);
+    return this._export(id);
+  }
 
+  private async _export(id: string) {
+    const course = useId(toObject(await this.courses.findById({ id })));
     course.instructor = {
       email: course.user_email,
       fullname: (await this.users.findUser(course.user_email)).fullname,
@@ -121,26 +148,48 @@ export class CoursesController {
 
   @Patch(':id')
   @UseGuards(AuthenticatedGuard)
-  async update(@Request() req: any) {
-    const course = await this.courses.update({ id: req.params.id, user_email: req.user.email }, req.body);
-    return useId(toObject(course));
+  async update(@Request() req: any, @Param('id') id: string) {
+    const course = await this.courses.load({ user_email: req.user.email, id });
+    if (!course) throw new HttpException('course not found!', 404);
+    return this._update(id, req.user.email, req.body);
+  }
+
+  @Patch(':id/x-api-user') // modulearn can update course structure
+  async updateXApiUser(@Request() req: any, @Param('id') id: string) {
+    if (!(await this.auth.validateApiUser(req.headers['x-api-key']))) 
+      throw new HttpException('Invalid API credentials', 401);
+    const course = useId(toObject(await this.courses.findById({ id })));
+    if (!course) throw new HttpException('course not found!', 404);
+    return this._update(id, course.user_email, req.body);
+  }
+
+  private async _update(id: string, user_email: string, body: any) {
+    const course = useId(toObject(
+      await this.courses.update({ id, user_email }, body)
+    ));
+    course.linkings = {
+      course_id: course.linkings?.aggregate?.mapped_course_id,
+      group_id: course.linkings?.portal_test2?.mapped_group_id,
+      last_synced: course.linkings?.last_synced,
+    };
+    return course;
   }
 
   @Delete(':id')
   @UseGuards(AuthenticatedGuard)
-  async delete(@Request() req: any, @Query('undo') undo: boolean) {
-    const course = await this.courses.delete({ id: req.params.id, user_email: req.user.email }, undo);
+  async delete(@Request() req: any, @Param('id') id: string, @Query('undo') undo: boolean) {
+    const course = await this.courses.delete({ id, user_email: req.user.email }, undo);
     return useId(toObject(course));
   }
 
   @Post(':id/clone')
   @UseGuards(AuthenticatedGuard)
-  async clone(@Request() req: any) {
-    const source = await this.courses.findById({ id: req.params.id });
+  async clone(@Request() req: any, @Param('id') id: string) {
+    const source = await this.courses.findById({ id });
     if (!source || (source.user_email != req.user.email && !source.published))
       throw new HttpException('course not found!', 404);
 
-    const course = await this.courses.clone({ id: req.params.id, user_email: req.user.email });
+    const course = await this.courses.clone({ id, user_email: req.user.email });
     return useId(toObject(course));
   }
 

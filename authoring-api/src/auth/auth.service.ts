@@ -8,12 +8,20 @@ export class AuthService {
   constructor(private users: UsersService) { }
 
   async validateUser(email: string, password: string) {
-    email = email.toLowerCase();
-    const user = await this.users.findUser(email);
-    if (user && user.active && await compare(password, user.password)) {
-      const { email, fullname, roles } = user;
-      return { email, fullname, roles };
+    if (email && password) {
+      email = email.toLowerCase();
+      const user = await this.users.findUser(email);
+      if (user && user.active && await compare(password, user.password)) {
+        const { email, fullname, type, roles } = user;
+        return { email, fullname, type, roles };
+      }
     }
     return null;
+  }
+
+  async validateApiUser(apiKey: string) {
+    if (!apiKey) return false;
+    const [email, password] = apiKey.split(':');
+    return (await this.validateUser(email, password))?.type === 'api';
   }
 }

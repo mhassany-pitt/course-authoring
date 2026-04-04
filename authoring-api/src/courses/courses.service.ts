@@ -47,7 +47,10 @@ export class CoursesService {
   }
 
   async load({ user_email, id }) {
-    return await this.courses.findOne({ $or: [{ user_email }, { collaborator_emails: user_email }], _id: id });
+    return await this.courses.findOne({ 
+      $or: [{ user_email }, { collaborator_emails: user_email }], 
+      _id: id 
+    });
   }
 
   async findById({ id }) {
@@ -58,11 +61,18 @@ export class CoursesService {
     const { linkings, ...rest } = course;
     const update = { ...rest, updated_at: new Date() };
     if (alsoUpdateLinkings) update.linkings = linkings;
-    return await this.courses.findOneAndUpdate({ $or: [{ user_email }, { collaborator_emails: user_email }], _id: id }, update, { new: true });
+    return await this.courses.findOneAndUpdate({ 
+      $or: [{ user_email }, { collaborator_emails: user_email }], 
+      _id: id 
+    }, update, { new: true });
   }
 
   async delete({ user_email, id }, undo: boolean) {
-    return await this.courses.findOneAndUpdate({ user_email, _id: id }, { deleted_at: undo ? null : new Date() }, { new: true });
+    return await this.courses.findOneAndUpdate(
+      { user_email, _id: id }, 
+      { deleted_at: undo ? null : new Date() }, 
+      { new: true }
+    );
   }
 
   async log({ id, log }) {

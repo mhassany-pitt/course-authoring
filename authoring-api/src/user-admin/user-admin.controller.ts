@@ -22,8 +22,8 @@ export class UserAdminController {
   async list(@Req() req) {
     const myEmail = this.getMyEmail(req);
     return (await this.service.list()).map((user: any) => {
-      const { active, fullname, email, tags, roles } = user;
-      const resp: any = { active, fullname, email, tags, roles };
+      const { active, fullname, email, type, tags, roles } = user;
+      const resp: any = { active, fullname, email, type, tags, roles };
       if (email == myEmail)
         resp.itIsMe = true;
       return resp;
@@ -33,23 +33,27 @@ export class UserAdminController {
   @Post()
   @UseGuards(AuthenticatedGuard)
   async create(@Req() req, @Body() { roles, emails, tags }: any) {
-    const myEmail = this.getMyEmail(req);
+    const all = (await this.service.list()).map((user: any) => user.email.toLowerCase());
     const accounts = emails.split(',').map(text => {
-      let [fullname, email] = text.indexOf(':') >= 0 ? text.split(':') : ['', text];
-      fullname = fullname.trim();
-      email = email.toLowerCase().trim();
-      if (!EmailValidator.validate(email))
+      let [fullname, email, type] = text.split(':');
+      fullname = fullname?.trim();
+      email = email?.toLowerCase()?.trim();
+      type = type?.trim();
+      if (!email || !EmailValidator.validate(email))
         return null;
-      return { fullname, email };
-    }).filter(user => user && user.email != myEmail);
+      return { fullname, email, type };
+    }).filter((user: any) => user && !all.includes(user.email));
 
-    for (const { fullname, email } of accounts) {
+    for (const { fullname, email, type } of accounts) {
       const password = await hash(Math.random().toString(), 10);
       const reset_pass_token = {
         token: sha256(Math.random().toString(36).substring(2)).toString(),
         expires: Date.now() + 60 * 60 * 1000,
       };
-      await this.service.create({ fullname, email, password, tags, roles, reset_pass_token });
+      await this.service.create({ 
+        fullname, email, password, type, 
+        tags, roles, reset_pass_token 
+      });
     }
 
     return {};

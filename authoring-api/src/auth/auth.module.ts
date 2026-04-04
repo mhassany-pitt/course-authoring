@@ -12,9 +12,11 @@ import { AESService } from './aes.service';
     UsersModule,
     PassportModule.register({ session: true }),
   ],
+  controllers: [AuthController],
   providers: [
     AuthService, LocalStrategy, 
-    SessionSerializer, AESService],
-  controllers: [AuthController],
+    SessionSerializer, AESService
+  ],
+  exports: [AuthService],
 })
 export class AuthModule { }

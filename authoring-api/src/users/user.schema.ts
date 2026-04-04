@@ -6,7 +6,7 @@ export type UserDocument = HydratedDocument<User>;
 @Schema()
 export class User {
   @Prop() active: boolean;
-  @Prop() userType: string;
+  @Prop() type: string;
   @Prop() apiKey: string;
   @Prop() fullname: string;
   @Prop() email: string;

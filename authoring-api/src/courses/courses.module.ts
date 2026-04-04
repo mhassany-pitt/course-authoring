@@ -5,14 +5,16 @@ import { CourseSchema } from './course.schema';
 import { CoursesService } from './courses.service';
 import { UsersModule } from 'src/users/users.module';
 import { CatalogV2Module } from 'src/catalog_v2/catalog_v2.module';
+import { AuthModule } from 'src/auth/auth.module';
 
 @Module({
   imports: [
     MongooseModule.forFeature([
       { name: 'courses', schema: CourseSchema }
     ]),
-    UsersModule,
     CatalogV2Module,
+    UsersModule,
+    AuthModule,
   ],
   controllers: [CoursesController],
   providers: [CoursesService],

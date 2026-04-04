@@ -8,6 +8,8 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import { CatalogV2Service } from '../catalog_v2/catalog-v2.service';
 import { CatalogV2Item } from '../catalog_v2/catalog-v2.types';
 import { firstValueFrom, Subscription } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-course',
@@ -88,6 +90,8 @@ export class CourseComponent implements OnInit {
   private readonly trackingMessageStorageKey = 'course-authoring.tracking-message.dismissed';
   private readonly trackingConsentStorageKey = 'course-authoring.tracking-message.dont-collect-data';
 
+  cbumStatus: string = '';
+
   constructor(
     public router: Router,
     public app: AppService,
@@ -96,6 +100,7 @@ export class CourseComponent implements OnInit {
     private catalogV2: CatalogV2Service,
     private messages: MessageService,
     private confirm: ConfirmationService,
+    private http: HttpClient,
   ) { }
 
   ngOnInit() {
@@ -110,6 +115,17 @@ export class CourseComponent implements OnInit {
       this.logLeavePage(event.url);
     });
     this.loadInitialData();
+    this.checkCbumStatus();
+  }
+
+  checkCbumStatus() {
+    this.http.get<{status: string}>(
+      `${environment.apiUrl}/mastery-grid/cbum-status`,
+      { withCredentials: true }
+    ).subscribe({
+      next: (resp) => this.cbumStatus = resp.status,
+      error: (error) => console.log(error),
+    });
   }
 
   ngOnDestroy() {
@@ -776,6 +792,7 @@ export class CourseComponent implements OnInit {
       acceptButtonStyleClass: 'p-button-danger',
       rejectButtonStyleClass: 'p-button-secondary',
       accept: () => {
+        this._v['syncing-to-mastery-grid'] = true;
         this.courses.syncToMasteryGrid(this.course.id).subscribe({
           next: (response: any) => {
             if (response.students) {
@@ -807,6 +824,10 @@ export class CourseComponent implements OnInit {
               sticky: true,
             });
             console.error('error syncing course', this.course.id, error);
+          },
+          complete: () => {
+            delete this._v['syncing-to-mastery-grid'];
+            this.checkCbumStatus();
           }
         });
       }
