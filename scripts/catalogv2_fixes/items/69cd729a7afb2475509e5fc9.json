@@ -1,0 +1,66 @@
+{
+  "id": "69cd729a7afb2475509e5fc9",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:34:01.612Z",
+  "listed_at": "2026-02-15T22:34:01.611Z",
+  "tags": [],
+  "identity": {
+    "id": "c_funkcija_podstring__693ddc65443e2801de627ec7-693dd702443e2801de627bfe-0",
+    "title": "c_funkcija_podstring",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Vracanje_pokazivaca_na_karaktere_iz_funkcija__693ddc65443e2801de627ec7?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati funkciju podstring koja prima dva stringa s1 i s2, te provjerava da li je s2 podstring stringa s1. Ako jeste, funkcija treba vratiti pokaziva\u010d na prvi znak u stringu s1 koji predstavlja po\u010detak podstringa, u suprotnom treba vratiti nul-pokaziva\u010d.",
+    "source_code": "#include <stdio.h>\n\nconst char* podstring(const char* s1, const char* s2) {\n\twhile (*s1 != '\\0') {\n\t\tconst char* p = s1;\n\t\tconst char* q = s2;\n\t\twhile (*p++ == *q++)\n\t\t\tif (*q == '\\0') return s1;\n\t\ts1++;\n\t}\n\treturn NULL;\n}\n\nint main() {\n\tchar s1[100] = \"testiranje\"; \n\tchar s2[100] = \"test\";\n\tif (podstring(s1, s2))\n\t\tprintf (\"Podstring se nalazi u stringu.\");\n\telse\n\t\tprintf (\"Podstring se ne nalazi u stringu.\");\n\treturn 0;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Vracanje_pokazivaca_na_karaktere_iz_funkcija__693ddc65443e2801de627ec7?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

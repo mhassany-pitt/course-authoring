@@ -1,0 +1,66 @@
+{
+  "id": "69cd72997afb2475509e5f9f",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:33:58.732Z",
+  "listed_at": "2026-02-15T22:33:58.731Z",
+  "tags": [],
+  "identity": {
+    "id": "c_pisanje_podatka_u_binarnu_datoteku__6951b894136f190edb6c98a6-69508f3d136f190edb6be301-0",
+    "title": "c_pisanje_podatka_u_binarnu_datoteku",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Pisanje_u_binarne_datoteke__6951b894136f190edb6c98a6?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program u programskom jeziku C koji u binarnu datoteku podatak.dat upisuje jedan podatak tipa double. Program treba otvoriti datoteku u binarnom re\u017eimu za pisanje, upisati vrijednost realnog broja kori\u0161tenjem funkcije fwrite i zatvoriti datoteku. Ukoliko nije mogu\u0107e otvoriti datoteku, program treba ispisati odgovaraju\u0107u poruku o gre\u0161ci.",
+    "source_code": "#include <stdio.h>\r\n\r\nint main() {\r\n    FILE *dat;\r\n    double podatak = 1234.0;\r\n\r\n    dat = fopen(\"podatak.dat\", \"wb\");\r\n    if (dat == NULL) {\r\n        printf(\"Greska pri otvaranju datoteke.\\n\");\r\n        return 1;\r\n    }\r\n\r\n    fwrite(&podatak, sizeof(double), 1, dat);\r\n\r\n    fclose(dat);\r\n\r\n    printf(\"Podatak je upisan u binarnu datoteku.\\n\");\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Pisanje_u_binarne_datoteke__6951b894136f190edb6c98a6?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

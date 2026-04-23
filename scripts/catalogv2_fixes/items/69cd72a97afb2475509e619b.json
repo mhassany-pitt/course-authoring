@@ -1,0 +1,66 @@
+{
+  "id": "69cd72a97afb2475509e619b",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:34:06.005Z",
+  "listed_at": "2026-02-15T22:34:06.004Z",
+  "tags": [],
+  "identity": {
+    "id": "c_unos_niza_s_prekidom__6910afee1b622a00857decdc-690f75cd1b622a00857de7d3-1",
+    "title": "c_unos_niza_s_prekidom",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_prebacivanje_elemenata_niza__6910afee1b622a00857decdc?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji od korisnika tra\u017ei unos niza pozitivnih realnih brojeva. Niz mo\u017ee sadr\u017eavati najvi\u0161e 5 elemenata, a mo\u017ee se prekinuti i ranije unosom broja -1. Niz je potrebno ispisati na ekran nakon unosa.",
+    "source_code": "#include <stdio.h>\r\n#define VELICINA 5\r\n\r\nint main() {\r\n    double niz[VELICINA], broj;\r\n    int i=0, j;\r\n\r\n    /* unos niza */\r\n    while (i < VELICINA) {\r\n        printf(\"Unesite %d. broj: \\n\", i + 1);\r\n        scanf(\"%lf\", &broj);\r\n\r\n        if (broj == -1) {\r\n            break;\r\n        }\r\n\r\n        if (broj <= 0) {\r\n            printf(\"Broj mora biti pozitivan. Pokusajte ponovo.\\n\");\r\n            continue;  // tra\u017eimo novi unos za isti indeks\r\n        }\r\n\r\n        niz[i] = broj;  // broj je validan, smjestimo ga u niz\r\n        i++;\r\n    }\r\n    \r\n    if (i == 0) {\r\n        printf(\"Niz je prazan.\");\r\n        return 0;\r\n    }\r\n\r\n\r\n    printf(\"\\nUneseni brojevi su: \");\r\n    for (j = 0; j < i; j++) {\r\n        printf(\"%.2f \", niz[j]);\r\n    }\r\n\r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_prebacivanje_elemenata_niza__6910afee1b622a00857decdc?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

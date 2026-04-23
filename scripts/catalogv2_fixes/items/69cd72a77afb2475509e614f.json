@@ -1,0 +1,66 @@
+{
+  "id": "69cd72a77afb2475509e614f",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:34:01.396Z",
+  "listed_at": "2026-02-15T22:34:01.395Z",
+  "tags": [],
+  "identity": {
+    "id": "Linked List Implementation__69414502b71cfad9381f9f91-694139dbb71cfad9381f99e0-1",
+    "title": "Linked List Implementation",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Linked_List_Implementation_-_1__69414502b71cfad9381f9f91?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Aditya Joshi",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "In this example, we will define a linked list and create functions to add a new element to the end of the list, and print all the elements of the list",
+    "source_code": "class Node:\r\n    def __init__(self, data):\r\n        self.data = data\r\n        self.next = None\r\n\r\nclass LinkedList:        \r\n    def __init__(self):\r\n        self.head = None\r\n        \r\n    def add(self, new):\r\n        new_node = Node(new)\r\n        if self.head is None:\r\n            self.head = new_node\r\n        else:\r\n            cur = self.head\r\n            while cur.next is not None:\r\n                cur = cur.next\r\n            cur.next = new_node\r\n                \r\n    def print_list(self):\r\n        current = self.head\r\n        while current is not None:\r\n            print(current.data, end=\" -> \")\r\n            current = current.next\r\n        print(\"None\")"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Linked_List_Implementation_-_1__69414502b71cfad9381f9f91?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

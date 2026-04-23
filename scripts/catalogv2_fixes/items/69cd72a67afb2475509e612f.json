@@ -1,0 +1,66 @@
+{
+  "id": "69cd72a67afb2475509e612f",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:33:58.626Z",
+  "listed_at": "2026-02-15T22:33:58.625Z",
+  "tags": [],
+  "identity": {
+    "id": "Pisanje u binarne datoteke__6951b894136f190edb6c98a6",
+    "title": "Pisanje u binarne datoteke",
+    "type": "CodeConstruction&CompletionBundle"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Pisanje_u_binarne_datoteke__6951b894136f190edb6c98a6"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "",
+    "source_code": ""
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Pisanje_u_binarne_datoteke__6951b894136f190edb6c98a6"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

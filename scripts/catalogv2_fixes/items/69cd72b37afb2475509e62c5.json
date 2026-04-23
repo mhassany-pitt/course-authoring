@@ -1,0 +1,66 @@
+{
+  "id": "69cd72b37afb2475509e62c5",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:34:00.546Z",
+  "listed_at": "2026-02-15T22:34:00.546Z",
+  "tags": [],
+  "identity": {
+    "id": "Binary Search - 2__69415f2eb71cfad9381fb7c2-69415d95b71cfad9381fb64d-1",
+    "title": "Binary Search - 2",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Binary_Search_-_Recursive__69415f2eb71cfad9381fb7c2?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Aditya Joshi",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "This function implements a recursive version of Binary Search",
+    "source_code": "def binary_search_rec(arr, target, left=None, right=None):\r\n    if left is None:\r\n        left = 0\r\n    if right is None:\r\n        right = len(arr)\r\n    if left > right:\r\n        return -1\r\n\r\n    mid = (left + right) // 2\r\n\r\n    if arr[mid] == target:\r\n        return mid\r\n    elif arr[mid] < target:\r\n        return binary_search_rec(arr, target, mid + 1, right)\r\n    else:\r\n        return binary_search_rec(arr, target, left, mid - 1)\r\nnumbers = [1, 3, 5, 7, 9, 11, 13]\r\nprint (binary_search_rec(numbers, 7))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Binary_Search_-_Recursive__69415f2eb71cfad9381fb7c2?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

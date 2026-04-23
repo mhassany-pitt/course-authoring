@@ -1,0 +1,66 @@
+{
+  "id": "69cd72ad7afb2475509e6217",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:33:59.277Z",
+  "listed_at": "2026-02-15T22:33:59.276Z",
+  "tags": [],
+  "identity": {
+    "id": "c_citanje_struktura_iz_datoteka__694f41c8136f190edb6b1622-694a81adb71cfad938253337-0",
+    "title": "c_citanje_struktura_iz_datoteka",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Citanje_struktura_iz_tekstualnih_datoteka__694f41c8136f190edb6b1622?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji iz tekstualne datoteke ispit.txt u\u010ditava podatke o studentima. Datoteka sadr\u017ei vi\u0161e redova, pri \u010demu svaki red ima sljede\u0107i format: prezime studenta, ime studenta i broj bodova, razdvojene razmakom. Program treba otvoriti datoteku za \u010ditanje, u\u010ditati zapise u niz struktura `Student` (maksimalno 300 zapisa), te nakon uspje\u0161nog u\u010ditavanja ispisati ukupan broj u\u010ditanih studenata i tabelarni prikaz njihovih podataka. Ukoliko datoteku nije mogu\u0107e otvoriti, ili ako je datoteka prazna odnosno neispravno formatirana, program treba ispisati odgovaraju\u0107u poruku.\n",
+    "source_code": "#include <stdio.h>\r\n#include <stdlib.h>\r\n\r\n\r\n/*Izgled datoteke\r\n\r\nIlic Ana 45\r\nKovac Marko 38\r\nBasic Sara 50\r\n\r\n*/\r\n\r\n\r\nstruct Student {\r\n    char prezime[20];\r\n    char ime[15];\r\n    int broj_bodova;\r\n};\r\n\r\nint main() {\r\n    struct Student studenti[300];\r\n    FILE *ulaz;\r\n    int i, vel;\r\n\r\n    /* otvaranje datoteke */\r\n    ulaz = fopen(\"ispit.txt\", \"r\");\r\n    if (ulaz == NULL) {\r\n        printf(\"Greska pri otvaranju datoteke ispit.txt\\n\");\r\n        return 1;\r\n    }\r\n\r\n    /* ucitavanje datoteke u niz studenti */\r\n    i = 0;\r\nwhile (i < 300 &&\r\n       fscanf(ulaz, \"%19s %14s %d\",\r\n              studenti[i].prezime,\r\n              studenti[i].ime,\r\n              &studenti[i].broj_bodova) == 3) {\r\n    i++;\r\n}\r\nvel = i;\r\n\r\n\r\n    fclose(ulaz);\r\n\r\n    /* ispis ucitanih podataka */\r\n    if (vel == 0) {\r\n        printf(\"Datoteka je prazna ili format nije ispravan.\\n\");\r\n        return 0;\r\n    }\r\n\r\n    printf(\"Ucitano studenata: %d\\n\", vel);\r\n    printf(\"-----------------------------------------\\n\");\r\n    printf(\"%-20s %-15s %s\\n\", \"Prezime\", \"Ime\", \"Bodovi\");\r\n    printf(\"-----------------------------------------\\n\");\r\n\r\n    for (i = 0; i < vel; i++) {\r\n        printf(\"%-20s %-15s %d\\n\",\r\n               studenti[i].prezime,\r\n               studenti[i].ime,\r\n               studenti[i].broj_bodova);\r\n    }\r\n\r\n    return 0;\r\n}  "
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Citanje_struktura_iz_tekstualnih_datoteka__694f41c8136f190edb6b1622?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

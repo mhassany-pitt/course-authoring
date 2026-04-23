@@ -1,0 +1,66 @@
+{
+  "id": "69cd728f7afb2475509e5e5b",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:33:57.272Z",
+  "listed_at": "2026-02-15T22:33:57.271Z",
+  "tags": [],
+  "identity": {
+    "id": "c_dinamicka_alokacija_varijable_calloc__6952d68f136f190edb6d4936-6952c159136f190edb6d3ada-1",
+    "title": "c_dinamicka_alokacija_varijable_calloc",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Dinamicka_alokacija_obicnih_varijabli__6952d68f136f190edb6d4936?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji dinami\u010dki alocira memoriju za jednu realnu varijablu. Program treba omogu\u0107iti korisniku unos realnog broja sa tastature, zatim umanjiti unesenu vrijednost za 1 i ispisati dobijeni rezultat na ekran. Program mora provjeriti da li je alokacija memorije uspje\u0161na i na kraju pravilno osloboditi zauzetu memoriju kori\u0161tenjem funkcije free.",
+    "source_code": "#include <stdio.h>\r\n#include <stdlib.h>\r\n\r\nint main() {\r\n    double *d;\r\n\r\n    /* calloc alocira i inicijalizira memoriju na 0 */\r\n    d = (double *)calloc(1, sizeof(double));\r\n\r\n    if (d == NULL) {\r\n        printf(\"Alokacija nije uspjela.\\n\");\r\n        return 1;\r\n    }\r\n\r\n    printf(\"Unesite realan broj: \");\r\n    scanf(\"%lf\", d);\r\n\r\n    /* umanjenje vrijednosti za 1 */\r\n    *d = *d - 1;\r\n\r\n    printf(\"Umanjena vrijednost je: %.2f\\n\", *d);\r\n\r\n    free(d);\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Dinamicka_alokacija_obicnih_varijabli__6952d68f136f190edb6d4936?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

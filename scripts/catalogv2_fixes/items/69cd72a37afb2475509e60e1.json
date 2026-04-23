@@ -1,0 +1,74 @@
+{
+  "id": "69cd72a37afb2475509e60e1",
+  "paws_id": 4168,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2025-12-31T06:03:59.937Z",
+  "listed_at": "2025-06-04T17:19:17.000Z",
+  "tags": [],
+  "identity": {
+    "id": "py_pythagorean_theorem__664e23fd91363872f0ba32ea",
+    "title": "Pythagorean Theorem (Case 1)",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_pythagorean_theorem__664e23fd91363872f0ba32ea"
+  },
+  "attribution": {
+    "created_at": "2025-06-04T17:19:17.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that accepts two input values from the user, one for each side of a right-angle triangle. The program uses the Pythagorean theorem (c^2 = a^2 + b^2) to calculate the length of the triangle's hypotenuse.",
+    "source_code": "#Step 1: Receive the values for each side of a right-angle triangle\ntext = input(\"Enter the length of side A:\")\nside_A = float(text)\ntext = input(\"Enter the length of side B:\")\nside_B = float(text)\n#Step 2: Calculate square of side A\nsquareside_A = side_A ** 2\n#Step 3: Calculate square of side B\nsquareside_B = side_B ** 2\n#Step 4: Use Pythagorean theorem to calculate the length of the triangle's hypotenuse\nhypotenuse = ( squareside_A + squareside_B ) ** 0.5\n#Step 5: Print the result\nprint(\"Given that side A is\", side_A, \"and side B is\", side_B, \", the hypotenuse is\", hypotenuse)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_pythagorean_theorem__664e23fd91363872f0ba32ea"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_pythagorean_theorem__664e23fd91363872f0ba32ea"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_pythagorean_theorem__664e23fd91363872f0ba32ea"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

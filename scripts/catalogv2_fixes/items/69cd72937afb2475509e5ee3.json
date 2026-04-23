@@ -1,0 +1,66 @@
+{
+  "id": "69cd72937afb2475509e5ee3",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:34:07.075Z",
+  "listed_at": "2026-02-15T22:34:07.074Z",
+  "tags": [],
+  "identity": {
+    "id": "c_decimalni_ispis__68d1a96763fa732f4df66957-68d687ac63fa732f4df67c02-3",
+    "title": "c_decimalni_ispis",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Formatirani_ispisi__68d1a96763fa732f4df66957?index=3"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji na ekran ispisuje sljede\u0107e vrijednosti jednu ispod druge: 2.5, 2.50, 02.50.",
+    "source_code": "#include <stdio.h>\r\n\r\nint main() {\r\n    float broj = 2.5;\r\n    printf(\"%.1f\\n%.2f\\n%05.2f\", broj, broj, broj);\r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Formatirani_ispisi__68d1a96763fa732f4df66957?index=3"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

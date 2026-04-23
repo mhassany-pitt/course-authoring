@@ -1,0 +1,73 @@
+{
+  "id": "69cd6cea52280355ab1efbd2",
+  "paws_id": 4881,
+  "user_email": "skd43@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-04-01T19:07:22.037Z",
+  "tags": [],
+  "identity": {
+    "id": "insertion_sort__69c5a17ffed5bceb660f8b25-69a0bf5bc83ddf59548bb5af-0",
+    "type": "CodeCompletionProblem",
+    "title": "Insertion Sort"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/insertion_sort__69c5a17ffed5bceb660f8b25?index=0"
+  },
+  "attribution": {
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Summit Dang",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "reads in Strings and uses insertion sort to print them out in sorted order",
+    "source_code": "public class Insertion {\n\n    @SuppressWarnings({\"rawtypes\", \"unchecked\"})\n    public static void sort(Comparable[] a) {\n        int n = a.length;\n        for (int i = 1; i < n; i++) {\n            for (int j = i; j > 0; j--) {\n                if (a[j-1].compareTo(a[j]) > 0) {\n                    exch(a, j-1, j);\n                }\n                else break;\n            }\n        }\n    }\n\n    @SuppressWarnings(\"rawtypes\")\n    private static void exch(Comparable[] a, int i, int j) {\n        Comparable swap = a[i];\n        a[i] = a[j];\n        a[j] = swap;\n    }\n\n    public static void main(String[] args) {\n        String[] a = StdIn.readAllStrings();\n        sort(a);\n        for (int i = 0; i < a.length; i++) {\n            StdOut.print(a[i] + \" \");\n        }\n        StdOut.println();\n    }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/?example-id=insertion_sort__69c5a17ffed5bceb660f8b25&index=0"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/insertion_sort__69c5a17ffed5bceb660f8b25?index=0"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/insertion_sort__69c5a17ffed5bceb660f8b25?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-04-01T19:07:22.047Z"
+}

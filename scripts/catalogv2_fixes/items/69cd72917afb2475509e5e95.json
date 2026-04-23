@@ -1,0 +1,163 @@
+{
+  "id": "69cd72917afb2475509e5e95",
+  "paws_id": 4217,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2025-12-31T06:03:59.930Z",
+  "listed_at": "2025-06-16T15:19:36.000Z",
+  "tags": [],
+  "identity": {
+    "id": "py_temperature_es__684dd9f8a0cac2913443642b",
+    "title": "Mostrando los Dias que Estan por Sobre el Promedio de Temperatura",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_temperature_es__684dd9f8a0cac2913443642b"
+  },
+  "attribution": {
+    "created_at": "2025-06-16T15:19:36.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Jordan Barria-Pineda",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "es",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construir un programa que lea una serie de temperaturas y reporte la temperatura promedio y el n\u00famero de d\u00edas que est\u00e1n por sobre el promedio. Suponga que los valores de entrada pueden tener un punto decimal.",
+    "source_code": "#Paso 1: Leer el n\u00famero de d\u00edas para los cuales tenemos que ingresar sus datos de temperatura\nnum_dias = int(input(\"Ingrese el n\u00famero de valores de temperatura que se ingresar\u00e1n: \"))\n#Paso 2: Leer los valores de temperatura\ntemperaturas = []\ntotal = 0\nfor i in range(num_dias):\n    val = float(input(\"Ingrese la temperatura: \"))\n    temperaturas.append(val)\n    total += val\n#Paso 3: Calcular la temperatura promedio\npromedio = 0\nif num_dias == 0:\n    print(\"No se ingresaron valores de temperatura.\")\nelse:\n    promedio = total / num_dias\n#Paso 4: Contar el n\u00famero de d\u00edas que est\u00e1n por encima de la temperatura promedio\nconteo_sobre_prom = 0\nfor temperatura in temperaturas:\n    if temperatura > promedio:\n        conteo_sobre_prom += 1\n#Paso 5: Mostrar los resultados\nprint(\"Temperatura promedio:\", promedio)\nprint(conteo_sobre_prom, \" d\u00edas sobre el promedio.\")"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "Arun parser v0.1": {
+        "concepts": [
+          "If",
+          "Assign",
+          "Eq",
+          "Div",
+          "Str",
+          "Call",
+          "Add",
+          "List",
+          "AugAssign",
+          "Attribute",
+          "Int",
+          "For",
+          "Gt",
+          "Index"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "AssigningValueVariable",
+          "TransformingToFloatType",
+          "IfCheckingInForLoop",
+          "TransformingToIntType",
+          "ForLoopWith",
+          "BooleanEvaluating",
+          "IfElseChecking",
+          "HandlingInput",
+          "Printing",
+          "CreatingList",
+          "CallingLibraryFunction",
+          "Division",
+          "AddingListElementWithAppend",
+          "Addition",
+          "ChangingValueVariable",
+          "SingleForLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "unspecified": {
+        "concepts": [
+          "Gt",
+          "For",
+          "Call",
+          "Assign",
+          "List",
+          "Eq",
+          "Int",
+          "Attribute",
+          "Div",
+          "Add",
+          "AugAssign",
+          "If",
+          "Index",
+          "Str"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_temperature_es__684dd9f8a0cac2913443642b"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_temperature_es__684dd9f8a0cac2913443642b"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_temperature_es__684dd9f8a0cac2913443642b"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Listas",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Listas",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Listas",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ]
+}

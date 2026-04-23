@@ -1,0 +1,66 @@
+{
+  "id": "69cd72ad7afb2475509e6211",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:34:00.156Z",
+  "listed_at": "2026-02-15T22:34:00.155Z",
+  "tags": [],
+  "identity": {
+    "id": "c_kopiranje_karaktera_u_datoteku__694450b9b71cfad938217b32-69444a65b71cfad938217834-0",
+    "title": "c_kopiranje_karaktera_u_datoteku",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Upis_u_tekstualne_datoteke_karakter_po_karakter__694450b9b71cfad938217b32?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji otvara datoteku prva.txt\u2019 i kopira njen sadr\u017eaj karakter po karakter u drugu datoteku druga.txt\u2019.",
+    "source_code": "#include <stdio.h>\n\n int main() {\n \tint c;\n \tFILE* ulaz = fopen(\"prva.txt\", \"r\");\n \tif (ulaz == NULL) {\n \t\tprintf(\"Otvaranje datoteke prva.txt nije uspjelo\");\n \t\treturn 1;\n \t}\n \tFILE* izlaz = fopen(\"druga.txt\", \"w\");\n \tif (izlaz == NULL) {\n \t\tfclose(ulaz);\n \t\tprintf(\"Otvaranje datoteke druga.txt nije uspjelo\");\n \t\treturn 2;\n \t}\n \tdo {\n \t\tc = fgetc(ulaz);\n \t\tif (c != EOF) fputc (c, izlaz);\n \t\tif (ferror(ulaz) || ferror(izlaz)) {\n \t\t\tprintf(\"Greska.\\n\");\n \t\t\tbreak;\n \t\t}\n \t} while (!feof(ulaz));\n \tprintf(\"Kopiranje zavrseno.\");\n \tfclose (ulaz);\n \tfclose (izlaz);\n \treturn 0;\n }"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Upis_u_tekstualne_datoteke_karakter_po_karakter__694450b9b71cfad938217b32?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

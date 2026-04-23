@@ -1,0 +1,78 @@
+{
+  "id": "69cd729b7afb2475509e5ff3",
+  "paws_id": 2777,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2025-12-31T06:04:00.038Z",
+  "listed_at": "2021-09-12T20:46:11.000Z",
+  "tags": [],
+  "identity": {
+    "id": "input_multiplication_ch",
+    "title": "Input Manipulation Challenge",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_datatype_input_manipulation&ch=input_multiplication_ch"
+  },
+  "attribution": {
+    "created_at": "2021-09-12T20:46:11.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that takes a user's inputs and calculate the division of the inputs.Then convert the division result into an integer, check the current division result's type and print the original division result, converted result and the original division result's float absolute value.",
+    "source_code": "# Step 1: Import math library\nimport math\n# Step 2: Take the first input from the user\ninput_a = input(\"Enter the first integer:\")\na = int(input_a)\n# Step 3: Take the second input from the user\ninput_b = input(\"Enter the second integer:\")\nb = int(input_b)\n# Step 3: Division\nc = a/b\nd = int(c)\n# Check if d's type is integer and store the boolean result into the variable f\nf = isinstance(d,int)\nprint(d)\nprint(f)\nprint(math.fabs(c))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_datatype_input_manipulation&ch=input_multiplication_ch"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_datatype_input_manipulation&ch=input_multiplication_ch"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=459",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > Functions",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ]
+}

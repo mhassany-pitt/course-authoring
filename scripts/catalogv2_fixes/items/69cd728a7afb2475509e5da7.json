@@ -1,0 +1,66 @@
+{
+  "id": "69cd728a7afb2475509e5da7",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:34:05.899Z",
+  "listed_at": "2026-02-15T22:34:05.898Z",
+  "tags": [],
+  "identity": {
+    "id": "c_ispis_sporedna_dijagonala__6910b0d21b622a00857decf5-690f6db91b622a00857de7ae-4",
+    "title": "c_ispis_sporedna_dijagonala",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_obrada_nizova_i_matrica__6910b0d21b622a00857decf5?index=4"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji od korisnika tra\u017ei unos matrice cijelih brojeva dimenzija 3x3 i zatim ispisuje na ekran elemente na sporednoj dijagonali.",
+    "source_code": "#include <stdio.h>\r\n#define VELICINA 3\r\n\r\nint main() {\r\n    int matrica[VELICINA][VELICINA];\r\n    int i, j;\r\n\r\n    /* unos matrice */\r\n    for (i = 0; i < VELICINA; i++) {\r\n        for (j = 0; j < VELICINA; j++) {\r\n            printf(\"Unesite element [%d][%d]: \\n\", i, j);\r\n            scanf(\"%d\", &matrica[i][j]);\r\n        }\r\n    }\r\n\r\n    /* ispis elemenata na sporednoj dijagonali */\r\n    printf(\"\\nElementi na sporednoj dijagonali: \");\r\n    for (i = 0; i < VELICINA; i++) {\r\n        printf(\"%d \", matrica[i][VELICINA - 1 - i]);\r\n    }\r\n\r\n    printf(\"\\n\");\r\n    return 0;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_obrada_nizova_i_matrica__6910b0d21b622a00857decf5?index=4"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

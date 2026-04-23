@@ -1,0 +1,70 @@
+{
+  "id": "69cd72a97afb2475509e6189",
+  "paws_id": 2795,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2025-12-31T06:04:00.035Z",
+  "listed_at": "2021-09-14T01:34:54.000Z",
+  "tags": [],
+  "identity": {
+    "id": "passing_lists_ch",
+    "title": "Passing Lists Challenge",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_references_passing_lists&ch=passing_lists_ch"
+  },
+  "attribution": {
+    "created_at": "2021-09-14T01:34:54.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that convert Celsius temperature values in a list to Fahrenheit temperature values",
+    "source_code": "# Step 1: Define the function\ndef Fahrenheit(c_list):\n#Step 1.1 :Iterate through the list and compute each value\u2019s Fahrenheit value\n    for i in range(len(c_list)):\n        c_list[i] = (c_list[i]*1.8)+32\n# Step 2: Initiate the list\ncelsius_list = [25, 3, 40, -5]\n# Step 3: Call the function\nFahrenheit(celsius_list)\n# Step4: Print the Fahrenheit values\nprint('The converted Fahrenheit temperature is:',celsius_list)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_references_passing_lists&ch=passing_lists_ch"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_references_passing_lists&ch=passing_lists_ch"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

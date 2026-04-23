@@ -1,0 +1,66 @@
+{
+  "id": "69cd72ae7afb2475509e623d",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:34:03.988Z",
+  "listed_at": "2026-02-15T22:34:03.988Z",
+  "tags": [],
+  "identity": {
+    "id": "c_zamjena_pomocu_pokazivaca__693480c7e28428298e556a5c-692ed871e28428298e522e57-0",
+    "title": "c_zamjena_pomocu_pokazivaca",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Pokazivaci_kao_parametri_u_funkcijama__693480c7e28428298e556a5c?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji prikazuje razliku izme\u0111u poku\u0161aja zamjene vrijednosti dvije cjelobrojne varijable pomo\u0107u funkcije koja prima parametre po vrijednosti i funkcije koja prima pokaziva\u010de.",
+    "source_code": "#include <stdio.h>\r\n\r\nvoid losa_zamjena(int x, int y);\r\nvoid dobra_zamjena(int *p1, int *p2);\r\n\r\nint main() {\r\n\tint a = 1, b = 999;\r\n\t\r\n\tprintf(\"Pocetne vrijednosti:\\n\");\r\n\tprintf(\"a = %d, b = %d\\n\", a, b); \r\n\tprintf(\"Losa zamjena:\\n\");\r\n\tlosa_zamjena(a, b);\r\n\tprintf(\"a = %d, b = %d\\n\", a, b); \r\n\tprintf(\"Dobra zamjena:\\n\");\r\n\tdobra_zamjena(&a, &b);\r\n\tprintf(\"a = %d, b = %d\\n\", a, b); \r\n\t\r\n\treturn 0;\r\n}\r\n\r\n/* los primjer zamjene - funkcija ne moze promijeniti svoje parametre */\r\nvoid losa_zamjena(int x, int y) {\r\n\tint temp;\t\r\n\ttemp = x;\r\n\tx = y;\r\n\ty = temp;\r\n}\r\n\r\n/* dobar primjer zamjene - funkcija ne moze promijeniti svoje parametre\r\n   ali ako je parameter pokaziva\u010d, onda mo\u017ee promijeniti vrijednost na koju on pokazuje */\r\nvoid dobra_zamjena(int *px, int *py) {\r\n\tint temp;\r\n\ttemp = *px;\r\n\t*px = *py;\r\n\t*py = temp;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Pokazivaci_kao_parametri_u_funkcijama__693480c7e28428298e556a5c?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

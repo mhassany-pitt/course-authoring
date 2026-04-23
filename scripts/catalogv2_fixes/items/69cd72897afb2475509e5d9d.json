@@ -1,0 +1,66 @@
+{
+  "id": "69cd72897afb2475509e5d9d",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:34:00.316Z",
+  "listed_at": "2026-02-15T22:34:00.315Z",
+  "tags": [],
+  "identity": {
+    "id": "c_datoteke_brojanje_redova_rijeci_znakova__69444a4db71cfad9382176c5-694441eab71cfad938217266-0",
+    "title": "c_datoteke_brojanje_redova_rijeci_znakova",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Citanje_sadrzaja_tekstualnih_datoteka_karakter_po_karakter__69444a4db71cfad9382176c5?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji odre\u0111uje broj redova, broj rije\u010di i broj znakova (pri \u010demu se \"whitespace\" znakovi ne ra\u010dunaju) u tekstualnoj datoteci \u010dije se ime unosi sa tastature.",
+    "source_code": "#include <stdio.h>\n#include <stdlib.h> /* Zbog funkcije exit() */\n\nint main() {\n\tFILE *ulaz;\n\tchar znak, ime[20];\n\tint broj_redova=0, broj_rijeci=0, broj_znakova=0, razmak=1;\n\tprintf (\"Unesite ime datoteke: \");\n\tscanf (\"%s\", ime);\n\tulaz = fopen(ime, \"r\");\n\tif (ulaz == NULL) {\n\t\tprintf (\"Pogreska kod otvaranja datoteke %s!\\n\\n\", ime);\n\t\treturn 1;\n\t}\n\twhile ((znak=fgetc(ulaz)) != EOF) {\n\t\t/* Ako je znak novi red, povecaj broj linija za jedan */\n\t\tif (znak=='\\n')\n\t\t\t++broj_redova;\n\n\t\t/* Da li je znak razmak? */\n\t\tif (znak==' ' || znak=='\\n' || znak=='\\t')\n\t\t\trazmak=1;\n\t\telse {\n\t\t\t++broj_znakova;\n\t\t\t/* Ako je prethodni znak bio razmak a ovaj nije,\n\t\t\tpovecavamo broj rijeci za 1 */\n\t\t\tif (razmak==1) ++broj_rijeci;\n\t\t\trazmak=0;\n\t\t}\n\t}\n\tif (broj_znakova != 0) broj_redova++;\n\tprintf (\"Broj redova: %d\\nBroj rijeci: %d\\nBroj znakova: %d\\n\", broj_redova, broj_rijeci, broj_znakova);\n\n\tfclose (ulaz);\n\treturn 0;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Citanje_sadrzaja_tekstualnih_datoteka_karakter_po_karakter__69444a4db71cfad9382176c5?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

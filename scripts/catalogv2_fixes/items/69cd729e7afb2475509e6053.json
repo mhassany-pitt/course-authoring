@@ -1,0 +1,66 @@
+{
+  "id": "69cd729e7afb2475509e6053",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:34:02.907Z",
+  "listed_at": "2026-02-15T22:34:02.906Z",
+  "tags": [],
+  "identity": {
+    "id": "c_niz_karaktera_brojanje_samoglasnika__693b2fab80e2aaa929a2579d-693b072b7c5007b9c22316ce-1",
+    "title": "c_niz_karaktera_brojanje_samoglasnika",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Nizovi_karaktera__693b2fab80e2aaa929a2579d?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji prolazi kroz niz karaktera i broji koliko se puta u njemu pojavljuju samoglasnici. Program treba prepoznati i mala i velika slova. Na kraju ispisati ukupan broj samoglasnika.",
+    "source_code": "#include <stdio.h>\r\n#include <ctype.h>\r\n\r\nint main() {\r\n    char niz[] = \"Programiranje\";\r\n    int brojac = 0;\r\n\r\n    for (int i = 0; niz[i] != '\\0'; i++) {\r\n        char c = tolower(niz[i]);\r\n        if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u') {\r\n            brojac++;\r\n        }\r\n    }\r\n\r\n    printf(\"Broj samoglasnika: %d\\n\", brojac);\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Nizovi_karaktera__693b2fab80e2aaa929a2579d?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

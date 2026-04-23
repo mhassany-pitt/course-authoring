@@ -1,0 +1,70 @@
+{
+  "id": "69cd729f7afb2475509e606b",
+  "paws_id": 2797,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2025-12-31T06:04:00.035Z",
+  "listed_at": "2021-09-14T01:44:01.000Z",
+  "tags": [],
+  "identity": {
+    "id": "stack_ch",
+    "title": "Stack Challenge",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_stack_stack&ch=stack_ch"
+  },
+  "attribution": {
+    "created_at": "2021-09-14T01:44:01.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": " Implementing Stack. Using Class to construct a Stack. Implement a function to determine if all the given brackets are paired.\\nFor example:\\n       paired brackets list:['[','{','(','{','}',')','}',']\u2019] ; unpaired brackets list:['{',']','(','{','}',')','}',']']",
+    "source_code": "# Define a Stack Class\nclass Stack:\n# Initializing the stack\n    def __init__(self):\n        self.items = []\n    # Checking if the stack is empty\n    def is_empty(self):\n        return len(self.items) == 0\n    # Adding elements to the stack\n    def push(self, item):\n        self.items.append(item)\n    # Removing the elements from the stack\n    def pop(self):\n        return self.items.pop()\n    # Checking the element in the stack\n    def peek(self):\n        return self.items[- 1]\n# Checking the if the brackets are matched\ndef match(bracket):\n    left =['(','[','{']\n    right={')',']','}'}\n    s=Stack()\n    for brackets in bracket:\n        if brackets in left:\n            # We try to store the current bracket in the stack if it is the left one\n            s.push(brackets)\n        elif brackets in right:\n            if s.is_empty():\n                return False\n            if 1 <= ord(brackets) - ord(s.peek()) <= 2:\n                # We try to empty the stack if any right bracket matches a left bracket in the stack.\n                s.pop()\n    return s.is_empty()\nexpr1=['[','{','(','{','}',')','}',']']\nexpr2=['{','[','}','(',')']\nprint(match(expr1))\nprint(match(expr2))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_stack_stack&ch=stack_ch"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_stack_stack&ch=stack_ch"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

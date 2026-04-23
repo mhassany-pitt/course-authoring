@@ -1,0 +1,66 @@
+{
+  "id": "69cd72ab7afb2475509e61d5",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:34:04.316Z",
+  "listed_at": "2026-02-15T22:34:04.315Z",
+  "tags": [],
+  "identity": {
+    "id": "c_zamjena_kolona_dva_mjesta_dalje__69236a65e28428298e4bab80-6923709ae28428298e4bae60-3",
+    "title": "c_zamjena_kolona_dva_mjesta_dalje",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Zamjena_redova_i_kolona__69236a65e28428298e4bab80?index=3"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji pomjera svaku kolonu matrice na mjesto kolone koja se nalazi dva mjesta desno od nje. Brojanje kolona ide u krug: ako matrica ima 5 kolona, kolona s indeksom 0 dolazi na mjesto kolone 2, kolona 1 na kolonu 3, kolona 3 na kolonu 0 itd. Korisnik unosi elemente matrice dimenzija 4x5, a program ispisuje novu matricu nakon jednog prolaska zamjene svih kolona. Napomena: Preporu\u010duje se koristiti privremenu kopiju matrice kako bi se izbjeglo prepisivanje vrijednosti dok se mijenjaju kolone.",
+    "source_code": "#include <stdio.h>\r\n#define BROJ_REDOVA 4\r\n#define BROJ_KOLONA 5\r\n\r\nint main() {\r\n    int i, j;\r\n    int matrica[BROJ_REDOVA][BROJ_KOLONA];\r\n    int temp[BROJ_REDOVA][BROJ_KOLONA]; /* privremena kopija matrice */\r\n\r\n    printf(\"Unesite elemente matrice 4x5:\\n\");\r\n    for (i = 0; i < BROJ_REDOVA; i++)\r\n        for (j = 0; j < BROJ_KOLONA; j++) {\r\n            scanf(\"%d\", &matrica[i][j]);\r\n            temp[i][j] = matrica[i][j];\r\n        }\r\n\r\n    /* Zamjena kolona dva mjesta desno (cirkularno) */\r\n    for (j = 0; j < BROJ_KOLONA; j++) {\r\n        for (i = 0; i < BROJ_REDOVA; i++)\r\n            matrica[i][(j + 2) % BROJ_KOLONA] = temp[i][j];\r\n    }\r\n\r\n    printf(\"Matrica nakon zamjene kolona:\\n\");\r\n    for (i = 0; i < BROJ_REDOVA; i++) {\r\n        for (j = 0; j < BROJ_KOLONA; j++)\r\n            printf(\"%d \", matrica[i][j]);\r\n        printf(\"\\n\");\r\n    }\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Zamjena_redova_i_kolona__69236a65e28428298e4bab80?index=3"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

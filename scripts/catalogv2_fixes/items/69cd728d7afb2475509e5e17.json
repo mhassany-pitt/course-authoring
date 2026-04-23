@@ -1,0 +1,127 @@
+{
+  "id": "69cd728d7afb2475509e5e17",
+  "paws_id": 2808,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2025-12-31T06:04:00.034Z",
+  "listed_at": "2021-09-15T23:14:48.000Z",
+  "tags": [],
+  "identity": {
+    "id": "py_trees_traversal",
+    "title": "Tree traversal.",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_traversal"
+  },
+  "attribution": {
+    "created_at": "2021-09-15T23:14:48.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "The tree can be traversed by deciding on a sequence to visit each node. There are three traversal algorithms: in-order traversal, pre-order traversal and post-order traversal.\nIn-order traversal visits the nodes from the left, the root node and the right\nPre-order traversal visits the nodes from the root node, the left and the right\nPost-order traversal visits the nodes from the left, the right and the root node.\nIn this example, we construct an in-order traversal algorithm. ",
+    "source_code": "# Define a binary tree class\nclass BinaryTree:\n    def __init__(self, root):\n        self.left = None\n        self.right = None\n        self.key = root\n    # Define the Insert Node function\n    def insert(self, data):\n        if self.key:\n            if data < self.key:\n                if self.left is None:\n                    self.left = BinaryTree(data)\n                else:\n                    self.left.insert(data)\n            elif data > self.key:\n                if self.right is None:\n                    self.right = BinaryTree(data)\n                else:\n                    self.right.insert(data)\n        else:\n            self.key = data\n    # Define Inorder traversal function\n    def inorder_traversal(self, root):\n        res = []\n        if root:\n            res = self.inorder_traversal(root.left)\n            res.append(root.key)\n            res = res + self.inorder_traversal(root.right)\n        return res\nroot = BinaryTree(5)\nroot.insert(14)\nroot.insert(16)\nroot.insert(3)\nroot.insert(4)\nroot.insert(10)\nprint(root.inorder_traversal(root))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_traversal"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_traversal"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=413",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Trees",
+      "used_at": "2021-08-11T18:22:22.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=422",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > Topic 10",
+      "used_at": "2022-05-23T22:24:04.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=423",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=423",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Fall 2022 (Python II) > Topic 10 - Binary Search, Trees",
+      "used_at": "2022-08-10T17:36:04.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=428",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=428",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2023 (Python II) > Halfweek 10 and 11 - Trees",
+      "used_at": "2023-05-02T00:12:59.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=431",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=431",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2024 (Python II) > Halfweek 10 and 11 - Trees",
+      "used_at": "2024-05-03T14:17:30.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=454",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Trees",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=460",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=460",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Worked Examples > Trees",
+      "used_at": "2025-04-09T10:48:28.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Trees",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ]
+}

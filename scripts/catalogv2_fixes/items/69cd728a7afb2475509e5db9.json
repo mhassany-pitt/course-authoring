@@ -1,0 +1,66 @@
+{
+  "id": "69cd728a7afb2475509e5db9",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:34:02.145Z",
+  "listed_at": "2026-02-15T22:34:02.144Z",
+  "tags": [],
+  "identity": {
+    "id": "c_izbacivanje_svakog_ntog_karaktera__693da3e8443e2801de625e29-693d9bca443e2801de6258b1-1",
+    "title": "c_izbacivanje_svakog_ntog_karaktera",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Brisanje_dijelova_stringa__693da3e8443e2801de625e29?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program u kojem se iz datog stringa izbacuje svaki n-ti karakter. Brojanje karaktera po\u010dinje od 1 (prvi karakter se bri\u0161e ako je n=1).",
+    "source_code": "#include <stdio.h>\n\nint main()\n{\n    int n = 2;\n    char tekst[] = \"Ovo je neki primjer\";\n    char* s = tekst;\n    char* pocetak;\n    int brojac = 0;\n\n    if (n <= 0) {\n        printf(\"Nevalidno n.\");\n        return 1;\n    }\n\n    while (*s != '\\0') {\n        brojac++;\n        if (brojac % n == 0) {\n            pocetak = s;\n            /* pomjeramo ostatak stringa preko n-tog karaktera */\n            while (*pocetak != '\\0') {\n                *pocetak = *(pocetak + 1);\n                pocetak++;\n            }\n        } else {\n            s++;\n        }\n    }\n\n    printf(\"%s\\n\", tekst);\n    return 0;\n}\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Brisanje_dijelova_stringa__693da3e8443e2801de625e29?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

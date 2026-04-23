@@ -1,0 +1,66 @@
+{
+  "id": "69cd72b07afb2475509e6273",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:33:57.501Z",
+  "listed_at": "2026-02-15T22:33:57.499Z",
+  "tags": [],
+  "identity": {
+    "id": "c_strukture_s_pokazivacima__6952bda1136f190edb6d397c-693ebd50443e2801de63036d-1",
+    "title": "c_strukture_s_pokazivacima",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Funkcije_i_strukture_s_pokazivacima__6952bda1136f190edb6d397c?index=0"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program u kojem se defini\u0161u strukture Tacka i Kruznica. Program treba omoguciti unos obje strukture i ispisati da li je une\u0161ena ta\u010dka unutar kru\u017enice. Kreirati pomo\u0107nu funkciju koja ra\u010duna udaljenost izme\u0111u dvije ta\u010dke te koristiti pokaziva\u010de u implementaciji. ",
+    "source_code": "#include <stdio.h>\r\n#include <math.h>\r\n\r\n/* Definicija tacke i kruznice */\r\nstruct Tacka {\r\n    double x, y;\r\n};\r\n\r\nstruct Kruznica {\r\n    struct Tacka centar;\r\n    double poluprecnik;\r\n};\r\n\r\n/* Funkcija za unos tacke (preko pokazivaca) */\r\nvoid unos_tacke(struct Tacka* t) {\r\n    printf(\"Unesite koordinate tacke (x,y): \");\r\n    scanf(\"%lf,%lf\", &t->x, &t->y);\r\n}\r\n\r\n/* Funkcija za unos kruznice (preko pokazivaca) */\r\nvoid unos_kruznice(struct Kruznica* k) {\r\n    printf(\"Unesite centar kruznice:\\n\");\r\n    unos_tacke(&k->centar);\r\n\r\n    printf(\"Unesite poluprecnik kruznice: \");\r\n    scanf(\"%lf\", &k->poluprecnik);\r\n}\r\n\r\n/* Funkcija za udaljenost izmedju dvije tacke (preko pokazivaca) */\r\ndouble udaljenost(const struct Tacka* t1, const struct Tacka* t2) {\r\n    return sqrt(\r\n        (t1->x - t2->x) * (t1->x - t2->x) + (t1->y - t2->y) * (t1->y - t2->y)\r\n    );\r\n}\r\n\r\n/* Glavni program: Da li je tacka unutar kruznice */\r\nint main() {\r\n    struct Kruznica k;\r\n    struct Tacka t;\r\n    double d;\r\n    const double EPS = 0.0001;\r\n\r\n    printf(\"Unesite kruznicu:\\n\");\r\n    unos_kruznice(&k);\r\n\r\n    printf(\"Unesite neku tacku:\\n\");\r\n    unos_tacke(&t);\r\n\r\n    /* Provjera polozaja tacke u odnosu na kruznicu */\r\n    d = udaljenost(&t, &k.centar);\r\n\r\n    if (d < k.poluprecnik - EPS)\r\n        printf(\"Tacka je unutar kruznice.\");\r\n    else if (fabs(d - k.poluprecnik) < EPS)\r\n        printf(\"Tacka je na kruznici.\");\r\n    else\r\n        printf(\"Tacka je izvan kruznice.\");\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Funkcije_i_strukture_s_pokazivacima__6952bda1136f190edb6d397c?index=0"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

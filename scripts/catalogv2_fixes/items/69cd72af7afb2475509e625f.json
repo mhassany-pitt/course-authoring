@@ -1,0 +1,113 @@
+{
+  "id": "69cd72af7afb2475509e625f",
+  "paws_id": 4181,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2025-12-31T06:03:59.936Z",
+  "listed_at": "2025-06-10T08:49:49.000Z",
+  "tags": [],
+  "identity": {
+    "id": "Encontrar el Mayor Divisor de un Numero Positivo__68273d7266a8e1b992c81271-68273d7066a8e1b992c8126f-1",
+    "title": "Encontrar el Mayor Divisor de un Numero Positivo",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_divisor_es__68273d7266a8e1b992c81271?index=1"
+  },
+  "attribution": {
+    "created_at": "2025-06-10T08:49:49.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Isaac Alpizar-Chacon",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "es",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construir un programa que encuentre el mayor divisor de un n\u00famero positivo, excluyendo el n\u00famero mismo. Por ejemplo, el mayor divisor de 24 es 12.",
+    "source_code": "#Paso 1: Asignar valores iniciales a las variables que necesitamos para este programa\nnum = 15\ndivisor = num-1\n#Paso 2: Encontrar el mayor divisor del n\u00famero        \nwhile num % divisor != 0 :\n    divisor -= 1\nprint(\"El mayor divisor de\", num, \"es\", divisor)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "alice_edu_py_ontology expert": {
+        "concepts": [
+          "AssigningValueVariable",
+          "FindRemainder",
+          "Subtraction",
+          "BooleanEvaluating",
+          "Printing",
+          "CallingLibraryFunction",
+          "ChangingValueVariable",
+          "SingleWhileLoopIteration"
+        ],
+        "note": "",
+        "created_at": null,
+        "updated_at": null
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_divisor_es__68273d7266a8e1b992c81271?index=1"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_divisor_es__68273d7266a8e1b992c81271?index=1"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_divisor_es__68273d7266a8e1b992c81271?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=457",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=457",
+      "context_name": "Python: PythonES | Programacion en Python en Espanol > Ciclos",
+      "used_at": "2025-03-30T22:04:51.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=461",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=461",
+      "context_name": "Python: INFO063-25 | INTRODUCCION A LA PROGRAMACION > Ciclos While",
+      "used_at": "2025-05-25T23:03:06.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=463",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=463",
+      "context_name": "Python: UTFSM-Progra | Programacion UTFSM > Ciclos",
+      "used_at": "2025-06-17T01:16:04.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    }
+  ]
+}

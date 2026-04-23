@@ -1,0 +1,70 @@
+{
+  "id": "69cd729f7afb2475509e6075",
+  "paws_id": 2799,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2025-12-31T06:04:00.035Z",
+  "listed_at": "2021-09-14T02:07:03.000Z",
+  "tags": [],
+  "identity": {
+    "id": "queue_ch",
+    "title": "Solving Josephus Problem Challenge",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_queue_queue&ch=queue_ch"
+  },
+  "attribution": {
+    "created_at": "2021-09-14T02:07:03.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program by using Queue structure to solve a Josephus problem. Josephus problem is a counting-out game. N people are in a circle, labeled as 1, 2, 3, \u2026 ,n. Given a skip number k, counting from the person labeled as 1, in every round, after k number of people are skipped, the next person will be counted out of the circle. Repeat the process with the remaining people until only one person remains. Then free the last one person. The program should return the last freed  person.",
+    "source_code": "# Define a Queue Class\nclass Queue:\n    # Initializing the queue\n    def __init__(self):\n        self.items = []\n    # Adding elements to the queue\n    def enqueue(self,item):\n        self.items.insert(0,item)\n    # Removing elements from the queue\n    def dequeue(self):\n        return self.items.pop()\n    # Checking the size of the queue\n    def size(self):\n        return  len(self.items)\n# Define a function to solve Josephus problem\ndef circle(k,name_list):\n    q = Queue()\n    for i in range(len(name_list)):\n    # We are trying to store the elements from the name_list into the queue structure\n        q.enqueue(name_list[i])\n    i = 0\n    while q.size() != 1:\n    # We are trying to count each element till the kth element\n        temp = q.dequeue()\n        if i != k:\n        # We need to restore the non-kth elements so the Kth element is out of the queue.\n            q.enqueue(temp)\n        else:\n            i = 0\n        i += 1\n    return q.dequeue()\nname_list = [\"Lily\",\"David\",\"Susan\",\"Julia\",\"David\",\"Brad\"]\nprint(circle(7,name_list))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_queue_queue&ch=queue_ch"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_queue_queue&ch=queue_ch"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

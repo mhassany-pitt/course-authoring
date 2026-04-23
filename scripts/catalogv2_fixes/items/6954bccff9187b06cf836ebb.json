@@ -3,7 +3,6 @@
   "user_email": "moh70@pitt.edu",
   "status": "public",
   "listed_at": "2025-04-03T08:00:00.000Z",
-  "updated_at": "2026-03-31T22:39:58.731Z",
   "tags": [],
   "identity": {
     "id": "py_class_day_calendar_es",
@@ -25,7 +24,7 @@
     ]
   },
   "languages": {
-    "content_language": "en",
+    "content_language": "es",
     "programming_languages": [
       "Python"
     ]

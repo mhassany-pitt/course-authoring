@@ -1,0 +1,66 @@
+{
+  "id": "69cd72af7afb2475509e6253",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:33:59.111Z",
+  "listed_at": "2026-02-15T22:33:59.110Z",
+  "tags": [],
+  "identity": {
+    "id": "c_citanje_podatka_iz_bin_datoteke__694f41e6136f190edb6b1628-694f25ca136f190edb6b04fc-0",
+    "title": "c_citanje_podatka_iz_bin_datoteke",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Citanje_iz_binarnih_datoteka__694f41e6136f190edb6b1628?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Amina Hromic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji iz binarne datoteke broj.dat u\u010ditava jedan podatak tipa double. Program treba otvoriti datoteku u binarnom re\u017eimu za \u010ditanje, pomo\u0107u funkcije fread u\u010ditati jednu realnu vrijednost i ispisati je na ekran sa dvije decimale. Ukoliko datoteku nije mogu\u0107e otvoriti, program treba ispisati odgovaraju\u0107u poruku o gre\u0161ci.\n",
+    "source_code": "#include <stdio.h>\r\n\r\nint main() {\r\n    FILE *dat = fopen(\"broj.dat\", \"rb\");\r\n    if (dat == NULL) {\r\n        printf(\"Greska pri otvaranju datoteke.\\n\");\r\n        return 1;\r\n    }\r\n\r\n    double podatak;\r\n\r\n    fread(&podatak, sizeof(double), 1, dat);\r\n\r\n    fclose(dat);\r\n\r\n    printf(\"Ucitani podatak: %.2f\\n\", podatak);\r\n\r\n    return 0;\r\n}\r\n"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Citanje_iz_binarnih_datoteka__694f41e6136f190edb6b1628?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

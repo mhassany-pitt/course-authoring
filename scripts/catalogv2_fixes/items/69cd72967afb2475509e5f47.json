@@ -1,0 +1,92 @@
+{
+  "id": "69cd72967afb2475509e5f47",
+  "paws_id": 2809,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2025-12-31T06:04:00.034Z",
+  "listed_at": "2021-09-15T23:14:51.000Z",
+  "tags": [],
+  "identity": {
+    "id": "traversal_ch",
+    "title": "Tree traversal. Challenge",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/pcex/pcex_v2/index.html?lang=PYTHON&set=py_trees_traversal&ch=traversal_ch"
+  },
+  "attribution": {
+    "created_at": "2021-09-15T23:14:51.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "The tree can be traversed by deciding on a sequence to visit each node. There are three traversal algorithms: in-order traversal, pre-order traversal and post-order traversal.\\n<b>In-order traversal</b> visits the nodes from the left, the root node and the right\\n<b>Pre-order traversal</b> visits the nodes from the root node, the left and the right\\n<b>Post-order traversal</b> visits the nodes from the left, the right and the root node.\\nIn this challenge, we construct an post-order traversal algorithm. ",
+    "source_code": "# Define a binary tree class\nclass BinaryTree:\n    def __init__(self, root):\n        self.left = None\n        self.right = None\n        self.key = root\n    # Define the Insert Node function\n    def insert(self, data):\n        if self.key:\n            if data < self.key:\n                if self.left is None:\n                    self.left = BinaryTree(data)\n                else:\n                    self.left.insert(data)\n            elif data > self.key:\n                if self.right is None:\n                    self.right = BinaryTree(data)\n                else:\n                    self.right.insert(data)\n        else:\n            self.key = data\n    # Define Post order traversal function\n    def postorder_traversal(self, root):\n        res = []\n        if root:\n            res = self.postorder_traversal(root.left)\n            res = res + self.postorder_traversal(root.right)\n            res.append(root.key)\n        return res\nroot = BinaryTree(5)\nroot.insert(14)\nroot.insert(16)\nroot.insert(3)\nroot.insert(4)\nroot.insert(10)\nprint(root.postorder_traversal(root))"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_traversal&ch=traversal_ch"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_traversal&ch=traversal_ch"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=454",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=454",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - All content > Trees",
+      "used_at": "2025-03-27T12:46:05.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=459",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=459",
+      "context_name": "Python: CMU15110 | CMU 15-110 Principles of Computing (Python) - Practice Problems > Trees",
+      "used_at": "2025-04-09T10:44:44.000Z",
+      "used_by": "Jordan Barria, Jordan Barria - University Of Pittsburgh"
+    },
+    {
+      "context_id": "cid=462",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=462",
+      "context_name": "Python: SandboxPython | Sandbox Python Course > Trees",
+      "used_at": "2025-06-14T00:28:07.000Z",
+      "used_by": "Kamil Akhuseyinoglu - University Of Pittsburgh"
+    }
+  ]
+}

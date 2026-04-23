@@ -1,0 +1,66 @@
+{
+  "id": "69cd728a7afb2475509e5dab",
+  "paws_id": null,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-02-15T22:34:06.059Z",
+  "listed_at": "2026-02-15T22:34:06.058Z",
+  "tags": [],
+  "identity": {
+    "id": "c_unos_niza_while__6910afee1b622a00857decdc-6910a2e41b622a00857dec7e-0",
+    "title": "c_unos_niza_while",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_prebacivanje_elemenata_niza__6910afee1b622a00857decdc?index=1"
+  },
+  "attribution": {
+    "created_at": "2026-01-01T00:00:00Z",
+    "provider": "PCEX",
+    "publisher": "PAWS Lab - WEAT",
+    "authors": [
+      {
+        "name": "Mubina Kamberovic",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "bs",
+    "programming_languages": [
+      "C"
+    ]
+  },
+  "content": {
+    "prompt": "Napisati program koji od korisnika tra\u017ei unos niza od 5 cijelih brojeva i na kraju ispisuje unesene brojeve na ekran. Koristiti while petlju za unos i ispis.",
+    "source_code": "#include <stdio.h>\r\n#define DIMENZIJA 5\r\n\r\nint main(){\r\n    int niz[DIMENZIJA];\r\n\tint i;\r\n\t\r\n\t/* unos niza */\r\n\ti = 0;\r\n\twhile(i < DIMENZIJA) {\r\n\t\tprintf(\"Element %d: \", i);\r\n\t\tscanf(\"%d\", &niz[i]);\r\n\t\t++i;\r\n\t}\r\n\r\n    /* ispis niza */\r\n\tprintf(\"Ovo ste unijeli:\\n\");\r\n\ti = 0;\r\n\twhile(i < DIMENZIJA) {\r\n\t\tprintf(\"%d \", niz[i]);\r\n\t\t++i;\r\n\t}\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/Unos_i_prebacivanje_elemenata_niza__6910afee1b622a00857decdc?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

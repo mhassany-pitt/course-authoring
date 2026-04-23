@@ -1,0 +1,106 @@
+{
+  "id": "69cd72aa7afb2475509e61c1",
+  "paws_id": 2788,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2025-12-31T06:04:00.036Z",
+  "listed_at": "2021-09-13T14:44:30.000Z",
+  "tags": [],
+  "identity": {
+    "id": "py_single_linked_list",
+    "title": "Singly Linked List",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_single_linked_list"
+  },
+  "attribution": {
+    "created_at": "2021-09-13T14:44:30.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Kamil Akhuseyinoglu",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Create the necessary classes for a Singly Linked List, containing the method append(item) to add a new item to the end of the linked list. Test the singly linked list after the classes are created.",
+    "source_code": "# Step 1: Define Node class\nclass SLinkedListNode:\n    def __init__(self, initData, initNext):\n        self.data = initData\n        self.next = initNext\n    def getData(self):\n        return self.data\n    def getNext(self):\n        return self.next\n    def setData(self, newData):\n        self.data = newData\n    def setNext(self, newNext):\n        self.next = newNext\n# Step 2: Define the Singly Linked List class\nclass SLinkedList:\n    def __init__(self):\n        self.head = None\n        self.size = 0\n    def __str__(self):\n        s = '['\n        i = 0\n        current = self.head\n        while current != None:\n            if i > 0:\n                s = s + ','\n            dataObject = current.getData()\n            if dataObject != None:\n                s = s + '%s' % dataObject\n                i = i + 1\n            current = current.getNext()\n        s = s + ']'\n        return s\n    def append(self, item):\n        temp = SLinkedListNode(item, None)\n        if (self.head == None):\n            self.head = temp\n        else:\n            current = self.head\n            while (current.getNext() != None):\n                current = current.getNext()\n            current.setNext(temp)\n        self.size += 1\n# Step 3: Test the Linked List\nlinked_list = SLinkedList()\nlinked_list.append('Hello')\nlinked_list.append('World')\nprint(linked_list)"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "PITT",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_single_linked_list"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_single_linked_list"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=413",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=413",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Fall 2021 > Linked Lists",
+      "used_at": "2021-08-11T18:22:22.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=422",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=422",
+      "context_name": "Python: PYTHON001 | University of Alberta Python Course, Spring 2022 > Topic 6",
+      "used_at": "2022-05-23T22:24:04.000Z",
+      "used_by": "Zoe Riell, Zoe Riell - University of Alberta"
+    },
+    {
+      "context_id": "cid=423",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=423",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Fall 2022 (Python II) > Topic 6 - Linked Lists",
+      "used_at": "2022-08-10T17:36:04.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=428",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=428",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2023 (Python II) > Halfweek 7 - Linked Lists",
+      "used_at": "2023-05-02T00:12:59.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    },
+    {
+      "context_id": "cid=431",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=431",
+      "context_name": "Python: PYTHON001 | U of A CMPUT 175 Spring 2024 (Python II) > Halfweek 7 - Linked Lists",
+      "used_at": "2024-05-03T14:17:30.000Z",
+      "used_by": "Emma, McDonald - University of Alberta"
+    }
+  ]
+}

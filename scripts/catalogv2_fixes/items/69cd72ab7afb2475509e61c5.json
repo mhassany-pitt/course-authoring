@@ -1,0 +1,89 @@
+{
+  "id": "69cd72ab7afb2475509e61c5",
+  "paws_id": 4359,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2025-12-31T06:03:59.917Z",
+  "listed_at": "2025-09-10T22:23:33.000Z",
+  "tags": [],
+  "identity": {
+    "id": "Printing Sequence of Numbers with a Gap Between Adjacent Values (Case 2) __68bdb308f6cc3d7a9cc09705-68bdb308f6cc3d7a9cc09703-1",
+    "title": "Printing Sequence of Numbers with a Gap Between Adjacent Values (Case 2) ",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/for_loops_j_for_three__68bdb308f6cc3d7a9cc09705?index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:23:33.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that prints a sequence of numbers from 7 (inclusive) to 35 (inclusive) in increments of 7.",
+    "source_code": "public class JForThree2 {\n\tpublic static void main(String[] args) {\n\t\t//Step 1: Iterate through the numbers in the sequence\n\t\tfor (int num = 7; num <= 35; num += 7) {\n\t\t\t//Step 1.1: Print each number in the sequence\n\t\t\tSystem.out.println(num);\n\t\t}\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/for_loops_j_for_three__68bdb308f6cc3d7a9cc09705?index=1"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/for_loops_j_for_three__68bdb308f6cc3d7a9cc09705?index=1"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/for_loops_j_for_three__68bdb308f6cc3d7a9cc09705?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": [
+    {
+      "context_id": "cid=468",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=468",
+      "context_name": "Java: CMPINF0401 | CMPINF 401 - Intermediate Programming - Fall 2025 - Fully reversed > For Loops",
+      "used_at": "2025-09-03T18:00:26.000Z",
+      "used_by": "Mohammad Hassany - "
+    },
+    {
+      "context_id": "cid=484",
+      "context_url": "https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=484",
+      "context_name": "Java: CMPINF0401 | PennWest CMIS1200 - Application Programming I (Fall 2025) > For Loops",
+      "used_at": "2025-09-27T20:26:25.000Z",
+      "used_by": "Rafaella Sampaio, Rafaella Sampaio - University of Pittsburgh"
+    }
+  ]
+}

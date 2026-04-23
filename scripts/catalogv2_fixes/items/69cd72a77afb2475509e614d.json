@@ -1,0 +1,74 @@
+{
+  "id": "69cd72a77afb2475509e614d",
+  "paws_id": 4368,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2025-12-31T06:03:59.916Z",
+  "listed_at": "2025-09-10T22:24:41.000Z",
+  "tags": [],
+  "identity": {
+    "id": "String Concatenation (Case 2)__68bdb308f6cc3d7a9cc096e2-68bdb308f6cc3d7a9cc096e0-1",
+    "title": "String Concatenation (Case 2)",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/strings_addition__68bdb308f6cc3d7a9cc096e2?index=1"
+  },
+  "attribution": {
+    "created_at": "2025-09-10T22:24:41.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that prints the text \"333\", \"63\", and \"36\".",
+    "source_code": "public class StringAddition2\n{\n\tpublic static void main (String[] args)\n\t{\n\t\t//Step 1:Print the text \"333\"\n\t\tSystem.out.println(\"3\" + 3 + 3);\n\t\t//Step 2: Print the text \"63\"\n\t\tSystem.out.println(3 + 3 + \"3\");\n\t\t//Step 3: Print the text \"36\"\n\t\tSystem.out.println(\"3\" + (3 + 3));\n\t}\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/strings_addition__68bdb308f6cc3d7a9cc096e2?index=1"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/strings_addition__68bdb308f6cc3d7a9cc096e2?index=1"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/strings_addition__68bdb308f6cc3d7a9cc096e2?index=1"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}

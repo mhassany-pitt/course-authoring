@@ -1,0 +1,74 @@
+{
+  "id": "69cd72997afb2475509e5fa9",
+  "paws_id": 4403,
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2025-12-31T06:03:59.912Z",
+  "listed_at": "2025-09-15T23:58:23.000Z",
+  "tags": [],
+  "identity": {
+    "id": "py_time_conversion__664e241291363872f0ba32f4",
+    "title": "Seconds to Minutes Conversion",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_time_conversion__664e241291363872f0ba32f4"
+  },
+  "attribution": {
+    "created_at": "2025-09-15T23:58:23.000Z",
+    "provider": "PCEX",
+    "publisher": "",
+    "authors": [
+      {
+        "name": "Mohammad Hassany",
+        "affiliation": ""
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Construct a program that obtains minutes and remaining seconds from the input amount of time in seconds. For example, 500 seconds contains 8 minutes and 20 seconds.",
+    "source_code": "#Step 1: Read the seconds\ntext = input(\"Enter an integer for seconds: \")\nseconds = int(text)\n#Step 2: Obtain minutes and remaining seconds from the input seconds\nminutes = seconds // 60 \nremaining_seconds = seconds % 60\n#Step 3: Display the result\nprint(seconds , \"seconds is\" , minutes , \"minutes and\" , remaining_seconds , \"seconds.\")  "
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": ""
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_time_conversion__664e241291363872f0ba32f4"
+    },
+    {
+      "protocol": "HTML",
+      "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_time_conversion__664e241291363872f0ba32f4"
+    },
+    {
+      "protocol": "PITT",
+      "url": "https://acos.cs.vt.edu/pitt/acos-pcex/acos-pcex-examples/py_time_conversion__664e241291363872f0ba32f4"
+    }
+  ],
+  "rights": {
+    "license": "MIT",
+    "license_url": "",
+    "usage_notes": ""
+  },
+  "uses": []
+}
