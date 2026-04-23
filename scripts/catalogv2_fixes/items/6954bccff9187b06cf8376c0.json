@@ -60,22 +60,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code3)": {
-        "concepts": [
-          "DataManipulationLanguage"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code411842)": {
-        "concepts": [
-          "NullValueIgnorance"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "DotCharacter",
@@ -93,6 +77,15 @@
           "SetClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "NullValueIgnorance",
+          "DataManipulationLanguage"
+        ],
+        "note": "code3,code411842",
         "created_at": null,
         "updated_at": null
       }

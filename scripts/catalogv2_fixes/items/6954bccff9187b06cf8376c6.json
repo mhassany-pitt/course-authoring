@@ -55,14 +55,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code431120)": {
-        "concepts": [
-          "ToUpperCase"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "UpdateClause",
@@ -77,6 +69,14 @@
           "SetClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "ToUpperCase"
+        ],
+        "note": "code431120",
         "created_at": null,
         "updated_at": null
       }

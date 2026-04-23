@@ -57,22 +57,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code32)": {
-        "concepts": [
-          "Deletion"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code44112)": {
-        "concepts": [
-          "SubQueryCheckingDuplicateTuples"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "InsertIntoClause",
@@ -87,6 +71,15 @@
           "InsertStatement"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "Deletion",
+          "SubQueryCheckingDuplicateTuples"
+        ],
+        "note": "code32,code44112",
         "created_at": null,
         "updated_at": null
       }

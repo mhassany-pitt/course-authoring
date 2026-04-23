@@ -60,14 +60,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code431130)": {
-        "concepts": [
-          "SubstringExtraction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "EqualComparison",
@@ -87,6 +79,14 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "SubstringExtraction"
+        ],
+        "note": "code431130",
         "created_at": null,
         "updated_at": null
       }

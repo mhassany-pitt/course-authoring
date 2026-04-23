@@ -59,22 +59,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code42)": {
-        "concepts": [
-          "TableSelection"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code431130)": {
-        "concepts": [
-          "SubstringExtraction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "DistinctClause",
@@ -92,6 +76,15 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "SubstringExtraction",
+          "TableSelection"
+        ],
+        "note": "code42,code431130",
         "created_at": null,
         "updated_at": null
       }

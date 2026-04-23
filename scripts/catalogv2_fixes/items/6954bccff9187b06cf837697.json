@@ -52,14 +52,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code4316)": {
-        "concepts": [
-          "RangeTest"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "AlterTableClause",
@@ -69,6 +61,14 @@
           "AlterTableStatement"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "RangeTest"
+        ],
+        "note": "code4316",
         "created_at": null,
         "updated_at": null
       }

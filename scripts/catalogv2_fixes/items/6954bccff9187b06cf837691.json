@@ -63,30 +63,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code23101000)": {
-        "concepts": [
-          "Rule"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code43)": {
-        "concepts": [
-          "TupleSelectionCondition"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code4615)": {
-        "concepts": [
-          "ExceptionOfTupleSetWithDuplicate"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "NotNullConstraint",
@@ -106,6 +82,16 @@
           "NotNullClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "TupleSelectionCondition",
+          "Rule",
+          "ExceptionOfTupleSetWithDuplicate"
+        ],
+        "note": "code43,code4615,code23101000",
         "created_at": null,
         "updated_at": null
       }

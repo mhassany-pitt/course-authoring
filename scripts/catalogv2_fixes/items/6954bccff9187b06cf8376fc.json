@@ -62,30 +62,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code23101001)": {
-        "concepts": [
-          "ReferentialAction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code411841)": {
-        "concepts": [
-          "CountingRows"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code4611)": {
-        "concepts": [
-          "UnionOfTwoTupleSetsWithDuplicate"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "MultipleTableSelection",
@@ -105,6 +81,16 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "UnionOfTwoTupleSetsWithDuplicate",
+          "CountingRows",
+          "ReferentialAction"
+        ],
+        "note": "code4611,code411841,code23101001",
         "created_at": null,
         "updated_at": null
       }

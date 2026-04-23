@@ -50,22 +50,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code2210)": {
-        "concepts": [
-          "TableCreation"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code4316)": {
-        "concepts": [
-          "RangeTest"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "AlterTableStatement",
@@ -74,6 +58,15 @@
           "AttributeName"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "RangeTest",
+          "TableCreation"
+        ],
+        "note": "code2210,code4316",
         "created_at": null,
         "updated_at": null
       }

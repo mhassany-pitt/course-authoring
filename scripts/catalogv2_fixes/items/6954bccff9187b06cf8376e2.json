@@ -58,14 +58,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code23101001)": {
-        "concepts": [
-          "ReferentialAction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "EqualComparison",
@@ -83,6 +75,14 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "ReferentialAction"
+        ],
+        "note": "code23101001",
         "created_at": null,
         "updated_at": null
       }

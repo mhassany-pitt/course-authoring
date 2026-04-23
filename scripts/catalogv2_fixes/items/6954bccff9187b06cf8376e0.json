@@ -52,14 +52,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code231010012)": {
-        "concepts": [
-          "SetDefaultReferentialAction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "SelectStatement",
@@ -71,6 +63,14 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "SetDefaultReferentialAction"
+        ],
+        "note": "code231010012",
         "created_at": null,
         "updated_at": null
       }

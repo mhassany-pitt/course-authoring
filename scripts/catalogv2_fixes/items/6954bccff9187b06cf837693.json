@@ -75,54 +75,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code22101)": {
-        "concepts": [
-          "NullValue"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code23101000)": {
-        "concepts": [
-          "Rule"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code23121)": {
-        "concepts": [
-          "NotNullConstraint"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code4118)": {
-        "concepts": [
-          "AggregateOperation"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code43)": {
-        "concepts": [
-          "TupleSelectionCondition"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code43112)": {
-        "concepts": [
-          "CaseChanging"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "SubQuery",
@@ -150,6 +102,19 @@
           "OnUpdateClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "TupleSelectionCondition",
+          "Rule",
+          "NotNullConstraint",
+          "CaseChanging",
+          "NullValue",
+          "AggregateOperation"
+        ],
+        "note": "code22101,code23101000,code43,code43112,code4118,code23121",
         "created_at": null,
         "updated_at": null
       }

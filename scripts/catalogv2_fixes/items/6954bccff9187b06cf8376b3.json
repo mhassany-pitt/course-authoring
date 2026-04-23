@@ -61,22 +61,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code23101001)": {
-        "concepts": [
-          "ReferentialAction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code431131)": {
-        "concepts": [
-          "LeftWhitespaceTrim"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "EqualComparison",
@@ -92,6 +76,15 @@
           "GreaterThanComparison"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "ReferentialAction",
+          "LeftWhitespaceTrim"
+        ],
+        "note": "code431131,code23101001",
         "created_at": null,
         "updated_at": null
       }

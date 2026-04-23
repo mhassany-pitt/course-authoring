@@ -62,30 +62,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code2310)": {
-        "concepts": [
-          "KeyConstraint"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code4118)": {
-        "concepts": [
-          "AggregateOperation"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code431130)": {
-        "concepts": [
-          "SubstringExtraction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "DeleteFromClause",
@@ -104,6 +80,16 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "SubstringExtraction",
+          "KeyConstraint",
+          "AggregateOperation"
+        ],
+        "note": "code4118,code2310,code431130",
         "created_at": null,
         "updated_at": null
       }

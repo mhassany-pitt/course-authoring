@@ -66,22 +66,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code431120)": {
-        "concepts": [
-          "ToUpperCase"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code431130)": {
-        "concepts": [
-          "SubstringExtraction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "DistinctClause",
@@ -105,6 +89,15 @@
           "WhereClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "SubstringExtraction",
+          "ToUpperCase"
+        ],
+        "note": "code431120,code431130",
         "created_at": null,
         "updated_at": null
       }

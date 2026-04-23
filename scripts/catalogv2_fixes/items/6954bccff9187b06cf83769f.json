@@ -49,20 +49,20 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code431131)": {
-        "concepts": [
-          "LeftWhitespaceTrim"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "SingleTableSelection",
           "SingleAttributeSelection"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "LeftWhitespaceTrim"
+        ],
+        "note": "code431131",
         "created_at": null,
         "updated_at": null
       }

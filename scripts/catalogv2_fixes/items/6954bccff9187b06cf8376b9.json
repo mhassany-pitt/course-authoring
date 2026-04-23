@@ -75,30 +75,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code23101000)": {
-        "concepts": [
-          "Rule"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code43)": {
-        "concepts": [
-          "TupleSelectionCondition"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code431130)": {
-        "concepts": [
-          "SubstringExtraction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "SubQuery",
@@ -127,6 +103,16 @@
           "BracketCharacter"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "TupleSelectionCondition",
+          "Rule",
+          "SubstringExtraction"
+        ],
+        "note": "code43,code23101000,code431130",
         "created_at": null,
         "updated_at": null
       }

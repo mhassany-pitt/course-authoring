@@ -54,14 +54,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code31)": {
-        "concepts": [
-          "Insertion"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "DateTimeType",
@@ -75,6 +67,14 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "Insertion"
+        ],
+        "note": "code31",
         "created_at": null,
         "updated_at": null
       }

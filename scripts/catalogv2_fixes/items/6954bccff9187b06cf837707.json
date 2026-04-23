@@ -64,30 +64,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code23100)": {
-        "concepts": [
-          "CandidateKey"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code23101001)": {
-        "concepts": [
-          "ReferentialAction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code4314)": {
-        "concepts": [
-          "ComparisonOperation"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "MultipleAttributeSelection",
@@ -109,6 +85,16 @@
           "CountFunction"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "ReferentialAction",
+          "ComparisonOperation",
+          "CandidateKey"
+        ],
+        "note": "code23101001,code4314,code23100",
         "created_at": null,
         "updated_at": null
       }

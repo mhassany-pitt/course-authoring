@@ -62,22 +62,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code23100)": {
-        "concepts": [
-          "CandidateKey"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code31)": {
-        "concepts": [
-          "Insertion"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "DateTimeType",
@@ -96,6 +80,15 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "Insertion",
+          "CandidateKey"
+        ],
+        "note": "code31,code23100",
         "created_at": null,
         "updated_at": null
       }

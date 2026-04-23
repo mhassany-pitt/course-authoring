@@ -64,38 +64,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code22120)": {
-        "concepts": [
-          "ColumnAddition"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code23101001)": {
-        "concepts": [
-          "ReferentialAction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code31)": {
-        "concepts": [
-          "Insertion"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code43150)": {
-        "concepts": [
-          "NegativeSetMembership"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "MultipleTableSelection",
@@ -114,6 +82,17 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "ReferentialAction",
+          "Insertion",
+          "ColumnAddition",
+          "NegativeSetMembership"
+        ],
+        "note": "code31,code23101001,code43150,code22120",
         "created_at": null,
         "updated_at": null
       }

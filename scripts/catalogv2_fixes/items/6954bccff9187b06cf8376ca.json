@@ -65,46 +65,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code2310)": {
-        "concepts": [
-          "KeyConstraint"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code23101001)": {
-        "concepts": [
-          "ReferentialAction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code431120)": {
-        "concepts": [
-          "ToUpperCase"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code431130)": {
-        "concepts": [
-          "SubstringExtraction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code44112)": {
-        "concepts": [
-          "SubQueryCheckingDuplicateTuples"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "DeleteFromClause",
@@ -125,6 +85,18 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "SubstringExtraction",
+          "ReferentialAction",
+          "SubQueryCheckingDuplicateTuples",
+          "ToUpperCase",
+          "KeyConstraint"
+        ],
+        "note": "code431120,code44112,code23101001,code2310,code431130",
         "created_at": null,
         "updated_at": null
       }

@@ -63,30 +63,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code23101001)": {
-        "concepts": [
-          "ReferentialAction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code32)": {
-        "concepts": [
-          "Deletion"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code44112)": {
-        "concepts": [
-          "SubQueryCheckingDuplicateTuples"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "MultipleAttributeSelection",
@@ -106,6 +82,16 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "Deletion",
+          "ReferentialAction",
+          "SubQueryCheckingDuplicateTuples"
+        ],
+        "note": "code32,code23101001,code44112",
         "created_at": null,
         "updated_at": null
       }

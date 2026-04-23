@@ -61,22 +61,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code23101001)": {
-        "concepts": [
-          "ReferentialAction"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code411841)": {
-        "concepts": [
-          "CountingRows"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "MultipleTableSelection",
@@ -96,6 +80,15 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "CountingRows",
+          "ReferentialAction"
+        ],
+        "note": "code411841,code23101001",
         "created_at": null,
         "updated_at": null
       }

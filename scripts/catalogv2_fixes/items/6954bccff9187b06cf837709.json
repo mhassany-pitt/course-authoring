@@ -61,30 +61,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code23101000)": {
-        "concepts": [
-          "Rule"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code42120)": {
-        "concepts": [
-          "EquiJoin"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code43)": {
-        "concepts": [
-          "TupleSelectionCondition"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "SubQuery",
@@ -100,6 +76,16 @@
           "NotNullClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "EquiJoin",
+          "TupleSelectionCondition",
+          "Rule"
+        ],
+        "note": "code43,code42120,code23101000",
         "created_at": null,
         "updated_at": null
       }

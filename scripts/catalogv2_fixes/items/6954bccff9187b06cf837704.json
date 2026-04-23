@@ -60,14 +60,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code4118)": {
-        "concepts": [
-          "AggregateOperation"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "Assertion",
@@ -84,6 +76,14 @@
           "CountDistinctFunction"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "AggregateOperation"
+        ],
+        "note": "code4118",
         "created_at": null,
         "updated_at": null
       }

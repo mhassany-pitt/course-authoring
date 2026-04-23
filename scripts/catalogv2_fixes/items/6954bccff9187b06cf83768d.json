@@ -63,22 +63,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code23101000)": {
-        "concepts": [
-          "Rule"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code42120)": {
-        "concepts": [
-          "EquiJoin"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "NotNullConstraint",
@@ -98,6 +82,15 @@
           "NotNullClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "EquiJoin",
+          "Rule"
+        ],
+        "note": "code42120,code23101000",
         "created_at": null,
         "updated_at": null
       }

@@ -52,14 +52,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code4611)": {
-        "concepts": [
-          "UnionOfTwoTupleSetsWithDuplicate"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "SelectStatement",
@@ -71,6 +63,14 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "UnionOfTwoTupleSetsWithDuplicate"
+        ],
+        "note": "code4611",
         "created_at": null,
         "updated_at": null
       }

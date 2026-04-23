@@ -51,14 +51,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code22120)": {
-        "concepts": [
-          "ColumnAddition"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "SelectStatement",
@@ -69,6 +61,14 @@
           "CountFunction"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "ColumnAddition"
+        ],
+        "note": "code22120",
         "created_at": null,
         "updated_at": null
       }

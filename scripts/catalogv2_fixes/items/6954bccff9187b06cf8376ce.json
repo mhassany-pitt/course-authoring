@@ -53,14 +53,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code411842)": {
-        "concepts": [
-          "NullValueIgnorance"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "CountFunction",
@@ -69,6 +61,14 @@
           "MultipleAttributeSelection"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "NullValueIgnorance"
+        ],
+        "note": "code411842",
         "created_at": null,
         "updated_at": null
       }

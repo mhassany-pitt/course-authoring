@@ -68,38 +68,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code22120)": {
-        "concepts": [
-          "ColumnAddition"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code31)": {
-        "concepts": [
-          "Insertion"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code3110)": {
-        "concepts": [
-          "TargetTableDeclaration"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code4118)": {
-        "concepts": [
-          "AggregateOperation"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "DotCharacter",
@@ -124,6 +92,17 @@
           "WhereClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "AggregateOperation",
+          "Insertion",
+          "ColumnAddition",
+          "TargetTableDeclaration"
+        ],
+        "note": "code3110,code31,code4118,code22120",
         "created_at": null,
         "updated_at": null
       }

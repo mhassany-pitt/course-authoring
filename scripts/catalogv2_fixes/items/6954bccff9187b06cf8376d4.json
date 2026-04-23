@@ -56,14 +56,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code43101)": {
-        "concepts": [
-          "NotLogicOperation"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "DateTimeType",
@@ -75,6 +67,14 @@
           "CountFunction"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "NotLogicOperation"
+        ],
+        "note": "code43101",
         "created_at": null,
         "updated_at": null
       }

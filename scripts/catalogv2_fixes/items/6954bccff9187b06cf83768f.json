@@ -58,22 +58,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code23101000)": {
-        "concepts": [
-          "Rule"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
-      "sql concept (code43)": {
-        "concepts": [
-          "TupleSelectionCondition"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "SubQuery",
@@ -89,6 +73,15 @@
           "CreateTableClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "TupleSelectionCondition",
+          "Rule"
+        ],
+        "note": "code43,code23101000",
         "created_at": null,
         "updated_at": null
       }

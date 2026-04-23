@@ -54,14 +54,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code2310)": {
-        "concepts": [
-          "KeyConstraint"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "DeleteFromClause",
@@ -75,6 +67,14 @@
           "WhereClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "KeyConstraint"
+        ],
+        "note": "code2310",
         "created_at": null,
         "updated_at": null
       }

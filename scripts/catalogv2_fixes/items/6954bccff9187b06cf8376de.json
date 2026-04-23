@@ -52,14 +52,6 @@
         "created_at": null,
         "updated_at": null
       },
-      "sql concept (code4)": {
-        "concepts": [
-          "QueryLanguage"
-        ],
-        "note": "",
-        "created_at": null,
-        "updated_at": null
-      },
       "sql_ontology": {
         "concepts": [
           "IntersectOperation",
@@ -71,6 +63,14 @@
           "SelectClause"
         ],
         "note": "",
+        "created_at": null,
+        "updated_at": null
+      },
+      "sql concept": {
+        "concepts": [
+          "QueryLanguage"
+        ],
+        "note": "code4",
         "created_at": null,
         "updated_at": null
       }
