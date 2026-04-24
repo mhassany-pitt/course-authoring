@@ -4,7 +4,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Bicycle",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Bicycle",
-    "description": "Java Example for demonstrating DEPRECATED_Bicycle",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Bicycle",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -33,7 +33,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/search_func",
     "platform_name": "AnnEx",
     "title": "search_func",
-    "description": "C++ Example for demonstrating search_func",
+    "description": "C++ BehaviorExample for demonstrating search_func",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -62,7 +62,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Point",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Point",
-    "description": "Java Example for demonstrating DEPRECATED_Point",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Point",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -102,7 +102,7 @@
     "keywords": [],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -120,13 +120,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_change_variable",
     "platform_name": "AnnEx",
     "title": "Change the Value of a Variable",
-    "description": "C++ Example for demonstrating Change the Value of a Variable",
+    "description": "C++ BehaviorExample for demonstrating Change the Value of a Variable",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -149,7 +149,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList3_3",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList3_3",
-    "description": "Java Example for demonstrating IS17_ArrayList3_3",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList3_3",
     "license": "MIT",
     "author": [
       "Andrzej Dubiel"
@@ -211,7 +211,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance3_6",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance3_6",
-    "description": "Java Example for demonstrating IS17_inheritance3_6",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance3_6",
     "license": "MIT",
     "author": [
       "Larry Werner"
@@ -240,7 +240,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/TicTacToe",
     "platform_name": "AnnEx",
     "title": "Tic-Tac-Toe",
-    "description": "Java Example for demonstrating Tic-Tac-Toe",
+    "description": "Java BehaviorExample for demonstrating Tic-Tac-Toe",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -272,7 +272,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface1_3",
     "platform_name": "AnnEx",
     "title": "IS17_interface1_3",
-    "description": "Java Example for demonstrating IS17_interface1_3",
+    "description": "Java BehaviorExample for demonstrating IS17_interface1_3",
     "license": "MIT",
     "author": [
       "Stephen Plumby"
@@ -314,7 +314,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -332,7 +332,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance3_3",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance3_3",
-    "description": "Java Example for demonstrating IS17_inheritance3_3",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance3_3",
     "license": "MIT",
     "author": [
       "Andrzej Dubiel"
@@ -361,7 +361,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pointerarr2",
     "platform_name": "AnnEx",
     "title": "PointerArrays2",
-    "description": "C++ Example for demonstrating PointerArrays2",
+    "description": "C++ BehaviorExample for demonstrating PointerArrays2",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -390,7 +390,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface1_5",
     "platform_name": "AnnEx",
     "title": "IS17_interface1_5",
-    "description": "Java Example for demonstrating IS17_interface1_5",
+    "description": "Java BehaviorExample for demonstrating IS17_interface1_5",
     "license": "MIT",
     "author": [
       "Darby Hoffman"
@@ -419,7 +419,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/CH3_printf3",
     "platform_name": "AnnEx",
     "title": "CH3_printf3",
-    "description": "C++ Example for demonstrating CH3_printf3",
+    "description": "C++ BehaviorExample for demonstrating CH3_printf3",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -448,7 +448,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/io1_v2",
     "platform_name": "AnnEx",
     "title": "Standard Input",
-    "description": "Java Example for demonstrating Standard Input",
+    "description": "Java BehaviorExample for demonstrating Standard Input",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -477,7 +477,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/check_file",
     "platform_name": "AnnEx",
     "title": "check_file",
-    "description": "C++ Example for demonstrating check_file",
+    "description": "C++ BehaviorExample for demonstrating check_file",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -506,7 +506,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/decisions1",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_if-else",
-    "description": "Java Example for demonstrating DEPRECATED_if-else",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_if-else",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -566,7 +566,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/charref",
     "platform_name": "AnnEx",
     "title": "CharReferencing",
-    "description": "C++ Example for demonstrating CharReferencing",
+    "description": "C++ BehaviorExample for demonstrating CharReferencing",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -595,7 +595,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-19_ShowBackwards",
     "platform_name": "AnnEx",
     "title": "3-19_ShowBackwards",
-    "description": "Java Example for demonstrating 3-19_ShowBackwards",
+    "description": "Java BehaviorExample for demonstrating 3-19_ShowBackwards",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -626,7 +626,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/callbyvalue",
     "platform_name": "AnnEx",
     "title": "CallbyValue",
-    "description": "C++ Example for demonstrating CallbyValue",
+    "description": "C++ BehaviorExample for demonstrating CallbyValue",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -655,7 +655,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/draw_arcs",
     "platform_name": "AnnEx",
     "title": "ISD::DrawArcs.java",
-    "description": "Java Example for demonstrating ISD::DrawArcs.java",
+    "description": "Java BehaviorExample for demonstrating ISD::DrawArcs.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -684,7 +684,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/IF2",
     "platform_name": "AnnEx",
     "title": "IF2",
-    "description": "C++ Example for demonstrating IF2",
+    "description": "C++ BehaviorExample for demonstrating IF2",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -713,7 +713,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-c/IfElse_Structure",
     "platform_name": "AnnEx",
     "title": "IfElse_Structure",
-    "description": "C Example for demonstrating IfElse_Structure",
+    "description": "C BehaviorExample for demonstrating IfElse_Structure",
     "license": "MIT",
     "author": [
       "Peter Brusilovsky"
@@ -742,7 +742,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/4-11_Animal",
     "platform_name": "AnnEx",
     "title": "4-11_Animal",
-    "description": "Java Example for demonstrating 4-11_Animal",
+    "description": "Java BehaviorExample for demonstrating 4-11_Animal",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -774,7 +774,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Decision_If",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Decision If",
-    "description": "Java Example for demonstrating DEPRECATED_Decision If",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Decision If",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -834,7 +834,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/TypeCasting",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Type Casting",
-    "description": "Java Example for demonstrating DEPRECATED_Type Casting",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Type Casting",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -926,7 +926,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/write_info_rand_file",
     "platform_name": "AnnEx",
     "title": "write_info_rand_file",
-    "description": "C++ Example for demonstrating write_info_rand_file",
+    "description": "C++ BehaviorExample for demonstrating write_info_rand_file",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -968,7 +968,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -986,13 +986,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_all_variables",
     "platform_name": "AnnEx",
     "title": "All Variables Together",
-    "description": "C++ Example for demonstrating All Variables Together",
+    "description": "C++ BehaviorExample for demonstrating All Variables Together",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -1015,13 +1015,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_var_size",
     "platform_name": "AnnEx",
     "title": "Size of Variables",
-    "description": "C++ Example for demonstrating Size of Variables",
+    "description": "C++ BehaviorExample for demonstrating Size of Variables",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -1075,7 +1075,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/precedence_expr",
     "platform_name": "AnnEx",
     "title": "precedence_expression",
-    "description": "C++ Example for demonstrating precedence_expression",
+    "description": "C++ BehaviorExample for demonstrating precedence_expression",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -1104,7 +1104,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/structs1",
     "platform_name": "AnnEx",
     "title": "structs1",
-    "description": "C++ Example for demonstrating structs1",
+    "description": "C++ BehaviorExample for demonstrating structs1",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -1146,7 +1146,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -1164,7 +1164,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface3_5",
     "platform_name": "AnnEx",
     "title": "IS17_interface3_5",
-    "description": "Java Example for demonstrating IS17_interface3_5",
+    "description": "Java BehaviorExample for demonstrating IS17_interface3_5",
     "license": "MIT",
     "author": [
       "Andrew Mowrey"
@@ -1193,7 +1193,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/WhileStatement",
     "platform_name": "AnnEx",
     "title": "WhileStatement",
-    "description": "C++ Example for demonstrating WhileStatement",
+    "description": "C++ BehaviorExample for demonstrating WhileStatement",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -1222,7 +1222,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/StringsConcatenation",
     "platform_name": "AnnEx",
     "title": "Strings (Concatenation)",
-    "description": "Java Example for demonstrating Strings (Concatenation)",
+    "description": "Java BehaviorExample for demonstrating Strings (Concatenation)",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -1251,7 +1251,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface2",
     "platform_name": "AnnEx",
     "title": "IS17_interface2",
-    "description": "Java Example for demonstrating IS17_interface2",
+    "description": "Java BehaviorExample for demonstrating IS17_interface2",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -1293,7 +1293,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -1311,7 +1311,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/do_while",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_dowhile",
-    "description": "Java Example for demonstrating DEPRECATED_dowhile",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_dowhile",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -1340,7 +1340,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/call_by_reference",
     "platform_name": "AnnEx",
     "title": "Call By Reference",
-    "description": "C++ Example for demonstrating Call By Reference",
+    "description": "C++ BehaviorExample for demonstrating Call By Reference",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -1369,7 +1369,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface3_2",
     "platform_name": "AnnEx",
     "title": "IS17_interface3_2",
-    "description": "Java Example for demonstrating IS17_interface3_2",
+    "description": "Java BehaviorExample for demonstrating IS17_interface3_2",
     "license": "MIT",
     "author": [
       "Annette Rico"
@@ -1398,7 +1398,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance2_3",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance2_3",
-    "description": "Java Example for demonstrating IS17_inheritance2_3",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance2_3",
     "license": "MIT",
     "author": [
       "Eric Napolitan"
@@ -1427,7 +1427,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/CashRegisterTester",
     "platform_name": "AnnEx",
     "title": "Cash Register Tester",
-    "description": "Java Example for demonstrating Cash Register Tester",
+    "description": "Java BehaviorExample for demonstrating Cash Register Tester",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -1469,7 +1469,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -1519,7 +1519,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance2_5",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance2_5",
-    "description": "Java Example for demonstrating IS17_inheritance2_5",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance2_5",
     "license": "MIT",
     "author": [
       "David Nawn"
@@ -1548,7 +1548,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList2_6",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList2_6",
-    "description": "Java Example for demonstrating IS17_ArrayList2_6",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList2_6",
     "license": "MIT",
     "author": [
       "Megan Patton"
@@ -1577,7 +1577,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/defined_func1",
     "platform_name": "AnnEx",
     "title": "defined_func1",
-    "description": "C++ Example for demonstrating defined_func1",
+    "description": "C++ BehaviorExample for demonstrating defined_func1",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -1606,7 +1606,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/CH3_printf",
     "platform_name": "AnnEx",
     "title": "CH3_printf1",
-    "description": "C++ Example for demonstrating CH3_printf1",
+    "description": "C++ BehaviorExample for demonstrating CH3_printf1",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -1635,7 +1635,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/border_layout",
     "platform_name": "AnnEx",
     "title": "ISD::BorderLayoutDemo.java",
-    "description": "Java Example for demonstrating ISD::BorderLayoutDemo.java",
+    "description": "Java BehaviorExample for demonstrating ISD::BorderLayoutDemo.java",
     "license": "MIT",
     "author": [
       "Dobosh Joshua"
@@ -1664,7 +1664,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/strcmp_strncmp",
     "platform_name": "AnnEx",
     "title": "strcmp_strncmp",
-    "description": "C++ Example for demonstrating strcmp_strncmp",
+    "description": "C++ BehaviorExample for demonstrating strcmp_strncmp",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -1726,7 +1726,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/checkbox_test",
     "platform_name": "AnnEx",
     "title": "ISD::CheckBoxTest.java",
-    "description": "Java Example for demonstrating ISD::CheckBoxTest.java",
+    "description": "Java BehaviorExample for demonstrating ISD::CheckBoxTest.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -1755,7 +1755,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/using_array",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Using an Array1",
-    "description": "Java Example for demonstrating DEPRECATED_Using an Array1",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Using an Array1",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -1784,7 +1784,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/2-21_StringDemos",
     "platform_name": "AnnEx",
     "title": "2-21_StringDemos",
-    "description": "Java Example for demonstrating 2-21_StringDemos",
+    "description": "Java BehaviorExample for demonstrating 2-21_StringDemos",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -1815,7 +1815,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/wrapper_class",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Wrapper Classes",
-    "description": "Java Example for demonstrating DEPRECATED_Wrapper Classes",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Wrapper Classes",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -1844,7 +1844,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/button_test",
     "platform_name": "AnnEx",
     "title": "ISD::ButtonTest.java",
-    "description": "Java Example for demonstrating ISD::ButtonTest.java",
+    "description": "Java BehaviorExample for demonstrating ISD::ButtonTest.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -1873,7 +1873,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/do_switch_function",
     "platform_name": "AnnEx",
     "title": "Do Switch Function",
-    "description": "C++ Example for demonstrating Do Switch Function",
+    "description": "C++ BehaviorExample for demonstrating Do Switch Function",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -1915,7 +1915,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -1933,7 +1933,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/bubblesortpf",
     "platform_name": "AnnEx",
     "title": "BubbleSortPF",
-    "description": "C++ Example for demonstrating BubbleSortPF",
+    "description": "C++ BehaviorExample for demonstrating BubbleSortPF",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -1975,7 +1975,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -2069,7 +2069,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -2087,7 +2087,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/create_seq_file",
     "platform_name": "AnnEx",
     "title": "create_seq_file",
-    "description": "C++ Example for demonstrating create_seq_file",
+    "description": "C++ BehaviorExample for demonstrating create_seq_file",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -2129,7 +2129,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -2191,7 +2191,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -2209,7 +2209,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/fonts",
     "platform_name": "AnnEx",
     "title": "ISD::Fonts.java",
-    "description": "Java Example for demonstrating ISD::Fonts.java",
+    "description": "Java BehaviorExample for demonstrating ISD::Fonts.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -2251,7 +2251,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -2269,7 +2269,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/variable_print_println_annoexp",
     "platform_name": "AnnEx",
     "title": "VariablePrintPrintln",
-    "description": "Java Example for demonstrating VariablePrintPrintln",
+    "description": "Java BehaviorExample for demonstrating VariablePrintPrintln",
     "license": "MIT",
     "author": [
       "Yun Huang"
@@ -2329,7 +2329,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/imple_multi",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_MultiInterfaces",
-    "description": "Java Example for demonstrating DEPRECATED_MultiInterfaces",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_MultiInterfaces",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -2358,7 +2358,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/MethodDemo",
     "platform_name": "AnnEx",
     "title": "Method Demo",
-    "description": "Java Example for demonstrating Method Demo",
+    "description": "Java BehaviorExample for demonstrating Method Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -2390,7 +2390,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/override",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Override",
-    "description": "Java Example for demonstrating DEPRECATED_Override",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Override",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -2432,7 +2432,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -2450,7 +2450,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/show_colors",
     "platform_name": "AnnEx",
     "title": "ISD::ShowColors.java",
-    "description": "Java Example for demonstrating ISD::ShowColors.java",
+    "description": "Java BehaviorExample for demonstrating ISD::ShowColors.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -2479,7 +2479,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/static_arrays",
     "platform_name": "AnnEx",
     "title": "Static Arrays",
-    "description": "C++ Example for demonstrating Static Arrays",
+    "description": "C++ BehaviorExample for demonstrating Static Arrays",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -2508,7 +2508,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/variable_print_annoexp",
     "platform_name": "AnnEx",
     "title": "VariablePrint",
-    "description": "Java Example for demonstrating VariablePrint",
+    "description": "Java BehaviorExample for demonstrating VariablePrint",
     "license": "MIT",
     "author": [
       "Yun Huang"
@@ -2581,7 +2581,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -2612,7 +2612,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -2630,7 +2630,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/LeftJoin25_1",
     "platform_name": "AnnEx",
     "title": "Left Join 1",
-    "description": "SQL Example for demonstrating Left Join 1",
+    "description": "Sql BehaviorExample for demonstrating Left Join 1",
     "license": "MIT",
     "author": [
       "Rully Hendrawan"
@@ -2641,7 +2641,7 @@
     "keywords": [],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -2672,7 +2672,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -2690,7 +2690,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pointersseq",
     "platform_name": "AnnEx",
     "title": "CreateFile",
-    "description": "C++ Example for demonstrating CreateFile",
+    "description": "C++ BehaviorExample for demonstrating CreateFile",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -2732,7 +2732,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -2750,7 +2750,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pointer_seq_file2",
     "platform_name": "AnnEx",
     "title": "pointer_seq_file2",
-    "description": "C++ Example for demonstrating pointer_seq_file2",
+    "description": "C++ BehaviorExample for demonstrating pointer_seq_file2",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -2792,7 +2792,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -2854,7 +2854,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -2903,7 +2903,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/arraylist2",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_ArrayList Demo",
-    "description": "Java Example for demonstrating DEPRECATED_ArrayList Demo",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_ArrayList Demo",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -2932,7 +2932,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/label_test",
     "platform_name": "AnnEx",
     "title": "ISD::LabelTest.java",
-    "description": "Java Example for demonstrating ISD::LabelTest.java",
+    "description": "Java BehaviorExample for demonstrating ISD::LabelTest.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -2961,7 +2961,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/2d_arrrays",
     "platform_name": "AnnEx",
     "title": "Using 2D Arrays",
-    "description": "C++ Example for demonstrating Using 2D Arrays",
+    "description": "C++ BehaviorExample for demonstrating Using 2D Arrays",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -2990,7 +2990,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/textfield_test",
     "platform_name": "AnnEx",
     "title": "ISD::TextFieldTest.java",
-    "description": "Java Example for demonstrating ISD::TextFieldTest.java",
+    "description": "Java BehaviorExample for demonstrating ISD::TextFieldTest.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -3019,7 +3019,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/4-02_TicTacToe",
     "platform_name": "AnnEx",
     "title": "4-02_TicTacToe",
-    "description": "Java Example for demonstrating 4-02_TicTacToe",
+    "description": "Java BehaviorExample for demonstrating 4-02_TicTacToe",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -3050,7 +3050,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/use_array",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Using an Array2",
-    "description": "Java Example for demonstrating DEPRECATED_Using an Array2",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Using an Array2",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -3079,7 +3079,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/flow_layout",
     "platform_name": "AnnEx",
     "title": "ISD::FlowLayoutDemo.java",
-    "description": "Java Example for demonstrating ISD::FlowLayoutDemo.java",
+    "description": "Java BehaviorExample for demonstrating ISD::FlowLayoutDemo.java",
     "license": "MIT",
     "author": [
       "Detar Derek"
@@ -3108,7 +3108,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/find_string",
     "platform_name": "AnnEx",
     "title": "find_string",
-    "description": "C++ Example for demonstrating find_string",
+    "description": "C++ BehaviorExample for demonstrating find_string",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -3150,7 +3150,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -3168,7 +3168,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance2_6",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance2_6",
-    "description": "Java Example for demonstrating IS17_inheritance2_6",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance2_6",
     "license": "MIT",
     "author": [
       "Megan Patton"
@@ -3197,7 +3197,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/EnhancedForLoopDemo",
     "platform_name": "AnnEx",
     "title": "Enhanced For Loop Demo",
-    "description": "Java Example for demonstrating Enhanced For Loop Demo",
+    "description": "Java BehaviorExample for demonstrating Enhanced For Loop Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -3229,7 +3229,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance2_4",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance2_4",
-    "description": "Java Example for demonstrating IS17_inheritance2_4",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance2_4",
     "license": "MIT",
     "author": [
       "Andres Pacheco"
@@ -3258,7 +3258,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/thisReference",
     "platform_name": "AnnEx",
     "title": "This Reference",
-    "description": "Java Example for demonstrating This Reference",
+    "description": "Java BehaviorExample for demonstrating This Reference",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -3290,7 +3290,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface3_3",
     "platform_name": "AnnEx",
     "title": "IS17_interface3_3",
-    "description": "Java Example for demonstrating IS17_interface3_3",
+    "description": "Java BehaviorExample for demonstrating IS17_interface3_3",
     "license": "MIT",
     "author": [
       "Andrzej Dubiel"
@@ -3364,7 +3364,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -3382,7 +3382,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/tokenize1",
     "platform_name": "AnnEx",
     "title": "tokenize1",
-    "description": "C++ Example for demonstrating tokenize1",
+    "description": "C++ BehaviorExample for demonstrating tokenize1",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -3411,7 +3411,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/while",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_While",
-    "description": "Java Example for demonstrating DEPRECATED_While",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_While",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -3440,7 +3440,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/If",
     "platform_name": "AnnEx",
     "title": "If",
-    "description": "C++ Example for demonstrating If",
+    "description": "C++ BehaviorExample for demonstrating If",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -3482,7 +3482,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -3500,7 +3500,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_override1",
     "platform_name": "AnnEx",
     "title": "IS17_override1",
-    "description": "Java Example for demonstrating IS17_override1",
+    "description": "Java BehaviorExample for demonstrating IS17_override1",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -3529,7 +3529,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface3_6",
     "platform_name": "AnnEx",
     "title": "IS17_interface3_6",
-    "description": "Java Example for demonstrating IS17_interface3_6",
+    "description": "Java BehaviorExample for demonstrating IS17_interface3_6",
     "license": "MIT",
     "author": [
       "Larry Werner"
@@ -3558,7 +3558,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/encryption",
     "platform_name": "AnnEx",
     "title": "Encryption Program",
-    "description": "C++ Example for demonstrating Encryption Program",
+    "description": "C++ BehaviorExample for demonstrating Encryption Program",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -3587,13 +3587,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_boolean_variables",
     "platform_name": "AnnEx",
     "title": "Boolean Variables",
-    "description": "C++ Example for demonstrating Boolean Variables",
+    "description": "C++ BehaviorExample for demonstrating Boolean Variables",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -3660,7 +3660,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -3678,7 +3678,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pass_file",
     "platform_name": "AnnEx",
     "title": "pass_file",
-    "description": "C++ Example for demonstrating pass_file",
+    "description": "C++ BehaviorExample for demonstrating pass_file",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -3707,7 +3707,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/gets_puts",
     "platform_name": "AnnEx",
     "title": "gets_puts",
-    "description": "C++ Example for demonstrating gets_puts",
+    "description": "C++ BehaviorExample for demonstrating gets_puts",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -3736,13 +3736,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_vars_operations",
     "platform_name": "AnnEx",
     "title": "Operations with Variables",
-    "description": "C++ Example for demonstrating Operations with Variables",
+    "description": "C++ BehaviorExample for demonstrating Operations with Variables",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -3778,7 +3778,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -3809,7 +3809,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -3827,7 +3827,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/PrintTester",
     "platform_name": "AnnEx",
     "title": "Print Tester",
-    "description": "Java Example for demonstrating Print Tester",
+    "description": "Java BehaviorExample for demonstrating Print Tester",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -3888,7 +3888,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/OperatorExample",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Operator",
-    "description": "Java Example for demonstrating DEPRECATED_Operator",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Operator",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -3930,7 +3930,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -3948,7 +3948,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-c/testprivate",
     "platform_name": "AnnEx",
     "title": "private",
-    "description": "C Example for demonstrating private",
+    "description": "C BehaviorExample for demonstrating private",
     "license": "MIT",
     "author": [
       "Peter Brusilovsky"
@@ -3977,7 +3977,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/nested_loops",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Nested Loops",
-    "description": "Java Example for demonstrating DEPRECATED_Nested Loops",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Nested Loops",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -4006,7 +4006,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-19_PizzaPrices",
     "platform_name": "AnnEx",
     "title": "3-19_PizzaPrices",
-    "description": "Java Example for demonstrating 3-19_PizzaPrices",
+    "description": "Java BehaviorExample for demonstrating 3-19_PizzaPrices",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -4037,7 +4037,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/char_func1",
     "platform_name": "AnnEx",
     "title": "character_functions",
-    "description": "C++ Example for demonstrating character_functions",
+    "description": "C++ BehaviorExample for demonstrating character_functions",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -4066,7 +4066,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/2-19_PrimeChecker",
     "platform_name": "AnnEx",
     "title": "2-19_PrimeChecker",
-    "description": "Java Example for demonstrating 2-19_PrimeChecker",
+    "description": "Java BehaviorExample for demonstrating 2-19_PrimeChecker",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -4097,7 +4097,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/draw_polygons",
     "platform_name": "AnnEx",
     "title": "ISD::DrawPolygons.java",
-    "description": "Java Example for demonstrating ISD::DrawPolygons.java",
+    "description": "Java BehaviorExample for demonstrating ISD::DrawPolygons.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -4126,7 +4126,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/fgetc_fputc",
     "platform_name": "AnnEx",
     "title": "fgetc_fputc",
-    "description": "C++ Example for demonstrating fgetc_fputc",
+    "description": "C++ BehaviorExample for demonstrating fgetc_fputc",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -4155,7 +4155,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/increment",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_increment",
-    "description": "Java Example for demonstrating DEPRECATED_increment",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_increment",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -4184,7 +4184,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/strcat_strncat",
     "platform_name": "AnnEx",
     "title": "strcat_strncat",
-    "description": "C++ Example for demonstrating strcat_strncat",
+    "description": "C++ BehaviorExample for demonstrating strcat_strncat",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -4213,7 +4213,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/JavaTutorial_4_1_8",
     "platform_name": "AnnEx",
     "title": "JavaTutorial_4_1_8",
-    "description": "Java Example for demonstrating JavaTutorial_4_1_8",
+    "description": "Java BehaviorExample for demonstrating JavaTutorial_4_1_8",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -4242,7 +4242,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance3_4",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance3_4",
-    "description": "Java Example for demonstrating IS17_inheritance3_4",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance3_4",
     "license": "MIT",
     "author": [
       "Aslam Mogri"
@@ -4303,7 +4303,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface1_4",
     "platform_name": "AnnEx",
     "title": "IS17_interface1_4",
-    "description": "Java Example for demonstrating IS17_interface1_4",
+    "description": "Java BehaviorExample for demonstrating IS17_interface1_4",
     "license": "MIT",
     "author": [
       "Eric Riemer"
@@ -4332,7 +4332,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Bank",
     "platform_name": "AnnEx",
     "title": "Bank",
-    "description": "Java Example for demonstrating Bank",
+    "description": "Java BehaviorExample for demonstrating Bank",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -4363,7 +4363,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance3_7",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance3_7",
-    "description": "Java Example for demonstrating IS17_inheritance3_7",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance3_7",
     "license": "MIT",
     "author": [
       "Kieth Yackovich"
@@ -4392,7 +4392,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface1_2",
     "platform_name": "AnnEx",
     "title": "IS17_interface1_2",
-    "description": "Java Example for demonstrating IS17_interface1_2",
+    "description": "Java BehaviorExample for demonstrating IS17_interface1_2",
     "license": "MIT",
     "author": [
       "Patric Campbell"
@@ -4432,7 +4432,7 @@
     "keywords": [],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -4450,7 +4450,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList3_2",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList3_2",
-    "description": "Java Example for demonstrating IS17_ArrayList3_2",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList3_2",
     "license": "MIT",
     "author": [
       "Annette Rico"
@@ -4525,7 +4525,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -4543,13 +4543,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_using_variables",
     "platform_name": "AnnEx",
     "title": "Using Variables",
-    "description": "C++ Example for demonstrating Using Variables",
+    "description": "C++ BehaviorExample for demonstrating Using Variables",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -4603,7 +4603,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Rectangle",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Rectangle",
-    "description": "Java Example for demonstrating DEPRECATED_Rectangle",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Rectangle",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -4632,7 +4632,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/switchdemo2",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_SwitchDemo2",
-    "description": "Java Example for demonstrating DEPRECATED_SwitchDemo2",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_SwitchDemo2",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -4661,7 +4661,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/ForLoop",
     "platform_name": "AnnEx",
     "title": "ForLoop",
-    "description": "C++ Example for demonstrating ForLoop",
+    "description": "C++ BehaviorExample for demonstrating ForLoop",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -4703,7 +4703,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -4721,7 +4721,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/logical_operators",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_logical operators",
-    "description": "Java Example for demonstrating DEPRECATED_logical operators",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_logical operators",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -4781,7 +4781,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/defined_function2",
     "platform_name": "AnnEx",
     "title": "Defined Function2",
-    "description": "C++ Example for demonstrating Defined Function2",
+    "description": "C++ BehaviorExample for demonstrating Defined Function2",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -4843,7 +4843,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface3_4",
     "platform_name": "AnnEx",
     "title": "IS17_interface3_4",
-    "description": "Java Example for demonstrating IS17_interface3_4",
+    "description": "Java BehaviorExample for demonstrating IS17_interface3_4",
     "license": "MIT",
     "author": [
       "Aslam Mogri"
@@ -4872,7 +4872,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance2_1",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance2_1",
-    "description": "Java Example for demonstrating IS17_inheritance2_1",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance2_1",
     "license": "MIT",
     "author": [
       "Ryan Johnston"
@@ -4912,7 +4912,7 @@
     "keywords": [],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -4930,7 +4930,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/CounterDemo",
     "platform_name": "AnnEx",
     "title": "Counter Demo",
-    "description": "Java Example for demonstrating Counter Demo",
+    "description": "Java BehaviorExample for demonstrating Counter Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -4962,7 +4962,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance1_6",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance1_6",
-    "description": "Java Example for demonstrating IS17_inheritance1_6",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance1_6",
     "license": "MIT",
     "author": [
       "Chris Jackson"
@@ -4991,7 +4991,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/word_count",
     "platform_name": "AnnEx",
     "title": "word_count",
-    "description": "C++ Example for demonstrating word_count",
+    "description": "C++ BehaviorExample for demonstrating word_count",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -5020,7 +5020,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList3_5",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList3_5",
-    "description": "Java Example for demonstrating IS17_ArrayList3_5",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList3_5",
     "license": "MIT",
     "author": [
       "Andrew Mowrey"
@@ -5049,7 +5049,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/input_print",
     "platform_name": "AnnEx",
     "title": "input_print",
-    "description": "C++ Example for demonstrating input_print",
+    "description": "C++ BehaviorExample for demonstrating input_print",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -5078,7 +5078,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/panel_demo",
     "platform_name": "AnnEx",
     "title": "ISD::PanelDemo.java",
-    "description": "Java Example for demonstrating ISD::PanelDemo.java",
+    "description": "Java BehaviorExample for demonstrating ISD::PanelDemo.java",
     "license": "MIT",
     "author": [
       "Kerns Troy"
@@ -5107,7 +5107,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/combobox_test",
     "platform_name": "AnnEx",
     "title": "ISD::ComboBoxTest.java",
-    "description": "Java Example for demonstrating ISD::ComboBoxTest.java",
+    "description": "Java BehaviorExample for demonstrating ISD::ComboBoxTest.java",
     "license": "MIT",
     "author": [
       "Natalya Goreva"
@@ -5168,7 +5168,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/2-19_CompoundInterest",
     "platform_name": "AnnEx",
     "title": "2-19_CompoundInterest",
-    "description": "Java Example for demonstrating 2-19_CompoundInterest",
+    "description": "Java BehaviorExample for demonstrating 2-19_CompoundInterest",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -5199,7 +5199,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/use_2darray",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Use 2D Array",
-    "description": "Java Example for demonstrating DEPRECATED_Use 2D Array",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Use 2D Array",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -5228,7 +5228,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/conpointer",
     "platform_name": "AnnEx",
     "title": "ConstPointer",
-    "description": "C++ Example for demonstrating ConstPointer",
+    "description": "C++ BehaviorExample for demonstrating ConstPointer",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -5270,7 +5270,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -5301,7 +5301,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -5363,7 +5363,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -5394,7 +5394,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -5444,7 +5444,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pointer_seq_file",
     "platform_name": "AnnEx",
     "title": "pointer_seq_file",
-    "description": "C++ Example for demonstrating pointer_seq_file",
+    "description": "C++ BehaviorExample for demonstrating pointer_seq_file",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -5486,7 +5486,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -5504,7 +5504,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/casting_num",
     "platform_name": "AnnEx",
     "title": "casting_num",
-    "description": "C++ Example for demonstrating casting_num",
+    "description": "C++ BehaviorExample for demonstrating casting_num",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -5593,7 +5593,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/addition_applet",
     "platform_name": "AnnEx",
     "title": "ISD:: AdditionApplet.java",
-    "description": "Java Example for demonstrating ISD:: AdditionApplet.java",
+    "description": "Java BehaviorExample for demonstrating ISD:: AdditionApplet.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -5651,7 +5651,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList2",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList2",
-    "description": "Java Example for demonstrating IS17_ArrayList2",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList2",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -5680,7 +5680,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/inheritance1",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Inheritance",
-    "description": "Java Example for demonstrating DEPRECATED_Inheritance",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Inheritance",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -5738,7 +5738,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/stringEquals",
     "platform_name": "AnnEx",
     "title": "String Equals",
-    "description": "Java Example for demonstrating String Equals",
+    "description": "Java BehaviorExample for demonstrating String Equals",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -5771,7 +5771,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList1_6",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList1_6",
-    "description": "Java Example for demonstrating IS17_ArrayList1_6",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList1_6",
     "license": "MIT",
     "author": [
       "Chris Jackson"
@@ -5800,7 +5800,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/SwitchStatement2",
     "platform_name": "AnnEx",
     "title": "SwitchStatement2",
-    "description": "C++ Example for demonstrating SwitchStatement2",
+    "description": "C++ BehaviorExample for demonstrating SwitchStatement2",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -5842,7 +5842,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -5860,7 +5860,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/HelloWorld2",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_HelloWorld",
-    "description": "Java Example for demonstrating DEPRECATED_HelloWorld",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_HelloWorld",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -5889,7 +5889,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/upper_lower_case",
     "platform_name": "AnnEx",
     "title": "upper_lower_case",
-    "description": "C++ Example for demonstrating upper_lower_case",
+    "description": "C++ BehaviorExample for demonstrating upper_lower_case",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -5918,13 +5918,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_n",
     "platform_name": "AnnEx",
     "title": "Using End of Line Statement",
-    "description": "C++ Example for demonstrating Using End of Line Statement",
+    "description": "C++ BehaviorExample for demonstrating Using End of Line Statement",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -5947,7 +5947,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList2_1",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList2_1",
-    "description": "Java Example for demonstrating IS17_ArrayList2_1",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList2_1",
     "license": "MIT",
     "author": [
       "Ryan Johnston"
@@ -6008,7 +6008,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList3_1",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList3_1",
-    "description": "Java Example for demonstrating IS17_ArrayList3_1",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList3_1",
     "license": "MIT",
     "author": [
       "Alex Simeone"
@@ -6050,7 +6050,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -6068,7 +6068,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Measure",
     "platform_name": "AnnEx",
     "title": "Measure ",
-    "description": "Java Example for demonstrating Measure ",
+    "description": "Java BehaviorExample for demonstrating Measure ",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -6112,7 +6112,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -6130,7 +6130,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface2_2",
     "platform_name": "AnnEx",
     "title": "IS17_interface2_2",
-    "description": "Java Example for demonstrating IS17_interface2_2",
+    "description": "Java BehaviorExample for demonstrating IS17_interface2_2",
     "license": "MIT",
     "author": [
       "Michael Logoyda"
@@ -6159,7 +6159,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface1_7",
     "platform_name": "AnnEx",
     "title": "IS17_interface1_7",
-    "description": "Java Example for demonstrating IS17_interface1_7",
+    "description": "Java BehaviorExample for demonstrating IS17_interface1_7",
     "license": "MIT",
     "author": [
       "John Moan"
@@ -6188,7 +6188,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/arraypointers",
     "platform_name": "AnnEx",
     "title": "ArrayPointers",
-    "description": "C++ Example for demonstrating ArrayPointers",
+    "description": "C++ BehaviorExample for demonstrating ArrayPointers",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -6217,7 +6217,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/get_request_example",
     "platform_name": "AnnEx",
     "title": "ISD:: GetRequestExample.java",
-    "description": "Java Example for demonstrating ISD:: GetRequestExample.java",
+    "description": "Java BehaviorExample for demonstrating ISD:: GetRequestExample.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -6246,7 +6246,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/import_pkg_v2",
     "platform_name": "AnnEx",
     "title": "Importing Package",
-    "description": "Java Example for demonstrating Importing Package",
+    "description": "Java BehaviorExample for demonstrating Importing Package",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -6275,7 +6275,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/static_method_v2",
     "platform_name": "AnnEx",
     "title": "Static Method",
-    "description": "Java Example for demonstrating Static Method",
+    "description": "Java BehaviorExample for demonstrating Static Method",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -6335,7 +6335,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/variables1",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_variable declaration",
-    "description": "Java Example for demonstrating DEPRECATED_variable declaration",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_variable declaration",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -6363,8 +6363,8 @@
     "catalog_type": "SLCItem",
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/getchar",
     "platform_name": "AnnEx",
-    "title": "getchar",
-    "description": "C++ Example for demonstrating getchar",
+    "title": "getchar()",
+    "description": "C++ BehaviorExample for demonstrating getchar()",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -6393,7 +6393,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/while_memphis",
     "platform_name": "AnnEx",
     "title": "While (Memphis)",
-    "description": "Java Example for demonstrating While (Memphis)",
+    "description": "Java BehaviorExample for demonstrating While (Memphis)",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -6424,7 +6424,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/post_servlet",
     "platform_name": "AnnEx",
     "title": "ISD::HTTPPostServlet.java",
-    "description": "Java Example for demonstrating ISD::HTTPPostServlet.java",
+    "description": "Java BehaviorExample for demonstrating ISD::HTTPPostServlet.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -6453,7 +6453,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/rand_function",
     "platform_name": "AnnEx",
     "title": "rand function",
-    "description": "C++ Example for demonstrating rand function",
+    "description": "C++ BehaviorExample for demonstrating rand function",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -6482,7 +6482,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/string_length",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_String Length",
-    "description": "Java Example for demonstrating DEPRECATED_String Length",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_String Length",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -6511,7 +6511,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/boolean_declaration",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_boolean declaration",
-    "description": "Java Example for demonstrating DEPRECATED_boolean declaration",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_boolean declaration",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -6540,7 +6540,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Decrement",
     "platform_name": "AnnEx",
     "title": "Decrement",
-    "description": "Java Example for demonstrating Decrement",
+    "description": "Java BehaviorExample for demonstrating Decrement",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -6585,7 +6585,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -6647,7 +6647,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -6698,7 +6698,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/incdec_oper",
     "platform_name": "AnnEx",
     "title": "IncDec_Oper",
-    "description": "C++ Example for demonstrating IncDec_Oper",
+    "description": "C++ BehaviorExample for demonstrating IncDec_Oper",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -6758,13 +6758,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_string_variables",
     "platform_name": "AnnEx",
     "title": "Ctring Variables",
-    "description": "C++ Example for demonstrating Ctring Variables",
+    "description": "C++ BehaviorExample for demonstrating Ctring Variables",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -6847,7 +6847,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface3_7",
     "platform_name": "AnnEx",
     "title": "IS17_interface3_7",
-    "description": "Java Example for demonstrating IS17_interface3_7",
+    "description": "Java BehaviorExample for demonstrating IS17_interface3_7",
     "license": "MIT",
     "author": [
       "Kieth Yackovich"
@@ -6876,7 +6876,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/ForLoop2",
     "platform_name": "AnnEx",
     "title": "ForLoop2",
-    "description": "C++ Example for demonstrating ForLoop2",
+    "description": "C++ BehaviorExample for demonstrating ForLoop2",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -6905,7 +6905,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_poly2",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance3",
-    "description": "Java Example for demonstrating IS17_inheritance3",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance3",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -6977,7 +6977,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -7024,7 +7024,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_abstract1",
     "platform_name": "AnnEx",
     "title": "IS17_abstract1",
-    "description": "Java Example for demonstrating IS17_abstract1",
+    "description": "Java BehaviorExample for demonstrating IS17_abstract1",
     "license": "MIT",
     "author": [
       "Sergey Sosnovsky"
@@ -7082,7 +7082,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface3_8",
     "platform_name": "AnnEx",
     "title": "IS17_interface3_8",
-    "description": "Java Example for demonstrating IS17_interface3_8",
+    "description": "Java BehaviorExample for demonstrating IS17_interface3_8",
     "license": "MIT",
     "author": [
       "Angela Zack"
@@ -7124,7 +7124,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -7173,13 +7173,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_char_ascii",
     "platform_name": "AnnEx",
     "title": "Character Numbers ASCII",
-    "description": "C++ Example for demonstrating Character Numbers ASCII",
+    "description": "C++ BehaviorExample for demonstrating Character Numbers ASCII",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -7213,7 +7213,7 @@
     "keywords": [],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -7275,7 +7275,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -7293,7 +7293,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/CompoundAssignment",
     "platform_name": "AnnEx",
     "title": "Combining Assignment and Arithmetic",
-    "description": "Java Example for demonstrating Combining Assignment and Arithmetic",
+    "description": "Java BehaviorExample for demonstrating Combining Assignment and Arithmetic",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -7355,7 +7355,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/CreateString",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Creating String",
-    "description": "Java Example for demonstrating DEPRECATED_Creating String",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Creating String",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -7397,7 +7397,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -7415,7 +7415,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/ifelse2",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_If Else",
-    "description": "Java Example for demonstrating DEPRECATED_If Else",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_If Else",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -7444,7 +7444,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/ascii_char",
     "platform_name": "AnnEx",
     "title": "ascII_char",
-    "description": "C++ Example for demonstrating ascII_char",
+    "description": "C++ BehaviorExample for demonstrating ascII_char",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -7473,7 +7473,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-19_ArrayDemos",
     "platform_name": "AnnEx",
     "title": "3-19_ArrayDemos",
-    "description": "Java Example for demonstrating 3-19_ArrayDemos",
+    "description": "Java BehaviorExample for demonstrating 3-19_ArrayDemos",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -7504,7 +7504,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/welcome_lines",
     "platform_name": "AnnEx",
     "title": "ISD::WelcomeLines.java",
-    "description": "Java Example for demonstrating ISD::WelcomeLines.java",
+    "description": "Java BehaviorExample for demonstrating ISD::WelcomeLines.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -7565,7 +7565,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList3_8",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList3_8",
-    "description": "Java Example for demonstrating IS17_ArrayList3_8",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList3_8",
     "license": "MIT",
     "author": [
       "Angela Zack"
@@ -7626,7 +7626,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/variables2",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_variable initialization",
-    "description": "Java Example for demonstrating DEPRECATED_variable initialization",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_variable initialization",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -7655,7 +7655,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/session_example",
     "platform_name": "AnnEx",
     "title": "ISD::SessionExample.java",
-    "description": "Java Example for demonstrating ISD::SessionExample.java",
+    "description": "Java BehaviorExample for demonstrating ISD::SessionExample.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -7684,7 +7684,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/IncDec",
     "platform_name": "AnnEx",
     "title": "IncDec",
-    "description": "C++ Example for demonstrating IncDec",
+    "description": "C++ BehaviorExample for demonstrating IncDec",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -7713,7 +7713,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/inner_v2",
     "platform_name": "AnnEx",
     "title": "Inner Classes",
-    "description": "Java Example for demonstrating Inner Classes",
+    "description": "Java BehaviorExample for demonstrating Inner Classes",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -7742,7 +7742,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface1_6",
     "platform_name": "AnnEx",
     "title": "IS17_interface1_6",
-    "description": "Java Example for demonstrating IS17_interface1_6",
+    "description": "Java BehaviorExample for demonstrating IS17_interface1_6",
     "license": "MIT",
     "author": [
       "Chris Jackson"
@@ -7803,7 +7803,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/OverridingObjectMethods",
     "platform_name": "AnnEx",
     "title": "Overriding Object Methods",
-    "description": "Java Example for demonstrating Overriding Object Methods",
+    "description": "Java BehaviorExample for demonstrating Overriding Object Methods",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -7847,7 +7847,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -7865,7 +7865,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface2_1",
     "platform_name": "AnnEx",
     "title": "IS17_interface2_1",
-    "description": "Java Example for demonstrating IS17_interface2_1",
+    "description": "Java BehaviorExample for demonstrating IS17_interface2_1",
     "license": "MIT",
     "author": [
       "Ryan Johnston"
@@ -7928,7 +7928,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList2_4",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList2_4",
-    "description": "Java Example for demonstrating IS17_ArrayList2_4",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList2_4",
     "license": "MIT",
     "author": [
       "Andres Pacheco"
@@ -7957,7 +7957,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList2_2",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList2_2",
-    "description": "Java Example for demonstrating IS17_ArrayList2_2",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList2_2",
     "license": "MIT",
     "author": [
       "Michael Logoyda"
@@ -7986,13 +7986,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_multiline_cout",
     "platform_name": "AnnEx",
     "title": "Multiline cout",
-    "description": "C++ Example for demonstrating Multiline cout",
+    "description": "C++ BehaviorExample for demonstrating Multiline cout",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -8015,7 +8015,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/PrimitiveDataTypes",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Primitive Data Types",
-    "description": "Java Example for demonstrating DEPRECATED_Primitive Data Types",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Primitive Data Types",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -8078,7 +8078,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/jeg_interface1",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Interface",
-    "description": "Java Example for demonstrating DEPRECATED_Interface",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Interface",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -8136,7 +8136,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList1_7",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList1_7",
-    "description": "Java Example for demonstrating IS17_ArrayList1_7",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList1_7",
     "license": "MIT",
     "author": [
       "John Moan"
@@ -8178,7 +8178,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -8196,7 +8196,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/welcome_applet2",
     "platform_name": "AnnEx",
     "title": "ISD:: WelcomeApplet2.java",
-    "description": "Java Example for demonstrating ISD:: WelcomeApplet2.java",
+    "description": "Java BehaviorExample for demonstrating ISD:: WelcomeApplet2.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -8225,7 +8225,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList3",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList3",
-    "description": "Java Example for demonstrating IS17_ArrayList3",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList3",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -8298,7 +8298,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -8360,7 +8360,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -8409,7 +8409,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/count_occur",
     "platform_name": "AnnEx",
     "title": "count_occur",
-    "description": "C++ Example for demonstrating count_occur",
+    "description": "C++ BehaviorExample for demonstrating count_occur",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -8451,7 +8451,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -8514,7 +8514,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -8577,7 +8577,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -8595,7 +8595,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/create_2d_array",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Create 2D Array",
-    "description": "Java Example for demonstrating DEPRECATED_Create 2D Array",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Create 2D Array",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -8637,7 +8637,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -8655,7 +8655,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/radiobutton_test",
     "platform_name": "AnnEx",
     "title": "ISD::RadioButtonTest.java",
-    "description": "Java Example for demonstrating ISD::RadioButtonTest.java",
+    "description": "Java BehaviorExample for demonstrating ISD::RadioButtonTest.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -8684,7 +8684,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/sortalgorithm",
     "platform_name": "AnnEx",
     "title": "SortAlgorithm",
-    "description": "C++ Example for demonstrating SortAlgorithm",
+    "description": "C++ BehaviorExample for demonstrating SortAlgorithm",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -8713,7 +8713,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-21_ParamPassing",
     "platform_name": "AnnEx",
     "title": "3-21_ParamPassing",
-    "description": "Java Example for demonstrating 3-21_ParamPassing",
+    "description": "Java BehaviorExample for demonstrating 3-21_ParamPassing",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -8744,7 +8744,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/poly_v2",
     "platform_name": "AnnEx",
     "title": "Polymorphism and Inheritance 1",
-    "description": "Java Example for demonstrating Polymorphism and Inheritance 1",
+    "description": "Java BehaviorExample for demonstrating Polymorphism and Inheritance 1",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -8775,7 +8775,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/grid_layout",
     "platform_name": "AnnEx",
     "title": "ISD::GridLayoutDemo.java",
-    "description": "Java Example for demonstrating ISD::GridLayoutDemo.java",
+    "description": "Java BehaviorExample for demonstrating ISD::GridLayoutDemo.java",
     "license": "MIT",
     "author": [
       "Gentile Jeffrey"
@@ -8835,7 +8835,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList2_7",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList2_7",
-    "description": "Java Example for demonstrating IS17_ArrayList2_7",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList2_7",
     "license": "MIT",
     "author": [
       "Joshua Sawyers"
@@ -8877,7 +8877,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -8895,7 +8895,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance1_7",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance1_7",
-    "description": "Java Example for demonstrating IS17_inheritance1_7",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance1_7",
     "license": "MIT",
     "author": [
       "John Moan"
@@ -8924,7 +8924,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/nonconstant",
     "platform_name": "AnnEx",
     "title": "NonConstant",
-    "description": "C++ Example for demonstrating NonConstant",
+    "description": "C++ BehaviorExample for demonstrating NonConstant",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -8953,7 +8953,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance2_2",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance2_2",
-    "description": "Java Example for demonstrating IS17_inheritance2_2",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance2_2",
     "license": "MIT",
     "author": [
       "Michael Logoyda"
@@ -8982,7 +8982,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/BankAccountTester",
     "platform_name": "AnnEx",
     "title": "Bank Account Tester",
-    "description": "Java Example for demonstrating Bank Account Tester",
+    "description": "Java BehaviorExample for demonstrating Bank Account Tester",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -9014,7 +9014,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList1_1",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList1_1",
-    "description": "Java Example for demonstrating IS17_ArrayList1_1",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList1_1",
     "license": "MIT",
     "author": [
       "James Bowman"
@@ -9056,7 +9056,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -9074,7 +9074,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/relational_operators",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_relational operators",
-    "description": "Java Example for demonstrating DEPRECATED_relational operators",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_relational operators",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -9103,7 +9103,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Sales",
     "platform_name": "AnnEx",
     "title": "Sales",
-    "description": "C++ Example for demonstrating Sales",
+    "description": "C++ BehaviorExample for demonstrating Sales",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -9132,7 +9132,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/SwitchStatement",
     "platform_name": "AnnEx",
     "title": "SwitchStatement",
-    "description": "C++ Example for demonstrating SwitchStatement",
+    "description": "C++ BehaviorExample for demonstrating SwitchStatement",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -9190,7 +9190,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/testNull",
     "platform_name": "AnnEx",
     "title": "Testing for null",
-    "description": "Java Example for demonstrating Testing for null",
+    "description": "Java BehaviorExample for demonstrating Testing for null",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -9221,7 +9221,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface3",
     "platform_name": "AnnEx",
     "title": "IS17_interface3",
-    "description": "Java Example for demonstrating IS17_interface3",
+    "description": "Java BehaviorExample for demonstrating IS17_interface3",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -9281,7 +9281,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList2_5",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList2_5",
-    "description": "Java Example for demonstrating IS17_ArrayList2_5",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList2_5",
     "license": "MIT",
     "author": [
       "David Nawn"
@@ -9310,7 +9310,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/one_dim_arrays",
     "platform_name": "AnnEx",
     "title": "One Dim Arrays",
-    "description": "C++ Example for demonstrating One Dim Arrays",
+    "description": "C++ BehaviorExample for demonstrating One Dim Arrays",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -9370,7 +9370,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/1stprogram",
     "platform_name": "AnnEx",
     "title": "1stprogram",
-    "description": "C++ Example for demonstrating 1stprogram",
+    "description": "C++ BehaviorExample for demonstrating 1stprogram",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -9412,7 +9412,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -9430,7 +9430,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/check_file2",
     "platform_name": "AnnEx",
     "title": "check_file2",
-    "description": "C++ Example for demonstrating check_file2",
+    "description": "C++ BehaviorExample for demonstrating check_file2",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -9459,7 +9459,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/compound_assign",
     "platform_name": "AnnEx",
     "title": "compound_assign",
-    "description": "C++ Example for demonstrating compound_assign",
+    "description": "C++ BehaviorExample for demonstrating compound_assign",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -9488,7 +9488,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/readfrfile",
     "platform_name": "AnnEx",
     "title": "ReadFromFile",
-    "description": "C++ Example for demonstrating ReadFromFile",
+    "description": "C++ BehaviorExample for demonstrating ReadFromFile",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -9530,7 +9530,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -9592,7 +9592,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -9643,7 +9643,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/multiple_return",
     "platform_name": "AnnEx",
     "title": "Multiple Return",
-    "description": "C++ Example for demonstrating Multiple Return",
+    "description": "C++ BehaviorExample for demonstrating Multiple Return",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -9703,7 +9703,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/defined_function",
     "platform_name": "AnnEx",
     "title": "defined function",
-    "description": "C++ Example for demonstrating defined function",
+    "description": "C++ BehaviorExample for demonstrating defined function",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -9732,7 +9732,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/cookie_example",
     "platform_name": "AnnEx",
     "title": "ISD::CookieExample.java",
-    "description": "Java Example for demonstrating ISD::CookieExample.java",
+    "description": "Java BehaviorExample for demonstrating ISD::CookieExample.java",
     "license": "MIT",
     "author": [
       "Laney Jesse"
@@ -9792,7 +9792,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/decimal_value",
     "platform_name": "AnnEx",
     "title": "decimal_value",
-    "description": "C++ Example for demonstrating decimal_value",
+    "description": "C++ BehaviorExample for demonstrating decimal_value",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -9821,7 +9821,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/search_occur",
     "platform_name": "AnnEx",
     "title": "search_occur",
-    "description": "C++ Example for demonstrating search_occur",
+    "description": "C++ BehaviorExample for demonstrating search_occur",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -9850,7 +9850,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList3_7",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList3_7",
-    "description": "Java Example for demonstrating IS17_ArrayList3_7",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList3_7",
     "license": "MIT",
     "author": [
       "Kieth Yackovich"
@@ -9890,7 +9890,7 @@
     "keywords": [],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -9939,7 +9939,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance1_4",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance1_4",
-    "description": "Java Example for demonstrating IS17_inheritance1_4",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance1_4",
     "license": "MIT",
     "author": [
       "Eric Riemer"
@@ -10010,7 +10010,7 @@
     "keywords": [],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -10028,7 +10028,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance1_2",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance1_2",
-    "description": "Java Example for demonstrating IS17_inheritance1_2",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance1_2",
     "license": "MIT",
     "author": [
       "Patric Campbell"
@@ -10057,7 +10057,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList1_2",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList1_2",
-    "description": "Java Example for demonstrating IS17_ArrayList1_2",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList1_2",
     "license": "MIT",
     "author": [
       "Patric Campbell"
@@ -10118,7 +10118,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/no_argument_func",
     "platform_name": "AnnEx",
     "title": "No Argument Functions",
-    "description": "C++ Example for demonstrating No Argument Functions",
+    "description": "C++ BehaviorExample for demonstrating No Argument Functions",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -10147,7 +10147,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/string_compare",
     "platform_name": "AnnEx",
     "title": "string_compare",
-    "description": "C++ Example for demonstrating string_compare",
+    "description": "C++ BehaviorExample for demonstrating string_compare",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -10176,7 +10176,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/conditional_operators",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_conditional operators",
-    "description": "Java Example for demonstrating DEPRECATED_conditional operators",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_conditional operators",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -10205,7 +10205,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/inheritance_polymorphism_2",
     "platform_name": "AnnEx",
     "title": "A Dog is also a Pet",
-    "description": "Java Example for demonstrating A Dog is also a Pet",
+    "description": "Java BehaviorExample for demonstrating A Dog is also a Pet",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -10249,7 +10249,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -10267,7 +10267,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_this_super",
     "platform_name": "AnnEx",
     "title": "IS17_this_and_super",
-    "description": "Java Example for demonstrating IS17_this_and_super",
+    "description": "Java BehaviorExample for demonstrating IS17_this_and_super",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -10296,7 +10296,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/ForStatement",
     "platform_name": "AnnEx",
     "title": "ForStatement",
-    "description": "C++ Example for demonstrating ForStatement",
+    "description": "C++ BehaviorExample for demonstrating ForStatement",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -10325,7 +10325,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList1_4",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList1_4",
-    "description": "Java Example for demonstrating IS17_ArrayList1_4",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList1_4",
     "license": "MIT",
     "author": [
       "Eric Riemer"
@@ -10354,7 +10354,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/using_const",
     "platform_name": "AnnEx",
     "title": "Using Const",
-    "description": "C++ Example for demonstrating Using Const",
+    "description": "C++ BehaviorExample for demonstrating Using Const",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -10423,7 +10423,7 @@
     "keywords": [],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -10441,13 +10441,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_char_variables",
     "platform_name": "AnnEx",
     "title": "Char Variables",
-    "description": "C++ Example for demonstrating Char Variables",
+    "description": "C++ BehaviorExample for demonstrating Char Variables",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -10501,7 +10501,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/complex_expr",
     "platform_name": "AnnEx",
     "title": "complex_expr",
-    "description": "C++ Example for demonstrating complex_expr",
+    "description": "C++ BehaviorExample for demonstrating complex_expr",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -10530,7 +10530,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/strtod",
     "platform_name": "AnnEx",
     "title": "strtod",
-    "description": "C++ Example for demonstrating strtod",
+    "description": "C++ BehaviorExample for demonstrating strtod",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -10572,7 +10572,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -10603,7 +10603,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -10621,7 +10621,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/boolean_operators",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Boolean Operators",
-    "description": "Java Example for demonstrating DEPRECATED_Boolean Operators",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Boolean Operators",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -10650,7 +10650,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/copystring",
     "platform_name": "AnnEx",
     "title": "CopyString",
-    "description": "C++ Example for demonstrating CopyString",
+    "description": "C++ BehaviorExample for demonstrating CopyString",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -10692,7 +10692,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -10710,7 +10710,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/string_comparison",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_String Comparison",
-    "description": "Java Example for demonstrating DEPRECATED_String Comparison",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_String Comparison",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -10739,7 +10739,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Srand",
     "platform_name": "AnnEx",
     "title": "Srand",
-    "description": "C++ Example for demonstrating Srand",
+    "description": "C++ BehaviorExample for demonstrating Srand",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -10768,7 +10768,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/insertsort",
     "platform_name": "AnnEx",
     "title": "InsertSortAlgo",
-    "description": "C++ Example for demonstrating InsertSortAlgo",
+    "description": "C++ BehaviorExample for demonstrating InsertSortAlgo",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -10829,7 +10829,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/lines_rects_ovals",
     "platform_name": "AnnEx",
     "title": "ISD::LinesRectsOvals.java",
-    "description": "Java Example for demonstrating ISD::LinesRectsOvals.java",
+    "description": "Java BehaviorExample for demonstrating ISD::LinesRectsOvals.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -10903,7 +10903,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -10967,7 +10967,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -10985,7 +10985,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/interfaceClassConversion",
     "platform_name": "AnnEx",
     "title": "Converting between Class and Interface Types",
-    "description": "Java Example for demonstrating Converting between Class and Interface Types",
+    "description": "Java BehaviorExample for demonstrating Converting between Class and Interface Types",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -11029,7 +11029,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -11047,7 +11047,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList2_3",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList2_3",
-    "description": "Java Example for demonstrating IS17_ArrayList2_3",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList2_3",
     "license": "MIT",
     "author": [
       "Eric Napolitan"
@@ -11110,7 +11110,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/recursion",
     "platform_name": "AnnEx",
     "title": "Recursion",
-    "description": "C++ Example for demonstrating Recursion",
+    "description": "C++ BehaviorExample for demonstrating Recursion",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -11139,13 +11139,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_simple_cout",
     "platform_name": "AnnEx",
     "title": "Simple cout",
-    "description": "C++ Example for demonstrating Simple cout",
+    "description": "C++ BehaviorExample for demonstrating Simple cout",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -11181,7 +11181,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -11232,7 +11232,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/StringExample",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_StringExample",
-    "description": "Java Example for demonstrating DEPRECATED_StringExample",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_StringExample",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -11274,7 +11274,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -11292,7 +11292,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Cwhile_counter",
     "platform_name": "AnnEx",
     "title": "Cwhile_counter",
-    "description": "C++ Example for demonstrating Cwhile_counter",
+    "description": "C++ BehaviorExample for demonstrating Cwhile_counter",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -11321,7 +11321,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/inheritance_polymorphism_1",
     "platform_name": "AnnEx",
     "title": "Polymorphism and Inheritance 2",
-    "description": "Java Example for demonstrating Polymorphism and Inheritance 2",
+    "description": "Java BehaviorExample for demonstrating Polymorphism and Inheritance 2",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -11352,7 +11352,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Payroll",
     "platform_name": "AnnEx",
     "title": "Payroll",
-    "description": "C++ Example for demonstrating Payroll",
+    "description": "C++ BehaviorExample for demonstrating Payroll",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -11395,7 +11395,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -11413,7 +11413,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/CashRegisterConstantField",
     "platform_name": "AnnEx",
     "title": "Cash Register Tester (Constant Field)",
-    "description": "Java Example for demonstrating Cash Register Tester (Constant Field)",
+    "description": "Java BehaviorExample for demonstrating Cash Register Tester (Constant Field)",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -11445,7 +11445,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/callbyref",
     "platform_name": "AnnEx",
     "title": "CallbyReference",
-    "description": "C++ Example for demonstrating CallbyReference",
+    "description": "C++ BehaviorExample for demonstrating CallbyReference",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -11474,7 +11474,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface2_3",
     "platform_name": "AnnEx",
     "title": "IS17_interface2_3",
-    "description": "Java Example for demonstrating IS17_interface2_3",
+    "description": "Java BehaviorExample for demonstrating IS17_interface2_3",
     "license": "MIT",
     "author": [
       "Eric Napolitan"
@@ -11516,7 +11516,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -11534,7 +11534,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/InterfacePolymorphism",
     "platform_name": "AnnEx",
     "title": "Interface Polymorphism",
-    "description": "Java Example for demonstrating Interface Polymorphism",
+    "description": "Java BehaviorExample for demonstrating Interface Polymorphism",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -11565,7 +11565,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/binary_expressions",
     "platform_name": "AnnEx",
     "title": "Binary_Expressions",
-    "description": "C++ Example for demonstrating Binary_Expressions",
+    "description": "C++ BehaviorExample for demonstrating Binary_Expressions",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -11594,7 +11594,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/arrayaddress",
     "platform_name": "AnnEx",
     "title": "ArrayAddresses",
-    "description": "C++ Example for demonstrating ArrayAddresses",
+    "description": "C++ BehaviorExample for demonstrating ArrayAddresses",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -11623,7 +11623,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface2_5",
     "platform_name": "AnnEx",
     "title": "IS17_interface2_5",
-    "description": "Java Example for demonstrating IS17_interface2_5",
+    "description": "Java BehaviorExample for demonstrating IS17_interface2_5",
     "license": "MIT",
     "author": [
       "David Nawn"
@@ -11652,7 +11652,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/package_v2",
     "platform_name": "AnnEx",
     "title": "Package declaration",
-    "description": "Java Example for demonstrating Package declaration",
+    "description": "Java BehaviorExample for demonstrating Package declaration",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -11681,7 +11681,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Coin_Values",
     "platform_name": "AnnEx",
     "title": "Coin_Values",
-    "description": "C++ Example for demonstrating Coin_Values",
+    "description": "C++ BehaviorExample for demonstrating Coin_Values",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -11710,7 +11710,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/SwapExample",
     "platform_name": "AnnEx",
     "title": "SwapExample",
-    "description": "Java Example for demonstrating SwapExample",
+    "description": "Java BehaviorExample for demonstrating SwapExample",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -11741,7 +11741,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/post_request_example",
     "platform_name": "AnnEx",
     "title": "ISD:: Post Request Example.java",
-    "description": "Java Example for demonstrating ISD:: Post Request Example.java",
+    "description": "Java BehaviorExample for demonstrating ISD:: Post Request Example.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -11802,7 +11802,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/bubblesortalgo",
     "platform_name": "AnnEx",
     "title": "BubbleSortAlgo",
-    "description": "C++ Example for demonstrating BubbleSortAlgo",
+    "description": "C++ BehaviorExample for demonstrating BubbleSortAlgo",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -11831,7 +11831,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/get_servlet",
     "platform_name": "AnnEx",
     "title": "ISD::HTTPGetServlet.java",
-    "description": "Java Example for demonstrating ISD::HTTPGetServlet.java",
+    "description": "Java BehaviorExample for demonstrating ISD::HTTPGetServlet.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -11860,7 +11860,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/while_1_memphis",
     "platform_name": "AnnEx",
     "title": "While 1 (Memphis)",
-    "description": "Java Example for demonstrating While 1 (Memphis)",
+    "description": "Java BehaviorExample for demonstrating While 1 (Memphis)",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -11889,7 +11889,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/substring",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Substring",
-    "description": "Java Example for demonstrating DEPRECATED_Substring",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Substring",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -11962,7 +11962,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -11980,7 +11980,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/boolean_expression",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Boolean Expression",
-    "description": "Java Example for demonstrating DEPRECATED_Boolean Expression",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Boolean Expression",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -12054,7 +12054,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -12085,7 +12085,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -12148,7 +12148,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -12177,7 +12177,7 @@
     "keywords": [],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -12239,7 +12239,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -12257,7 +12257,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/atof_atoi_atol",
     "platform_name": "AnnEx",
     "title": "atof_atoi_atol",
-    "description": "C++ Example for demonstrating atof_atoi_atol",
+    "description": "C++ BehaviorExample for demonstrating atof_atoi_atol",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -12286,7 +12286,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList1_5",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList1_5",
-    "description": "Java Example for demonstrating IS17_ArrayList1_5",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList1_5",
     "license": "MIT",
     "author": [
       "Darby Hoffman"
@@ -12349,7 +12349,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList1",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList1",
-    "description": "Java Example for demonstrating IS17_ArrayList1",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList1",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -12391,7 +12391,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -12409,7 +12409,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Sentinel_value",
     "platform_name": "AnnEx",
     "title": "Sentinel_value",
-    "description": "C++ Example for demonstrating Sentinel_value",
+    "description": "C++ BehaviorExample for demonstrating Sentinel_value",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -12438,7 +12438,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/string_to_int",
     "platform_name": "AnnEx",
     "title": "string_to_integer",
-    "description": "C++ Example for demonstrating string_to_integer",
+    "description": "C++ BehaviorExample for demonstrating string_to_integer",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -12467,7 +12467,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/inheritance_constructors_1",
     "platform_name": "AnnEx",
     "title": "Inheritance and Constructors 1",
-    "description": "Java Example for demonstrating Inheritance and Constructors 1",
+    "description": "Java BehaviorExample for demonstrating Inheritance and Constructors 1",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -12498,7 +12498,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/comparison_operators",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_comparison operators",
-    "description": "Java Example for demonstrating DEPRECATED_comparison operators",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_comparison operators",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -12541,7 +12541,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -12559,7 +12559,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList1_3",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList1_3",
-    "description": "Java Example for demonstrating IS17_ArrayList1_3",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList1_3",
     "license": "MIT",
     "author": [
       "Stephen Plumby"
@@ -12588,7 +12588,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pointerarr",
     "platform_name": "AnnEx",
     "title": "PointerArrays",
-    "description": "C++ Example for demonstrating PointerArrays",
+    "description": "C++ BehaviorExample for demonstrating PointerArrays",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -12617,7 +12617,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/CopyDemo",
     "platform_name": "AnnEx",
     "title": "Copy Demo",
-    "description": "Java Example for demonstrating Copy Demo",
+    "description": "Java BehaviorExample for demonstrating Copy Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -12680,7 +12680,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance1_3",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance1_3",
-    "description": "Java Example for demonstrating IS17_inheritance1_3",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance1_3",
     "license": "MIT",
     "author": [
       "Stephen Plumby"
@@ -12722,7 +12722,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -12772,7 +12772,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance1_5",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance1_5",
-    "description": "Java Example for demonstrating IS17_inheritance1_5",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance1_5",
     "license": "MIT",
     "author": [
       "Darby Hoffman"
@@ -12814,7 +12814,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -12863,7 +12863,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList3_6",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList3_6",
-    "description": "Java Example for demonstrating IS17_ArrayList3_6",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList3_6",
     "license": "MIT",
     "author": [
       "Larry Werner"
@@ -12892,7 +12892,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/key_demo",
     "platform_name": "AnnEx",
     "title": "ISD::KeyDemo.java",
-    "description": "Java Example for demonstrating ISD::KeyDemo.java",
+    "description": "Java BehaviorExample for demonstrating ISD::KeyDemo.java",
     "license": "MIT",
     "author": [
       "Kitchens Kenyetta"
@@ -12921,7 +12921,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/strlen",
     "platform_name": "AnnEx",
     "title": "strlen",
-    "description": "C++ Example for demonstrating strlen",
+    "description": "C++ BehaviorExample for demonstrating strlen",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -12964,7 +12964,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13015,7 +13015,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/list_test",
     "platform_name": "AnnEx",
     "title": "ISD::ListTest.java",
-    "description": "Java Example for demonstrating ISD::ListTest.java",
+    "description": "Java BehaviorExample for demonstrating ISD::ListTest.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -13057,7 +13057,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13075,7 +13075,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_eaxmple1",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance1",
-    "description": "Java Example for demonstrating IS17_inheritance1",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance1",
     "license": "MIT",
     "author": [
       "Sharon Hsiao"
@@ -13117,7 +13117,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13135,7 +13135,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/constpointer",
     "platform_name": "AnnEx",
     "title": "ConstPointer2",
-    "description": "C++ Example for demonstrating ConstPointer2",
+    "description": "C++ BehaviorExample for demonstrating ConstPointer2",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -13208,7 +13208,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13226,7 +13226,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/HelloPrinter",
     "platform_name": "AnnEx",
     "title": "Hello Printer",
-    "description": "Java Example for demonstrating Hello Printer",
+    "description": "Java BehaviorExample for demonstrating Hello Printer",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -13303,7 +13303,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13365,7 +13365,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13396,7 +13396,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13458,7 +13458,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13489,7 +13489,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13507,7 +13507,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/ObjectEquality",
     "platform_name": "AnnEx",
     "title": "Object Equality ",
-    "description": "Java Example for demonstrating Object Equality ",
+    "description": "Java BehaviorExample for demonstrating Object Equality ",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -13539,7 +13539,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inher1",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance2",
-    "description": "Java Example for demonstrating IS17_inheritance2",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance2",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -13608,7 +13608,7 @@
     "keywords": [],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13626,7 +13626,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Usage",
     "platform_name": "AnnEx",
     "title": "Usage",
-    "description": "C++ Example for demonstrating Usage",
+    "description": "C++ BehaviorExample for demonstrating Usage",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -13688,7 +13688,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface2_6",
     "platform_name": "AnnEx",
     "title": "IS17_interface2_6",
-    "description": "Java Example for demonstrating IS17_interface2_6",
+    "description": "Java BehaviorExample for demonstrating IS17_interface2_6",
     "license": "MIT",
     "author": [
       "Megan Patton"
@@ -13728,7 +13728,7 @@
     "keywords": [],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13739,35 +13739,6 @@
     ],
     "protocol_url": [
       "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/TableCreation4_version_1_pt"
-    ]
-  },
-  {
-    "catalog_type": "SLCItem",
-    "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/precedence_expr",
-    "platform_name": "AnnEx",
-    "title": "precedence_expr",
-    "description": "C++ Example for demonstrating precedence_expr",
-    "license": "MIT",
-    "author": [
-      "Administrator"
-    ],
-    "institution": [
-      ""
-    ],
-    "keywords": [],
-    "features": [],
-    "programming_language": [
-      "C++"
-    ],
-    "natural_language": [
-      "en"
-    ],
-    "iframe_url": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/precedence_expr",
-    "protocol": [
-      "SPLICE"
-    ],
-    "protocol_url": [
-      "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/precedence_expr"
     ]
   },
   {
@@ -13806,7 +13777,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-sql/LeftJoin25_1_version_1",
     "platform_name": "AnnEx",
     "title": "LeftJoin1_version_1",
-    "description": "SQL Example for demonstrating LeftJoin1_version_1",
+    "description": "Sql BehaviorExample for demonstrating LeftJoin1_version_1",
     "license": "MIT",
     "author": [
       "Rully Hendrawan"
@@ -13819,7 +13790,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13850,7 +13821,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13900,7 +13871,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/qlinkedlist1",
     "platform_name": "AnnEx",
     "title": "Linked List 1",
-    "description": "Java Example for demonstrating Linked List 1",
+    "description": "Java BehaviorExample for demonstrating Linked List 1",
     "license": "MIT",
     "author": [
       "Mohammad Hassany"
@@ -13942,7 +13913,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -13973,7 +13944,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -14054,7 +14025,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/MathFunction",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Math Functions",
-    "description": "Java Example for demonstrating DEPRECATED_Math Functions",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Math Functions",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -14083,7 +14054,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/VariableDemo",
     "platform_name": "AnnEx",
     "title": "Variable Demo",
-    "description": "Java Example for demonstrating Variable Demo",
+    "description": "Java BehaviorExample for demonstrating Variable Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -14115,7 +14086,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/nested_loops2",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Nested Loops2",
-    "description": "Java Example for demonstrating DEPRECATED_Nested Loops2",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Nested Loops2",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -14144,7 +14115,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Rand",
     "platform_name": "AnnEx",
     "title": "Rand",
-    "description": "C++ Example for demonstrating Rand",
+    "description": "C++ BehaviorExample for demonstrating Rand",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -14173,7 +14144,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/shapes",
     "platform_name": "AnnEx",
     "title": "ISD::Shapes.java",
-    "description": "Java Example for demonstrating ISD::Shapes.java",
+    "description": "Java BehaviorExample for demonstrating ISD::Shapes.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -14234,7 +14205,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Calculate_profit",
     "platform_name": "AnnEx",
     "title": "Calculate_profit",
-    "description": "C++ Example for demonstrating Calculate_profit",
+    "description": "C++ BehaviorExample for demonstrating Calculate_profit",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -14263,7 +14234,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/3-19_MoreMethods",
     "platform_name": "AnnEx",
     "title": "3-19_MoreMethods",
-    "description": "Java Example for demonstrating 3-19_MoreMethods",
+    "description": "Java BehaviorExample for demonstrating 3-19_MoreMethods",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -14294,7 +14265,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/strcy_strncpy",
     "platform_name": "AnnEx",
     "title": "strcy_strncpy",
-    "description": "C++ Example for demonstrating strcy_strncpy",
+    "description": "C++ BehaviorExample for demonstrating strcy_strncpy",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -14323,7 +14294,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/CH3_printf2",
     "platform_name": "AnnEx",
     "title": "CH3_printf2",
-    "description": "C++ Example for demonstrating CH3_printf2",
+    "description": "C++ BehaviorExample for demonstrating CH3_printf2",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -14352,7 +14323,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/arithmetic",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_arithmetic operations",
-    "description": "Java Example for demonstrating DEPRECATED_arithmetic operations",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_arithmetic operations",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -14381,7 +14352,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/JavaTutorial_4_4_4",
     "platform_name": "AnnEx",
     "title": "JavaTutorial_4_4_4",
-    "description": "Java Example for demonstrating JavaTutorial_4_4_4",
+    "description": "Java BehaviorExample for demonstrating JavaTutorial_4_4_4",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -14423,7 +14394,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -14441,7 +14412,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance3_8",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance3_8",
-    "description": "Java Example for demonstrating IS17_inheritance3_8",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance3_8",
     "license": "MIT",
     "author": [
       "Angela Zack"
@@ -14483,7 +14454,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -14546,7 +14517,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -14564,7 +14535,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface1_1",
     "platform_name": "AnnEx",
     "title": "IS17_interface1_1",
-    "description": "Java Example for demonstrating IS17_interface1_1",
+    "description": "Java BehaviorExample for demonstrating IS17_interface1_1",
     "license": "MIT",
     "author": [
       "James Bowman"
@@ -14606,7 +14577,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -14624,7 +14595,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/GradeBook",
     "platform_name": "AnnEx",
     "title": "Grade Book",
-    "description": "Java Example for demonstrating Grade Book",
+    "description": "Java BehaviorExample for demonstrating Grade Book",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -14655,7 +14626,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/call_by_reference2",
     "platform_name": "AnnEx",
     "title": "Call By Reference2",
-    "description": "C++ Example for demonstrating Call By Reference2",
+    "description": "C++ BehaviorExample for demonstrating Call By Reference2",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -14684,7 +14655,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/addopt",
     "platform_name": "AnnEx",
     "title": "deferencing",
-    "description": "C++ Example for demonstrating deferencing",
+    "description": "C++ BehaviorExample for demonstrating deferencing",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -14713,13 +14684,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_float_double",
     "platform_name": "AnnEx",
     "title": "Float and Double Variables",
-    "description": "C++ Example for demonstrating Float and Double Variables",
+    "description": "C++ BehaviorExample for demonstrating Float and Double Variables",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -14742,7 +14713,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/block_scope",
     "platform_name": "AnnEx",
     "title": "Block Scope",
-    "description": "C++ Example for demonstrating Block Scope",
+    "description": "C++ BehaviorExample for demonstrating Block Scope",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -14784,7 +14755,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -14802,7 +14773,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/inheritance_casting_1",
     "platform_name": "AnnEx",
     "title": "Casting subclass",
-    "description": "Java Example for demonstrating Casting subclass",
+    "description": "Java BehaviorExample for demonstrating Casting subclass",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -14846,7 +14817,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -14864,7 +14835,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/AccessorMutatorDemo",
     "platform_name": "AnnEx",
     "title": "Accessor Mutator Demo",
-    "description": "Java Example for demonstrating Accessor Mutator Demo",
+    "description": "Java BehaviorExample for demonstrating Accessor Mutator Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -14896,7 +14867,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Continue",
     "platform_name": "AnnEx",
     "title": "Continue",
-    "description": "C++ Example for demonstrating Continue",
+    "description": "C++ BehaviorExample for demonstrating Continue",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -14956,7 +14927,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/BreakStatement",
     "platform_name": "AnnEx",
     "title": "BreakStatement",
-    "description": "C++ Example for demonstrating BreakStatement",
+    "description": "C++ BehaviorExample for demonstrating BreakStatement",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -14998,7 +14969,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -15016,7 +14987,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/printf",
     "platform_name": "AnnEx",
     "title": "printf",
-    "description": "C++ Example for demonstrating printf",
+    "description": "C++ BehaviorExample for demonstrating printf",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -15058,7 +15029,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -15076,7 +15047,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/update_credit_prog",
     "platform_name": "AnnEx",
     "title": "update_credit_prog",
-    "description": "C++ Example for demonstrating update_credit_prog",
+    "description": "C++ BehaviorExample for demonstrating update_credit_prog",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -15180,7 +15151,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -15198,7 +15169,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/StringsCharAt",
     "platform_name": "AnnEx",
     "title": "Strings (charAt)",
-    "description": "Java Example for demonstrating Strings (charAt)",
+    "description": "Java BehaviorExample for demonstrating Strings (charAt)",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -15275,7 +15246,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -15293,7 +15264,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/assign_return",
     "platform_name": "AnnEx",
     "title": "Assign Return",
-    "description": "C++ Example for demonstrating Assign Return",
+    "description": "C++ BehaviorExample for demonstrating Assign Return",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -15322,7 +15293,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/arraylist1",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Create ArrayList",
-    "description": "Java Example for demonstrating DEPRECATED_Create ArrayList",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Create ArrayList",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -15351,7 +15322,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/4-02_Arrays2D",
     "platform_name": "AnnEx",
     "title": "4-02_Arrays2D",
-    "description": "Java Example for demonstrating 4-02_Arrays2D",
+    "description": "Java BehaviorExample for demonstrating 4-02_Arrays2D",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -15382,7 +15353,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/show_color2",
     "platform_name": "AnnEx",
     "title": "ISD::ShowColors2.java",
-    "description": "Java Example for demonstrating ISD::ShowColors2.java",
+    "description": "Java BehaviorExample for demonstrating ISD::ShowColors2.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -15411,7 +15382,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/bubblesort",
     "platform_name": "AnnEx",
     "title": "BubbleSort",
-    "description": "C++ Example for demonstrating BubbleSort",
+    "description": "C++ BehaviorExample for demonstrating BubbleSort",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -15472,7 +15443,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/textarea_demo",
     "platform_name": "AnnEx",
     "title": "ISD::TextAreaDemo.java",
-    "description": "Java Example for demonstrating ISD::TextAreaDemo.java",
+    "description": "Java BehaviorExample for demonstrating ISD::TextAreaDemo.java",
     "license": "MIT",
     "author": [
       "Cross Patrick"
@@ -15501,7 +15472,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/avg_score",
     "platform_name": "AnnEx",
     "title": "avg_score",
-    "description": "C++ Example for demonstrating avg_score",
+    "description": "C++ BehaviorExample for demonstrating avg_score",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -15562,7 +15533,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/string_lib_func1",
     "platform_name": "AnnEx",
     "title": "string_lib_func1",
-    "description": "C++ Example for demonstrating string_lib_func1",
+    "description": "C++ BehaviorExample for demonstrating string_lib_func1",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -15591,7 +15562,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance2_7",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance2_7",
-    "description": "Java Example for demonstrating IS17_inheritance2_7",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance2_7",
     "license": "MIT",
     "author": [
       "Joshua Sawyers"
@@ -15620,7 +15591,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/nonconstpointer",
     "platform_name": "AnnEx",
     "title": "NonConstPointer",
-    "description": "C++ Example for demonstrating NonConstPointer",
+    "description": "C++ BehaviorExample for demonstrating NonConstPointer",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -15662,7 +15633,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -15680,7 +15651,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance3_1",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance3_1",
-    "description": "Java Example for demonstrating IS17_inheritance3_1",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance3_1",
     "license": "MIT",
     "author": [
       "Alex Simeone"
@@ -15709,7 +15680,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/arraysub",
     "platform_name": "AnnEx",
     "title": "ArraysSubscript",
-    "description": "C++ Example for demonstrating ArraysSubscript",
+    "description": "C++ BehaviorExample for demonstrating ArraysSubscript",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -15738,7 +15709,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface2_4",
     "platform_name": "AnnEx",
     "title": "IS17_interface2_4",
-    "description": "Java Example for demonstrating IS17_interface2_4",
+    "description": "Java BehaviorExample for demonstrating IS17_interface2_4",
     "license": "MIT",
     "author": [
       "Andres Pacheco"
@@ -15800,7 +15771,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/call_by_value",
     "platform_name": "AnnEx",
     "title": "Function CallByValue",
-    "description": "C++ Example for demonstrating Function CallByValue",
+    "description": "C++ BehaviorExample for demonstrating Function CallByValue",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -15860,7 +15831,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/switch",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_switch",
-    "description": "Java Example for demonstrating DEPRECATED_switch",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_switch",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -15889,7 +15860,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/simple_inheritance_1",
     "platform_name": "AnnEx",
     "title": "Simple Inheritance",
-    "description": "Java Example for demonstrating Simple Inheritance",
+    "description": "Java BehaviorExample for demonstrating Simple Inheritance",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -15933,7 +15904,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -15951,7 +15922,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/while_structure",
     "platform_name": "AnnEx",
     "title": "while_structure",
-    "description": "C++ Example for demonstrating while_structure",
+    "description": "C++ BehaviorExample for demonstrating while_structure",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -15980,7 +15951,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/while_counter",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_WhileCounter ",
-    "description": "Java Example for demonstrating DEPRECATED_WhileCounter ",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_WhileCounter ",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -16041,7 +16012,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/StringsEqualsIgnoreCase",
     "platform_name": "AnnEx",
     "title": "Strings (equalsIgnoreCase)",
-    "description": "Java Example for demonstrating Strings (equalsIgnoreCase)",
+    "description": "Java BehaviorExample for demonstrating Strings (equalsIgnoreCase)",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -16086,7 +16057,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -16104,7 +16075,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/pointernot",
     "platform_name": "AnnEx",
     "title": "PointerNotation",
-    "description": "C++ Example for demonstrating PointerNotation",
+    "description": "C++ BehaviorExample for demonstrating PointerNotation",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -16166,7 +16137,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface3_1",
     "platform_name": "AnnEx",
     "title": "IS17_interface3_1",
-    "description": "Java Example for demonstrating IS17_interface3_1",
+    "description": "Java BehaviorExample for demonstrating IS17_interface3_1",
     "license": "MIT",
     "author": [
       "Alex Simeone"
@@ -16195,7 +16166,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance3_2",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance3_2",
-    "description": "Java Example for demonstrating IS17_inheritance3_2",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance3_2",
     "license": "MIT",
     "author": [
       "Annette Rico"
@@ -16224,7 +16195,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance3_5",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance3_5",
-    "description": "Java Example for demonstrating IS17_inheritance3_5",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance3_5",
     "license": "MIT",
     "author": [
       "Andrew Mowrey"
@@ -16328,7 +16299,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -16346,7 +16317,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/defined_func2",
     "platform_name": "AnnEx",
     "title": "defined_func2",
-    "description": "C++ Example for demonstrating defined_func2",
+    "description": "C++ BehaviorExample for demonstrating defined_func2",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -16406,7 +16377,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/multi_selection",
     "platform_name": "AnnEx",
     "title": "ISD::MultipleSelection.java",
-    "description": "Java Example for demonstrating ISD::MultipleSelection.java",
+    "description": "Java BehaviorExample for demonstrating ISD::MultipleSelection.java",
     "license": "MIT",
     "author": [
       "Banks Christopher"
@@ -16435,7 +16406,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/4-11_AnimalClient",
     "platform_name": "AnnEx",
     "title": "4-11_AnimalClient",
-    "description": "Java Example for demonstrating 4-11_AnimalClient",
+    "description": "Java BehaviorExample for demonstrating 4-11_AnimalClient",
     "license": "MIT",
     "author": [
       "Kamil Akhuseyinoglu"
@@ -16513,7 +16484,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -16531,7 +16502,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/StringsReplace",
     "platform_name": "AnnEx",
     "title": "Strings (replace)",
-    "description": "Java Example for demonstrating Strings (replace)",
+    "description": "Java BehaviorExample for demonstrating Strings (replace)",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -16638,7 +16609,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -16656,7 +16627,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/read_seq_file",
     "platform_name": "AnnEx",
     "title": "read_seq_file",
-    "description": "C++ Example for demonstrating read_seq_file",
+    "description": "C++ BehaviorExample for demonstrating read_seq_file",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -16698,7 +16669,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -16762,7 +16733,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -16793,7 +16764,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -16855,7 +16826,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -16886,7 +16857,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -16904,7 +16875,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/metrics",
     "platform_name": "AnnEx",
     "title": "ISD::Metrics.java",
-    "description": "Java Example for demonstrating ISD::Metrics.java",
+    "description": "Java BehaviorExample for demonstrating ISD::Metrics.java",
     "license": "MIT",
     "author": [
       "Sharon Hsiao"
@@ -16933,7 +16904,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/ConstructorDemo",
     "platform_name": "AnnEx",
     "title": "Constructor Demo",
-    "description": "Java Example for demonstrating Constructor Demo",
+    "description": "Java BehaviorExample for demonstrating Constructor Demo",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -16978,7 +16949,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -16996,7 +16967,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_inheritance1_1",
     "platform_name": "AnnEx",
     "title": "IS17_inheritance1_1",
-    "description": "Java Example for demonstrating IS17_inheritance1_1",
+    "description": "Java BehaviorExample for demonstrating IS17_inheritance1_1",
     "license": "MIT",
     "author": [
       "James Bowman"
@@ -17025,7 +16996,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/Whileloop",
     "platform_name": "AnnEx",
     "title": "Whileloop",
-    "description": "C++ Example for demonstrating Whileloop",
+    "description": "C++ BehaviorExample for demonstrating Whileloop",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -17054,7 +17025,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/CreateObjectDemo",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_CreateObjectDemo",
-    "description": "Java Example for demonstrating DEPRECATED_CreateObjectDemo",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_CreateObjectDemo",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -17083,7 +17054,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/strtok",
     "platform_name": "AnnEx",
     "title": "strtok",
-    "description": "C++ Example for demonstrating strtok",
+    "description": "C++ BehaviorExample for demonstrating strtok",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -17112,13 +17083,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_variable_types",
     "platform_name": "AnnEx",
     "title": "Variable Types",
-    "description": "C++ Example for demonstrating Variable Types",
+    "description": "C++ BehaviorExample for demonstrating Variable Types",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -17154,7 +17125,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -17217,7 +17188,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -17235,7 +17206,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_ArrayList3_4",
     "platform_name": "AnnEx",
     "title": "IS17_ArrayList3_4",
-    "description": "Java Example for demonstrating IS17_ArrayList3_4",
+    "description": "Java BehaviorExample for demonstrating IS17_ArrayList3_4",
     "license": "MIT",
     "author": [
       "Aslam Mogri"
@@ -17277,7 +17248,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -17295,7 +17266,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/ArrayListTester",
     "platform_name": "AnnEx",
     "title": "ArrayList Tester",
-    "description": "Java Example for demonstrating ArrayList Tester",
+    "description": "Java BehaviorExample for demonstrating ArrayList Tester",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -17371,7 +17342,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -17402,7 +17373,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -17452,7 +17423,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/shapes2",
     "platform_name": "AnnEx",
     "title": "ISD::Shapes2.java",
-    "description": "Java Example for demonstrating ISD::Shapes2.java",
+    "description": "Java BehaviorExample for demonstrating ISD::Shapes2.java",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -17513,7 +17484,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/char_array",
     "platform_name": "AnnEx",
     "title": "Array of Char",
-    "description": "C++ Example for demonstrating Array of Char",
+    "description": "C++ BehaviorExample for demonstrating Array of Char",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -17542,7 +17513,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/array_declaration",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Array Declaration",
-    "description": "Java Example for demonstrating DEPRECATED_Array Declaration",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Array Declaration",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -17584,7 +17555,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -17634,7 +17605,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/Constants",
     "platform_name": "AnnEx",
     "title": "DEPRECATED_Constants",
-    "description": "Java Example for demonstrating DEPRECATED_Constants",
+    "description": "Java BehaviorExample for demonstrating DEPRECATED_Constants",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -17676,7 +17647,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -17725,7 +17696,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/printaddress",
     "platform_name": "AnnEx",
     "title": "PrintAddress",
-    "description": "C++ Example for demonstrating PrintAddress",
+    "description": "C++ BehaviorExample for demonstrating PrintAddress",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -17767,7 +17738,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -17816,7 +17787,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/rand_access_file",
     "platform_name": "AnnEx",
     "title": "rand_access_file",
-    "description": "C++ Example for demonstrating rand_access_file",
+    "description": "C++ BehaviorExample for demonstrating rand_access_file",
     "license": "MIT",
     "author": [
       "Administrator"
@@ -17858,7 +17829,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -17889,7 +17860,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -17920,7 +17891,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -17938,13 +17909,13 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/c_ch2_initialize_variable",
     "platform_name": "AnnEx",
     "title": "Initializing Variables",
-    "description": "C++ Example for demonstrating Initializing Variables",
+    "description": "C++ BehaviorExample for demonstrating Initializing Variables",
     "license": "MIT",
     "author": [
       "Natalya Goreva "
     ],
     "institution": [
-      ""
+      "Indiana University of Pennsylvania"
     ],
     "keywords": [],
     "features": [],
@@ -17998,7 +17969,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface2_7",
     "platform_name": "AnnEx",
     "title": "IS17_interface2_7",
-    "description": "Java Example for demonstrating IS17_interface2_7",
+    "description": "Java BehaviorExample for demonstrating IS17_interface2_7",
     "license": "MIT",
     "author": [
       "Joshua Sawyers"
@@ -18027,7 +17998,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/IS17_interface1",
     "platform_name": "AnnEx",
     "title": "IS17_interface1",
-    "description": "Java Example for demonstrating IS17_interface1",
+    "description": "Java BehaviorExample for demonstrating IS17_interface1",
     "license": "MIT",
     "author": [
       "Unknown"
@@ -18056,7 +18027,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/StringsParse",
     "platform_name": "AnnEx",
     "title": "Strings (parse)",
-    "description": "Java Example for demonstrating Strings (parse)",
+    "description": "Java BehaviorExample for demonstrating Strings (parse)",
     "license": "MIT",
     "author": [
       "Roya Hosseini"
@@ -18087,7 +18058,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-java/print_println_annoexp",
     "platform_name": "AnnEx",
     "title": "PrintPrintln",
-    "description": "Java Example for demonstrating PrintPrintln",
+    "description": "Java BehaviorExample for demonstrating PrintPrintln",
     "license": "MIT",
     "author": [
       "Yun Huang"
@@ -18129,7 +18100,7 @@
     ],
     "features": [],
     "programming_language": [
-      "SQL"
+      "Sql"
     ],
     "natural_language": [
       "en"
@@ -18147,7 +18118,7 @@
     "persistentID": "https://acos.cs.vt.edu/html/annotated/acos-annex-cpp/using_arrays",
     "platform_name": "AnnEx",
     "title": "Using Arrays",
-    "description": "C++ Example for demonstrating Using Arrays",
+    "description": "C++ BehaviorExample for demonstrating Using Arrays",
     "license": "MIT",
     "author": [
       "Administrator"
