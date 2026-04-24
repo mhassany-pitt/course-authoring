@@ -19,7 +19,7 @@ export class CatalogV2Service {
       .select(
         'identity.id identity.title identity.type status listed_at links.demo_url ' +
           'content.prompt tags attribution.authors languages.programming_languages languages.content_language languages.content_language ' +
-          'attribution.provider rights.license delivery classification.knowledge_components paws_id',
+          'attribution.provider rights.license delivery.protocol classification.knowledge_components paws_id',
       );
 
     return items

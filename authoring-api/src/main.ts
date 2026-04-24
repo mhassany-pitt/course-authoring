@@ -25,12 +25,12 @@ async function bootstrap() {
   app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
   app.use(session({
     secret: config.get('SESSION_SECRET'),
-    resave: true,
-    saveUninitialized: true,
+    resave: false,
+    saveUninitialized: false,
     name: 'course-authoring-session',
     store: new (FileStore(session))({ path: config.get('STORAGE_PATH') + '/sessions' }),
     cookie: {
-      secure: false,
+      secure: production,
       maxAge: 30 * 24 * 60 * 60 * 1000 // 30 days
     }
   }))
