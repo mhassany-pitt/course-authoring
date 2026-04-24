@@ -20,8 +20,12 @@
     "publisher": "",
     "authors": [
       {
-        "name": "Arun Balajiee Lekshmi Narayanan & Rully Hendrawan",
-        "affiliation": ""
+        "name": "Arun Balajiee Lekshmi Narayanan",
+        "affiliation": "University of Pittsburgh"
+      },
+      {
+        "name": "Rully Hendrawan",
+        "affiliation": "University of Pittsburgh"
       }
     ]
   },
