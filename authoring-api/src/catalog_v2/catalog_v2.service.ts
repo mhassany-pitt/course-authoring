@@ -13,6 +13,10 @@ export class CatalogV2Service {
   ) {}
 
   async list() {
+    // print the number of items in the catalog for debugging
+    const itemCount = await this.catalogItems.countDocuments();
+    console.log(`Number of items in catalog: ${itemCount}`);
+
     const items = await this.catalogItems
       .find({ status: { $in: ['public', 'deprecated', 'broken:pending-fix'] } })
       .sort({ listed_at: 'desc' })
