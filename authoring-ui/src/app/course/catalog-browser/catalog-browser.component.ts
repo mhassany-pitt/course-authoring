@@ -3,6 +3,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
 import { FormsModule } from '@angular/forms';
 import { CatalogV2Service } from '../../catalog_v2/catalog-v2.service';
 import { CatalogV2Item } from '../../catalog_v2/catalog-v2.types';
+import { ContentRecommender } from '../content-recommender';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { IconFieldModule } from 'primeng/iconfield';
@@ -25,7 +26,7 @@ type QuickFilterSectionKey = 'types' | 'authors' | 'providers' | 'knowledgeCompo
     IconFieldModule,
     InputIconModule,
     ButtonModule,
-],
+  ],
 })
 export class CatalogBrowserComponent implements OnInit, OnChanges {
   @Input() resourceName = '';
@@ -33,6 +34,7 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
   @Input() domain = '';
   @Input() providerIds: string[] = [];
   @Input() selectedActivities: any[] = [];
+  @Input() recommender?: ContentRecommender;
   @Output() close = new EventEmitter<void>();
   @Output() selectedActivitiesChange = new EventEmitter<any[]>();
   @Output() interaction = new EventEmitter<any>();
@@ -43,7 +45,7 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
   loading = false;
   error = '';
   globalQuery = '';
-  showSelectedOnly = false;
+  filterMode: 'all' | 'selected' | 'unselected' = 'unselected';
   selectedTypes: string[] = [];
   selectedProviders: string[] = [];
   selectedAuthors: string[] = [];
@@ -51,9 +53,13 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
   selectedContentLanguages: string[] = [];
   authorsQuery = '';
   knowledgeComponentsQuery = '';
-  selectedKnowledgeComponentCategory = 'All';
+  selectedKnowledgeComponentCategory = (typeof window !== 'undefined' && localStorage.getItem('lastSelectedKcCategory')) || 'All';
   showAllAuthors = false;
   showAllKnowledgeComponents = false;
+  sortOrder: 'none' | 'asc' | 'desc' = 'desc';
+  scoresCache = new Map<string, number | null>();
+  maxPositiveScore = 0;
+  minNegativeScore = 0;
   private readonly authorsDefaultLimit = 20;
   private readonly knowledgeComponentsDefaultLimit = 20;
   quickFilterSections: Record<QuickFilterSectionKey, boolean> = {
@@ -78,15 +84,34 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
       this.syncSelectedItems();
     }
 
-    if (changes['selectedActivities'] && this.items.length)
+    if (changes['selectedActivities'] && this.items.length) {
       this.syncSelectedItems();
+    }
+
+    if (changes['recommender'] || changes['unitName']) {
+      this.updateScoresCache();
+    }
   }
 
   get filteredItems() {
     const items = this.filterItems(this.items);
-    return this.showSelectedOnly
-      ? items.filter((item) => this.isSelected(item))
-      : items;
+    let result = items;
+
+    if (this.filterMode === 'selected') {
+      result = items.filter((item) => this.isSelected(item));
+    } else if (this.filterMode === 'unselected') {
+      result = items.filter((item) => !this.isSelected(item));
+    }
+
+    if (this.sortOrder === 'none') {
+      return result;
+    }
+
+    return [...result].sort((a, b) => {
+      const scoreA = this.getAlignmentScore(a) ?? 0;
+      const scoreB = this.getAlignmentScore(b) ?? 0;
+      return this.sortOrder === 'desc' ? scoreB - scoreA : scoreA - scoreB;
+    });
   }
 
   get lastLoadedAt() {
@@ -190,10 +215,15 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
       const type = item.identity?.type || '';
       const provider = item.attribution?.provider || '';
       const authors = (item.attribution?.authors || []).map((author) => author.name).filter(Boolean);
-      const knowledgeComponents = this.knowledgeComponentsText(item);
+      const knowledgeComponents = this.knowledgeComponentsText(item, this.selectedKnowledgeComponentCategory);
       const contentLanguage = item.languages?.content_language || '';
 
-      return (excludeFacet === 'type' || !this.selectedTypes.length || this.selectedTypes.includes(type))
+      const kcsObj = item.classification?.knowledge_components;
+      const hasCategory = this.selectedKnowledgeComponentCategory === 'All'
+        || !!(kcsObj && typeof kcsObj === 'object' && Object.prototype.hasOwnProperty.call(kcsObj, this.selectedKnowledgeComponentCategory));
+
+      return hasCategory
+        && (excludeFacet === 'type' || !this.selectedTypes.length || this.selectedTypes.includes(type))
         && (excludeFacet === 'provider' || !this.selectedProviders.length || this.selectedProviders.includes(provider))
         && (excludeFacet === 'author' || !this.selectedAuthors.length || authors.some((author) => this.selectedAuthors.includes(author)))
         && (excludeFacet === 'knowledgeComponent'
@@ -271,6 +301,7 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
       const matchesDomain = !domain || (item.languages?.programming_languages || []).includes(domain);
       return matchesProvider && matchesDomain;
     });
+    this.updateScoresCache();
   }
 
   syncSelectedItems() {
@@ -393,6 +424,9 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
   onKnowledgeComponentCategoryChange(value: string) {
     const prevValue = this.selectedKnowledgeComponentCategory;
     this.selectedKnowledgeComponentCategory = value || 'All';
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('lastSelectedKcCategory', this.selectedKnowledgeComponentCategory);
+    }
     this.showAllKnowledgeComponents = false;
     this.emitInteraction('change-kc-category', { field: 'knowledge-components-category' }, this.selectedKnowledgeComponentCategory, prevValue);
   }
@@ -408,6 +442,73 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
   authorsText(item: CatalogV2Item) {
     const authors = item.attribution?.authors || [];
     return authors.map((author) => author.name).filter(Boolean).join(', ') || '-';
+  }
+
+  updateScoresCache() {
+    this.scoresCache.clear();
+    let maxPos = 0;
+    let minNeg = 0;
+
+    this.items.forEach((item) => {
+      const score = this.calculateRawScore(item);
+      this.scoresCache.set(item.id, score);
+
+      if (score !== null) {
+        if (score > 0 && score > maxPos) {
+          maxPos = score;
+        } else if (score < 0 && score < minNeg) {
+          minNeg = score;
+        }
+      }
+    });
+
+    this.maxPositiveScore = maxPos;
+    this.minNegativeScore = minNeg;
+  }
+
+  calculateRawScore(item: CatalogV2Item): number | null {
+    if (!this.recommender) return null;
+    const kcs = this.knowledgeComponentsText(item);
+    return this.recommender.calcAlignmentScore(this.unitName || '', kcs);
+  }
+
+  getAlignmentScore(item: CatalogV2Item): number | null {
+    if (!this.scoresCache.has(item.id)) {
+      const score = this.calculateRawScore(item);
+      this.scoresCache.set(item.id, score);
+    }
+    return this.scoresCache.get(item.id) ?? null;
+  }
+
+  getNormalizedScoreObj(item: CatalogV2Item): { percentage: string; value: number; raw: number } | null {
+    const raw = this.getAlignmentScore(item);
+    if (raw === null) return null;
+
+    let percentage = '0%';
+    if (raw > 0) {
+      const pct = this.maxPositiveScore > 0 ? Math.round((raw / this.maxPositiveScore) * 100) : 0;
+      percentage = `+${pct}%`;
+    } else if (raw < 0) {
+      const pct = this.minNegativeScore < 0 ? Math.round((raw / this.minNegativeScore) * 100) : 0;
+      percentage = `-${pct}%`;
+    }
+
+    return {
+      percentage,
+      value: raw,
+      raw
+    };
+  }
+
+  getScoreTooltip(scoreObj: { percentage: string; value: number; raw: number }): string {
+    const rawVal = scoreObj.raw.toFixed(1);
+    if (scoreObj.raw > 0) {
+      return `Alignment relevance: ${scoreObj.percentage} (Raw score: +${rawVal}). Reinforces concepts in this unit and past units.`;
+    }
+    if (scoreObj.raw < 0) {
+      return `Alignment warning: ${scoreObj.percentage} (Raw score: ${rawVal}). Introduces future concepts prematurely.`;
+    }
+    return `Alignment neutral: 0% (Raw score: 0.0). No overlapping concepts with the course curriculum.`;
   }
 
   knowledgeComponentsText(item: CatalogV2Item, category = 'All') {
@@ -433,10 +534,72 @@ export class CatalogBrowserComponent implements OnInit, OnChanges {
     return this.selectedItems.some((selected) => selected.id === item.id);
   }
 
-  toggleShowSelectedOnly() {
-    const prevValue = this.showSelectedOnly;
-    this.showSelectedOnly = !this.showSelectedOnly;
-    this.emitInteraction('toggle-selected-only', { field: 'show-selected-only' }, this.showSelectedOnly, prevValue);
+  cycleFilterMode() {
+    const prevValue = this.filterMode;
+    if (this.filterMode === 'all') {
+      this.filterMode = 'unselected';
+    } else if (this.filterMode === 'unselected') {
+      this.filterMode = 'selected';
+    } else {
+      this.filterMode = 'all';
+    }
+    this.emitInteraction('change-filter-mode', { field: 'filter-mode' }, this.filterMode, prevValue);
+  }
+
+  get filterModeLabel() {
+    if (this.filterMode === 'selected') {
+      return 'Showing selected items';
+    }
+    if (this.filterMode === 'unselected') {
+      return 'Showing available items';
+    }
+    return 'Showing all items';
+  }
+
+  get filterModeIcon() {
+    if (this.filterMode === 'selected') {
+      return 'fa fa-check-square-o';
+    }
+    if (this.filterMode === 'unselected') {
+      return 'fa fa-eye-slash';
+    }
+    return 'fa fa-list';
+  }
+
+  get filterModeOutlined() {
+    return this.filterMode === 'all';
+  }
+
+  toggleSortOrder() {
+    const prevValue = this.sortOrder;
+    if (this.sortOrder === 'none') {
+      this.sortOrder = 'desc';
+    } else if (this.sortOrder === 'desc') {
+      this.sortOrder = 'asc';
+    } else {
+      this.sortOrder = 'none';
+    }
+    this.emitInteraction('toggle-sort-order', { field: 'sort-order' }, this.sortOrder, prevValue);
+  }
+
+  get sortOrderLabel() {
+    if (this.sortOrder === 'desc') {
+      return 'Sort: Relevance (High → Low)';
+    }
+    if (this.sortOrder === 'asc') {
+      return 'Sort: Relevance (Low → High)';
+    }
+    return 'Sort: Relevance';
+  }
+
+  get sortOrderIcon() {
+    if (this.sortOrder === 'desc') {
+      return 'fa fa-sort-amount-desc';
+    }
+    if (this.sortOrder === 'asc') {
+      return 'fa fa-sort-amount-asc';
+    }
+    return 'fa fa-sort';
   }
 
   onTablePage(event: any) {

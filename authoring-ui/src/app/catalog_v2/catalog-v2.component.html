@@ -32,7 +32,7 @@
     <h1 class="my-0">
       <span class="text-3xl font-bold"> SLCs Catalog </span>
       <span class="text-gray-500 text-sm ml-2">
-        ({{ items?.length || 0 }} Smart Learning Contents)
+        ({{ filteredItems?.length || 0 }} Smart Learning Contents)
       </span>
     </h1>
 
@@ -656,7 +656,7 @@
         <div class="border border-solid border-gray-100 shadow-md">
           <p-table
             #table
-            [value]="items"
+            [value]="filteredItems"
             [loading]="loading"
             [showLoader]="false"
             [paginator]="true"
@@ -668,7 +668,7 @@
               'identity.title',
               'content.prompt',
             ]"
-            (onFilter)="onTableFilter(table.filteredValue || items)"
+            (onFilter)="onTableFilter(table.filteredValue || filteredItems)"
           >
             <ng-template pTemplate="loadingbody">
               <tr>

@@ -10,6 +10,7 @@ import { CatalogV2Item } from '../catalog_v2/catalog-v2.types';
 import { firstValueFrom, Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { ContentRecommender } from './content-recommender';
 
 @Component({
   selector: 'app-course',
@@ -27,6 +28,7 @@ export class CourseComponent implements OnInit {
   any = any;
 
   course: any;
+  recommender = new ContentRecommender();
   UNIT_MAX_LEVEL = 3;
 
   editingProviders: any;
@@ -270,6 +272,7 @@ export class CourseComponent implements OnInit {
     unit.activities ||= {};
     const prevValue = this.cloneValue(unit.activities[this.activeCatalogBrowser.resourceId] || []);
     unit.activities[this.activeCatalogBrowser.resourceId] = activities;
+    this.updateRecommender();
     this.logCourseChange(
       'update-activities',
       {
@@ -396,6 +399,7 @@ export class CourseComponent implements OnInit {
     });
     this.course.units.sort((u1: any, u2: any) => map[u1.id][0] - map[u2.id][0]);
     this.course.units.forEach((u: any) => u.level = map[u.id][1]);
+    this.updateRecommender();
     const value = this.course.units.map((unit: any, index: number) => {
       const { activities, ...rest } = this.cloneValue(unit);
       return {
@@ -416,6 +420,7 @@ export class CourseComponent implements OnInit {
     course.domain = this.domainLegacyToCatalog(course.domain);
     this.course = course;
     this.catalogItems = items || [];
+    this.updateRecommender();
     this.loadDomains();
     this.loadProviders(this.course.domain);
     this.logCourseChange('load', { field: 'course' }, loadedCourse, null);
@@ -567,6 +572,7 @@ export class CourseComponent implements OnInit {
       accept: () => {
         const prevValue = this.cloneValue(this.course.resources);
         this.course.resources = this.course.resources.filter((r: any) => r.id != resource.id);
+        this.updateRecommender();
         this.logCourseChange('remove-resource', { field: 'resources', resource: this.cloneValue(resource) }, this.course.resources, prevValue);
       }
     });
@@ -583,6 +589,7 @@ export class CourseComponent implements OnInit {
         const prevValue = this.cloneValue(this.course.units);
         const removeIds = [unit, ...this.findChildUnits(unit)].map((u: any) => u.id);
         this.course.units = this.course.units.filter((u: any) => !removeIds.includes(u.id));
+        this.updateRecommender();
         this.logCourseChange('remove-unit', { field: 'units', unit: this.cloneValue(unit) }, this.course.units, prevValue);
       }
     });
@@ -611,6 +618,7 @@ export class CourseComponent implements OnInit {
   rearrange(event: any, list: any, unit: any, resource: any) {
     const prevValue = this.cloneValue(list);
     moveItemInArray(list, event.previousIndex, event.currentIndex);
+    this.updateRecommender();
     this.logCourseChange(
       'move-activity',
       {
@@ -634,6 +642,7 @@ export class CourseComponent implements OnInit {
       accept: () => {
         const prevValue = this.cloneValue(unit.activities[resource.id]);
         unit.activities[resource.id].splice(aindex, 1);
+        this.updateRecommender();
         this.logCourseChange(
           'remove-activity',
           {
@@ -677,6 +686,7 @@ export class CourseComponent implements OnInit {
 
       const prevValue = this.cloneValue(unit.activities[resource.id]);
       unit.activities[resource.id][this.editingActivityIndex] = updatedActivity;
+      this.updateRecommender();
 
       this.logCourseChange(
         'edit-activity-advanced',
@@ -909,12 +919,16 @@ export class CourseComponent implements OnInit {
       return;
 
     this.logCourseChange('blur', object, value, prevValue);
+    if (key.startsWith('unit-name:')) {
+      this.updateRecommender();
+    }
   }
 
   addUnit() {
     const prevValue = this.cloneValue(this.course.units);
     const unit = { id: this.nextResourceId(), level: 0 };
     this.course.units.push(unit);
+    this.updateRecommender();
     this.logCourseChange('add-unit', { field: 'units', unit: this.cloneValue(unit) }, this.course.units, prevValue);
   }
 
@@ -962,6 +976,49 @@ export class CourseComponent implements OnInit {
     return JSON.parse(JSON.stringify(value));
   }
 
+  getKnowledgeComponents(item: CatalogV2Item): string[] {
+    const knowledgeComponents = item.classification?.knowledge_components;
+    if (!knowledgeComponents || typeof knowledgeComponents !== 'object')
+      return [];
+
+    const entries = Object.values(knowledgeComponents);
+    return Array.from(
+      new Set(
+        entries
+          .flatMap((entry) => entry?.concepts || [])
+          .map((concept) => String(concept || '').trim())
+          .filter(Boolean),
+      ),
+    );
+  }
+
+  updateRecommender() {
+    this.recommender = new ContentRecommender();
+    if (!this.course || !this.course.units) return;
+
+    this.course.units.forEach((unit: any, index: number) => {
+      const topicName = unit.name || '';
+      this.recommender.addTopic(topicName, index);
+    });
+
+    this.course.units.forEach((unit: any) => {
+      if (!unit.activities) return;
+      const topicName = unit.name || '';
+      for (const resourceId of Object.keys(unit.activities)) {
+        const activities = unit.activities[resourceId] || [];
+        activities.forEach((activity: any) => {
+          const catalogItem = this.catalogItems.find((item) =>
+            String(item.paws_id) === String(activity.id) ||
+            item.identity?.id === activity.id ||
+            item.links?.demo_url === activity.url
+          );
+          const kcs = catalogItem ? this.getKnowledgeComponents(catalogItem) : (activity.tags || []);
+          this.recommender.addContent(topicName, activity.id || activity.url, kcs);
+        });
+      }
+    });
+  }
+
   getActivityLogUnit(unit: any) {
     const { activities, ...rest } = this.cloneValue(unit);
     return rest;
@@ -978,6 +1035,13 @@ export class CourseComponent implements OnInit {
 
     const unit = this.course?.units?.find((item: any) => item.id == this.activeCatalogBrowser?.unitId);
     const resource = this.course?.resources?.find((item: any) => item.id == this.activeCatalogBrowser?.resourceId);
+
+    if (interaction.action === 'reload-catalog') {
+      this.catalogV2.list().subscribe((items) => {
+        this.catalogItems = items || [];
+        this.updateRecommender();
+      });
+    }
 
     this.logCourseChange(
       interaction.action,

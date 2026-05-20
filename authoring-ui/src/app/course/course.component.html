@@ -324,6 +324,7 @@
                           [ngStyle]="catalogBrowserPopupAnchorStyle"></span>
                         <app-catalog-browser [resourceName]="activeCatalogBrowserResourceName" [unitName]="unit.name" [domain]="course.domain"
                           [providerIds]="activeCatalogBrowserProviderIds" [selectedActivities]="activeCatalogBrowserActivities"
+                          [recommender]="recommender"
                           (close)="closeCatalogBrowser()"
                           (interaction)="logCatalogBrowserInteraction($event)"
                           (selectedActivitiesChange)="updateCatalogBrowserActivities($event)" />

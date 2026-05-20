@@ -39,6 +39,16 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
 
   items: any = [];
 
+  get filteredItems() {
+    if (this.selectedKnowledgeComponentCategory === 'All') {
+      return this.items;
+    }
+    return this.items.filter((item: any) => {
+      const kcsObj = item.classification?.knowledge_components;
+      return !!(kcsObj && typeof kcsObj === 'object' && Object.prototype.hasOwnProperty.call(kcsObj, this.selectedKnowledgeComponentCategory));
+    });
+  }
+
   selectedKVs: { [key: string]: any } = {};
   typeKVs: FilterKV[] = [];
   providersKVs: FilterKV[] = [];
@@ -275,7 +285,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     this.reloadFilterKVs(this.items);
     const clearedParams = this.quickFilterFields.reduce(
       (acc: Params, key) => ({ ...acc, [key]: null }),
-      { q: null, qf: null },
+      { q: null, qf: null, kc_category: null },
     );
     this.syncQueryParams(clearedParams);
   }
@@ -487,7 +497,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         }
       });
 
-      this.items.forEach((item: any) => {
+      this.filteredItems.forEach((item: any) => {
         if (!this.matchesActiveFiltersExcept(item, targetField)) return;
         const itemLabelsLower = new Set(
           this.getItemFacetLabelsLower(item, targetField),
@@ -694,6 +704,16 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   }
 
   private applyFiltersFromParams(params: Params) {
+    const prevCategory = this.selectedKnowledgeComponentCategory;
+    this.selectedKnowledgeComponentCategory = params['kc_category'] || 'All';
+    if (prevCategory !== this.selectedKnowledgeComponentCategory) {
+      this.showAllKnowledgeComponents = false;
+      this.lastConceptKVsRef = null;
+      if (this.table) {
+        this.table.first = 0;
+      }
+    }
+
     this.globalQuery = (params['q'] || '').trim();
     if (this.table) this.table.filterGlobal(this.globalQuery, 'contains');
 
@@ -865,6 +885,16 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     this.selectedKnowledgeComponentCategory = value || 'All';
     this.showAllKnowledgeComponents = false;
     this.lastConceptKVsRef = null;
+    if (this.table) {
+      this.table.first = 0;
+    }
+    this.refreshAvailableFacetLabels();
+    this.syncQueryParams({
+      kc_category:
+        this.selectedKnowledgeComponentCategory === 'All'
+          ? null
+          : this.selectedKnowledgeComponentCategory,
+    });
   }
 
   onAuthorsQueryChange(value: string) {
