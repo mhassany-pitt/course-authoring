@@ -1,0 +1,78 @@
+{
+  "id": "e11d918d59a9fe74e3267549",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-cpp-DoubleLoops-2",
+    "title": "codecheck-cpp-DoubleLoops-2",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-cpp-DoubleLoops-2"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "Given two arrays a and b, return an array that contains all elements occurring in a but not in b.",
+    "source_code": "/**\r\n   Set result to all elements in a which are not in b.\r\n   @param a the first array.\r\n   @param a_size size of the first array.\r\n   @param b the seond array.\r\n   @param b_size the size of the second array.\r\n   @param result the array to store the result.\r\n   @return the size of result.\r\n*/\r\nint element_in_a_not_b(const int a[], int a_size, \r\n                       const int b[], int b_size, int result[])\r\n{\r\n\n\n\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Arrays - Simple Exercises",
+          "Double Loops"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-cpp-DoubleLoops-2"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-cpp-DoubleLoops-2"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

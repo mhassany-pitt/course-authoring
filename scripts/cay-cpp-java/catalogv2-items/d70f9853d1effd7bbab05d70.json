@@ -1,0 +1,77 @@
+{
+  "id": "d70f9853d1effd7bbab05d70",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-list-109",
+    "title": "codecheck-bj-4-list-109",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-list-109"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Implement the addLast method in this simplified LinkedList class.",
+    "source_code": "/**\r\n   A linked list is a sequence of nodes with efficient\r\n   element insertion and removal. This class \r\n   contains a subset of the methods of the standard\r\n   java.util.LinkedList class.\r\n*/\r\npublic class LinkedList\r\n{  \r\n   private Node first;\r\n      \n   /** \r\n      Constructs an empty linked list.\r\n   */\r\n   public LinkedList()\r\n   {  \r\n      first = null;\r\n   }\r\n   \r\n   /**\r\n      Adds an element to the front of the linked list.\r\n      @param element the element to add\r\n   */\r\n   public void addFirst(Object element)\r\n   {  \r\n      Node newNode = new Node();\r\n      newNode.data = element;\r\n      newNode.next = first;\r\n      first = newNode;\r\n   }\r\n\n   /**\r\n      Adds an element to the end of the linked list.\r\n      @param element the element to add\r\n   */\r\n   public void addLast(Object element)\r\n   {  \r\n      // your work here\n   }\n   \n   public String toString()\n   {\n      String r = \"[\";\n      for (Node current = first; current != null; current = current.next)\n      {\n         if (current != first) r = r + \",\";\n         r = r + current.data;\n      }\n      return r + \"]\";    \n   }\n   \n   class Node\n   {  \n      public Object data;\n      public Node next;\n   }   \n   \r\n   // This method is used to check your work\n   public static String check(String[] first, String[] last)\n   {\n      LinkedList list = new LinkedList();\n      for (String s : last) list.addLast(s);\n      for (String s : first) list.addFirst(s);\n      return list.toString();\n   }      \r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Linear Data Structures"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-list-109"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-list-109"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

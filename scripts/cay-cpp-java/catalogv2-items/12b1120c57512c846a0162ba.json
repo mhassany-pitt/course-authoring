@@ -1,0 +1,80 @@
+{
+  "id": "12b1120c57512c846a0162ba",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-cpp-SumsAveragesProducts-7",
+    "title": "codecheck-cpp-SumsAveragesProducts-7",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-cpp-SumsAveragesProducts-7"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "Given an array of integers, give the smallest n so that the\nsum of the first n elements is at least as large as the sum of the remaining elements.",
+    "source_code": "#include <iostream>\nusing namespace std;\n\nint partial_sum_at_least_half(const int arr[], int arr_size)\n{\n\n\n\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Arrays - Simple Exercises",
+          "Sums",
+          "Averages",
+          "Products"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-cpp-SumsAveragesProducts-7"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-cpp-SumsAveragesProducts-7"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

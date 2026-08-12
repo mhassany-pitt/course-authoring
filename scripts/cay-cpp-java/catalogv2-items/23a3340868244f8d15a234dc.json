@@ -1,0 +1,77 @@
+{
+  "id": "23a3340868244f8d15a234dc",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-object-102",
+    "title": "codecheck-bj-4-object-102",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-object-102"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the following program to compute the average length of the words. Invoke the appropriate method to compute the length of each word, compute the sum of the five results, and divide by 5.0. (You will see in chapter 4 why you need to divide by 5.0 and not simply 5.)",
+    "source_code": "public class AverageTester\n{\n   public static void main(String[] args)\n   {\n      String word1 = \"Mary\";\n      String word2 = \"had\";\n      String word3 = \"a\";\n      String word4 = \"little\";\n      String word5 = \"lamb\";\n\n      // your work here\n\n      int length1 = . . .;\n      int length2 = . . .;\n      . . .\n      . . .\n      . . .\n      . . .\n      System.out.println(average);\n      System.out.println(\"Expected: 3.6\");\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Objects"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-object-102"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-object-102"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "438c117eaafa5c5b1751e644",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-array-105",
+    "title": "codecheck-bj-4-array-105",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-array-105"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "You are given a class similar to the TicTacToe board in Section 7.6, but the board can have more than 3 rows and columns.",
+    "source_code": "import java.util.Scanner;\n\npublic class SquareBoard\n{\n   private String[][] board;\n   private int length;\n   \n   /**\n      Constructs an empty square game board.\n      @param sideLength the length of each side\n   */\n   public SquareBoard(int sideLength)\n   {\n      length = sideLength;\n      board = new String[length][length];\n      // Fill with spaces\n      for (int i = 0; i < length; i++)\n         for (int j = 0; j < length; j++)\n            board[i][j] = \" \";\n   }\n\n   /**\n      Creates a string representation of the board, such as\n      |x o|\n      | x |\n      | o |.\n      @return the string representation\n   */\n   public String toString()\n   {\n      String r = \"\";\n      for (int i = 0; i < length; i++)\n      {\n         r = r + \"|\";\n         for (int j = 0; j < length; j++)\n            r = r + board[i][j];\n         r = r + \"|\n\";\n      }\n      return r;\n   }   \n\n   /**\n      Fills the borders of this board with \"*\" strings.\n   */\n   public void fillBorders()\n   {\n      // your work here\n\n\n\n   }\n   \n   // This method is used to check your work.\r\n\n   public static void main(String[] args)\n   {\n      Scanner in = new Scanner(System.in);\n      int n = in.nextInt();   \n      SquareBoard board = new SquareBoard(n);\n      board.fillBorders();\n      System.out.println(board.toString());\n   }  \n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Arrays and Array Lists"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-array-105"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-array-105"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

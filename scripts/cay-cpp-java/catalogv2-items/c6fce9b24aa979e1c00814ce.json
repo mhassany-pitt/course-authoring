@@ -1,0 +1,77 @@
+{
+  "id": "c6fce9b24aa979e1c00814ce",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-io-105",
+    "title": "codecheck-bj-4-io-105",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io-105"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The checkURL method below checks whether a web site contains data. Checked exceptions can be thrown in the code. Your task is to declare them but not to catch them.",
+    "source_code": "import java.io.IOException;\nimport java.net.MalformedURLException;\nimport java.net.URL;\nimport java.util.Scanner;\n\npublic class WebReader\n{\n   public static boolean checkURL(String site)\n   {\n      URL u = new URL(site);\n      Scanner in = new Scanner(u.openStream());\n      return in.hasNextLine();\n   }\n\n   // This method checks your work. Do not modify it.\n\n   public static String check(String site)\n   {\n      try\n      {\n         if (checkURL(site))\n            return \"good\";\n         else\n            return \"empty\";\n      }\n      catch (MalformedURLException ex)\n      {\n         return \"bad URL\";\n      }\n      catch (Exception ex)\n      {\n         return \"bad\";\n      }\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Input and Output"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io-105"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-io-105"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

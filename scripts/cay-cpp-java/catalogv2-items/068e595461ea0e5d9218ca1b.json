@@ -1,0 +1,77 @@
+{
+  "id": "068e595461ea0e5d9218ca1b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-recur-105",
+    "title": "codecheck-bj-4-recur-105",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-recur-105"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "A recursive squid is a square in a diamond containing another squid.",
+    "source_code": "import java.awt.Graphics2D;\nimport java.awt.geom.Line2D;\nimport java.awt.geom.Point2D;\nimport java.awt.geom.Rectangle2D;\n\npublic class Squid\n{\n   /**\n      Constructs a Squid (square inside diamond).\n      @param aCenter the center point\n      @param aRadius, the distance from the center to the corner points\n      of the diamond\n   */\n   public Squid(Point2D.Double aCenter, double aRadius)\n   {\n      center = aCenter;\n      radius = aRadius;\n   }\n   \n   public void draw(Graphics2D g2)\n   {\n      // your work here\n   }\n\n   private Point2D.Double center;\n   private double radius;   \n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Recursion"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-recur-105"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-recur-105"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

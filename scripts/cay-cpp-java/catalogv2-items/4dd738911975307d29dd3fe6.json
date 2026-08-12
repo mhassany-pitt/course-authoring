@@ -1,0 +1,77 @@
+{
+  "id": "4dd738911975307d29dd3fe6",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-inher-101",
+    "title": "codecheck-bj-4-inher-101",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-inher-101"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "You are given a class Rectangle that produces ASCII art rectangles such as the following:",
+    "source_code": "/* TODO:\n   Complete the class definition. Supply the body of the constructor\n   and any instance fields.\n*/\n\n/**\n   A rectangle whose interior is filled with a pattern\n   obtained by repeating a character.\n*/\npublic class FilledRectangle ...\n{\n   /**\n      Constructs a rectangle with a given width, height, and fill\n      @param aWidth the width (including the corners)\n      @param aHeight the height (including the corners)\n      @param aFill the fill character\n   */\n   public FilledRectangle(int aWidth, int aHeight, char aFill)\n   {\n      ...\n   }\n\n\n   /**\n      Prints one line of the rectangle.\n      @param i the line to print (1 <= i <= height)\n   */\n   public void printLine(int i)\n   {\n      if (i == 1 || i == getHeight())\n         printHelper('+', '-');\n      else\n         printHelper('|', fill);\n   }\n\n   ...\n\n\n   // The following method tests your class\n\n   public static void main(String[] args)\n   {\n      FilledRectangle fr = new FilledRectangle(10, 7, '*');\n      fr.print();\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Inheritance"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-inher-101"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-inher-101"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

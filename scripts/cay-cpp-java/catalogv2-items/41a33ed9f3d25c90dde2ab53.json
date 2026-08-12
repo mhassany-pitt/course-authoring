@@ -1,0 +1,77 @@
+{
+  "id": "41a33ed9f3d25c90dde2ab53",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-inher-102",
+    "title": "codecheck-bj-4-inher-102",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-inher-102"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "You are given a class Rectangle that produces ASCII art rectangles such as the following:",
+    "source_code": "/* \n   TODO: Complete this class so that the title is printed\n   centered in the rectangle. Hint: Override printLine.\n*/\n\n/**\n   A rectangle whose interior is filled with a pattern\n   obtained by repeating a character.\n*/\npublic class TitledRectangle extends Rectangle\n{\n   /**\n      Constructs a rectangle with a given width, height, and title\n      @param aWidth the width (including the corners)\n      @param aHeight the height (including the corners)\n      @param aTitle the title\n   */\n   public TitledRectangle(int aWidth, int aHeight, String aTitle)\n   {\n      super(aWidth, aHeight);\n      title = aTitle;\n   }\n\n\n\n\n   private String title;\n\n   // The following method tests your class\n\n   public static void main(String[] args)\n   {\n      TitledRectangle tr = new TitledRectangle(15, 7, \"Hello\");\n      tr.print();\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Inheritance"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-inher-102"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-inher-102"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

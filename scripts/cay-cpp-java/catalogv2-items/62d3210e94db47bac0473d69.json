@@ -1,0 +1,77 @@
+{
+  "id": "62d3210e94db47bac0473d69",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-io2-102",
+    "title": "codecheck-bj-4-io2-102",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io2-102"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The HyperCaesar cipher is just like the Caesar cipher, except that the key for each step is the initial key + the sum of the previously encoded characters. For example, if the initial key is 3 and the text to be encoded is \"eve\", then the first \"e\" is encoded with a key of 3. The next letter is encoded with a key of 104 because the character \"e\" has Unicode value 101. The third letter is encoded with a key of 222 becase the character \"v\" has a code value of 118 and 222 = 3 + 101 + 118. The summation process is carried out modulo 256.",
+    "source_code": "import java.io.FileInputStream;\nimport java.io.FileOutputStream;\nimport java.io.InputStream;\nimport java.io.OutputStream;\nimport java.io.IOException;\n\n/**\n   This class encrypts files using the HyperCaesar cipher.\n*/\npublic class HyperCaesarCipher\n{\n   /**\n      Constructs a cipher object with a given key.\n      @param aKey the encryption key\n   */\n   public HyperCaesarCipher(int aKey)\n   {\n      key = (byte) aKey;\n   }\n\n   /**\n      Encrypts the contents of a stream.\n      @param in the input stream\n      @param out the output stream\n   */      \n   public void encryptStream(InputStream in, OutputStream out)\n         throws IOException\n   {\n      boolean done = false;\n      while (!done)\n      {\n         int next = in.read();\n         if (next == -1) done = true;\n         else\n         {\n            byte b = (byte) next;\n            byte c = encrypt(b);\n            out.write(c);\n         }\n      }\n   }\n\n   /**\n      Encrypts a byte.\n      @param b the byte to encrypt\n      @return the encrypted byte\n   */\n   public byte encrypt(byte b)\n   {\n      byte r = (byte) (b + key);\n      key = (byte) (key + b);\n      return r;\n   }\n\n   \n   // TODO: Add decryption\n   \n   private byte key;\n   \n   // this method is used to check your work\n   \n   public static void main(String[] args)\n   {  \n      try\n      {  \n         InputStream inStream = new FileInputStream(\"encrypted.txt\");\n         OutputStream outStream = new FileOutputStream(\"decrypted.txt\");\n         int key = 3;\n         HyperCaesarCipher cipher = new HyperCaesarCipher(key);\n         cipher.decryptStream(inStream, outStream);\n\n         inStream.close();\n         outStream.close();\n      }\n      catch (IOException exception)\n      {  \n         System.out.println(\"Error processing file: \" + exception);\n      }\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Advanced Input and Output"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io2-102"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-io2-102"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

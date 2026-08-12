@@ -1,0 +1,78 @@
+{
+  "id": "6c63ed86cfdc90befef27ce6",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-cpp-OtherStringOperations-4",
+    "title": "codecheck-cpp-OtherStringOperations-4",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-cpp-OtherStringOperations-4"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "Given a string s and a string t, return a string in which all the characters of s that occur in t have been replaced by a _ sign.",
+    "source_code": "#include <iostream>\n#include <string>\nusing namespace std;\n\n/**\n   Returns the index of the first occurrence of t in s, \n   or -1 if t doesn't occur in s.\n*/\nint find(string s, string t)\n{   \n   for (int i = 0; i + t.length() <= s.length(); i++)\n   {\n      if (s.substr(i, t.length()) == t)\n      {\n         return i;\n      }\n   }\n   return -1;\n}\n\nstring replaceCharactersWithUnderscores(string s, string t)\n{\n\n\n\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Strings",
+          "Other String Operations"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-cpp-OtherStringOperations-4"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-cpp-OtherStringOperations-4"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

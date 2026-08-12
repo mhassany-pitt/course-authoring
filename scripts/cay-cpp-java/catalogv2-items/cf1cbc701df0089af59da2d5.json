@@ -1,0 +1,77 @@
+{
+  "id": "cf1cbc701df0089af59da2d5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-ood-103",
+    "title": "codecheck-bj-4-ood-103",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-ood-103"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The invoice program assumes that prices are given in dollar. Other currencies have different rules, and it makes sense to use an interface that defines the essential operations required for money values. The interface Money is given below.",
+    "source_code": "import java.util.ArrayList;\r\n\r\n/**\r\n   Describes an invoice for a set of purchased products.\r\n*/\r\npublic class Invoice\r\n{  \r\n   /**\r\n      Constructs an invoice.\r\n      @param anAddress the billing address\r\n   */\r\n   public Invoice(Address anAddress)\r\n   {  \r\n      items = new ArrayList<LineItem>();\r\n      billingAddress = anAddress;\r\n   }\r\n  \r\n   /**\r\n      Adds a charge for a product to this invoice.\r\n      @param aProduct the product that the customer ordered\r\n      @param quantity the quantity of the product\r\n   */\r\n   public void add(Product aProduct, int quantity)\r\n   {  \r\n      LineItem anItem = new LineItem(aProduct, quantity);\r\n      items.add(anItem);\r\n   }\r\n\r\n   /**\r\n      Formats the invoice.\r\n      @return the formatted invoice\r\n   */\r\n   public String format()\r\n   {  \r\n      String r =  \"                     I N V O I C E\n\n\"\r\n            + billingAddress.format()\r\n            + String.format(\"\n\n%-30s%8s%5s%8s\n\",\r\n               \"Description\", \"Price\", \"Qty\", \"Total\");\r\n\r\n      for (LineItem i : items)\r\n      {  \r\n         r = r + i.format() + \"\n\";\r\n      }\r\n\r\n      // TODO: Format amount due      \r\n\r\n      return r;\r\n   }\r\n\r\n   /**\r\n      Computes the total amount due.\r\n      @return the amount due\r\n   */\r\n   public Money getAmountDue()\r\n   {\r\n      // TODO: Compute amount due\r\n   }\r\n   \r\n   private Address billingAddress;\r\n   private ArrayList<LineItem> items;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Object-Oriented Design"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-ood-103"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-ood-103"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

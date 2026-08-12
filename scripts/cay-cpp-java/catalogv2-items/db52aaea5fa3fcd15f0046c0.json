@@ -1,0 +1,77 @@
+{
+  "id": "db52aaea5fa3fcd15f0046c0",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-branch-104",
+    "title": "codecheck-bj-4-branch-104",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-branch-104"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "An open interval is the set of all numbers between a lower and upper bound. In mathematical notation, we write",
+    "source_code": "public class Interval\r\n{\r\n   private double lower;\r\n   private double upper;\r\n\r\n   /**\r\n      Constructs an open interval.\r\n      @param aLowerBound the lower bound\r\n      @param anUpperBound the upper bound\r\n   */\r\n   public Interval(double aLowerBound, double anUpperBound)\r\n   {\r\n      lower = aLowerBound;\r\n      upper = anUpperBound;\r\n   }\r\n\r\n   /**\r\n      Checks whether a value is contained in the interval.\r\n      @param x a value\r\n      @return true if x is contained in the interval\r\n   */\r\n   public boolean contains(double x)\r\n   {\r\n      return lower < x && x < upper;\r\n   }\r\n\r\n   /**\r\n      Gets the lower bound of this interval.\r\n      @return the lower bound\r\n   */\r\n   public double getLower()\r\n   {\r\n      return lower;\r\n   }\r\n\r\n   /**\r\n      Gets the lower bound of this interval.\r\n      @return the lower bound\r\n   */\r\n   public double getUpper()\r\n   {\r\n      return upper;\r\n   }\r\n\r\n   /**\r\n      Checks whether this interval overlaps with another.\r\n      @param other another interval\r\n      @return true if this interval and other overlap, i.e.\r\n      have a non-empty intersection\r\n   */\r\n   public boolean overlaps(Interval other)\r\n   {\r\n      // your work here\r\n\r\n\r\n\r\n   }\r\n\r\n   // this method is used to check your work\r\n\r\n   public static boolean check(double lower1, double upper1,\r\n      double lower2, double upper2)\r\n   {\r\n      Interval first = new Interval(lower1, upper1);\r\n      Interval second = new Interval(lower2, upper2);\r\n      return first.overlaps(second);\r\n   }\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Branches"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-branch-104"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-branch-104"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

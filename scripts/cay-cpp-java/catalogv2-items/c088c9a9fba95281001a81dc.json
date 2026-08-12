@@ -1,0 +1,77 @@
+{
+  "id": "c088c9a9fba95281001a81dc",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-concur-104",
+    "title": "codecheck-bj-4-concur-104",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-concur-104"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "We will divide the work of computing the sum of all values in an array over multiple threads. Each thread will compute the sum of a subrange and then update a shared sum variable and a shared count of completed threads.",
+    "source_code": "import java.util.concurrent.locks.Lock;\nimport java.util.concurrent.locks.ReentrantLock;\n\npublic class DataSet\n{\n   /**\n      Constructs an empty data set.\n   */\n   public DataSet(double[] values)\n   {\n      this.values = values;\n   }\n\n   /**\n      Gets the average of the added data.\n      @return the average or 0 if no data has been added\n   */\n   public double getAverage() \n   {\n      if (values.length == 0) return 0;\n      \n      final int THREADS = 10;      \n      int size = values.length / THREADS;\n      RangeProcessor[] processors = new RangeProcessor[THREADS];\n      Thread[] threads = new Thread[THREADS];\n      for (int i = 0; i < THREADS; i++)\n         processors[i] = new RangeProcessor(i * size, (i + 1) * size);\n\n      // TODO: Start threads, wait for them to terminate, and compute result\n      \n   }\n\n   private class RangeProcessor implements Runnable\n   {\n      public RangeProcessor(int start, int end)\n      {\n         this.start = start;\n         this.end = Math.min(end, values.length);\n      }\n      \n      public void run()\n      {\n         double total = 0;\n         for (int i = start; i < end; i++)\n            total += values[i];\n         sum += total;\n      }\n      \n      public double getSum()\n      {\n         return sum;\n      }\n      \n      private int start;\n      private int end;\n      private double sum;\n   }\n   \n   private double[] values;\n   \n   // this method is used to check your work\n   \n   public static void main(String[] args)  \n   {\n      final int SIZE = 10000000;\n      double[] v = new double[SIZE];\n      for (int i = 0; i < SIZE; i++) v[i] = i;\n      DataSet data = new DataSet(v);\n      double avg = data.getAverage();\n      System.out.println(avg);\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Concurrency"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-concur-104"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-concur-104"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

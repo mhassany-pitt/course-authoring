@@ -1,0 +1,77 @@
+{
+  "id": "9e9f5570d6a90e87d3cc55ab",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-branch-107",
+    "title": "codecheck-bj-4-branch-107",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-branch-107"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "A simple guessing game asks the player to guess a number between 1 and 50. Hints are returned depending on how far from the number the guess is.",
+    "source_code": "import java.util.Random;\n/**\n   A class to store a number to guess and return a closeness hint\n*/\npublic class GuessNumber\n{\n   private int number;\n\n   /**\n      Construct an GuessNumber with a random value between 1 and 50\n   */\n   public GuessNumber()\n   {\n      Random r = new Random();\n      number = r.nextInt(50) + 1;\n   }\n   \n   /**\n      Determine how close the guess is and return a hint\n      @return a string describing, in terms of hotness or coldness, how\n      close the guess is to the number\n   */\n   public String howClose(int guess)\n   {\n      // Implement this method, following the task description    \n   \n   \n   }\n\n   // Other methods for playing the game omitted--you need not supply any of them\n   \n   // This method is used to check your work\n   \n   public static String check(int number, int guess)\n   {\n      GuessNumber gn = new GuessNumber();\n      gn.number = number;\n      return gn.howClose(guess);\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Branches"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-branch-107"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-branch-107"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

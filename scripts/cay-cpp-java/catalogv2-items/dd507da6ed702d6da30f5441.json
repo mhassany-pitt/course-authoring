@@ -1,0 +1,78 @@
+{
+  "id": "dd507da6ed702d6da30f5441",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-cpp-2DArraysNoLoops-7",
+    "title": "codecheck-cpp-2DArraysNoLoops-7",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-cpp-2DArraysNoLoops-7"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "Given a two-dimensional array of integers and row/column indexes r, c, return the number of neighbors (not counting the element itself). A neighbor is any neighbor in the compass direction N E S W NE NW SE SW.",
+    "source_code": "const int MAX_COL = 10;\n/**\n   Count the neigbors to the given element.\n   @param arr a 2D array of int.\n   @param rows the number of rows in the array.\n   @param cols the number of columns in the array.\n   @param r the row of the element to check.\n   @param c the column of the element to check.\n   @return the count of the neighbors.\n*/\nint count_neighbors(const int arr[][MAX_COL], int rows, int cols, int r, int c)\n{\n   // Your code here...\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Two-Dimensional Arrays",
+          "No Loops"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-cpp-2DArraysNoLoops-7"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-cpp-2DArraysNoLoops-7"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

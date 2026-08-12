@@ -1,0 +1,77 @@
+{
+  "id": "d5f39b0cde517172f402d319",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-io-103",
+    "title": "codecheck-bj-4-io-103",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io-103"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The SavingsAccount class given below is similar to that of Chapter 9. It should be illegal to construct savings accounts with a negative balance or interest rate. Modify the constructor so that an IllegalArgumentException is thrown in these cases.",
+    "source_code": "// TODO: Modify the constructor to throw an IllegalArgumentException\n// if the initial balance or interest rate is < 0\n\n/**\n   An account that earns interest at a fixed rate.\n*/\npublic class SavingsAccount extends BankAccount\n{  \n   /**\n      Constructs a bank account with a given interest rate.\n      @balance initialBalance the initial balance\n      @param rate the interest rate\n   */\n   private double interestRate;\n     \n   public SavingsAccount(double initialBalance, double rate) \n   {  \n      super(initialBalance);\n      interestRate = rate;\n   }\n\n   /**\n      Adds the earned interest to the account balance.\n   */\n   public void addInterest() \n   {  \n      double interest = getBalance() * interestRate / 100;\n      deposit(interest); \n   }\n\n   // This method checks your work.\n   \n   public static String check(double initialBalance, double rate)\n   {\n      try\n      {\n         SavingsAccount account = new SavingsAccount(initialBalance, rate);\n         return \"constructed\";\n      }\n      catch (IllegalArgumentException ex)\n      {\n         return \"illegal argument\";\n      }\n      catch (Exception ex)\n      {\n         return \"another error\";\n      }\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Input and Output"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io-103"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-io-103"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "75647a542e67af3194c77762",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-sort-107",
+    "title": "codecheck-bj-4-sort-107",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-sort-107"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Implement a modification of the SelectionSorter class that reorders the array to have even elements followed by odd ones. Follow the basic steps of the selection sort algorithm. Locate the next even element and swap it with the current one. The algorithm places the even elements first, maintaining their original order. The odd elements may be in a different order. For example,",
+    "source_code": "import java.util.Arrays;\n\n/**\n   This modified SelectionSorter class places the even elements followed by the odd \n   elements in the array, maintaining the original order of the even elements.\n*/\n\npublic class SelectionSorter\n{\n   private int[] a;\n\n   /**\n      Constructs a selection sorter.\n      @param anArray the array to sort\n   */\n   public SelectionSorter(int[] anArray)\n   {\n      a = anArray;\n   }\n\n   /**\n      Places the even elements followed by the odd elemens in the array, maintaining the original\n     order of the even elements. Visit each element of the array, swapping odd \n     elements with the first even one that follows. For example:\n     [5,6,4,6,9,2]\n     [6,5,4,6,9,2]\n     [6,4,5,6,9,2]\n     [6,4,6,5,9,2]\n     [6,4,6,2,9,5]\n   */\n   public void evenOdd()\n   {  \n      // TODO\n   }\n\n   /**\n      Finds the first even element starting at posiion index\n      @return the position first even element\n   */\n   private int firstEven(int index)\n   {\n      // TODO\n   }\n\n   /**\n      Swaps two entries of the array.\n      @param i the first position to swap\n      @param j the second position to swap\n   */\n   private void swap(int i, int j)\n   {\n      int temp = a[i];\n      a[i] = a[j];\n      a[j] = temp;\n   }\n   \n   // this method is used to check your work\n   public static int[] check(int[] values)\n   {\n      SelectionSorter sorter = new SelectionSorter(values);\n      sorter.evenOdd();\n      return values;\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Sorting and Searching"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-sort-107"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-sort-107"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

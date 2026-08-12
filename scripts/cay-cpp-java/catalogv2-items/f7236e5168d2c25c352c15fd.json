@@ -1,0 +1,77 @@
+{
+  "id": "f7236e5168d2c25c352c15fd",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-class-103",
+    "title": "codecheck-bj-4-class-103",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-class-103"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Implement a BankAccount that pays a bonus of $10 for each new account.",
+    "source_code": "/**\r\n   A bank account has a balance that can be changed by \r\n   deposits and withdrawals.\r\n*/\r\npublic class BankAccount\r\n{  \r\n   private double balance;\r\n\r\n   /**\r\n      Constructs a bank account with a zero balance.\r\n   */\r\n   public BankAccount()\r\n   {   \r\n      // your work here\r\n      balance = ...;\r\n\r\n\r\n\r\n   }\r\n\r\n   /**\r\n      Constructs a bank account with a given balance.\r\n      @param initialBalance the initial balance\r\n   */\r\n   public BankAccount(double initialBalance)\r\n   {   \r\n      // your work here\r\n\r\n\r\n\r\n   }\r\n\r\n   /**\r\n      Deposits money into the bank account.\r\n      @param amount the amount to deposit\r\n   */\r\n   public void deposit(double amount)\r\n   {  \r\n      double newBalance = balance + amount;\r\n      balance = newBalance;\r\n   }\r\n\r\n   /**\r\n      Withdraws money from the bank account.\r\n      @param amount the amount to withdraw\r\n   */\r\n   public void withdraw(double amount)\r\n   {   \r\n      double newBalance = balance - amount;\r\n      balance = newBalance;\r\n   }\r\n\r\n   /**\r\n      Gets the current balance of the bank account.\r\n      @return the current balance\r\n   */\r\n   public double getBalance()\r\n   {   \r\n      return balance;\r\n   }\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Classes"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-class-103"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-class-103"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

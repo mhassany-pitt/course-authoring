@@ -1,0 +1,77 @@
+{
+  "id": "c944720b7568caf3480a6bd5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-sort-103",
+    "title": "codecheck-bj-4-sort-103",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-sort-103"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "In section 14.5, we approximated a count of the array visits in merge sort. Your task is to provide an accurate measurement for the implementation used in section 15.4. Count each occurrence of a[i], first[i], or second[i] as a visit. When recursively generating smaller merge sorters, be sure to copy their visit counts after they have completed.",
+    "source_code": "/**\n   This class sorts an array, using the merge sort algorithm.\n*/\npublic class MergeSorter\n{\n   /**\n      Constructs a merge sorter.\n      @param anArray the array to sort\n   */\n   public MergeSorter(int[] anArray)\n   {\n      a = anArray;\n   }\n   \n   /**\n      Sorts the array managed by this merge sorter.\n   */\n   public void sort()\n   {  \n      // TODO: update visitCount\n      if (a.length <= 1) return;\n      int[] first = new int[a.length / 2];\n      int[] second = new int[a.length - first.length];\n      // Copy the first half of a into first, the second half into second\n      for (int i = 0; i < first.length; i++) { first[i] = a[i]; }\n      for (int i = 0; i < second.length; i++) \n      { \n         second[i] = a[first.length + i]; \n      }\n      MergeSorter firstSorter = new MergeSorter(first);\n      MergeSorter secondSorter = new MergeSorter(second);\n      firstSorter.sort();\n      secondSorter.sort();\n      merge(first, second);\n   }\n\n   /**\n      Merges two sorted arrays into the array managed by this\n      merge sorter. \n      @param first the first sorted array\n      @param second the second sorted array\n   */\n   private void merge(int[] first, int[] second)\n   {  \n      // TODO: update visitCount\n      // Merge both halves into the temporary array\n\n      int iFirst = 0;\n         // Next element to consider in the first array\n      int iSecond = 0;\n         // Next element to consider in the second array\n      int j = 0; \n         // Next open position in a\n\n      // As long as neither iFirst nor iSecond past the end, move\n      // the smaller element into a\n      while (iFirst < first.length && iSecond < second.length)\n      {  \n         if (first[iFirst] < second[iSecond])\n         {  \n            a[j] = first[iFirst];\n            iFirst++;\n         }\n         else\n         {  \n            a[j] = second[iSecond];\n            iSecond++;\n         }\n         j++;\n      }\n\n      // Note that only one of the two loops below copies entries\n      // Copy any remaining entries of the first array\n      while (iFirst < first.length) \n      { \n         a[j] = first[iFirst]; \n         iFirst++; j++;\n      }\n      // Copy any remaining entries of the second half\n      while (iSecond < second.length) \n      { \n         a[j] = second[iSecond]; \n         iSecond++; j++;\n      }\n   }\n\n   public int getVisitCount() { return visitCount; }\n\n   private int[] a;\n   private int visitCount;\n   \n   // this method is used to check your work\n   public static int check(int n)\n   {\n      int[] a = new int[n];\n      for (int i = 0; i < n / 2; i++)\n      {\n         a[i] = n - i;\n         a[n - i - 1] = i + 1;\n      }\n      MergeSorter sorter = new MergeSorter(a);\n      sorter.sort();\n      return sorter.getVisitCount();\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Sorting and Searching"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-sort-103"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-sort-103"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

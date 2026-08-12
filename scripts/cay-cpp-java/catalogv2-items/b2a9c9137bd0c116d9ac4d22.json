@@ -1,0 +1,77 @@
+{
+  "id": "b2a9c9137bd0c116d9ac4d22",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-class-104",
+    "title": "codecheck-bj-4-class-104",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-class-104"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Implement a class ClassSchedule with a title (a string), days the class meets (a string), a start meeting time (a string), an end meeting time (a string) and a class room (a string)",
+    "source_code": "/**\r\n   A computer class has a title, time and room\r\n*/\r\npublic class ClassSchedule\r\n{  \r\n   private String title;\r\n   private String days;\r\n   private String startTime;\r\n   private String endTime;\r\n   private String room;\r\n\r\n   /**\r\n      Constructs a computer class with title, days, time and room\r\n   */\r\n   public ClassSchedule(String classTitle, String meetingDays, String aStartTime, String anEndTime, String classRoom)\r\n   {   \r\n     // your work here\r\n     title = ...;\r\n     days = ...;\r\n     ...     \r\n   }\r\n\r\n   /**\r\n      Gets the title\r\n      @return the title\r\n   */\r\n   public String getTitle()\r\n   {   \r\n      // your work here\r\n      \r\n   }\r\n   \r\n   /**\r\n      Gets the time in the form \"days start time-end time\"\r\n      @return the time\r\n   */\r\n   public String getTime()\r\n   {   \r\n      // your work here\r\n      String time = ...;\r\n      return time;\r\n   }\r\n   \r\n   /**\r\n      Gets the room\r\n      @return the room\r\n   */\r\n   public String getRoom()\r\n   {   \r\n      // your work here\r\n\r\n   }\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Classes"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-class-104"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-class-104"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

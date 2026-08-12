@@ -1,0 +1,77 @@
+{
+  "id": "a63a8f5408b2b47a0272a3ec",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-sort-108",
+    "title": "codecheck-bj-4-sort-108",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-sort-108"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Modify the merge sort algorithm so that, instead of sorting an array, it rearranges places all even elements before the odd ones. For example, the array [1, 4, 9, 16, 25] becomes [4, 16, 1, 9, 25].",
+    "source_code": "public class MergeSorter\n{\n   private int[] a;\n\n   /**\n      Constructs a merge sorter.\n      @param anArray the array to sort\n   */\n   public MergeSorter(int[] anArray)\n   {\n      a = anArray;\n   }\n   \n   /**\n      Places the even elements before the odd ones.\n   */\n   public void evenFirst()\n   {  \n      if (a.length <= 1) return;\n      int[] first = new int[a.length / 2];\n      int[] second = new int[a.length - first.length];\n      // Copy the first half of a into first, the second half into second\n      for (int i = 0; i < first.length; i++) { first[i] = a[i]; }\n      for (int i = 0; i < second.length; i++) \n      { \n         second[i] = a[first.length + i]; \n      }\n      MergeSorter firstSorter = new MergeSorter(first);\n      MergeSorter secondSorter = new MergeSorter(second);\n      firstSorter.evenFirst();\n      secondSorter.evenFirst();\n      merge(first, second);\n   }\n\n   /**\n      Merges two arrays into the array managed by this\n      merge sorter. \n      @param first the first array which has the even elements before the odd ones\n      @param second the second array which has the even elements before the odd ones\n   */\n   private void merge(int[] first, int[] second)\n   {  \n      // TODO\n   }\n   \n   // this method is used to check your work\n   public static int [] check(int [] a)\n   {\n      MergeSorter sorter = new MergeSorter(a);\n      sorter.evenFirst();\n      return a;\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Sorting and Searching"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-sort-108"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-sort-108"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

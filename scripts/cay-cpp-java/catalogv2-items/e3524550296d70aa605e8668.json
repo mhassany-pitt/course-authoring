@@ -1,0 +1,77 @@
+{
+  "id": "e3524550296d70aa605e8668",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-tree-110",
+    "title": "codecheck-bj-4-tree-110",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-tree-110"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The program below will fail to run because the Person class does not implement the Comparable interface. Modify the class so that the program runs correctly.",
+    "source_code": "import java.util.Set;\nimport java.util.TreeSet;\n\npublic class Person \n{\n   private String firstName;\n   private String lastName;\n\n   public Person(String firstName, String lastName) \n   {\n      this.firstName = firstName;\n      this.lastName = lastName; \n   }\n\n   public String toString()\n   {\n      return lastName + \"/\" + firstName;\n   }\n      \n   // This method is used to check your work\n   \n   public static Set<String> check(String[] names)\n   {\n      Set<String> result = new TreeSet<String>();\n      for (int i = 0; i < names.length; i += 2)\n      {\n         Person p = new Person(names[i], names[i + 1]);\n         result.add(p.toString());\n      }\n      return result;\n   }   \n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Tree Structures"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-tree-110"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-tree-110"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

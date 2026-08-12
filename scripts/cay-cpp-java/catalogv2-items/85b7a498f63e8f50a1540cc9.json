@@ -1,0 +1,77 @@
+{
+  "id": "85b7a498f63e8f50a1540cc9",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-class2-103",
+    "title": "codecheck-bj-4-class2-103",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-class2-103"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The constructor of the Sentence class below makes assumptions about the text parameter:",
+    "source_code": "public class Sentence\n{\n   /**\n      Constructs a sentence.\n      @param text the text of the sentence. Words must be separated\n      by single spaces, and the sentence must end in a punctuation mark\n      (. ? !)\n   */\n   public Sentence(String text)\n   {\n      // TODO: Add assert statements\n      int n = text.length();\n      String punctuation = text.substring(n - 1, n);\n      words = text.substring(0, n - 1).split(\" \");\n   }\n   \n   /**\n      Gets the number of words in this sentence.\n      @return the number of words\n   */\n   public int getWordCount()\n   {\n      return words.length;\n   }\n   \n   /**\n      Returns a word in this sentence.\n      @param the index of the word (must be at least 0 and less than the\n      word count)\n      @return the ith word\n   */\n   public String getWord(int i)\n   {\n      return words[i];\n   }\n   \n   public String toString()\n   {\n      String r = \"\";\n      for (String w : words)\n      {\n         if (r.length() > 0) r += \" \";\n         r += w;\n      }\n      return r + punctuation;\n   }\n   \n   private String[] words;\n   private String punctuation;\n   \n   /*\n      The following method checks your constructor. We use the exception \n      handling mechanism (see chapter 11) to determine whether (a) the \n      constructor completed normally, (b) your code used an assertion to\n      check a precondition violation, or (c) you failed to use an \n      assertion and some other exception occurred.\n   */\n   \n   public static String check(String text)\n   {\n      try\n      {\n         Sentence s = new Sentence(text);\n         return \"Constructor completed normally\";      \n      }\n      catch (AssertionError error)\n      {\n         return \"Precondition violation detected\";\n      }\n      catch (Exception exception)\n      {\n         return \"Exception in constructor\";\n      }\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Designing Classes"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-class2-103"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-class2-103"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}

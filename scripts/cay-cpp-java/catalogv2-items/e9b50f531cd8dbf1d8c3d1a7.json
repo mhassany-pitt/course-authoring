@@ -1,0 +1,77 @@
+{
+  "id": "e9b50f531cd8dbf1d8c3d1a7",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-object-111",
+    "title": "codecheck-bj-4-object-111",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-object-111"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San José State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the ThreeDButtonComponent class to draw a button with shading. The button is a Rectangle, with very thin rectangles on each side to form the shaded sides. The bottom and right shadings should be darker than the button and the left and top shadings should be lighter. Use Color.brighter and Color.darker for the shadings. Look in the Color class API for details on the use of these methods.",
+    "source_code": "import javax.swing.JComponent;\r\nimport java.awt.Color;\r\nimport java.awt.Graphics;\r\nimport java.awt.Graphics2D;\r\nimport java.awt.Rectangle;\r\n\r\npublic class ThreeDButtonComponent extends JComponent\r\n{\r\n   public void paintComponent(Graphics g)\r\n   {\r\n      Graphics2D g2 = (Graphics2D) g;\r\n      // your work here\r\n      ...\r\n   }\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Objects"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-object-111"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-object-111"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": [],
+  "created_at": "2026-08-12T19:02:28.713Z"
+}
