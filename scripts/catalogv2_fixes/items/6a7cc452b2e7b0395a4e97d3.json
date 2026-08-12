@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc452b2e7b0395a4e97d3",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-io-106",
+    "title": "codecheck-bj-4-io-106",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io-106"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Your task is to read a file containing exam scores, and to write another file that contains the results of processing the exam scores. The output file should number and list each score that was read in, show the total number of scores that were read, and show the average score. The output format should contain these lines:",
+    "source_code": "/**\n   Reads a file of exam scores and calculates the average score.\n*/\n\n\nimport java.io.FileReader;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\nimport java.io.PrintWriter;\n\npublic class ExamAverage\n{\n   public static void main(String[] args)\n      throws FileNotFoundException\n   {\n      String inputFileName = \"scores.txt\";\n      String outputFileName = \"examScoreAverage.txt\";\n      \n      // TODO: Open the input and output files.\n      // Read records from the input file.\n      // Calculate the average score.\n      // Write each exam score, the count of scores read,\n      // and the average score to the output file.\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Input and Output"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io-106"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-io-106"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

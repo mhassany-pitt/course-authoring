@@ -1,0 +1,78 @@
+{
+  "id": "6a7cc457b2e7b0395a4e984b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-cpp-LoopingOvertheEntireArray-3",
+    "title": "codecheck-cpp-LoopingOvertheEntireArray-3",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-cpp-LoopingOvertheEntireArray-3"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "Given a two-dimensional square array of integers, compute the sum of all elements that are not on one of the diagonals.",
+    "source_code": "const int MAX_COLS = 10;\n\n/**\n   Sum elements in array if not on diagonal.\n   @param arr a square 2D array of int.\n   @param len the length of each side.\n   @return the sum not on the diagonal.\n*/\nint sum_without_diagonals(const int arr[][MAX_COLS], int len)\n{\n   // Your code here...\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Two-Dimensional Arrays",
+          "Looping Over the Entire Array"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-cpp-LoopingOvertheEntireArray-3"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-cpp-LoopingOvertheEntireArray-3"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

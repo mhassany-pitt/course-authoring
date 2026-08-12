@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc444b2e7b0395a4e965f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-tree-108",
+    "title": "codecheck-bj-4-tree-108",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-tree-108"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Given an array of strings, create a tree map whose keys are the string lengths and whose values are the sets of strings with the length given by the key. For example, given the array [I, like, Java], produce a map that maps 1 to the set containing \"I\" and 4 to the set containing \"like\" and \"Java\".",
+    "source_code": "import java.util.Map;\nimport java.util.TreeMap;\n\npublic class MapUtil\n{\n   /**\n      Make a sorted map whose keys are the word lengths words and whose values are\n      the sets of the words with the given lengths. The map and sets should be sorted.\n      @param words an array of strings\n      @return a map mapping strings to their lengths\n   */\n   public Map<Integer, TreeSet<String>> makeMap(String[] words)\n   {\n      ...\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Tree Structures"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-tree-108"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-tree-108"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

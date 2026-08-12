@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc459b2e7b0395a4e9872",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-class2-101",
+    "title": "codecheck-bj-4-class2-101",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-class2-101"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Consider the Person class below.",
+    "source_code": "/**\n   Describes a person who will receive mail.\n*/\npublic class Person\n{\n   /*\n      TODO: To increase cohesion, reimplement this class by using\n      the Address class. Do not modify the main method that is used\n      for checking.\n   */\n   \n   /**\n      Constructs a person. \n      @param aName the person's name\n      @param aStreet the street\n      @param aCity the city\n      @param aState the two-letter state code\n      @param aZip the ZIP postal code\n   */\n   public Person(String aName, String aStreet,\n         String aCity, String aState, String aZip)\n   {  \n      name = aName;\n      street = aStreet;\n      city = aCity;\n      state = aState;\n      zip = aZip;\n   }   \n\n   /**\n      Formats the person's name and address for mailing.\n      @return a string suitable for printing on a mailing label\n   */\n   public String formatForMailing()\n   {  \n      return name + \"\n\" + street + \"\n\"\n            + city + \", \" + state + \" \" + zip;\n   }\n   \n   private String name;\n   private String street;\n   private String city;\n   private String state;\n   private String zip;\n   \n   // This method is used for checking your work. Do not modify it\n\n   public static void main(String[] args)\n   {\n      Person harry = new Person(\"Harold J. Hacker\",\n         new Address(\"123 Main Street\", \"Anytown\", \"NY\", \"12345\"));\n      System.out.println(harry.formatForMailing());\n   }   \n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Designing Classes"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-class2-101"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-class2-101"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc458b2e7b0395a4e9863",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-ood-108",
+    "title": "codecheck-bj-4-ood-108",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-ood-108"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "A stamp has a descriptive name, a face value, and an issuing country. Stamps have a measurable value (the face value), hence it makes sense for the Stamp class to implement the Measurable interface from Chapter 9. You can also compare two stamps to find which has higher value, so it makes sense to implement the Comparable interface from the standard Java library as well.",
+    "source_code": "/**\n   Describes any class whose objects can be measured, and adds a comparison.\n*/\npublic abstract class AbstractMeasurable implements ..., ...\n{\n   /**\n      Computes the measure of the object.\n      @return the measure\n   */\n   public abstract double getMeasure();\n   \n   /**\n      Compares this measurable object against another.\n      @param otherObject another measurable object\n      @return -1 if this object measures less than the other, 0 if they measure\n      the same, 1 otherwise.\n   */   \n   public int compareTo(Object otherObject)\n   {\n      ...\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Object-Oriented Design"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-ood-108"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-ood-108"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

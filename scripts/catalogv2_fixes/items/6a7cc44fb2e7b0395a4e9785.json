@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc44fb2e7b0395a4e9785",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-branch-101",
+    "title": "codecheck-bj-4-branch-101",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-branch-101"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Employees get paid time and a half for the weekly work hours in excess of 40 hours. For example, an employee making $10/hour and working 50 hours in a given week gets paid $10 for the first 40 hours and $15 for the remaining 10 hours, for a total weekly pay of $550.",
+    "source_code": "public class Employee\n{\n   private double salary;\n   private static final int OVERTIME_THRESHOLD = 40;\n\n   /**\n      Constructs an employee with a given salary\n      @param anHourlySalary the hourly salary of this employee\n   */\n   public Employee(double anHourlySalary)\n   {\n      salary = anHourlySalary;\n   }\n\n   /**\n      Computes the wage for a given week.\n      @param hoursWorked the hours worked in the week\n      @return the wage earned in that week, taking overtime into account\n   */\n   public double weeklyWage(int hoursWorked)\n   {\n      // your work here\n\n   }\n\n   // this method is used to check your work\n\n   public static double check(int hoursWorked)\n   {\n      Employee emily = new Employee(10); // $10/hour\n      return emily.weeklyWage(hoursWorked);\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Branches"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-branch-101"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-branch-101"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

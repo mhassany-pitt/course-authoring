@@ -1,0 +1,78 @@
+{
+  "id": "6a7cc468b2e7b0395a4e99e1",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-cpp-LoopingoverNeighbors-3",
+    "title": "codecheck-cpp-LoopingoverNeighbors-3",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-cpp-LoopingoverNeighbors-3"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "Given a two-dimensional array of integers and row/column positions r, c, return the compass direction of the largest neighbor as a string N E S W NE NW SE SW.",
+    "source_code": "#include <string>\nusing namespace std;\nconst int MAX_COLS = 10;\n\n/**\n   Return the compass direction of the largest neighbor (N,E,S,W,NE,NW,SE,SW).\n   @param arr the array to process.\n   @param rows the rows in the array.\n   @param cols the columns in the array.\n   @param r the row of the element to check.\n   @param c the column of the element to check.\n   @return the direction as a string.\n*/\nstring largest_by_compass_direction(const int arr[][MAX_COLS], int rows, int cols, int r, int c)\n{\n   // Your code here...\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Two-Dimensional Arrays",
+          "Looping over Neighbors"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-cpp-LoopingoverNeighbors-3"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-cpp-LoopingoverNeighbors-3"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

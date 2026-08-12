@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc447b2e7b0395a4e96aa",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-ood-104",
+    "title": "codecheck-bj-4-ood-104",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-ood-104"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Add the capability of transferring money from the currently selected account to the other account from the same account holder to the ATM class of Section 12.5.",
+    "source_code": "// TODO: Implement the transfer method. If required, add data fields and\r\n// modify methods\r\n\r\n/**\r\n   An ATM that accesses a bank.\r\n*/\r\npublic class ATM \r\n{  \r\n   /**\r\n      Constructs an ATM for a given bank.\r\n      @param aBank the bank to which this ATM connects\r\n   */    \r\n   public ATM(Bank aBank)\r\n   {\r\n      theBank = aBank;\r\n      reset();\r\n   }\r\n\r\n   /**\r\n      Resets the ATM to the initial state.\r\n   */\r\n   public void reset()\r\n   {\r\n      customerNumber = -1;\r\n      currentAccount = null;\r\n      state = START;             \r\n   }\r\n\r\n   /** \r\n      Sets the current customer number \r\n      and sets state to PIN. \r\n      (Precondition: state is START)\r\n      @param number the customer number.\r\n   */\r\n   public void setCustomerNumber(int number) \r\n   {\r\n      assert state == START;\r\n      customerNumber = number;\r\n      state = PIN;\r\n   }\r\n\r\n   /** \r\n      Finds customer in bank.\r\n      If found sets state to ACCOUNT, else to START.\r\n      (Precondition: state is PIN)\r\n      @param pin the PIN of the current customer\r\n   */\r\n   public void selectCustomer(int pin)\r\n   {  \r\n      assert state == PIN;\r\n      currentCustomer \r\n         = theBank.findCustomer(customerNumber, pin);\r\n      if (currentCustomer == null) \r\n         state = START;\r\n      else \r\n         state = ACCOUNT;\r\n   }\r\n   \r\n   /** \r\n      Sets current account to checking or savings. Sets \r\n      state to TRANSACT. \r\n      (Precondition: state is ACCOUNT or TRANSACT)\r\n      @param account one of CHECKING or SAVINGS\r\n   */\r\n   public void selectAccount(int account)\r\n   {\r\n      assert state == ACCOUNT || state == TRANSACT;\r\n      if (account == CHECKING)\r\n         currentAccount = currentCustomer.getCheckingAccount();\r\n      else\r\n         currentAccount = currentCustomer.getSavingsAccount();\r\n      state = TRANSACT;\r\n   }\r\n\r\n   /** \r\n      Withdraws amount from current account. \r\n      (Precondition: state is TRANSACT)\r\n      @param value the amount to withdraw\r\n   */\r\n   public void withdraw(double value)\r\n   {  \r\n      assert state == TRANSACT;\r\n      currentAccount.withdraw(value);\r\n   }\r\n\r\n   /** \r\n      Deposits amount to current account. \r\n      (Precondition: state is TRANSACT)\r\n      @param value the amount to deposit\r\n   */\r\n   public void deposit(double value)\r\n   {  \r\n      assert state == TRANSACT;\r\n      currentAccount.deposit(value);\r\n   }\r\n   \r\n   /** \r\n      Transfers between the current account and the other account\r\n      of the same customer.\r\n      (Precondition: state is TRANSACT)\r\n   */\r\n   public void transfer(double value)\r\n   {\r\n      // TODO\r\n   }\r\n   \r\n   /** \r\n      Gets the balance of the current account. \r\n      (Precondition: state is TRANSACT)\r\n      @return the balance\r\n   */\r\n   public double getBalance()\r\n   {  \r\n      assert state == TRANSACT;\r\n      return currentAccount.getBalance();\r\n   }   \r\n\r\n   /**\r\n      Moves back to the previous state.\r\n   */\r\n   public void back()\r\n   {\r\n      if (state == TRANSACT)\r\n         state = ACCOUNT;\r\n      else if (state == ACCOUNT)\r\n         state = PIN;\r\n      else if (state == PIN)\r\n         state = START;\r\n   }\r\n\r\n   /**\r\n      Gets the current state of this ATM.\r\n      @return the current state\r\n   */\r\n   public int getState()\r\n   {\r\n      return state;\r\n   }\r\n\r\n   private int state;\r\n   private int customerNumber;\r\n   private Customer currentCustomer;\r\n   private BankAccount currentAccount;\r\n   private Bank theBank;\r\n   \r\n   public static final int START = 1;\r\n   public static final int PIN = 2;\r\n   public static final int ACCOUNT = 3;\r\n   public static final int TRANSACT = 4;\r\n\r\n   public static final int CHECKING = 1;\r\n   public static final int SAVINGS = 2;\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Object-Oriented Design"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-ood-104"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-ood-104"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

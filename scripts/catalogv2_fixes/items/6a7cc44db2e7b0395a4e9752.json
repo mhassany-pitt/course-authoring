@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc44db2e7b0395a4e9752",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-class2-106",
+    "title": "codecheck-bj-4-class2-106",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-class2-106"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Consider the Vehicle class below.",
+    "source_code": "/**\n   Describes a vehicle with a self-contained propulsion unit.\n*/\npublic class Vehicle\n{\n   /*\n     TODO: To increase cohesion, reimplement this class by using\n     the Propulsion class. Do not modify the main method that is use\n     for checking.\n   */\n\n   private String make;\n   private String model;\n   private String year;\n   private String type;\n   private int wheelCount;\n   private String engineType;\n   private String fuel;\n\n   /**\n      Constructs a vehicle\n      @param aMake the vehicle's make\n      @param aModel the vehicle's model\n      @param aType the type of the vehicle\n      @param numWheels the number of wheels on this vehicle\n      @param aFuel the type of fuel used by this vehicle\n   */\n   \n   public Vehicle(String aMake, String aModel, String aYear,\n      String aType, int numWheels, String aEngineType, String aFuel)\n   {\n      make = aMake;\n      model = aModel;\n      year = aYear;\n      type = aType;\n      wheelCount = numWheels;\n      engineType = aEngineType;\n      fuel = aFuel;\n   }\n   \n   public static void main(String[] args)\n   {\n      Vehicle auto = new Vehicle(\"Ford\",\"Taurus\",\"2010\",\"automobile\",\n         4,new Propulsion(\"combustion\",\"gasoline\"));\n      System.out.println(auto.formatForPrinting());\n   }\n\n   /**\n    * Formats the vehicle information for printing\n    * @returns a string sutiable for printing\n    */\n   public String formatForPrinting()\n   {\n      return \"Make: \" + make + \"\n\"\n         + \"Model: \" + model + \"\n\"\n         + \"Year: \" + year + \"\n\"\n         + \"Type: \" + type + \"\n\"\n         + \"Number of wheels: \" + wheelCount + \"\n\"\n         + \"Engine type: \" + engineType + \"\n\"\n         + \"Fuel: \" + fuel + \"\n\";\n   }   \n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Designing Classes"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-class2-106"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-class2-106"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

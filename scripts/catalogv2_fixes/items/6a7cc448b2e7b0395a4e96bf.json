@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc448b2e7b0395a4e96bf",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-class-107",
+    "title": "codecheck-bj-4-class-107",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-class-107"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The latitude, longitude and place name are used to label a map. Implement a class with latitude and longitude as decimal degrees (33.755, for example) and a place name. Provide a toString method that will return an XML string with the values in this format:",
+    "source_code": "/**\r\n   A map  label has a place name, longitude and latitude\r\n*/\r\npublic class MapLabels\r\n{  \r\n   private String placeName;\r\n   private double latitude;\r\n   private double longitude;\r\n\r\n   /**\r\n      Constructs a map label with place name, logitude and latitude\r\n   */\r\n   public MapLabels (String name, double aLat, double aLong)\r\n   {   \r\n     // your work here\r\n     placeName = ...;\r\n     latitude = ...;\r\n     longitude = ...;\r\n   }\r\n \r\n   /**\r\n      Gets the string in XML form\r\n      @return the string\r\n   */\r\n   public String toString()\r\n   {   \r\n      //your work here\r\n      // use \" to print a \"\r\n      String label = \"<label name=\"\" + placeName + ...;\r\n\r\n      return label;\r\n   }   \r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Classes"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-class-107"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-class-107"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

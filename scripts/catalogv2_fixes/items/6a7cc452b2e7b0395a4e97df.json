@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc452b2e7b0395a4e97df",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-ood-102",
+    "title": "codecheck-bj-4-ood-102",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-ood-102"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Intuitively, every square is a rectangle, so it is tempting to use inheritance for implementing a square:",
+    "source_code": "import java.awt.Rectangle;\n\npublic class Square\n{\n   /**\n      Constructs a square with a given position and side length.\n      @param x the x-coordinate of the top left corner\n      @param y the y-coordinate of the top left corner\n      @parameter sideLength the length of each side\n   */   \n   public Square(int x, int y, int sideLength)\n   {\n      // TODO\n   }\n   \n   /**\n      Translates this square the indicated distance,\n      to the right along the x coordinate axis, and \n      downward along the y coordinate axis.\n      @param dx the distance to move along the x axis\n      @param dy the distance to move along the y axis\n   */   \n   public void translate(int dx, int dy)\n   {\n      // TODO\n   }\n   \n   /**\n      Sets the new side length of this square.\n      @param newSideLength the new side length\n   */\n   public void setSideLength(int newSideLength)\n   {\n      // TODO\n   }\n   \n   public String toString()\n   {\n      // TODO\n   }\n         \n   private Rectangle rect;\n   \n   // The following method checks your work.\n   \n   public static Square check(int x, int y, int sideLength, int dx, int dy, int newSideLength)\n   {\n      Square sq = new Square(x, y, sideLength);\n      sq.translate(dx, dy);\n      sq.setSideLength(newSideLength);\n      return sq.toString();\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Object-Oriented Design"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-ood-102"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-ood-102"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

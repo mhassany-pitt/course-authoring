@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc468b2e7b0395a4e99ea",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-array-114",
+    "title": "codecheck-bj-4-array-114",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-array-114"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "A simple way of encoding a message is the railfence cypher. The message is written downwards and diagonally on rails of an imaginary fence, moving down and up. The message, Howareyou? becomes H . . . r . . . u . . o . a . e . o . ? . . w . . . y . . . which is then encoded as Hruoaeo?wy",
+    "source_code": "import java.util.ArrayList;\n\r\n/**\r\n   Encodes strings using the Railfence cipher.\r\n*/\r\npublic class Railfence\r\n{\n   /**\n      Arranges a message in a fence pattern\n      @param message any string\n      @return a two-dimensional array of strings that are either null (.) or strings\n      of length 1, arranged in a pattern like this\n      m . . . a . .\n      . e . s . g .\n      . . s . . . e\n   */\r\n   public String[][] makeFence(String message)\r\n   {\n      // your work here\n      \n      \n      \n      \n      \n      \n      \n      \n      \n      \n      \r\n   }\n   \n   \n   // This message is used to check your work\r\n   public String encode(String message)\r\n   {\n      String[][] fence = makeFence(message);\n      String result = \"\";\n      for (int i = 0; i < fence.length; i++)\n        for (int j = 0; j < fence[i].length; j++)\n          if (fence[i][j] != null && fence[i][j].length() == 1)\n            result = result + fence[i][j];\n      return result;\r\n   }\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Arrays and Array Lists"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-array-114"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-array-114"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

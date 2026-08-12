@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc441b2e7b0395a4e961f",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-list-107",
+    "title": "codecheck-bj-4-list-107",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-list-107"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Implement a method that adds an element to the beginning of a linked list and another at the end.",
+    "source_code": "import java.util.LinkedList;\nimport java.util.ListIterator;\n\npublic class LinkedListUtil\n{\n   /**\n      Adds an element to the front and another to the back of a linked list.\n      @param list a linked list\n      @param front the element to add to the front\n      @param back the element to add to the back\n   */\n   public static void processList(LinkedList<String> list, String front, String back)\n   {\n      // Your work here\n   }\n \n   // This method is used to check your work\n   public static LinkedList<String> check(String[] values, String s1, String s2)\n   {\n      LinkedList<String> list = new LinkedList<String>();\n      for (String s : values) list.addLast(s);\n\n      processList(list, s1, s2);\n      return list;\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Linear Data Structures"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-list-107"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-list-107"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc456b2e7b0395a4e982a",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-inter-101",
+    "title": "codecheck-bj-4-inter-101",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-inter-101"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the Sentence class below so that it implements the Measurable interface. The measure of a sentence should be the number of words. For example,",
+    "source_code": "public class Sentence implements Measurable\n{\n   /**\n      Constructs a sentence.\n      @param text the text of the sentence. \n   */\n   public Sentence(String text)\n   {\n      int n = text.length();\n      String punctuation = text.substring(n - 1, n);\n      words = text.substring(0, n - 1).split(\"\\\\s+\");\n   }\n   \n   /**\n      Returns a word in this sentence.\n      @param the index of the word \n      @return the ith word or an empty string if i is < 0\n      or >= the number of words in this sentence\n   */\n   public String getWord(int i)\n   {\n      if (i >= 0 && i < words.length)\n         return words[i];\n      else\n         return \"\";\n   }\n   \n   public String toString()\n   {\n      String r = \"\";\n      for (String w : words)\n      {\n         if (r.length() > 0) r += \" \";\n         r += w;\n      }\n      return r + punctuation;\n   }\n\n   // TODO: Do what it takes to implement the measurable interface\n   // so that the measure of a sentence is the number of words.\n   \n   private String[] words;\n   private String punctuation;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Interfaces"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-inter-101"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-inter-101"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

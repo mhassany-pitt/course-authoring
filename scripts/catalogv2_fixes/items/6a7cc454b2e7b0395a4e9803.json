@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc454b2e7b0395a4e9803",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-inter-110",
+    "title": "codecheck-bj-4-inter-110",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-inter-110"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The Cat and Dog class below implement the Animal interface. All animals have names, but only dogs do tricks. Implement the describe method, using the instanceof operator to test whether the given animal is a dog. If so, return the name, a space, and the trick that the dog can do, such as \"Helmut barks at the moon\". If it is any other kind of animal, return the name, a space, and \"has no tricks\".",
+    "source_code": "public class Animals\n{\n   /**\n      Describes the given animal.\n      @param pet an animal\n      @return a string with the animal's name, a space, and \n      either the trick that the animal knows (if it is a dog) or a \n      string \"has no tricks\"\n   */\n   public static String describe(Animal pet)\n   {\n      // TODO: Complete this method\n   }\n\n   // This method is used to check your work\n   public static String check(String name, String trick) \n   { \n      Animal pet;\n      if (trick == null) pet = new Cat(name);\n      else pet = new Dog(name, trick);\n      return describe(pet); \n   }      \n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Interfaces"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-inter-110"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-inter-110"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

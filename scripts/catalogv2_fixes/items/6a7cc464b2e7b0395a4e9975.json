@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc464b2e7b0395a4e9975",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-io2-103",
+    "title": "codecheck-bj-4-io2-103",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io2-103"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Your task is to swap all letters A with O and all letters a with o in a RandomAccessFile. Simply read a byte at a time, and if you find a letter to be swapped, move one byte back.",
+    "source_code": "import java.io.IOException;\nimport java.io.RandomAccessFile;\n\npublic class TextMangler\n{\n   public static void swapAsAndOs(RandomAccessFile file) throws IOException\n   {\n      long pos = 0;\n      while (pos < file.length())\n      {\n         char c = (char) file.read();\n         char replacement = 0;\n         if (c == 'a') replacement = 'o';\n         if (c == 'A') replacement = 'O';\n         else if (c == 'o') replacement = 'a';\n         else if (c == 'O') replacement = 'A';\n         if (replacement != 0)\n         {\n            file.seek(pos);\n            file.write((byte) replacement);\n         }\n         pos++;\n      }\n   }   \n   \n   // this method checks your work\n   \n   public static void main(String[] args) throws IOException\n   {\n      RandomAccessFile file = new RandomAccessFile(\"data.txt\", \"rw\");\n      swapAsAndOs(file);\n      file.close();\n   }   \n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Advanced Input and Output"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io2-103"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-io2-103"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

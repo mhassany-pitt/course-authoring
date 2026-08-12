@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc467b2e7b0395a4e99d5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-loop-107",
+    "title": "codecheck-bj-4-loop-107",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-loop-107"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Consider an image that is composed of a number of colored small squares, each colored in one of these 8 colors: red, green, blue, cyan, magenta, yellow, black, white. The colors are stored in a String using the first letter of each color (R, G, B, C, M, Y, K, W). Each row in the image is terminated by a newline character ('\\n'). Here is an example of an image:",
+    "source_code": "public class ColorCodes\n{\n   /**\n      Returns the code of the given image when doubled in size\n      @param img the codes of an image\n      @return the color codes of the doubled image\n   */\n   public String doubleImage(String img)\n   {   \n      String result = \"\";\n      for (int i = 0; i < img.length(); i++)\n      {\n          char ch = img.charAt(i);\n          if (ch == '\n')\n          {\n             // your work here\n          }\n          else\n          {\n             // your work here\n          }          \n      }\n      return result;\n   }  \n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Loops"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-loop-107"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-loop-107"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

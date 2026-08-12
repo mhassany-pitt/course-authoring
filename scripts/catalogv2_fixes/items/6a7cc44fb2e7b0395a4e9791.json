@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc44fb2e7b0395a4e9791",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-net-103",
+    "title": "codecheck-bj-4-net-103",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-net-103"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Many web site instruct browsers to set cookies, small pieces of information that the browser will send back to the web site when it connects again. Many cookies are quite harmless and merely tell the server which page requests are related. However, some cookies are used for marketing and tracking purposes.",
+    "source_code": "import java.io.InputStream;\nimport java.io.IOException;\nimport java.io.OutputStream;\nimport java.io.PrintWriter;\nimport java.net.Socket;\nimport java.util.Scanner;\n\n/**\n   This program prints all cookies that a web site tries to set.\n   Supply the name of the host and the resource on the command-line, \n   for example java CookiePrinter nytimes.com /\n*/\npublic class CookiePrinter\n{\n   public static void main(String[] args) throws IOException\n   {\n      // Get command-line arguments\n\n      if (args.length != 2)\n      {\n         System.out.println(\"Usage: java CookiePrinter host resource\");\n         System.exit(0);\n      }\n      String host = args[0];\n      String resource = args[1];\n\n      // Open socket\n\n      // Get streams\n      \n      // Turn streams into scanners and writers\n\n      // Send command\n\n      String command = \"GET \" + resource + \" HTTP/1.0\n\n\";\n      out.print(command);\n      out.flush();\n\n      // Read server response and print any lines starting with \n      // Set-Cookie, set-cookie, \n\n      // Always close the socket at the end\n      \n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Networking"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-net-103"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-net-103"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

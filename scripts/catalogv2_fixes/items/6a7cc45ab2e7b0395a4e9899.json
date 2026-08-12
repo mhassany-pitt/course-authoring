@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc45ab2e7b0395a4e9899",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-ood-105",
+    "title": "codecheck-bj-4-ood-105",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-ood-105"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "In this assignment, a transfer method has been added to the ATM class of section 12.5:",
+    "source_code": "// TODO: Change the prompt \"A=Deposit, B=Withdrawal, C=Cancel: \"\r\n// to \"A=Deposit, B=Withdrawal, C=Transfer, D=Cancel: \" and implement\r\n// the transfer feature.\r\n\r\nimport java.io.IOException;\r\nimport java.util.Scanner;\r\n\r\n/**\r\n   A text-based simulation of an automatic teller machine.\r\n*/\r\npublic class ATMSimulator\r\n{  \r\n   public static void main(String[] args)\r\n   {  \r\n      ATM theATM;\r\n      try\r\n      {  \r\n         Bank theBank = new Bank();\r\n         theBank.readCustomers(\"customers.txt\");\r\n         theATM = new ATM(theBank);\r\n      }\r\n      catch(IOException e)\r\n      {  \r\n         System.out.println(\"Error opening accounts file.\");\r\n         return;\r\n      }\r\n\r\n      Scanner in = new Scanner(System.in);\r\n\r\n      while (true)\r\n      {\r\n         int state = theATM.getState();\r\n         if (state == ATM.START)\r\n         {\r\n            System.out.print(\"Enter customer number: \");\r\n            int number = in.nextInt();\r\n            if (number == 0) return;\r\n            theATM.setCustomerNumber(number);            \r\n         }\r\n         else if (state == ATM.PIN)\r\n         {\r\n            System.out.print(\"Enter PIN: \");\r\n            int pin = in.nextInt();\r\n            theATM.selectCustomer(pin);\r\n         }\r\n         else if (state == ATM.ACCOUNT)\r\n         {\r\n            System.out.print(\"A=Checking, B=Savings, C=Quit: \");\r\n            String command = in.next();\r\n            if (command.equalsIgnoreCase(\"A\"))\r\n               theATM.selectAccount(ATM.CHECKING);\r\n            else if (command.equalsIgnoreCase(\"B\"))\r\n               theATM.selectAccount(ATM.SAVINGS);\r\n            else if (command.equalsIgnoreCase(\"C\"))\r\n               theATM.reset();\r\n            else\r\n               System.out.println(\"Illegal input!\");                        \r\n         }\r\n         else if (state == ATM.TRANSACT)\r\n         {\r\n            System.out.println(\"Balance=\" + theATM.getBalance());\r\n            System.out.print(\"A=Deposit, B=Withdrawal, C=Cancel: \");\r\n            String command = in.next();\r\n            if (command.equalsIgnoreCase(\"A\"))\r\n            {\r\n               System.out.print(\"Amount: \");\r\n               double amount = in.nextDouble();\r\n               theATM.deposit(amount);\r\n               theATM.back();\r\n            }\r\n            else if (command.equalsIgnoreCase(\"B\"))\r\n            {\r\n               System.out.print(\"Amount: \");\r\n               double amount = in.nextDouble();\r\n               theATM.withdraw(amount);\r\n               theATM.back();\r\n            }\r\n            else if (command.equalsIgnoreCase(\"C\"))\r\n               theATM.back();\r\n            else\r\n               System.out.println(\"Illegal input!\");                                    \r\n         }         \r\n      }\r\n   }\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Object-Oriented Design"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-ood-105"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-ood-105"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

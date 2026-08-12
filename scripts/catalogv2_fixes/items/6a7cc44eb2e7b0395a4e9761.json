@@ -1,0 +1,78 @@
+{
+  "id": "6a7cc44eb2e7b0395a4e9761",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-cpp-ComplexLoops-6",
+    "title": "codecheck-cpp-ComplexLoops-6",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-cpp-ComplexLoops-6"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "C++"
+    ]
+  },
+  "content": {
+    "prompt": "Repeat the previous exercise with subarrays that are not necessarily square.",
+    "source_code": "#include <vector>\nusing namespace std;\n\n/** Helper function. Check if a subrange is all zeros. */\nbool all_zeros(const vector<vector<int>>& v, int r1, int c1, int r2, int c2);\n\n/**\n   Return upper-left corner and area of largest zero-filled rectangle.\n   @param v the vector<vector<int>> to process.\n   @return {-1, -1, -1} if no zero-filled squares.\n*/\nvector<int> start_of_largest_zero_rectangle_vector(const vector<vector<int>>& v)\n{\n    // Your code here...\n}\n/** Helpber function. */\nbool all_zeros(const vector<vector<int>>& v, int r1, int c1, int r2, int c2)\n{\n   for (int r = r1; r <= r2; r++)\n   {\n      for (int c = c1; c <= c2; c++)\n      {\n         if (v[r][c] != 0) { return false; }\n      }\n   }\n   return true;\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Two-Dimensional Arrays",
+          "Complex Loops"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-cpp-ComplexLoops-6"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-cpp-ComplexLoops-6"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

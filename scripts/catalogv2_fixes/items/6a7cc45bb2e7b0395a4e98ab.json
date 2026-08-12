@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc45bb2e7b0395a4e98ab",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-fundat-106",
+    "title": "codecheck-bj-4-fundat-106",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-fundat-106"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Latitude and longitude are measured in degrees, minutes and seconds. As with time measurements, there are 60 seconds to a minute, and 60 minutes to a degree. Many GIS (Geographical Information System) programs express latitude and longitude in degrees only, with the minutes and seconds converted to fractional degrees. For example,",
+    "source_code": "/**\n   A class to convert degree, minute, seconds to decimal degrees\n*/\npublic class Degrees\n{\n   /**\n      Converts minutes and seconds to decimal degrees \n      @param degrees the degrees between -359 and 359\n      @param minutes the minutes between 0 and 59\n      @param seconds the minutes between 0 and 59\n      @return the equivalent decimal degrees between -360 and 360 (exclusive)\n   */\n   public double decimalDegrees(int degrees, int minutes, int seconds)\n   {\n      ...\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Fundamental Data Types"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-fundat-106"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-fundat-106"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

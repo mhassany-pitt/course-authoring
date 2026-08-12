@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc43fb2e7b0395a4e95f5",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-concur-105",
+    "title": "codecheck-bj-4-concur-105",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-concur-105"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Consider the following algorithm to sort an array of strings and remove duplicates, using two threads.",
+    "source_code": "import java.io.FileReader;\nimport java.io.IOException;\nimport java.util.ArrayList;\nimport java.util.Scanner;\nimport java.util.concurrent.locks.Condition;\nimport java.util.concurrent.locks.Lock;\nimport java.util.concurrent.locks.ReentrantLock;\n\npublic class WordList\n{\n   public WordList(Scanner in)\n   {\n      words = new ArrayList<String>();\n      myLock = new ReentrantLock();\n      while (in.hasNext()) words.add(in.next());\n   }\n   \n   private class Swapper implements Runnable\n   {\n      public void run()\n      {\n         // TODO: Don't make this thread run forever\n         while (true)\n         {\n            myLock.lock();\n            try\n            {\n               // find a pair to swap\n               int i = 0; \n               while (i < words.size() - 1 && words.get(i).compareTo(words.get(i + 1)) <= 0)\n                  i++;\n               if (i < words.size() - 1) \n               {\n                  String word1 = words.get(i);\n                  String word2 = words.get(i + 1);\n                  words.set(i, word2);\n                  words.set(i + 1, word1);\n               }               \n            }\n            finally\n            {\n               myLock.unlock();\n            }\n         }\n      }\n   }\n   \n   private class DupeRemover implements Runnable\n   {\n      public void run()\n      {\n         // TODO: Don't make this thread run forever\n         while (true)\n         {\n            myLock.lock();\n            try\n            {\n               // find a duplicate\n               int i = 0; \n               while (i < words.size() - 1 && !words.get(i).equals(words.get(i + 1)))\n                  i++;\n               if (i < words.size() - 1) words.remove(i);\n            }\n            finally\n            {\n               myLock.unlock();\n            }\n         }\n      }\n   }\n   \n   public void slowSort() throws InterruptedException\n   {\n      Runnable r1 = new Swapper();\n      Runnable r2 = new DupeRemover();\n      Thread t1 = new Thread(r1);\n      Thread t2 = new Thread(r2);\n      t1.start();\n      t2.start();\n      t1.join();\n      t2.join();\n      System.out.println(words);\n   }\n   \n   private ArrayList<String> words;\n   private Lock myLock;\n   \n   public static void main(String[] args) throws IOException, InterruptedException\n   {\n      Scanner in = new Scanner(new FileReader(\"data.txt\"));\n      WordList list = new WordList(in);\n      list.slowSort();      \n   }   \n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Concurrency"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-concur-105"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-concur-105"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

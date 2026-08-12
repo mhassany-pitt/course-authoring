@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc446b2e7b0395a4e9695",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-branch-106",
+    "title": "codecheck-bj-4-branch-106",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-branch-106"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "We consider names of people that consist of first and last names, such as Joe Smith. When you sort names, you first sort by last name and, if two people have the same last name, then you sort by first name. For example, Jane Doe comes before Harry Hacker, but Amy Doe comes before Jane Doe.",
+    "source_code": "public class Name\r\n{\r\n   private String first;\r\n   private String last;\r\n\r\n   /**\r\n      Constructs a name from a first and last name.\r\n      @param aFirst the first name\r\n      @param aLast the last name\r\n   */\r\n   public Name(String aFirst, String aLast)\r\n   {\r\n      first = aFirst;\r\n      last = aLast;\r\n   }\r\n\r\n   /**\r\n      Returns the first name of this name\r\n      @return the first name\r\n   */\r\n   public String getFirst()\r\n   {\r\n      return first;\r\n   }\r\n\r\n   /**\r\n      Returns the last name of this name\r\n      @return the last name\r\n   */\r\n   public String getLast()\r\n   {\r\n      return last;\r\n   }\r\n\r\n   /**\r\n      Checks whether this name should come before another name\r\n      when sorted by last name, then by first name.\r\n      @param other another name\r\n      @return true if this name should come before other\r\n   */\r\n   public boolean comesBefore(Name other)\r\n   {\r\n      // your work here\r\n\r\n\r\n\r\n   }\r\n\r\n\r\n   // this method is used to check your work\r\n\r\n   public static boolean check(String first1, String last1,\r\n      String first2, String last2)\r\n   {\r\n      Name name1 = new Name(first1, last1);\r\n      Name name2 = new Name(first2, last2);\r\n      return name1.comesBefore(name2);\r\n   }\r\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Branches"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-branch-106"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-branch-106"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc44bb2e7b0395a4e972b",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-concur-102",
+    "title": "codecheck-bj-4-concur-102",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-concur-102"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "We will divide the work of computing the sum of all values in an array over multiple threads. Each thread will compute the sum of a subrange and then update a shared sum variable and a shared count of completed threads.",
+    "source_code": "import java.util.concurrent.locks.Lock;\nimport java.util.concurrent.locks.ReentrantLock;\n\npublic class DataSet\n{\n   /**\n      Constructs an empty data set.\n   */\n   public DataSet(double[] values)\n   {\n      sum = 0;      \n      this.values = values;\n      myLock = new ReentrantLock();      \n   }\n\n   private class RangeProcessor implements Runnable\n   {\n      public RangeProcessor(int start, int end)\n      {\n         this.start = start;\n         this.end = Math.min(end, values.length);\n      }\n      \n      public void run()\n      {\n         // TODO: use lock to protect access to shared mutated variables\n         double total = 0;\n         for (int i = start; i < end; i++)\n            total += values[i];\n         sum += total;\n         completionCount++;\n      }\n      \n      private int start;\n      private int end;\n   }\n   \n   /**\n      Gets the average of the added data.\n      @return the average or 0 if no data has been added\n   */\n   public double getAverage() \n   {\n      if (values.length == 0) return 0;\n      \n      final int THREADS = 10;      \n      int size = values.length / THREADS;\n      for (int i = 0; i < THREADS; i++)\n      {\n         Runnable r = new RangeProcessor(i * size, (i + 1) * size);\n         Thread t = new Thread(r);\n         t.start();\n      }\n      \n      // busy waiting is not an optimal solution\n      final int DELAY = 100;\n      try\n      {\n         while (completionCount < THREADS)\n         {         \n            Thread.sleep(DELAY);\n         }\n      }\n      catch (InterruptedException ex)\n      {\n         return 0; \n      }         \n      \n      return sum / values.length;\n   }\n\n   private double[] values;\n   private double sum;\n   private int completionCount;\n   private Lock myLock;\n   \n   // this method is used to check your work\n   \n   public static void main(String[] args)  \n   {\n      final int SIZE = 10000000;\n      double[] v = new double[SIZE];\n      for (int i = 0; i < SIZE; i++) v[i] = i;\n      DataSet data = new DataSet(v);\n      double avg = data.getAverage();\n      System.out.println(avg);\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Concurrency"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-concur-102"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-concur-102"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

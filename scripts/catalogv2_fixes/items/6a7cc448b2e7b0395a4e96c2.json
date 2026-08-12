@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc448b2e7b0395a4e96c2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-io-108",
+    "title": "codecheck-bj-4-io-108",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io-108"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Your task is to read an input file containing a month name followed by the average maximum temperature for that month in Celsius, and then write an output file with the month names and the average maximum temperature for the month in Fahrenheit. For example, if the input file contains the line \"Jan 8.9\" on one line, the output file should contain \"Jan 40.9\" on one line.",
+    "source_code": "/**\n   Reads a file of month names and average temperatures in Celsius,\n   and writes a file containing month names and average temperatures\n   in Celsius.\n*/\n\nimport java.io.FileReader;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\nimport java.io.PrintWriter;\n\npublic class CityTemps\n{\n   public static void main(String[] args)\n      throws FileNotFoundException\n   {\n      String inputFileName = \"celsius.txt\";\n      String outputFileName = \"fahrenheit.txt\";\n\n      // TODO: Open the input and output files.\n      // Read records from the input file.\n      // Calculate the temperature in Fahrenheit.\n      // Write each line to the output file with the temperature\n      // in Fahrenheit.\n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Input and Output"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io-108"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-io-108"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

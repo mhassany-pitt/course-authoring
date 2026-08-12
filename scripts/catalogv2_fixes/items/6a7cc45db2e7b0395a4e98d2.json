@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc45db2e7b0395a4e98d2",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-inher-108",
+    "title": "codecheck-bj-4-inher-108",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-inher-108"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Enumerated types in Java are quite powerful, in that they can contain methods and instance variables. An enum type class automatically has a static values method added by the compiler that returns an array containing all of the values of the enum in the order in which they were declared.",
+    "source_code": "import java.util.ArrayList;\n\n/**\n   Element enumeration defines elements, their symbols, and their melting points.\n*/\n\npublic enum Element\n{\n   // TODO: Define enumerated values for each entry in the table\n\n   private String symbol;\n   private double meltingPoint;\n\n   // TODO: Complete the constructor\n   Element (String aSymbol, double aMeltingPoint)\n   {\n\n\n   }\n\n   public double getMeltingPoint()\n   {\n      return meltingPoint;\n   }\n\n   public String toString()\n   {\n      return symbol;\n   }\n   \n   //TODO: complete the getMeltedElements method.\n   /**\n      Returns a list of elements whose melting points\n      are less than or equal to a given temperature.\n      @param boundaryTemp the cutoff temperature value\n      @return a list of elements that will melt at the boundary temperature\n   */\n   public static ArrayList<Element> getMeltedElements(double boundaryTemp)\n   {\n\n   }   \n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Inheritance"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-inher-108"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-inher-108"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}

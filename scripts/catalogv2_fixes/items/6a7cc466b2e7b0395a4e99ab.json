@@ -1,0 +1,77 @@
+{
+  "id": "6a7cc466b2e7b0395a4e99ab",
+  "user_email": "moh70@pitt.edu",
+  "status": "public",
+  "created_at": "2026-08-12T19:02:28.713Z",
+  "listed_at": "2026-08-12T19:02:28.713Z",
+  "tags": [],
+  "identity": {
+    "id": "horstmann/codecheck-bj-4-io2-105",
+    "title": "codecheck-bj-4-io2-105",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io2-105"
+  },
+  "attribution": {
+    "created_at": "2026-08-12T19:02:28.713Z",
+    "provider": "CodeCheck",
+    "publisher": "Cay Horstmann",
+    "authors": [
+      {
+        "name": "Cay Horstmann",
+        "affiliation": "San Jos\u00e9 State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Your task is to read a serialized array of objects. You are given a FileInputStream, and you need to read and return the serialized Object[] array within. If a ClassCastException occurs, turn it into an IOException with the same message text.",
+    "source_code": "import java.io.ObjectInputStream;\nimport java.io.FileInputStream;\nimport java.util.Arrays;\n\npublic class ObjectArrayReader\n{\n   public Object[] readObjects(FileInputStream fileIn)\n      throws IOException\n   {\n      . . .\n   }\n   \n   // The following method checks your code. Do not modify it in any way.\n   \n   public String check(String filename)\n   {\n      try\n      {         \n         Object[] values = readObjects(new FileInputStream(filename));\n         return Arrays.toString(values);\n      }\n      catch (IOException ex)\n      {\n         return ex.toString();\n      }      \n   }\n}"
+  },
+  "classification": {
+    "topics": [],
+    "difficulty": "",
+    "knowledge_components": {
+      "CayHorstmann-keywords": {
+        "concepts": [
+          "Advanced Input and Output"
+        ],
+        "note": "extracted from the SPLICE.SLCItem.keywords field"
+      }
+    }
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "interaction": {
+    "interaction_type": ""
+  },
+  "delivery": [
+    {
+      "protocol": "SPLICE",
+      "url": "https://codecheck.io/files/horstmann/codecheck-bj-4-io2-105"
+    },
+    {
+      "protocol": "LTI 1.1",
+      "url": "https://codecheck.io/lti/problem/files/horstmann/codecheck-bj-4-io2-105"
+    }
+  ],
+  "rights": {
+    "license": "CC BY-NC-ND 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usage_notes": ""
+  },
+  "uses": []
+}
