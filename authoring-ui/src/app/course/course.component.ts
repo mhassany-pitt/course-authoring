@@ -3,7 +3,7 @@ import { any, getNavLinks, getPreviewLink } from '../utils';
 import { AppService } from '../app.service';
 import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
 import { CoursesService } from '../courses/courses.service';
-import { moveItemInArray } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { CatalogV2Service } from '../catalog_v2/catalog-v2.service';
 import { CatalogV2Item } from '../catalog_v2/catalog-v2.types';
@@ -615,6 +615,81 @@ export class CourseComponent implements OnInit {
 
   nextResourceId() {
     return Date.now();
+  }
+
+  getDropListId(unit: any, resource: any): string {
+    return `activity-drop-list-${unit?.id}-${resource?.id}`;
+  }
+
+  getConnectedDropLists(resource: any): string[] {
+    if (!this.course?.units?.length || !resource?.id)
+      return [];
+    return this.course.units.map((u: any) => this.getDropListId(u, resource));
+  }
+
+  rearrangeActivity(event: CdkDragDrop<{ unit: any, resource: any }>) {
+    const sourceUnit = event.previousContainer?.data?.unit;
+    const sourceResource = event.previousContainer?.data?.resource;
+    const targetUnit = event.container?.data?.unit;
+    const targetResource = event.container?.data?.resource;
+
+    if (!sourceUnit || !sourceResource || !targetUnit || !targetResource)
+      return;
+
+    sourceUnit.activities ||= {};
+    sourceUnit.activities[sourceResource.id] ||= [];
+    targetUnit.activities ||= {};
+    targetUnit.activities[targetResource.id] ||= [];
+
+    const sourceList = sourceUnit.activities[sourceResource.id];
+    const targetList = targetUnit.activities[targetResource.id];
+
+    if (event.previousContainer === event.container) {
+      const prevValue = this.cloneValue(sourceList);
+      moveItemInArray(sourceList, event.previousIndex, event.currentIndex);
+      this.updateRecommender();
+      this.logCourseChange(
+        'move-activity',
+        {
+          unit: this.getActivityLogUnit(sourceUnit),
+          resource: this.getActivityLogResource(sourceResource),
+          previous_index: event.previousIndex,
+          current_index: event.currentIndex,
+        } as any,
+        sourceList,
+        prevValue
+      );
+    } else {
+      const prevSourceValue = this.cloneValue(sourceList);
+      const prevTargetValue = this.cloneValue(targetList);
+
+      transferArrayItem(
+        sourceList,
+        targetList,
+        event.previousIndex,
+        event.currentIndex
+      );
+
+      this.updateRecommender();
+      this.logCourseChange(
+        'move-activity',
+        {
+          source_unit: this.getActivityLogUnit(sourceUnit),
+          target_unit: this.getActivityLogUnit(targetUnit),
+          resource: this.getActivityLogResource(targetResource),
+          previous_index: event.previousIndex,
+          current_index: event.currentIndex,
+        } as any,
+        {
+          source_activities: sourceList,
+          target_activities: targetList,
+        },
+        {
+          source_activities: prevSourceValue,
+          target_activities: prevTargetValue,
+        }
+      );
+    }
   }
 
   rearrange(event: any, list: any, unit: any, resource: any) {
