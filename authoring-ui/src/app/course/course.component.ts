@@ -515,18 +515,20 @@ export class CourseComponent implements OnInit {
   }
 
   deleteCourse() {
+    const undo = !!this.course.deleted_at;
     this.confirm.confirm({
-      header: 'Delete Course',
-      message: 'Are you sure you want to delete this course?',
-      icon: 'pi pi-exclamation-triangle',
-      acceptButtonStyleClass: 'p-button-danger',
+      header: undo ? 'Unarchive Course' : 'Archive Course',
+      message: undo
+        ? 'Are you sure you want to restore this course from archive?'
+        : 'Are you sure you want to archive this course?',
+      icon: 'pi pi-briefcase',
+      acceptButtonStyleClass: undo ? 'p-button-success' : 'p-button-warning',
       rejectButtonStyleClass: 'p-button-secondary',
       accept: () => {
-        const undo = !!this.course.deleted_at;
         const prevValue = this.course.deleted_at;
         this.courses.delete(this.course.id, undo).subscribe((course: any) => {
           this.logCourseChange(
-            undo ? 'undelete-course' : 'delete-course',
+            undo ? 'unarchive-course' : 'archive-course',
             { field: 'deleted_at' },
             course?.deleted_at ?? null,
             prevValue

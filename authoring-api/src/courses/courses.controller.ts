@@ -38,12 +38,64 @@ export class CoursesController {
     return useId(toObject(course));
   }
 
+  private isAppAdmin(req: any): boolean {
+    const roles = req.user?.roles || [];
+    return roles.includes('app-admin') || req.user?.email === 'moh70@pitt.edu';
+  }
+
   @Post('custom')
   @UseGuards(AuthenticatedGuard)
   async createCustom(@Request() req: any, @Body() course: any) {
-    if (req.user.email != 'moh70@pitt.edu')
+    if (!this.isAppAdmin(req))
       throw new HttpException('not allowed!', 403);
-    return useId(toObject(await this.courses.createCustom(course)));
+    const result = await this.courses.createCustom(course);
+    if (Array.isArray(result)) {
+      return result.map(c => useId(toObject(c)));
+    }
+    return useId(toObject(result));
+  }
+
+  @Get('admin/all')
+  @UseGuards(AuthenticatedGuard)
+  async listAdmin(@Request() req: any, @Query('trash_can') trash_can: boolean) {
+    if (!this.isAppAdmin(req))
+      throw new HttpException('not allowed!', 403);
+    const trash = String(trash_can) === 'true';
+    return (await this.courses.listAdmin(trash)).map(c => {
+      c = useId(toObject(c));
+      return c;
+    }).sort((a, b) => (new Date(b.created_at || 0)).getTime() - (new Date(a.created_at || 0)).getTime());
+  }
+
+  @Get('admin/:id')
+  @UseGuards(AuthenticatedGuard)
+  async getAdmin(@Request() req: any, @Param('id') id: string) {
+    if (!this.isAppAdmin(req))
+      throw new HttpException('not allowed!', 403);
+    const course = await this.courses.findByIdAdmin(id);
+    if (!course) throw new HttpException('course not found!', 404);
+    return useId(toObject(course));
+  }
+
+  @Patch('admin/:id')
+  @UseGuards(AuthenticatedGuard)
+  async updateAdmin(@Request() req: any, @Param('id') id: string, @Body() course: any) {
+    if (!this.isAppAdmin(req))
+      throw new HttpException('not allowed!', 403);
+    const updated = await this.courses.updateAdmin(id, course);
+    if (!updated) throw new HttpException('course not found!', 404);
+    return useId(toObject(updated));
+  }
+
+  @Delete('admin/:id')
+  @UseGuards(AuthenticatedGuard)
+  async deleteAdmin(@Request() req: any, @Param('id') id: string, @Query('undo') undo: boolean) {
+    if (!this.isAppAdmin(req))
+      throw new HttpException('not allowed!', 403);
+    const isUndo = String(undo) === 'true';
+    const deleted = await this.courses.deleteAdmin(id, isUndo);
+    if (!deleted) throw new HttpException('course not found!', 404);
+    return useId(toObject(deleted));
   }
 
   @Get('modulearn')
@@ -57,7 +109,10 @@ export class CoursesController {
   @Get(':id')
   @UseGuards(AuthenticatedGuard)
   async read(@Request() req: any, @Param('id') id: string) {
-    const course = await this.courses.load({ id, user_email: req.user.email });
+    const isAdmin = this.isAppAdmin(req);
+    const course = isAdmin
+      ? await this.courses.findById({ id })
+      : await this.courses.load({ id, user_email: req.user.email });
     if (!course) throw new HttpException('course not found!', 404);
     return this._read(id);
   }
@@ -84,7 +139,10 @@ export class CoursesController {
   @Get(':id/export')
   @UseGuards(AuthenticatedGuard)
   async export(@Request() req: any, @Param('id') id: string) {
-    const course = useId(toObject(await this.courses.load({ user_email: req.user.email, id })));
+    const isAdmin = this.isAppAdmin(req);
+    const course = isAdmin
+      ? useId(toObject(await this.courses.findById({ id })))
+      : useId(toObject(await this.courses.load({ user_email: req.user.email, id })));
     if (!course) throw new HttpException('course not found!', 404);
     return this._export(id);
   }
@@ -149,9 +207,12 @@ export class CoursesController {
   @Patch(':id')
   @UseGuards(AuthenticatedGuard)
   async update(@Request() req: any, @Param('id') id: string) {
-    const course = await this.courses.load({ user_email: req.user.email, id });
+    const isAdmin = this.isAppAdmin(req);
+    const course = isAdmin
+      ? await this.courses.findById({ id })
+      : await this.courses.load({ user_email: req.user.email, id });
     if (!course) throw new HttpException('course not found!', 404);
-    return this._update(id, req.user.email, req.body);
+    return this._update(id, isAdmin ? course.user_email : req.user.email, req.body);
   }
 
   @Patch(':id/x-api-user') // modulearn can update course structure
@@ -178,15 +239,24 @@ export class CoursesController {
   @Delete(':id')
   @UseGuards(AuthenticatedGuard)
   async delete(@Request() req: any, @Param('id') id: string, @Query('undo') undo: boolean) {
+    const isAdmin = this.isAppAdmin(req);
+    if (isAdmin) {
+      const isUndo = String(undo) === 'true';
+      const deleted = await this.courses.deleteAdmin(id, isUndo);
+      if (!deleted) throw new HttpException('course not found!', 404);
+      return useId(toObject(deleted));
+    }
     const course = await this.courses.delete({ id, user_email: req.user.email }, undo);
+    if (!course) throw new HttpException('course not found!', 404);
     return useId(toObject(course));
   }
 
   @Post(':id/clone')
   @UseGuards(AuthenticatedGuard)
   async clone(@Request() req: any, @Param('id') id: string) {
+    const isAdmin = this.isAppAdmin(req);
     const source = await this.courses.findById({ id });
-    if (!source || (source.user_email != req.user.email && !source.published))
+    if (!source || (!isAdmin && source.user_email != req.user.email && !source.published))
       throw new HttpException('course not found!', 404);
 
     const course = await this.courses.clone({ id, user_email: req.user.email });

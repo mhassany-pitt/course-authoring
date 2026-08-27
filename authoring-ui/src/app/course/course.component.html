@@ -35,7 +35,7 @@
       <span class="text-xl font-bold hidden md:inline-block text-nowrap">Course Authoring</span>
       <span class="hidden md:inline-block"><i class="fa fa-chevron-right"></i></span>
 
-      <p-dropdown #navEl [options]="navLinks" [ngModel]="'/courses'" class="-my-2 course-nav-dropdown"
+      <p-dropdown #navEl [options]="navLinks" [ngModel]="'/courses'" appendTo="body" class="-my-2 course-nav-dropdown"
         (onChange)="router.navigate([$event.value]);"></p-dropdown>
 
       <span class="flex-grow"></span>
@@ -47,8 +47,9 @@
   <div class="container mx-auto mt-24 mb-16 border shadow-md z-0 relative">
     <form #form="ngForm" (submit)="save()" class="relative m-2 flex flex-col gap-2">
       <div class="lg:absolute lg:right-0 lg:top-0 flex items-end justify-end gap-2 z-10">
-        <p-button *ngIf="isMyCourse" type="button" [label]="course.deleted_at ? 'Deleted' : 'Delete'" icon="fa fa-trash"
-          size="small" [severity]="course.deleted_at ? 'danger' : 'warning'" (click)="deleteCourse()">
+        <p-button *ngIf="isMyCourse" type="button" [label]="course.deleted_at ? 'Archived' : 'Archive'" icon="pi pi-briefcase"
+          size="small" [severity]="course.deleted_at ? 'success' : 'secondary'" [outlined]="true" (click)="deleteCourse()"
+          [title]="course.deleted_at ? 'Course is currently archived. Click to unarchive.' : 'Archive this course'">
         </p-button>
 
         <p-button *ngIf="app.user?.roles?.includes('x-author')" type="button" label="Use Course Structure"
@@ -128,7 +129,7 @@
                   <span class="text-red-600 align-super">*</span>
                 </span>
                 <p-dropdown #domainEl [options]="domains" name="domain" [ngModel]="course.domain" optionValue="id"
-                  optionLabel="name" placeholder="Select" required="true" styleClass="w-32"
+                  optionLabel="name" placeholder="Select" required="true" styleClass="w-32" appendTo="body"
                   [ngClass]="{'ng-invalid ng-dirty': any(domainEl).errors?.['required']}"
                   (onChange)="onDomainChange($event.value)" />
               </div>
@@ -138,7 +139,7 @@
                   <span class="text-red-600 align-super">*</span>
                 </span>
                 <p-dropdown #yesNoEl [options]="[{label:'Yes',value: true}, {label:'No',value:false}]" name="published"
-                  [ngModel]="course.published" placeholder="Select" required="true" styleClass="w-32"
+                  [ngModel]="course.published" placeholder="Select" required="true" styleClass="w-32" appendTo="body"
                   [ngClass]="{'ng-invalid ng-dirty': any(yesNoEl).errors?.['required']}"
                   (onChange)="onPublishedChange($event.value)" />
               </div>
@@ -384,14 +385,14 @@
                 <div class="flex flex-col">
                   <span class="text-xs text-gray-400 ml-1">Year:</span>
                   <p-dropdown #yearEl [options]="years" [name]="'group_year'+i" [(ngModel)]="group.year"
-                    optionValue="id" optionLabel="name" placeholder="Year" required="true"
+                    optionValue="id" optionLabel="name" placeholder="Year" required="true" appendTo="body"
                     [ngClass]="{'ng-invalid ng-dirty': any(yearEl).errors?.['required']}" />
                 </div>
 
                 <div class="flex flex-col">
                   <span class="text-xs text-gray-400 ml-1">Term:</span>
                   <p-dropdown #termEl [options]="terms" [name]="'group_term'+i" [(ngModel)]="group.term"
-                    optionValue="id" optionLabel="name" placeholder="Term" required="true"
+                    optionValue="id" optionLabel="name" placeholder="Term" required="true" appendTo="body"
                     [ngClass]="{'ng-invalid ng-dirty': any(termEl).errors?.['required']}" />
                 </div>
 

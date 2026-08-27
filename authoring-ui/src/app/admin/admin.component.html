@@ -1,0 +1,843 @@
+<div class="flex flex-col admin min-h-screen bg-slate-50">
+  <!-- Fixed Top Header Navigation -->
+  <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
+    <div
+      class="container mx-auto flex items-center gap-2 px-2 md:px-0 max-w-7xl"
+    >
+      <img src="assets/logo.png" class="h-8 w-8" alt="Logo" />
+      <span class="text-xl font-bold hidden md:inline-block text-nowrap"
+        >Course Authoring</span
+      >
+      <span class="hidden md:inline-block"
+        ><i class="pi pi-chevron-right text-gray-400 text-sm"></i
+      ></span>
+
+      <p-dropdown
+        #navEl
+        [options]="navLinks"
+        [ngModel]="'/admin'"
+        appendTo="body"
+        class="-my-2 course-nav-dropdown"
+        (onChange)="router.navigate([$event.value])"
+      ></p-dropdown>
+
+      <span class="flex-grow"></span>
+
+      <app-user-auth-ctrl />
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <div
+    class="container mx-auto mt-24 mb-16 border border-gray-200 rounded-lg shadow-sm z-0 max-w-7xl bg-white overflow-hidden"
+  >
+    <p-tabView [(activeIndex)]="activeTabIndex" (onChange)="onTabChange($event)" styleClass="admin-tabview">
+      <!-- ==================== USERS TAB ==================== -->
+      <p-tabPanel>
+        <ng-template pTemplate="header">
+          <div class="flex items-center gap-2 py-1">
+            <i class="pi pi-users text-blue-600"></i>
+            <span class="font-semibold text-gray-800">Users</span>
+            <span
+              class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded-full font-medium"
+            >
+              {{ users.length }}
+            </span>
+          </div>
+        </ng-template>
+
+        <p-table
+          #table
+          [value]="users"
+          [(selection)]="selected"
+          [globalFilterFields]="['fullname', 'email', 'tags', 'roles']"
+          styleClass="p-datatable-striped p-datatable-sm"
+          paginatorDropdownAppendTo="body"
+          [paginator]="true"
+          [rows]="25"
+          [rowsPerPageOptions]="[10, 25, 50, 100]"
+          [showCurrentPageReport]="true"
+          currentPageReportTemplate="Showing {first} to {last} of {totalRecords} users"
+        >
+          <ng-template pTemplate="caption">
+            <div class="p-3 flex flex-wrap items-center justify-between gap-3 bg-slate-50 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="text-xl font-bold text-gray-800">User Accounts</span>
+                <span class="text-xs text-gray-500 font-medium">({{ users.length }} total accounts)</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <p-button
+                  label="New User"
+                  icon="pi pi-user-plus"
+                  size="small"
+                  (click)="dialog = 'create'"
+                ></p-button>
+
+                <p-splitButton
+                  label="Batch Actions"
+                  icon="pi pi-cog"
+                  styleClass="p-button-sm p-button-outlined p-button-secondary"
+                  appendTo="body"
+                  [model]="actions"
+                  [disabled]="!getSelecteds().length"
+                ></p-splitButton>
+
+                <span class="p-input-icon-right">
+                  <i class="pi pi-search"></i>
+                  <input
+                    pInputText
+                    type="text"
+                    (input)="filter(table, $event)"
+                    placeholder="Search users..."
+                    class="p-inputtext-sm w-56"
+                  />
+                </span>
+              </div>
+            </div>
+          </ng-template>
+
+          <ng-template pTemplate="header">
+            <tr>
+              <th style="width: 2.5rem" class="text-center">
+                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+              </th>
+              <th pSortableColumn="fullname">
+                <div class="flex items-center gap-1">
+                  <span>User &amp; Status</span>
+                  <p-sortIcon field="fullname"></p-sortIcon>
+                </div>
+              </th>
+              <th pSortableColumn="email" class="w-64">
+                <div class="flex items-center gap-1">
+                  <span>Email Address</span>
+                  <p-sortIcon field="email"></p-sortIcon>
+                </div>
+              </th>
+              <th pSortableColumn="roles" class="w-48 text-center">
+                <div class="flex items-center justify-center gap-1">
+                  <span>Roles</span>
+                  <p-sortIcon field="roles"></p-sortIcon>
+                </div>
+              </th>
+            </tr>
+          </ng-template>
+
+          <ng-template pTemplate="emptymessage">
+            <tr>
+              <td colspan="4">
+                <div class="flex flex-col items-center justify-center py-10 text-gray-400">
+                  <i class="pi pi-users text-3xl mb-2 text-gray-300"></i>
+                  <span>No user records match your criteria</span>
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+
+          <ng-template pTemplate="body" let-user>
+            <tr [ngClass]="{ 'opacity-50 bg-gray-50': !user.active }">
+              <td class="text-center">
+                <p-tableCheckbox
+                  *ngIf="!user.itIsMe"
+                  [value]="user"
+                ></p-tableCheckbox>
+              </td>
+
+              <!-- Full Name & Right-aligned Status -->
+              <td class="group max-w-0">
+                <div class="flex items-center justify-between gap-2 whitespace-nowrap overflow-hidden py-0.5">
+                  <!-- Left side: Avatar + Full Name + Badges + Tags -->
+                  <div class="flex items-center gap-1.5 min-w-0 overflow-hidden">
+                    <div
+                      class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-bold shrink-0"
+                    >
+                      {{ (user.fullname || user.email || '?').charAt(0).toUpperCase() }}
+                    </div>
+
+                    <span class="font-medium text-gray-900 text-xs truncate" [ngClass]="{ 'italic text-gray-400': !user.fullname }">
+                      {{ user.fullname || "No Name Set" }}
+                    </span>
+
+                    <i
+                      class="pi pi-pencil cursor-pointer text-gray-400 hover:text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
+                      style="font-size: 0.7rem"
+                      title="Edit Fullname"
+                      (click)="updateFullname(user)"
+                    ></i>
+
+                    <span
+                      *ngIf="user.itIsMe"
+                      class="bg-blue-50 text-blue-700 border border-blue-200 text-[10px] px-1 py-0 rounded font-semibold shrink-0"
+                    >
+                      you
+                    </span>
+                    <span
+                      *ngIf="user.type === 'api'"
+                      class="bg-purple-50 text-purple-700 border border-purple-200 text-[10px] px-1 py-0 rounded font-medium shrink-0"
+                    >
+                      API
+                    </span>
+
+                    <!-- Tags -->
+                    <ng-container *ngIf="user.tags?.length">
+                      <span
+                        *ngFor="let tag of user.tags"
+                        class="bg-slate-100 text-slate-600 rounded px-1.5 py-0 text-[10px] shrink-0 border border-slate-200"
+                      >
+                        {{ tag }}
+                      </span>
+                    </ng-container>
+                  </div>
+
+                  <!-- Right side: Status Pill -->
+                  <span
+                    class="text-[10px] px-1.5 py-0 rounded-full font-medium inline-flex items-center gap-1 shrink-0 ml-2"
+                    [ngClass]="{
+                      'bg-emerald-100 text-emerald-800': user.active,
+                      'bg-rose-100 text-rose-800': !user.active
+                    }"
+                  >
+                    <i
+                      class="fa text-[9px]"
+                      [ngClass]="user.active ? 'fa-check-circle' : 'fa-ban'"
+                    ></i>
+                    {{ user.active ? 'Active' : 'Disabled' }}
+                  </span>
+                </div>
+              </td>
+
+              <!-- Email Address -->
+              <td class="whitespace-nowrap">
+                <div class="flex items-center gap-1.5 text-gray-700 text-xs">
+                  <i class="pi pi-envelope text-gray-400 text-[10px]"></i>
+                  <span class="font-mono">{{ user.email }}</span>
+                </div>
+              </td>
+
+              <!-- Roles -->
+              <td class="text-center whitespace-nowrap">
+                <div class="flex items-center justify-center gap-1">
+                  <span
+                    *ngFor="let role of user.roles"
+                    class="text-[10px] px-1.5 py-0 rounded-full font-medium inline-flex items-center gap-1"
+                    [ngClass]="{
+                      'bg-purple-100 text-purple-800 border border-purple-200': role === 'app-admin',
+                      'bg-blue-100 text-blue-800 border border-blue-200': role === 'author',
+                      'bg-gray-100 text-gray-700': role !== 'app-admin' && role !== 'author'
+                    }"
+                  >
+                    <i
+                      class="text-[9px]"
+                      [ngClass]="{
+                        'fa fa-shield': role === 'app-admin',
+                        'pi pi-pencil': role === 'author'
+                      }"
+                    ></i>
+                    {{ role === 'app-admin' ? 'App Admin' : (role === 'author' ? 'Author' : role) }}
+                  </span>
+                  <span *ngIf="!user.roles?.length" class="text-xs text-gray-400 italic">None</span>
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </p-tabPanel>
+
+      <!-- ==================== COURSES TAB ==================== -->
+      <p-tabPanel>
+        <ng-template pTemplate="header">
+          <div class="flex items-center gap-2 py-1">
+            <i class="pi pi-book text-indigo-600"></i>
+            <span class="font-semibold text-gray-800">Courses</span>
+            <span
+              class="bg-indigo-100 text-indigo-800 text-xs px-2 py-0.5 rounded-full font-medium"
+            >
+              {{ adminCourses.length }}
+            </span>
+          </div>
+        </ng-template>
+
+        <p-table
+          #coursesTable
+          [value]="adminCourses"
+          dataKey="id"
+          [expandedRowKeys]="expandedRowKeys"
+          [loading]="coursesLoading"
+          [globalFilterFields]="['code', 'name', 'domain', 'institution', 'user_email', 'description']"
+          styleClass="p-datatable-striped p-datatable-sm"
+          paginatorDropdownAppendTo="body"
+          [paginator]="true"
+          [rows]="25"
+          [rowsPerPageOptions]="[10, 25, 50, 100]"
+          [showCurrentPageReport]="true"
+          currentPageReportTemplate="Showing {first} to {last} of {totalRecords} courses"
+        >
+          <ng-template pTemplate="caption">
+            <div class="p-3 flex flex-wrap items-center justify-between gap-3 bg-slate-50 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="text-xl font-bold text-gray-800">Course Management</span>
+                <span class="text-xs text-gray-500 font-medium">({{ adminCourses.length }} courses)</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <p-button
+                  *ngIf="!coursesTrashCan"
+                  label="Import Course(s)"
+                  icon="pi pi-upload"
+                  size="small"
+                  (click)="importCourseDialog = true"
+                ></p-button>
+
+                <p-button
+                  icon="pi pi-refresh"
+                  size="small"
+                  [outlined]="true"
+                  severity="secondary"
+                  (click)="reloadCourses()"
+                  title="Refresh Courses List"
+                ></p-button>
+
+                <p-button
+                  [label]="coursesTrashCan ? 'Active Courses' : 'Archived Courses'"
+                  [icon]="coursesTrashCan ? 'pi pi-arrow-left' : 'pi pi-briefcase'"
+                  size="small"
+                  [severity]="coursesTrashCan ? 'primary' : 'secondary'"
+                  [outlined]="!coursesTrashCan"
+                  (click)="coursesTrashCan = !coursesTrashCan; reloadCourses()"
+                ></p-button>
+
+                <span class="p-input-icon-right">
+                  <i class="pi pi-search"></i>
+                  <input
+                    pInputText
+                    type="text"
+                    (input)="coursesTable.filterGlobal($any($event.target).value, 'contains')"
+                    placeholder="Search courses..."
+                    class="p-inputtext-sm w-60"
+                  />
+                </span>
+              </div>
+            </div>
+          </ng-template>
+
+          <ng-template pTemplate="header">
+            <tr>
+              <th pSortableColumn="domain" class="w-20 text-right pr-3">
+                <div class="flex items-center justify-end gap-1">
+                  <span>Domain</span>
+                  <p-sortIcon field="domain"></p-sortIcon>
+                </div>
+              </th>
+              <th pSortableColumn="name">
+                <div class="flex items-center gap-1">
+                  <span>Course Name &amp; Status</span>
+                  <p-sortIcon field="name"></p-sortIcon>
+                </div>
+              </th>
+              <th class="w-40 text-center">Structure</th>
+              <th pSortableColumn="user_email" class="w-48 text-center">
+                <div class="flex items-center justify-center gap-1">
+                  <span>Author</span>
+                  <p-sortIcon field="user_email"></p-sortIcon>
+                </div>
+              </th>
+              <th pSortableColumn="created_at" class="w-28 text-center">
+                <div class="flex items-center justify-center gap-1">
+                  <span>Created</span>
+                  <p-sortIcon field="created_at"></p-sortIcon>
+                </div>
+              </th>
+              <th class="w-20 text-center">Actions</th>
+            </tr>
+          </ng-template>
+
+          <ng-template pTemplate="emptymessage">
+            <tr>
+              <td colspan="6">
+                <div class="flex flex-col items-center justify-center py-10 text-gray-400">
+                  <i class="pi pi-inbox text-3xl mb-2 text-gray-300"></i>
+                  <span>No courses match your filter criteria</span>
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+
+          <ng-template pTemplate="body" let-course>
+            <tr [ngClass]="{ 'opacity-60 bg-amber-50/30': course.deleted_at, '!bg-blue-50/80 border-l-4 !border-l-blue-600': expandedRowKeys[course.id] }">
+              <!-- Domain (Right-aligned before name) -->
+              <td class="text-right pr-3 whitespace-nowrap">
+                <span
+                  class="uppercase text-[10px] font-bold px-1.5 py-0.2 rounded border tracking-wide inline-block"
+                  [ngClass]="{
+                    'bg-blue-50 text-blue-700 border-blue-200': course.domain === 'py' || course.domain === 'python',
+                    'bg-amber-50 text-amber-700 border-amber-200': course.domain === 'java',
+                    'bg-emerald-50 text-emerald-700 border-emerald-200': course.domain === 'c' || course.domain === 'cpp',
+                    'bg-purple-50 text-purple-700 border-purple-200': course.domain === 'sql',
+                    'bg-gray-100 text-gray-700 border-gray-200': !['py','python','java','c','cpp','sql'].includes(course.domain)
+                  }"
+                >
+                  {{ course.domain || 'N/A' }}
+                </span>
+              </td>
+
+              <!-- Course Name & Inline Status (Right-aligned) -->
+              <td class="max-w-0">
+                <div class="flex items-center justify-between gap-2 whitespace-nowrap overflow-hidden py-0.5">
+                  <!-- Left side: Title + Code + Archived icon -->
+                  <div class="flex items-center gap-1.5 min-w-0 overflow-hidden">
+                    <a
+                      [routerLink]="['/courses/', course.id]"
+                      target="_blank"
+                      class="font-semibold text-blue-700 hover:text-blue-900 no-underline truncate text-xs"
+                      [title]="(course.name || 'Untitled Course') + (course.description ? ' — ' + course.description : '')"
+                    >
+                      {{ course.name || 'Untitled Course' }}
+                    </a>
+
+                    <!-- Code Pill -->
+                    <span
+                      *ngIf="course.code"
+                      class="font-mono text-[10px] text-gray-600 bg-gray-100 px-1 py-0 rounded border border-gray-200 shrink-0"
+                      [title]="'Code: ' + course.code + (course.institution ? ' (' + course.institution + ')' : '')"
+                    >
+                      {{ course.code }}
+                    </span>
+
+                    <!-- Archived Notice Icon -->
+                    <i
+                      *ngIf="course.deleted_at"
+                      class="pi pi-briefcase text-amber-600 text-xs shrink-0"
+                      [title]="'Archived at ' + (course.deleted_at | date : 'medium')"
+                    ></i>
+                  </div>
+
+                  <!-- Right side: Status Pill -->
+                  <span
+                    class="text-[10px] px-1.5 py-0 rounded-full font-medium inline-flex items-center gap-1 shrink-0 ml-2"
+                    [ngClass]="{
+                      'bg-emerald-100 text-emerald-800': course.published,
+                      'bg-amber-100 text-amber-800': !course.published
+                    }"
+                  >
+                    <i class="fa text-[9px]" [ngClass]="course.published ? 'fa-check' : 'fa-lock'"></i>
+                    {{ course.published ? 'Published' : 'Draft' }}
+                  </span>
+                </div>
+              </td>
+
+              <!-- Structure Metrics -->
+              <td class="text-center whitespace-nowrap text-xs text-gray-600">
+                <span class="font-semibold text-gray-800">{{ countUnits(course.units) }}</span> units &bull;
+                <span class="font-semibold text-gray-800">{{ countActivities(course.units) }}</span> activities
+              </td>
+
+              <!-- Author -->
+              <td class="text-center whitespace-nowrap text-xs">
+                <div class="flex items-center justify-center gap-1">
+                  <span class="font-mono text-gray-700 truncate max-w-[12rem] inline-block" [title]="course.user_email">
+                    {{ course.user_email }}
+                  </span>
+                  <span
+                    *ngIf="course.collaborator_emails?.length"
+                    class="text-[10px] text-gray-500 bg-slate-100 px-1 py-0 rounded border border-slate-200 shrink-0"
+                    [title]="'Collaborators: ' + course.collaborator_emails.join(', ')"
+                  >
+                    +{{ course.collaborator_emails.length }}
+                  </span>
+                </div>
+              </td>
+
+              <!-- Created At -->
+              <td class="text-center text-xs text-gray-500 font-mono whitespace-nowrap">
+                {{ course.created_at | date : "MMM d, y" }}
+              </td>
+
+              <!-- Actions (Icon-only buttons) -->
+              <td class="text-center whitespace-nowrap">
+                <div class="flex items-center justify-center gap-1">
+                  <!-- Edit JSON Button (icon-only, toggles inline row) -->
+                  <p-button
+                    type="button"
+                    icon="pi pi-code"
+                    size="small"
+                    [outlined]="!expandedRowKeys[course.id]"
+                    [severity]="expandedRowKeys[course.id] ? 'primary' : 'secondary'"
+                    styleClass="!w-6 !h-6 !p-0 !text-xs"
+                    (click)="toggleCourseJson(course)"
+                    [title]="expandedRowKeys[course.id] ? 'Close inline JSON editor' : 'Inspect and edit raw JSON inline'"
+                  ></p-button>
+
+                  <!-- Archive -->
+                  <p-button
+                    *ngIf="!course.deleted_at"
+                    type="button"
+                    icon="pi pi-briefcase"
+                    size="small"
+                    [text]="true"
+                    severity="secondary"
+                    styleClass="!w-6 !h-6 !p-0 !text-xs text-gray-500 hover:text-amber-700"
+                    (click)="deleteCourse(course, false)"
+                    title="Archive course"
+                  ></p-button>
+
+                  <!-- Unarchive / Restore -->
+                  <p-button
+                    *ngIf="course.deleted_at"
+                    type="button"
+                    icon="pi pi-briefcase"
+                    size="small"
+                    [text]="true"
+                    severity="success"
+                    styleClass="!w-6 !h-6 !p-0 !text-xs text-emerald-600 hover:text-emerald-800"
+                    (click)="deleteCourse(course, true)"
+                    title="Unarchive course"
+                  ></p-button>
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+
+          <!-- Inline JSON Editor Expansion Row -->
+          <ng-template pTemplate="rowexpansion" let-course>
+            <tr class="!bg-slate-950 border-y-2 border-slate-700">
+              <td colspan="6" class="!p-3.5 bg-slate-950 text-slate-100 max-w-full overflow-hidden">
+                <div *ngIf="loadingCourseJsonId === course.id" class="flex items-center justify-center py-8 gap-2 text-slate-400">
+                  <i class="pi pi-spin pi-spinner text-lg text-blue-400"></i>
+                  <span class="text-xs">Loading full course JSON...</span>
+                </div>
+
+                <div *ngIf="loadingCourseJsonId !== course.id && editingCourse" class="flex flex-col gap-2.5 max-w-full">
+                  <!-- Editor Header Toolbar -->
+                  <div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-slate-800">
+                    <div class="flex items-center gap-2">
+                      <span class="font-mono text-xs text-blue-400 font-bold flex items-center gap-1.5">
+                        <i class="pi pi-code"></i>
+                        <span>{{ editingCourse.name || editingCourse.code || 'Course JSON' }}</span>
+                      </span>
+                      <span class="font-mono text-[10px] text-slate-400 bg-slate-800 px-1.5 py-0.5 rounded border border-slate-700">ID: {{ editingCourse.id }}</span>
+                      <span class="text-[11px] text-slate-400">Author: <strong class="text-slate-200">{{ editingCourse.user_email }}</strong></span>
+                    </div>
+
+                    <div class="flex items-center gap-1.5">
+                      <p-button
+                        label="Format"
+                        icon="pi pi-align-left"
+                        size="small"
+                        [outlined]="true"
+                        severity="secondary"
+                        styleClass="!text-xs !py-0.5 !px-2 text-slate-300 border-slate-700 hover:bg-slate-800 hover:text-white"
+                        (click)="formatEditingJson()"
+                        title="Prettify and format JSON"
+                      ></p-button>
+                      <p-button
+                        label="Reset"
+                        icon="pi pi-refresh"
+                        size="small"
+                        [outlined]="true"
+                        severity="secondary"
+                        styleClass="!text-xs !py-0.5 !px-2 text-slate-300 border-slate-700 hover:bg-slate-800 hover:text-white"
+                        (click)="resetEditingJson()"
+                        title="Reset to original JSON"
+                      ></p-button>
+                      <p-button
+                        label="Copy"
+                        icon="pi pi-copy"
+                        size="small"
+                        [outlined]="true"
+                        severity="secondary"
+                        styleClass="!text-xs !py-0.5 !px-2 text-slate-300 border-slate-700 hover:bg-slate-800 hover:text-white"
+                        (click)="copyJsonToClipboard()"
+                        title="Copy JSON to clipboard"
+                      ></p-button>
+                    </div>
+                  </div>
+
+                  <!-- Validation Indicator -->
+                  <div
+                    *ngIf="jsonValidationStatus.valid"
+                    class="bg-emerald-950/80 border border-emerald-800 text-emerald-300 text-xs px-3 py-1 rounded flex items-center justify-between"
+                  >
+                    <span class="flex items-center gap-1.5 font-medium text-[11px]">
+                      <i class="pi pi-check-circle text-emerald-400 font-bold"></i> Valid JSON Structure
+                    </span>
+                    <span class="text-slate-400 font-mono text-[10px]">
+                      {{ getJsonStats().lines }} lines &bull; {{ getJsonStats().chars }} characters
+                    </span>
+                  </div>
+
+                  <div
+                    *ngIf="!jsonValidationStatus.valid"
+                    class="bg-rose-950/80 border border-rose-800 text-rose-300 text-xs px-3 py-1.5 rounded flex items-center gap-2"
+                  >
+                    <i class="pi pi-exclamation-triangle text-rose-400 text-sm shrink-0"></i>
+                    <div class="text-[11px]">
+                      <strong>JSON Syntax Error:</strong>
+                      <span class="font-mono text-rose-200 ml-1">{{ jsonValidationStatus.message }}</span>
+                    </div>
+                  </div>
+
+                  <!-- Textarea Editor -->
+                  <textarea
+                    pInputTextarea
+                    rows="18"
+                    [(ngModel)]="editingCourseJsonText"
+                    (ngModelChange)="onJsonTextChange()"
+                    spellcheck="false"
+                    class="w-full max-w-full box-border font-mono text-xs p-3 leading-relaxed border border-slate-800 rounded bg-slate-900 text-emerald-400 focus:outline-none focus:ring-1 focus:ring-blue-500 selection:bg-blue-800 selection:text-white"
+                    style="min-height: 320px; max-height: 600px; resize: vertical; box-sizing: border-box;"
+                  ></textarea>
+
+                  <!-- Footer Actions -->
+                  <div class="flex items-center justify-between pt-1">
+                    <span class="text-[11px] text-slate-400">
+                      Changes take effect immediately upon saving.
+                    </span>
+
+                    <div class="flex items-center gap-2">
+                      <p-button
+                        label="Cancel"
+                        icon="pi pi-times"
+                        size="small"
+                        [outlined]="true"
+                        severity="secondary"
+                        styleClass="!text-xs !py-1 !px-2.5 text-slate-300 border-slate-700 hover:bg-slate-800"
+                        (click)="closeCourseJson()"
+                      ></p-button>
+                      <p-button
+                        label="Save Course JSON"
+                        icon="pi pi-save"
+                        size="small"
+                        styleClass="!text-xs !py-1 !px-3"
+                        (click)="saveCourseJson()"
+                        [disabled]="!jsonValidationStatus.valid || savingJson"
+                        [loading]="savingJson"
+                      ></p-button>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</div>
+
+<!-- ==================== NEW USERS DIALOG ==================== -->
+<p-dialog
+  *ngIf="model"
+  header="New User Accounts"
+  [visible]="dialog == 'create'"
+  (visibleChange)="dialog = $event"
+  [modal]="true"
+  [style]="{ width: '500px' }"
+  class="user-admin-dialog"
+>
+  <form #form="ngForm" class="flex flex-col gap-3 p-1" (submit)="createUsers()">
+    <div class="flex items-center gap-2">
+      <span class="text-sm font-semibold text-gray-700 w-16">Roles:</span>
+      <p-multiSelect
+        name="roles"
+        [options]="[
+          { value: 'author', label: 'Author' },
+          { value: 'app-admin', label: 'App Admin' }
+        ]"
+        [(ngModel)]="model.roles"
+        optionLabel="label"
+        optionValue="value"
+        placeholder="Select roles"
+        [filter]="false"
+        [showToggleAll]="false"
+        appendTo="body"
+        class="flex-grow"
+      >
+        <ng-template pTemplate="header">&nbsp;</ng-template>
+      </p-multiSelect>
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <span class="text-sm font-semibold text-gray-700">Tags:</span>
+      <p-chips
+        name="tags"
+        [(ngModel)]="model.tags"
+        separator=","
+        placeholder="Type tag and press enter (or comma separated)"
+        class="p-chips-sm w-full"
+      ></p-chips>
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <span class="text-sm font-semibold text-gray-700">Users List:</span>
+      <textarea
+        name="emails"
+        rows="6"
+        pInputTextarea
+        [(ngModel)]="model.emails"
+        placeholder="fullname:email@domain.com, John Doe:john@example.com"
+        class="w-full p-inputtext-sm font-mono text-xs"
+        required
+      ></textarea>
+      <span class="text-[11px] text-gray-500">Format: <code>Full Name:email&#64;domain.com</code> (comma-separated)</span>
+    </div>
+
+    <div class="flex items-center justify-end gap-2 mt-3 pt-3 border-t">
+      <p-button
+        label="Cancel"
+        icon="pi pi-times"
+        size="small"
+        [outlined]="true"
+        severity="secondary"
+        (click)="dialog = false"
+      ></p-button>
+      <p-button
+        type="submit"
+        label="Create Accounts"
+        icon="pi pi-check"
+        size="small"
+        [disabled]="!form.valid"
+      ></p-button>
+    </div>
+  </form>
+</p-dialog>
+
+<!-- ==================== UPDATE ROLES DIALOG ==================== -->
+<p-dialog
+  *ngIf="model"
+  header="Update Selected User Roles"
+  [visible]="dialog == 'update-role'"
+  (visibleChange)="dialog = $event"
+  [modal]="true"
+  [style]="{ width: '480px' }"
+  class="user-admin-dialog"
+>
+  <form #form="ngForm" class="flex flex-col gap-3 p-1" (submit)="updateRoles()">
+    <div class="flex items-center gap-2">
+      <span class="text-sm font-semibold text-gray-700 w-16">Roles:</span>
+      <p-multiSelect
+        name="roles"
+        [options]="[
+          { value: 'author', label: 'Author' },
+          { value: 'app-admin', label: 'App Admin' }
+        ]"
+        [(ngModel)]="model.roles"
+        optionLabel="label"
+        optionValue="value"
+        placeholder="Select roles"
+        [filter]="false"
+        [showToggleAll]="false"
+        appendTo="body"
+        class="flex-grow"
+        required
+      >
+        <ng-template pTemplate="header">&nbsp;</ng-template>
+      </p-multiSelect>
+    </div>
+
+    <div class="text-xs text-gray-500">
+      This will overwrite the roles for the <strong>{{ getSelecteds().length }}</strong> selected user(s).
+    </div>
+
+    <div class="flex items-center justify-end gap-2 mt-3 pt-3 border-t">
+      <p-button
+        label="Cancel"
+        icon="pi pi-times"
+        size="small"
+        [outlined]="true"
+        severity="secondary"
+        (click)="dialog = false"
+      ></p-button>
+      <p-button
+        type="submit"
+        label="Apply Roles"
+        icon="pi pi-check"
+        size="small"
+        [disabled]="!form.valid"
+      ></p-button>
+    </div>
+  </form>
+</p-dialog>
+
+
+
+<!-- ==================== IMPORT COURSE(S) DIALOG ==================== -->
+<p-dialog
+  [(visible)]="importCourseDialog"
+  [modal]="true"
+  [style]="{ width: '75vw', maxWidth: '1000px' }"
+  header="Import Course(s)"
+  class="import-course-dialog"
+>
+  <div class="flex flex-col gap-4 p-1">
+    <div class="bg-blue-50 border border-blue-200 text-blue-900 rounded-md p-3 text-sm flex flex-col gap-1">
+      <div class="font-semibold flex items-center gap-1.5">
+        <i class="pi pi-info-circle text-blue-600"></i>
+        <span>Import Instructions</span>
+      </div>
+      <div class="text-xs text-blue-800">
+        Paste a JSON array of course objects or a single course object. Each course will be created and assigned to the specified author.
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between">
+      <span class="text-sm font-semibold text-gray-700">Course JSON Payload:</span>
+      <p-button
+        label="Insert Boilerplate Sample JSON"
+        icon="pi pi-code"
+        size="small"
+        [outlined]="true"
+        severity="secondary"
+        (click)="fillSampleJson(importCourseEl)"
+      ></p-button>
+    </div>
+
+    <textarea
+      #importCourseEl
+      rows="15"
+      pInputTextarea
+      placeholder="[ { &quot;name&quot;: &quot;...&quot;, &quot;code&quot;: &quot;...&quot;, &quot;domain&quot;: &quot;...&quot;, &quot;user_email&quot;: &quot;...&quot;, &quot;resources&quot;: [...], &quot;units&quot;: [...] } ]"
+      class="w-full p-inputtext-sm font-mono text-xs p-3 border rounded"
+    ></textarea>
+
+    <div class="flex items-center justify-between">
+      <details class="text-xs text-gray-600">
+        <summary class="font-semibold text-gray-700 hover:text-blue-600 cursor-pointer select-none">
+          View Expected JSON Structure &amp; Fields
+        </summary>
+        <div class="mt-2 bg-gray-50 border border-gray-200 rounded p-3 text-gray-700 flex flex-col gap-2">
+          <div class="font-medium text-gray-800">Top-Level Fields per Course:</div>
+          <ul class="m-0 pl-4 list-disc space-y-1">
+            <li><code>name</code> (string, required): Course title</li>
+            <li><code>code</code> (string, required): Course code (e.g. <code>CS 0401</code>)</li>
+            <li><code>domain</code> (string, required): Domain identifier (e.g. <code>java</code>, <code>c</code>, <code>cpp</code>, <code>python</code>)</li>
+            <li><code>institution</code> (string): Institution name (e.g. <code>PITT</code>)</li>
+            <li><code>user_email</code> (string): Owner user email</li>
+            <li><code>published</code> (boolean): <code>true</code> or <code>false</code></li>
+            <li><code>resources</code> (array): <code>[ &#123; id: number, name: string, providers: [ &#123; id, name, domain &#125; ] &#125; ]</code></li>
+            <li><code>units</code> (array): <code>[ &#123; id: number, name: string, level: 0, published: true, activities: &#123; "&lt;resource_id&gt;": [ &#123; id, name, url, domain, provider_id &#125; ] &#125; &#125; ]</code></li>
+          </ul>
+        </div>
+      </details>
+
+      <div class="flex items-center gap-2">
+        <p-button
+          label="Cancel"
+          icon="pi pi-times"
+          size="small"
+          [outlined]="true"
+          severity="secondary"
+          (click)="importCourseDialog = false"
+        ></p-button>
+        <p-button
+          label="Create Course(s)"
+          icon="pi pi-check"
+          size="small"
+          (click)="createCustomCourse(importCourseEl)"
+          [disabled]="!importCourseEl.value"
+        ></p-button>
+      </div>
+    </div>
+  </div>
+</p-dialog>
+
+<p-confirmDialog [style]="{ width: '480px' }"></p-confirmDialog>

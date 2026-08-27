@@ -15,6 +15,7 @@
         #navEl
         [options]="navLinks"
         [ngModel]="'/slc-items'"
+        appendTo="body"
         class="-my-2 course-nav-dropdown"
         (onChange)="router.navigate([$event.value])"
       ></p-dropdown>
@@ -128,6 +129,7 @@
                 optionValue="value"
                 placeholder="Select"
                 styleClass="w-full"
+                appendTo="body"
                 [editable]="true"
                 required
               ></p-dropdown>
@@ -175,6 +177,7 @@
                 optionValue="value"
                 placeholder="Select"
                 styleClass="w-full"
+                appendTo="body"
                 required
               ></p-dropdown>
             </label>
@@ -480,6 +483,7 @@
                 optionValue="value"
                 placeholder="Select"
                 styleClass="w-full"
+                appendTo="body"
               ></p-dropdown>
             </label>
             <label class="w-64 flex flex-col gap-1">
@@ -497,6 +501,7 @@
                 optionValue="value"
                 placeholder="Select"
                 styleClass="w-full"
+                appendTo="body"
                 [editable]="true"
               ></p-dropdown>
             </label>
@@ -654,6 +659,7 @@
               optionValue="value"
               placeholder="Select"
               styleClass="w-full"
+              appendTo="body"
               [editable]="true"
             ></p-dropdown>
           </label>
@@ -753,6 +759,7 @@
                 optionValue="value"
                 placeholder="Select"
                 styleClass="w-full"
+                appendTo="body"
                 [editable]="true"
               ></p-dropdown>
             </label>

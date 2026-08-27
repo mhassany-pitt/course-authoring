@@ -57,6 +57,28 @@ export class CoursesComponent implements OnInit {
   }
 
   countUnits(units: any[]) {
-    return (units.filter(u => u.level == 0) || []).length;
+    return (units?.filter(u => u.level == 0) || []).length;
+  }
+
+  countActivities(units: any[]) {
+    let count = 0;
+    if (!units) return 0;
+    for (const unit of units) {
+      if (unit.activities) {
+        for (const resId of Object.keys(unit.activities)) {
+          count += unit.activities[resId]?.length || 0;
+        }
+      }
+    }
+    return count;
+  }
+
+  delete(course: any, undo: boolean) {
+    const action = undo ? 'unarchive' : 'archive';
+    if (!confirm(`Are you sure you want to ${action} "${course.name || 'Untitled Course'}"?`)) return;
+    this.api.delete(course.id, undo).subscribe({
+      next: () => this.reload(),
+      error: (err: any) => console.error(err)
+    });
   }
 }

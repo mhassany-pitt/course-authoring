@@ -244,7 +244,7 @@
       <div class="min-h-0 flex-1 bg-white">
         <p-table #dt [value]="filteredItems" dataKey="id" [(selection)]="selectedItems"
           (onRowSelect)="addSelectedItem($event.data)" (onRowUnselect)="removeSelectedItem($event.data)"
-          (onPage)="onTablePage($event)" [paginator]="true" [rows]="25" [scrollable]="true" scrollHeight="flex"
+          (onPage)="onTablePage($event)" paginatorDropdownAppendTo="body" [paginator]="true" [rows]="25" [scrollable]="true" scrollHeight="flex"
           [globalFilterFields]="[
             'identity.id',
             'identity.title',

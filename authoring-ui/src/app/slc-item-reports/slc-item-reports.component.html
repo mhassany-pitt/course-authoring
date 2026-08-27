@@ -15,6 +15,7 @@
         #navEl
         [options]="navLinks"
         [ngModel]="'/slc-item-reports'"
+        appendTo="body"
         class="-my-2 course-nav-dropdown"
         (onChange)="router.navigate([$event.value])"
       ></p-dropdown>
@@ -25,7 +26,10 @@
     </div>
   </div>
 
-  <div class="container mx-auto mt-24 mb-16 border shadow-md z-0 max-w-7xl">
+  <!-- Main Content Area -->
+  <div
+    class="container mx-auto mt-24 mb-16 border border-gray-200 rounded-lg shadow-sm z-0 max-w-7xl bg-white overflow-hidden"
+  >
     <p-table
       #table
       [value]="reports"
@@ -33,106 +37,200 @@
         'item.identity.title',
         'item.identity.id',
         'item_id',
-        'reason'
+        'item.user_email',
+        'reason',
+        'details'
       ]"
-      styleClass="p-datatable-striped"
+      styleClass="p-datatable-striped p-datatable-sm"
+      paginatorDropdownAppendTo="body"
+      [paginator]="true"
+      [rows]="25"
+      [rowsPerPageOptions]="[10, 25, 50, 100]"
+      [showCurrentPageReport]="true"
+      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} reports"
     >
       <ng-template pTemplate="caption">
-        <div class="flex items-center gap-2">
-          <span class="text-2xl">SLC Item Reports</span>
-          <span class="flex-grow"></span>
-          <span class="text-xs text-gray-500" *ngIf="loading">
-            Loading reports...
-          </span>
-          <span class="p-input-icon-right">
-            <i class="pi pi-search"></i>
-            <input
-              pInputText
-              type="text"
-              (input)="filter(table, $event)"
-              placeholder="Filter"
-              class="p-inputtext-sm"
-            />
-          </span>
+        <div class="p-3 flex flex-wrap items-center justify-between gap-3 bg-slate-50 border-b border-gray-200">
+          <div class="flex items-center gap-2">
+            <span class="text-xl font-bold text-gray-800">SLC Item Reports</span>
+            <span class="text-xs text-gray-500 font-medium">({{ reports.length }} reports)</span>
+            <span class="text-xs text-blue-600 font-medium" *ngIf="loading">
+              <i class="pi pi-spin pi-spinner mr-1"></i>Loading...
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <p-button
+              icon="pi pi-refresh"
+              size="small"
+              [outlined]="true"
+              severity="secondary"
+              (click)="reload()"
+              title="Refresh reports"
+            ></p-button>
+
+            <span class="p-input-icon-right">
+              <i class="pi pi-search"></i>
+              <input
+                pInputText
+                type="text"
+                (input)="filter(table, $event)"
+                placeholder="Search reports..."
+                class="p-inputtext-sm w-56"
+              />
+            </span>
+          </div>
         </div>
       </ng-template>
+
       <ng-template pTemplate="header">
         <tr>
-          <th>Status</th>
-          <th>Item</th>
-          <th class="w-96">Reason</th>
+          <th pSortableColumn="resolved" class="w-24 text-right pr-3">
+            <div class="flex items-center justify-end gap-1">
+              <span>Status</span>
+              <p-sortIcon field="resolved"></p-sortIcon>
+            </div>
+          </th>
+          <th pSortableColumn="item.identity.title" style="min-width: 18rem;">
+            <div class="flex items-center gap-1">
+              <span>Reported Item &amp; Status</span>
+              <p-sortIcon field="item.identity.title"></p-sortIcon>
+            </div>
+          </th>
+          <th style="min-width: 14rem;">Reason &amp; Details</th>
+          <th pSortableColumn="created_at" class="w-28 text-center">
+            <div class="flex items-center justify-center gap-1">
+              <span>Reported</span>
+              <p-sortIcon field="created_at"></p-sortIcon>
+            </div>
+          </th>
+          <th class="w-20 text-center">Actions</th>
         </tr>
       </ng-template>
+
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="5">
+            <div class="flex flex-col items-center justify-center py-10 text-gray-400">
+              <i class="pi pi-check-circle text-3xl mb-2 text-gray-300"></i>
+              <span>No reports match your filter criteria</span>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+
       <ng-template pTemplate="body" let-report>
         <tr>
-          <td class="text-center">
-            <button
-              pButton
-              type="button"
-              [label]="report.resolved ? 'Resolved' : 'Open'"
-              icon="pi pi-{{
-                report.resolved ? 'check' : 'exclamation-triangle'
-              }}"
-              class="p-button-sm p-button-outlined"
-              [class.text-emerald-600]="report.resolved"
-              [class.text-amber-600]="!report.resolved"
+          <!-- Status (Right-aligned before item) -->
+          <td class="text-right pr-3 whitespace-nowrap">
+            <span
+              class="text-[10px] px-1.5 py-0.2 rounded-full font-medium inline-flex items-center gap-1 cursor-pointer"
+              [ngClass]="{
+                'bg-emerald-100 text-emerald-800': report.resolved,
+                'bg-amber-100 text-amber-800': !report.resolved
+              }"
               (click)="editReport(report)"
-            ></button>
+              [title]="'Click to edit status: ' + (report.resolved ? 'Resolved' : 'Open')"
+            >
+              <i
+                class="fa text-[9px]"
+                [ngClass]="report.resolved ? 'fa-check' : 'fa-exclamation-triangle'"
+              ></i>
+              {{ report.resolved ? 'Resolved' : 'Open' }}
+            </span>
           </td>
-          <td>
-            <div class="flex flex-col gap-1">
-              <div class="flex items-center gap-2">
-                <span
+
+          <!-- Item & Status (Right-aligned) -->
+          <td class="max-w-0">
+            <div class="flex items-center justify-between gap-2 whitespace-nowrap overflow-hidden py-0.5">
+              <!-- Left side: Title + ID + Owner -->
+              <div class="flex items-center gap-1.5 min-w-0 overflow-hidden">
+                <a
                   *ngIf="report.item?.id; else missingItem"
-                  class="font-semibold cursor-pointer text-blue-700"
                   [routerLink]="['/slc-items', report.item.id]"
+                  class="font-semibold text-blue-700 hover:text-blue-900 no-underline truncate text-xs"
+                  [title]="report.item?.identity?.title || 'Untitled Item'"
                 >
                   {{ report.item?.identity?.title || "Untitled" }}
-                </span>
+                </a>
                 <ng-template #missingItem>
-                  <span class="font-semibold">
+                  <span class="font-mono text-xs text-gray-700 truncate" [title]="report.item_id">
                     {{ report.item_id }}
                   </span>
                 </ng-template>
+
+                <!-- Item ID Pill -->
                 <span
-                  *ngIf="report.item?.status"
-                  class="text-xs rounded px-1"
-                  [class.bg-slate-200]="report.item?.status == 'private'"
-                  [class.bg-green-200]="report.item?.status == 'public'"
-                  [class.bg-red-200]="report.item?.status == 'deprecated'"
+                  *ngIf="report.item?.identity?.id"
+                  class="font-mono text-[10px] text-gray-500 bg-gray-100 px-1 py-0 rounded border border-gray-200 shrink-0"
+                  [title]="'Item ID: ' + report.item.identity.id"
                 >
-                  {{ report.item?.status }}
+                  {{ report.item.identity.id }}
+                </span>
+
+                <!-- Owner tag -->
+                <span
+                  *ngIf="report.item?.user_email"
+                  class="text-[10px] text-gray-400 truncate max-w-[8rem]"
+                  [title]="'Owner: ' + report.item.user_email"
+                >
+                  ({{ report.item.user_email }})
                 </span>
               </div>
-              <span class="text-xs text-gray-500">
-                Item ID: {{ report.item?.identity?.id || report.item_id }}
-              </span>
+
+              <!-- Right side: Item Status Pill -->
               <span
-                *ngIf="report.item?.user_email"
-                class="text-xs text-gray-500"
+                *ngIf="report.item?.status"
+                class="text-[10px] px-1.5 py-0 rounded-full font-medium inline-flex items-center gap-1 shrink-0 ml-2"
+                [ngClass]="{
+                  'bg-emerald-100 text-emerald-800': report.item.status === 'public',
+                  'bg-slate-100 text-slate-700': report.item.status === 'private',
+                  'bg-rose-100 text-rose-800': report.item.status === 'deprecated',
+                  'bg-amber-100 text-amber-800': report.item.status === 'broken:pending-fix'
+                }"
               >
-                Owner: {{ report.item?.user_email }}
+                <i
+                  class="fa text-[9px]"
+                  [ngClass]="{
+                    'fa-globe': report.item.status === 'public',
+                    'fa-lock': report.item.status === 'private',
+                    'fa-ban': report.item.status === 'deprecated',
+                    'fa-exclamation-triangle': report.item.status === 'broken:pending-fix' || !['public','private','deprecated'].includes(report.item.status)
+                  }"
+                ></i>
+                {{ report.item.status }}
               </span>
             </div>
           </td>
-          <td class="w-96 align-top">
-            <div>
-              <div class="text-xs text-gray-400">
-                {{ report.created_at | date : "medium" }}
-              </div>
-              <div class="text-xs">
-                {{ report.reason || "N/A" }}
-              </div>
-            </div>
+
+          <!-- Reason & Details -->
+          <td class="text-xs text-gray-700 whitespace-nowrap overflow-hidden">
+            <span
+              class="truncate max-w-sm inline-block"
+              [title]="(report.reason || '') + (report.details ? ' — ' + report.details : '')"
+            >
+              <strong class="font-semibold text-gray-900">{{ report.reason || "No Reason Specified" }}</strong>
+              <span *ngIf="report.details" class="text-gray-400 ml-1.5">({{ report.details }})</span>
+            </span>
           </td>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="emptymessage">
-        <tr>
-          <td colspan="6">
-            <div class="text-xs text-center text-gray-400 w-full">
-              no reports found
-            </div>
+
+          <!-- Reported At -->
+          <td class="text-center text-xs text-gray-500 font-mono whitespace-nowrap">
+            {{ report.created_at | date : "MMM d, y" }}
+          </td>
+
+          <!-- Actions -->
+          <td class="text-center whitespace-nowrap">
+            <p-button
+              type="button"
+              icon="pi pi-pencil"
+              size="small"
+              [text]="true"
+              severity="secondary"
+              styleClass="!w-6 !h-6 !p-0 !text-xs"
+              (click)="editReport(report)"
+              title="Edit Report"
+            ></p-button>
           </td>
         </tr>
       </ng-template>

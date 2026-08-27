@@ -21,11 +21,37 @@ export class CoursesService {
     return await this.courses.find(filter);
   }
 
+  async listAdmin(trash_can: boolean = false) {
+    const filter = { deleted_at: trash_can ? { $ne: null } : null };
+    return await this.courses.find(filter);
+  }
+
+  async findByIdAdmin(id: string) {
+    return await this.courses.findOne({ _id: id });
+  }
+
+  async updateAdmin(id: string, course: any) {
+    const { _id, id: _id2, __v, created_at, ...rest } = course;
+    const update = { ...rest, updated_at: new Date() };
+    return await this.courses.findOneAndUpdate({ _id: id }, update, { new: true });
+  }
+
+  async deleteAdmin(id: string, undo: boolean = false) {
+    return await this.courses.findOneAndUpdate(
+      { _id: id },
+      { deleted_at: undo ? null : new Date() },
+      { new: true }
+    );
+  }
+
   async create({ user_email }) {
     return await this.courses.create({ user_email, created_at: new Date() });
   }
 
   async createCustom(course: any) {
+    if (Array.isArray(course)) {
+      return await this.courses.insertMany(course.map(c => ({ ...c, created_at: new Date() })));
+    }
     return await this.courses.create({ ...course, created_at: new Date() });
   }
 

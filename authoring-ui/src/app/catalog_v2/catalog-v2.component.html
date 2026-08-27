@@ -15,6 +15,7 @@
         #navEl
         [options]="navLinks"
         [ngModel]="'/catalog-v2'"
+        appendTo="body"
         class="-my-2 course-nav-dropdown"
         (onChange)="router.navigate([$event.value])"
       ></p-dropdown>
@@ -659,6 +660,7 @@
             [value]="filteredItems"
             [loading]="loading"
             [showLoader]="false"
+            paginatorDropdownAppendTo="body"
             [paginator]="true"
             [rows]="50"
             [rowsPerPageOptions]="[25, 50, 100]"

@@ -15,6 +15,7 @@
         #navEl
         [options]="navLinks"
         [ngModel]="'/courses'"
+        appendTo="body"
         class="-my-2 course-nav-dropdown"
         (onChange)="router.navigate([$event.value])"
       ></p-dropdown>
@@ -25,125 +26,207 @@
     </div>
   </div>
 
-  <div class="container mx-auto mt-24 mb-16 border shadow-md z-0 max-w-7xl">
+  <!-- Main Content Area -->
+  <div
+    class="container mx-auto mt-24 mb-16 border border-gray-200 rounded-lg shadow-sm z-0 max-w-7xl bg-white overflow-hidden"
+  >
     <p-table
       #table
       [value]="courses"
-      [globalFilterFields]="['code', 'name', 'description', 'domain']"
+      [globalFilterFields]="['code', 'name', 'description', 'domain', 'institution', 'user_email']"
+      styleClass="p-datatable-striped p-datatable-sm"
+      paginatorDropdownAppendTo="body"
+      [paginator]="true"
+      [rows]="25"
+      [rowsPerPageOptions]="[10, 25, 50, 100]"
+      [showCurrentPageReport]="true"
+      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} courses"
     >
       <ng-template pTemplate="caption">
-        <div class="flex items-center gap-2">
-          <span class="p-input-icon-right">
-            <i class="pi pi-search"></i>
-            <input
-              pInputText
-              type="text"
-              (input)="filter(table, $event)"
-              placeholder="Filter"
-              class="p-inputtext-sm"
-            />
-          </span>
-          <button
-            pButton
-            type="button"
-            label="New Course"
-            icon="pi pi-plus"
-            class="p-button-sm"
-            (click)="create()"
-          ></button>
+        <div class="p-3 flex flex-wrap items-center justify-between gap-3 bg-slate-50 border-b border-gray-200">
+          <div class="flex items-center gap-2">
+            <span class="text-xl font-bold text-gray-800">My Courses</span>
+            <span class="text-xs text-gray-500 font-medium">({{ courses.length }} courses)</span>
+          </div>
 
-          <span class="flex-grow"></span>
+          <div class="flex items-center gap-2">
+            <p-button
+              *ngIf="!trash_can"
+              label="New Course"
+              icon="pi pi-plus"
+              size="small"
+              (click)="create()"
+            ></p-button>
 
-          <p-button
-            label="Recycle Bin"
-            icon="pi pi-trash"
-            iconPos="right"
-            class="p-button-sm"
-            [severity]="trash_can ? 'danger' : 'secondary'"
-            (click)="trash_can = !trash_can; reload()"
-          >
-          </p-button>
+            <p-button
+              [label]="trash_can ? 'Active Courses' : 'Archived Courses'"
+              [icon]="trash_can ? 'pi pi-arrow-left' : 'pi pi-briefcase'"
+              size="small"
+              [outlined]="true"
+              [severity]="trash_can ? 'primary' : 'secondary'"
+              (click)="trash_can = !trash_can; reload()"
+            ></p-button>
+
+            <span class="p-input-icon-right">
+              <i class="pi pi-search"></i>
+              <input
+                pInputText
+                type="text"
+                (input)="filter(table, $event)"
+                placeholder="Search courses..."
+                class="p-inputtext-sm w-56"
+              />
+            </span>
+          </div>
         </div>
       </ng-template>
+
       <ng-template pTemplate="header">
         <tr>
-          <th>Name & Description</th>
-          <th>Code</th>
-          <th>Institution</th>
-          <th>Domain</th>
-          <th class="w-64">Created at</th>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-course>
-        <tr>
-          <td>
-            <div class="flex flex-col gap-2">
-              <span
-                [routerLink]="['/courses/', course.id]"
-                class="font-bold cursor-pointer text-blue-700"
-              >
-                {{ course.name || "Untitled" }} ({{ countUnits(course.units) }}
-                units)
-              </span>
-              <span *ngIf="course.description" class="text-xs">{{
-                course.description
-              }}</span>
-              <span
-                class="text-xs -mb-1"
-                [ngClass]="{
-                  'font-bold': course.user_email == app.user?.email
-                }"
-              >
-                Created by: {{ course.user_email }}
-                <span *ngIf="course.user_email == app.user?.email">(you)</span>
-              </span>
-              <span
-                *ngIf="course.collaborator_emails?.length"
-                class="text-xs -mt-1"
-              >
-                Collaborators: {{ course.collaborator_emails.join(", ") }}
-              </span>
-              <div class="flex items-center gap-2">
-                <span
-                  *ngIf="course.deleted_at"
-                  class="flex items-center gap-1 text-xs text-red-600"
-                >
-                  <i class="fa fa-trash"></i>
-                  <span
-                    >Deleted at {{ course.deleted_at | date : "medium" }}</span
-                  >
-                </span>
-                <span
-                  *ngIf="course.published"
-                  class="flex items-center gap-1 text-xs text-green-600"
-                >
-                  <i class="fa fa-eye"></i>
-                  <span>Published</span>
-                </span>
-              </div>
+          <th pSortableColumn="domain" class="w-20 text-right pr-3">
+            <div class="flex items-center justify-end gap-1">
+              <span>Domain</span>
+              <p-sortIcon field="domain"></p-sortIcon>
             </div>
-          </td>
-          <td>
-            <span class="text-sm">{{ course.code }}</span>
-          </td>
-          <td>
-            <span class="text-sm">{{ course.institution }}</span>
-          </td>
-          <td>
-            <span class="text-sm uppercase">{{ course.domain }}</span>
-          </td>
-          <td>
-            <span class="text-sm">{{
-              course.created_at | date : "medium"
-            }}</span>
-          </td>
+          </th>
+          <th pSortableColumn="name">
+            <div class="flex items-center gap-1">
+              <span>Course Name &amp; Status</span>
+              <p-sortIcon field="name"></p-sortIcon>
+            </div>
+          </th>
+          <th class="w-40 text-center">Structure</th>
+          <th pSortableColumn="created_at" class="w-28 text-center">
+            <div class="flex items-center justify-center gap-1">
+              <span>Created</span>
+              <p-sortIcon field="created_at"></p-sortIcon>
+            </div>
+          </th>
+          <th class="w-20 text-center">Actions</th>
         </tr>
       </ng-template>
+
       <ng-template pTemplate="emptymessage">
         <tr>
           <td colspan="5">
-            <div class="text-xs text-center text-gray-400 w-full">
-              no record matched, revise your filter keyword
+            <div class="flex flex-col items-center justify-center py-10 text-gray-400">
+              <i class="pi pi-book text-3xl mb-2 text-gray-300"></i>
+              <span>No courses match your filter criteria</span>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-course>
+        <tr [ngClass]="{ 'opacity-60 bg-amber-50/30': course.deleted_at }">
+          <!-- Domain (Right-aligned before name) -->
+          <td class="text-right pr-3 whitespace-nowrap">
+            <span
+              class="uppercase text-[10px] font-bold px-1.5 py-0.2 rounded border tracking-wide inline-block"
+              [ngClass]="{
+                'bg-blue-50 text-blue-700 border-blue-200': course.domain === 'py' || course.domain === 'python',
+                'bg-amber-50 text-amber-700 border-amber-200': course.domain === 'java',
+                'bg-emerald-50 text-emerald-700 border-emerald-200': course.domain === 'c' || course.domain === 'cpp',
+                'bg-purple-50 text-purple-700 border-purple-200': course.domain === 'sql',
+                'bg-gray-100 text-gray-700 border-gray-200': !['py','python','java','c','cpp','sql'].includes(course.domain)
+              }"
+            >
+              {{ course.domain || 'N/A' }}
+            </span>
+          </td>
+
+          <!-- Course Name & Inline Status (Right-aligned) -->
+          <td class="max-w-0">
+            <div class="flex items-center justify-between gap-2 whitespace-nowrap overflow-hidden py-0.5">
+              <!-- Left side: Title + Code + Collaborators + Archived icon -->
+              <div class="flex items-center gap-1.5 min-w-0 overflow-hidden">
+                <a
+                  [routerLink]="['/courses/', course.id]"
+                  class="font-semibold text-blue-700 hover:text-blue-900 no-underline truncate text-xs"
+                  [title]="(course.name || 'Untitled Course') + (course.description ? ' — ' + course.description : '')"
+                >
+                  {{ course.name || 'Untitled Course' }}
+                </a>
+
+                <!-- Code Pill -->
+                <span
+                  *ngIf="course.code"
+                  class="font-mono text-[10px] text-gray-600 bg-gray-100 px-1 py-0 rounded border border-gray-200 shrink-0"
+                  [title]="'Code: ' + course.code + (course.institution ? ' (' + course.institution + ')' : '')"
+                >
+                  {{ course.code }}
+                </span>
+
+                <!-- Collaborator badge -->
+                <span
+                  *ngIf="course.collaborator_emails?.length"
+                  class="text-[10px] text-gray-500 bg-slate-100 px-1 py-0 rounded border border-slate-200 shrink-0"
+                  [title]="'Collaborators: ' + course.collaborator_emails.join(', ')"
+                >
+                  +{{ course.collaborator_emails.length }}
+                </span>
+
+                <!-- Archived Notice Icon -->
+                <i
+                  *ngIf="course.deleted_at"
+                  class="pi pi-briefcase text-amber-600 text-xs shrink-0"
+                  [title]="'Archived at ' + (course.deleted_at | date : 'medium')"
+                ></i>
+              </div>
+
+              <!-- Right side: Status Pill -->
+              <span
+                class="text-[10px] px-1.5 py-0 rounded-full font-medium inline-flex items-center gap-1 shrink-0 ml-2"
+                [ngClass]="{
+                  'bg-emerald-100 text-emerald-800': course.published,
+                  'bg-amber-100 text-amber-800': !course.published
+                }"
+              >
+                <i class="fa text-[9px]" [ngClass]="course.published ? 'fa-check' : 'fa-lock'"></i>
+                {{ course.published ? 'Published' : 'Draft' }}
+              </span>
+            </div>
+          </td>
+
+          <!-- Structure Metrics -->
+          <td class="text-center whitespace-nowrap text-xs text-gray-600">
+            <span class="font-semibold text-gray-800">{{ countUnits(course.units) }}</span> units &bull;
+            <span class="font-semibold text-gray-800">{{ countActivities(course.units) }}</span> activities
+          </td>
+
+          <!-- Created At -->
+          <td class="text-center text-xs text-gray-500 font-mono whitespace-nowrap">
+            {{ course.created_at | date : "MMM d, y" }}
+          </td>
+
+          <!-- Actions -->
+          <td class="text-center whitespace-nowrap">
+            <div class="flex items-center justify-center gap-1">
+              <!-- Archive -->
+              <p-button
+                *ngIf="!course.deleted_at"
+                type="button"
+                icon="pi pi-briefcase"
+                size="small"
+                [text]="true"
+                severity="secondary"
+                styleClass="!w-6 !h-6 !p-0 !text-xs text-gray-500 hover:text-amber-700"
+                (click)="delete(course, false)"
+                title="Archive course"
+              ></p-button>
+
+              <!-- Unarchive / Restore -->
+              <p-button
+                *ngIf="course.deleted_at"
+                type="button"
+                icon="pi pi-briefcase"
+                size="small"
+                [text]="true"
+                severity="success"
+                styleClass="!w-6 !h-6 !p-0 !text-xs text-emerald-600 hover:text-emerald-800"
+                (click)="delete(course, true)"
+                title="Unarchive course"
+              ></p-button>
             </div>
           </td>
         </tr>

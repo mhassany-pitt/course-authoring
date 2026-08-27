@@ -16,6 +16,8 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { AccordionModule } from 'primeng/accordion';
 
+import { PrimeNGConfig } from 'primeng/api';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -37,7 +39,11 @@ export class AppComponent {
   readonly VERSION = 1;
   lastDismissed = +(this.getStorageItem('course-authoring.update-notice.version') || 0);
 
-  constructor(public app: AppService) { }
+  constructor(public app: AppService, private primengConfig: PrimeNGConfig) {
+    this.primengConfig.overlayOptions = {
+      appendTo: 'body'
+    };
+  }
 
   getStorageItem(key: string) {
     return localStorage.getItem(key);

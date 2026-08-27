@@ -5,7 +5,7 @@
       <span class="text-xl font-bold hidden md:inline-block text-nowrap">Course Authoring</span>
       <span class="hidden md:inline-block"><i class="pi pi-chevron-right"></i></span>
 
-      <p-dropdown #navEl [options]="navLinks" [ngModel]="'/catalog'" class="-my-2 course-nav-dropdown"
+      <p-dropdown #navEl [options]="navLinks" [ngModel]="'/catalog'" appendTo="body" class="-my-2 course-nav-dropdown"
         (onChange)="router.navigate([$event.value]);"></p-dropdown>
 
       <span class="flex-grow"></span>
@@ -22,7 +22,7 @@
     </div>
     <div class="border shadow-md">
       <p-table #tb [value]="contents" [(selection)]="selection" dataKey="id" paginator="true" [rows]="25"
-        [rowsPerPageOptions]="[10, 25, 50, 100]"
+        [rowsPerPageOptions]="[10, 25, 50, 100]" paginatorDropdownAppendTo="body"
         [globalFilterFields]="['name', 'author_name', 'type', 'domain_name', 'provider_name', 'creation_date']"
         styleClass="p-datatable-sm p-datatable-striped" (onFilter)="reloadFilterOptions($event)"
         [loading]="_t['loading-catalog']">

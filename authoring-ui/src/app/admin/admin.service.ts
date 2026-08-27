@@ -5,7 +5,7 @@ import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class UserAdminService {
+export class AdminService {
 
   constructor(
     private http: HttpClient,
@@ -29,5 +29,21 @@ export class UserAdminService {
 
   createCustomCourse(course: any) {
     return this.http.post(`${environment.apiUrl}/courses/custom`, course, { withCredentials: true });
+  }
+
+  listAdminCourses(trashCan: boolean = false) {
+    return this.http.get(`${environment.apiUrl}/courses/admin/all?trash_can=${trashCan}`, { withCredentials: true });
+  }
+
+  getAdminCourse(id: string) {
+    return this.http.get(`${environment.apiUrl}/courses/admin/${id}`, { withCredentials: true });
+  }
+
+  updateAdminCourse(id: string, course: any) {
+    return this.http.patch(`${environment.apiUrl}/courses/admin/${id}`, course, { withCredentials: true });
+  }
+
+  deleteAdminCourse(id: string, undo: boolean = false) {
+    return this.http.delete(`${environment.apiUrl}/courses/admin/${id}?undo=${undo}`, { withCredentials: true });
   }
 }

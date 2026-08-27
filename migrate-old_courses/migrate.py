@@ -15,6 +15,7 @@ prev_providers = {p["id"]: {"id":p["id"], "name":p["name"], "domain": p["domainI
 prev_authors = {a["name"]: a for a in prev["authors"]}
 # prev_domains = {d["id"]: d for d in prev["domains"]}
 
+# -- uncomment to include pcex_activity in providers (if you get the error)
 # prev_providers['pcex_activity'] = {"id":"pcex_activity", "name":"PCEx Activities", "domain":"pcex"}
 
 idseq = 1790000000000

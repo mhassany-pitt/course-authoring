@@ -15,6 +15,7 @@
         #navEl
         [options]="navLinks"
         [ngModel]="'/hub'"
+        appendTo="body"
         class="-my-2 course-nav-dropdown"
         (onChange)="router.navigate([$event.value])"
       ></p-dropdown>

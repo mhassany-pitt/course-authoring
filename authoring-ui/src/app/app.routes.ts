@@ -47,10 +47,15 @@ export const routes: Routes = [
     canActivate: [HandshakeGuard],
   },
   {
-    path: 'user-admin',
+    path: 'admin',
     loadChildren: () =>
-      import('./user-admin/user-admin.module').then((m) => m.UserAdminModule),
+      import('./admin/admin.module').then((m) => m.AdminModule),
     canActivate: [AppAdminGuard],
+  },
+  {
+    path: 'user-admin',
+    redirectTo: 'admin',
+    pathMatch: 'full',
   },
   {
     path: 'slc-item-reports',

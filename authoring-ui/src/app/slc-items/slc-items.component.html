@@ -15,6 +15,7 @@
         #navEl
         [options]="navLinks"
         [ngModel]="'/slc-items'"
+        appendTo="body"
         class="-my-2 course-nav-dropdown"
         (onChange)="router.navigate([$event.value])"
       ></p-dropdown>
@@ -25,7 +26,10 @@
     </div>
   </div>
 
-  <div class="container mx-auto mt-24 mb-16 flex flex-col gap-4 max-w-7xl z-0">
+  <!-- Main Content Area -->
+  <div
+    class="container mx-auto mt-24 mb-16 border border-gray-200 rounded-lg shadow-sm z-0 max-w-7xl bg-white overflow-hidden"
+  >
     <p-table
       #table
       [value]="items"
@@ -36,82 +40,168 @@
         'identity.type',
         'status',
         'content.prompt',
-        'tags',
+        'tags'
       ]"
+      styleClass="p-datatable-striped p-datatable-sm"
+      paginatorDropdownAppendTo="body"
+      [paginator]="true"
+      [rows]="25"
+      [rowsPerPageOptions]="[10, 25, 50, 100]"
+      [showCurrentPageReport]="true"
+      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} items"
     >
       <ng-template pTemplate="caption">
-        <div class="flex items-center gap-2">
-          <span class="p-input-icon-right">
-            <i class="pi pi-search"></i>
-            <input
-              pInputText
-              type="text"
-              (input)="filter(table, $event)"
-              placeholder="Filter"
-              class="p-inputtext-sm"
-            />
-          </span>
-          <button
-            pButton
-            type="button"
-            label="New Item"
-            icon="pi pi-plus"
-            class="p-button-sm"
-            [routerLink]="['/slc-items', 'new']"
-          ></button>
+        <div class="p-3 flex flex-wrap items-center justify-between gap-3 bg-slate-50 border-b border-gray-200">
+          <div class="flex items-center gap-2">
+            <span class="text-xl font-bold text-gray-800">SLC Items</span>
+            <span class="text-xs text-gray-500 font-medium">({{ items.length }} items)</span>
+            <span class="text-xs text-blue-600 font-medium" *ngIf="loading">
+              <i class="pi pi-spin pi-spinner mr-1"></i>Loading...
+            </span>
+          </div>
 
-          <span class="flex-grow"></span>
+          <div class="flex items-center gap-2">
+            <p-button
+              label="New Item"
+              icon="pi pi-plus"
+              size="small"
+              [routerLink]="['/slc-items', 'new']"
+            ></p-button>
 
-          <span class="text-xs text-gray-500" *ngIf="loading">
-            Loading catalog...
-          </span>
+            <span class="p-input-icon-right">
+              <i class="pi pi-search"></i>
+              <input
+                pInputText
+                type="text"
+                (input)="filter(table, $event)"
+                placeholder="Search items..."
+                class="p-inputtext-sm w-56"
+              />
+            </span>
+          </div>
         </div>
       </ng-template>
-      <ng-template pTemplate="body" let-item>
+
+      <ng-template pTemplate="header">
         <tr>
-          <td>
-            <div class="flex flex-col gap-1">
-              <span class="text-xs uppercase text-gray-400">
-                {{ item.identity?.type }} |
-                {{ item.listed_at | date: "medium" }}
-              </span>
-              <div class="flex items-center gap-1">
-                <a
-                  [routerLink]="['/slc-items', item.id]"
-                  class="font-bold cursor-pointer text-blue-700"
-                >
-                  {{ item.identity?.title || "Untitled" }}
-                </a>
-                <span
-                  class="text-xs rounded-lg px-1"
-                  [class.bg-slate-200]="item.status == 'private'"
-                  [class.bg-green-200]="item.status == 'public'"
-                  [class.bg-red-200]="item.status == 'deprecated'"
-                  [class.bg-yellow-200]="item.status == 'broken:pending-fix'"
-                >
-                  {{ item.status }}
-                </span>
-              </div>
-              <span class="ml-2 text-xs"> ID: {{ item.identity?.id }} </span>
-              <span class="ml-2 text-xs">
-                Author(s): {{ itemAuthors[item.id] || "Unknown Author" }}
-              </span>
-              <span *ngIf="item.content?.prompt" class="ml-2 text-xs">
-                Prompt: {{ item.content.prompt }}
-              </span>
-              <span *ngIf="item.tags?.length" class="ml-2 text-xs">
-                Tags: {{ item.tags.join(", ") }}
-              </span>
+          <th pSortableColumn="identity.type" class="w-24 text-right pr-3">
+            <div class="flex items-center justify-end gap-1">
+              <span>Type</span>
+              <p-sortIcon field="identity.type"></p-sortIcon>
+            </div>
+          </th>
+          <th pSortableColumn="identity.title">
+            <div class="flex items-center gap-1">
+              <span>Item &amp; Status</span>
+              <p-sortIcon field="identity.title"></p-sortIcon>
+            </div>
+          </th>
+          <th class="w-48 text-center">Author(s)</th>
+          <th pSortableColumn="listed_at" class="w-28 text-center">
+            <div class="flex items-center justify-center gap-1">
+              <span>Listed</span>
+              <p-sortIcon field="listed_at"></p-sortIcon>
+            </div>
+          </th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="4">
+            <div class="flex flex-col items-center justify-center py-10 text-gray-400">
+              <i class="pi pi-list text-3xl mb-2 text-gray-300"></i>
+              <span>No SLC items match your filter criteria</span>
             </div>
           </td>
         </tr>
       </ng-template>
-      <ng-template pTemplate="emptymessage">
+
+      <ng-template pTemplate="body" let-item>
         <tr>
-          <td>
-            <div class="text-xs text-center text-gray-400 w-full">
-              no record matched, revise your filter keyword
+          <!-- Type (Right-aligned before title) -->
+          <td class="text-right pr-3 whitespace-nowrap">
+            <span
+              class="uppercase text-[10px] font-bold px-1.5 py-0.2 rounded border tracking-wide inline-block"
+              [ngClass]="{
+                'bg-blue-50 text-blue-700 border-blue-200': item.identity?.type === 'coding',
+                'bg-purple-50 text-purple-700 border-purple-200': item.identity?.type === 'parsons',
+                'bg-amber-50 text-amber-700 border-amber-200': item.identity?.type === 'question' || item.identity?.type === 'quiz',
+                'bg-cyan-50 text-cyan-700 border-cyan-200': item.identity?.type === 'sql',
+                'bg-gray-100 text-gray-700 border-gray-200': !['coding','parsons','question','quiz','sql'].includes(item.identity?.type)
+              }"
+            >
+              {{ item.identity?.type || 'item' }}
+            </span>
+          </td>
+
+          <!-- Item Title & Inline Status (Right-aligned) -->
+          <td class="max-w-0">
+            <div class="flex items-center justify-between gap-2 whitespace-nowrap overflow-hidden py-0.5">
+              <!-- Left side: Title + ID + Tags -->
+              <div class="flex items-center gap-1.5 min-w-0 overflow-hidden">
+                <a
+                  [routerLink]="['/slc-items', item.id]"
+                  class="font-semibold text-blue-700 hover:text-blue-900 no-underline truncate text-xs"
+                  [title]="item.identity?.title || 'Untitled Item'"
+                >
+                  {{ item.identity?.title || "Untitled" }}
+                </a>
+
+                <!-- Identity ID Pill -->
+                <span
+                  *ngIf="item.identity?.id"
+                  class="font-mono text-[10px] text-gray-500 bg-gray-100 px-1 py-0 rounded border border-gray-200 shrink-0"
+                  [title]="'Identity ID: ' + item.identity.id"
+                >
+                  {{ item.identity.id }}
+                </span>
+
+                <!-- Tags -->
+                <ng-container *ngIf="item.tags?.length">
+                  <span
+                    *ngFor="let tag of item.tags"
+                    class="bg-slate-100 text-slate-600 rounded px-1.5 py-0 text-[10px] shrink-0 border border-slate-200"
+                  >
+                    {{ tag }}
+                  </span>
+                </ng-container>
+              </div>
+
+              <!-- Right side: Status Pill -->
+              <span
+                class="text-[10px] px-1.5 py-0 rounded-full font-medium inline-flex items-center gap-1 shrink-0 ml-2"
+                [ngClass]="{
+                  'bg-emerald-100 text-emerald-800': item.status === 'public',
+                  'bg-slate-100 text-slate-700': item.status === 'private',
+                  'bg-rose-100 text-rose-800': item.status === 'deprecated',
+                  'bg-amber-100 text-amber-800': item.status === 'broken:pending-fix'
+                }"
+              >
+                <i
+                  class="fa text-[9px]"
+                  [ngClass]="{
+                    'fa-globe': item.status === 'public',
+                    'fa-lock': item.status === 'private',
+                    'fa-ban': item.status === 'deprecated',
+                    'fa-exclamation-triangle': item.status === 'broken:pending-fix' || !['public','private','deprecated'].includes(item.status)
+                  }"
+                ></i>
+                {{ item.status || 'draft' }}
+              </span>
             </div>
+          </td>
+
+          <!-- Authors -->
+          <td class="text-center whitespace-nowrap text-xs text-gray-600">
+            <span class="truncate max-w-[12rem] inline-block" [title]="itemAuthors[item.id] || 'Unknown Author'">
+              {{ itemAuthors[item.id] || "Unknown Author" }}
+            </span>
+          </td>
+
+          <!-- Listed At -->
+          <td class="text-center text-xs text-gray-500 font-mono whitespace-nowrap">
+            {{ item.listed_at | date : "MMM d, y" }}
           </td>
         </tr>
       </ng-template>
