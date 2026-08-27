@@ -1,20 +1,57 @@
 import {
   Body, Controller, Get,
-  Patch, Post, Req, UseGuards
+  HttpException,
+  Patch, Post, Req, Res, UseGuards
 } from '@nestjs/common';
 import { UsersService } from 'src/users/users.service';
+import { InjectConnection } from '@nestjs/mongoose';
+import { Connection } from 'mongoose';
 import * as EmailValidator from 'email-validator';
 import { hash } from 'bcryptjs';
 import { AuthenticatedGuard } from 'src/auth/authenticated.guard';
 import sha256 from 'crypto-js/sha256';
 
-@Controller('user-admin')
-export class UserAdminController {
+@Controller(['user-admin', 'admin'])
+export class AdminController {
 
-  constructor(private service: UsersService) { }
+  constructor(
+    private service: UsersService,
+    @InjectConnection() private connection: Connection,
+  ) { }
 
   private getMyEmail(req) {
     return req.user.email;
+  }
+
+  @Get('backup')
+  @UseGuards(AuthenticatedGuard)
+  async exportBackup(@Req() req, @Res() res: any) {
+    if (!req.user?.roles?.includes('app-admin')) {
+      throw new HttpException('Unauthorized! Only app-admins can download database backups.', 403);
+    }
+    const collections = await this.connection.db.listCollections().toArray();
+    const backupData: Record<string, any[]> = {};
+    for (const col of collections) {
+      const colName = col.name;
+      if (colName.startsWith('system.')) continue;
+      backupData[colName] = await this.connection.db
+        .collection(colName)
+        .find()
+        .toArray();
+    }
+    const payload = {
+      exported_at: new Date().toISOString(),
+      database: this.connection.db.databaseName,
+      collections: backupData,
+    };
+    const jsonString = JSON.stringify(payload, null, 2);
+    const dateStr = new Date().toISOString().split('T')[0];
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader(
+      'Content-Disposition',
+      `attachment; filename="course_authoring_db_backup_${dateStr}.json"`,
+    );
+    res.send(jsonString);
   }
 
   @Get()
@@ -93,3 +130,5 @@ export class UserAdminController {
     return tokens;
   }
 }
+
+export { AdminController as UserAdminController };

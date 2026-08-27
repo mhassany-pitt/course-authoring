@@ -29,8 +29,8 @@
     </button>
   </p-dialog>
 
-  <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
-    <div class="container mx-auto flex items-center gap-2 px-2 md:px-0">
+  <div class="py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
+    <div class="container mx-auto flex items-center gap-2 px-4 sm:px-6 lg:px-8 max-w-7xl">
       <img src="assets/logo.png" class="h-8 w-8" />
       <span class="text-xl font-bold hidden md:inline-block text-nowrap">Course Authoring</span>
       <span class="hidden md:inline-block"><i class="fa fa-chevron-right"></i></span>
@@ -45,8 +45,9 @@
     </div>
   </div>
 
-  <div class="container mx-auto mt-24 mb-16 border shadow-md z-0 relative">
-    <form #form="ngForm" (submit)="save()" class="relative m-2 flex flex-col gap-2">
+  <div class="container mx-auto mt-24 mb-16 px-4 sm:px-6 lg:px-8 max-w-7xl z-0 relative">
+    <div class="border shadow-md bg-white rounded-lg">
+      <form #form="ngForm" (submit)="save()" class="relative m-2 flex flex-col gap-2">
       <div class="lg:absolute lg:right-0 lg:top-0 flex items-end justify-end gap-2 z-10">
         <p-button *ngIf="isMyCourse" type="button" [label]="course.deleted_at ? 'Archived' : 'Archive'" icon="pi pi-briefcase"
           size="small" [severity]="course.deleted_at ? 'success' : 'secondary'" [outlined]="true" (click)="deleteCourse()"
@@ -426,6 +427,7 @@
         </p-tabPanel>
       </p-tabView>
     </form>
+    </div>
   </div>
 </div>
 

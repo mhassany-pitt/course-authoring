@@ -1,13 +1,5 @@
-import {
-  Controller,
-  Get,
-  NotFoundException,
-  Param,
-  Query,
-  Res,
-} from '@nestjs/common';
+import { Controller, Get, NotFoundException, Param } from '@nestjs/common';
 import { HubService } from './hub.service';
-import { Response } from 'express';
 import { toObject, useId } from 'src/utils';
 import { UsersService } from 'src/users/users.service';
 

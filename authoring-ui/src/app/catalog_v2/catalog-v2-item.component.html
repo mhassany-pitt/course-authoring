@@ -1,22 +1,25 @@
-<div class="flex flex-col">
-  <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
-    <div
-      class="container mx-auto flex items-center gap-2 px-2 md:px-0 max-w-7xl"
-    >
-      <img src="assets/logo.png" class="h-8 w-8" />
-      <span class="text-xl font-bold hidden md:inline-block text-nowrap"
-        >Course Authoring</span
+<div class="flex flex-col min-h-screen bg-slate-50">
+  <!-- Top Fixed Navbar -->
+  <div
+    class="py-3 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm fixed left-0 top-0 right-0 z-20"
+  >
+    <div class="container mx-auto flex items-center gap-3 px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <img src="assets/logo.png" class="h-7 w-7 rounded-md" alt="Logo" />
+      <span
+        class="text-base font-bold text-slate-800 hidden md:inline-block text-nowrap"
       >
-      <span class="hidden md:inline-block"
-        ><i class="pi pi-chevron-right"></i
-      ></span>
+        Course Authoring
+      </span>
+      <span class="hidden md:inline-block text-slate-300">
+        <i class="pi pi-chevron-right text-xs"></i>
+      </span>
 
       <p-dropdown
         #navEl
         [options]="navLinks"
         [ngModel]="'/catalog-v2'"
         appendTo="body"
-        class="-my-2 course-nav-dropdown"
+        class="-my-1.5 course-nav-dropdown text-sm font-medium"
         panelStyleClass="course-nav-dropdown-panel"
         (onChange)="router.navigate([$event.value])"
       ></p-dropdown>
@@ -27,551 +30,812 @@
     </div>
   </div>
 
+  <!-- Loading State -->
   <div
-    class="container mx-auto flex flex-col gap-4 mt-24 mb-16 max-w-7xl z-0 px-2 md:px-0"
-    *ngIf="!loading; else loadingTpl"
+    class="container mx-auto mt-24 mb-16 flex flex-col items-center justify-center min-h-[300px] max-w-7xl px-4 sm:px-6 lg:px-8"
+    *ngIf="loading; else contentTpl"
   >
     <div
-      class="bg-white border border-solid border-gray-200 rounded-lg p-4 shadow-sm"
+      class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm flex flex-col items-center gap-2.5"
     >
-      <div class="flex items-center gap-2">
-        <div class="grow flex flex-col">
-          <div class="text-xs uppercase text-gray-500">SLC Catalog</div>
-          <h2 class="text-2xl font-semibold my-0">
-            {{ item.identity.title || "Catalog Item Detail" }}
-          </h2>
-        </div>
-
-        <p-button
-          type="button"
-          label="Back to Catalog"
-          icon="pi pi-chevron-left"
-          severity="secondary"
-          [outlined]="true"
-          (click)="history.back()"
-        ></p-button>
-        <p-button
-          type="button"
-          label="Report"
-          icon="pi pi-flag"
-          severity="secondary"
-          [outlined]="true"
-          (click)="reportState.show = true"
-        ></p-button>
-        <p-button
-          *ngIf="canEdit"
-          type="button"
-          label="Edit"
-          icon="pi pi-pencil"
-          [routerLink]="['/slc-items', item.id]"
-        ></p-button>
-      </div>
-
-      <div class="mt-4 flex flex-col gap-4">
-        <!-- identity -->
-        <section
-          id="identity"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
-        >
-          <div
-            class="text-sm font-semibold cursor-pointer"
-            (click)="_t['identity'] = !_t['identity']"
-          >
-            Identity
-            {{ _t["identity"] ? "▼" : "▶" }}
-          </div>
-          <ng-container *ngIf="_t['identity']">
-            <div class="flex items-start gap-2">
-              <label class="grow min-w-[240px] flex flex-col gap-1">
-                <span class="text-xs text-gray-600">Title</span>
-                <span
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  {{ item.identity.title || "&lt;&lt;empty&gt;&gt;" }}
-                </span>
-              </label>
-              <label class="w-96 flex flex-col gap-1">
-                <span class="text-xs text-gray-600">Unique ID</span>
-                <span
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md break-words"
-                >
-                  {{ item.identity.id || "&lt;&lt;empty&gt;&gt;" }}
-                </span>
-              </label>
-              <label class="min-w-64 flex flex-col gap-1">
-                <span class="text-xs text-gray-600">Type</span>
-                <span
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  {{ item.identity.type || "&lt;&lt;empty&gt;&gt;" }}
-                </span>
-              </label>
-            </div>
-            <div class="flex items-end gap-2">
-              <label class="grow min-w-[240px] flex flex-col gap-1">
-                <span class="text-xs text-gray-600">Demo URL</span>
-                @if (item.links.demo_url) {
-                  <a
-                    [href]="item.links.demo_url || undefined"
-                    target="_blank"
-                    class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                  >
-                    {{ item.links.demo_url || "&lt;&lt;empty&gt;&gt;" }}
-                  </a>
-                } @else {
-                  <a
-                    [href]="item.links.demo_url || undefined"
-                    target="_blank"
-                    class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                  >
-                    {{ item.links.demo_url || "&lt;&lt;empty&gt;&gt;" }}
-                  </a>
-                }
-              </label>
-            </div>
-            <label class="flex flex-col gap-1">
-              <span class="text-xs text-gray-600">
-                Tags (comma or newline separated)
-              </span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{ item.tags.join(", ") || "&lt;&lt;empty&gt;&gt;" }}
-              </span>
-            </label>
-          </ng-container>
-        </section>
-
-        <!-- languages -->
-        <section
-          id="languages"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
-        >
-          <div
-            class="text-sm font-semibold cursor-pointer"
-            (click)="_t['languages'] = !_t['languages']"
-          >
-            Language
-            {{ _t["languages"] ? "▼" : "▶" }}
-          </div>
-          <ng-container *ngIf="_t['languages']">
-            <label class="w-48 flex flex-col items-start gap-1">
-              <span class="text-xs text-gray-600">
-                Content language (bcp-47)
-              </span>
-              <span
-                class="w-full block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{ item.languages.content_language || "&lt;&lt;empty&gt;&gt;" }}
-              </span>
-            </label>
-            <label class="grow min-w-[240px] flex flex-col gap-1">
-              <span class="text-xs text-gray-600">
-                Programming languages (comma or newline separated)
-              </span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{
-                  item.languages.programming_languages.join(", ") ||
-                    "&lt;&lt;empty&gt;&gt;"
-                }}
-              </span>
-            </label>
-          </ng-container>
-        </section>
-
-        <section
-          id="attribution"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
-        >
-          <div
-            class="text-sm font-semibold cursor-pointer"
-            (click)="_t['attribution'] = !_t['attribution']"
-          >
-            Attribution
-            {{ _t["attribution"] ? "▼" : "▶" }}
-          </div>
-          <div *ngIf="_t['attribution']" class="flex flex-col gap-2">
-            <div class="flex flex-wrap items-start gap-2">
-              <label class="w-80 flex flex-col gap-1">
-                <span class="text-xs text-gray-600">Publisher</span>
-                <span
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  {{ item.attribution.publisher || "&lt;&lt;empty&gt;&gt;" }}
-                </span>
-              </label>
-              <label class="grow flex flex-col gap-1">
-                <span class="text-xs text-gray-600">Providers</span>
-                <span
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  {{ item.attribution.provider || "&lt;&lt;empty&gt;&gt;" }}
-                </span>
-              </label>
-              <label class="w-64 flex flex-col gap-1">
-                <span class="text-xs text-gray-600">Created at</span>
-                <span
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  <ng-container *ngIf="item.attribution.created_at">
-                    {{ item.attribution.created_at }}
-                  </ng-container>
-                  <ng-container *ngIf="!item.attribution.created_at"
-                    >&lt;&lt;empty&gt;&gt;</ng-container
-                  >
-                </span>
-              </label>
-            </div>
-            <div
-              class="flex items-center gap-2 rounded-md p-2 border border-solid bg-white border-gray-200"
-              *ngFor="let a of item.attribution.authors; let i = index"
-            >
-              <span class="">{{ a.name || "Author" }}</span>
-              <span *ngIf="a.affiliation" class="text-gray-500 text-xs">
-                — {{ a.affiliation }}</span
-              >
-            </div>
-            <div
-              class="text-xs text-gray-500"
-              *ngIf="!item.attribution.authors.length"
-            >
-              No authors yet.
-            </div>
-          </div>
-        </section>
-
-        <section
-          id="rights"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
-        >
-          <div
-            class="text-sm font-semibold cursor-pointer"
-            (click)="_t['rights'] = !_t['rights']"
-          >
-            Rights
-            {{ _t["rights"] ? "▼" : "▶" }}
-          </div>
-          <ng-container *ngIf="_t['rights']">
-            <div class="flex items-center gap-2">
-              <label class="w-48 flex flex-col gap-1">
-                <span class="text-xs text-gray-600">License</span>
-                <span
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  {{ item.rights.license || "&lt;&lt;empty&gt;&gt;" }}
-                </span>
-              </label>
-              <label class="grow min-w-[240px] flex flex-col gap-1">
-                <span class="text-xs text-gray-600">License URL</span>
-                <span
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  {{ item.rights.license_url || "&lt;&lt;empty&gt;&gt;" }}
-                </span>
-              </label>
-            </div>
-            <label class="flex flex-col gap-1">
-              <span class="text-xs text-gray-600">Usage notes</span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{ item.rights.usage_notes || "&lt;&lt;empty&gt;&gt;" }}
-              </span>
-            </label>
-          </ng-container>
-        </section>
-
-        <!-- content -->
-        <section
-          id="content"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
-        >
-          <div
-            class="text-sm font-semibold cursor-pointer"
-            (click)="_t['content'] = !_t['content']"
-          >
-            Content
-            {{ _t["content"] ? "▼" : "▶" }}
-          </div>
-          <ng-container *ngIf="_t['content']">
-            <label class="flex flex-col gap-1">
-              <span class="text-xs text-gray-600">Prompt / description</span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{ item.content.prompt || "&lt;&lt;empty&gt;&gt;" }}
-              </span>
-            </label>
-            <label class="flex flex-col gap-1">
-              <span class="text-xs text-gray-600">Source Snippet</span>
-              <pre
-                class="block p-2 border border-solid border-slate-200 rounded-md text-sm leading-5 min-h-10"
-              ><code
-              [highlight]="item.content.source_code || '&lt;&lt;empty&gt;&gt;'"
-              [language]="
-                item.languages.programming_languages.length == 0 ? 'plaintext' : (
-                  item.languages.programming_languages[0] == 'Assembly' ? 'x86asm' : item.languages.programming_languages[0]
-                )"
-              lineNumbers style="padding: 0;"></code></pre>
-            </label>
-          </ng-container>
-        </section>
-
-        <!-- classification -->
-        <section
-          id="classification"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg hidden"
-        >
-          <div
-            class="text-sm font-semibold cursor-pointer"
-            (click)="_t['classification'] = !_t['classification']"
-          >
-            Classification
-            {{ _t["classification"] ? "▼" : "▶" }}
-          </div>
-          <ng-container *ngIf="_t['classification']">
-            <div class="flex flex-wrap items-end gap-2">
-              <label class="w-64 flex flex-col gap-1">
-                <span class="text-xs text-gray-600">Difficulty</span>
-                <span
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  {{
-                    item.classification.difficulty || "&lt;&lt;empty&gt;&gt;"
-                  }}
-                </span>
-              </label>
-              <label class="w-64 flex flex-col gap-1">
-                <span class="text-xs text-gray-600">Interaction type</span>
-                <span
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  {{
-                    item.interaction.interaction_type || "&lt;&lt;empty&gt;&gt;"
-                  }}
-                </span>
-              </label>
-            </div>
-            <label class="flex flex-col gap-1">
-              <span class="text-xs text-gray-600">
-                Topics (comma or newline separated)
-              </span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{
-                  item.classification.topics.join(", ") ||
-                    "&lt;&lt;empty&gt;&gt;"
-                }}
-              </span>
-            </label>
-          </ng-container>
-        </section>
-
-        <!-- knowledge components -->
-        <section
-          id="knowledge-components"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
-        >
-          <div
-            class="text-sm font-semibold cursor-pointer"
-            (click)="_t['knowledge-components'] = !_t['knowledge-components']"
-          >
-            Knowledge Components
-            {{ _t["knowledge-components"] ? "▼" : "▶" }}
-          </div>
-          <ng-container *ngIf="_t['knowledge-components']">
-            <div
-              class="flex flex-col gap-2"
-              *ngIf="
-                item.classification.knowledge_components || {}
-                  | keyvalue as kcList
-              "
-            >
-              <div
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                *ngFor="let kcKey of kcList"
-              >
-                <div class="text-xs text-gray-500">{{ kcKey.key }}</div>
-                <div class="">
-                  {{ kcKey.value.concepts.join(", ") }}
-                </div>
-                <div class="text-gray-400 text-xs" *ngIf="kcKey.value.note">
-                  {{ kcKey.value.note }}
-                </div>
-              </div>
-              <div *ngIf="kcList.length < 1" class="text-xs text-gray-500">
-                No knowledge components yet.
-              </div>
-            </div>
-          </ng-container>
-        </section>
-
-        <!-- pedagogy -->
-        <section
-          id="pedagogy"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg hidden"
-        >
-          <div
-            class="text-sm font-semibold cursor-pointer"
-            (click)="_t['pedagogy'] = !_t['pedagogy']"
-          >
-            Pedagogy
-            {{ _t["pedagogy"] ? "▼" : "▶" }}
-          </div>
-          <ng-container *ngIf="_t['pedagogy']">
-            <label class="flex flex-col gap-1">
-              <span class="text-xs text-gray-600">Instructional role</span>
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{
-                  item.pedagogy.instructional_role || "&lt;&lt;empty&gt;&gt;"
-                }}
-              </span>
-            </label>
-            <label class="flex flex-col gap-1">
-              <span class="text-xs text-gray-600"
-                >Learning objectives (one per line)</span
-              >
-              <span
-                class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-              >
-                {{
-                  item.pedagogy.learning_objectives.join("\n") ||
-                    "&lt;&lt;empty&gt;&gt;"
-                }}
-              </span>
-            </label>
-            <div class="flex items-start gap-2">
-              <label class="flex flex-col gap-1 w-1/3">
-                <span class="text-xs text-gray-600">
-                  Prereq topics (comma separated)
-                </span>
-                <span
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  {{
-                    item.pedagogy.prerequisites.topics.join(", ") ||
-                      "&lt;&lt;empty&gt;&gt;"
-                  }}
-                </span>
-              </label>
-              <label class="flex flex-col gap-1 w-1/3">
-                <span class="text-xs text-gray-600">
-                  Prereq concepts (comma separated)
-                </span>
-                <span
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  {{
-                    item.pedagogy.prerequisites.concepts.join(", ") ||
-                      "&lt;&lt;empty&gt;&gt;"
-                  }}
-                </span>
-              </label>
-              <label class="flex flex-col gap-1 w-1/3">
-                <span class="text-xs text-gray-600">
-                  Prereq item IDs (comma separated)
-                </span>
-                <span
-                  class="block p-2 border border-solid border-slate-200 bg-white rounded-md"
-                >
-                  {{
-                    item.pedagogy.prerequisites.item_ids.join(", ") ||
-                      "&lt;&lt;empty&gt;&gt;"
-                  }}
-                </span>
-              </label>
-            </div>
-          </ng-container>
-        </section>
-
-        <section
-          id="delivery"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
-        >
-          <div
-            class="text-sm font-semibold cursor-pointer"
-            (click)="_t['delivery'] = !_t['delivery']"
-          >
-            Delivery
-            {{ _t["delivery"] ? "▼" : "▶" }}
-          </div>
-          <ng-container *ngIf="_t['delivery']">
-            <ng-container *ngIf="item.delivery.length; else noDelivery">
-              <div
-                class="flex items-center gap-2 p-2 border border-solid border-slate-200 bg-white rounded-md"
-                *ngFor="let d of item.delivery; let i = index"
-              >
-                <span class="uppercase"> {{ d.protocol || "protocol" }}: </span>
-                <a [href]="d.url" target="_blank">{{
-                  d.url || "&lt;&lt;empty&gt;&gt;"
-                }}</a>
-              </div>
-            </ng-container>
-            <ng-template #noDelivery>
-              <p class="text-xs text-gray-500">No delivery endpoints yet.</p>
-            </ng-template>
-          </ng-container>
-        </section>
-
-        <section
-          id="uses"
-          class="flex flex-col gap-2 bg-slate-50 shadow-md p-3 rounded-lg"
-        >
-          <div
-            class="text-sm font-semibold cursor-pointer"
-            (click)="_t['uses'] = !_t['uses']"
-          >
-            Used In
-            {{ _t["uses"] ? "▼" : "▶" }}
-          </div>
-          <ng-container *ngIf="_t['uses']">
-            <div
-              class="flex flex-col gap-1 p-2 border border-solid border-slate-200 bg-white rounded-md"
-              *ngFor="let a of item.uses; let i = index"
-            >
-              <a
-                *ngIf="a.context_url || a.context_id; else contextNameOnly"
-                class="text-blue-700 hover:underline break-words"
-                [href]="a.context_url || a.context_id"
-                target="_blank"
-                rel="noopener"
-              >
-                {{ a.context_name || a.context_url || a.context_id }}
-              </a>
-              <ng-template #contextNameOnly>
-                <span class=""
-                  >{{ a.context_name || "&lt;&lt;empty&gt;&gt;" }}
-                </span>
-              </ng-template>
-              <span *ngIf="a.used_by" class="text-gray-500 text-xs">
-                {{ a.used_by || "n/a" }}
-              </span>
-              <span *ngIf="a.used_at" class="text-gray-500 text-xs">
-                {{ a.used_at
-                }}<span *ngIf="a.context_url || a.context_id"
-                  >: [{{ a.context_url || a.context_id }}]</span
-                >
-              </span>
-            </div>
-            <div class="text-xs text-gray-500" *ngIf="!item.uses.length">
-              No uses yet.
-            </div>
-          </ng-container>
-        </section>
-      </div>
+      <i class="pi pi-spin pi-spinner text-2xl text-blue-600"></i>
+      <span class="text-xs font-medium text-slate-600"
+        >Loading catalog item...</span
+      >
     </div>
   </div>
 
-  <ng-template #loadingTpl>
-    <div class="py-4 text-sm text-gray-500">Loading catalog...</div>
+  <!-- Main Content -->
+  <ng-template #contentTpl>
+    <main
+      class="container mx-auto mt-20 mb-12 max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col gap-4"
+    >
+      <!-- Merged Header Card -->
+      <section
+        class="bg-white border border-slate-200 rounded-xl p-4 md:p-5 shadow-xs md:shadow-sm flex flex-col gap-3.5"
+      >
+        <!-- Top Sub-row: Back link on left, Actions on right -->
+        <div class="flex items-center justify-between gap-3 flex-wrap">
+          <a
+            [routerLink]="['/catalog-v2']"
+            class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-blue-600 transition-colors no-underline group cursor-pointer"
+          >
+            <i
+              class="pi pi-arrow-left text-[11px] group-hover:-translate-x-0.5 transition-transform"
+            ></i>
+            <span>Back to SLC Catalog</span>
+          </a>
+
+          <div class="flex items-center gap-2 flex-wrap ml-auto">
+            <p-button
+              type="button"
+              label="Report"
+              icon="pi pi-flag"
+              severity="secondary"
+              [outlined]="true"
+              size="small"
+              styleClass="inline-flex items-center justify-center text-xs py-1 px-2.5 text-slate-600 hover:text-red-600"
+              (click)="openReportDialog()"
+            ></p-button>
+
+            <p-button
+              *ngIf="canEdit"
+              type="button"
+              label="Edit Item"
+              icon="pi pi-pencil"
+              severity="secondary"
+              [outlined]="true"
+              size="small"
+              styleClass="inline-flex items-center justify-center text-xs py-1 px-2.5"
+              [routerLink]="['/slc-items', item.id || itemId]"
+            ></p-button>
+
+            <a
+              *ngIf="item.links?.demo_url"
+              [href]="item.links.demo_url"
+              target="_blank"
+              rel="noopener"
+              class="no-underline inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-2xs hover:shadow-xs transition-all group"
+            >
+              <i class="pi pi-play text-[10px]"></i>
+              <span>Launch Demo</span>
+              <i
+                class="pi pi-external-link text-[10px] group-hover:translate-x-0.5 transition-transform"
+              ></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Main Title & Badges Row -->
+        <div class="flex flex-col gap-2 pt-1 border-t border-slate-100">
+          <h1
+            class="text-xl md:text-2xl font-bold text-slate-900 leading-snug m-0"
+          >
+            {{ item.identity.title || "Untitled SLC Item" }}
+          </h1>
+
+          <!-- Badges Row -->
+          <div class="flex flex-wrap items-center gap-1.5">
+            <!-- Content Type -->
+            <span
+              *ngIf="item.identity?.type"
+              class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200/60 uppercase tracking-wider"
+            >
+              <i class="pi pi-box text-[10px]"></i>
+              <span>{{ item.identity.type }}</span>
+            </span>
+
+            <!-- Programming Languages -->
+            <ng-container
+              *ngFor="let lang of item.languages.programming_languages"
+            >
+              <span
+                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-sky-50 text-sky-700 border border-sky-200/60"
+              >
+                <i class="pi pi-code text-[10px]"></i>
+                <span>{{ lang }}</span>
+              </span>
+            </ng-container>
+
+            <!-- Difficulty -->
+            <span
+              *ngIf="item.classification?.difficulty"
+              class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] font-semibold"
+              [ngClass]="{
+                'bg-emerald-50 text-emerald-700 border border-emerald-200/60':
+                  item.classification.difficulty
+                    .toLowerCase()
+                    .includes('easy') ||
+                  item.classification.difficulty
+                    .toLowerCase()
+                    .includes('intro'),
+                'bg-amber-50 text-amber-700 border border-amber-200/60':
+                  item.classification.difficulty
+                    .toLowerCase()
+                    .includes('med') ||
+                  item.classification.difficulty
+                    .toLowerCase()
+                    .includes('inter'),
+                'bg-rose-50 text-rose-700 border border-rose-200/60':
+                  item.classification.difficulty
+                    .toLowerCase()
+                    .includes('hard') ||
+                  item.classification.difficulty.toLowerCase().includes('adv'),
+              }"
+            >
+              <i class="pi pi-chart-bar text-[10px]"></i>
+              <span>Difficulty: {{ item.classification.difficulty }}</span>
+            </span>
+
+            <!-- Status -->
+            <span
+              class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] font-semibold capitalize"
+              [ngClass]="{
+                'bg-emerald-50 text-emerald-700 border border-emerald-200/60':
+                  item.status === 'public',
+                'bg-slate-100 text-slate-600 border border-slate-200':
+                  item.status === 'private',
+                'bg-rose-50 text-rose-700 border border-rose-200/60':
+                  item.status === 'deprecated',
+              }"
+            >
+              <span
+                class="h-1.5 w-1.5 rounded-full shrink-0"
+                [ngClass]="{
+                  'bg-emerald-500': item.status === 'public',
+                  'bg-slate-400': item.status === 'private',
+                  'bg-rose-500': item.status === 'deprecated',
+                }"
+              ></span>
+              <span>{{ item.status }}</span>
+            </span>
+
+            <!-- Content Language -->
+            <span
+              *ngIf="item.languages?.content_language"
+              class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] font-medium bg-slate-100 text-slate-700 border border-slate-200"
+            >
+              <i class="pi pi-globe text-[10px]"></i>
+              <span>{{ item.languages.content_language }}</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2-Column Responsive Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
+        <!-- LEFT COLUMN: Main Content (8 cols on lg) -->
+        <div class="lg:col-span-8 flex flex-col gap-4">
+          <!-- Prompt Card -->
+          <section
+            class="bg-white border border-slate-200 rounded-xl p-4 md:p-5 shadow-xs md:shadow-sm flex flex-col gap-2.5"
+          >
+            <div
+              class="flex items-center gap-2 text-slate-800 font-bold text-sm border-b border-slate-100 pb-2"
+            >
+              <i class="pi pi-align-left text-blue-600 text-sm"></i>
+              <span>Prompt</span>
+            </div>
+
+            <div
+              *ngIf="getFormattedPrompt(); else noPrompt"
+              class="text-slate-800 text-xs sm:text-sm leading-relaxed whitespace-pre-line font-normal"
+            >
+              {{ getFormattedPrompt() }}
+            </div>
+            <ng-template #noPrompt>
+              <p class="text-xs text-slate-400 italic m-0">
+                No prompt provided for this item.
+              </p>
+            </ng-template>
+          </section>
+
+          <!-- Source Code Card -->
+          <section
+            class="bg-white border border-slate-200 rounded-xl shadow-xs md:shadow-sm overflow-hidden flex flex-col"
+          >
+            <div
+              class="bg-white px-4 py-2.5 flex items-center justify-between gap-2 border-b border-slate-200"
+            >
+              <div
+                class="flex items-center gap-2 text-slate-800 font-bold text-sm"
+              >
+                <i class="pi pi-code text-blue-600 text-sm"></i>
+                <span>Source Code</span>
+                <span
+                  *ngIf="item.languages?.programming_languages?.length"
+                  class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200 uppercase tracking-wide"
+                >
+                  {{ item.languages.programming_languages[0] }}
+                </span>
+              </div>
+
+              <div class="flex items-center gap-1.5">
+                <p-button
+                  type="button"
+                  *ngIf="item.content?.source_code && codeExpanded"
+                  label="Collapse"
+                  icon="pi pi-chevron-up"
+                  severity="secondary"
+                  [outlined]="true"
+                  size="small"
+                  styleClass="text-xs py-1 px-2"
+                  (click)="codeExpanded = false"
+                ></p-button>
+
+                <p-button
+                  type="button"
+                  *ngIf="item.content?.source_code"
+                  [label]="copiedCode ? 'Copied!' : 'Copy Code'"
+                  [icon]="copiedCode ? 'pi pi-check' : 'pi pi-copy'"
+                  [severity]="copiedCode ? 'success' : 'secondary'"
+                  [outlined]="true"
+                  size="small"
+                  styleClass="text-xs py-1 px-2.5"
+                  (click)="copyCode()"
+                ></p-button>
+              </div>
+            </div>
+
+            <div
+              class="code-viewer-container relative transition-all duration-300"
+              [ngClass]="{
+                'max-h-40 overflow-hidden cursor-pointer':
+                  !codeExpanded && item.content.source_code,
+                'max-h-none overflow-x-auto':
+                  codeExpanded || !item.content.source_code,
+              }"
+              (click)="!codeExpanded && (codeExpanded = true)"
+            >
+              <pre
+                *ngIf="item.content.source_code; else noCode"
+                class="m-0"
+              ><code
+                [highlight]="item.content.source_code"
+                [language]="getNormalizedLanguage()"
+                lineNumbers
+              ></code></pre>
+
+              <!-- Half-collapse gradient & click-to-expand overlay -->
+              <div
+                *ngIf="!codeExpanded && item.content.source_code"
+                class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-slate-100 via-slate-100/70 to-transparent flex items-end justify-center pb-2 z-10 cursor-pointer group"
+              >
+                <span
+                  class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white text-blue-700 shadow-xs border border-slate-200 group-hover:bg-blue-50 group-hover:border-blue-200 transition-all"
+                >
+                  <i class="pi pi-chevron-down text-[10px]"></i>
+                  <span>Click to expand code</span>
+                </span>
+              </div>
+
+              <ng-template #noCode>
+                <div class="p-4 text-xs text-slate-400 italic bg-slate-50">
+                  No source code snippet attached to this item.
+                </div>
+              </ng-template>
+            </div>
+          </section>
+
+          <!-- Pedagogy & Learning Objectives Card -->
+          <section
+            *ngIf="hasPedagogy()"
+            class="bg-white border border-slate-200 rounded-xl p-4 md:p-5 shadow-xs md:shadow-sm flex flex-col gap-3"
+          >
+            <div
+              class="flex items-center gap-2 text-slate-800 font-bold text-sm border-b border-slate-100 pb-2"
+            >
+              <i class="pi pi-graduation-cap text-blue-600 text-sm"></i>
+              <span>Pedagogy & Learning Objectives</span>
+            </div>
+
+            <!-- Instructional Role -->
+            <div
+              *ngIf="item.pedagogy?.instructional_role"
+              class="flex flex-col gap-1"
+            >
+              <span
+                class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider"
+                >Instructional Role</span
+              >
+              <span
+                class="text-xs font-medium text-slate-800 bg-slate-50 border border-slate-200/80 px-2.5 py-1 rounded-md self-start"
+              >
+                {{ item.pedagogy.instructional_role }}
+              </span>
+            </div>
+
+            <!-- Learning Objectives -->
+            <div
+              *ngIf="item.pedagogy?.learning_objectives?.length"
+              class="flex flex-col gap-1.5"
+            >
+              <span
+                class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider"
+                >Learning Objectives</span
+              >
+              <ul class="m-0 pl-0 flex flex-col gap-1 list-none">
+                <li
+                  *ngFor="let obj of item.pedagogy.learning_objectives"
+                  class="flex items-start gap-2 text-xs text-slate-700 bg-blue-50/30 border border-blue-100/70 p-2 rounded-md"
+                >
+                  <i
+                    class="pi pi-check-circle text-blue-600 text-xs mt-0.5 shrink-0"
+                  ></i>
+                  <span>{{ obj }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Prerequisites Breakdown -->
+            <div
+              *ngIf="
+                item.pedagogy?.prerequisites?.topics?.length ||
+                item.pedagogy?.prerequisites?.concepts?.length ||
+                item.pedagogy?.prerequisites?.item_ids?.length
+              "
+              class="flex flex-col gap-1.5 pt-2 border-t border-slate-100"
+            >
+              <span
+                class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider"
+                >Prerequisites</span
+              >
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                <div
+                  *ngIf="item.pedagogy.prerequisites.topics?.length"
+                  class="flex flex-col gap-1"
+                >
+                  <span class="text-[11px] text-slate-500 font-medium"
+                    >Topics</span
+                  >
+                  <div class="flex flex-wrap gap-1">
+                    <span
+                      *ngFor="let t of item.pedagogy.prerequisites.topics"
+                      class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200"
+                    >
+                      {{ t }}
+                    </span>
+                  </div>
+                </div>
+
+                <div
+                  *ngIf="item.pedagogy.prerequisites.concepts?.length"
+                  class="flex flex-col gap-1"
+                >
+                  <span class="text-[11px] text-slate-500 font-medium"
+                    >Concepts</span
+                  >
+                  <div class="flex flex-wrap gap-1">
+                    <span
+                      *ngFor="let c of item.pedagogy.prerequisites.concepts"
+                      class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200"
+                    >
+                      {{ c }}
+                    </span>
+                  </div>
+                </div>
+
+                <div
+                  *ngIf="item.pedagogy.prerequisites.item_ids?.length"
+                  class="flex flex-col gap-1"
+                >
+                  <span class="text-[11px] text-slate-500 font-medium"
+                    >Items</span
+                  >
+                  <div class="flex flex-wrap gap-1">
+                    <span
+                      *ngFor="let pid of item.pedagogy.prerequisites.item_ids"
+                      class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 border border-slate-200"
+                    >
+                      {{ pid }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Knowledge Components Card -->
+          <section
+            *ngIf="hasKnowledgeComponents()"
+            class="bg-white border border-slate-200 rounded-xl p-4 md:p-5 shadow-xs md:shadow-sm flex flex-col gap-3"
+          >
+            <div
+              class="flex items-center gap-2 text-slate-800 font-bold text-sm border-b border-slate-100 pb-2"
+            >
+              <i class="pi pi-sitemap text-blue-600 text-sm"></i>
+              <span>Knowledge Components & Concepts</span>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <ng-container
+                *ngFor="
+                  let kc of item.classification.knowledge_components | keyvalue
+                "
+              >
+                <div>
+                  <span
+                    class="text-xs font-bold text-slate-800 uppercase tracking-wide"
+                  >
+                    <i class="pi pi-tag text-blue-600 text-[10px]"></i>
+                    <span class="ml-1">{{ kc.key }}:</span>
+                  </span>
+
+                  <span
+                    *ngFor="let concept of kc.value.concepts"
+                    class="py-0.5 rounded text-[11px] font-medium bg-white text-slate-700 border border-slate-200"
+                  >
+                    {{ concept }},
+                  </span>
+                </div>
+
+                <div
+                  *ngIf="kc.value.note || true"
+                  class="ml-4 italic text-[11px] text-slate-500"
+                >
+                  {{ kc.value.note }}...
+                </div>
+              </ng-container>
+            </div>
+          </section>
+
+          <!-- Course Integrations (Compact List) -->
+          <section
+            class="bg-white border border-slate-200 rounded-xl p-4 md:p-5 shadow-xs md:shadow-sm flex flex-col gap-3"
+          >
+            <div
+              class="flex items-center justify-between border-b border-slate-100 pb-2"
+            >
+              <div
+                class="flex items-center gap-2 text-slate-800 font-bold text-sm"
+              >
+                <i class="pi pi-compass text-blue-600 text-sm"></i>
+                <span>Course Integrations</span>
+                <span
+                  class="text-[11px] font-semibold px-2 py-0.2 rounded-full bg-blue-100 text-blue-800"
+                >
+                  {{ item.uses.length }}
+                </span>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col divide-y divide-slate-100"
+              *ngIf="item.uses.length; else noUsesTpl"
+            >
+              <div
+                *ngFor="let a of item.uses; let i = index"
+                class="py-2.5 first:pt-0 last:pb-0 flex flex-col gap-1 hover:bg-slate-50/70 rounded-lg p-2 transition-colors -mx-2"
+              >
+                <!-- Course Title (Links to Hub if ported) -->
+                <div>
+                  <a
+                    *ngIf="isPorted(a); else plainTitleTpl"
+                    [routerLink]="['/hub']"
+                    [queryParams]="{
+                      cid: extractCid(a),
+                      unit: parseContextName(a.context_name).unit,
+                      item: item.identity.title || item.identity.id || item.id,
+                    }"
+                    class="text-xs font-bold text-blue-600 hover:text-blue-800 hover:underline inline-flex items-center gap-1.5 break-words leading-snug no-underline cursor-pointer"
+                    title="View this ported course in the Hub"
+                  >
+                    <span>{{ parseContextName(a.context_name).title }}</span>
+                    <i class="pi pi-compass text-[10px] text-blue-500"></i>
+                  </a>
+                  <ng-template #plainTitleTpl>
+                    <span
+                      class="text-xs font-bold text-slate-800 break-words leading-snug"
+                    >
+                      {{ parseContextName(a.context_name).title }}
+                    </span>
+                  </ng-template>
+                </div>
+
+                <!-- Unit & Context Info -->
+                <div
+                  class="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-slate-500"
+                >
+                  <span
+                    *ngIf="parseContextName(a.context_name).unit"
+                    class="text-slate-600 font-medium flex items-center gap-1"
+                  >
+                    <i
+                      class="fa fa-folder-open-o text-slate-400 text-[10px]"
+                    ></i>
+                    <span>{{ parseContextName(a.context_name).unit }}</span>
+                  </span>
+                  <a
+                    *ngIf="extractCid(a)"
+                    [href]="
+                      a.context_url ||
+                      'https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=' +
+                        extractCid(a)
+                    "
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center gap-1 font-mono font-bold text-slate-600 hover:text-blue-700 bg-slate-100 hover:bg-blue-50 px-1.5 py-0.5 rounded border border-slate-200 text-[10px] transition-colors no-underline cursor-pointer"
+                    title="Open legacy ADAPT2 course in new tab"
+                  >
+                    <span>CID: {{ extractCid(a) }}</span>
+                    <i
+                      class="pi pi-external-link text-[8px] text-slate-400"
+                    ></i>
+                  </a>
+                  <span *ngIf="a.used_by" [title]="a.used_by">
+                    by {{ a.used_by }}
+                  </span>
+                  <span *ngIf="a.used_at" class="text-slate-400">
+                    • {{ a.used_at | date: "mediumDate" }}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <ng-template #noUsesTpl>
+              <div class="p-4 text-center text-xs text-slate-400 italic">
+                This content item is not currently linked to any course.
+              </div>
+            </ng-template>
+          </section>
+        </div>
+
+        <!-- RIGHT COLUMN: Sidebar Summary Panel (4 cols on lg) -->
+        <div class="lg:col-span-4 flex flex-col gap-4">
+          <!-- Metadata & Specifications Card -->
+          <section
+            class="bg-white border border-slate-200 rounded-xl p-4 shadow-xs md:shadow-sm flex flex-col gap-3"
+          >
+            <div
+              class="flex items-center gap-2 text-slate-800 font-bold text-xs border-b border-slate-100 pb-2"
+            >
+              <i class="pi pi-info-circle text-blue-600 text-xs"></i>
+              <span>Specifications</span>
+            </div>
+
+            <div class="flex flex-col gap-2 text-xs">
+              <div class="flex items-center justify-between gap-3">
+                <span class="text-slate-400 font-medium">Unique ID</span>
+                <span
+                  class="font-mono text-slate-800 font-medium text-[11px] text-right truncate max-w-[190px]"
+                  [title]="item.identity.id || item.id"
+                >
+                  {{ item.identity.id || item.id }}
+                </span>
+              </div>
+
+              <div
+                *ngIf="item.interaction?.interaction_type"
+                class="flex items-center justify-between gap-3"
+              >
+                <span class="text-slate-400 font-medium">Interaction Type</span>
+                <span class="font-medium text-slate-800 text-right">{{
+                  item.interaction.interaction_type
+                }}</span>
+              </div>
+
+              <div
+                *ngIf="item.languages?.content_language"
+                class="flex items-center justify-between gap-3"
+              >
+                <span class="text-slate-400 font-medium">Content Language</span>
+                <span class="font-medium text-slate-800 uppercase text-right">{{
+                  item.languages.content_language
+                }}</span>
+              </div>
+
+              <div
+                *ngIf="item.classification?.topics?.length"
+                class="flex flex-col gap-1 pt-1.5 border-t border-slate-100"
+              >
+                <span class="text-slate-400 font-medium">Topics</span>
+                <div class="flex flex-wrap gap-1">
+                  <span
+                    *ngFor="let topic of item.classification.topics"
+                    class="px-2 py-0.5 rounded text-[10px] bg-slate-100 text-slate-700 border border-slate-200"
+                  >
+                    {{ topic }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Attribution & Authors Card -->
+          <section
+            class="bg-white border border-slate-200 rounded-xl p-4 shadow-xs md:shadow-sm flex flex-col gap-3"
+          >
+            <div
+              class="flex items-center gap-2 text-slate-800 font-bold text-xs border-b border-slate-100 pb-2"
+            >
+              <i class="pi pi-users text-blue-600 text-xs"></i>
+              <span>Attribution</span>
+            </div>
+
+            <!-- Authors List -->
+            <div class="flex flex-col gap-1.5">
+              <span class="text-[11px] text-slate-400 font-medium"
+                >Authors</span
+              >
+              <div
+                *ngIf="item.attribution?.authors?.length; else noAuthors"
+                class="flex flex-col gap-1.5"
+              >
+                <div
+                  *ngFor="let a of item.attribution.authors"
+                  class="flex items-start gap-2 p-2 rounded-lg bg-slate-50 border border-slate-100 text-xs"
+                >
+                  <div
+                    class="h-5 w-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-[9px] shrink-0 mt-0.5"
+                  >
+                    {{ (a.name || "A")[0].toUpperCase() }}
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-bold text-slate-800 text-xs">{{
+                      a.name || "Unknown Author"
+                    }}</span>
+                    <span
+                      *ngIf="a.affiliation"
+                      class="text-slate-500 text-[11px]"
+                      >{{ a.affiliation }}</span
+                    >
+                    <span
+                      *ngIf="!a.affiliation"
+                      class="text-slate-400 italic text-[11px]"
+                      >&lt;&lt;unspecified&gt;&gt;</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <ng-template #noAuthors>
+                <span class="text-xs text-slate-400 italic"
+                  >No author specified.</span
+                >
+              </ng-template>
+            </div>
+
+            <!-- Publisher & Provider -->
+            <div
+              class="flex flex-col gap-1.5 pt-1.5 border-t border-slate-100 text-xs"
+            >
+              <div
+                *ngIf="item.attribution?.publisher"
+                class="flex items-center justify-between gap-2"
+              >
+                <span class="text-slate-400 font-medium">Publisher</span>
+                <span class="font-medium text-slate-800 text-right truncate">{{
+                  item.attribution.publisher
+                }}</span>
+              </div>
+              <div
+                *ngIf="item.attribution?.provider"
+                class="flex items-center justify-between gap-2"
+              >
+                <span class="text-slate-400 font-medium">Provider</span>
+                <span class="font-medium text-slate-800 text-right truncate">{{
+                  item.attribution.provider
+                }}</span>
+              </div>
+              <div
+                *ngIf="item.attribution?.created_at"
+                class="flex items-center justify-between gap-2"
+              >
+                <span class="text-slate-400 font-medium">Created Date</span>
+                <span class="font-medium text-slate-800 text-right">{{
+                  item.attribution.created_at | date: "mediumDate"
+                }}</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Delivery Endpoints Card -->
+          <section
+            *ngIf="item.delivery?.length"
+            class="bg-white border border-slate-200 rounded-xl p-4 shadow-xs md:shadow-sm flex flex-col gap-2.5"
+          >
+            <div
+              class="flex items-center gap-2 text-slate-800 font-bold text-xs border-b border-slate-100 pb-2"
+            >
+              <i class="pi pi-send text-blue-600 text-xs"></i>
+              <span>Delivery Endpoints</span>
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+              <div
+                *ngFor="let d of item.delivery"
+                class="flex flex-col gap-0.5 p-2 rounded-lg bg-slate-50 border border-slate-200 text-xs"
+              >
+                <span class="font-bold text-slate-700 uppercase text-[10px]">{{
+                  d.protocol || "Endpoint"
+                }}</span>
+                <a
+                  [href]="d.url"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-blue-600 hover:underline break-all text-[11px]"
+                >
+                  {{ d.url }}
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Rights & License Card -->
+          <section
+            *ngIf="item.rights?.license || item.rights?.usage_notes"
+            class="bg-white border border-slate-200 rounded-xl p-4 shadow-xs md:shadow-sm flex flex-col gap-2.5"
+          >
+            <div
+              class="flex items-center gap-2 text-slate-800 font-bold text-xs border-b border-slate-100 pb-2"
+            >
+              <i class="pi pi-shield text-blue-600 text-xs"></i>
+              <span>Rights & License</span>
+            </div>
+
+            <div class="flex flex-col gap-1.5 text-xs">
+              <div
+                *ngIf="item.rights?.license"
+                class="flex items-center justify-between gap-2"
+              >
+                <span class="text-slate-400 font-medium">License</span>
+                <a
+                  *ngIf="item.rights.license_url; else licenseNameOnly"
+                  [href]="item.rights.license_url"
+                  target="_blank"
+                  rel="noopener"
+                  class="font-semibold text-blue-600 hover:underline inline-flex items-center gap-1 text-right"
+                >
+                  <span>{{ item.rights.license }}</span>
+                  <i class="pi pi-external-link text-[9px]"></i>
+                </a>
+                <ng-template #licenseNameOnly>
+                  <span class="font-semibold text-slate-800 text-right">{{
+                    item.rights.license
+                  }}</span>
+                </ng-template>
+              </div>
+
+              <div
+                *ngIf="item.rights?.usage_notes"
+                class="flex flex-col gap-0.5 pt-1 border-t border-slate-100"
+              >
+                <span class="text-slate-400 font-medium">Usage Notes</span>
+                <span
+                  class="text-slate-700 italic leading-relaxed text-[11px]"
+                  >{{ item.rights.usage_notes }}</span
+                >
+              </div>
+            </div>
+          </section>
+
+          <!-- Tags Card -->
+          <section
+            *ngIf="item.tags?.length"
+            class="bg-white border border-slate-200 rounded-xl p-4 shadow-xs md:shadow-sm flex flex-col gap-2.5"
+          >
+            <div
+              class="flex items-center gap-2 text-slate-800 font-bold text-xs border-b border-slate-100 pb-2"
+            >
+              <i class="pi pi-tags text-blue-600 text-xs"></i>
+              <span>Tags</span>
+            </div>
+
+            <div class="flex flex-wrap gap-1">
+              <span
+                *ngFor="let tag of item.tags"
+                class="px-2 py-0.5 rounded-md text-[11px] font-medium bg-slate-100 text-slate-700 border border-slate-200 shadow-2xs"
+              >
+                #{{ tag }}
+              </span>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
   </ng-template>
 </div>
 
+<!-- Report Dialog -->
 <p-dialog
   *ngIf="reportState.show"
   [(visible)]="reportState.show"
@@ -579,51 +843,78 @@
   [modal]="true"
   [closable]="true"
   [closeOnEscape]="true"
-  [style]="{ width: '35rem' }"
+  [style]="{ width: '32rem' }"
 >
-  <form #form="ngForm" class="flex flex-col gap-2" (ngSubmit)="submitReport()">
-    <div class="text-sm font-semibold">Report Item</div>
-    <div class="text-xs text-gray-500">Flag content in this catalog item.</div>
-    <label class="flex flex-col gap-1">
-      <span class="text-xs text-gray-600">Reason *</span>
+  <form
+    #form="ngForm"
+    class="flex flex-col gap-4 pt-2"
+    (ngSubmit)="submitReport()"
+  >
+    <div class="text-xs text-slate-500">
+      Flag an issue or report incorrect content for this catalog item.
+    </div>
+
+    <div class="flex flex-col gap-1.5">
+      <label class="text-xs font-semibold text-slate-700">Reason *</label>
       <input
         pInputText
         type="text"
-        class="w-full"
+        class="w-full text-sm"
         name="reason"
         [(ngModel)]="report.reason"
+        required
         maxlength="200"
-        placeholder="Short summary of the issue"
+        placeholder="Brief summary of the issue"
       />
-    </label>
+    </div>
 
-    <label class="flex flex-col gap-1">
-      <span class="text-xs text-gray-600">Details</span>
+    <div class="flex flex-col gap-1.5">
+      <label class="text-xs font-semibold text-slate-700">Details</label>
       <textarea
         pInputTextarea
-        rows="8"
-        class="w-full"
+        rows="5"
+        class="w-full text-sm"
         [autoResize]="true"
         name="details"
         [(ngModel)]="report.details"
         maxlength="1000"
-        placeholder="Optional details to help triage the report"
+        placeholder="Provide additional context to help us triage this report"
       ></textarea>
-    </label>
+    </div>
 
-    <span *ngIf="reportState.success" class="text-xs text-emerald-600">
-      {{ reportState.success }}
-    </span>
-    <span *ngIf="reportState.error" class="text-xs text-rose-600">
-      {{ reportState.error }}
-    </span>
+    <div
+      *ngIf="reportState.success"
+      class="text-xs text-emerald-700 bg-emerald-50 border border-emerald-200 p-2.5 rounded-lg flex items-center gap-1.5"
+    >
+      <i class="pi pi-check-circle"></i>
+      <span>{{ reportState.success }}</span>
+    </div>
 
-    <div class="flex items-center justify-end gap-2">
+    <div
+      *ngIf="reportState.error"
+      class="text-xs text-rose-700 bg-rose-50 border border-rose-200 p-2.5 rounded-lg flex items-center gap-1.5"
+    >
+      <i class="pi pi-exclamation-circle"></i>
+      <span>{{ reportState.error }}</span>
+    </div>
+
+    <div
+      class="flex items-center justify-end gap-2 pt-2 border-t border-slate-100"
+    >
+      <p-button
+        type="button"
+        label="Cancel"
+        severity="secondary"
+        [outlined]="true"
+        styleClass="text-xs"
+        (click)="reportState.show = false"
+      ></p-button>
       <p-button
         type="submit"
         label="Submit Report"
-        icon="fa fa-flag"
-        severity="secondary"
+        icon="pi pi-flag"
+        severity="primary"
+        styleClass="text-xs"
         [loading]="reportState.submitting"
         [disabled]="form.invalid"
       ></p-button>

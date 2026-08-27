@@ -10,6 +10,7 @@ import { environment } from '../../environments/environment';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AppService } from '../app.service';
 import { getNavLinks } from '../utils';
+import { getLegacyCid, getLegacyCourseByCid } from '../legacy-courses';
 import { ConfirmationService, FilterService } from 'primeng/api';
 import { firstValueFrom } from 'rxjs';
 import { Table } from 'primeng/table';
@@ -37,7 +38,28 @@ export class HubComponent implements OnInit, AfterViewInit {
   institutionKVs: FilterKV[] = [];
   authorKVs: FilterKV[] = [];
   globalQuery = '';
+  currentCid: number | null = null;
   loading = true;
+  highlightedUnit: string | null = null;
+  highlightedItem: string | null = null;
+  expandedUnitIds = new Set<string | number>();
+
+  quickFilterSections: {
+    domains: boolean;
+    institutions: boolean;
+    authors: boolean;
+    [key: string]: boolean;
+  } = {
+    domains: true,
+    institutions: true,
+    authors: true,
+  };
+
+  authorFilterQuery = '';
+  institutionFilterQuery = '';
+  domainFilterQuery = '';
+  showAllAuthors = false;
+  showAllInstitutions = false;
 
   private readonly multiFilterSeparator = '||';
   private availableFacetLabels: { [key: string]: Set<string> } = {};
@@ -51,6 +73,95 @@ export class HubComponent implements OnInit, AfterViewInit {
 
   get quickFiltersExpanded() {
     return true;
+  }
+
+  toggleQuickFilterSection(section: string) {
+    this.quickFilterSections[section] = !this.quickFilterSections[section];
+  }
+
+  get filteredDomainKVs(): FilterKV[] {
+    if (!this.domainFilterQuery.trim()) return this.domainKVs;
+    const q = this.domainFilterQuery.trim().toLowerCase();
+    return this.domainKVs.filter((kv) => kv.label.toLowerCase().includes(q));
+  }
+
+  get filteredInstitutionKVs(): FilterKV[] {
+    let list = this.institutionKVs;
+    if (this.institutionFilterQuery.trim()) {
+      const q = this.institutionFilterQuery.trim().toLowerCase();
+      list = list.filter((kv) => kv.label.toLowerCase().includes(q));
+    }
+    if (!this.showAllInstitutions && !this.institutionFilterQuery.trim()) {
+      return list.slice(0, 6);
+    }
+    return list;
+  }
+
+  get filteredAuthorKVs(): FilterKV[] {
+    let list = this.authorKVs;
+    if (this.authorFilterQuery.trim()) {
+      const q = this.authorFilterQuery.trim().toLowerCase();
+      list = list.filter((kv) => kv.label.toLowerCase().includes(q));
+    }
+    if (!this.showAllAuthors && !this.authorFilterQuery.trim()) {
+      return list.slice(0, 6);
+    }
+    return list;
+  }
+
+  get activeFilterChips(): { field: string; label: string; displayField: string }[] {
+    const chips: { field: string; label: string; displayField: string }[] = [];
+    if (this.globalQuery) {
+      chips.push({ field: 'q', label: `"${this.globalQuery}"`, displayField: 'Query' });
+    }
+    if (this.highlightedUnit) {
+      chips.push({ field: 'unit', label: this.highlightedUnit, displayField: 'Unit' });
+    }
+    if (this.highlightedItem) {
+      chips.push({ field: 'item', label: this.highlightedItem, displayField: 'Item' });
+    }
+    this.activeQuickFilterKeys.forEach((field) => {
+      const fieldName =
+        field === 'domain'
+          ? 'Domain'
+          : field === 'institution'
+            ? 'Institution'
+            : field === 'author.fullname'
+              ? 'Author'
+              : field;
+      this.getSelectedLabels(field).forEach((label) => {
+        chips.push({ field, label, displayField: fieldName });
+      });
+    });
+    return chips;
+  }
+
+  removeFilterChip(table: Table, chip: { field: string; label: string; displayField: string }) {
+    if (chip.field === 'q') {
+      this.clearGlobalFilter(table);
+    } else if (chip.field === 'unit') {
+      this.highlightedUnit = null;
+      this.syncQueryParams({ unit: null });
+    } else if (chip.field === 'item') {
+      this.highlightedItem = null;
+      this.syncQueryParams({ item: null, act: null, activity: null });
+    } else {
+      const facet = this.findFacetByLabel(chip.field, chip.label) || {
+        label: chip.label,
+        value: 0,
+      };
+      this.toggleQuickFilter(table, chip.field, facet);
+    }
+  }
+
+  getDomainBadgeClass(domain: string): string {
+    const d = (domain || '').toLowerCase().trim();
+    if (d === 'py' || d === 'python') return 'bg-emerald-50 text-emerald-700 border-emerald-200';
+    if (d === 'java') return 'bg-orange-50 text-orange-700 border-orange-200';
+    if (d === 'cpp' || d === 'c++' || d === 'c') return 'bg-sky-50 text-sky-700 border-sky-200';
+    if (d === 'sql') return 'bg-purple-50 text-purple-700 border-purple-200';
+    if (d === 'js' || d === 'javascript') return 'bg-amber-50 text-amber-700 border-amber-200';
+    return 'bg-slate-50 text-slate-700 border-slate-200';
   }
 
   get isLoggedIn() {
@@ -91,16 +202,39 @@ export class HubComponent implements OnInit, AfterViewInit {
   filter(table: Table, $event: any, skip = false) {
     const value = ($event.target.value || '').trim();
     this.globalQuery = value;
-    table.filterGlobal(value, 'contains');
+    this.currentCid = null;
+    if (table) {
+      table.filter(null, 'cid', 'equals');
+      table.filterGlobal(value, 'contains');
+    }
     if (skip) return;
-    this.syncQueryParams({ q: value || null });
+    this.syncQueryParams({
+      q: value || null,
+      cid: null,
+      unit: null,
+      item: null,
+      act: null,
+      activity: null,
+    });
   }
 
   reload() {
     this.loading = true;
     this.http.get(`${environment.apiUrl}/hub`).subscribe({
       next: (resp: any) => {
-        this.courses = resp;
+        this.courses = (resp || []).map((c: any) => {
+          let cid = c.cid != null ? Number(c.cid) : null;
+          if (cid == null && c.id && !isNaN(Number(c.id))) {
+            cid = Number(c.id);
+          }
+          if (cid == null) {
+            cid = getLegacyCid(c.code, c.name) ?? null;
+          }
+          return {
+            ...c,
+            cid,
+          };
+        });
         this.selectedKVs = { count: 0 };
         this.reloadFilterKVs(this.courses);
         this.refreshAvailableFacetLabels();
@@ -132,13 +266,30 @@ export class HubComponent implements OnInit, AfterViewInit {
   }
 
   clearQuickFilters(table: Table) {
-    table.reset();
+    if (table) {
+      table.reset();
+      table.filter(null, 'cid', 'equals');
+      table.filterGlobal('', 'contains');
+    }
+    this.currentCid = null;
     this.globalQuery = '';
     this.selectedKVs = { count: 0 };
+    this.highlightedUnit = null;
+    this.highlightedItem = null;
+    this.selected = null;
+    this.expandedUnitIds.clear();
     this.reloadFilterKVs(this.courses);
     const clearedParams = this.quickFilterFields.reduce(
       (acc: Params, key) => ({ ...acc, [key]: null }),
-      { q: null, qf: null },
+      {
+        q: null,
+        qf: null,
+        cid: null,
+        unit: null,
+        item: null,
+        act: null,
+        activity: null,
+      },
     );
     this.syncQueryParams(clearedParams);
   }
@@ -209,8 +360,23 @@ export class HubComponent implements OnInit, AfterViewInit {
 
   clearGlobalFilter(table: Table) {
     this.globalQuery = '';
-    table.filterGlobal('', 'contains');
-    this.syncQueryParams({ q: null });
+    this.currentCid = null;
+    if (table) {
+      table.filter(null, 'cid', 'equals');
+      table.filterGlobal('', 'contains');
+    }
+    this.highlightedUnit = null;
+    this.highlightedItem = null;
+    this.selected = null;
+    this.expandedUnitIds.clear();
+    this.syncQueryParams({
+      q: null,
+      cid: null,
+      unit: null,
+      item: null,
+      act: null,
+      activity: null,
+    });
   }
 
   toggleActiveQuickFilter(table: Table, field: string, label: string) {
@@ -240,9 +406,129 @@ export class HubComponent implements OnInit, AfterViewInit {
           resp.resources = {};
           for (const r of resources) resp.resources[r.id] = r;
           this.selected = resp;
+
+          // When a target unit is specified, expand only that unit and collapse others.
+          // Otherwise, expand all units by default.
+          if (this.highlightedUnit) {
+            this.expandedUnitIds.clear();
+            const targetUnit = (this.selected.units || []).find((u: any) =>
+              this.isUnitHighlighted(u),
+            );
+            if (targetUnit) {
+              this.expandedUnitIds.add(targetUnit.id || targetUnit.name);
+            }
+          } else {
+            this.expandedUnitIds = new Set(
+              (this.selected.units || []).map((u: any) => u.id || u.name),
+            );
+          }
+
+          if (this.highlightedUnit || this.highlightedItem) {
+            setTimeout(() => {
+              const el = document.querySelector(
+                '.hub-highlighted-item, .hub-highlighted-unit',
+              );
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            }, 150);
+          }
         },
         error: (error: any) => console.log(error),
       });
+  }
+
+  toggleUnit(unit: any) {
+    const key = unit.id || unit.name;
+    if (this.expandedUnitIds.has(key)) {
+      this.expandedUnitIds.delete(key);
+    } else {
+      this.expandedUnitIds.add(key);
+    }
+  }
+
+  isUnitExpanded(unit: any): boolean {
+    const key = unit.id || unit.name;
+    return this.expandedUnitIds.has(key);
+  }
+
+  get areAllUnitsExpanded(): boolean {
+    const total = this.selected?.units?.length || 0;
+    return total > 0 && this.expandedUnitIds.size >= total;
+  }
+
+  toggleAllUnits(): void {
+    if (this.areAllUnitsExpanded) {
+      this.collapseAllUnits();
+    } else {
+      this.expandAllUnits();
+    }
+  }
+
+  expandAllUnits() {
+    this.expandedUnitIds = new Set(
+      (this.selected?.units || []).map((u: any) => u.id || u.name),
+    );
+  }
+
+  collapseAllUnits() {
+    this.expandedUnitIds.clear();
+  }
+
+  countUnitActivities(unit: any): number {
+    if (!unit?.activities) return 0;
+    let count = 0;
+    for (const key of Object.keys(unit.activities)) {
+      if (Array.isArray(unit.activities[key])) {
+        count += unit.activities[key].length;
+      }
+    }
+    return count;
+  }
+
+  isUnitHighlighted(unit: any): boolean {
+    if (!this.highlightedUnit || !unit?.name) return false;
+    const target = this.highlightedUnit.trim().toLowerCase();
+    const unitName = unit.name.trim().toLowerCase();
+    if (unitName === target) return true;
+    const normTarget = target.replace(/\s*-\s*/g, '-').replace(/\s+/g, ' ');
+    const normUnit = unitName.replace(/\s*-\s*/g, '-').replace(/\s+/g, ' ');
+    return normUnit === normTarget;
+  }
+
+  isActivityHighlighted(a: any): boolean {
+    if (!this.highlightedItem || !a) return false;
+    const target = this.highlightedItem.trim().toLowerCase();
+
+    // 1. Exact ID match (numeric or string)
+    if (a.id != null && String(a.id).trim().toLowerCase() === target) {
+      return true;
+    }
+
+    // 2. Exact Title / Name match
+    const actName = (a.name || '').trim().toLowerCase();
+    if (actName && actName === target) {
+      return true;
+    }
+
+    // 3. Exact URL parameter match (e.g. ch=target or sub=target or rdfID=target)
+    if (a.url) {
+      let matchedParam = false;
+      try {
+        const urlObj = new URL(a.url, 'https://adapt2.sis.pitt.edu');
+        urlObj.searchParams.forEach((val) => {
+          if (val.trim().toLowerCase() === target) {
+            matchedParam = true;
+          }
+        });
+      } catch {
+        const paramRegex = new RegExp(`[?&=]${target}(?:&|$)`, 'i');
+        matchedParam = paramRegex.test(a.url);
+      }
+      if (matchedParam) return true;
+    }
+
+    return false;
   }
 
   clone(course: any) {
@@ -286,8 +572,54 @@ export class HubComponent implements OnInit, AfterViewInit {
   }
 
   private applyFiltersFromParams(params: Params) {
-    this.globalQuery = (params['q'] || '').trim();
-    if (this.table) this.table.filterGlobal(this.globalQuery, 'contains');
+    const rawCid =
+      params['cid'] ||
+      (params['q'] && String(params['q']).startsWith('cid=')
+        ? String(params['q']).replace('cid=', '')
+        : null);
+    const targetCid = rawCid ? parseInt(String(rawCid).trim(), 10) : null;
+    this.currentCid = targetCid;
+
+    this.highlightedUnit = params['unit'] ? String(params['unit']).trim() : null;
+    this.highlightedItem =
+      params['item'] || params['act'] || params['activity']
+        ? String(params['item'] || params['act'] || params['activity']).trim()
+        : null;
+
+    let matchedCourse: any = null;
+    if (targetCid && this.courses?.length) {
+      matchedCourse = this.courses.find(
+        (c: any) =>
+          Number(c.cid) === targetCid ||
+          String(c.cid) === String(targetCid) ||
+          c.id === String(targetCid),
+      );
+      if (matchedCourse && matchedCourse.cid == null) {
+        matchedCourse.cid = targetCid;
+      }
+    }
+
+    if (params['q']) {
+      this.globalQuery = String(params['q']).trim();
+      if (this.table) {
+        this.table.filterGlobal(this.globalQuery, 'contains');
+      }
+    } else {
+      this.globalQuery = '';
+      if (this.table) {
+        this.table.filterGlobal('', 'contains');
+      }
+    }
+
+    if (targetCid) {
+      if (this.table) {
+        this.table.filter(targetCid, 'cid', 'equals');
+      }
+    } else {
+      if (this.table) {
+        this.table.filter(null, 'cid', 'equals');
+      }
+    }
 
     this.selectedKVs = { count: 0 };
     this.quickFilterFields.forEach((field) => {
@@ -314,6 +646,11 @@ export class HubComponent implements OnInit, AfterViewInit {
     });
     this.recountSelected();
     this.refreshAvailableFacetLabels();
+
+    if (matchedCourse) {
+      this.selected = null;
+      this.toggleLoad(matchedCourse);
+    }
   }
 
   private applyQuickFilter(
@@ -400,6 +737,7 @@ export class HubComponent implements OnInit, AfterViewInit {
   }
 
   private matchesActiveFiltersExcept(course: any, excludedField: string) {
+    if (this.currentCid && Number(course.cid) !== this.currentCid) return false;
     if (!this.matchesGlobalQuery(course)) return false;
     return this.quickFilterFields
       .filter((field) => field !== excludedField)
@@ -417,6 +755,7 @@ export class HubComponent implements OnInit, AfterViewInit {
     if (!query) return true;
     const fields = [
       'id',
+      'cid',
       'user_email',
       'code',
       'name',
@@ -478,7 +817,7 @@ export class HubComponent implements OnInit, AfterViewInit {
     }
   }
 
-  private getSelectedLabels(field: string) {
+  getSelectedLabels(field: string) {
     return ((this.selectedKVs[field] || []) as FilterKV[]).map((kv) => kv.label);
   }
 

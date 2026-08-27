@@ -53,6 +53,26 @@ export class AdminComponent {
   jsonValidationStatus: { valid: boolean; message: string } = { valid: true, message: '' };
   savingJson: boolean = false;
   activeTabIndex: number = 0;
+  downloadingBackup: boolean = false;
+
+  apiTokens: any[] = [];
+  tokensLoading: boolean = false;
+  tokenDialog: boolean = false;
+  tokenResultDialog: boolean = false;
+  tokenModel: any = { name: '', expiryOption: '30', customDate: '', user_email: '' };
+  createdTokenResult: { token: string; record: any } | null = null;
+  tokenCopied: boolean = false;
+  curlCopied: boolean = false;
+  pythonCopied: boolean = false;
+  backupCurlCopied: boolean = false;
+  expiryOptions = [
+    { label: '7 Days', value: '7' },
+    { label: '30 Days (Recommended)', value: '30' },
+    { label: '60 Days', value: '60' },
+    { label: '90 Days', value: '90' },
+    { label: '1 Year', value: '365' },
+    { label: 'Custom Date', value: 'custom' },
+  ];
 
   constructor(
     public router: Router,
@@ -60,6 +80,29 @@ export class AdminComponent {
     public app: AppService,
     private service: AdminService,
   ) { }
+
+  downloadBackup() {
+    this.downloadingBackup = true;
+    this.service.downloadDatabaseBackup().subscribe({
+      next: (blob: any) => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        const dateStr = new Date().toISOString().split('T')[0];
+        a.href = url;
+        a.download = `course_authoring_db_backup_${dateStr}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+        this.downloadingBackup = false;
+      },
+      error: (err: any) => {
+        console.error('Failed to download database backup', err);
+        alert('Failed to download database backup. Check console for details.');
+        this.downloadingBackup = false;
+      },
+    });
+  }
 
   filter(table: any, $event: any) {
     table.filterGlobal($event.target.value, 'contains');
@@ -70,6 +113,11 @@ export class AdminComponent {
       const tab = params['tab'];
       if (tab === 'courses') {
         this.activeTabIndex = 1;
+      } else if (tab === 'tokens' || tab === 'api-tokens') {
+        this.activeTabIndex = 2;
+        this.reloadTokens();
+      } else if (tab === 'backup' || tab === 'database') {
+        this.activeTabIndex = 3;
       } else if (tab === 'users') {
         this.activeTabIndex = 0;
       }
@@ -81,13 +129,16 @@ export class AdminComponent {
   onTabChange(e: any) {
     const index = e.index !== undefined ? e.index : e;
     this.activeTabIndex = index;
-    const tab = index === 1 ? 'courses' : 'users';
+    const tab = index === 3 ? 'backup' : index === 2 ? 'tokens' : index === 1 ? 'courses' : 'users';
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams: { tab },
       queryParamsHandling: 'merge',
       replaceUrl: true,
     });
+    if (index === 2 && this.apiTokens.length === 0) {
+      this.reloadTokens();
+    }
   }
 
   reload() {
@@ -390,5 +441,147 @@ export class AdminComponent {
         console.log(err);
       },
     });
+  }
+
+  reloadTokens() {
+    this.tokensLoading = true;
+    this.service.listApiTokens().subscribe({
+      next: (tokens: any[]) => {
+        this.apiTokens = tokens;
+        this.tokensLoading = false;
+      },
+      error: (err: any) => {
+        console.error('Failed to load API tokens', err);
+        this.tokensLoading = false;
+      },
+    });
+  }
+
+  openCreateTokenDialog() {
+    this.tokenModel = {
+      name: '',
+      expiryOption: '30',
+      customDate: '',
+      user_email: this.app.user?.email || '',
+    };
+    this.tokenDialog = true;
+  }
+
+  generateToken() {
+    if (!this.tokenModel.name || !this.tokenModel.name.trim()) {
+      alert('Please provide a name for this API token.');
+      return;
+    }
+    const payload: any = {
+      name: this.tokenModel.name.trim(),
+      user_email: this.tokenModel.user_email?.trim() || undefined,
+      roles: ['app-admin', 'author'],
+    };
+    if (this.tokenModel.expiryOption === 'custom') {
+      if (!this.tokenModel.customDate) {
+        alert('Please specify a custom expiration date.');
+        return;
+      }
+      payload.expires_at = new Date(this.tokenModel.customDate).toISOString();
+    } else {
+      payload.expires_in_days = parseInt(this.tokenModel.expiryOption, 10) || 30;
+    }
+
+    this.service.createApiToken(payload).subscribe({
+      next: (res: { token: string; record: any }) => {
+        this.tokenDialog = false;
+        this.createdTokenResult = res;
+        this.tokenCopied = false;
+        this.curlCopied = false;
+        this.pythonCopied = false;
+        this.tokenResultDialog = true;
+        this.reloadTokens();
+      },
+      error: (err: any) => {
+        console.error('Failed to generate token', err);
+        alert(err?.error?.message || 'Failed to generate API token');
+      },
+    });
+  }
+
+  closeTokenResultDialog() {
+    this.tokenResultDialog = false;
+    this.createdTokenResult = null;
+  }
+
+  revokeToken(token: any) {
+    if (!confirm(`Are you sure you want to revoke the token "${token.name}"? Any scripts using this token will stop working immediately.`)) {
+      return;
+    }
+    this.service.revokeApiToken(token.id).subscribe({
+      next: () => {
+        this.reloadTokens();
+      },
+      error: (err: any) => {
+        console.error('Failed to revoke token', err);
+        alert('Failed to revoke API token.');
+      },
+    });
+  }
+
+  toggleTokenStatus(token: any, active: boolean) {
+    this.service.toggleApiToken(token.id, active).subscribe({
+      next: (updated: any) => {
+        token.active = updated.active;
+      },
+      error: (err: any) => {
+        console.error('Failed to update token status', err);
+        alert('Failed to update token status.');
+      },
+    });
+  }
+
+  copyToClipboard(text: string, type: 'token' | 'curl' | 'python' | 'backup-curl') {
+    navigator.clipboard.writeText(text).then(() => {
+      if (type === 'token') {
+        this.tokenCopied = true;
+        setTimeout(() => this.tokenCopied = false, 2500);
+      } else if (type === 'curl') {
+        this.curlCopied = true;
+        setTimeout(() => this.curlCopied = false, 2500);
+      } else if (type === 'python') {
+        this.pythonCopied = true;
+        setTimeout(() => this.pythonCopied = false, 2500);
+      } else if (type === 'backup-curl') {
+        this.backupCurlCopied = true;
+        setTimeout(() => this.backupCurlCopied = false, 2500);
+      }
+    });
+  }
+
+  getCurlSnippet(token: string): string {
+    const origin = window.location.origin;
+    const apiUrl = origin.includes(':4200') ? 'http://localhost:3000' : origin;
+    return `curl -H "Authorization: Bearer ${token}" \\\n  ${apiUrl}/api/courses/admin/all`;
+  }
+
+  getPythonSnippet(token: string): string {
+    const origin = window.location.origin;
+    const apiUrl = origin.includes(':4200') ? 'http://localhost:3000' : origin;
+    return `import requests
+
+API_URL = "${apiUrl}/api/courses/admin/all"
+TOKEN = "${token}"
+
+headers = {
+    "Authorization": f"Bearer {TOKEN}",
+    "Content-Type": "application/json"
+}
+
+response = requests.get(API_URL, headers=headers)
+print("Status:", response.status_code)
+courses = response.json()
+print(f"Retrieved {len(courses)} courses successfully!")`;
+  }
+
+  getBackupCurlSnippet(): string {
+    const origin = window.location.origin;
+    const apiUrl = origin.includes(':4200') ? 'http://localhost:3000' : origin;
+    return `curl -H "Authorization: Bearer <YOUR_API_TOKEN>" \\\n  ${apiUrl}/api/user-admin/backup \\\n  -o "course_authoring_db_backup_$(date +%Y-%m-%d).json"`;
   }
 }

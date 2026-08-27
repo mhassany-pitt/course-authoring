@@ -3,3 +3,73 @@
   color: black;
   opacity: 1;
 }
+
+:host ::ng-deep .p-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle;
+
+  .p-button-icon {
+    line-height: 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    vertical-align: middle;
+  }
+  .p-button-label {
+    line-height: 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    vertical-align: middle;
+  }
+}
+
+.code-viewer-container {
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+
+  pre {
+    margin: 0;
+    padding: 1rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+
+  code.hljs {
+    background: transparent !important;
+    padding: 0 !important;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  ::ng-deep .hljs-ln {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0;
+
+    td {
+      padding: 0;
+      vertical-align: top;
+    }
+
+    .hljs-ln-numbers {
+      text-align: right;
+      color: #94a3b8;
+      border-right: 1px solid #e2e8f0;
+      padding-right: 14px;
+      padding-left: 4px;
+      user-select: none;
+      min-width: 32px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .hljs-ln-code {
+      padding-left: 16px;
+      white-space: pre;
+    }
+  }
+}

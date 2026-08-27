@@ -46,4 +46,28 @@ export class AdminService {
   deleteAdminCourse(id: string, undo: boolean = false) {
     return this.http.delete(`${environment.apiUrl}/courses/admin/${id}?undo=${undo}`, { withCredentials: true });
   }
+
+  downloadDatabaseBackup() {
+    return this.http.get(`${environment.apiUrl}/user-admin/backup`, {
+      withCredentials: true,
+      responseType: 'blob',
+    });
+  }
+
+  listApiTokens() {
+    return this.http.get<any[]>(`${environment.apiUrl}/admin/api-tokens`, { withCredentials: true });
+  }
+
+  createApiToken(data: { name: string; expires_in_days?: number; expires_at?: string; user_email?: string; roles?: string[] }) {
+    return this.http.post<{ token: string; record: any }>(`${environment.apiUrl}/admin/api-tokens`, data, { withCredentials: true });
+  }
+
+  revokeApiToken(id: string) {
+    return this.http.delete(`${environment.apiUrl}/admin/api-tokens/${id}`, { withCredentials: true });
+  }
+
+  toggleApiToken(id: string, active?: boolean) {
+    return this.http.patch(`${environment.apiUrl}/admin/api-tokens/${id}/toggle`, { active }, { withCredentials: true });
+  }
 }
+

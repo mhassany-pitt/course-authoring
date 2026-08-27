@@ -43,7 +43,8 @@
     "domain": "c",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 16
   },
   {
     "institution": "RMU",
@@ -98,7 +99,8 @@
     "domain": "cpp",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 14
   },
   {
     "institution": "unknown",
@@ -2185,7 +2187,8 @@
     "domain": "java",
     "description": "These practice problems help students understand typical programming challenges, introduce problem-solving techniques, and develop design and programming skills taught in a traditional CS1 course.",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 439
   },
   {
     "institution": "unknown",
@@ -3699,7 +3702,8 @@
     "domain": "java",
     "description": "This course provides students with advanced techniques for design and implementation of business solutions using object-oriented programming concepts. This course also covers the data structures that are typically learned in a traditional CS2 course",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 440
   },
   {
     "institution": "unknown",
@@ -6935,7 +6939,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 489
   },
   {
     "institution": "DEMO",
@@ -7100,7 +7105,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 370
   },
   {
     "institution": "DEMO",
@@ -7221,7 +7227,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 371
   },
   {
     "institution": "DEMO",
@@ -7382,7 +7389,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 369
   },
   {
     "institution": "NTNU",
@@ -8484,7 +8492,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 350
   },
   {
     "institution": "unknown",
@@ -11288,7 +11297,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 474
   },
   {
     "institution": "unknown",
@@ -11516,7 +11526,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 338
   },
   {
     "institution": "unknown",
@@ -12487,7 +12498,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 340
   },
   {
     "institution": "unknown",
@@ -15127,7 +15139,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 484
   },
   {
     "institution": "unknown",
@@ -18676,7 +18689,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 382
   },
   {
     "institution": "unknown",
@@ -21856,7 +21870,8 @@
     "domain": "java",
     "description": "lab:393",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 477
   },
   {
     "institution": "PITT",
@@ -21982,7 +21997,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 498
   },
   {
     "institution": "PITT",
@@ -25346,7 +25362,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 400
   },
   {
     "institution": "PITT",
@@ -28582,7 +28599,8 @@
     "domain": "java",
     "description": "lab:393",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 397
   },
   {
     "institution": "PITT",
@@ -31818,7 +31836,8 @@
     "domain": "java",
     "description": "lab:393",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 417
   },
   {
     "institution": "PITT",
@@ -34643,7 +34662,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 402
   },
   {
     "institution": "PITT",
@@ -37879,7 +37899,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 444
   },
   {
     "institution": "PITT",
@@ -41182,7 +41203,8 @@
     "domain": "java",
     "description": "lab:393",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 449
   },
   {
     "institution": "PITT",
@@ -44418,7 +44440,8 @@
     "domain": "java",
     "description": "lab:393",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 450
   },
   {
     "institution": "PITT",
@@ -47617,7 +47640,8 @@
     "domain": "java",
     "description": "lab:393",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 405
   },
   {
     "institution": "PITT",
@@ -49383,7 +49407,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 381
   },
   {
     "institution": "PITT",
@@ -51217,7 +51242,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 351
   },
   {
     "institution": "PITT",
@@ -54544,7 +54570,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 401
   },
   {
     "institution": "PITT",
@@ -57489,7 +57516,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 442
   },
   {
     "institution": "PITT",
@@ -60357,7 +60385,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 443
   },
   {
     "institution": "PITT",
@@ -63684,7 +63713,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 412
   },
   {
     "institution": "PITT",
@@ -67669,7 +67699,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 366
   },
   {
     "institution": "PITT",
@@ -68141,7 +68172,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 389
   },
   {
     "institution": "PITT",
@@ -68842,7 +68874,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 367
   },
   {
     "institution": "PITT",
@@ -72576,7 +72609,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 21
   },
   {
     "institution": "PITT",
@@ -75436,7 +75470,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 1
   },
   {
     "institution": "PITT",
@@ -78618,7 +78653,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 17
   },
   {
     "institution": "PITT",
@@ -79729,7 +79765,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 345
   },
   {
     "institution": "PITT",
@@ -83486,7 +83523,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 374
   },
   {
     "institution": "PITT",
@@ -84798,7 +84836,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 458
   },
   {
     "institution": "PITT",
@@ -88271,7 +88310,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 339
   },
   {
     "institution": "PITT",
@@ -88407,7 +88447,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 24
   },
   {
     "institution": "PITT",
@@ -89931,7 +89972,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 3
   },
   {
     "institution": "PITT",
@@ -91441,7 +91483,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 10
   },
   {
     "institution": "PITT",
@@ -92424,7 +92467,8 @@
     "domain": "java",
     "description": "lab",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 393
   },
   {
     "institution": "PITT",
@@ -93423,7 +93467,8 @@
     "domain": "java",
     "description": "lab:407",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 415
   },
   {
     "institution": "PITT",
@@ -94408,7 +94453,8 @@
     "domain": "java",
     "description": "lab:407",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 409
   },
   {
     "institution": "PITT",
@@ -95698,7 +95744,8 @@
     "domain": "java",
     "description": "lab:407",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 418
   },
   {
     "institution": "PITT",
@@ -95933,7 +95980,8 @@
     "domain": "java",
     "description": "lab",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 395
   },
   {
     "institution": "PITT",
@@ -97101,7 +97149,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 368
   },
   {
     "institution": "PITT",
@@ -100650,7 +100699,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 29
   },
   {
     "institution": "PITT",
@@ -102547,7 +102597,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 352
   },
   {
     "institution": "PITT",
@@ -104381,7 +104432,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 416
   },
   {
     "institution": "PITT",
@@ -106437,7 +106489,8 @@
     "domain": "java",
     "description": "lab:393",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 432
   },
   {
     "institution": "PITT",
@@ -107021,7 +107074,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 28
   },
   {
     "institution": "PITT",
@@ -110570,7 +110624,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 32
   },
   {
     "institution": "PITT",
@@ -114555,7 +114610,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 361
   },
   {
     "institution": "PITT",
@@ -117882,7 +117938,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 385
   },
   {
     "institution": "PITT",
@@ -120910,7 +120967,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 11
   },
   {
     "institution": "PITT",
@@ -124459,7 +124517,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 13
   },
   {
     "institution": "PITT",
@@ -128747,7 +128806,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 31
   },
   {
     "institution": "PITT",
@@ -132183,7 +132243,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 19
   },
   {
     "institution": "PITT",
@@ -132251,7 +132312,8 @@
     "domain": "java",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 470
   },
   {
     "institution": "PITT",
@@ -133390,7 +133452,8 @@
     "domain": "java",
     "description": "lab",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 406
   },
   {
     "institution": "PITT",
@@ -136425,7 +136488,8 @@
     "domain": "java",
     "description": "lab:393",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 425
   },
   {
     "institution": "unknown",
@@ -138454,7 +138518,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 490
   },
   {
     "institution": "unknown",
@@ -139902,7 +139967,8 @@
     "domain": "py",
     "description": "Introductory course on Python programming. This instance of the course is professional development (PD) in the SAIL-CC project.",
     "published": false,
-    "tags": []
+    "tags": [],
+    "cid": 485
   },
   {
     "institution": "unknown",
@@ -142340,7 +142406,8 @@
     "domain": "py",
     "description": "",
     "published": false,
-    "tags": []
+    "tags": [],
+    "cid": 491
   },
   {
     "institution": "NTNU",
@@ -144213,7 +144280,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 388
   },
   {
     "institution": "unknown",
@@ -146053,7 +146121,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 466
   },
   {
     "institution": "unknown",
@@ -146144,7 +146213,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 343
   },
   {
     "institution": "unknown",
@@ -148014,7 +148084,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 448
   },
   {
     "institution": "unknown",
@@ -151016,7 +151087,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 413
   },
   {
     "institution": "unknown",
@@ -153955,7 +154027,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 422
   },
   {
     "institution": "unknown",
@@ -155828,7 +155901,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 376
   },
   {
     "institution": "unknown",
@@ -157274,7 +157348,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 465
   },
   {
     "institution": "PITT",
@@ -159267,7 +159342,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 403
   },
   {
     "institution": "PITT",
@@ -161936,7 +162012,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 404
   },
   {
     "institution": "PITT",
@@ -164360,7 +164437,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 421
   },
   {
     "institution": "PITT",
@@ -164412,7 +164490,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 342
   },
   {
     "institution": "PITT",
@@ -168837,7 +168916,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 454
   },
   {
     "institution": "PITT",
@@ -170997,7 +171077,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 459
   },
   {
     "institution": "PITT",
@@ -173131,7 +173212,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 460
   },
   {
     "institution": "PITT",
@@ -175211,7 +175293,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 411
   },
   {
     "institution": "PITT",
@@ -178093,7 +178176,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 429
   },
   {
     "institution": "PITT",
@@ -179978,7 +180062,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 461
   },
   {
     "institution": "PITT",
@@ -182418,7 +182503,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 426
   },
   {
     "institution": "PITT",
@@ -183632,7 +183718,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 430
   },
   {
     "institution": "PITT",
@@ -185848,7 +185935,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 457
   },
   {
     "institution": "PITT",
@@ -187854,7 +187942,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 463
   },
   {
     "institution": "PITT",
@@ -188318,7 +188407,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 25
   },
   {
     "institution": "PITT",
@@ -188530,7 +188620,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 27
   },
   {
     "institution": "PITT",
@@ -190039,7 +190130,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 390
   },
   {
     "institution": "PITT",
@@ -192555,7 +192647,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 394
   },
   {
     "institution": "PITT",
@@ -194395,7 +194488,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 365
   },
   {
     "institution": "PITT",
@@ -196293,7 +196387,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 372
   },
   {
     "institution": "PITT",
@@ -197259,7 +197354,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 346
   },
   {
     "institution": "PITT",
@@ -199054,7 +199150,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 23
   },
   {
     "institution": "PITT",
@@ -200716,7 +200813,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 373
   },
   {
     "institution": "PITT",
@@ -201374,7 +201472,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 427
   },
   {
     "institution": "PITT",
@@ -202210,7 +202309,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 356
   },
   {
     "institution": "PITT",
@@ -203424,7 +203524,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 355
   },
   {
     "institution": "PITT",
@@ -205702,7 +205803,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 344
   },
   {
     "institution": "PITT",
@@ -209667,7 +209769,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 462
   },
   {
     "institution": "PITT",
@@ -211414,7 +211517,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 414
   },
   {
     "institution": "PITT",
@@ -212539,7 +212643,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 464
   },
   {
     "institution": "PITT",
@@ -214459,7 +214564,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 419
   },
   {
     "institution": "PITT",
@@ -216532,7 +216638,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 379
   },
   {
     "institution": "PITT",
@@ -218561,7 +218668,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 410
   },
   {
     "institution": "PITT",
@@ -220707,7 +220815,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 420
   },
   {
     "institution": "PITT",
@@ -222153,7 +222262,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 396
   },
   {
     "institution": "PITT",
@@ -223323,7 +223433,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 378
   },
   {
     "institution": "PITT",
@@ -225475,7 +225586,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 407
   },
   {
     "institution": "PITT",
@@ -227138,7 +227250,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 384
   },
   {
     "institution": "UOA",
@@ -229513,7 +229626,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 424
   },
   {
     "institution": "UOA",
@@ -231287,7 +231401,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 423
   },
   {
     "institution": "UOA",
@@ -232534,7 +232649,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 428
   },
   {
     "institution": "UOA",
@@ -233781,7 +233897,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 431
   },
   {
     "institution": "UOA",
@@ -236043,7 +236160,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 375
   },
   {
     "institution": "UOA",
@@ -238305,7 +238423,8 @@
     "domain": "py",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 391
   },
   {
     "institution": "unknown",
@@ -238546,7 +238665,8 @@
     "domain": "sql",
     "description": "About database",
     "published": false,
-    "tags": []
+    "tags": [],
+    "cid": 446
   },
   {
     "institution": "unknown",
@@ -241385,7 +241505,8 @@
     "domain": "sql",
     "description": "",
     "published": false,
-    "tags": []
+    "tags": [],
+    "cid": 496
   },
   {
     "institution": "unknown",
@@ -244224,7 +244345,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 451
   },
   {
     "institution": "unknown",
@@ -245742,7 +245864,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 447
   },
   {
     "institution": "PITT",
@@ -247623,7 +247746,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 2
   },
   {
     "institution": "PITT",
@@ -250462,7 +250586,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 408
   },
   {
     "institution": "PITT",
@@ -252939,7 +253064,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 357
   },
   {
     "institution": "PITT",
@@ -255353,7 +255479,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 386
   },
   {
     "institution": "PITT",
@@ -257844,7 +257971,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 380
   },
   {
     "institution": "PITT",
@@ -261102,7 +261230,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 359
   },
   {
     "institution": "PITT",
@@ -263130,7 +263259,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 358
   },
   {
     "institution": "PITT",
@@ -265279,7 +265409,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 335
   },
   {
     "institution": "PITT",
@@ -266196,7 +266327,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 347
   },
   {
     "institution": "PITT",
@@ -266799,7 +266931,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 349
   },
   {
     "institution": "PITT",
@@ -269760,7 +269893,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 360
   },
   {
     "institution": "PITT",
@@ -271938,7 +272072,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 30
   },
   {
     "institution": "PITT",
@@ -274357,7 +274492,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 337
   },
   {
     "institution": "PITT",
@@ -277073,7 +277209,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 341
   },
   {
     "institution": "PITT",
@@ -279492,7 +279629,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 353
   },
   {
     "institution": "PITT",
@@ -282462,7 +282600,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 363
   },
   {
     "institution": "PITT",
@@ -285229,7 +285368,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 392
   },
   {
     "institution": "PITT",
@@ -287035,7 +287175,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 354
   },
   {
     "institution": "PITT",
@@ -287145,7 +287286,8 @@
     "domain": "sql",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 22
   },
   {
     "institution": "PITT",
@@ -288146,6 +288288,7 @@
     "domain": "telcom",
     "description": "",
     "published": true,
-    "tags": []
+    "tags": [],
+    "cid": 336
   }
 ]

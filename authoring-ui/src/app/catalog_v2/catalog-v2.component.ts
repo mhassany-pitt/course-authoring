@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectorRef,
   Component,
   DestroyRef,
   ElementRef,
@@ -144,6 +145,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     public api: CatalogV2Service,
     private filterService: FilterService,
     private destroyRef: DestroyRef,
+    private cdr: ChangeDetectorRef,
   ) {
     this.destroyRef.onDestroy(() => {
       if (this.facetRefreshDebounceHandle) {
@@ -214,6 +216,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         this.latestQueryParams = params;
         if (this.dataLoaded && this.table) {
           this.applyFiltersFromParams(params);
+          this.cdr.detectChanges();
         }
       });
     this.reload();
@@ -222,6 +225,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     if (this.dataLoaded) {
       this.applyFiltersFromParams(this.latestQueryParams);
+      this.cdr.detectChanges();
     }
   }
 
@@ -244,6 +248,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
         if (this.table) {
           this.applyFiltersFromParams(this.latestQueryParams);
         }
+        this.cdr.detectChanges();
       },
       error: (error: any) => console.log(error),
       complete: () => (this.loading = false),
@@ -310,6 +315,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       this.conceptKVs = [];
       this.providersKVs = [];
       this.licenseKVs = [];
+      this.availableFacetLabels = {};
       return;
     }
 
@@ -462,6 +468,17 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       'rights.license': this.licenseKVs.map((kv) => kv.label),
       tags: this.tagKVs.map((kv) => kv.label),
     };
+    this.availableFacetLabels = this.quickFilterFields.reduce(
+      (acc: { [key: string]: Set<string> }, field) => {
+        acc[field] = new Set(
+          this.getFacetForField(field)
+            .filter((kv) => kv.value > 0)
+            .map((kv) => kv.label),
+        );
+        return acc;
+      },
+      {},
+    );
   }
 
   onTableFilter(_filteredItems: any[] | null | undefined) {
@@ -471,6 +488,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
     this.facetRefreshDebounceHandle = setTimeout(() => {
       this.facetRefreshDebounceHandle = null;
       this.refreshAvailableFacetLabels();
+      this.cdr.markForCheck();
     }, this.facetRefreshDebounceMs);
   }
 
@@ -889,6 +907,7 @@ export class CatalogV2Component implements OnInit, AfterViewInit {
       this.table.first = 0;
     }
     this.refreshAvailableFacetLabels();
+    this.cdr.markForCheck();
     this.syncQueryParams({
       kc_category:
         this.selectedKnowledgeComponentCategory === 'All'

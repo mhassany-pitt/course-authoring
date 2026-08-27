@@ -6,7 +6,7 @@ import { CoursesModule } from './courses/courses.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
-import { UserAdminModule } from './user-admin/user-admin.module';
+import { AdminModule } from './user-admin/admin.module';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { MasteryGridModule } from './mastery-grid/mastery-grid.module';
@@ -16,6 +16,7 @@ import { HubModule } from './hub/hub.module';
 import { CatalogModule } from './catalog/catalog.module';
 import { SLCItemsModule } from './slc-items/slc-items.module';
 import { CatalogV2Module } from './catalog_v2/catalog_v2.module';
+import { ApiTokensModule } from './api-tokens/api-tokens.module';
 
 @Module({
   imports: [
@@ -58,7 +59,7 @@ import { CatalogV2Module } from './catalog_v2/catalog_v2.module';
     }),
     UsersModule,
     AuthModule,
-    UserAdminModule,
+    AdminModule,
     CoursesModule,
     HubModule,
     MasteryGridModule,
@@ -66,6 +67,7 @@ import { CatalogV2Module } from './catalog_v2/catalog_v2.module';
     CatalogModule,
     CatalogV2Module,
     SLCItemsModule,
+    ApiTokensModule,
   ],
   controllers: [AppController],
   providers: [AppService, ConfigService],

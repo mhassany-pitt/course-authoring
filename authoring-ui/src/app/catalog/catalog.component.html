@@ -1,6 +1,6 @@
 <div class="flex flex-col catalog-page">
-  <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
-    <div class="container mx-auto flex items-center gap-2 px-2 md:px-0 ">
+  <div class="py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
+    <div class="container mx-auto flex items-center gap-2 px-4 sm:px-6 lg:px-8 max-w-7xl">
       <img src="assets/logo.png" class="h-8 w-8" />
       <span class="text-xl font-bold hidden md:inline-block text-nowrap">Course Authoring</span>
       <span class="hidden md:inline-block"><i class="pi pi-chevron-right"></i></span>
@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  <div class="container mx-auto mt-24 mb-16 flex flex-col gap-4 z-0">
+  <div class="container mx-auto mt-24 mb-16 px-4 sm:px-6 lg:px-8 flex flex-col gap-4 max-w-7xl z-0">
     <div *ngIf="selection.length" class="flex flex-col gap-2 bg-gray-100 border shadow-md p-2">
       <p-button type="button"
         [label]="export_status ? export_status : 'Export Selected SLCs ('+selection.length+') to a single JSON file!'"

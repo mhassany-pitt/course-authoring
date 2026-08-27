@@ -1,7 +1,7 @@
 <div class="flex flex-col">
-  <div class="px-10 py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
+  <div class="py-4 bg-gray-100 shadow-md fixed left-0 top-0 right-0 z-10">
     <div
-      class="container mx-auto flex items-center gap-2 px-2 md:px-0 max-w-6xl"
+      class="container mx-auto flex items-center gap-2 px-4 sm:px-6 lg:px-8 max-w-7xl"
     >
       <img src="assets/logo.png" class="h-8 w-8" />
       <span class="text-xl font-bold hidden md:inline-block text-nowrap"
@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <div class="container mx-auto mt-24 mb-16 flex flex-col gap-4 max-w-6xl z-0">
+  <div class="container mx-auto mt-24 mb-16 px-4 sm:px-6 lg:px-8 flex flex-col gap-4 max-w-7xl z-0">
     <h1 class="my-0">
       <span class="text-3xl font-bold">Course Catalog</span>
       <span class="text-gray-500 text-sm ml-2">
@@ -42,7 +42,9 @@
     </p>
 
     <div class="flex flex-col gap-4 lg:flex-row">
-      <div class="w-full lg:w-1/3 flex flex-col gap-4 lg:sticky lg:top-20 self-start">
+      <div
+        class="w-full lg:w-1/3 flex flex-col gap-4 lg:sticky lg:top-20 self-start"
+      >
         <div class="w-full flex flex-col gap-2">
           <div
             class="bg-gray-100 shadow-md relative border border-slate-200"
@@ -55,9 +57,26 @@
               name="name"
               pInputText
               placeholder="Search ..."
-              class="text-xl border-gray-100 w-full pr-4"
+              class="text-xl border-gray-100 w-full pr-8"
+              [(ngModel)]="globalQuery"
               (keyup)="filter(table, $event)"
             />
+            <button
+              *ngIf="
+                globalQuery ||
+                currentCid ||
+                highlightedUnit ||
+                highlightedItem ||
+                (table && table.filteredValue) ||
+                selectedKVs['count'] > 0
+              "
+              type="button"
+              class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-700 bg-transparent border-0 cursor-pointer p-1"
+              (click)="clearQuickFilters(table)"
+              title="Clear search and filters"
+            >
+              <i class="pi pi-times text-xs"></i>
+            </button>
           </div>
 
           <div
@@ -66,12 +85,25 @@
           >
             <ng-container *ngIf="quickFiltersExpanded">
               <div class="w-full flex items-center gap-2">
-                <div class="text-gray-400 text-xs uppercase">Click to toggle</div>
+                <div class="text-gray-400 text-xs uppercase">
+                  Click to toggle
+                </div>
                 <span class="grow"></span>
                 <div class="min-w-fit">
                   <p-button
-                    *ngIf="table && table.filteredValue"
-                    [label]="table.filteredValue.length + ' Matched'"
+                    *ngIf="
+                      (table && table.filteredValue) ||
+                      currentCid ||
+                      globalQuery ||
+                      highlightedUnit ||
+                      highlightedItem ||
+                      selectedKVs['count'] > 0
+                    "
+                    [label]="
+                      (table && table.filteredValue
+                        ? table.filteredValue.length
+                        : courses.length) + ' Matched'
+                    "
                     icon="fa fa-times"
                     iconPos="right"
                     severity="danger"
@@ -86,16 +118,22 @@
               <div class="w-full flex flex-wrap gap-1 pl-2">
                 <div class="flex items-center gap-2 w-full -ml-2">
                   <span class="text-sm font-bold text-gray-600">Domains:</span>
-                  <hr class="grow border-0 border-t border-gray-50 opacity-30" />
+                  <hr
+                    class="grow border-0 border-t border-gray-50 opacity-30"
+                  />
                 </div>
                 <a
                   *ngFor="let facet of domainKVs"
                   class="text-xs cursor-pointer hover:underline uppercase"
-                  [class.font-bold]="isQuickFilterSelected('domain', facet.label)"
+                  [class.font-bold]="
+                    isQuickFilterSelected('domain', facet.label)
+                  "
                   [class.text-blue-700]="
                     isQuickFilterSelected('domain', facet.label)
                   "
-                  [class.underline]="isQuickFilterSelected('domain', facet.label)"
+                  [class.underline]="
+                    isQuickFilterSelected('domain', facet.label)
+                  "
                   [class.text-gray-400]="
                     !isQuickFilterSelected('domain', facet.label) &&
                     !isQuickFilterAvailable('domain', facet.label)
@@ -114,7 +152,9 @@
                   <span class="text-sm font-bold text-gray-600"
                     >Institutions:</span
                   >
-                  <hr class="grow border-0 border-t border-gray-50 opacity-30" />
+                  <hr
+                    class="grow border-0 border-t border-gray-50 opacity-30"
+                  />
                 </div>
                 <a
                   *ngFor="let facet of institutionKVs"
@@ -147,7 +187,9 @@
               <div class="w-full flex flex-wrap gap-1 pl-2">
                 <div class="flex items-center gap-2 w-full -ml-2">
                   <span class="text-sm font-bold text-gray-600">Authors:</span>
-                  <hr class="grow border-0 border-t border-gray-50 opacity-30" />
+                  <hr
+                    class="grow border-0 border-t border-gray-50 opacity-30"
+                  />
                 </div>
                 <a
                   *ngFor="let facet of authorKVs"
@@ -196,6 +238,7 @@
             [loading]="loading"
             [globalFilterFields]="[
               'id',
+              'cid',
               'user_email',
               'code',
               'name',
@@ -210,117 +253,218 @@
             ]"
             (onFilter)="onTableFilter(table.filteredValue || courses)"
           >
-          <ng-template pTemplate="body" let-course>
-            <tr>
-              <td class="relative">
-                <div class="flex flex-col gap-1">
-                  <div
-                    class="text-xs text-gray-400 uppercase flex flex-wrap gap-1"
-                  >
-                    <span>{{ course.institution }} |</span>
-                    <span>{{ course.author.fullname }} |</span>
-                    <span>{{ course.domain }} |</span>
-                    <span>{{ course.units_ct }} unit(s) |</span>
-                    <span>{{ course.created_at | date: "medium" }}</span>
-                  </div>
-                  <div class="flex items-start gap-4">
-                    <span
-                      class="text-blue-600 cursor-pointer"
-                      (click)="toggleLoad(course)"
+            <ng-template pTemplate="body" let-course>
+              <tr>
+                <td class="relative">
+                  <div class="flex flex-col gap-1">
+                    <div
+                      class="text-xs text-gray-400 uppercase flex flex-wrap items-center gap-1.5"
                     >
-                      <span class="capitalize font-bold">
-                        {{ course.name }}
-                      </span>
-                      <span class="uppercase">"{{ course.code }}"</span>
-                      <i
-                        class="pi pi-chevron-down text-gray-400"
-                        [ngClass]="{
-                          'pi-chevron-up': selected && selected.id == course.id,
-                        }"
-                      ></i>
-                    </span>
+                      <span>{{ course.institution }} |</span>
+                      <span>{{ course.author.fullname }} |</span>
+                      <span>{{ course.domain }} |</span>
+                      <span>{{ course.units_ct }} unit(s) |</span>
+                      <span>{{ course.created_at | date: "medium" }}</span>
 
-                    <span
-                      *ngIf="app.user"
-                      class="cursor-pointer"
-                      title="Clone Course"
-                      (click)="clone(course)"
-                    >
-                      <i
-                        class="pi pi-clone text-gray-400 hover:text-gray-900"
-                      ></i>
-                    </span>
-
-                    <span
-                      class="cursor-pointer"
-                      title="Download JSON"
-                      (click)="export(course)"
-                    >
-                      <i
-                        class="pi pi-download text-gray-400 hover:text-gray-900"
-                      ></i>
-                    </span>
-                  </div>
-                  <span
-                    *ngIf="course.description"
-                    class="text-xs text-gray-400"
-                  >
-                    {{ course.description }}
-                  </span>
-
-                  <ng-container *ngIf="selected && selected.id == course.id">
-                    <span class="pl-2 text-sm font-bold">Units:</span>
-                    <div class="pl-2">
-                      <div *ngFor="let unit of selected.units" class="pl-2">
-                        <span class="text-sm font-bold capitalize">{{
-                          unit.name
-                        }}</span>
-                        <div
-                          *ngFor="let r of keys(unit.activities)"
-                          class="flex flex-wrap items-center gap-1 pl-4 text-xs"
+                      <span
+                        class="inline-flex items-center gap-1.5 ml-1 normal-case"
+                      >
+                        <span
+                          *ngIf="app.user"
+                          class="cursor-pointer inline-flex items-center text-slate-400 hover:text-slate-700 transition-colors"
+                          title="Clone Course"
+                          (click)="clone(course)"
                         >
-                          <span class="capitalize">
-                            {{ selected.resources[r].name }}:
-                          </span>
-                          <a
-                            *ngFor="
-                              let a of unit.activities[r];
-                              let $index = index
+                          <i class="pi pi-clone text-xs"></i>
+                        </span>
+
+                        <span
+                          class="cursor-pointer inline-flex items-center text-slate-400 hover:text-slate-700 transition-colors"
+                          title="Download JSON"
+                          (click)="export(course)"
+                        >
+                          <i class="pi pi-download text-xs"></i>
+                        </span>
+                      </span>
+                    </div>
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <span
+                        class="text-blue-600 cursor-pointer flex items-center gap-1.5"
+                        (click)="toggleLoad(course)"
+                      >
+                        <span class="capitalize font-bold">
+                          {{ course.name }}
+                        </span>
+                        <span class="uppercase">"{{ course.code }}"</span>
+                        <i
+                          class="pi pi-chevron-down text-gray-400"
+                          [ngClass]="{
+                            'pi-chevron-up':
+                              selected && selected.id == course.id,
+                          }"
+                        ></i>
+                      </span>
+
+                      <a
+                        *ngIf="course.cid"
+                        [href]="
+                          'https://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=adl&sid=adl&cid=' +
+                          course.cid
+                        "
+                        target="_blank"
+                        rel="noopener"
+                        class="inline-flex items-center gap-1 bg-blue-50 hover:bg-blue-100/80 text-blue-700 hover:text-blue-900 border border-blue-200/80 font-mono font-bold px-1.5 py-0.5 rounded text-[10px] tracking-wide transition-colors no-underline cursor-pointer"
+                        title="Open legacy course in new tab"
+                        (click)="$event.stopPropagation()"
+                      >
+                        <span>CID: {{ course.cid }}</span>
+                        <i
+                          class="pi pi-external-link text-[8px] text-blue-500"
+                        ></i>
+                      </a>
+                    </div>
+                    <span
+                      *ngIf="course.description"
+                      class="text-xs text-gray-400"
+                    >
+                      {{ course.description }}
+                    </span>
+
+                    <ng-container *ngIf="selected && selected.id == course.id">
+                      <div
+                        class="pl-2 flex items-center justify-between mt-2 mb-1"
+                      >
+                        <span class="text-sm font-bold text-slate-800"
+                          >Units:</span
+                        >
+                        <button
+                          type="button"
+                          class="text-blue-600 hover:text-blue-800 hover:underline bg-transparent border-0 p-0 cursor-pointer text-xs font-semibold inline-flex items-center gap-1"
+                          (click)="toggleAllUnits()"
+                        >
+                          <i
+                            class="pi text-[9px]"
+                            [ngClass]="
+                              areAllUnitsExpanded
+                                ? 'pi-angle-double-up'
+                                : 'pi-angle-double-down'
                             "
-                            [href]="a.url"
-                            target="_blank"
-                            >{{
-                              $index < unit.activities[r].length - 1
-                                ? a.name + ", "
-                                : a.name
-                            }}</a
+                          ></i>
+                          <span>{{
+                            areAllUnitsExpanded ? "Collapse all" : "Expand all"
+                          }}</span>
+                        </button>
+                      </div>
+
+                      <div class="pl-2 flex flex-col gap-1 mt-1">
+                        <div
+                          *ngFor="let unit of selected.units"
+                          class="px-2 py-1 rounded-md transition-all"
+                          [ngClass]="{
+                            'hub-highlighted-unit bg-orange-50 border border-orange-500 shadow-2xs':
+                              isUnitHighlighted(unit),
+                            'bg-slate-50/70 hover:bg-slate-100/70 border border-slate-200/60':
+                              !isUnitHighlighted(unit),
+                          }"
+                        >
+                          <!-- Unit Header (Click to toggle) -->
+                          <div
+                            class="flex items-center justify-between cursor-pointer select-none"
+                            (click)="toggleUnit(unit)"
                           >
-                        </div>
-                        <div *ngIf="keys(unit.activities).length < 1">
-                          <span class="text-xs text-gray-400"
-                            >no activities!</span
+                            <div class="flex items-center gap-1.5">
+                              <i
+                                class="pi text-[9px] text-slate-400"
+                                [ngClass]="
+                                  isUnitExpanded(unit)
+                                    ? 'pi-chevron-down text-blue-600'
+                                    : 'pi-chevron-right'
+                                "
+                              ></i>
+                              <span
+                                class="text-xs font-bold capitalize leading-none"
+                                [ngClass]="{
+                                  'text-orange-950 font-black':
+                                    isUnitHighlighted(unit),
+                                  'text-slate-800': !isUnitHighlighted(unit),
+                                }"
+                                >{{ unit.name }}</span
+                              >
+                              <span
+                                *ngIf="isUnitHighlighted(unit)"
+                                class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-orange-500 text-white uppercase tracking-wider inline-flex items-center gap-0.5 ml-1"
+                              >
+                                <i class="pi pi-bookmark text-[8px]"></i>
+                                Target Unit
+                              </span>
+                            </div>
+
+                            <span
+                              class="text-[10px] text-slate-400 font-normal"
+                            >
+                              {{ countUnitActivities(unit) }} activities
+                            </span>
+                          </div>
+
+                          <!-- Unit Activities (Collapsible) -->
+                          <div
+                            *ngIf="isUnitExpanded(unit)"
+                            class="pt-1 pl-3.5 border-t border-slate-200/50 mt-1"
                           >
+                            <div
+                              *ngFor="let r of keys(unit.activities)"
+                              class="flex flex-wrap items-center gap-1 text-xs mb-0.5 last:mb-0"
+                            >
+                              <span
+                                class="capitalize font-medium text-slate-600"
+                              >
+                                {{ selected.resources[r].name }}:
+                              </span>
+                              <a
+                                *ngFor="
+                                  let a of unit.activities[r];
+                                  let $index = index
+                                "
+                                [href]="a.url"
+                                target="_blank"
+                                [ngClass]="{
+                                  'hub-highlighted-item font-bold text-amber-950 bg-amber-200/90 border border-amber-400 px-1.5 py-0.2 rounded shadow-2xs':
+                                    isActivityHighlighted(a),
+                                }"
+                                >{{
+                                  $index < unit.activities[r].length - 1
+                                    ? a.name + ", "
+                                    : a.name
+                                }}</a
+                              >
+                            </div>
+                            <div *ngIf="keys(unit.activities).length < 1">
+                              <span class="text-xs text-gray-400 italic"
+                                >no activities!</span
+                              >
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </ng-container>
-                </div>
-              </td>
-            </tr>
-          </ng-template>
-          <ng-template pTemplate="emptymessage">
-            <tr>
-              <td colspan="2">
-                <div class="text-xs text-center text-gray-400 w-full">
-                  no courses matched, revise your search keyword
-                </div>
-              </td>
-            </tr>
-          </ng-template>
-        </p-table>
+                    </ng-container>
+                  </div>
+                </td>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="emptymessage">
+              <tr>
+                <td colspan="2">
+                  <div class="text-xs text-center text-gray-400 w-full">
+                    no courses matched, revise your search keyword
+                  </div>
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<p-confirmDialog />
+  <p-confirmDialog />
+</div>

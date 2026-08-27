@@ -11,6 +11,7 @@ export class Course {
   @Prop() user_email: string;
 
   @Prop() published: boolean;
+  @Prop({ type: Number }) cid?: number;
   @Prop() code: string;
   @Prop() name: string;
   @Prop() description: string;

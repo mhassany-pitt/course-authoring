@@ -21,6 +21,9 @@ import { UserAuthCtrlModule } from '../user-auth-ctrl/user-auth-ctrl.module';
 import { CheckboxModule } from 'primeng/checkbox';
 import { DropdownModule } from 'primeng/dropdown';
 import { TabViewModule } from 'primeng/tabview';
+import { TagModule } from 'primeng/tag';
+import { TooltipModule } from 'primeng/tooltip';
+import { InputSwitchModule } from 'primeng/inputswitch';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import { TabViewModule } from 'primeng/tabview';
     SplitButtonModule, MultiSelectModule,
     ConfirmDialogModule, ChipsModule,
     DropdownModule, TabViewModule,
+    TagModule, TooltipModule, InputSwitchModule,
   ],
   providers: [AdminService, ConfirmationService]
 })

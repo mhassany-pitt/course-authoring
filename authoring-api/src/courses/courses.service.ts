@@ -65,6 +65,7 @@ export class CoursesService {
     delete course.linkings;
     delete course.collaborator_emails;
     delete course.groups;
+    delete course.cid;
 
     course.published = false;
     course.name = `${course.name} (clone)`;

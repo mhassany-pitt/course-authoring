@@ -16,7 +16,10 @@ export class AuthenticatedAuthorGuard {
       map((resp: any) => {
         if (!resp.user) {
           this.router.navigate(['/login']);
-        } else if (!resp.user.roles?.includes('author')) {
+        } else if (
+          !resp.user.roles?.includes('author') &&
+          !resp.user.roles?.includes('app-admin')
+        ) {
           this.router.navigate(['/unauthorized']);
         }
         return !!resp.user;
