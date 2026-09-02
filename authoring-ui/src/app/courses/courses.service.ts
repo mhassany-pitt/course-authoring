@@ -62,6 +62,9 @@ export class CoursesService {
     return this.http.get(`${environment.apiUrl}/aggregate/activities?domain_id=${domainId}&provider_id=${providerId}`, { withCredentials: true });
   }
 
+  // NOTE: Syncing to Mastery Grid requires restarting these two docker containers:
+  //   docker restart docker-output-aggregateumservices-1 docker-output-cbum-1
+  // It can no longer be done through /manager/html/...
   syncToMasteryGrid(id: string) {
     return this.http.put(`${environment.apiUrl}/mastery-grid/${id}/sync`, {}, { withCredentials: true });
   }

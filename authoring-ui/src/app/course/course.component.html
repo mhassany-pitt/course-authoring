@@ -69,9 +69,6 @@
             <p-button type="button" icon="fa fa-external-link" size="small" severity="success" class="ml-0.5"
               (click)="openInMasteryGrid()" [disabled]="!course.linkings?.course_id || _v['syncing-to-mastery-grid']"></p-button>
           </p-buttonGroup>
-          <div *ngIf="cbumStatus" class="absolute -bottom-4 -mb-0.5 text-xs text-gray-400 min-w-max">
-            INFO: {{ cbumStatus }}
-          </div>
         </div>
 
         <p-button type="button" title="Collaborators" icon="pi pi-users" severity="help" [outlined]="true" size="small"

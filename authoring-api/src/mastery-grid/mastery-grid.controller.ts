@@ -1,4 +1,4 @@
-import { Controller, Headers, HttpException, Param, Put, Request, UseGuards, Get } from '@nestjs/common';
+import { Controller, Headers, HttpException, Param, Put, Request, UseGuards } from '@nestjs/common';
 import { Aggregate, Group, Linkings, MasteryGridService } from './mastery-grid.service';
 import { DataSource } from 'typeorm';
 import { toObject, useId } from 'src/utils';
@@ -40,6 +40,9 @@ export class MasteryGridController {
         return this._sync(id);
     }
 
+    // NOTE: Syncing to Mastery Grid requires restarting these two docker containers:
+    //   docker restart docker-output-aggregateumservices-1 docker-output-cbum-1
+    // It can no longer be done through /manager/html/...
     private async _sync(id: string) {
         const course = useId(toObject(await this.courses.findById({ id })));
         const user = await this.users.findUser(course.user_email);
@@ -139,16 +142,10 @@ export class MasteryGridController {
 
             return { 
                 students: stringify(students, { header: true }), 
-                cbum: this.service.restartCBUM() 
             };
         } catch (error) {
             console.error('error syncing course', id, error);
             throw error;
         }
-    }
-
-    @Get('cbum-status')
-    getCbumStatus() {
-        return { status: this.service.getCbumStatus() };
     }
 }

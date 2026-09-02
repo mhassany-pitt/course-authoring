@@ -8,8 +8,6 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import { CatalogV2Service } from '../catalog_v2/catalog-v2.service';
 import { CatalogV2Item } from '../catalog_v2/catalog-v2.types';
 import { firstValueFrom, Subscription } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
 import { ContentRecommender } from './content-recommender';
 
 @Component({
@@ -92,8 +90,6 @@ export class CourseComponent implements OnInit {
   private readonly trackingMessageStorageKey = 'course-authoring.tracking-message.dismissed';
   private readonly trackingConsentStorageKey = 'course-authoring.tracking-message.dont-collect-data';
 
-  cbumStatus: string = '';
-
   constructor(
     public router: Router,
     public app: AppService,
@@ -102,7 +98,6 @@ export class CourseComponent implements OnInit {
     private catalogV2: CatalogV2Service,
     private messages: MessageService,
     private confirm: ConfirmationService,
-    private http: HttpClient,
   ) { }
 
   ngOnInit() {
@@ -117,17 +112,6 @@ export class CourseComponent implements OnInit {
       this.logLeavePage(event.url);
     });
     this.loadInitialData();
-    this.checkCbumStatus();
-  }
-
-  checkCbumStatus() {
-    this.http.get<{status: string}>(
-      `${environment.apiUrl}/mastery-grid/cbum-status`,
-      { withCredentials: true }
-    ).subscribe({
-      next: (resp) => this.cbumStatus = resp.status,
-      error: (error) => console.log(error),
-    });
   }
 
   ngOnDestroy() {
@@ -871,6 +855,9 @@ export class CourseComponent implements OnInit {
     });
   }
 
+  // NOTE: Syncing to Mastery Grid requires restarting these two docker containers:
+  //   docker restart docker-output-aggregateumservices-1 docker-output-cbum-1
+  // It can no longer be done through /manager/html/...
   syncToMasteryGrid() {
     this.confirm.confirm({
       header: 'Sync to Mastery Grid',
@@ -914,7 +901,6 @@ export class CourseComponent implements OnInit {
           },
           complete: () => {
             delete this._v['syncing-to-mastery-grid'];
-            this.checkCbumStatus();
           }
         });
       }
