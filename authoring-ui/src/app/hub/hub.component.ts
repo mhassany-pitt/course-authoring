@@ -10,7 +10,7 @@ import { environment } from '../../environments/environment';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AppService } from '../app.service';
 import { getNavLinks } from '../utils';
-import { getLegacyCid, getLegacyCourseByCid } from '../legacy-courses';
+
 import { ConfirmationService, FilterService } from 'primeng/api';
 import { firstValueFrom } from 'rxjs';
 import { Table } from 'primeng/table';
@@ -222,19 +222,7 @@ export class HubComponent implements OnInit, AfterViewInit {
     this.loading = true;
     this.http.get(`${environment.apiUrl}/hub`).subscribe({
       next: (resp: any) => {
-        this.courses = (resp || []).map((c: any) => {
-          let cid = c.cid != null ? Number(c.cid) : null;
-          if (cid == null && c.id && !isNaN(Number(c.id))) {
-            cid = Number(c.id);
-          }
-          if (cid == null) {
-            cid = getLegacyCid(c.code, c.name) ?? null;
-          }
-          return {
-            ...c,
-            cid,
-          };
-        });
+        this.courses = resp || [];
         this.selectedKVs = { count: 0 };
         this.reloadFilterKVs(this.courses);
         this.refreshAvailableFacetLabels();

@@ -18,13 +18,13 @@ export class HubService {
       await this.courses
         .find({ published: true })
         .select(
-          'id cid code name description domain institution units resources user_email created_at',
+          'id cid code name description domain institution units resources user_email created_at linkings',
         )
     ).map(toObject);
 
     return list.map((c) => ({
       ...c,
-      cid: c.cid || getLegacyCid(c.code, c.name),
+      cid: c.linkings?.aggregate?.mapped_course_id || c.cid || getLegacyCid(c.code, c.name),
     }));
   }
 
