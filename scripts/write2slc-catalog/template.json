@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Example SLC Activity Title",
+    "unique_id": "provider-slug/topic-exercise-01",
+    "activity_type": "FreeCodingProblems",
+    "demo_url": "https://example.edu/preview/item01",
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://example.edu/embed/item01"
+      }
+    ],
+    "provider": "ProviderName",
+    "authors": [
+      {
+        "name": "Author Full Name",
+        "affiliation": "Institution / University Name"
+      }
+    ],
+    "publisher": "University Name",
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ],
+    "license": "CC BY-NC-ND 4.0",
+    "prompt": "Description or instructions shown to learners.",
+    "source_code": "# Starter or solution code\n",
+    "topics": [
+      "Topic 1",
+      "Topic 2"
+    ],
+    "difficulty": "novice",
+    "status": "public"
+  }
+]

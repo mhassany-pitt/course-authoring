@@ -1,0 +1,1886 @@
+{
+  "institution": "PITT",
+  "name": "INTRODUCCION A LA PROGRAMACION",
+  "resources": [
+    {
+      "id": 1789087921744,
+      "name": "Ejemplos de codigo explicados",
+      "providers": [
+        {
+          "id": "pcex",
+          "name": "Program Construction Examples",
+          "domain": "py"
+        }
+      ]
+    },
+    {
+      "id": 1789087921745,
+      "name": "Completar el codigo",
+      "providers": [
+        {
+          "id": "pcex_ch",
+          "name": "Program Construction Challenges",
+          "domain": "py"
+        }
+      ]
+    },
+    {
+      "id": 1789087921746,
+      "name": "Ejecucion",
+      "providers": [
+        {
+          "id": "quizpet",
+          "name": "QuizPET",
+          "domain": "py"
+        }
+      ]
+    },
+    {
+      "id": 1789087921747,
+      "name": "Reordena el codigo",
+      "providers": [
+        {
+          "id": "parsons",
+          "name": "Parsons Problems",
+          "domain": "py"
+        }
+      ]
+    },
+    {
+      "id": 1789087921748,
+      "name": "Codificacion",
+      "providers": [
+        {
+          "id": "pcrs",
+          "name": "PCRS",
+          "domain": "py"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": 1789087921749,
+      "name": "Variables y Operaciones",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1789087921746": [
+          {
+            "id": 3806,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_arithmetic1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_arithmetic1_es&sub=q_py_arithmetic1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3816,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_output1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_output1_es&sub=q_py_output1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3818,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_output3_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_output3_es&sub=q_py_output3_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3833,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_exchange1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_exchange1_es&sub=q_py_exchange1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3808,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_swap1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_swap1_es&sub=q_py_swap1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3880,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_q_py_datatype1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_q_py_datatype1_es&sub=q_py_q_py_datatype1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921747": [
+          {
+            "id": 3899,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Imprimir hola mundo",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_hello_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3903,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar el orden de líneas para obtener el número correcto",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_addition_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3975,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar el uso de la biblioteca math y comprobar el tipo de una variable",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_math_library_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3976,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar la manipulación de variables y verificar sus tipos",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_data_type_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921748": [
+          {
+            "id": 3992,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Calcular su suma y producto",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/317/embed?act=PCRS&sub=py_sum_product_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4019,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Calcular los segundos en n dias (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/335/embed?act=PCRS&sub=py_second_in_days_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4020,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Calcular factura mensual (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/336/embed?act=PCRS&sub=py_month_bill_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4021,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Calcular promedio de dos numeros enteros (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/337/embed?act=PCRS&sub=py_avg_two_int_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4259,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Calculo: Cuociente y Resto (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/359/embed?act=PCRS&sub=py_quotient_remainder_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4249,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Calculo: costo alojamiento (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/349/embed?act=PCRS&sub=py_hostel_cost_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4250,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Calculo: containers y botellas en lecheria (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/350/embed?act=PCRS&sub=py_dairy_farm_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921744": [
+          {
+            "id": 4184,
+            "provider_id": "pcex",
+            "author_id": "i.alpizarchacon@uu.nl",
+            "name": "Maquina Expendedora Con Dolares y Monedas de Veinticinco",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_vending_machine_es__682dc89766a8e1b992c82aaf?index=0",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4203,
+            "provider_id": "pcex",
+            "author_id": "jab464@pitt.edu",
+            "name": "Calculo del Indice de Masa Corporal (IMC)",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_bmi_calculator_llm_es__684855dadf5ea13f28e43796?index=0",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921745": [
+          {
+            "id": 4204,
+            "provider_id": "pcex_ch",
+            "author_id": "jab464@pitt.edu",
+            "name": "Calculo y Redondeo del Indice de Masa Corporal (IMC) al Entero Mas Cercano.",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_bmi_calculator_llm_es__684855dadf5ea13f28e43796?index=1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4185,
+            "provider_id": "pcex_ch",
+            "author_id": "i.alpizarchacon@uu.nl",
+            "name": "Maquina Expendedora Con Monedas de 25, 10, y 5 centavos",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_vending_machine_es__682dc89766a8e1b992c82aaf?index=1",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1789087921750,
+      "name": "Funciones",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1789087921746": [
+          {
+            "id": 3820,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_fun_car1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_fun_car1_es&sub=q_py_fun_car1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3884,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_data_types_functions_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_data_types_functions_es&sub=q_py_data_types_functions_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3885,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_data_types_module_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_data_types_module_es&sub=q_py_data_types_module_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3840,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_int_ref1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_int_ref1_es&sub=q_py_int_ref1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921747": [
+          {
+            "id": 3900,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Crear una función que imprima hola mundo",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_simple_function_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3907,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Crear múltiples funciones y llamadas de función anidadas",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_calls_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3906,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Crear y llamar a una función",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_calculate_function_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3910,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Crear una función y usar el operador módulo",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_modulo_is_even_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921748": [
+          {
+            "id": 3999,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Programa usual primero (CC)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/286/embed?act=PCRS&sub=py_hello_world_name_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3993,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Calculo galletas necesarias (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/239/embed?act=PCRS&sub=py_return_cookies_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3997,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Calculo rebanadas de pizza (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/242/embed?act=PCRS&sub=py_total_number_of_pizza_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4108,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Funcion calculo impuesto (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/263/embed?act=PCRS&sub=py_caculate_tax_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4107,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Funcion maximo de los minimos valores (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/262/embed?act=PCRS&sub=py_max_of_min_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921744": [
+          {
+            "id": 4171,
+            "provider_id": "pcex",
+            "author_id": "jab464@pitt.edu",
+            "name": "Funcion con Multiples Parametros",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_functions_multiple_parameters_es__68419c3511cf4a11873bc7a3?index=0",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4186,
+            "provider_id": "pcex",
+            "author_id": "i.alpizarchacon@uu.nl",
+            "name": "Pasar Valores",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_references_passing_values_llm_es__682dca7366a8e1b992c82adf?index=0",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921745": [
+          {
+            "id": 4172,
+            "provider_id": "pcex_ch",
+            "author_id": "jab464@pitt.edu",
+            "name": "Funcion con Multiples Parametros Llamando Otra",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_functions_multiple_parameters_es__68419c3511cf4a11873bc7a3?index=1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4187,
+            "provider_id": "pcex_ch",
+            "author_id": "i.alpizarchacon@uu.nl",
+            "name": "Pasar Valores",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_references_passing_values_llm_es__682dca7366a8e1b992c82adf?index=1",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1789087921751,
+      "name": "Expresiones Booleanas",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1789087921746": [
+          {
+            "id": 3811,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_comparison_logic1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_comparison_logic1_es&sub=q_py_comparison_logic1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3812,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_account_logic1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_account_logic1_es&sub=q_py_account_logic1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921747": [
+          {
+            "id": 3918,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Usar expresiones booleanas como parámetros de una función",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_bigger_than_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3923,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar el uso de comparaciones",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_comparisons_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3926,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Crear una compuerta XOR usando sentencias if...elif",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_xor_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921748": [
+          {
+            "id": 4005,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Solo Uno Verdadero (p1-4-ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/323/embed?act=PCRS&sub=py_two_params_true_one_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4006,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Solo Dos Verdaderos (p2-4-ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/324/embed?act=PCRS&sub=py_two_params_true_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4018,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Condicion: es impar (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/216/embed?act=PCRS&sub=py_odd_condition_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4131,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Condicion: menor que 10 (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/290/embed?act=PCRS&sub=py_less_than_ten_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4132,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Condicion: positivo menor que 10 (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/291/embed?act=PCRS&sub=py_positive_less_than_ten_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4256,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Condicion: al menos un numero positivo (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/356/embed?act=PCRS&sub=py_exactly_one_positive_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4255,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Condicion: pares que sumen 20 (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/355/embed?act=PCRS&sub=py_sum_twenty_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4254,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Condicion: numero entre otros (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/354/embed?act=PCRS&sub=py_in_between_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4253,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Condicion: nota de aprobacion (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/353/embed?act=PCRS&sub=py_grade_sixty_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4252,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Condicion: es dia de fin de semana (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/352/embed?act=PCRS&sub=py_alert_weekend_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4251,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Condicion: es negativo (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/351/embed?act=PCRS&sub=py_negative_if_zero_es",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1789087921752,
+      "name": "Condicionales",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1789087921746": [
+          {
+            "id": 3809,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_if_elif1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_if_elif1_es&sub=q_py_if_elif1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3810,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_nested_if_elif1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_nested_if_elif1_es&sub=q_py_nested_if_elif1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3835,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_nested_if1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_nested_if1_es&sub=q_py_nested_if1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3836,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_interest_if_else1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_interest_if_else1_es&sub=q_py_interest_if_else1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3837,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_interest_if_elif1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_interest_if_elif1_es&sub=q_py_interest_if_elif1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3821,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_fun_car2_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_fun_car2_es&sub=q_py_fun_car2_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921747": [
+          {
+            "id": 3918,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Usar expresiones booleanas como parámetros de una función",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_bigger_than_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3923,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar el uso de comparaciones",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_comparisons_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3919,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar sentencias if...elif...else",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_conditionals_temperature_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3922,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar sentencias if anidadas",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_ifs_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3926,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Crear una compuerta XOR usando sentencias if...elif",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_xor_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3935,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Construir un programa con múltiples sentencias if-elif",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_divsible_by1_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3936,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Construir un programa con múltiples sentencias if-elif",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_divisible_by2_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3954,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Verificar si la suma de dos enteros es igual al tercer entero",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_sum_of_two1_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3902,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Crear una función que devuelva el mayor de dos números",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_return_bigger_or_none_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921748": [
+          {
+            "id": 3994,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Maximo de tres enteros (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/318/embed?act=PCRS&sub=py_max_three_nums_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3995,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Dia siguiente",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/320/embed?act=PCRS&sub=py_if_next_day_date_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3996,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Condicion: es adolescente (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/223/embed?act=PCRS&sub=py_value_between_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4018,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Condicion: es impar (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/216/embed?act=PCRS&sub=py_odd_condition_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4077,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Condicion: puede votar (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/222/embed?act=PCRS&sub=py_legal_age_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921744": [
+          {
+            "id": 4173,
+            "provider_id": "pcex",
+            "author_id": "jab464@pitt.edu",
+            "name": "Advertir al Usuario sobre los Cambios en la Temperatura",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_nested_if_temperature_es__6827373266a8e1b992c81241?index=0",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4197,
+            "provider_id": "pcex",
+            "author_id": "i.alpizarchacon@uu.nl",
+            "name": "Determinando Cuando Comprar un Nuevo Telefono (Caso 1)",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_phone_age_es__682dca1966a8e1b992c82ad0?index=0",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921745": [
+          {
+            "id": 4174,
+            "provider_id": "pcex_ch",
+            "author_id": "jab464@pitt.edu",
+            "name": "Advertir al Usuario sobre los Cambios en la Temperatura y Humedad.",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_nested_if_temperature_es__6827373266a8e1b992c81241?index=1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4198,
+            "provider_id": "pcex_ch",
+            "author_id": "i.alpizarchacon@uu.nl",
+            "name": "Determinando Cuando Comprar un Nuevo Telefono (Caso 2)",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_phone_age_es__682dca1966a8e1b992c82ad0?index=1",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1789087921753,
+      "name": "Ciclos While",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1789087921746": [
+          {
+            "id": 3814,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_while_loop1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_while_loop1_es&sub=q_py_while_loop1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3815,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_nested_while1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_nested_while1_es&sub=q_py_nested_while1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3839,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_while_loop2_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_while_loop2_es&sub=q_py_while_loop2_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921747": [
+          {
+            "id": 3904,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Crear un programa con un ciclo while",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_iteration_addition_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3905,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Crear un programa que compare un valor en un ciclo",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_iteration_multiplication_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3977,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar ciclos while anidados",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_whiles_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3964,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Calcular una potencia",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_fast_power1_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3965,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Calcular una potencia",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_fast_power2_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921748": [
+          {
+            "id": 4007,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Contar Pasos Collatz (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/325/embed?act=PCRS&sub=py_collatz_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4008,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Factor menor (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/326/embed?act=PCRS&sub=py_smallest_factor_while_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4010,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Contar Digitos (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/327/embed?act=PCRS&sub=py_contar_digitos_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3651,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Is Prime",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/123/embed?act=PCRS&sub=py_is_prime",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4245,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Cada enesimo caracter con while (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/345/embed?act=PCRS&sub=py_nth_character_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4246,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Encontrar letra n veces con while (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/346/embed?act=PCRS&sub=py_find_n_letters_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921744": [
+          {
+            "id": 4175,
+            "provider_id": "pcex",
+            "author_id": "jab464@pitt.edu",
+            "name": "Calculando el Porcentaje de Victorias de un Equipo (Caso 1)",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_win_percentage_es__6834728366a8e1b992c843d6?index=0",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4180,
+            "provider_id": "pcex",
+            "author_id": "i.alpizarchacon@uu.nl",
+            "name": "Encontrar el Divisor Mas Pequeno de un Numero Positivo",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_divisor_es__68273d7266a8e1b992c81271?index=0",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921745": [
+          {
+            "id": 4176,
+            "provider_id": "pcex_ch",
+            "author_id": "jab464@pitt.edu",
+            "name": "Calculando el Porcentaje de Victorias de un Equipo (Caso 2)",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_win_percentage_es__6834728366a8e1b992c843d6?index=1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4177,
+            "provider_id": "pcex_ch",
+            "author_id": "jab464@pitt.edu",
+            "name": "Calculando el Porcentaje de Victorias de un Equipo (Caso 3)",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_win_percentage_es__6834728366a8e1b992c843d6?index=2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4181,
+            "provider_id": "pcex_ch",
+            "author_id": "i.alpizarchacon@uu.nl",
+            "name": "Encontrar el Mayor Divisor de un Numero Positivo",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_divisor_es__68273d7266a8e1b992c81271?index=1",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1789087921754,
+      "name": "Ciclos For",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1789087921746": [
+          {
+            "id": 3813,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_for_loop1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_for_loop1_es&sub=q_py_for_loop1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3998,
+            "provider_id": "quizpet",
+            "author_id": "akhuseyinoglu",
+            "name": "Ciclo for anidado",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_nested_for_loop_es&sub=q_py_nested_for_loop_es&act=q_py_nested_for_loop_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921747": [
+          {
+            "id": 3927,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar iterar sobre una lista y usar módulo",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_for_odd_or_even_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3978,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar el uso de ciclos while y for anidados",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_loop_2_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3935,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Construir un programa con múltiples sentencias if-elif",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_divsible_by1_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3936,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Construir un programa con múltiples sentencias if-elif",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_divisible_by2_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3966,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Calcular una potencia",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_power_with_loops1_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3967,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Calcular una potencia",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_power_with_loops2_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921748": [
+          {
+            "id": 4011,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Triangulo Ascii (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/328/embed?act=PCRS&sub=py_ascii_isoceles_str_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4012,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Primer Par (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/329/embed?act=PCRS&sub=py_first_even_number_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4013,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Indice Menor (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/330/embed?act=PCRS&sub=py_first_integer_less_than_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4247,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Generar string de numeros repetidos con for (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/347/embed?act=PCRS&sub=py_string_repeated_nums_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921744": [
+          {
+            "id": 4205,
+            "provider_id": "pcex",
+            "author_id": "jab464@pitt.edu",
+            "name": "Contando las Ocurrencias de un String en Otro (Caso 1)",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_str_count_llm_es__6848670adf5ea13f28e43855?index=0",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921745": [
+          {
+            "id": 4183,
+            "provider_id": "pcex_ch",
+            "author_id": "i.alpizarchacon@uu.nl",
+            "name": "Imprimir un Patron de Estrellas en Forma de Triangulo Rectangulo Invertido",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_star_patterns_es__682dc48e66a8e1b992c82a8a?index=1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4206,
+            "provider_id": "pcex_ch",
+            "author_id": "jab464@pitt.edu",
+            "name": "Contando las Ocurrencias de un String en Otro (Caso 2).",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_str_count_llm_es__6848670adf5ea13f28e43855?index=1",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1789087921755,
+      "name": "Strings",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1789087921746": [
+          {
+            "id": 3827,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_concat_strings1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_concat_strings1_es&sub=q_py_concat_strings1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3828,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_substring1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_substring1_es&sub=q_py_substring1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3816,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_output1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_output1_es&sub=q_py_output1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3817,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_output2_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_output2_es&sub=q_py_output2_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3818,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_output3_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_output3_es&sub=q_py_output3_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3842,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_str_ref1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_str_ref1_es&sub=q_py_str_ref1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3895,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_aliasing3_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_aliasing3_es&sub=q_py_aliasing3_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921747": [
+          {
+            "id": 3913,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar el corte de cadenas (slicing)",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_string_indexing_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3940,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Crear una función que verifique si una cadena es un palíndromo o no",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_palindrome1_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3942,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Crear una función que verifique si una cadena es un palíndromo o no",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_palindrome3_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921748": [
+          {
+            "id": 4014,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Todo Esponjoso (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/331/embed?act=PCRS&sub=py_fluffy_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4015,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Contar no digitos (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/238/embed?act=PCRS&sub=py_count_non_digits_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4016,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Mayusculas o Minusculas (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/333/embed?act=PCRS&sub=py_upper_lower_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4017,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Contar Mayusculas (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/334/embed?act=PCRS&sub=py_upper_case_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4128,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Desplazar caracter en string (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/287/embed?act=PCRS&sub=py_shift_char_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4129,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Desplazar caracter hacia atras en string (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/288/embed?act=PCRS&sub=py_unshift_char_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4130,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "String A antes que String B (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/289/embed?act=PCRS&sub=py_a_before_b_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4246,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Encontrar letra n veces con while (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/346/embed?act=PCRS&sub=py_find_n_letters_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4245,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Cada enesimo caracter con while (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/345/embed?act=PCRS&sub=py_nth_character_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4244,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Solo caracteres de un cierto alfabeto (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/277/embed?act=PCRS&sub=py_valid_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921744": [
+          {
+            "id": 4215,
+            "provider_id": "pcex",
+            "author_id": "jab464@pitt.edu",
+            "name": "Concatenando Caracteres de Dos Strings (Caso 1)",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_concat_char_two_str_llm_es__684c61c3a0cac29134435e3c?index=0",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921745": [
+          {
+            "id": 4216,
+            "provider_id": "pcex_ch",
+            "author_id": "jab464@pitt.edu",
+            "name": "Concatenando Caracteres de Dos Strings (Caso 2).",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_concat_char_two_str_llm_es__684c61c3a0cac29134435e3c?index=1",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1789087921756,
+      "name": "Listas",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1789087921746": [
+          {
+            "id": 3888,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_reference_list1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_reference_list1_es&sub=q_py_reference_list1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3889,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_reference_reverse_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_reference_reverse_es&sub=q_py_reference_reverse_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3822,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_list_access1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_list_access1_es&sub=q_py_list_access1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3824,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_list_append1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_list_append1_es&sub=q_py_list_append1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3841,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_list_int_ref1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_list_int_ref1_es&sub=q_py_list_int_ref1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3843,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_list_str_ref1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_list_str_ref1_es&sub=q_py_list_str_ref1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3893,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_aliasing1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_aliasing1_es&sub=q_py_aliasing1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921747": [
+          {
+            "id": 3928,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar métodos de cadenas",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_string_join_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3982,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Valores y referencias en listas",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_add_to_list_2_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3912,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar indexación de listas",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_lists_indexing_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3968,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Eliminar duplicados de una lista",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_remove_dublicates_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3970,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Reorganizar la lista",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_even_first1_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3972,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Reorganizar la lista",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_even_first3_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3959,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Actualizar los elementos en una nueva lista",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_find_and_square4_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3960,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Actualizar elementos necesarios en una nueva lista",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_find_and_square5_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3956,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Actualizar elementos en una nueva lista",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_find_and_square1_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3957,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Actualizar elementos necesarios en una nueva lista",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_find_and_square2_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3946,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Invertir la lista",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_reverse1_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3948,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Invertir la lista",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_reverse3_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3950,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Invertir la lista",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_reverse5_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3952,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Invertir la lista",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_reverse7_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3927,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar iterar sobre una lista y usar módulo",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_for_odd_or_even_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921748": [
+          {
+            "id": 4000,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Suma digital (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/230/embed?act=PCRS&sub=py_check_if_list_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4001,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Contar el numero de valores que estan por encima del promedio (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/305/embed?act=PCRS&sub=py_num_above_average_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4003,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Encontrar el indice de el string mas largo (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/303/embed?act=PCRS&sub=py_longest_string_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4071,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Estirar String (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/217/embed?act=PCRS&sub=py_stretch_string_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4142,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Maximo en lista (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/301/embed?act=PCRS&sub=py_max_in_list_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4140,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Suma elementos lista (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/299/embed?act=PCRS&sub=py_sum_list_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4089,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Buscar armario (lista de strings) (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/237/embed?act=PCRS&sub=py_search_list2_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4074,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Escalar lista notas (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/219/embed?act=PCRS&sub=py_scale_midterm_grades_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4072,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Calculo diferencia absoluta mayor lista (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/213/embed?act=PCRS&sub=py_greatest_absolute_difference_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4084,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Primera no coincidencia en lista (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/231/embed?act=PCRS&sub=py_first_mismatch_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921744": [
+          {
+            "id": 4188,
+            "provider_id": "pcex",
+            "author_id": "i.alpizarchacon@uu.nl",
+            "name": "Desplazando los Valores de la Lista a la Izquierda Una Posicion",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_list_rotate_llm_es__682dcaab66a8e1b992c82af3?index=0",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4217,
+            "provider_id": "pcex",
+            "author_id": "jab464@pitt.edu",
+            "name": "Mostrando los Dias que Estan por Sobre el Promedio de Temperatura",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_temperature_es__684dd9f8a0cac2913443642b?index=0",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921745": [
+          {
+            "id": 4189,
+            "provider_id": "pcex_ch",
+            "author_id": "i.alpizarchacon@uu.nl",
+            "name": "Desplazando los Valores de la Lista a la Izquierda Dos Posiciones",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_list_rotate_llm_es__682dcaab66a8e1b992c82af3?index=1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4190,
+            "provider_id": "pcex_ch",
+            "author_id": "i.alpizarchacon@uu.nl",
+            "name": "Desplazando los Valores de la Lista a la Derecha una Posicion",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_list_rotate_llm_es__682dcaab66a8e1b992c82af3?index=2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4191,
+            "provider_id": "pcex_ch",
+            "author_id": "i.alpizarchacon@uu.nl",
+            "name": "Desplazando los Valores de la Lista a la Derecha Dos Posiciones",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_list_rotate_llm_es__682dcaab66a8e1b992c82af3?index=3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4218,
+            "provider_id": "pcex_ch",
+            "author_id": "jab464@pitt.edu",
+            "name": "Mostrando los Dias que Estan por Sobre 32 Grados Fahrenheit",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_temperature_es__684dd9f8a0cac2913443642b?index=1",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1789087921757,
+      "name": "Listas en 2D",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1789087921746": [
+          {
+            "id": 3873,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_2d_arrays1_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_2d_arrays1_es&sub=q_py_2d_arrays1_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3874,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_2d_arrays2_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_2d_arrays2_es&sub=q_py_2d_arrays2_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3875,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_2d_arrays3_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_2d_arrays3_es&sub=q_py_2d_arrays3_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3876,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_2d_arrays4_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_2d_arrays4_es&sub=q_py_2d_arrays4_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4231,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "q_py_nested_for_while_es",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_nested_for_while_es&sub=q_py_nested_for_while_es&act=q_py_spanish",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921747": [
+          {
+            "id": 3912,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practicar indexación de listas",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_lists_indexing_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921748": [
+          {
+            "id": 4004,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Listas de enteros pares (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/246/embed?act=PCRS&sub=py_return_list_of_list_even_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4166,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Es matriz diagonal (lista 2D) (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/343/embed?act=PCRS&sub=py_is_diagonal_matrix_es",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4167,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Encontrar palabra en sopa de letras simple (lista 2D) (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/344/embed?act=PCRS&sub=py_find_word_in_wordsearch",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 4263,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Es sopa de letras (ES)",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/363/embed?act=PCRS&sub=py_is_valid_2d_matrix_es",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921744": [
+          {
+            "id": 4213,
+            "provider_id": "pcex",
+            "author_id": "jab464@pitt.edu",
+            "name": "Imprimir Tabla de Conteo de Medallas con Totales por Fila",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_print_medals_es__684c3d3ca0cac29134435d81?index=0",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1789087921745": [
+          {
+            "id": 4214,
+            "provider_id": "pcex_ch",
+            "author_id": "jab464@pitt.edu",
+            "name": "Imprimir Tabla de Conteo de Medallas con Totales por Fila y por Columna",
+            "url": "https://acos.cs.vt.edu/html/acos-pcex/acos-pcex-examples/py_print_medals_es__684c3d3ca0cac29134435d81?index=1",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    }
+  ],
+  "cid": 461,
+  "code": "INFO063-25",
+  "user_email": "akhuseyinoglu@ca.paws.lab",
+  "created_at": "2025-05-25T23:03:06.000Z",
+  "updated_at": "2026-09-11T00:52:01.746Z",
+  "domain": "py",
+  "description": "",
+  "published": true,
+  "tags": []
+}

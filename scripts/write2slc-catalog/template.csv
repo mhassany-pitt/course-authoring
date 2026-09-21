@@ -1,0 +1,2 @@
+title,unique_id,activity_type,demo_url,delivery_protocol,delivery_url,provider,author_name,author_affiliation,content_language,programming_language,license,prompt,source_code,topics,difficulty
+"Example SLC Activity Title","provider-slug/topic-exercise-01","FreeCodingProblems","https://example.edu/preview/item01","HTML","https://example.edu/embed/item01","ProviderName","Author Full Name","Institution / University Name","en","Python","CC BY-NC-ND 4.0","Description or instructions shown to learners.","def solve(): pass","Topic 1; Topic 2","novice"
