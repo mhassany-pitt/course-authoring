@@ -63,8 +63,8 @@
             Last synchronized: {{ course.linkings?.last_synced | date:'short' }}
           </div>
           <p-buttonGroup>
-            <p-button type="button" label="Sync to Mastery Grid" icon="fa fa-refresh" size="small" severity="success"
-              (click)="syncToMasteryGrid()" [disabled]="form.invalid" [loading]="_v['syncing-to-mastery-grid']">
+            <p-button type="button" label="Save & Sync to Mastery Grid" icon="fa fa-refresh" size="small" severity="success"
+              (click)="saveAndSyncToMasteryGrid()" [disabled]="form.invalid || hasInvalidStudentEmails() || hasDuplicateActivitiesInUnits()" [loading]="_v['syncing-to-mastery-grid']">
             </p-button>
             <p-button type="button" icon="fa fa-external-link" size="small" severity="success" class="ml-0.5"
               (click)="openInMasteryGrid()" [disabled]="!course.linkings?.course_id || _v['syncing-to-mastery-grid']"></p-button>
@@ -84,12 +84,24 @@
         <p-button type="button" label="Cancel" icon="fa fa-chevron-left" size="small" severity="secondary"
           (click)="router.navigate(['/courses'])">
         </p-button>
-        <p-button type="submit" label="Save" icon="fa fa-save" size="small" [disabled]="form.invalid"></p-button>
+        <p-button type="submit" label="Save" icon="fa fa-save" size="small" [disabled]="form.invalid || hasInvalidStudentEmails() || hasDuplicateActivitiesInUnits()"></p-button>
       </div>
 
       <div class="flex items-center gap-1">
         <span class="text-red-600 align-super">*</span>
         <span class="text-sm text-gray-600">Required fields</span>
+      </div>
+
+      <div *ngIf="hasInvalidStudentEmails() || hasDuplicateActivitiesInUnits()"
+        class="flex flex-col gap-1 p-2.5 bg-red-50 border border-red-300 rounded-md text-red-800 text-xs mb-2">
+        <div *ngIf="hasDuplicateActivitiesInUnits()" class="flex items-center gap-1.5 font-semibold">
+          <i class="fa fa-exclamation-triangle text-red-600"></i>
+          <span>Units and Resources: duplicate activities detected within the same unit. Check the "Units and Resources" tab.</span>
+        </div>
+        <div *ngIf="hasInvalidStudentEmails()" class="flex items-center gap-1.5 font-semibold">
+          <i class="fa fa-exclamation-triangle text-red-600"></i>
+          <span>Groups: student emails exceed the 30-character limit for portal login. Check the "Groups" tab.</span>
+        </div>
       </div>
 
       <p-tabView [(activeIndex)]="activeTabIndex" (activeIndexChange)="onTabChange($event)">
@@ -152,6 +164,20 @@
           </div>
         </p-tabPanel>
         <p-tabPanel header="Units and Resources">
+          <div *ngIf="hasDuplicateActivitiesInUnits()" class="flex flex-col gap-1.5 p-3 bg-red-100 border border-red-300 rounded-md text-red-800 text-sm mb-3">
+            <div class="font-bold flex items-center gap-1.5">
+              <i class="fa fa-exclamation-triangle text-red-600"></i>
+              <span>Duplicate activities detected within the same unit:</span>
+            </div>
+            <div *ngFor="let item of getDuplicateActivitiesInUnits()" class="ml-4 text-xs">
+              Unit <strong>{{ item.unitName }}</strong>:
+              <span *ngFor="let dup of item.duplicates; let last = last" class="font-mono text-red-700 font-semibold">
+                "{{ dup.name }}" (ID: {{ dup.id }}, appears {{ dup.count }} times){{ last ? '' : '; ' }}
+              </span>
+            </div>
+            <span class="text-xs text-red-700 mt-0.5">Activities cannot be duplicated within the same unit as this causes primary key collisions in Mastery Grid. Please remove duplicate activities before saving or syncing.</span>
+          </div>
+
           <div class="overflow-x-auto" (scroll)="refreshCatalogBrowserPosition()">
             <p-table [value]="course.units" [columns]="course.resources" styleClass="p-datatable-sm units-table">
               <ng-template pTemplate="header" let-columns>
@@ -351,6 +377,20 @@
           </div>
         </p-tabPanel>
         <p-tabPanel *ngIf="!app.user?.roles?.includes('x-author')" header="Groups">
+          <div *ngIf="hasInvalidStudentEmails()" class="flex flex-col gap-1.5 p-3 bg-red-100 border border-red-300 rounded-md text-red-800 text-sm mb-3">
+            <div class="font-bold flex items-center gap-1.5">
+              <i class="fa fa-exclamation-triangle text-red-600"></i>
+              <span>Student email length limit exceeded (maximum 30 characters allowed for portal login):</span>
+            </div>
+            <div *ngFor="let item of getInvalidStudentEmails()" class="ml-4 text-xs">
+              Group <strong>{{ item.groupMnemonic }}</strong>:
+              <span *ngFor="let em of item.emails; let last = last" class="font-mono text-red-700 font-semibold">
+                {{ em }} ({{ em.length }} chars){{ last ? '' : ', ' }}
+              </span>
+            </div>
+            <span class="text-xs text-red-700 mt-0.5">Please shorten these email addresses in the CSV file. Saving and syncing are disabled until this is resolved.</span>
+          </div>
+
           <div class="flex flex-col p-2 bg-gray-100 rounded-md mb-2">
             <span>For each group, specify the list of students by uploading a CSV file with the following
               columns:</span>
@@ -366,11 +406,13 @@
             </span>
             <span class="text-sm text-red-600 mt-2">Note that groups can't be removed after you save the changes!</span>
           </div>
+
           <div class="flex flex-col gap-2">
             <span class="text-sm text-gray-400">Group mnemonics <span class="font-bold">MUST be globally
                 unique</span>.</span>
             <ng-container *ngFor="let group of course.groups; let i = index;">
-              <div class="flex flex-wrap lg:flex-nowrap items-end gap-2 p-2 bg-gray-100 rounded-md">
+              <div class="flex flex-wrap lg:flex-nowrap items-end gap-2 p-2 rounded-md"
+                [ngClass]="getInvalidStudentEmailsForGroup(group).length > 0 ? 'bg-red-50 border border-red-300' : 'bg-gray-100'">
                 <div class="flex flex-col">
                   <span class="text-xs text-gray-400 ml-1">Mnemonic:</span>
                   <input type="text" pInputText [name]="'group_mnemonic'+i" [(ngModel)]="group.mnemonic"
@@ -409,6 +451,11 @@
                 <p-button type="button" [icon]="'fa ' + (tt['group_students'+i] ? 'fa-chevron-up' : 'fa-chevron-down')"
                   severity="secondary" [text]="true" (click)="tt['group_students'+i] = !tt['group_students'+i]"
                   [disabled]="!group.students"></p-button>
+
+                <div *ngIf="getInvalidStudentEmailsForGroup(group).length > 0" class="w-full text-xs text-red-700 font-semibold ml-1">
+                  <i class="fa fa-exclamation-triangle"></i> Student emails exceeding 30 characters:
+                  <span class="font-mono">{{ getInvalidStudentEmailsForGroup(group).join(', ') }}</span>
+                </div>
               </div>
               <textarea *ngIf="tt['group_students'+i]" pInputTextarea [name]="'group_students'+i"
                 [(ngModel)]="group.students" [autoResize]="true" [readonly]="true"

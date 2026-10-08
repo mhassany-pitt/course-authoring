@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, Injectable } from '@nestjs/common';
 import { EntityManager } from 'typeorm';
 import { Course } from 'src/courses/course.schema';
 import { validate } from 'email-validator';
@@ -43,6 +43,25 @@ export class MasteryGridService {
             for (const activity_id of Object.values(unit.activity_ids))
                 await this._deleteUnitActivity(agg, { id: activity_id });
             await this._deleteUnit(agg, { id: unit.mapped_unit_id });
+        }
+
+        // Clean up any ghost/orphaned units for this course in the aggregate database
+        if (mapping_agg.mapped_course_id) {
+            const ghostTopics = await agg.query(
+                'SELECT topic_id FROM ent_topic WHERE course_id = ?',
+                [mapping_agg.mapped_course_id]
+            );
+            if (ghostTopics && ghostTopics.length > 0) {
+                const ghostTopicIds = ghostTopics.map((t: any) => t.topic_id);
+                await agg.query(
+                    'DELETE FROM rel_topic_content WHERE topic_id IN (?)',
+                    [ghostTopicIds]
+                );
+                await agg.query(
+                    'DELETE FROM ent_topic WHERE topic_id IN (?)',
+                    [ghostTopicIds]
+                );
+            }
         }
     }
 
@@ -233,6 +252,13 @@ export class MasteryGridService {
             if (!validate(student.email)) {
                 student.results = 'email address is invalid!';
                 continue;
+            }
+
+            if (student.email.length > 30) {
+                throw new HttpException(
+                    `Student email '${student.email}' exceeds the maximum allowed length of 30 characters for portal login.`,
+                    400
+                );
             }
 
             // insert or get user id for pt2

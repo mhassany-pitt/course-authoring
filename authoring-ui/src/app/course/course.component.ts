@@ -483,6 +483,24 @@ export class CourseComponent implements OnInit {
   }
 
   save() {
+    if (this.hasInvalidStudentEmails()) {
+      this.messages.add({
+        severity: 'error',
+        summary: 'Cannot Save Course',
+        detail: 'One or more student email addresses exceed the 30-character limit for portal accounts. Please fix them in the Groups tab before saving.',
+      });
+      return;
+    }
+
+    if (this.hasDuplicateActivitiesInUnits()) {
+      this.messages.add({
+        severity: 'error',
+        summary: 'Cannot Save Course',
+        detail: 'Duplicate activities detected within the same unit. Please remove duplicate activities before saving.',
+      });
+      return;
+    }
+
     // -->> remove non-existing unit resources and activities
     const resourceIds = this.course.resources.map((resource: any) => `${resource.id}`);
     this.course.units.forEach((unit: any) => Object.keys(unit.activities || {})
@@ -858,53 +876,101 @@ export class CourseComponent implements OnInit {
   // NOTE: Syncing to Mastery Grid requires restarting these two docker containers:
   //   docker restart docker-output-aggregateumservices-1 docker-output-cbum-1
   // It can no longer be done through /manager/html/...
-  syncToMasteryGrid() {
+  saveAndSyncToMasteryGrid() {
+    if (this.hasInvalidStudentEmails()) {
+      this.messages.add({
+        severity: 'error',
+        summary: 'Cannot Save & Sync Course',
+        detail: 'One or more student email addresses exceed the 30-character limit for portal accounts. Please fix them in the Groups tab before saving & syncing.',
+      });
+      return;
+    }
+
+    if (this.hasDuplicateActivitiesInUnits()) {
+      this.messages.add({
+        severity: 'error',
+        summary: 'Cannot Save & Sync Course',
+        detail: 'Duplicate activities detected within the same unit. Please remove duplicate activities before saving & syncing.',
+      });
+      return;
+    }
+
     this.confirm.confirm({
-      header: 'Sync to Mastery Grid',
-      message: 'Are you sure you want to sync this course to mastery grid?',
+      header: 'Save & Sync to Mastery Grid',
+      message: 'Are you sure you want to save changes and sync this course to Mastery Grid?',
       icon: 'pi pi-question-circle',
       acceptButtonStyleClass: 'p-button-danger',
       rejectButtonStyleClass: 'p-button-secondary',
       accept: () => {
         this._v['syncing-to-mastery-grid'] = true;
-        this.courses.syncToMasteryGrid(this.course.id).subscribe({
-          next: (response: any) => {
-            if (response.students) {
-              const a = document.createElement('a');
-              const blob = new Blob([response.students], { type: 'text/csv' });
-              a.href = window.URL.createObjectURL(blob);
-              a.download = `${this.course.code}_${this.course.name}_students.csv`;
-              a.click();
-            }
 
-            this.courses.read(
-              (this.route.snapshot.params as any).id
-            ).subscribe((course: any) => {
-              course.domain = this.domainLegacyToCatalog(course.domain);
-              this.course = course;
-            });
-            this.messages.add({
-              severity: 'success',
-              summary: 'Course Synchronized!',
-              detail: 'Course synchronized to mastery grid successfully.',
+        // -->> remove non-existing unit resources and activities
+        const resourceIds = this.course.resources.map((resource: any) => `${resource.id}`);
+        this.course.units.forEach((unit: any) => Object.keys(unit.activities || {})
+          .filter((resourceId: any) => !resourceIds.includes(resourceId))
+          .forEach((resourceId: any) => delete unit.activities[resourceId]));
+        // <<--
+
+        const course = JSON.parse(JSON.stringify(this.course));
+        course.domain = this.domainCatalogToLegacy(course.domain);
+
+        this.courses.update(course).subscribe({
+          next: () => {
+            this.logCourseChange('save', { field: 'course' }, course, null);
+
+            this.courses.syncToMasteryGrid(this.course.id).subscribe({
+              next: (response: any) => {
+                if (response.students) {
+                  const a = document.createElement('a');
+                  const blob = new Blob([response.students], { type: 'text/csv' });
+                  a.href = window.URL.createObjectURL(blob);
+                  a.download = `${this.course.code}_${this.course.name}_students.csv`;
+                  a.click();
+                }
+
+                this.courses.read(
+                  (this.route.snapshot.params as any).id
+                ).subscribe((updatedCourse: any) => {
+                  updatedCourse.domain = this.domainLegacyToCatalog(updatedCourse.domain);
+                  this.course = updatedCourse;
+                });
+                this.messages.add({
+                  severity: 'success',
+                  summary: 'Course Saved & Synchronized!',
+                  detail: 'Course changes were saved and synchronized to Mastery Grid successfully.',
+                });
+              },
+              error: (error: any) => {
+                this.messages.add({
+                  severity: 'error',
+                  summary: 'Error Synchronizing Course!',
+                  detail: 'The course changes were saved, but an error occurred while syncing to Mastery Grid. ' +
+                    'Please check course details and try again. If the problem persists, contact support (moh70@pitt.edu).',
+                  sticky: true,
+                });
+                console.error('error syncing course', this.course.id, error);
+              },
+              complete: () => {
+                delete this._v['syncing-to-mastery-grid'];
+              }
             });
           },
           error: (error: any) => {
+            delete this._v['syncing-to-mastery-grid'];
             this.messages.add({
               severity: 'error',
-              summary: 'Error Synchronizing Course!',
-              detail: 'An error occurred while syncing the course to mastery grid. ' +
-                'Please check course details and try again. If the problem persists, contact support (moh70@pitt.edu).',
-              sticky: true,
+              summary: 'Error Saving Course!',
+              detail: 'Could not save the course before synchronizing. Please try again.',
             });
-            console.error('error syncing course', this.course.id, error);
-          },
-          complete: () => {
-            delete this._v['syncing-to-mastery-grid'];
+            console.error('error saving course before sync', this.course.id, error);
           }
         });
       }
     });
+  }
+
+  syncToMasteryGrid() {
+    this.saveAndSyncToMasteryGrid();
   }
 
   useCourseStructure() {
@@ -927,10 +993,121 @@ export class CourseComponent implements OnInit {
     window.open(`http://adapt2.sis.pitt.edu/um-vis-dev2/index.html?usr=demo&grp=ADL&sid=TEST&cid=${this.course.linkings.course_id}`, '_blank');
   }
 
+  getDuplicateActivitiesInUnits(): {
+    unitId: string | number;
+    unitName: string;
+    duplicates: { id: string | number; name: string; count: number }[];
+  }[] {
+    const result: {
+      unitId: string | number;
+      unitName: string;
+      duplicates: { id: string | number; name: string; count: number }[];
+    }[] = [];
+
+    if (!this.course?.units) return result;
+
+    for (const unit of this.course.units) {
+      if (!unit.activities || typeof unit.activities !== 'object') continue;
+
+      const activityCounts = new Map<string, { id: string | number; name: string; count: number }>();
+
+      for (const resourceId of Object.keys(unit.activities)) {
+        const activities = unit.activities[resourceId];
+        if (!Array.isArray(activities)) continue;
+
+        for (const act of activities) {
+          if (!act || act.id === undefined || act.id === null) continue;
+          const key = `${act.id}`;
+          const existing = activityCounts.get(key);
+          if (existing) {
+            existing.count++;
+            if (!existing.name && act.name) existing.name = act.name;
+          } else {
+            activityCounts.set(key, {
+              id: act.id,
+              name: act.name || `Activity ${act.id}`,
+              count: 1
+            });
+          }
+        }
+      }
+
+      const duplicates = Array.from(activityCounts.values()).filter(a => a.count > 1);
+      if (duplicates.length > 0) {
+        result.push({
+          unitId: unit.id,
+          unitName: unit.name || 'Unnamed Unit',
+          duplicates
+        });
+      }
+    }
+
+    return result;
+  }
+
+  hasDuplicateActivitiesInUnits(): boolean {
+    return this.getDuplicateActivitiesInUnits().length > 0;
+  }
+
+  readonly MAX_STUDENT_EMAIL_LENGTH = 30;
+
+  getInvalidStudentEmailsForGroup(group: any): string[] {
+    if (!group?.students || typeof group.students !== 'string') return [];
+    const lines = group.students.split(/\r?\n/).map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+    if (lines.length <= 1) return [];
+
+    const headerCols = lines[0].split(',').map((h: string) => h.trim().toLowerCase());
+    const emailColIdx = headerCols.indexOf('email');
+    const targetIdx = emailColIdx !== -1 ? emailColIdx : 1;
+
+    const longEmails: string[] = [];
+    for (let i = 1; i < lines.length; i++) {
+      const cols = lines[i].split(',').map((c: string) => c.trim());
+      if (cols.length > targetIdx) {
+        const email = cols[targetIdx];
+        if (email && email.length > this.MAX_STUDENT_EMAIL_LENGTH) {
+          longEmails.push(email);
+        }
+      }
+    }
+    return longEmails;
+  }
+
+  getInvalidStudentEmails(): { groupMnemonic: string; emails: string[] }[] {
+    const invalidGroups: { groupMnemonic: string; emails: string[] }[] = [];
+    if (!this.course?.groups) return invalidGroups;
+
+    for (const group of this.course.groups) {
+      const longEmails = this.getInvalidStudentEmailsForGroup(group);
+      if (longEmails.length > 0) {
+        invalidGroups.push({
+          groupMnemonic: group.mnemonic || group.name || 'Unnamed group',
+          emails: longEmails
+        });
+      }
+    }
+    return invalidGroups;
+  }
+
+  hasInvalidStudentEmails(): boolean {
+    return this.getInvalidStudentEmails().length > 0;
+  }
+
   loadCSV($event: any, group: any) {
     const file = $event.target.files[0];
     const reader = new FileReader();
-    reader.onload = () => group.students = reader.result as string;
+    reader.onload = () => {
+      group.students = reader.result as string;
+      const invalid = this.getInvalidStudentEmails();
+      if (invalid.length > 0) {
+        this.messages.add({
+          severity: 'warn',
+          summary: 'Student Email Exceeds Limit',
+          detail: 'One or more student emails exceed the 30-character limit. Please shorten them before saving or syncing.',
+          sticky: true,
+        });
+      }
+    };
     reader.onerror = (error) => this.messages.add({
       severity: 'error', summary: 'Error Loading File!',
       detail: 'An error occurred while loading the file. Please try again.',
