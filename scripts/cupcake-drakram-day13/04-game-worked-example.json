@@ -1,0 +1,67 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/arrays-of-objects-activities/we_array_objects_game",
+    "title": "Game Tokens: Sharing an Object",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/04-game-worked-example.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "North Carolina State University",
+    "authors": [
+      {
+        "name": "Aum Pandya",
+        "affiliation": "North Carolina State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "A game uses tokens to keep score. At first, three players share the same token.\nAdd points to that token, then give the third player a separate token.\nFollow which scores change and which players still share a token.",
+    "source_code": "public class GameTokens {\n    static class Token {\n        int score;\n\n        Token(int score) {\n            this.score = score;\n        }\n    }\n\n    public static void main(String[] args) {\n        Token[] players = new Token[3];\n        Token shared = new Token(5);\n        for (int i = 0; i < players.length; i++) {\n            players[i] = shared;\n        }\n        players[0].score += 2;\n        System.out.println(\"Player 1: \" + players[1].score);\n        players[2] = new Token(20);\n        players[2].score++;\n        System.out.println(\"Shared: \" + shared.score);\n        System.out.println(\"Player 2: \" + players[2].score);\n        System.out.println(\"Players 0 and 1 share: \" + (players[0] == players[1]));\n        System.out.println(\"Players 0 and 2 share: \" + (players[0] == players[2]));\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "aliasing",
+      "object-references",
+      "object-state"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "loops",
+        "classes",
+        "constructors"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/04-game-worked-example.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/04-game-worked-example.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

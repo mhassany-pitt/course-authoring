@@ -1,0 +1,995 @@
+[
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/Q1/shift_all_points_free_coding",
+      "title": "Build and Shift an Array of Points",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q1/Q1.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "NC State University",
+      "authors": [
+        {
+          "name": "Bita Akram",
+          "affiliation": "NC State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "The `Point` class is provided. It has two fields, `x` and `y`, a constructor `Point(int x, int y)`, and a `toString` method that returns text like `(3, 4)`.\n\nWrite a method `public static void shiftAll(Point[] pts, int dx, int dy)` that moves every point in `pts` by `dx` horizontally and `dy` vertically. Elements that are `null` stay `null`.\n\nIn `main`, read a `Point` array from input, shift it with `shiftAll`, and print every element on its own line.\n\nThe input starts with the array length `n`. Then come `n` elements, each either the word `null` or two integers `x y`. The last two integers are `dx` and `dy`.\n\n**Example**\n\nInput:\n```\n3\n1 2\nnull\n3 4\n10 -1\n```\nOutput:\n```\n(11, 1)\nnull\n(13, 3)\n```",
+      "source_code": "import java.util.Scanner;\n\nclass Point {\n    int x;\n    int y;\n\n    Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n\n    public String toString() {\n        return \"(\" + x + \", \" + y + \")\";\n    }\n}\n\npublic class Main {\n    public static void shiftAll(Point[] pts, int dx, int dy) {\n        for (int i = 0; i < pts.length; i++) {\n            if (pts[i] != null) {\n                pts[i].x += dx;\n                pts[i].y += dy;\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        Point[] pts = new Point[n];\n        for (int i = 0; i < n; i++) {\n            String tok = in.next();\n            if (!tok.equals(\"null\")) {\n                pts[i] = new Point(Integer.parseInt(tok), in.nextInt());\n            }\n        }\n        int dx = in.nextInt();\n        int dy = in.nextInt();\n        shiftAll(pts, dx, dy);\n        for (Point p : pts) {\n            System.out.println(p);\n        }\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "two-phase-initialization",
+        "null",
+        "null-pointer-exception",
+        "static-methods"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "classes",
+          "for-loops",
+          "scanner-input"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q1/Q1.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q1/Q1.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/Q2/make_points_two_phase_free_coding",
+      "title": "Build an Array of Points",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q2/Q2.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "NC State University",
+      "authors": [
+        {
+          "name": "Bita Akram",
+          "affiliation": "NC State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "The `Point` class is provided. It has two fields, `x` and `y`, a constructor `Point(int x, int y)`, and a `toString` method that returns text like `(3, 4)`.\n\nWrite a method `public static Point[] makePoints(int n)` that returns an array of `n` points, where the point at index `i` is `(i, i)`.\n\nThen write `main`. It reads `n` from input, gets an array from `makePoints`, and prints every element on its own line.\n\n**Example**\n\nInput:\n```\n3\n```\nOutput:\n```\n(0, 0)\n(1, 1)\n(2, 2)\n```",
+      "source_code": "import java.util.Scanner;\n\nclass Point {\n    int x;\n    int y;\n\n    Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n\n    public String toString() {\n        return \"(\" + x + \", \" + y + \")\";\n    }\n}\n\npublic class Main {\n    public static Point[] makePoints(int n) {\n        Point[] pts = new Point[n];\n        for (int i = 0; i < n; i++) {\n            pts[i] = new Point(i, i);\n        }\n        return pts;\n    }\n\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        Point[] pts = makePoints(n);\n        for (Point p : pts) {\n            System.out.println(p);\n        }\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "two-phase-initialization",
+        "object-references"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "classes",
+          "for-loops"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q2/Q2.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q2/Q2.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/Q3/find_book_by_title_free_coding",
+      "title": "Find a Book by Title",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q3/Q3.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "NC State University",
+      "authors": [
+        {
+          "name": "Bita Akram",
+          "affiliation": "NC State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "The `Book` class is provided. It has two fields, `title` (a `String`) and `pages` (an `int`), and a constructor `Book(String title, int pages)`.\n\nWrite a method `public static Book findBook(Book[] shelf, String target)` that returns the first book whose `title` equals `target`. If no book matches, return `null`.\n\nThen write `main`. It reads `n`, then `n` books as `title pages` pairs, then `target`. Titles are single words. It calls `findBook` and prints `Pages: ` followed by the found book's `pages`, or `Not found` if there is no match.\n\n**Example 1**\n\nInput:\n```\n3\nDune 412\nEmma 474\nDune 896\nDune\n```\nOutput:\n```\nPages: 412\n```\n\n**Example 2**\n\nInput:\n```\n2\nDune 412\nEmma 474\nUlysses\n```\nOutput:\n```\nNot found\n```",
+      "source_code": "import java.util.Scanner;\n\nclass Book {\n    String title;\n    int pages;\n\n    Book(String title, int pages) {\n        this.title = title;\n        this.pages = pages;\n    }\n}\n\npublic class Main {\n    public static Book findBook(Book[] shelf, String target) {\n        for (int i = 0; i < shelf.length; i++) {\n            if (shelf[i].title.equals(target)) {\n                return shelf[i];\n            }\n        }\n        return null;\n    }\n\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        Book[] shelf = new Book[n];\n        for (int i = 0; i < n; i++) {\n            shelf[i] = new Book(in.next(), in.nextInt());\n        }\n        String target = in.next();\n        Book found = findBook(shelf, target);\n        if (found != null) {\n            System.out.println(\"Pages: \" + found.pages);\n        } else {\n            System.out.println(\"Not found\");\n        }\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "two-phase-initialization",
+        "returning-null",
+        "null-pointer-exception"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "classes",
+          "for-loops",
+          "string-equals"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q3/Q3.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q3/Q3.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/Q4/sale_price_copy_free_coding",
+      "title": "Make a Sale Price List",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q4/Q4.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "NC State University",
+      "authors": [
+        {
+          "name": "Bita Akram",
+          "affiliation": "NC State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "A store is running a sale: every product is $5 off. It needs a sale price list, but its regular prices must stay the same.\n\nWrite `public static Product[] copyProducts(Product[] products)`. It returns a copy of `products` that doesn't share any `Product` objects with the original.\n\nIn `main`, read the products, copy them, and take $5 off every price in the copy. Then print the regular prices and the sale prices as shown. The input starts with the number of products.\n\n**Example**\n\nInput:\n```\n2\npen 8\nmug 15\n```\nOutput:\n```\nRegular prices:\npen $8\nmug $15\nSale prices:\npen $3\nmug $10\n```",
+      "source_code": "import java.util.Scanner;\n\nclass Product {\n    String name;\n    int price;\n\n    Product(String name, int price) {\n        this.name = name;\n        this.price = price;\n    }\n\n    public String toString() {\n        return name + \" $\" + price;\n    }\n}\n\npublic class Main {\n    public static Product[] copyProducts(Product[] products) {\n        Product[] copy = new Product[products.length];\n        for (int i = 0; i < products.length; i++) {\n            copy[i] = new Product(products[i].name, products[i].price);\n        }\n        return copy;\n    }\n\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        Product[] products = new Product[n];\n        for (int i = 0; i < n; i++) {\n            products[i] = new Product(in.next(), in.nextInt());\n        }\n        Product[] sale = copyProducts(products);\n        for (int i = 0; i < sale.length; i++) {\n            sale[i].price -= 5;\n        }\n        System.out.println(\"Regular prices:\");\n        for (Product p : products) {\n            System.out.println(p);\n        }\n        System.out.println(\"Sale prices:\");\n        for (Product p : sale) {\n            System.out.println(p);\n        }\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "two-phase-initialization",
+        "object-references",
+        "copying-arrays"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "classes",
+          "for-loops"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q4/Q4.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q4/Q4.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/Q5/park_a_car_free_coding",
+      "title": "Park a Car",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q5/Q5.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "NC State University",
+      "authors": [
+        {
+          "name": "Bita Akram",
+          "affiliation": "NC State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "A parking lot is stored as a `Car[]` array. An empty spot is `null`.\n\nWrite `public static int park(Car[] lot, Car car)`. It puts `car` in the first empty spot and returns that spot's index. If the lot is full, it returns `-1`.\n\nIn `main`, read the lot and the new car's plate, then park the car. Print `Parked in spot` and the index, or `Lot is full`. Then print every spot, using `empty` for empty spots. The input starts with the number of spots.\n\n**Example**\n\nInput:\n```\n4\nABC123\nempty\nXYZ789\nempty\nJKL456\n```\nOutput:\n```\nParked in spot 1\nABC123\nJKL456\nXYZ789\nempty\n```",
+      "source_code": "import java.util.Scanner;\n\nclass Car {\n    String plate;\n\n    Car(String plate) {\n        this.plate = plate;\n    }\n}\n\npublic class Main {\n    public static int park(Car[] lot, Car car) {\n        for (int i = 0; i < lot.length; i++) {\n            if (lot[i] == null) {\n                lot[i] = car;\n                return i;\n            }\n        }\n        return -1;\n    }\n\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        Car[] lot = new Car[n];\n        for (int i = 0; i < n; i++) {\n            String plate = in.next();\n            if (!plate.equals(\"empty\")) {\n                lot[i] = new Car(plate);\n            }\n        }\n        Car newCar = new Car(in.next());\n        int spot = park(lot, newCar);\n        if (spot == -1) {\n            System.out.println(\"Lot is full\");\n        } else {\n            System.out.println(\"Parked in spot \" + spot);\n        }\n        for (int i = 0; i < lot.length; i++) {\n            if (lot[i] == null) {\n                System.out.println(\"empty\");\n            } else {\n                System.out.println(lot[i].plate);\n            }\n        }\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "null",
+        "null-pointer-exception",
+        "searching-arrays"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "classes",
+          "for-loops",
+          "string-equals"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q5/Q5.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q5/Q5.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/arrays-of-objects-activities/we_array_objects_playlist",
+      "title": "Music Playlist: Null Array Elements",
+      "type": "CodeConstruction"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/01-playlist-worked-example.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "North Carolina State University",
+      "authors": [
+        {
+          "name": "Aum Pandya",
+          "affiliation": "North Carolina State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "Create a playlist that can hold three songs, add a song, then remove it.\nSee which elements are null and when a Track object is created.",
+      "source_code": "public class PlaylistSetup {\n    static class Track {\n        String title;\n\n        Track(String title) {\n            this.title = title;\n        }\n    }\n\n    public static void main(String[] args) {\n        Track[] playlist = new Track[3];\n        System.out.println(\"Length: \" + playlist.length);\n        System.out.println(\"Element 0: \" + playlist[0]);\n        playlist[1] = new Track(\"Morning Song\");\n        System.out.println(\"Element 1: \" + playlist[1].title);\n        System.out.println(\"Element 2 is null: \" + (playlist[2] == null));\n        playlist[1] = null;\n        System.out.println(\"Element 1 is null: \" + (playlist[1] == null));\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "null",
+        "object-references"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "classes",
+          "constructors"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/01-playlist-worked-example.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/01-playlist-worked-example.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/arrays-of-objects-activities/we_array_objects_museum",
+      "title": "Museum Labels: Check for Null",
+      "type": "CodeConstruction"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/02-museum-worked-example.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "North Carolina State University",
+      "authors": [
+        {
+          "name": "Aum Pandya",
+          "affiliation": "North Carolina State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "A museum has four displays, but only two have labels.\nPrint each label in uppercase and count the letters in all the labels.\nFollow how the program checks for null so it can skip displays without labels.",
+      "source_code": "public class MuseumLabels {\n    public static void main(String[] args) {\n        String[] labels = new String[4];\n        labels[0] = \"Vase\";\n        labels[2] = \"Map\";\n        int totalLetters = 0;\n        for (int i = 0; i < labels.length; i++) {\n            if (labels[i] != null) {\n                totalLetters += labels[i].length();\n                System.out.println(i + \": \" + labels[i].toUpperCase());\n            } else {\n                System.out.println(i + \": no label\");\n            }\n        }\n        System.out.println(\"Letters: \" + totalLetters);\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "null",
+        "null-pointer-exception",
+        "null-guards"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "loops",
+          "conditional-logic",
+          "methods"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/02-museum-worked-example.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/02-museum-worked-example.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/arrays-of-objects-activities/we_array_objects_weather",
+      "title": "Weather Stations: Two-Phase Initialization",
+      "type": "CodeConstruction"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/03-weather-worked-example.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "North Carolina State University",
+      "authors": [
+        {
+          "name": "Aum Pandya",
+          "affiliation": "North Carolina State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "Set up three weather stations, each with its own temperature reading.\nCreate an array that can hold three stations, then create each Station object.\nChange the first station's temperature and see why the other two stay the same.",
+      "source_code": "public class WeatherStations {\n    static class Station {\n        int temperature;\n\n        Station(int temperature) {\n            this.temperature = temperature;\n        }\n    }\n\n    public static void main(String[] args) {\n        Station[] stations = new Station[3];\n        System.out.println(\"Before setup: \" + (stations[0] == null));\n        for (int i = 0; i < stations.length; i++) {\n            stations[i] = new Station(10 + i);\n        }\n        stations[0].temperature += 5;\n        for (int i = 0; i < stations.length; i++) {\n            System.out.println(\"Station \" + i + \": \" + stations[i].temperature);\n        }\n        System.out.println(\"Same station: \" + (stations[0] == stations[1]));\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "two-phase-initialization",
+        "object-state",
+        "object-references"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "loops",
+          "classes",
+          "constructors"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/03-weather-worked-example.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/03-weather-worked-example.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/arrays-of-objects-activities/we_array_objects_game",
+      "title": "Game Tokens: Sharing an Object",
+      "type": "CodeConstruction"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/04-game-worked-example.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "North Carolina State University",
+      "authors": [
+        {
+          "name": "Aum Pandya",
+          "affiliation": "North Carolina State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "A game uses tokens to keep score. At first, three players share the same token.\nAdd points to that token, then give the third player a separate token.\nFollow which scores change and which players still share a token.",
+      "source_code": "public class GameTokens {\n    static class Token {\n        int score;\n\n        Token(int score) {\n            this.score = score;\n        }\n    }\n\n    public static void main(String[] args) {\n        Token[] players = new Token[3];\n        Token shared = new Token(5);\n        for (int i = 0; i < players.length; i++) {\n            players[i] = shared;\n        }\n        players[0].score += 2;\n        System.out.println(\"Player 1: \" + players[1].score);\n        players[2] = new Token(20);\n        players[2].score++;\n        System.out.println(\"Shared: \" + shared.score);\n        System.out.println(\"Player 2: \" + players[2].score);\n        System.out.println(\"Players 0 and 1 share: \" + (players[0] == players[1]));\n        System.out.println(\"Players 0 and 2 share: \" + (players[0] == players[2]));\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "aliasing",
+        "object-references",
+        "object-state"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "loops",
+          "classes",
+          "constructors"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/04-game-worked-example.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/04-game-worked-example.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/arrays-of-objects-activities/cc_aoo_parking_lot_two_phase",
+      "title": "Complete the Two-Phase Initialization of a Parking Lot",
+      "type": "CodeCompletionProblem"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/05-parking-lot-code-completion.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "North Carolina State University",
+      "authors": [
+        {
+          "name": "Aum Pandya",
+          "affiliation": "North Carolina State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "Complete the program so that it creates **3 parking spots** and parks a different `Car` in each one.\nThe final loop dereferences every element (`c.plate`), so **no slot may be left `null`**.",
+      "source_code": "public class ParkingLot {\n    public static void main(String[] args) {\n        Car[] spots = new Car[3];\n\n        for (int i = 0; i < spots.length; i++) {\n            spots[i] = new Car(\"NC-\" + (100 + i));\n        }\n\n        for (Car c : spots) {\n            System.out.println(\"Parked: \" + c.plate);\n        }\n    }\n}\n\nclass Car {\n    String plate;\n\n    Car(String plate) {\n        this.plate = plate;\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "two-phase-initialization"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "classes",
+          "constructors"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/05-parking-lot-code-completion.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/05-parking-lot-code-completion.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/arrays-of-objects-activities/cc_aoo_cargo_hold_null_guard",
+      "title": "Build a Null-Safe Guard for a Cargo Hold",
+      "type": "CodeCompletionProblem"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/06-cargo-hold-code-completion.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "North Carolina State University",
+      "authors": [
+        {
+          "name": "Aum Pandya",
+          "affiliation": "North Carolina State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "The `hold` array has 5 slots, but only 3 contain a `Crate`.\nComplete the `if` condition so the loop reports every crate heavier than 20 **without ever throwing a `NullPointerException`**.",
+      "source_code": "public class CargoHold {\n    public static void main(String[] args) {\n        Crate[] hold = new Crate[5];\n        hold[0] = new Crate(\"rice\", 40);\n        hold[1] = new Crate(\"tea\", 12);\n        hold[3] = new Crate(\"salt\", 25);\n\n        int heavyCount = 0;\n        for (int i = 0; i < hold.length; i++) {\n            if (hold[i] != null && hold[i].weight > 20) {\n                heavyCount++;\n                System.out.println(\"Heavy: \" + hold[i].contents);\n            }\n        }\n        System.out.println(\"Heavy crates: \" + heavyCount);\n    }\n}\n\nclass Crate {\n    String contents;\n    int weight;\n\n    Crate(String contents, int weight) {\n        this.contents = contents;\n        this.weight = weight;\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "null-checks",
+        "null-pointer-exception",
+        "short-circuit-evaluation"
+      ],
+      "difficulty": "intermediate"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "classes",
+          "constructors"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/06-cargo-hold-code-completion.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/06-cargo-hold-code-completion.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/arrays-of-objects-activities/cc_aoo_top_scorer_null_start",
+      "title": "Find the Top Scorer, or Return null",
+      "type": "CodeCompletionProblem"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/07-top-scorer-code-completion.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "North Carolina State University",
+      "authors": [
+        {
+          "name": "Aum Pandya",
+          "affiliation": "North Carolina State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "`findTop` should return the `Player` with the most points, skipping empty slots.\nIf the team has **no players at all**, it should return `null`.\nComplete the three blanks.",
+      "source_code": "public class TopScorer {\n    public static Player findTop(Player[] team) {\n        Player best = null;\n        for (int i = 0; i < team.length; i++) {\n            if (team[i] == null) {\n                continue;\n            }\n            if (best == null || team[i].points > best.points) {\n                best = team[i];\n            }\n        }\n        return best;\n    }\n\n    public static void main(String[] args) {\n        Player[] team = new Player[4];\n        team[1] = new Player(\"Ava\", 18);\n        team[2] = new Player(\"Jordan\", 27);\n        Player top = findTop(team);\n        System.out.println(\"Top scorer: \" + top.name);\n\n        Player[] emptyTeam = new Player[3];\n        Player none = findTop(emptyTeam);\n        System.out.println(\"Empty team result: \" + none);\n    }\n}\n\nclass Player {\n    String name;\n    int points;\n\n    Player(String name, int points) {\n        this.name = name;\n        this.points = points;\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "null-references",
+        "null-checks",
+        "linear-search"
+      ],
+      "difficulty": "intermediate"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "classes",
+          "constructors"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/07-top-scorer-code-completion.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/07-top-scorer-code-completion.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/arrays-of-objects-activities/pct_aoo_seat_map_nulls",
+      "title": "Trace a Partly Booked Seat Map",
+      "type": "PredictingFinalResult"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/08-seat-map-code-tracing.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "North Carolina State University",
+      "authors": [
+        {
+          "name": "Aum Pandya",
+          "affiliation": "North Carolina State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "Trace the program and give its exact output.\nPay attention to:\n* Which slots get a `Guest` object and which stay `null`.\n* What gets printed when an element that is `null` is concatenated into a String.",
+      "source_code": "public class SeatMap {\n    public static void main(String[] args) {\n        Guest[] seats = new Guest[5];\n        int booked = 3;\n        for (int i = 0; i < booked; i++) {\n            seats[i] = new Guest(\"G\" + i);\n        }\n\n        int empty = 0;\n        for (int i = 0; i < seats.length; i++) {\n            if (seats[i] == null) {\n                empty++;\n            }\n        }\n\n        System.out.println(\"First seat: \" + seats[0].name);\n        System.out.println(\"Last seat: \" + seats[seats.length - 1]);\n        System.out.println(\"Empty seats: \" + empty);\n    }\n}\n\nclass Guest {\n    String name;\n\n    Guest(String name) {\n        this.name = name;\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "null-references",
+        "default-values",
+        "state-tracing"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "classes",
+          "constructors"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/08-seat-map-code-tracing.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/08-seat-map-code-tracing.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/arrays-of-objects-activities/pct_aoo_initials_null_slots",
+      "title": "Trace Initials Built from a Sparse String Array",
+      "type": "PredictingFinalResult"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/09-initials-code-tracing.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "North Carolina State University",
+      "authors": [
+        {
+          "name": "Aum Pandya",
+          "affiliation": "North Carolina State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "Trace the program and give its exact output.\nEach non-null slot adds its uppercase first letter; each `null` slot adds `_`.",
+      "source_code": "public class Initials {\n    public static void main(String[] args) {\n        String[] bank = new String[4];\n        bank[0] = \"apple\";\n        int slot = 2;\n        bank[slot] = \"kiwi\";\n\n        String initials = \"\";\n        int stored = 0;\n        for (int i = 0; i < bank.length; i++) {\n            if (bank[i] != null) {\n                initials += bank[i].toUpperCase().charAt(0);\n                stored++;\n            } else {\n                initials += \"_\";\n            }\n        }\n\n        System.out.println(initials);\n        System.out.println(\"Words stored: \" + stored);\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "null-references",
+        "null-checks",
+        "state-tracing"
+      ],
+      "difficulty": "intermediate"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "classes",
+          "constructors"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/09-initials-code-tracing.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/09-initials-code-tracing.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/arrays-of-objects-activities/pct_aoo_click_counters_alias",
+      "title": "Trace Shared vs. Separate Counter Objects",
+      "type": "PredictingFinalResult"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/10-click-counters-code-tracing.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "North Carolina State University",
+      "authors": [
+        {
+          "name": "Aum Pandya",
+          "affiliation": "North Carolina State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "Trace the program and give its exact output.\nNote that `counters[0]` and `counters[2]` are assigned the **same** reference, while `counters[1]` gets its **own** object.",
+      "source_code": "public class ClickCounters {\n    public static void main(String[] args) {\n        Counter[] counters = new Counter[3];\n        Counter shared = new Counter(10);\n        counters[0] = shared;\n        counters[1] = new Counter(4);\n        counters[2] = shared;\n\n        for (int i = 0; i < 2; i++) {\n            counters[0].click();\n        }\n        counters[1].click();\n\n        System.out.println(\"counters[0]: \" + counters[0].count);\n        System.out.println(\"counters[1]: \" + counters[1].count);\n        System.out.println(\"counters[2]: \" + counters[2].count);\n    }\n}\n\nclass Counter {\n    int count;\n\n    Counter(int start) {\n        this.count = start;\n    }\n\n    void click() {\n        this.count++;\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "arrays-of-objects",
+        "references",
+        "aliasing",
+        "state-tracing"
+      ],
+      "difficulty": "intermediate"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "arrays",
+          "classes",
+          "constructors"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/10-click-counters-code-tracing.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/10-click-counters-code-tracing.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  }
+]

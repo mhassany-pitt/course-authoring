@@ -19,6 +19,9 @@ export class CourseComponent implements OnInit {
   private catalogBrowserRowObserver?: ResizeObserver;
   private catalogBrowserAnchorObserver?: ResizeObserver;
   private catalogBrowserPositionRafId: number | null = null;
+  private readonly onCatalogBrowserViewportChange = () => {
+    this.scheduleCatalogBrowserPositionRefresh();
+  };
 
   getPreviewLink = getPreviewLink;
   navLinks = getNavLinks(this.app);
@@ -183,6 +186,8 @@ export class CourseComponent implements OnInit {
       setTimeout(() => {
         this.attachCatalogBrowserObservers();
         this.refreshCatalogBrowserPosition();
+        const rowEl = document.getElementById('catalog-browser-row');
+        rowEl?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
     } else {
       this.disconnectCatalogBrowserObservers();
@@ -275,7 +280,13 @@ export class CourseComponent implements OnInit {
   attachCatalogBrowserObservers() {
     this.disconnectCatalogBrowserObservers();
 
-    if (typeof ResizeObserver === 'undefined' || !this.activeCatalogBrowser)
+    if (!this.activeCatalogBrowser)
+      return;
+
+    window.addEventListener('scroll', this.onCatalogBrowserViewportChange, { passive: true, capture: true });
+    window.addEventListener('resize', this.onCatalogBrowserViewportChange, { passive: true });
+
+    if (typeof ResizeObserver === 'undefined')
       return;
 
     const anchorEl = document.getElementById(this.activeCatalogBrowserAnchorId);
@@ -295,6 +306,8 @@ export class CourseComponent implements OnInit {
   }
 
   disconnectCatalogBrowserObservers() {
+    window.removeEventListener('scroll', this.onCatalogBrowserViewportChange, { capture: true } as any);
+    window.removeEventListener('resize', this.onCatalogBrowserViewportChange);
     this.catalogBrowserRowObserver?.disconnect();
     this.catalogBrowserAnchorObserver?.disconnect();
     this.catalogBrowserRowObserver = undefined;

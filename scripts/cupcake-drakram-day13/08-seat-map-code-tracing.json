@@ -1,0 +1,66 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/arrays-of-objects-activities/pct_aoo_seat_map_nulls",
+    "title": "Trace a Partly Booked Seat Map",
+    "type": "PredictingFinalResult"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/08-seat-map-code-tracing.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "North Carolina State University",
+    "authors": [
+      {
+        "name": "Aum Pandya",
+        "affiliation": "North Carolina State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Trace the program and give its exact output.\nPay attention to:\n* Which slots get a `Guest` object and which stay `null`.\n* What gets printed when an element that is `null` is concatenated into a String.",
+    "source_code": "public class SeatMap {\n    public static void main(String[] args) {\n        Guest[] seats = new Guest[5];\n        int booked = 3;\n        for (int i = 0; i < booked; i++) {\n            seats[i] = new Guest(\"G\" + i);\n        }\n\n        int empty = 0;\n        for (int i = 0; i < seats.length; i++) {\n            if (seats[i] == null) {\n                empty++;\n            }\n        }\n\n        System.out.println(\"First seat: \" + seats[0].name);\n        System.out.println(\"Last seat: \" + seats[seats.length - 1]);\n        System.out.println(\"Empty seats: \" + empty);\n    }\n}\n\nclass Guest {\n    String name;\n\n    Guest(String name) {\n        this.name = name;\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "null-references",
+      "default-values",
+      "state-tracing"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "classes",
+        "constructors"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/08-seat-map-code-tracing.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/08-seat-map-code-tracing.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

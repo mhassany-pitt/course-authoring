@@ -1,0 +1,64 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/arrays-of-objects-activities/cc_aoo_parking_lot_two_phase",
+    "title": "Complete the Two-Phase Initialization of a Parking Lot",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/05-parking-lot-code-completion.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "North Carolina State University",
+    "authors": [
+      {
+        "name": "Aum Pandya",
+        "affiliation": "North Carolina State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Complete the program so that it creates **3 parking spots** and parks a different `Car` in each one.\nThe final loop dereferences every element (`c.plate`), so **no slot may be left `null`**.",
+    "source_code": "public class ParkingLot {\n    public static void main(String[] args) {\n        Car[] spots = new Car[3];\n\n        for (int i = 0; i < spots.length; i++) {\n            spots[i] = new Car(\"NC-\" + (100 + i));\n        }\n\n        for (Car c : spots) {\n            System.out.println(\"Parked: \" + c.plate);\n        }\n    }\n}\n\nclass Car {\n    String plate;\n\n    Car(String plate) {\n        this.plate = plate;\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "two-phase-initialization"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "classes",
+        "constructors"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/05-parking-lot-code-completion.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/05-parking-lot-code-completion.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/arrays-of-objects-activities/cc_aoo_cargo_hold_null_guard",
+    "title": "Build a Null-Safe Guard for a Cargo Hold",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/06-cargo-hold-code-completion.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "North Carolina State University",
+    "authors": [
+      {
+        "name": "Aum Pandya",
+        "affiliation": "North Carolina State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The `hold` array has 5 slots, but only 3 contain a `Crate`.\nComplete the `if` condition so the loop reports every crate heavier than 20 **without ever throwing a `NullPointerException`**.",
+    "source_code": "public class CargoHold {\n    public static void main(String[] args) {\n        Crate[] hold = new Crate[5];\n        hold[0] = new Crate(\"rice\", 40);\n        hold[1] = new Crate(\"tea\", 12);\n        hold[3] = new Crate(\"salt\", 25);\n\n        int heavyCount = 0;\n        for (int i = 0; i < hold.length; i++) {\n            if (hold[i] != null && hold[i].weight > 20) {\n                heavyCount++;\n                System.out.println(\"Heavy: \" + hold[i].contents);\n            }\n        }\n        System.out.println(\"Heavy crates: \" + heavyCount);\n    }\n}\n\nclass Crate {\n    String contents;\n    int weight;\n\n    Crate(String contents, int weight) {\n        this.contents = contents;\n        this.weight = weight;\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "null-checks",
+      "null-pointer-exception",
+      "short-circuit-evaluation"
+    ],
+    "difficulty": "intermediate"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "classes",
+        "constructors"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/06-cargo-hold-code-completion.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/06-cargo-hold-code-completion.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

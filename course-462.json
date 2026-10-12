@@ -1,0 +1,3966 @@
+{
+  "institution": "PITT",
+  "name": "Sandbox Python Course",
+  "resources": [
+    {
+      "id": 1790778781192,
+      "name": "Animated Examples",
+      "providers": [
+        {
+          "id": "animatedexamples",
+          "name": "AnimatedExamples",
+          "domain": "sql"
+        }
+      ]
+    },
+    {
+      "id": 1790778781193,
+      "name": "PCEX Examples",
+      "providers": [
+        {
+          "id": "pcex",
+          "name": "Program Construction Examples",
+          "domain": "py"
+        }
+      ]
+    },
+    {
+      "id": 1790778781194,
+      "name": "Questions",
+      "providers": [
+        {
+          "id": "quizpet",
+          "name": "QuizPET",
+          "domain": "py"
+        }
+      ]
+    },
+    {
+      "id": 1790778781195,
+      "name": "PCEX Challenges",
+      "providers": [
+        {
+          "id": "pcex_ch",
+          "name": "Program Construction Challenges",
+          "domain": "py"
+        }
+      ]
+    },
+    {
+      "id": 1790778781196,
+      "name": "Parsons Problems",
+      "providers": [
+        {
+          "id": "parsons",
+          "name": "Parsons Problems",
+          "domain": "py"
+        }
+      ]
+    },
+    {
+      "id": 1790778781197,
+      "name": "Coding Problems",
+      "providers": [
+        {
+          "id": "pcrs",
+          "name": "PCRS",
+          "domain": "py"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": 1790778781198,
+      "name": "Variables and Operations",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 903,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Hello",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_hello",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 907,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Addition",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_addition",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1049,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Swap",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_swap",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 1968,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Unit Converter",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_f_to_c_conversion",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1976,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Time Converter",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_time_conversion",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1977,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Vending Machine",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_vending_machine",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1967,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "BMI Calculator",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_bmi_calculator",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1974,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Pythagorean Theorem",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pythagorean_theorem",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 925,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Hello",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_hello",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 926,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Variables",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_variables",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 927,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Simpel Arithmetics",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_simple_arithmetics",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 927,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Simpel Arithmetics",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_simple_arithmetics",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 929,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Swap",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_swap",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 1022,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "simple arithmetic",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_arithmetic1&act=q_py_topic_variables&sub=q_py_arithmetic1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1023,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "arithmetic",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_arithmetic2&act=q_py_topic_variables&sub=q_py_arithmetic2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1024,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "swap",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_swap1&act=q_py_topic_variables&sub=q_py_swap1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1274,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "exchange variables",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_exchange1&act=q_py_topic_variables&sub=q_py_exchange1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1277,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "exchange variables 2",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_exchange2&act=q_py_topic_variables&sub=q_py_exchange2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2418,
+            "provider_id": "quizpet",
+            "author_id": "michellewang",
+            "name": "Data Type 1",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_q_py_datatype1&sub=q_py_q_py_datatype1&act=q_py__type_data_types",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2420,
+            "provider_id": "quizpet",
+            "author_id": "michellewang",
+            "name": "Data Types 2",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_data_types2&sub=q_py_data_types2&act=q_py__type_data_types",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 2452,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Calculating the Seconds in n Days",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/181/embed?act=PCRS&sub=py_second_in_days",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2453,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Calculate sum and product",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/179/embed?act=PCRS&sub=py_sum_product",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2454,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Calculate monthly bill",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/183/embed?act=PCRS&sub=py_monthly_bill",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2455,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Calculate average of two integer numbers",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/184/embed?act=PCRS&sub=py_avg_two_int",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2456,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Calculate quotient and remainder",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/185/embed?act=PCRS&sub=py_quotient_remainder",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2457,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Sum digits of a number",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/186/embed?act=PCRS&sub=py_sum_digits_pcrs",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2458,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Find ASCII/Unicode value",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/187/embed?act=PCRS&sub=py_unicode_value",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2459,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Calculate accommodation cost",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/188/embed?act=PCRS&sub=py_accommodation_cost",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2460,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Diary Farm",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/189/embed?act=PCRS&sub=py_diary_farm",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3572,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Return Cookies",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/49/embed?act=PCRS&sub=py_return_cookies",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2527,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "BMI Calculator",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_bmi_calculator&ch=py_bmi_calculator2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2528,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Unit Converter",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_f_to_c_conversion&ch=py_fahrenheit_to_celsius",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2538,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Time Converter",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_time_conversion&ch=py_display_time2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2535,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Pythagorean Theorem",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pythagorean_theorem&ch=py_pythagorean_theorem2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2539,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Vending Machine",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_vending_machine&ch=py_vending_machine2",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781199,
+      "name": "Functions",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 904,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Simple Function",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_simple_function",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 905,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Simple Params",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_simple_params",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 906,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Return Bigger or None",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_return_bigger_or_none",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 910,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Calculate Function",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_calculate_function",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 911,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Nested Calls",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_calls",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 914,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Modulo is Even",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_modulo_is_even",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 2028,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Counting the Occurrences of One String in Another",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_str_count",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2029,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Repeating Characters of a String",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_str_repeat_chars",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 944,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Functions 1",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_functions1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 945,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Functions 2",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_functions2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 946,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Functions 3",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_functions3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1060,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Return value",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_returnvalue",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 1036,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "one simple function",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_fun_car1&act=q_py_topic_functions&sub=q_py_fun_car1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1037,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "two simple functions",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_fun_car2&act=q_py_topic_functions&sub=q_py_fun_car2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2421,
+            "provider_id": "quizpet",
+            "author_id": "michellewang",
+            "name": "Data Types Functions",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_data_types_functions&sub=q_py_data_types_functions&act=q_py__type_data_types",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2422,
+            "provider_id": "quizpet",
+            "author_id": "michellewang",
+            "name": "Data Types Module",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_data_types_module&sub=q_py_data_types_module&act=q_py__type_data_types",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 2465,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Perishable Food",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/194/embed?act=PCRS&sub=py_perishable_food",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2466,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Next Day",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/195/embed?act=PCRS&sub=py_next_day",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2582,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Repeating Characters of a String",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_str_repeat_chars&ch=py_str_repeat2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2581,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Counting the Occurrences of One String in Another",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_str_count&ch=py_str_count2",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781200,
+      "name": "Boolean Expressions",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 923,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Bigger Than",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_bigger_than",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1051,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Comparisons",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_comparisons",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1100,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "XOR",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_xor",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 1998,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Three Booleans",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_three_booleans",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 930,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Comparison",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_comparison",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 931,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Logic",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_logic",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 1028,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "account management",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_account_logic1&act=q_py_topic_logical_operators&sub=q_py_account_logic1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1027,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "comparison",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_comparison_logic1&act=q_py_topic_logical_operators&sub=q_py_comparison_logic1",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 3541,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Check Odd Condition",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/3/embed?act=PCRS&sub=py_odd_condition",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3651,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Is Prime",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/123/embed?act=PCRS&sub=py_is_prime",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3691,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL Simple int comparison",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/171/embed?act=PCRS&sub=py_simple_int_comparison",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3692,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL Is char half alphabet",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/172/embed?act=PCRS&sub=py_is_char_half_alphabet",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3686,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Two Params True One",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/166/embed?act=PCRS&sub=py_two_params_true_one",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3690,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Two Params True",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/170/embed?act=PCRS&sub=py_two_params_true",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3684,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Alert Weekend",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/164/embed?act=PCRS&sub=py_alert_weekend",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3687,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Negative If Zero",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/167/embed?act=PCRS&sub=py_negative_if_zero",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3648,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Sum Twenty",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/120/embed?act=PCRS&sub=py_sum_twenty",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2464,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Leap Year",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/193/embed?act=PCRS&sub=py_leap_year",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2461,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Is Even",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/190/embed?act=PCRS&sub=py_is_even",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2560,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Three Booleans (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_three_booleans&ch=py_three_boolean2",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781201,
+      "name": "If-Else",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 924,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Conditionals Temperature",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_conditionals_temperature",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1050,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Nested ifs",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_ifs",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 1971,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "The Sign of a Number",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_if_else_num",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1970,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "The Grade Letter",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_if_else_grade",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1972,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "The Wage of an Employee",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_if_else_wage",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1993,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Warning about the Changes in the Weather Condition",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_nested_if_temperature",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1992,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "The Min/Max of Three Integers",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_nested_if_min_max",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2032,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Determining Whether One is a Teenager",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_check_age",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1969,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Pass-Fail Rule",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_fail_course",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1998,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Three Booleans",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_three_booleans",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1973,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Buying a New Phone",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_phone_age",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1975,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Renting a Car",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_rent_car",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1990,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Hot-Dry Weather",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_hot_dry",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 934,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "If Else",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_ifelse",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 935,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "If El If Else",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_ifelifelse",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 936,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Nested If",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_nested_if",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 932,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Hiscore 1",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_hiscore1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 933,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Hiscore 2",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_hiscore2",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 1025,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "if-elif",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_if_elif1&act=q_py_topic_if_statement&sub=q_py_if_elif1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1278,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "nested if",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_nested_if1&sub=q_py_nested_if1&act=q_py_topic_if_statement",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1026,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "nested if-elif",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_nested_if_elif1&act=q_py_topic_if_statement&sub=q_py_nested_if_elif1",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 2462,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Maximum of three integers",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/191/embed?act=PCRS&sub=py_max_three_int",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2464,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Leap Year",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/193/embed?act=PCRS&sub=py_leap_year",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2465,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Perishable Food",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/194/embed?act=PCRS&sub=py_perishable_food",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2466,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Next Day",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/195/embed?act=PCRS&sub=py_next_day",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3561,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Is Teenager",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/16/embed?act=PCRS&sub=py_value_between",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3543,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Right Triangle",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/5/embed?act=PCRS&sub=py_right_triangle",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3559,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Ticket Price",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/18/embed?act=PCRS&sub=py_ticket_price",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3571,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Multiples of Three",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/50/embed?act=PCRS&sub=py_multiple_of_three",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3570,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Find Multiples",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/52/embed?act=PCRS&sub=py_first_multiple_of_second",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3614,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Overdue Fees",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/84/embed?act=PCRS&sub=py_overdue_fees",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3647,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  In Between",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/119/embed?act=PCRS&sub=py_in_between",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3652,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Max In Group",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/124/embed?act=PCRS&sub=py_max_in_group",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3695,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL If can drink",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/175/embed?act=PCRS&sub=py_can_drink_if",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3696,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL Is candyshop open",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/176/embed?act=PCRS&sub=py_is_candyshop_open_if",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3693,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL Is char lowercase",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/173/embed?act=PCRS&sub=py_char_is_lowercase",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3697,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL Within five",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/177/embed?act=PCRS&sub=py_if_within_five",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2532,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "The Sign of a Number",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_if_else_num&ch=py_ifelse_odd_even",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2533,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "The Wage of an Employee",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_if_else_wage&ch=py_if_else_wage2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2531,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "The Grade Letter",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_if_else_grade&ch=py_ifelseif_grade2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2554,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Warning about the Changes in the Weather Condition",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_nested_if_temperature&ch=py_nested_if_temperature2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2553,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "The Min/Max of Three Integers",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_nested_if_min_max&ch=py_nested_if_max_of_three",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2585,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Determining Whether One is a Teenager",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_check_age&ch=py_check_age2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2529,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Pass-Fail Rule (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_fail_course&ch=py_fail_course2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2530,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Pass-Fail Rule (Case 3)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_fail_course&ch=py_fail_course3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2560,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Three Booleans (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_three_booleans&ch=py_three_boolean2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2561,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Three Booleans (Case 3)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_three_booleans&ch=py_three_boolean3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2534,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Buying a New Phone",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_phone_age&ch=py_phone_age2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2536,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Renting a Car (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_rent_car&ch=py_rent_car2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2537,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Renting a Car (Case 3)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_rent_car&ch=py_rent_car3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2547,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Hot-Dry Weather (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_hot_dry&ch=py_boolean_dry_hot2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2548,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Hot-Dry Weather (Case 3)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_hot_dry&ch=py_boolean_dry_hot3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2549,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Hot-Dry Weather (Case 4)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_hot_dry&ch=py_boolean_dry_hot4",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781202,
+      "name": "While Loops",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 908,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Iteration with Addition",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_iteration_addition",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 909,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Iteration with Multiplication",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_iteration_multiplication",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 1988,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Finding Smallest/Largest Divisor of a Positive Number",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_divisor",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1999,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Calculating the Winning Percentage of a Sports Team ",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_win_percentage",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1989,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Calculating the Average of the Input Numbers",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_find_average",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1986,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Comparing Adjacent Numbers in a Sequence of Numbers",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_check_adjacent",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1987,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Processing the Digits of an Integer ",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_digits",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 937,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "While Loop",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_while",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1716,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "ae_python_while",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_python_while",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 1030,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "while loop",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_while_loop1&act=q_py_topic_loops&sub=q_py_while_loop1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1282,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "while loop with summation",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_while_loop2&sub=q_py_while_loop2&act=q_py_topic_loops",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1031,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "nested while",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_nested_while1&act=q_py_topic_loops&sub=q_py_nested_while1",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 3595,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Find N Letters",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/11/embed?act=PCRS&sub=py_find_n_letters",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3549,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "nth Character",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/10/embed?act=PCRS&sub=py_nth_character",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3548,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Count Collatz Steps",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/12/embed?act=PCRS&sub=py_collatz",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3535,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "First Integer Less Than",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/38/embed?act=PCRS&sub=py_first_integer_less_than",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2544,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Finding Smallest/Largest Divisor of a Positive Number",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_divisor&ch=py_largest_divisor",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2550,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Receiving Input Integers Until a Certain Condition is Met (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_input&ch=py_input2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2551,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Receiving Input Integers Until a Certain Condition is Met (Case 3)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_input&ch=py_input3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2552,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Receiving Input Integers Until a Certain Condition is Met (Case 4)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_input&ch=py_input4",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2562,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Calculating the Winning Percentage of a Sports Team (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_win_percentage&ch=py_win_percentage_input",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2563,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Calculating the Winning Percentage of a Sports Team (Case 3)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_win_percentage&ch=py_win_percentage_won_equal",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2540,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Comparing Adjacent Numbers in a Sequence of Numbers (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_check_adjacent&ch=py_adjacent_consecutive",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2545,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Calculating the Average of the Input Numbers (Case2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_find_average&ch=py_average_even_nums",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2546,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Calculating the Average of the Input Numbers (Case 3)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_find_average&ch=py_average_float",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2599,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Processing the Digits of an Integer (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_digits&ch=py_sum_digits",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2543,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Processing the Digits of an Integer (Case 3)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_digits&ch=py_reverse_number",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781203,
+      "name": "For Loops",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 1099,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Odd or Even",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_for_odd_or_even",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3492,
+            "provider_id": "parsons",
+            "author_id": "rah225",
+            "name": "Iteration Multiplication For",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_iteration_multiplication_for",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 1994,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Printing Consecutive Numbers Starting from Zero",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_range_one",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1996,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Printing Consecutive Numbers Within a Specified Range",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_range_two",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1995,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Printing Sequence of Numbers with a Gap Between Adjacent Values",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_range_three",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1997,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Printing the Squares of Numbers Within a Specified Range",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_squares",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2016,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Printing A Sequence of Repeated Numbers",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_repeated_sequence",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2017,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Printing A Right Triangle Star Pattern",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_star_patterns",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2780,
+            "provider_id": "pcex",
+            "author_id": "akhuseyinoglu",
+            "name": "Printing a square star pattern",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_nestedloops_print_a_square_star_pattern",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2053,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Printing Table of Medal Counts with Row/Column Total",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_print_medals",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 938,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "For Loop",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_for",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 1029,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "for loop",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_for_loop1&act=q_py_topic_loops&sub=q_py_for_loop1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2761,
+            "provider_id": "quizpet",
+            "author_id": "akhuseyinoglu",
+            "name": "Nested for loop",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_nested_for_loop&sub=q_py_nested_for_loop&act=q_py_topic_loops",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2760,
+            "provider_id": "quizpet",
+            "author_id": "akhuseyinoglu",
+            "name": "Nested For and While Loop",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_nested_for_while&sub=q_py_nested_for_while&act=q_py_topic_loops",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 3583,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "First Even Number",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/37/embed?act=PCRS&sub=py_first_even_number",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3589,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "ASCII Isoceles Triangle",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/31/embed?act=PCRS&sub=py_ascii_isoceles",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2555,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Printing Consecutive Numbers Starting from Zero",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_range_one&ch=py_range1_2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2556,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Printing Sequence of Numbers with a Gap Between Adjacent Values",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_range_three&ch=py_range3_2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2557,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Printing Consecutive Numbers Within a Specified Range",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_range_two&ch=py_range2_2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2558,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Printing the Squares of Numbers Within a Specified Range (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_squares&ch=py_write_squares_odd",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2564,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Printing A Sequence of Repeated Numbers",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_repeated_sequence&ch=py_repeated_sequence2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2565,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Printing A Right Triangle Star Pattern",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_star_patterns&ch=py_stars_2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2781,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Printing the outline of a square star pattern Challenge",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_nestedloops_print_a_square_star_pattern&ch=print_a_square_star_pattern_ch",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2595,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Printing Table of Medal Counts with Row/Column Total",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_print_medals&ch=py_print_medals_row_column_total",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781204,
+      "name": "Strings",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 918,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "String Indexing",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_string_indexing",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1233,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "String join",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_string_join",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 2027,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Concatenating Strings and Numbers ",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_concat_str_num",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2026,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Concatenating Characters of Two Strings",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_concat_char_two_str",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2029,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Repeating Characters of a String",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_str_repeat_chars",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2028,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Counting the Occurrences of One String in Another",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_str_count",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 939,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Strings",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_strings",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1058,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Format 1",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_format1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1059,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Format 2",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_format2",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 1043,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "concatenate strings",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_concat_strings1&act=q_py_topic_strings&sub=q_py_concat_strings1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1044,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "substring",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_substring1&act=q_py_topic_strings&sub=q_py_substring1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1032,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "simple format",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_output1&act=q_py_topic_output_formatting&sub=q_py_output1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1033,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "format with one argument",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_output2&act=q_py_topic_output_formatting&sub=q_py_output2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1034,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "format with two arguments",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_output3&act=q_py_topic_output_formatting&sub=q_py_output3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1035,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "format with three arguments",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_output4&act=q_py_topic_output_formatting&sub=q_py_output4",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 3556,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Fluffy",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/21/embed?act=PCRS&sub=py_fluffy",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3557,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Upper Case",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/20/embed?act=PCRS&sub=py_upper_case",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3574,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Lower Letter Case",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/47/embed?act=PCRS&sub=py_lower_letter_case",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3579,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "No Lower Case",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/41/embed?act=PCRS&sub=py_no_lowercase",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3594,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL Bracket validation",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/156/embed?act=PCRS&sub=py_bracket_validator",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3658,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Replace Between Index",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/130/embed?act=PCRS&sub=py_replace_between_index",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3653,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Counta",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/125/embed?act=PCRS&sub=py_countA",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3654,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Countx",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/126/embed?act=PCRS&sub=py_countX",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3655,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Replace1",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/127/embed?act=PCRS&sub=py_replace1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3657,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Replacex",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/129/embed?act=PCRS&sub=py_replaceX",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3656,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Replacec",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/128/embed?act=PCRS&sub=py_replaceC",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3613,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Upper Lower",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/83/embed?act=PCRS&sub=py_upper_lower",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2579,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Concatenating Strings and Numbers (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_concat_str_num&ch=py_concat_str_num2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2580,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Concatenating Strings and Numbers (Case 3)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_concat_str_num&ch=py_concat_string_num3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2578,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Concatenating Characters of Two Strings",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_concat_char_two_str&ch=py_concat_char_two_str2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2581,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Counting the Occurrences of One String in Another",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_str_count&ch=py_str_count2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2582,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Repeating Characters of a String",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_str_repeat_chars&ch=py_str_repeat2",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781205,
+      "name": "Lists",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 915,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "List Iteration Zoo",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_iteration_zoo",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 916,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Nested List Indexing",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_nested_lists_indexing",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2352,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Two-dimensional List",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_2d_list",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 2018,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Updating an Element in a List ",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_basic",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2020,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Adding Values to an Empty List",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_fill",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2019,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Modifying a List",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_change",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2022,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Calculating Sum/Average of the List Values ",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_process_elements",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2021,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Finding the Min/Max Value in a List",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_min_max",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2025,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Processing a List of Temperature Values",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_temperature",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2023,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Rotating the List Values",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_rotate",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2024,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Searching Values of a List in Another List",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_list",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2052,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Updating Two-Dimensional List",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list2d_basic",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2054,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Processing the Results of a Soda Survey",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_soda_survey",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2053,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Printing Table of Medal Counts with Row/Column Total",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_print_medals",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2052,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Updating Two-Dimensional List",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list2d_basic",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 940,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Lists 1",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_lists1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 941,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Lists 2",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_lists2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 942,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Lists 3",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_lists3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 943,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Find Max",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_findmax",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 1038,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "modify a list",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_list_access1&act=q_py_topic_lists&sub=q_py_list_access1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1039,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "modify a list in a loop",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_list_access2&act=q_py_topic_lists&sub=q_py_list_access2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1040,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "append to a list",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_list_append1&act=q_py_topic_lists&sub=q_py_list_append1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1041,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "combine two lists",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_add_two_lists1&act=q_py_topic_lists&sub=q_py_add_two_lists1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1042,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "remove from a list",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_list_remove1&act=q_py_topic_lists&sub=q_py_list_remove1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2353,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "Two-dimensional List 1",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_2d_arrays1&act=q_py_topic_two_dimensional_array&sub=q_py_2d_arrays1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2354,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "Two-dimensional List 2",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_2d_arrays2&act=q_py_topic_two_dimensional_array&sub=q_py_2d_arrays2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2355,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "Two-dimensional List 3",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_2d_arrays3&act=q_py_topic_two_dimensional_array&sub=q_py_2d_arrays3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2356,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "Two-dimensional List 4",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_2d_arrays4&act=q_py_topic_two_dimensional_array&sub=q_py_2d_arrays4",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 3535,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "First Integer Less Than",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/38/embed?act=PCRS&sub=py_first_integer_less_than",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3587,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Check If Digit in List",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/33/embed?act=PCRS&sub=py_check_if_list",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3565,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "List of Lists with Even",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/59/embed?act=PCRS&sub=py_return_list_of_list_even",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3584,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Modify Name in lists",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/36/embed?act=PCRS&sub=py_modify_name_list",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3671,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Longest String",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/144/embed?act=PCRS&sub=py_longest_string",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3665,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Sum List",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/138/embed?act=PCRS&sub=py_sum_list",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3626,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Context Not Unique Hashtags",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/97/embed?act=PCRS&sub=py_contains_no_unique_hashtags",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3678,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Num Greater At Index",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/151/embed?act=PCRS&sub=py_num_greater_at_index",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3668,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Greater Than Ten",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/141/embed?act=PCRS&sub=py_greater_than_ten",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3669,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Sum Greater Than N",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/142/embed?act=PCRS&sub=py_sum_greater_than_n",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3542,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Sum Odd Numbers",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/4/embed?act=PCRS&sub=py_sum_odd",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3666,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  List Average",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/139/embed?act=PCRS&sub=py_list_average",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3673,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Num Above Average",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/146/embed?act=PCRS&sub=py_num_above_average",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3622,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Adjacent Match",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/93/embed?act=PCRS&sub=py_adjacent_match",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3628,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Eligible",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/99/embed?act=PCRS&sub=py_eligible",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2569,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Adding Values to an Empty List",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_fill&ch=py_list_fill_user_input",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2568,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Modifying a List",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_change&ch=py_list_swap_adjacent_elements",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2566,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Updating an Element in a List (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_basic&ch=py_list_basic2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2593,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Updating Two-Dimensional List (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list2d_basic&ch=py_list2d_basic2",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781206,
+      "name": "values_references",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 1052,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Add to list",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_add_to_list",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 2018,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Updating an Element in a List ",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_basic",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2052,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Updating Two-Dimensional List",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list2d_basic",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 1096,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Values and References 1",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_vals_refs1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1097,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Values and References 2",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_vals_refs2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1098,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Values and References 3",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_vals_refs3",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 1266,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "int reference",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_int_ref1&act=q_py_topic_references&sub=q_py_int_ref1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1267,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "list reference (int)",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_list_int_ref1&act=q_py_topic_references&sub=q_py_list_int_ref1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1268,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "string reference",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_str_ref1&act=q_py_topic_references&sub=q_py_str_ref1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1269,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "list reference (string)",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_list_str_ref1&act=q_py_topic_references&sub=q_py_list_str_ref1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2425,
+            "provider_id": "quizpet",
+            "author_id": "michellewang",
+            "name": "Reference List 1",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_reference_list1&sub=q_py_reference_list1&act=q_py_values_and_references",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2426,
+            "provider_id": "quizpet",
+            "author_id": "michellewang",
+            "name": "Reference Reverse",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_reference_reverse&sub=q_py_reference_reverse&act=q_py_values_and_references",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2566,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Updating an Element in a List (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_basic&ch=py_list_basic2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2567,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Updating an Element in a List (Case 3)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list_basic&ch=py_list_basic3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2593,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Updating Two-Dimensional List (Case 2)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list2d_basic&ch=py_list2d_basic2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2594,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Updating Two-Dimensional List (Case 3)",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_list2d_basic&ch=py_list2d_basic3",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781207,
+      "name": "Recursion",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 912,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Recursive Factorial",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_recursive_factorial",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 2790,
+            "provider_id": "pcex",
+            "author_id": "akhuseyinoglu",
+            "name": "Greatest Common Factor",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_recursion_gcf",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2792,
+            "provider_id": "pcex",
+            "author_id": "akhuseyinoglu",
+            "name": "Recursive Binary Search",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_binary_recursive",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2810,
+            "provider_id": "pcex",
+            "author_id": "akhuseyinoglu",
+            "name": "Inserting binary tree",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_insert_binarytree",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 947,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Recursion",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_recursion",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2730,
+            "provider_id": "animatedexamples",
+            "author_id": "akhuseyinoglu",
+            "name": "Recursion Greatest Divisor",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=recursion_greatest_divisor",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2731,
+            "provider_id": "animatedexamples",
+            "author_id": "akhuseyinoglu",
+            "name": "Recursion Greatest Divisor2",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=recursion_greatest_divisor2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2732,
+            "provider_id": "animatedexamples",
+            "author_id": "akhuseyinoglu",
+            "name": "Recursion Halve",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=recursion_halve",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2733,
+            "provider_id": "animatedexamples",
+            "author_id": "akhuseyinoglu",
+            "name": "Recursion Halve2",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=recursion_halve2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2734,
+            "provider_id": "animatedexamples",
+            "author_id": "akhuseyinoglu",
+            "name": "Recursion Mult2 Version1",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=recursion_mult2_version1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2735,
+            "provider_id": "animatedexamples",
+            "author_id": "akhuseyinoglu",
+            "name": "Recursion Mult2 Version2",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=recursion_mult2_version2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2736,
+            "provider_id": "animatedexamples",
+            "author_id": "akhuseyinoglu",
+            "name": "Recursion Sum",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=recursion_sum",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2737,
+            "provider_id": "animatedexamples",
+            "author_id": "akhuseyinoglu",
+            "name": "Recursion Sum2",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=recursion_sum2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2753,
+            "provider_id": "animatedexamples",
+            "author_id": "akhuseyinoglu",
+            "name": "Recursion Fibonacci",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=recursion_fibonacci",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 2433,
+            "provider_id": "quizpet",
+            "author_id": "michellewang",
+            "name": "Recursing Pascal",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_recursion_pascal&sub=q_py_recursion_pascal&act=q_py_recursion",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2434,
+            "provider_id": "quizpet",
+            "author_id": "michellewang",
+            "name": "Recursion 1",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_recursion1&sub=q_py_recursion1&act=q_py_recursion",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 3594,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL Bracket validation",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/156/embed?act=PCRS&sub=py_bracket_validator",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3593,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL Recursive counting",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/155/embed?act=PCRS&sub=py_recursive_times_in_list",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3683,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Recurse Converge",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/160/embed?act=PCRS&sub=py_recurse_converge",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2791,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Greatest Common Factor Challenge",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_recursion_gcf&ch=recursion_gcf_challenge",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2811,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Inserting binary tree Challenge",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_insert_binarytree&ch=insert_binarytree_ch",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2793,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Recursive Binary Search Challenge",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_binary_recursive&ch=search_binary_rec_challenge",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781208,
+      "name": "Dictionaries",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 919,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Dictionary Keys",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_dict_keys",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 920,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Dictionary Values",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_dict_values",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 921,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "List to Dictionary",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_list_to_dict",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 922,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Dictionary Filter",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_dict_filter",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2859,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Dictionary manipulation.",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_print_specific_element",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2860,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Dictionary calculations",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_calculation_in_dictionary",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2817,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Letter frequency",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_freq_of_char1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2818,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Letter frequency",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_freq_of_char2",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 2030,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Creating a Dictionary of Character-Count/Words Pairs",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_char_dict",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2031,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Creating a Dictionary of Student-Scores Pairs ",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_student_score",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 1721,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "ae_python_dict",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_python_dict",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 1045,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "access a dictionary",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_dict_access1&act=q_py_topic_dictionary&sub=q_py_dict_access1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1046,
+            "provider_id": "quizpet",
+            "author_id": "admin",
+            "name": "access and mofify a dictionary",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_dict_access2&act=q_py_topic_dictionary&sub=q_py_dict_access2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2769,
+            "provider_id": "quizpet",
+            "author_id": "akhuseyinoglu",
+            "name": "Dictionary square",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_dict_square&sub=q_py_dict_square&act=q_py_values_and_references",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 3590,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "Swap list with dictionary",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/153/embed?act=PCRS&sub=py_swap_list_with_dict",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3592,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL Reverse dictionary",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/154/embed?act=PCRS&sub=py_reverse_dict",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3554,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Shoe Company",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/23/embed?act=PCRS&sub=py_shoe_company",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3563,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Table of Foods",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/62/embed?act=PCRS&sub=py_table_of_foods",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3618,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Context To Next Words",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/89/embed?act=PCRS&sub=py_context_to_next_words",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3677,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Count Nums",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/150/embed?act=PCRS&sub=py_count_nums",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3555,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Checkout",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/22/embed?act=PCRS&sub=py_checkout",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3592,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL Reverse dictionary",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/154/embed?act=PCRS&sub=py_reverse_dict",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2583,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Creating a Dictionary of Character-Count/Words Pairs",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_char_dict&ch=py_first_char_words_dict",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2584,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Creating a Dictionary of Student-Scores Pairs ",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_student_score&ch=py_score_dict2",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781209,
+      "name": "Searching",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 2835,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Updating  elements to the new list",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_find_and_square1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2836,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Updating required elements to the new list",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_find_and_square2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2837,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Updating the elements to the new list",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_find_and_square3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2819,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Creating a function that checks if the string is a palindrome or not.",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_palindrome1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2820,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Creating a function that checks if the string is a palindrome or not.",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_palindrome2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2821,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Creating a function that checks if the string is a palindrome or not.",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_palindrome3",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 2024,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Searching Values of a List in Another List",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_list",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2804,
+            "provider_id": "pcex",
+            "author_id": "akhuseyinoglu",
+            "name": "Binary search",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_binary_search",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2792,
+            "provider_id": "pcex",
+            "author_id": "akhuseyinoglu",
+            "name": "Recursive Binary Search",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_binary_recursive",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2806,
+            "provider_id": "pcex",
+            "author_id": "akhuseyinoglu",
+            "name": "Search in the linked list.",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_linkedlist_searching",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 2752,
+            "provider_id": "animatedexamples",
+            "author_id": "akhuseyinoglu",
+            "name": "Find Target",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=find_target",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2751,
+            "provider_id": "animatedexamples",
+            "author_id": "akhuseyinoglu",
+            "name": "Find Max2",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=find_max2",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 2764,
+            "provider_id": "quizpet",
+            "author_id": "akhuseyinoglu",
+            "name": "Max index search",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_max_index_search&sub=q_py_max_index_search&act=q_py_search",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2765,
+            "provider_id": "quizpet",
+            "author_id": "akhuseyinoglu",
+            "name": "Sequential search",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_sequential_search&sub=q_py_sequential_search&act=q_py_search",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 3538,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Search List 2",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/45/embed?act=PCRS&sub=py_search_list2",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2805,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Binary search Challenge",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_binary_search&ch=binary_search_ch",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2793,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Recursive Binary Search Challenge",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_search_binary_recursive&ch=search_binary_rec_challenge",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2807,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Search in the linked list. Challenge",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_linkedlist_searching&ch=linklist_search_ch",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781210,
+      "name": "Trees",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781193": [
+          {
+            "id": 2808,
+            "provider_id": "pcex",
+            "author_id": "akhuseyinoglu",
+            "name": "Tree traversal.",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_traversal",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2810,
+            "provider_id": "pcex",
+            "author_id": "akhuseyinoglu",
+            "name": "Inserting binary tree",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_insert_binarytree",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 2745,
+            "provider_id": "animatedexamples",
+            "author_id": "akhuseyinoglu",
+            "name": "Tree",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=tree",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2746,
+            "provider_id": "animatedexamples",
+            "author_id": "akhuseyinoglu",
+            "name": "Tree Node Access",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsvee/jsvee-python/ae?example-id=tree_node_access",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 2766,
+            "provider_id": "quizpet",
+            "author_id": "akhuseyinoglu",
+            "name": "Tree preorder traversal",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_tree_preorder_traverse&sub=q_py_tree_preorder_traverse&act=q_py_tree",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2767,
+            "provider_id": "quizpet",
+            "author_id": "akhuseyinoglu",
+            "name": "Tree inorder traversal",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_tree_inorder_traverse&sub=q_py_tree_inorder_traverse&act=q_py_tree",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 3681,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Closed Interval",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/158/embed?act=PCRS&sub=py_closed_interval",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2809,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Tree traversal. Challenge",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_traversal&ch=traversal_ch",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2811,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Inserting binary tree Challenge",
+            "url": "https://adapt2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_trees_insert_binarytree&ch=insert_binarytree_ch",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781211,
+      "name": "File Handling",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 1054,
+            "provider_id": "parsons",
+            "author_id": "admin",
+            "name": "Printing file contents",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_printing_file_contents",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2853,
+            "provider_id": "parsons",
+            "author_id": "akhuseyinoglu",
+            "name": "Practising reading a file and printing the third element in each line of the file",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_file_reading_third_element",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 2034,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Reporting File Information",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_file_input_stat",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2035,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "Reporting the Total Hours Each Employee Worked ",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_work_hours",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 1722,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "ae_python_file",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_python_file",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1264,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Files 1",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_file1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1265,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Files 2",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_file2",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 2357,
+            "provider_id": "quizpet",
+            "author_id": "jab464",
+            "name": "File Processing 1",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_file1&act=q_py_topic_file_processing&sub=q_py_file1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2771,
+            "provider_id": "quizpet",
+            "author_id": "akhuseyinoglu",
+            "name": "File processing 2",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_file2&sub=q_py_file2&act=q_py_topic_file_processing",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2772,
+            "provider_id": "quizpet",
+            "author_id": "akhuseyinoglu",
+            "name": "File processing 3",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_file3&sub=q_py_file3&act=q_py_topic_file_processing",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 3617,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Get Words",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/88/embed?act=PCRS&sub=py_get_words",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 2587,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Reporting File Information",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_file_input_stat&ch=py_input_stat2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 2588,
+            "provider_id": "pcex_ch",
+            "author_id": "akhuseyinoglu",
+            "name": "Reporting the Total Hours Each Employee Worked ",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_work_hours&ch=py_work_hours2",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781212,
+      "name": "JSON processing",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 3476,
+            "provider_id": "parsons",
+            "author_id": "rah225",
+            "name": "JSON Iterate 1",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_json_iterate_1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3481,
+            "provider_id": "parsons",
+            "author_id": "rah225",
+            "name": "JSON Conditions 1",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_json_conditions_1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3482,
+            "provider_id": "parsons",
+            "author_id": "rah225",
+            "name": "JSON Conditions 2",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_json_conditions_2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3483,
+            "provider_id": "parsons",
+            "author_id": "rah225",
+            "name": "JSON Aggregate 1",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_json_agg_1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3484,
+            "provider_id": "parsons",
+            "author_id": "rah225",
+            "name": "JSON Aggregate 2",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_json_agg_2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3485,
+            "provider_id": "parsons",
+            "author_id": "rah225",
+            "name": "JSON Aggregate 3",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_json_agg_3",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3504,
+            "provider_id": "parsons",
+            "author_id": "rah225",
+            "name": "JSON Iterate 2",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_json_iterate_2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3505,
+            "provider_id": "parsons",
+            "author_id": "rah225",
+            "name": "JSON Aggregate 4",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_json_agg_4",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3506,
+            "provider_id": "parsons",
+            "author_id": "rah225",
+            "name": "JSON Aggregate 5",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_json_agg_5",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 3494,
+            "provider_id": "pcex",
+            "author_id": "rah225",
+            "name": "JSON ITERATION 1",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_iterate_1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3511,
+            "provider_id": "pcex",
+            "author_id": "rah225",
+            "name": "JSON Conditionals 1",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_conditionals_1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3518,
+            "provider_id": "pcex",
+            "author_id": "rah225",
+            "name": "JSON Conditionals 2",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_conditionals_2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3521,
+            "provider_id": "pcex",
+            "author_id": "rah225",
+            "name": "JSON Aggregate 1",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_agg_1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3523,
+            "provider_id": "pcex",
+            "author_id": "rah225",
+            "name": "JSON Aggregate 2",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_agg_2",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781192": [
+          {
+            "id": 948,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Dictionary 1",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_dict1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1235,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Dictionary 2",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_dict2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1236,
+            "provider_id": "animatedexamples",
+            "author_id": "admin",
+            "name": "Dictionary 3",
+            "url": "https://acos.cs.vt.edu/pitt/jsvee/jsvee-python/ae?example-id=ae_adl_dict3",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781194": [
+          {
+            "id": 3455,
+            "provider_id": "quizpet",
+            "author_id": "arunb",
+            "name": "JSON Iteration 1",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_json_iterate_1&sub=q_py_json_iterate_1&act=q_py_json_iterate",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3458,
+            "provider_id": "quizpet",
+            "author_id": "arunb",
+            "name": "JSON Condition 1",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_json_conditions_1&sub=q_py_json_conditions_1&act=q_py_json_conditions",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3459,
+            "provider_id": "quizpet",
+            "author_id": "arunb",
+            "name": "JSON Aggregate 1",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_json_agg_1&sub=q_py_json_agg_1&act=q_py_json_agg",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3461,
+            "provider_id": "quizpet",
+            "author_id": "arunb",
+            "name": "JSON Aggregate 3",
+            "url": "https://adapt2.sis.pitt.edu/quizpet/displayQuiz.jsp?rdfID=q_py_json_agg_3&sub=q_py_json_agg_3&act=q_py_json_agg",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 3594,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL Bracket validation",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/156/embed?act=PCRS&sub=py_bracket_validator",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3595,
+            "provider_id": "pcrs",
+            "author_id": "jab464",
+            "name": "PCRS C3-PL  Find N Letters",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/11/embed?act=PCRS&sub=py_find_n_letters",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781195": [
+          {
+            "id": 3495,
+            "provider_id": "pcex_ch",
+            "author_id": "rah225",
+            "name": "JSON ITERATION 1 Challenge",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_iterate_1&ch=py_json_iterate_1_ch",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3512,
+            "provider_id": "pcex_ch",
+            "author_id": "rah225",
+            "name": "JSON Conditionals 1 Challenge",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_conditionals_1&ch=py_json_conditionals_1_ch",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3519,
+            "provider_id": "pcex_ch",
+            "author_id": "rah225",
+            "name": "JSON Conditionals 2 Challenge",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_conditionals_2&ch=py_json_conditionals_2_ch",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3522,
+            "provider_id": "pcex_ch",
+            "author_id": "rah225",
+            "name": "JSON Aggregate 1 Challenge",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_agg_1&ch=py_json_agg_1_ch",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3524,
+            "provider_id": "pcex_ch",
+            "author_id": "rah225",
+            "name": "JSON Aggregate 2 Challenge",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_json_agg_2&ch=py_json_agg_2_ch",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 1790778781213,
+      "name": "Statistics",
+      "level": 0,
+      "published": true,
+      "activities": {
+        "1790778781196": [
+          {
+            "id": 3488,
+            "provider_id": "parsons",
+            "author_id": "rah225",
+            "name": "PANDAS Stats 1",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_pandas_stats_1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3507,
+            "provider_id": "parsons",
+            "author_id": "rah225",
+            "name": "PANDAS Stats 2",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_pandas_stats_2",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3508,
+            "provider_id": "parsons",
+            "author_id": "rah225",
+            "name": "PANDAS Stats 3",
+            "url": "https://adapt2.sis.pitt.edu/acos/pitt/jsparsons/jsparsons-python/ps?example-id=ps_python_pandas_stats_3",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781193": [
+          {
+            "id": 3527,
+            "provider_id": "pcex",
+            "author_id": "rah225",
+            "name": "PANDAS Statistics 1",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_pandas_statistics_1",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 1992,
+            "provider_id": "pcex",
+            "author_id": "r.hosseini",
+            "name": "The Min/Max of Three Integers",
+            "url": "https://pawscomp2.sis.pitt.edu/pcex/index.html?lang=PYTHON&set=py_nested_if_min_max",
+            "domain": "py",
+            "tags": []
+          }
+        ],
+        "1790778781197": [
+          {
+            "id": 2462,
+            "provider_id": "pcrs",
+            "author_id": "akhuseyinoglu",
+            "name": "Maximum of three integers",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/191/embed?act=PCRS&sub=py_max_three_int",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3550,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Scale Midterm Grades",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/9/embed?act=PCRS&sub=py_scale_midterm_grades",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3551,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Collect Underperformers",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/8/embed?act=PCRS&sub=py_collect_underperformers",
+            "domain": "py",
+            "tags": []
+          },
+          {
+            "id": 3559,
+            "provider_id": "pcrs",
+            "author_id": "arunb",
+            "name": "Ticket Price",
+            "url": "https://pcrs.utm.utoronto.ca/mgrids/problems/python/18/embed?act=PCRS&sub=py_ticket_price",
+            "domain": "py",
+            "tags": []
+          }
+        ]
+      }
+    }
+  ],
+  "cid": 462,
+  "code": "SandboxPython",
+  "user_email": "akhuseyinoglu@ca.paws.lab",
+  "created_at": "2025-06-14T00:28:07.000Z",
+  "updated_at": "2026-09-30T14:33:01.192Z",
+  "domain": "py",
+  "description": "",
+  "published": true,
+  "tags": []
+}

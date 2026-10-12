@@ -1,0 +1,68 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/Q1/shift_all_points_free_coding",
+    "title": "Build and Shift an Array of Points",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q1/Q1.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "NC State University",
+    "authors": [
+      {
+        "name": "Bita Akram",
+        "affiliation": "NC State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The `Point` class is provided. It has two fields, `x` and `y`, a constructor `Point(int x, int y)`, and a `toString` method that returns text like `(3, 4)`.\n\nWrite a method `public static void shiftAll(Point[] pts, int dx, int dy)` that moves every point in `pts` by `dx` horizontally and `dy` vertically. Elements that are `null` stay `null`.\n\nIn `main`, read a `Point` array from input, shift it with `shiftAll`, and print every element on its own line.\n\nThe input starts with the array length `n`. Then come `n` elements, each either the word `null` or two integers `x y`. The last two integers are `dx` and `dy`.\n\n**Example**\n\nInput:\n```\n3\n1 2\nnull\n3 4\n10 -1\n```\nOutput:\n```\n(11, 1)\nnull\n(13, 3)\n```",
+    "source_code": "import java.util.Scanner;\n\nclass Point {\n    int x;\n    int y;\n\n    Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n\n    public String toString() {\n        return \"(\" + x + \", \" + y + \")\";\n    }\n}\n\npublic class Main {\n    public static void shiftAll(Point[] pts, int dx, int dy) {\n        for (int i = 0; i < pts.length; i++) {\n            if (pts[i] != null) {\n                pts[i].x += dx;\n                pts[i].y += dy;\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        Point[] pts = new Point[n];\n        for (int i = 0; i < n; i++) {\n            String tok = in.next();\n            if (!tok.equals(\"null\")) {\n                pts[i] = new Point(Integer.parseInt(tok), in.nextInt());\n            }\n        }\n        int dx = in.nextInt();\n        int dy = in.nextInt();\n        shiftAll(pts, dx, dy);\n        for (Point p : pts) {\n            System.out.println(p);\n        }\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "two-phase-initialization",
+      "null",
+      "null-pointer-exception",
+      "static-methods"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "classes",
+        "for-loops",
+        "scanner-input"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q1/Q1.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q1/Q1.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/arrays-of-objects-activities/we_array_objects_playlist",
+    "title": "Music Playlist: Null Array Elements",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/01-playlist-worked-example.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "North Carolina State University",
+    "authors": [
+      {
+        "name": "Aum Pandya",
+        "affiliation": "North Carolina State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Create a playlist that can hold three songs, add a song, then remove it.\nSee which elements are null and when a Track object is created.",
+    "source_code": "public class PlaylistSetup {\n    static class Track {\n        String title;\n\n        Track(String title) {\n            this.title = title;\n        }\n    }\n\n    public static void main(String[] args) {\n        Track[] playlist = new Track[3];\n        System.out.println(\"Length: \" + playlist.length);\n        System.out.println(\"Element 0: \" + playlist[0]);\n        playlist[1] = new Track(\"Morning Song\");\n        System.out.println(\"Element 1: \" + playlist[1].title);\n        System.out.println(\"Element 2 is null: \" + (playlist[2] == null));\n        playlist[1] = null;\n        System.out.println(\"Element 1 is null: \" + (playlist[1] == null));\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "null",
+      "object-references"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "classes",
+        "constructors"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/01-playlist-worked-example.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/01-playlist-worked-example.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

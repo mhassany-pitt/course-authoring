@@ -1,0 +1,66 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/arrays-of-objects-activities/pct_aoo_click_counters_alias",
+    "title": "Trace Shared vs. Separate Counter Objects",
+    "type": "PredictingFinalResult"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/10-click-counters-code-tracing.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "North Carolina State University",
+    "authors": [
+      {
+        "name": "Aum Pandya",
+        "affiliation": "North Carolina State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Trace the program and give its exact output.\nNote that `counters[0]` and `counters[2]` are assigned the **same** reference, while `counters[1]` gets its **own** object.",
+    "source_code": "public class ClickCounters {\n    public static void main(String[] args) {\n        Counter[] counters = new Counter[3];\n        Counter shared = new Counter(10);\n        counters[0] = shared;\n        counters[1] = new Counter(4);\n        counters[2] = shared;\n\n        for (int i = 0; i < 2; i++) {\n            counters[0].click();\n        }\n        counters[1].click();\n\n        System.out.println(\"counters[0]: \" + counters[0].count);\n        System.out.println(\"counters[1]: \" + counters[1].count);\n        System.out.println(\"counters[2]: \" + counters[2].count);\n    }\n}\n\nclass Counter {\n    int count;\n\n    Counter(int start) {\n        this.count = start;\n    }\n\n    void click() {\n        this.count++;\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "references",
+      "aliasing",
+      "state-tracing"
+    ],
+    "difficulty": "intermediate"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "classes",
+        "constructors"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/10-click-counters-code-tracing.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/10-click-counters-code-tracing.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

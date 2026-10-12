@@ -1,0 +1,67 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/arrays-of-objects-activities/we_array_objects_weather",
+    "title": "Weather Stations: Two-Phase Initialization",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/03-weather-worked-example.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "North Carolina State University",
+    "authors": [
+      {
+        "name": "Aum Pandya",
+        "affiliation": "North Carolina State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Set up three weather stations, each with its own temperature reading.\nCreate an array that can hold three stations, then create each Station object.\nChange the first station's temperature and see why the other two stay the same.",
+    "source_code": "public class WeatherStations {\n    static class Station {\n        int temperature;\n\n        Station(int temperature) {\n            this.temperature = temperature;\n        }\n    }\n\n    public static void main(String[] args) {\n        Station[] stations = new Station[3];\n        System.out.println(\"Before setup: \" + (stations[0] == null));\n        for (int i = 0; i < stations.length; i++) {\n            stations[i] = new Station(10 + i);\n        }\n        stations[0].temperature += 5;\n        for (int i = 0; i < stations.length; i++) {\n            System.out.println(\"Station \" + i + \": \" + stations[i].temperature);\n        }\n        System.out.println(\"Same station: \" + (stations[0] == stations[1]));\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "two-phase-initialization",
+      "object-state",
+      "object-references"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "loops",
+        "classes",
+        "constructors"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/03-weather-worked-example.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/03-weather-worked-example.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

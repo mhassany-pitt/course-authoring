@@ -1,0 +1,65 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/Q2/make_points_two_phase_free_coding",
+    "title": "Build an Array of Points",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q2/Q2.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "NC State University",
+    "authors": [
+      {
+        "name": "Bita Akram",
+        "affiliation": "NC State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The `Point` class is provided. It has two fields, `x` and `y`, a constructor `Point(int x, int y)`, and a `toString` method that returns text like `(3, 4)`.\n\nWrite a method `public static Point[] makePoints(int n)` that returns an array of `n` points, where the point at index `i` is `(i, i)`.\n\nThen write `main`. It reads `n` from input, gets an array from `makePoints`, and prints every element on its own line.\n\n**Example**\n\nInput:\n```\n3\n```\nOutput:\n```\n(0, 0)\n(1, 1)\n(2, 2)\n```",
+    "source_code": "import java.util.Scanner;\n\nclass Point {\n    int x;\n    int y;\n\n    Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n\n    public String toString() {\n        return \"(\" + x + \", \" + y + \")\";\n    }\n}\n\npublic class Main {\n    public static Point[] makePoints(int n) {\n        Point[] pts = new Point[n];\n        for (int i = 0; i < n; i++) {\n            pts[i] = new Point(i, i);\n        }\n        return pts;\n    }\n\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        Point[] pts = makePoints(n);\n        for (Point p : pts) {\n            System.out.println(p);\n        }\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "two-phase-initialization",
+      "object-references"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "classes",
+        "for-loops"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q2/Q2.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q2/Q2.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

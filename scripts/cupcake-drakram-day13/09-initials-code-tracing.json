@@ -1,0 +1,66 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/arrays-of-objects-activities/pct_aoo_initials_null_slots",
+    "title": "Trace Initials Built from a Sparse String Array",
+    "type": "PredictingFinalResult"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/09-initials-code-tracing.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "North Carolina State University",
+    "authors": [
+      {
+        "name": "Aum Pandya",
+        "affiliation": "North Carolina State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Trace the program and give its exact output.\nEach non-null slot adds its uppercase first letter; each `null` slot adds `_`.",
+    "source_code": "public class Initials {\n    public static void main(String[] args) {\n        String[] bank = new String[4];\n        bank[0] = \"apple\";\n        int slot = 2;\n        bank[slot] = \"kiwi\";\n\n        String initials = \"\";\n        int stored = 0;\n        for (int i = 0; i < bank.length; i++) {\n            if (bank[i] != null) {\n                initials += bank[i].toUpperCase().charAt(0);\n                stored++;\n            } else {\n                initials += \"_\";\n            }\n        }\n\n        System.out.println(initials);\n        System.out.println(\"Words stored: \" + stored);\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "null-references",
+      "null-checks",
+      "state-tracing"
+    ],
+    "difficulty": "intermediate"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "classes",
+        "constructors"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/09-initials-code-tracing.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/09-initials-code-tracing.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

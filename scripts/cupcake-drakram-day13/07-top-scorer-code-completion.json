@@ -1,0 +1,66 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/arrays-of-objects-activities/cc_aoo_top_scorer_null_start",
+    "title": "Find the Top Scorer, or Return null",
+    "type": "CodeCompletionProblem"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/07-top-scorer-code-completion.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "North Carolina State University",
+    "authors": [
+      {
+        "name": "Aum Pandya",
+        "affiliation": "North Carolina State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "`findTop` should return the `Player` with the most points, skipping empty slots.\nIf the team has **no players at all**, it should return `null`.\nComplete the three blanks.",
+    "source_code": "public class TopScorer {\n    public static Player findTop(Player[] team) {\n        Player best = null;\n        for (int i = 0; i < team.length; i++) {\n            if (team[i] == null) {\n                continue;\n            }\n            if (best == null || team[i].points > best.points) {\n                best = team[i];\n            }\n        }\n        return best;\n    }\n\n    public static void main(String[] args) {\n        Player[] team = new Player[4];\n        team[1] = new Player(\"Ava\", 18);\n        team[2] = new Player(\"Jordan\", 27);\n        Player top = findTop(team);\n        System.out.println(\"Top scorer: \" + top.name);\n\n        Player[] emptyTeam = new Player[3];\n        Player none = findTop(emptyTeam);\n        System.out.println(\"Empty team result: \" + none);\n    }\n}\n\nclass Player {\n    String name;\n    int points;\n\n    Player(String name, int points) {\n        this.name = name;\n        this.points = points;\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "null-references",
+      "null-checks",
+      "linear-search"
+    ],
+    "difficulty": "intermediate"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "classes",
+        "constructors"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/07-top-scorer-code-completion.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/07-top-scorer-code-completion.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

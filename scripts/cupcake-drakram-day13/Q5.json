@@ -1,0 +1,67 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/Q5/park_a_car_free_coding",
+    "title": "Park a Car",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q5/Q5.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "NC State University",
+    "authors": [
+      {
+        "name": "Bita Akram",
+        "affiliation": "NC State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "A parking lot is stored as a `Car[]` array. An empty spot is `null`.\n\nWrite `public static int park(Car[] lot, Car car)`. It puts `car` in the first empty spot and returns that spot's index. If the lot is full, it returns `-1`.\n\nIn `main`, read the lot and the new car's plate, then park the car. Print `Parked in spot` and the index, or `Lot is full`. Then print every spot, using `empty` for empty spots. The input starts with the number of spots.\n\n**Example**\n\nInput:\n```\n4\nABC123\nempty\nXYZ789\nempty\nJKL456\n```\nOutput:\n```\nParked in spot 1\nABC123\nJKL456\nXYZ789\nempty\n```",
+    "source_code": "import java.util.Scanner;\n\nclass Car {\n    String plate;\n\n    Car(String plate) {\n        this.plate = plate;\n    }\n}\n\npublic class Main {\n    public static int park(Car[] lot, Car car) {\n        for (int i = 0; i < lot.length; i++) {\n            if (lot[i] == null) {\n                lot[i] = car;\n                return i;\n            }\n        }\n        return -1;\n    }\n\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        Car[] lot = new Car[n];\n        for (int i = 0; i < n; i++) {\n            String plate = in.next();\n            if (!plate.equals(\"empty\")) {\n                lot[i] = new Car(plate);\n            }\n        }\n        Car newCar = new Car(in.next());\n        int spot = park(lot, newCar);\n        if (spot == -1) {\n            System.out.println(\"Lot is full\");\n        } else {\n            System.out.println(\"Parked in spot \" + spot);\n        }\n        for (int i = 0; i < lot.length; i++) {\n            if (lot[i] == null) {\n                System.out.println(\"empty\");\n            } else {\n                System.out.println(lot[i].plate);\n            }\n        }\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "null",
+      "null-pointer-exception",
+      "searching-arrays"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "classes",
+        "for-loops",
+        "string-equals"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q5/Q5.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q5/Q5.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

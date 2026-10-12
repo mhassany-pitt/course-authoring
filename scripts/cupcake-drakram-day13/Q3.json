@@ -1,0 +1,67 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/Q3/find_book_by_title_free_coding",
+    "title": "Find a Book by Title",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q3/Q3.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "NC State University",
+    "authors": [
+      {
+        "name": "Bita Akram",
+        "affiliation": "NC State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The `Book` class is provided. It has two fields, `title` (a `String`) and `pages` (an `int`), and a constructor `Book(String title, int pages)`.\n\nWrite a method `public static Book findBook(Book[] shelf, String target)` that returns the first book whose `title` equals `target`. If no book matches, return `null`.\n\nThen write `main`. It reads `n`, then `n` books as `title pages` pairs, then `target`. Titles are single words. It calls `findBook` and prints `Pages: ` followed by the found book's `pages`, or `Not found` if there is no match.\n\n**Example 1**\n\nInput:\n```\n3\nDune 412\nEmma 474\nDune 896\nDune\n```\nOutput:\n```\nPages: 412\n```\n\n**Example 2**\n\nInput:\n```\n2\nDune 412\nEmma 474\nUlysses\n```\nOutput:\n```\nNot found\n```",
+    "source_code": "import java.util.Scanner;\n\nclass Book {\n    String title;\n    int pages;\n\n    Book(String title, int pages) {\n        this.title = title;\n        this.pages = pages;\n    }\n}\n\npublic class Main {\n    public static Book findBook(Book[] shelf, String target) {\n        for (int i = 0; i < shelf.length; i++) {\n            if (shelf[i].title.equals(target)) {\n                return shelf[i];\n            }\n        }\n        return null;\n    }\n\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        Book[] shelf = new Book[n];\n        for (int i = 0; i < n; i++) {\n            shelf[i] = new Book(in.next(), in.nextInt());\n        }\n        String target = in.next();\n        Book found = findBook(shelf, target);\n        if (found != null) {\n            System.out.println(\"Pages: \" + found.pages);\n        } else {\n            System.out.println(\"Not found\");\n        }\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "two-phase-initialization",
+      "returning-null",
+      "null-pointer-exception"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "classes",
+        "for-loops",
+        "string-equals"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q3/Q3.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q3/Q3.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

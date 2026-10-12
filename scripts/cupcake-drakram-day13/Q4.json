@@ -1,0 +1,66 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/Q4/sale_price_copy_free_coding",
+    "title": "Make a Sale Price List",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q4/Q4.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "NC State University",
+    "authors": [
+      {
+        "name": "Bita Akram",
+        "affiliation": "NC State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "A store is running a sale: every product is $5 off. It needs a sale price list, but its regular prices must stay the same.\n\nWrite `public static Product[] copyProducts(Product[] products)`. It returns a copy of `products` that doesn't share any `Product` objects with the original.\n\nIn `main`, read the products, copy them, and take $5 off every price in the copy. Then print the regular prices and the sale prices as shown. The input starts with the number of products.\n\n**Example**\n\nInput:\n```\n2\npen 8\nmug 15\n```\nOutput:\n```\nRegular prices:\npen $8\nmug $15\nSale prices:\npen $3\nmug $10\n```",
+    "source_code": "import java.util.Scanner;\n\nclass Product {\n    String name;\n    int price;\n\n    Product(String name, int price) {\n        this.name = name;\n        this.price = price;\n    }\n\n    public String toString() {\n        return name + \" $\" + price;\n    }\n}\n\npublic class Main {\n    public static Product[] copyProducts(Product[] products) {\n        Product[] copy = new Product[products.length];\n        for (int i = 0; i < products.length; i++) {\n            copy[i] = new Product(products[i].name, products[i].price);\n        }\n        return copy;\n    }\n\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int n = in.nextInt();\n        Product[] products = new Product[n];\n        for (int i = 0; i < n; i++) {\n            products[i] = new Product(in.next(), in.nextInt());\n        }\n        Product[] sale = copyProducts(products);\n        for (int i = 0; i < sale.length; i++) {\n            sale[i].price -= 5;\n        }\n        System.out.println(\"Regular prices:\");\n        for (Product p : products) {\n            System.out.println(p);\n        }\n        System.out.println(\"Sale prices:\");\n        for (Product p : sale) {\n            System.out.println(p);\n        }\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "two-phase-initialization",
+      "object-references",
+      "copying-arrays"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "classes",
+        "for-loops"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q4/Q4.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/Q4/Q4.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

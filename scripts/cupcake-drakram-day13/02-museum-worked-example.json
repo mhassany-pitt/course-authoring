@@ -1,0 +1,67 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/arrays-of-objects-activities/we_array_objects_museum",
+    "title": "Museum Labels: Check for Null",
+    "type": "CodeConstruction"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/02-museum-worked-example.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "North Carolina State University",
+    "authors": [
+      {
+        "name": "Aum Pandya",
+        "affiliation": "North Carolina State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "A museum has four displays, but only two have labels.\nPrint each label in uppercase and count the letters in all the labels.\nFollow how the program checks for null so it can skip displays without labels.",
+    "source_code": "public class MuseumLabels {\n    public static void main(String[] args) {\n        String[] labels = new String[4];\n        labels[0] = \"Vase\";\n        labels[2] = \"Map\";\n        int totalLetters = 0;\n        for (int i = 0; i < labels.length; i++) {\n            if (labels[i] != null) {\n                totalLetters += labels[i].length();\n                System.out.println(i + \": \" + labels[i].toUpperCase());\n            } else {\n                System.out.println(i + \": no label\");\n            }\n        }\n        System.out.println(\"Letters: \" + totalLetters);\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "arrays-of-objects",
+      "null",
+      "null-pointer-exception",
+      "null-guards"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "arrays",
+        "loops",
+        "conditional-logic",
+        "methods"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/02-museum-worked-example.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/arrays-of-objects-activities/02-museum-worked-example.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}
