@@ -361,12 +361,6 @@ export class CourseComponent implements OnInit {
     };
   }
 
-  @HostListener('window:scroll')
-  @HostListener('window:resize')
-  onCatalogBrowserViewportChange() {
-    this.scheduleCatalogBrowserPositionRefresh();
-  }
-
   applyResourcesArrangement(map: any) {
     const prevValue = this.course.resources.map((resource: any, index: number) => {
       const { providers, ...rest } = this.cloneValue(resource);
