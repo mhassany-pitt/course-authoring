@@ -1,0 +1,62 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/gillian-python/free_coding_q15",
+    "title": "Arithmetic in condition must be evaluated first to select branch",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q15.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "Carnegie Mellon University",
+    "authors": [
+      {
+        "name": "Abigail Lo",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write Python code that sets balance to 100 and fee to 30. If balance minus fee is greater than or equal to 80, subtract fee from balance and store it back. Otherwise, set fee to 10 and then subtract fee from balance and store it back. Print balance and then print fee.",
+    "source_code": "balance = 100\nfee = 30\nif balance - fee >= 80:\n    balance = balance - fee\nelse:\n    fee = 10\n    balance = balance - fee\nprint(balance)\nprint(fee)\n"
+  },
+  "classification": {
+    "topics": [
+      "arithmetic-in-condition-must-be-evaluated-first-to-select-branch",
+      "both-branches-update-the-same-two-variables-differently"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "basic-syntax"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q15.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q15.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

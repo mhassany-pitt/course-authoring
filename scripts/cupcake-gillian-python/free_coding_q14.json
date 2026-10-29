@@ -1,0 +1,62 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/gillian-python/free_coding_q14",
+    "title": "Two variables both updated inside the if-branch",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q14.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "Carnegie Mellon University",
+    "authors": [
+      {
+        "name": "Abigail Lo",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write Python code that sets x to 8 and y to 3. If x is greater than y, set x to x minus y and add 1 to y. Otherwise, set x to x plus y. Print x and then print y.",
+    "source_code": "x = 8\ny = 3\nif x > y:\n    x = x - y\n    y = y + 1\nelse:\n    x = x + y\nprint(x)\nprint(y)\n"
+  },
+  "classification": {
+    "topics": [
+      "two-variables-both-updated-inside-the-if-branch",
+      "else-branch-updates-only-one"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "basic-syntax"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q14.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q14.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

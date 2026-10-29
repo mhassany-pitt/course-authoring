@@ -1,10 +1,14 @@
 import urllib.request
+import urllib.parse
 import json
 import yaml
 import os
 import sys
+import ssl
 
-# Support loading yaml from /tmp/pylibs if not installed globally
+ssl_context = ssl._create_unverified_context()
+
+# Support loading yaml from /tmp/pylibs or thesis venv if not installed globally
 if "/tmp/pylibs" not in sys.path and os.path.exists("/tmp/pylibs"):
     sys.path.insert(0, "/tmp/pylibs")
 
@@ -20,7 +24,7 @@ TYPE_MAPPING = {
 
 def fetch_json(url):
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-    with urllib.request.urlopen(req) as resp:
+    with urllib.request.urlopen(req, context=ssl_context) as resp:
         return json.loads(resp.read().decode('utf-8'))
 
 def port_all(output_dir="."):
@@ -29,7 +33,7 @@ def port_all(output_dir="."):
     for f in root.get('files', []):
         name = f['name']
         if f.get('isDirectory'):
-            sub = fetch_json(f"{BASE_API}/{name}")
+            sub = fetch_json(f"{BASE_API}/{urllib.parse.quote(name)}")
             for sf in sub.get('files', []):
                 if sf.get('isYaml'):
                     activities.append(f"{name}/{sf['name']}")
@@ -41,7 +45,7 @@ def port_all(output_dir="."):
 
     for rel_path in sorted(activities):
         folder = rel_path.split("/")[0] if "/" in rel_path else ""
-        data = fetch_json(f"{BASE_API}/{rel_path}")
+        data = fetch_json(f"{BASE_API}/{urllib.parse.quote(rel_path)}")
         raw_yaml = data.get("content", "")
         y = yaml.safe_load(raw_yaml)
 
@@ -49,7 +53,7 @@ def port_all(output_dir="."):
         source_file = y.get("source")
         source_code = ""
         if source_file:
-            source_url = f"{BASE_API}/{folder}/{source_file}" if folder else f"{BASE_API}/{source_file}"
+            source_url = f"{BASE_API}/{urllib.parse.quote(folder)}/{urllib.parse.quote(source_file)}" if folder else f"{BASE_API}/{urllib.parse.quote(source_file)}"
             try:
                 sdata = fetch_json(source_url)
                 source_code = sdata.get("content", "")
@@ -96,7 +100,8 @@ def port_all(output_dir="."):
         prog_lang_formatted = "Java" if prog_lang.lower() == "java" else prog_lang.capitalize()
 
         # URLs
-        demo_url = f"https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/{rel_path}"
+        quoted_rel_path = urllib.parse.quote(rel_path, safe='/')
+        demo_url = f"https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/{quoted_rel_path}"
         splice_url = f"{demo_url}?protocol=splice"
 
         yaml_id = y.get("id")
@@ -166,7 +171,13 @@ def port_all(output_dir="."):
             }
         }
 
-        filename = rel_path.split("/")[-1].replace(".yaml", ".json")
+        if rel_path.split("/")[-1] == "free-coding.yaml" and folder:
+            filename = f"{folder}.json"
+        elif folder == "io":
+            filename = "io.json"
+        else:
+            filename = rel_path.split("/")[-1].replace(".yaml", ".json")
+
         out_path = os.path.join(output_dir, filename)
         with open(out_path, "w") as out:
             json.dump(item, out, indent=2)

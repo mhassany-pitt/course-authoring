@@ -1,0 +1,68 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/1 - Step Counter/step_counter_file_input",
+    "title": "Step Counter",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/1%20-%20Step%20Counter/free-coding.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "NC State University",
+    "authors": [
+      {
+        "name": "Bita Akram",
+        "affiliation": "NC State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "The file `steps.txt` holds a person's daily step counts, separated by spaces and line breaks. The number of days is different in every file.\n\nWrite `main` so it reads every count from `steps.txt` and prints the number of days, the total steps, and the average per day with one decimal place.\n\n**Example**\n\n`steps.txt`:\n```\n8000 9500\n12000\n\n7000\n```\nOutput:\n```\nDays: 4\nTotal: 36500\nAverage: 9125.0\n```",
+    "source_code": "import java.io.*;\nimport java.util.*;\n\npublic class Main {\n    // Test setup: creates steps.txt. Don't change.\n    static {\n        try {\n            java.nio.file.Files.copy(System.in,\n                java.nio.file.Paths.get(\"steps.txt\"),\n                java.nio.file.StandardCopyOption.REPLACE_EXISTING);\n        } catch (IOException e) {\n            throw new RuntimeException(e);\n        }\n    }\n\n    public static void main(String[] args) throws FileNotFoundException {\n        Scanner input = new Scanner(new FileInputStream(\"steps.txt\"));\n        int days = 0;\n        int total = 0;\n        while (input.hasNextInt()) {\n            total = total + input.nextInt();\n            days++;\n        }\n        System.out.println(\"Days: \" + days);\n        System.out.println(\"Total: \" + total);\n        System.out.printf(\"Average: %.1f\\n\", (double) total / days);\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "file-input",
+      "fileinputstream",
+      "checked-exceptions",
+      "throws-clause",
+      "token-processing",
+      "hasnext-methods"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "scanner-input",
+        "while-loops",
+        "printf"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/1%20-%20Step%20Counter/free-coding.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/1%20-%20Step%20Counter/free-coding.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

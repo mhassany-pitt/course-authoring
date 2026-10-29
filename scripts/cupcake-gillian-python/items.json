@@ -1,0 +1,1729 @@
+[
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_h01",
+      "title": "Updating a variable using its own value (x = x + n) inside a branch",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h01.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets points to 60. If points is greater than or equal to 60, add 15 to points and store it back. Otherwise, subtract 10 from points and store it back. Print the final value of points.",
+      "source_code": "points = 60\nif points >= 60:\n    points = points + 15\nelse:\n    points = points - 10\nprint(points)\n"
+    },
+    "classification": {
+      "topics": [
+        "updating-a-variable-using-its-own-value-x-x-n-inside-a-branch",
+        "at-a-boundary"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h01.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h01.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_h02",
+      "title": "Two dependent state updates in a branch",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h02.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets a to 5 and b to 9. If a is greater than b, set a to a minus b and add 2 to b. Otherwise, set b to b minus a and add 1 to a. Print a and then print b.",
+      "source_code": "a = 5\nb = 9\nif a > b:\n    a = a - b\n    b = b + 2\nelse:\n    b = b - a\n    a = a + 1\nprint(a)\nprint(b)\n"
+    },
+    "classification": {
+      "topics": [
+        "two-dependent-state-updates-in-a-branch",
+        "tracking-which-variable-changes-first"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h02.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h02.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_h03",
+      "title": "Arithmetic condition decides whether a second variable is reassigned before it is used",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h03.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets savings to 200 and cost to 120. If savings minus cost is greater than or equal to 100, subtract cost from savings and store it back. Otherwise, set cost to 50 and then subtract cost from savings and store it back. Print savings and then print cost.",
+      "source_code": "savings = 200\ncost = 120\nif savings - cost >= 100:\n    savings = savings - cost\nelse:\n    cost = 50\n    savings = savings - cost\nprint(savings)\nprint(cost)\n"
+    },
+    "classification": {
+      "topics": [
+        "arithmetic-condition-decides-whether-a-second-variable-is-reassigned-before-it-is-used"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h03.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h03.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_h04",
+      "title": "Two sequential if statements where the first update changes the second decision",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h04.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets k to 4. If k multiplied by 3 is greater than 10, add 5 to k and store it back. Otherwise, subtract 1 from k and store it back. Then, in a separate if statement, if k is less than 10, subtract 3 from k and store it back. Print the final value of k.",
+      "source_code": "k = 4\nif k * 3 > 10:\n    k = k + 5\nelse:\n    k = k - 1\nif k < 10:\n    k = k - 3\nprint(k)\n"
+    },
+    "classification": {
+      "topics": [
+        "two-sequential-if-statements-where-the-first-update-changes-the-second-decision"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h04.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h04.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_h05",
+      "title": "Division in the condition",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h05.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets x to 6 and y to 2. If x divided by y is greater than or equal to 3, set y to y plus x, and then set x to x minus y. Otherwise, set x to 0. Print x and then print y.",
+      "source_code": "x = 6\ny = 2\nif x / y >= 3:\n    y = y + x\n    x = x - y\nelse:\n    x = 0\nprint(x)\nprint(y)\n"
+    },
+    "classification": {
+      "topics": [
+        "division-in-the-condition",
+        "second-update-in-the-branch-uses-the-just-updated-variable-can-go-negative"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h05.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h05.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_h06",
+      "title": "State updates inside an if/elif/else chain",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h06.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets level to 3 and xp to 250. If xp is greater than or equal to 300, add 2 to level and store it back. Else if xp is greater than or equal to 200, add 1 to level and subtract 200 from xp, storing both back. Otherwise, set xp to 0. Print level and then print xp.",
+      "source_code": "level = 3\nxp = 250\nif xp >= 300:\n    level = level + 2\nelif xp >= 200:\n    level = level + 1\n    xp = xp - 200\nelse:\n    xp = 0\nprint(level)\nprint(xp)\n"
+    },
+    "classification": {
+      "topics": [
+        "state-updates-inside-an-if-elif-else-chain",
+        "one-branch-updates-two-variables"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h06.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h06.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_h07",
+      "title": "Swapping two values with a temporary variable inside a branch",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h07.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets a to 10 and b to 3. If a minus b is greater than 5, swap the values of a and b using a variable named temp (set temp to a, then set a to b, then set b to temp). Otherwise, add 1 to a and add 1 to b. Print a and then print b.",
+      "source_code": "a = 10\nb = 3\nif a - b > 5:\n    temp = a\n    a = b\n    b = temp\nelse:\n    a = a + 1\n    b = b + 1\nprint(a)\nprint(b)\n"
+    },
+    "classification": {
+      "topics": [
+        "swapping-two-values-with-a-temporary-variable-inside-a-branch"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h07.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h07.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_h08",
+      "title": "Equality check with arithmetic, then a second if/else that depends on the updated value",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h08.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets count to 9. If count plus 1 is equal to 10, multiply count by 2 and store it back. Then, in a separate if statement, if count is greater than 15, subtract 4 from count and store it back. Otherwise, add 4 to count and store it back. Print the final value of count.",
+      "source_code": "count = 9\nif count + 1 == 10:\n    count = count * 2\nif count > 15:\n    count = count - 4\nelse:\n    count = count + 4\nprint(count)\n"
+    },
+    "classification": {
+      "topics": [
+        "equality-check-with-arithmetic",
+        "then-a-second-if-else-that-depends-on-the-updated-value"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h08.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h08.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_h09",
+      "title": "Multiple sequential updates to one variable plus a string assignment within a branch",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h09.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets stock to 12 and order to 5. If stock minus order is greater than or equal to 10, subtract order from stock and store it back, then assign status the value 'OK'. Otherwise, subtract order from stock and store it back, then add 20 to stock and store it back, then assign status the value 'Restocked'. Print stock and then print status.",
+      "source_code": "stock = 12\norder = 5\nif stock - order >= 10:\n    stock = stock - order\n    status = 'OK'\nelse:\n    stock = stock - order\n    stock = stock + 20\n    status = 'Restocked'\nprint(stock)\nprint(status)\n"
+    },
+    "classification": {
+      "topics": [
+        "multiple-sequential-updates-to-one-variable-plus-a-string-assignment-within-a-branch"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h09.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h09.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_h10",
+      "title": "Integration: conditional update followed by an if/elif/else on the updated values",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h10.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets x to 4 and y to 7. If x multiplied by 2 is greater than y, set x to x plus y. Otherwise, set y to y minus x. Then, in a separate if statement, if x plus y is greater than 20, print 'High'. Else if x plus y is greater than 12, print 'Mid'. Otherwise, print 'Low'. Finally, print x and then print y.",
+      "source_code": "x = 4\ny = 7\nif x * 2 > y:\n    x = x + y\nelse:\n    y = y - x\nif x + y > 20:\n    print('High')\nelif x + y > 12:\n    print('Mid')\nelse:\n    print('Low')\nprint(x)\nprint(y)\n"
+    },
+    "classification": {
+      "topics": [
+        "integration-conditional-update-followed-by-an-if-elif-else-on-the-updated-values"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h10.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h10.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_m01",
+      "title": "Addition inside a comparison",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m01.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets m to 9 and n to 7. If m plus n is greater than 16, assign result the value 1. Otherwise, assign result the value 0. Print result.",
+      "source_code": "m = 9\nn = 7\nif m + n > 16:\n    result = 1\nelse:\n    result = 0\nprint(result)\n"
+    },
+    "classification": {
+      "topics": [
+        "addition-inside-a-comparison",
+        "strict-greater-than-at-an-equality-boundary"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m01.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m01.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_m02",
+      "title": "Subtraction inside a comparison",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m02.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets cost to 50 and discount to 15. If cost minus discount is less than 40, print 'Deal'. Otherwise, print 'No deal'.",
+      "source_code": "cost = 50\ndiscount = 15\nif cost - discount < 40:\n    print('Deal')\nelse:\n    print('No deal')\n"
+    },
+    "classification": {
+      "topics": [
+        "subtraction-inside-a-comparison",
+        "less-than",
+        "printing-in-branches"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m02.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m02.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_m03",
+      "title": "Multiplication inside an equality comparison (==) vs. assignment (=)",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m03.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets w to 7 and h to 3. If w multiplied by h is equal to 21, print 'Match'. Otherwise, print 'No match'.",
+      "source_code": "w = 7\nh = 3\nif w * h == 21:\n    print('Match')\nelse:\n    print('No match')\n"
+    },
+    "classification": {
+      "topics": [
+        "multiplication-inside-an-equality-comparison-vs-assignment"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m03.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m03.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_m04",
+      "title": "Division producing a decimal inside a comparison",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m04.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets total to 20 and people to 8. If total divided by people is greater than or equal to 2.5, assign share_label the value 'Fair'. Otherwise, assign share_label the value 'Unfair'. Print share_label.",
+      "source_code": "total = 20\npeople = 8\nif total / people >= 2.5:\n    share_label = 'Fair'\nelse:\n    share_label = 'Unfair'\nprint(share_label)\n"
+    },
+    "classification": {
+      "topics": [
+        "division-producing-a-decimal-inside-a-comparison",
+        "at-a-boundary",
+        "assigning-a-string"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m04.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m04.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_m05",
+      "title": "Multiplication in an if/elif/else chain",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m05.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets a to 6 and b to 4. If a multiplied by b is greater than 30, print 'Large'. Else if a multiplied by b is greater than 20, print 'Medium'. Otherwise, print 'Small'.",
+      "source_code": "a = 6\nb = 4\nif a * b > 30:\n    print('Large')\nelif a * b > 20:\n    print('Medium')\nelse:\n    print('Small')\n"
+    },
+    "classification": {
+      "topics": [
+        "multiplication-in-an-if-elif-else-chain",
+        "top-down-evaluation-of-conditions"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m05.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m05.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_m06",
+      "title": "Different arithmetic in each condition of an if/elif/else chain",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m06.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets temp to 68 and change to 5. If temp plus change is greater than or equal to 75, assign status the value 'Hot'. Else if temp minus change is less than 60, assign status the value 'Cold'. Otherwise, assign status the value 'Mild'. Print status.",
+      "source_code": "temp = 68\nchange = 5\nif temp + change >= 75:\n    status = 'Hot'\nelif temp - change < 60:\n    status = 'Cold'\nelse:\n    status = 'Mild'\nprint(status)\n"
+    },
+    "classification": {
+      "topics": [
+        "different-arithmetic-in-each-condition-of-an-if-elif-else-chain"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m06.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m06.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_m07",
+      "title": "Arithmetic on both sides of a comparison",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m07.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets x to 10 and y to 4. If x minus y is greater than y plus 2, print 'Left'. Otherwise, print 'Right'.",
+      "source_code": "x = 10\ny = 4\nif x - y > y + 2:\n    print('Left')\nelse:\n    print('Right')\n"
+    },
+    "classification": {
+      "topics": [
+        "arithmetic-on-both-sides-of-a-comparison",
+        "strict-at-equality"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m07.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m07.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_m08",
+      "title": "Division vs. multiplication on opposite sides of a comparison",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m08.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets p to 18 and q to 3. If p divided by q is less than q multiplied by 2, assign result the value 'A'. Otherwise, assign result the value 'B'. Print result.",
+      "source_code": "p = 18\nq = 3\nif p / q < q * 2:\n    result = 'A'\nelse:\n    result = 'B'\nprint(result)\n"
+    },
+    "classification": {
+      "topics": [
+        "division-vs-multiplication-on-opposite-sides-of-a-comparison",
+        "decimal-vs-whole-number-equality"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m08.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m08.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_m09",
+      "title": "Order of operations (parentheses vs. * before +) inside a comparison",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m09.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets a to 3 and b to 5. If the sum of a and b, multiplied by 2, is greater than 15, print 'Yes'. Otherwise, print 'No'.",
+      "source_code": "a = 3\nb = 5\nif (a + b) * 2 > 15:\n    print('Yes')\nelse:\n    print('No')\n"
+    },
+    "classification": {
+      "topics": [
+        "order-of-operations-parentheses-vs-before-inside-a-comparison"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m09.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m09.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_m10",
+      "title": "Division repeated in an if/elif/else chain",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m10.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets distance to 100 and time to 8. If distance divided by time is greater than 15, assign label the value 'Fast'. Else if distance divided by time is greater than 10, assign label the value 'Moderate'. Otherwise, assign label the value 'Slow'. Print label.",
+      "source_code": "distance = 100\ntime = 8\nif distance / time > 15:\n    label = 'Fast'\nelif distance / time > 10:\n    label = 'Moderate'\nelse:\n    label = 'Slow'\nprint(label)\n"
+    },
+    "classification": {
+      "topics": [
+        "division-repeated-in-an-if-elif-else-chain",
+        "decimal-result-between-thresholds"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m10.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m10.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_q09",
+      "title": "Arithmetic expression (addition) evaluated inside if condition",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q09.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets x to 12 and y to 5. If x plus y is greater than 15, assign result the value 1. Otherwise, assign result the value 0. Print result.",
+      "source_code": "x = 12\ny = 5\nif x + y > 15:\n    result = 1\nelse:\n    result = 0\nprint(result)\n"
+    },
+    "classification": {
+      "topics": [
+        "arithmetic-expression-addition-evaluated-inside-if-condition"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q09.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q09.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_q10",
+      "title": "Arithmetic expression (subtraction) evaluated inside if condition",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q10.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets price to 30 and budget to 25. If price minus 10 is less than or equal to budget, print 'Affordable'. Otherwise, print 'Too expensive'.",
+      "source_code": "price = 30\nbudget = 25\nif price - 10 <= budget:\n    print('Affordable')\nelse:\n    print('Too expensive')\n"
+    },
+    "classification": {
+      "topics": [
+        "arithmetic-expression-subtraction-evaluated-inside-if-condition"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q10.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q10.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_q11",
+      "title": "Arithmetic expression (multiplication) evaluated inside if condition",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q11.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets a to 4 and b to 6. If a multiplied by b is greater than or equal to 25, print 'Big'. Otherwise, print 'Small'.",
+      "source_code": "a = 4\nb = 6\nif a * b >= 25:\n    print('Big')\nelse:\n    print('Small')\n"
+    },
+    "classification": {
+      "topics": [
+        "arithmetic-expression-multiplication-evaluated-inside-if-condition"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q11.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q11.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_q12",
+      "title": "Arithmetic expression (division) evaluated inside if condition",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q12.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets p to 15 and q to 4. If p divided by q is greater than 3, assign label the value 'High'. Otherwise, assign label the value 'Low'. Print label.",
+      "source_code": "p = 15\nq = 4\nif p / q > 3:\n    label = 'High'\nelse:\n    label = 'Low'\nprint(label)\n"
+    },
+    "classification": {
+      "topics": [
+        "arithmetic-expression-division-evaluated-inside-if-condition",
+        "float-comparison"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q12.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q12.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_q13",
+      "title": "Single variable updated inside if/else branch",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q13.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets score to 45. If score is greater than or equal to 50, add 10 to score and store it back. Otherwise, subtract 5 from score and store it back. Print the final value of score.",
+      "source_code": "score = 45\nif score >= 50:\n    score = score + 10\nelse:\n    score = score - 5\nprint(score)\n"
+    },
+    "classification": {
+      "topics": [
+        "single-variable-updated-inside-if-else-branch",
+        "must-determine-which-branch-executes"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q13.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q13.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_q14",
+      "title": "Two variables both updated inside the if-branch",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q14.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets x to 8 and y to 3. If x is greater than y, set x to x minus y and add 1 to y. Otherwise, set x to x plus y. Print x and then print y.",
+      "source_code": "x = 8\ny = 3\nif x > y:\n    x = x - y\n    y = y + 1\nelse:\n    x = x + y\nprint(x)\nprint(y)\n"
+    },
+    "classification": {
+      "topics": [
+        "two-variables-both-updated-inside-the-if-branch",
+        "else-branch-updates-only-one"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q14.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q14.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_q15",
+      "title": "Arithmetic in condition must be evaluated first to select branch",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q15.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets balance to 100 and fee to 30. If balance minus fee is greater than or equal to 80, subtract fee from balance and store it back. Otherwise, set fee to 10 and then subtract fee from balance and store it back. Print balance and then print fee.",
+      "source_code": "balance = 100\nfee = 30\nif balance - fee >= 80:\n    balance = balance - fee\nelse:\n    fee = 10\n    balance = balance - fee\nprint(balance)\nprint(fee)\n"
+    },
+    "classification": {
+      "topics": [
+        "arithmetic-in-condition-must-be-evaluated-first-to-select-branch",
+        "both-branches-update-the-same-two-variables-differently"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q15.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q15.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/gillian-python/free_coding_q16",
+      "title": "Two sequential independent if/else blocks",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q16.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "Carnegie Mellon University",
+      "authors": [
+        {
+          "name": "Abigail Lo",
+          "affiliation": "Carnegie Mellon University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Python"
+      ]
+    },
+    "content": {
+      "prompt": "Write Python code that sets n to 7. If n multiplied by 2 is greater than 15, add 3 to n and store it back. Otherwise, subtract 2 from n and store it back. Then, in a separate if statement, if n is greater than 8, multiply n by 2 and store it back. Print the final value of n.",
+      "source_code": "n = 7\nif n * 2 > 15:\n    n = n + 3\nelse:\n    n = n - 2\nif n > 8:\n    n = n * 2\nprint(n)\n"
+    },
+    "classification": {
+      "topics": [
+        "two-sequential-independent-if-else-blocks",
+        "output-of-first-block-determines-input-of-second"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "basic-syntax"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q16.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_q16.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  }
+]

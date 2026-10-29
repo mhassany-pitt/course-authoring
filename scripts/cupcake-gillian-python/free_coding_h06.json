@@ -1,0 +1,62 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/gillian-python/free_coding_h06",
+    "title": "State updates inside an if/elif/else chain",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h06.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "Carnegie Mellon University",
+    "authors": [
+      {
+        "name": "Abigail Lo",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write Python code that sets level to 3 and xp to 250. If xp is greater than or equal to 300, add 2 to level and store it back. Else if xp is greater than or equal to 200, add 1 to level and subtract 200 from xp, storing both back. Otherwise, set xp to 0. Print level and then print xp.",
+    "source_code": "level = 3\nxp = 250\nif xp >= 300:\n    level = level + 2\nelif xp >= 200:\n    level = level + 1\n    xp = xp - 200\nelse:\n    xp = 0\nprint(level)\nprint(xp)\n"
+  },
+  "classification": {
+    "topics": [
+      "state-updates-inside-an-if-elif-else-chain",
+      "one-branch-updates-two-variables"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "basic-syntax"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h06.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h06.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

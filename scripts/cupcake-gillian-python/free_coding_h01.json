@@ -1,0 +1,62 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/gillian-python/free_coding_h01",
+    "title": "Updating a variable using its own value (x = x + n) inside a branch",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h01.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "Carnegie Mellon University",
+    "authors": [
+      {
+        "name": "Abigail Lo",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write Python code that sets points to 60. If points is greater than or equal to 60, add 15 to points and store it back. Otherwise, subtract 10 from points and store it back. Print the final value of points.",
+    "source_code": "points = 60\nif points >= 60:\n    points = points + 15\nelse:\n    points = points - 10\nprint(points)\n"
+  },
+  "classification": {
+    "topics": [
+      "updating-a-variable-using-its-own-value-x-x-n-inside-a-branch",
+      "at-a-boundary"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "basic-syntax"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h01.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h01.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

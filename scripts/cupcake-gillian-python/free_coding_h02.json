@@ -1,0 +1,62 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/gillian-python/free_coding_h02",
+    "title": "Two dependent state updates in a branch",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h02.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "Carnegie Mellon University",
+    "authors": [
+      {
+        "name": "Abigail Lo",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write Python code that sets a to 5 and b to 9. If a is greater than b, set a to a minus b and add 2 to b. Otherwise, set b to b minus a and add 1 to a. Print a and then print b.",
+    "source_code": "a = 5\nb = 9\nif a > b:\n    a = a - b\n    b = b + 2\nelse:\n    b = b - a\n    a = a + 1\nprint(a)\nprint(b)\n"
+  },
+  "classification": {
+    "topics": [
+      "two-dependent-state-updates-in-a-branch",
+      "tracking-which-variable-changes-first"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "basic-syntax"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h02.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h02.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

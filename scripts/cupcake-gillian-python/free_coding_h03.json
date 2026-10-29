@@ -1,0 +1,61 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/gillian-python/free_coding_h03",
+    "title": "Arithmetic condition decides whether a second variable is reassigned before it is used",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h03.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "Carnegie Mellon University",
+    "authors": [
+      {
+        "name": "Abigail Lo",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write Python code that sets savings to 200 and cost to 120. If savings minus cost is greater than or equal to 100, subtract cost from savings and store it back. Otherwise, set cost to 50 and then subtract cost from savings and store it back. Print savings and then print cost.",
+    "source_code": "savings = 200\ncost = 120\nif savings - cost >= 100:\n    savings = savings - cost\nelse:\n    cost = 50\n    savings = savings - cost\nprint(savings)\nprint(cost)\n"
+  },
+  "classification": {
+    "topics": [
+      "arithmetic-condition-decides-whether-a-second-variable-is-reassigned-before-it-is-used"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "basic-syntax"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h03.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h03.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

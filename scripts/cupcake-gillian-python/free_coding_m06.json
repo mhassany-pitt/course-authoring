@@ -1,0 +1,61 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/gillian-python/free_coding_m06",
+    "title": "Different arithmetic in each condition of an if/elif/else chain",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m06.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "Carnegie Mellon University",
+    "authors": [
+      {
+        "name": "Abigail Lo",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write Python code that sets temp to 68 and change to 5. If temp plus change is greater than or equal to 75, assign status the value 'Hot'. Else if temp minus change is less than 60, assign status the value 'Cold'. Otherwise, assign status the value 'Mild'. Print status.",
+    "source_code": "temp = 68\nchange = 5\nif temp + change >= 75:\n    status = 'Hot'\nelif temp - change < 60:\n    status = 'Cold'\nelse:\n    status = 'Mild'\nprint(status)\n"
+  },
+  "classification": {
+    "topics": [
+      "different-arithmetic-in-each-condition-of-an-if-elif-else-chain"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "basic-syntax"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m06.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_m06.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

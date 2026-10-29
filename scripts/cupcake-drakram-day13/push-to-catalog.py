@@ -18,7 +18,7 @@ def get_api_token():
             return f.read().splitlines()[0].strip()
     raise FileNotFoundError("Could not find api_token.txt or SLCS_CATALOG_API_TOKENS.txt")
 
-def push_all():
+def push_all(target_file=None):
     token = get_api_token()
     headers = {
         "Content-Type": "application/json",
@@ -26,9 +26,15 @@ def push_all():
         "api-user-email": API_USER_EMAIL,
     }
 
-    items_path = os.path.join(os.path.dirname(__file__), "items.json")
-    with open(items_path) as f:
-        items = json.load(f)
+    if target_file:
+        file_path = os.path.abspath(target_file) if os.path.isabs(target_file) else os.path.join(os.path.dirname(__file__), target_file)
+        with open(file_path) as f:
+            data = json.load(f)
+            items = data if isinstance(data, list) else [data]
+    else:
+        items_path = os.path.join(os.path.dirname(__file__), "items.json")
+        with open(items_path) as f:
+            items = json.load(f)
 
     print(f"Pushing {len(items)} items to {API_BASE}/slc-items-api as {API_USER_EMAIL}...\n")
     results = []
@@ -69,4 +75,5 @@ def push_all():
     return results
 
 if __name__ == "__main__":
-    push_all()
+    target = sys.argv[1] if len(sys.argv) > 1 else None
+    push_all(target)

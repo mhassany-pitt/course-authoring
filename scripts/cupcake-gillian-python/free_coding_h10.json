@@ -1,0 +1,61 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/gillian-python/free_coding_h10",
+    "title": "Integration: conditional update followed by an if/elif/else on the updated values",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h10.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "Carnegie Mellon University",
+    "authors": [
+      {
+        "name": "Abigail Lo",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write Python code that sets x to 4 and y to 7. If x multiplied by 2 is greater than y, set x to x plus y. Otherwise, set y to y minus x. Then, in a separate if statement, if x plus y is greater than 20, print 'High'. Else if x plus y is greater than 12, print 'Mid'. Otherwise, print 'Low'. Finally, print x and then print y.",
+    "source_code": "x = 4\ny = 7\nif x * 2 > y:\n    x = x + y\nelse:\n    y = y - x\nif x + y > 20:\n    print('High')\nelif x + y > 12:\n    print('Mid')\nelse:\n    print('Low')\nprint(x)\nprint(y)\n"
+  },
+  "classification": {
+    "topics": [
+      "integration-conditional-update-followed-by-an-if-elif-else-on-the-updated-values"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "basic-syntax"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h10.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h10.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

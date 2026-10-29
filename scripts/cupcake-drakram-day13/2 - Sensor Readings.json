@@ -1,0 +1,69 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/2 - Sensor Readings/sensor_readings_file_input",
+    "title": "Sensor Readings",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/2%20-%20Sensor%20Readings/free-coding.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "NC State University",
+    "authors": [
+      {
+        "name": "Bita Akram",
+        "affiliation": "NC State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "A temperature sensor saves its readings in `readings.txt`. When the sensor glitches, it writes an error token such as `ERR` or `--` instead of a number.\n\nWrite `main` so it reads `readings.txt` and prints how many readings are valid, how many are errors, and the highest valid reading with one decimal place. Every file has at least one valid reading.\n\n**Example**\n\n`readings.txt`:\n```\n71.5 ERR 73.2\n--\n70.8 74.0 ERR\n```\nOutput:\n```\nValid readings: 4\nErrors: 3\nHighest: 74.0\n```",
+    "source_code": "import java.io.*;\nimport java.util.*;\n\npublic class Main {\n    // Test setup: creates readings.txt. Don't change.\n    static {\n        try {\n            java.nio.file.Files.copy(System.in,\n                java.nio.file.Paths.get(\"readings.txt\"),\n                java.nio.file.StandardCopyOption.REPLACE_EXISTING);\n        } catch (IOException e) {\n            throw new RuntimeException(e);\n        }\n    }\n\n    public static void main(String[] args) throws FileNotFoundException {\n        Scanner input = new Scanner(new FileInputStream(\"readings.txt\"));\n        int valid = 0;\n        int errors = 0;\n        double highest = 0.0;\n        while (input.hasNext()) {\n            if (input.hasNextDouble()) {\n                double reading = input.nextDouble();\n                if (valid == 0 || reading > highest) {\n                    highest = reading;\n                }\n                valid++;\n            } else {\n                input.next();\n                errors++;\n            }\n        }\n        System.out.println(\"Valid readings: \" + valid);\n        System.out.println(\"Errors: \" + errors);\n        System.out.printf(\"Highest: %.1f\\n\", highest);\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "file-input",
+      "fileinputstream",
+      "throws-clause",
+      "token-processing",
+      "hasnext-methods",
+      "skipping-bad-tokens"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "scanner-input",
+        "while-loops",
+        "if-else",
+        "printf"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/2%20-%20Sensor%20Readings/free-coding.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/2%20-%20Sensor%20Readings/free-coding.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/3 - Grade Report/grade_report_file_input",
+    "title": "Grade Report",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/3%20-%20Grade%20Report/free-coding.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "NC State University",
+    "authors": [
+      {
+        "name": "Bita Akram",
+        "affiliation": "NC State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Each record in `grades.txt` is a student's name followed by three exam scores. The number of students is different in every file.\n\nWrite `main` so it reads `grades.txt` and prints each student's name and average score with one decimal place.\n\n**Example**\n\n`grades.txt`:\n```\nAna 90 85 77\nBen 70 80 90\nCy 100 95 98\n```\nOutput:\n```\nAna: 84.0\nBen: 80.0\nCy: 97.7\n```",
+    "source_code": "import java.io.*;\nimport java.util.*;\n\npublic class Main {\n    // Test setup: creates grades.txt. Don't change.\n    static {\n        try {\n            java.nio.file.Files.copy(System.in,\n                java.nio.file.Paths.get(\"grades.txt\"),\n                java.nio.file.StandardCopyOption.REPLACE_EXISTING);\n        } catch (IOException e) {\n            throw new RuntimeException(e);\n        }\n    }\n\n    public static void main(String[] args) throws FileNotFoundException {\n        Scanner input = new Scanner(new FileInputStream(\"grades.txt\"));\n        while (input.hasNext()) {\n            String name = input.next();\n            int sum = input.nextInt() + input.nextInt() + input.nextInt();\n            System.out.printf(\"%s: %.1f\\n\", name, sum / 3.0);\n        }\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "file-input",
+      "fileinputstream",
+      "throws-clause",
+      "token-processing",
+      "hasnext-methods"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "scanner-input",
+        "while-loops",
+        "printf"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/3%20-%20Grade%20Report/free-coding.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/3%20-%20Grade%20Report/free-coding.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

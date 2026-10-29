@@ -1,0 +1,67 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/5 - Word Stats/word_stats_file_input",
+    "title": "Word Stats",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/5%20-%20Word%20Stats/free-coding.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "NC State University",
+    "authors": [
+      {
+        "name": "Bita Akram",
+        "affiliation": "NC State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "A word is any token in a file, so `42` and `well,` each count as one word.\n\nWrite `main` so it reads `essay.txt` and prints how many words it has and its longest word. If several words tie for longest, print the first one. Every file has at least one word.\n\n**Example**\n\n`essay.txt`:\n```\nThe quick brown\nfox jumps over\nthe lazy dog\n```\nOutput:\n```\nWords: 9\nLongest: quick\n```",
+    "source_code": "import java.io.*;\nimport java.util.*;\n\npublic class Main {\n    // Test setup: creates essay.txt. Don't change.\n    static {\n        try {\n            java.nio.file.Files.copy(System.in,\n                java.nio.file.Paths.get(\"essay.txt\"),\n                java.nio.file.StandardCopyOption.REPLACE_EXISTING);\n        } catch (IOException e) {\n            throw new RuntimeException(e);\n        }\n    }\n\n    public static void main(String[] args) throws FileNotFoundException {\n        Scanner input = new Scanner(new FileInputStream(\"essay.txt\"));\n        int count = 0;\n        String longest = \"\";\n        while (input.hasNext()) {\n            String word = input.next();\n            count++;\n            if (word.length() > longest.length()) {\n                longest = word;\n            }\n        }\n        System.out.println(\"Words: \" + count);\n        System.out.println(\"Longest: \" + longest);\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "file-input",
+      "fileinputstream",
+      "throws-clause",
+      "token-processing",
+      "hasnext-methods"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "scanner-input",
+        "while-loops",
+        "strings"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/5%20-%20Word%20Stats/free-coding.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/5%20-%20Word%20Stats/free-coding.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

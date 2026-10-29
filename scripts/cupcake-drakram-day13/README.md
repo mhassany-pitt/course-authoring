@@ -1,6 +1,6 @@
 # Cupcake Activities: drakram-day13 (Ported to SLC Catalog)
 
-This folder contains ported JSON definitions for the 15 activities from the Cupcake collection [drakram-day13](https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13), ready for ingestion into the SLC Catalog V2.
+This folder contains ported JSON definitions for the 20 activities from the Cupcake collection [drakram-day13](https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13), ready for ingestion into the SLC Catalog V2.
 
 ## Activity Breakdown
 
@@ -21,6 +21,11 @@ This folder contains ported JSON definitions for the 15 activities from the Cupc
 | 13 | `6acc54b70e3927e0428ff3b3` | `08-seat-map-code-tracing.json` | Trace a Partly Booked Seat Map | `PredictingFinalResult` | Aum Pandya (North Carolina State University) |
 | 14 | `6acc54b70e3927e0428ff3b5` | `09-initials-code-tracing.json` | Trace Initials Built from a Sparse String Array | `PredictingFinalResult` | Aum Pandya (North Carolina State University) |
 | 15 | `6acc54b70e3927e0428ff3b7` | `10-click-counters-code-tracing.json` | Trace Shared vs. Separate Counter Objects | `PredictingFinalResult` | Aum Pandya (North Carolina State University) |
+| 16 | `6ade7e5ac9f8033b2d2adc3d` | `1 - Step Counter.json` | Step Counter | `FreeCodingProblems` | Bita Akram (NC State University) |
+| 17 | `6ade7e5ec9f8033b2d2adc3f` | `2 - Sensor Readings.json` | Sensor Readings | `FreeCodingProblems` | Bita Akram (NC State University) |
+| 18 | `6ade7e5ec9f8033b2d2adc41` | `3 - Grade Report.json` | Grade Report | `FreeCodingProblems` | Bita Akram (NC State University) |
+| 19 | `6ade7e5fc9f8033b2d2adc43` | `4 - Inventory Value.json` | Inventory Value | `FreeCodingProblems` | Bita Akram (NC State University) |
+| 20 | `6ade7e5fc9f8033b2d2adc45` | `5 - Word Stats.json` | Word Stats | `FreeCodingProblems` | Bita Akram (NC State University) |
 
 ## Delivery URLs
 Each activity item includes dual delivery protocols:

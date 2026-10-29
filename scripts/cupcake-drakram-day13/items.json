@@ -2,6 +2,346 @@
   {
     "status": "public",
     "identity": {
+      "id": "cupcake/drakram-day13/1 - Step Counter/step_counter_file_input",
+      "title": "Step Counter",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/1%20-%20Step%20Counter/free-coding.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "NC State University",
+      "authors": [
+        {
+          "name": "Bita Akram",
+          "affiliation": "NC State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "The file `steps.txt` holds a person's daily step counts, separated by spaces and line breaks. The number of days is different in every file.\n\nWrite `main` so it reads every count from `steps.txt` and prints the number of days, the total steps, and the average per day with one decimal place.\n\n**Example**\n\n`steps.txt`:\n```\n8000 9500\n12000\n\n7000\n```\nOutput:\n```\nDays: 4\nTotal: 36500\nAverage: 9125.0\n```",
+      "source_code": "import java.io.*;\nimport java.util.*;\n\npublic class Main {\n    // Test setup: creates steps.txt. Don't change.\n    static {\n        try {\n            java.nio.file.Files.copy(System.in,\n                java.nio.file.Paths.get(\"steps.txt\"),\n                java.nio.file.StandardCopyOption.REPLACE_EXISTING);\n        } catch (IOException e) {\n            throw new RuntimeException(e);\n        }\n    }\n\n    public static void main(String[] args) throws FileNotFoundException {\n        Scanner input = new Scanner(new FileInputStream(\"steps.txt\"));\n        int days = 0;\n        int total = 0;\n        while (input.hasNextInt()) {\n            total = total + input.nextInt();\n            days++;\n        }\n        System.out.println(\"Days: \" + days);\n        System.out.println(\"Total: \" + total);\n        System.out.printf(\"Average: %.1f\\n\", (double) total / days);\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "file-input",
+        "fileinputstream",
+        "checked-exceptions",
+        "throws-clause",
+        "token-processing",
+        "hasnext-methods"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "scanner-input",
+          "while-loops",
+          "printf"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/1%20-%20Step%20Counter/free-coding.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/1%20-%20Step%20Counter/free-coding.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/2 - Sensor Readings/sensor_readings_file_input",
+      "title": "Sensor Readings",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/2%20-%20Sensor%20Readings/free-coding.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "NC State University",
+      "authors": [
+        {
+          "name": "Bita Akram",
+          "affiliation": "NC State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "A temperature sensor saves its readings in `readings.txt`. When the sensor glitches, it writes an error token such as `ERR` or `--` instead of a number.\n\nWrite `main` so it reads `readings.txt` and prints how many readings are valid, how many are errors, and the highest valid reading with one decimal place. Every file has at least one valid reading.\n\n**Example**\n\n`readings.txt`:\n```\n71.5 ERR 73.2\n--\n70.8 74.0 ERR\n```\nOutput:\n```\nValid readings: 4\nErrors: 3\nHighest: 74.0\n```",
+      "source_code": "import java.io.*;\nimport java.util.*;\n\npublic class Main {\n    // Test setup: creates readings.txt. Don't change.\n    static {\n        try {\n            java.nio.file.Files.copy(System.in,\n                java.nio.file.Paths.get(\"readings.txt\"),\n                java.nio.file.StandardCopyOption.REPLACE_EXISTING);\n        } catch (IOException e) {\n            throw new RuntimeException(e);\n        }\n    }\n\n    public static void main(String[] args) throws FileNotFoundException {\n        Scanner input = new Scanner(new FileInputStream(\"readings.txt\"));\n        int valid = 0;\n        int errors = 0;\n        double highest = 0.0;\n        while (input.hasNext()) {\n            if (input.hasNextDouble()) {\n                double reading = input.nextDouble();\n                if (valid == 0 || reading > highest) {\n                    highest = reading;\n                }\n                valid++;\n            } else {\n                input.next();\n                errors++;\n            }\n        }\n        System.out.println(\"Valid readings: \" + valid);\n        System.out.println(\"Errors: \" + errors);\n        System.out.printf(\"Highest: %.1f\\n\", highest);\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "file-input",
+        "fileinputstream",
+        "throws-clause",
+        "token-processing",
+        "hasnext-methods",
+        "skipping-bad-tokens"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "scanner-input",
+          "while-loops",
+          "if-else",
+          "printf"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/2%20-%20Sensor%20Readings/free-coding.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/2%20-%20Sensor%20Readings/free-coding.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/3 - Grade Report/grade_report_file_input",
+      "title": "Grade Report",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/3%20-%20Grade%20Report/free-coding.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "NC State University",
+      "authors": [
+        {
+          "name": "Bita Akram",
+          "affiliation": "NC State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "Each record in `grades.txt` is a student's name followed by three exam scores. The number of students is different in every file.\n\nWrite `main` so it reads `grades.txt` and prints each student's name and average score with one decimal place.\n\n**Example**\n\n`grades.txt`:\n```\nAna 90 85 77\nBen 70 80 90\nCy 100 95 98\n```\nOutput:\n```\nAna: 84.0\nBen: 80.0\nCy: 97.7\n```",
+      "source_code": "import java.io.*;\nimport java.util.*;\n\npublic class Main {\n    // Test setup: creates grades.txt. Don't change.\n    static {\n        try {\n            java.nio.file.Files.copy(System.in,\n                java.nio.file.Paths.get(\"grades.txt\"),\n                java.nio.file.StandardCopyOption.REPLACE_EXISTING);\n        } catch (IOException e) {\n            throw new RuntimeException(e);\n        }\n    }\n\n    public static void main(String[] args) throws FileNotFoundException {\n        Scanner input = new Scanner(new FileInputStream(\"grades.txt\"));\n        while (input.hasNext()) {\n            String name = input.next();\n            int sum = input.nextInt() + input.nextInt() + input.nextInt();\n            System.out.printf(\"%s: %.1f\\n\", name, sum / 3.0);\n        }\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "file-input",
+        "fileinputstream",
+        "throws-clause",
+        "token-processing",
+        "hasnext-methods"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "scanner-input",
+          "while-loops",
+          "printf"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/3%20-%20Grade%20Report/free-coding.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/3%20-%20Grade%20Report/free-coding.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/4 - Inventory Value/inventory_value_file_input",
+      "title": "Inventory Value",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/4%20-%20Inventory%20Value/free-coding.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "NC State University",
+      "authors": [
+        {
+          "name": "Bita Akram",
+          "affiliation": "NC State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "Each line of `inventory.txt` is a quantity, a unit price, and an item name. Item names can have one or more words, and they never contain numbers.\n\nWrite `main` so it reads `inventory.txt` and prints how many items there are and the total value of the inventory (quantity times price, added up) with two decimal places.\n\n**Example**\n\n`inventory.txt`:\n```\n12 2.50 Blue pen\n3 15.00 Desk lamp\n40 0.25 Paper clip\n```\nOutput:\n```\nItems: 3\nTotal value: $85.00\n```",
+      "source_code": "import java.io.*;\nimport java.util.*;\n\npublic class Main {\n    // Test setup: creates inventory.txt. Don't change.\n    static {\n        try {\n            java.nio.file.Files.copy(System.in,\n                java.nio.file.Paths.get(\"inventory.txt\"),\n                java.nio.file.StandardCopyOption.REPLACE_EXISTING);\n        } catch (IOException e) {\n            throw new RuntimeException(e);\n        }\n    }\n\n    public static void main(String[] args) throws FileNotFoundException {\n        Scanner input = new Scanner(new FileInputStream(\"inventory.txt\"));\n        int items = 0;\n        double total = 0.0;\n        while (input.hasNext()) {\n            if (input.hasNextInt()) {\n                int qty = input.nextInt();\n                double price = input.nextDouble();\n                total = total + qty * price;\n                items++;\n            } else {\n                input.next();\n            }\n        }\n        System.out.println(\"Items: \" + items);\n        System.out.printf(\"Total value: $%.2f\\n\", total);\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "file-input",
+        "fileinputstream",
+        "throws-clause",
+        "token-processing",
+        "hasnext-methods",
+        "skipping-bad-tokens"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "scanner-input",
+          "while-loops",
+          "if-else",
+          "printf"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/4%20-%20Inventory%20Value/free-coding.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/4%20-%20Inventory%20Value/free-coding.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
+      "id": "cupcake/drakram-day13/5 - Word Stats/word_stats_file_input",
+      "title": "Word Stats",
+      "type": "FreeCodingProblems"
+    },
+    "links": {
+      "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/5%20-%20Word%20Stats/free-coding.yaml"
+    },
+    "attribution": {
+      "provider": "Cupcake",
+      "publisher": "NC State University",
+      "authors": [
+        {
+          "name": "Bita Akram",
+          "affiliation": "NC State University"
+        }
+      ]
+    },
+    "languages": {
+      "content_language": "en",
+      "programming_languages": [
+        "Java"
+      ]
+    },
+    "content": {
+      "prompt": "A word is any token in a file, so `42` and `well,` each count as one word.\n\nWrite `main` so it reads `essay.txt` and prints how many words it has and its longest word. If several words tie for longest, print the first one. Every file has at least one word.\n\n**Example**\n\n`essay.txt`:\n```\nThe quick brown\nfox jumps over\nthe lazy dog\n```\nOutput:\n```\nWords: 9\nLongest: quick\n```",
+      "source_code": "import java.io.*;\nimport java.util.*;\n\npublic class Main {\n    // Test setup: creates essay.txt. Don't change.\n    static {\n        try {\n            java.nio.file.Files.copy(System.in,\n                java.nio.file.Paths.get(\"essay.txt\"),\n                java.nio.file.StandardCopyOption.REPLACE_EXISTING);\n        } catch (IOException e) {\n            throw new RuntimeException(e);\n        }\n    }\n\n    public static void main(String[] args) throws FileNotFoundException {\n        Scanner input = new Scanner(new FileInputStream(\"essay.txt\"));\n        int count = 0;\n        String longest = \"\";\n        while (input.hasNext()) {\n            String word = input.next();\n            count++;\n            if (word.length() > longest.length()) {\n                longest = word;\n            }\n        }\n        System.out.println(\"Words: \" + count);\n        System.out.println(\"Longest: \" + longest);\n    }\n}\n"
+    },
+    "classification": {
+      "topics": [
+        "file-input",
+        "fileinputstream",
+        "throws-clause",
+        "token-processing",
+        "hasnext-methods"
+      ],
+      "difficulty": "novice"
+    },
+    "pedagogy": {
+      "learning_objectives": [],
+      "instructional_role": "",
+      "prerequisites": {
+        "topics": [
+          "scanner-input",
+          "while-loops",
+          "strings"
+        ],
+        "concepts": [],
+        "item_ids": []
+      }
+    },
+    "delivery": [
+      {
+        "protocol": "HTML",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/5%20-%20Word%20Stats/free-coding.yaml"
+      },
+      {
+        "protocol": "SPLICE",
+        "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/5%20-%20Word%20Stats/free-coding.yaml?protocol=splice"
+      }
+    ],
+    "rights": {
+      "license": "MIT"
+    }
+  },
+  {
+    "status": "public",
+    "identity": {
       "id": "cupcake/drakram-day13/Q1/shift_all_points_free_coding",
       "title": "Build and Shift an Array of Points",
       "type": "FreeCodingProblems"

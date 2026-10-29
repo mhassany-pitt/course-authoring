@@ -1,0 +1,61 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/gillian-python/free_coding_h09",
+    "title": "Multiple sequential updates to one variable plus a string assignment within a branch",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h09.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "Carnegie Mellon University",
+    "authors": [
+      {
+        "name": "Abigail Lo",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Python"
+    ]
+  },
+  "content": {
+    "prompt": "Write Python code that sets stock to 12 and order to 5. If stock minus order is greater than or equal to 10, subtract order from stock and store it back, then assign status the value 'OK'. Otherwise, subtract order from stock and store it back, then add 20 to stock and store it back, then assign status the value 'Restocked'. Print stock and then print status.",
+    "source_code": "stock = 12\norder = 5\nif stock - order >= 10:\n    stock = stock - order\n    status = 'OK'\nelse:\n    stock = stock - order\n    stock = stock + 20\n    status = 'Restocked'\nprint(stock)\nprint(status)\n"
+  },
+  "classification": {
+    "topics": [
+      "multiple-sequential-updates-to-one-variable-plus-a-string-assignment-within-a-branch"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "basic-syntax"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h09.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/gillian-python/free_coding_h09.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}

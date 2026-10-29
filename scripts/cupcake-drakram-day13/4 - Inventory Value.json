@@ -1,0 +1,69 @@
+{
+  "status": "public",
+  "identity": {
+    "id": "cupcake/drakram-day13/4 - Inventory Value/inventory_value_file_input",
+    "title": "Inventory Value",
+    "type": "FreeCodingProblems"
+  },
+  "links": {
+    "demo_url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/4%20-%20Inventory%20Value/free-coding.yaml"
+  },
+  "attribution": {
+    "provider": "Cupcake",
+    "publisher": "NC State University",
+    "authors": [
+      {
+        "name": "Bita Akram",
+        "affiliation": "NC State University"
+      }
+    ]
+  },
+  "languages": {
+    "content_language": "en",
+    "programming_languages": [
+      "Java"
+    ]
+  },
+  "content": {
+    "prompt": "Each line of `inventory.txt` is a quantity, a unit price, and an item name. Item names can have one or more words, and they never contain numbers.\n\nWrite `main` so it reads `inventory.txt` and prints how many items there are and the total value of the inventory (quantity times price, added up) with two decimal places.\n\n**Example**\n\n`inventory.txt`:\n```\n12 2.50 Blue pen\n3 15.00 Desk lamp\n40 0.25 Paper clip\n```\nOutput:\n```\nItems: 3\nTotal value: $85.00\n```",
+    "source_code": "import java.io.*;\nimport java.util.*;\n\npublic class Main {\n    // Test setup: creates inventory.txt. Don't change.\n    static {\n        try {\n            java.nio.file.Files.copy(System.in,\n                java.nio.file.Paths.get(\"inventory.txt\"),\n                java.nio.file.StandardCopyOption.REPLACE_EXISTING);\n        } catch (IOException e) {\n            throw new RuntimeException(e);\n        }\n    }\n\n    public static void main(String[] args) throws FileNotFoundException {\n        Scanner input = new Scanner(new FileInputStream(\"inventory.txt\"));\n        int items = 0;\n        double total = 0.0;\n        while (input.hasNext()) {\n            if (input.hasNextInt()) {\n                int qty = input.nextInt();\n                double price = input.nextDouble();\n                total = total + qty * price;\n                items++;\n            } else {\n                input.next();\n            }\n        }\n        System.out.println(\"Items: \" + items);\n        System.out.printf(\"Total value: $%.2f\\n\", total);\n    }\n}\n"
+  },
+  "classification": {
+    "topics": [
+      "file-input",
+      "fileinputstream",
+      "throws-clause",
+      "token-processing",
+      "hasnext-methods",
+      "skipping-bad-tokens"
+    ],
+    "difficulty": "novice"
+  },
+  "pedagogy": {
+    "learning_objectives": [],
+    "instructional_role": "",
+    "prerequisites": {
+      "topics": [
+        "scanner-input",
+        "while-loops",
+        "if-else",
+        "printf"
+      ],
+      "concepts": [],
+      "item_ids": []
+    }
+  },
+  "delivery": [
+    {
+      "protocol": "HTML",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/4%20-%20Inventory%20Value/free-coding.yaml"
+    },
+    {
+      "protocol": "SPLICE",
+      "url": "https://adapt2.sis.pitt.edu/cupcake/#/activities/drakram-day13/4%20-%20Inventory%20Value/free-coding.yaml?protocol=splice"
+    }
+  ],
+  "rights": {
+    "license": "MIT"
+  }
+}
